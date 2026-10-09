@@ -124,19 +124,26 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
             current_sizes=[float(m.group(1)) for n in current_nodes
                 for m in re.finditer(size_pattern,n.get('style') or '',re.I)]
             current_size=heading_size(h['node'])
+            current_legacy=[int(x.get('size')) for x in h['node'].iter()
+                if local_tag(x)=='font' and (x.get('size') or '').isdigit()]
             capitals=h['label'].isupper()
             for n,pos in positions.items():
                 if pos<=start or pos>=end or h['node'] in n.iterancestors():continue
                 t=normalize_space(render(n));style=n.get('style','')
                 if len(t)<5 or len(t)>180 or '\n' in t:continue
-                if capitals and not t.isupper():continue
+                if capitals and not re.sub(r'\([a-z]\)','',t).isupper():continue
                 bold_nodes=[x for x in n.iter() if local_tag(x) in ('b','strong','h1','h2','h3') or
                     re.search(r'font-weight\s*:\s*(?:bold|[7-9]00)',x.get('style') or '',re.I)]
                 bold=max((len(normalize_space(render(x))) for x in bold_nodes),default=0)>=len(t)*0.8
                 sizes=[float(m.group(1)) for x in n.iter() for m in re.finditer(size_pattern,x.get('style') or '',re.I)]
                 nested_related=bool(re.search(r'related\s+(?:party|person)\s+transactions?',t,re.I))
                 distinct_large_heading=current_size>=14 and heading_size(n)>=current_size
-                if ((bold and sizes and max(sizes)>=current_size) or distinct_large_heading) and not governance.match(t.rstrip('.:')) and not nested_related:
+                peer_legacy=[int(x.get('size')) for x in n.iter()
+                    if local_tag(x)=='font' and (x.get('size') or '').isdigit()]
+                # Legacy HTML specifies a font-size ordinal instead of CSS.
+                # Compare the filed ordinals directly, without inventing points.
+                legacy_peer=capitals and current_size==0 and current_legacy and peer_legacy and bold and max(peer_legacy)>=max(current_legacy)
+                if ((bold and sizes and max(sizes)>=current_size) or distinct_large_heading or legacy_peer) and not governance.match(t.rstrip('.:')) and not nested_related:
                     end=pos;break
         fragment=raw[start:end]
         if item=='404' and any(b.get('item')=='404' and b['raw_byte_start']<=start and end<=b['raw_byte_end'] for b in output):

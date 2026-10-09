@@ -121,3 +121,14 @@ def test_anchor_inside_caption_does_not_jump_to_continued_page():
     assert 'actual identity and the commercial terms' in blocks[0]['text']
     assert 'conditional minimum purchase' in blocks[0]['text']
     assert 'Unrelated meeting details' not in blocks[0]['text']
+
+
+def test_legacy_font_peer_bounds_related_section_before_section_16a():
+    raw=b'''<html><body><p><font size="2"><b>CERTAIN RELATIONSHIPS AND RELATED PERSON TRANSACTIONS</b></font></p>
+    <p>A named related company purchased equipment in the fiscal year on ordinary commercial terms. The issuer reports the value and the type of goods delivered.</p>
+    <p><font size="2"><b>SECTION 16(a) BENEFICIAL OWNERSHIP REPORTING COMPLIANCE</b></font></p>
+    <p>Unrelated compliance and meeting procedures.</p></body></html>'''
+    blocks=section_blocks(raw,form='DEF 14A',config={'normalizer_version':'1'})
+    assert len(blocks)==1
+    assert 'value and the type of goods' in blocks[0]['text']
+    assert 'Unrelated compliance' not in blocks[0]['text']
