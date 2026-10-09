@@ -31,5 +31,16 @@
     "decision": "D89",
     "body_personally_read": true,
     "detail": "Complete one body packet read; additional notes form same class as April14 original; original bf49c72b financial registered DTC holder and11 financial initialpurchasers explicitly proved. Actual body3.1 clause change observed but no Item3.03, so excluded from firstpass F4 by fixed11.1rule."
+  },
+  {
+    "content_key": "2f9f1e0047d5734b0e23fb8196b0fc92916a27c744bdcf2500df825bc6255b2e",
+    "group": "MSFT",
+    "accession": "0001193125-23-271376",
+    "reason": "financial_parties_only",
+    "raw_byte_start": 2542,
+    "raw_byte_end": 520427,
+    "decision": "D94",
+    "body_personally_read": false,
+    "detail": "Full physical header read, ordered original EX-4.10 parts 0,1 establish registered DTC/Cede financial holder; current Activision wholly-owned MSFT Item8.01 fully reread. Supplemental without Item3.03. Header abstention rejected because normalized full-body quote was located later than the explicit physical header range. Immutable semantic rejection preserved with no resubmission. Scope exclusion remains independently documented."
   }
 ]
