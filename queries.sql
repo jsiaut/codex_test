@@ -12,11 +12,21 @@ CREATE MACRO exact_ratio6(a,b) AS (
 
 -- Candidates fixed before controls; multiple values in the SAME filing are
 -- quarantined instead of resolved by a latest-occurrence tiebreak.
+-- The API or another physical occurrence cannot readmit the same conflicting
+-- semantic identity from that filing. A later corrected filing remains usable.
+CREATE VIEW conflicting_semantics AS
+SELECT DISTINCT f.accession,f.semantic_key FROM facts f
+JOIN semantic_fact_quarantines q USING (fact_id);
+
 CREATE VIEW eligible_facts AS
 SELECT * EXCLUDE (value,coverage_state),
- CASE WHEN count(DISTINCT value) OVER (PARTITION BY accession,semantic_key,document_rank)>1
+ CASE WHEN EXISTS (SELECT 1 FROM conflicting_semantics q
+                    WHERE q.accession=facts.accession AND q.semantic_key=facts.semantic_key)
+        OR count(DISTINCT value) OVER (PARTITION BY accession,semantic_key,document_rank)>1
       THEN NULL ELSE value END AS value,
- CASE WHEN count(DISTINCT value) OVER (PARTITION BY accession,semantic_key,document_rank)>1
+ CASE WHEN EXISTS (SELECT 1 FROM conflicting_semantics q
+                    WHERE q.accession=facts.accession AND q.semantic_key=facts.semantic_key)
+        OR count(DISTINCT value) OVER (PARTITION BY accession,semantic_key,document_rank)>1
       THEN 'conflicting' ELSE coverage_state END AS coverage_state
 FROM facts WHERE tier IN ('A','B','C','D') AND filing_status='filed' AND NOT is_nil
  AND document_rank>=-1

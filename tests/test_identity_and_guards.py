@@ -40,6 +40,35 @@ def test_dimensions_are_part_of_identity():
     assert consolidated['dimensions']=='{}'
 
 
+def test_reader_semantic_conflict_blocks_numeric_use_without_changing_raw_fact(tmp_path):
+    from secfragility.database import create, insert
+    source = Path(__file__).resolve().parents[1]
+    (tmp_path / 'schema.sql').write_text((source / 'schema.sql').read_text())
+    (tmp_path / 'work').mkdir()
+    bad = fact(instance())
+    duplicate = fact(instance(), document_id='companyfacts-copy')
+    duplicate['document_rank'] = -1
+    good = fact(instance(dimensions=True), document_id='unrelated')
+    corrected = fact(instance(), document_id='later-corrected-filing')
+    corrected['accession'] = '0000000123-25-000002'
+    (tmp_path / 'work/fact_semantic_quarantines.json').write_text(json.dumps([{
+        'fact_id': bad['fact_id'], 'affected_quantity': 'private_investment_stock',
+        'reason': 'Deposited concept contradicts the fully read marketable-securities clause',
+        'status': 'exclude_dependent_numeric_attribution_keep_raw_fact'}]))
+    db = create(tmp_path)
+    insert(db, 'facts', bad)
+    insert(db, 'facts', duplicate)
+    insert(db, 'facts', good)
+    insert(db, 'facts', corrected)
+    db.execute((source / 'queries.sql').read_text())
+    assert db.execute('SELECT value FROM facts WHERE fact_id=?', [bad['fact_id']]).fetchone()[0] == Decimal('1000000')
+    assert db.execute('SELECT value,coverage_state FROM eligible_facts WHERE fact_id=?',
+                      [bad['fact_id']]).fetchone() == (None, 'conflicting')
+    assert db.execute('SELECT value FROM eligible_facts WHERE fact_id=?', [duplicate['fact_id']]).fetchone()[0] is None
+    assert db.execute('SELECT value FROM eligible_facts WHERE fact_id=?', [good['fact_id']]).fetchone()[0] == Decimal('1000000')
+    assert db.execute('SELECT value FROM eligible_facts WHERE fact_id=?', [corrected['fact_id']]).fetchone()[0] == Decimal('1000000')
+
+
 def element(amount_id,value='100',**kwargs):
     return dict({'amount_id':amount_id,'value':value,'tier':'A','currency':'USD','unit':'USD',
         'node_id':'S','source_perspective':'reporting_entity','accounting_framework':'us_gaap',

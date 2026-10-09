@@ -34,5 +34,140 @@
     "reason": "Concept nonreadily determinable contradicts narrative marketable debt and equity stock 417 million",
     "decision": "D0034",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "6d9231eda979a01ad316f0dd63f21e0ddc00f1df4fbe57cd1b42c634210a2ec9",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "restricted_cash_stock",
+    "reason": "December 31 context contradicts historical IPO escrow restriction and April 2025 release",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "03e8574bc6acb598df94d0975d93445b73c89212d21baae4b5f217bb8b667a59",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "restricted_cash_stock",
+    "reason": "December 31 context contradicts historical April 2025 escrow release; not new funding",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "963fcb6c1533f926ac4b69e5113589885060757663cba3d3e45cc28d8fd30fef",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "customer_concentration_anonymous",
+    "reason": "FY2024 15 percent table row Customer B is tagged Customer C; member-dependent attribution blocked",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "e462bea00c1db64d70727f3d1f2f2be5fe56927d62ce465f38ab437ffd1c4252",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "customer_concentration_anonymous",
+    "reason": "FY2023 17 percent table row Customer B is tagged Customer C; member-dependent attribution blocked",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "dbf56938cf3d6465552230a0d32ef5b0afdf4e8fcc40fb970338dee2982e1b5e",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "customer_concentration_anonymous",
+    "reason": "FY2023 21 percent table row Customer C is tagged Customer B; member-dependent attribution blocked",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a0edb736dcbc96bb344ed27b44ab69226204ee3c5ac8415fa81c150dd5a18691",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "foreign_currency_transaction_loss",
+    "reason": "Narrative FY2024 not material does not establish exact zero despite numeric tag",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "9dac3cf02fe012aa3cdca6d1fdc131e4a6bc13044b50e19ee367b702190bb872",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "foreign_currency_transaction_loss",
+    "reason": "Narrative FY2023 not material does not establish exact zero despite numeric tag",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a27bf8197929a09376d14f8470bad0b78e69d691e935ca50f9603906e07678c1",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "advertising_expense",
+    "reason": "Narrative FY2023 not material does not establish exact zero despite numeric tag",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "fea024a7ed65f9359378fd17c8279e3e64856cf71b98c420a36d941dc15bf3bb",
+    "content_key": "51b6adf0f7d273c50051cff6dea27cc361fcb05b2aed690cc71784b3056dbfb0",
+    "accession": "0001769628-26-000104",
+    "affected_quantity": "advertising_expense",
+    "reason": "Narrative FY2024 not material does not establish exact zero despite numeric tag",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "bc03fa117e8880987f1ea723fe1ffd5298d1c9adf69d29c1e0bf4ca54fd7feb2",
+    "content_key": "34e491a09edcfb5beb1bbe773bd0fe0f650bb730f4362239a2912597ffaa83b4",
+    "accession": "0001193125-26-101045",
+    "affected_quantity": "rpo_maturity_allocation",
+    "reason": "Typed start December 1 2025 contradicts next twelve months from February 28 2026 closing",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "737e59c747e0125d758e520b301c20058b0f079a39b70d3c38be272a582d71e2",
+    "content_key": "34e491a09edcfb5beb1bbe773bd0fe0f650bb730f4362239a2912597ffaa83b4",
+    "accession": "0001193125-26-101045",
+    "affected_quantity": "rpo_maturity_allocation",
+    "reason": "Typed start December 1 2026 contradicts months 13 to 36 from February 28 2026 closing",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "b20a2c799251d95bfaab21674b7b5f80acfad74556e4b3948c6dc429cf9a65c7",
+    "content_key": "34e491a09edcfb5beb1bbe773bd0fe0f650bb730f4362239a2912597ffaa83b4",
+    "accession": "0001193125-26-101045",
+    "affected_quantity": "rpo_maturity_allocation",
+    "reason": "Typed start December 1 2028 contradicts months 37 to 60 from February 28 2026 closing",
+    "decision": "D0035",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "3e611dc6551209a843fdfb5b20300ebf2762807462c0f768043dfbd8e1d95482",
+    "content_key": "c192a9a68f435056ba9b687c01fe61e772ede5cc0acb5b126764da052f3d5a27",
+    "accession": "0001652044-26-000018",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "FY2023 narrative goodwill impairments not material does not establish exact zero despite zero-valued tag",
+    "decision": "D0036",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "4fb1e921ddc3d437e7900a0f0d1222f83e3a2a74714966e5e9ed470c81058185",
+    "content_key": "c192a9a68f435056ba9b687c01fe61e772ede5cc0acb5b126764da052f3d5a27",
+    "accession": "0001652044-26-000018",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "FY2024 narrative goodwill impairments not material does not establish exact zero despite zero-valued tag",
+    "decision": "D0036",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "49103ef26bd0b62ea484c912473baaa3400acbf51b68ef6c8aec20d1950316f3",
+    "content_key": "c192a9a68f435056ba9b687c01fe61e772ede5cc0acb5b126764da052f3d5a27",
+    "accession": "0001652044-26-000018",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "FY2025 narrative goodwill impairments not material does not establish exact zero despite zero-valued tag",
+    "decision": "D0036",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]

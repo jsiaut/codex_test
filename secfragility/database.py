@@ -71,6 +71,21 @@ def create(root: Path):
     target = "CHECK (status != 'not_determinable' OR nd_reason IS NOT NULL),"
     schema = schema.replace(target, constraint + ',\n  ' + target)
     db.execute(schema)
+    # Reader-identified semantic conflicts never alter the deposited facts.
+    # This auxiliary view is rebuilt from the versioned evidence decisions;
+    # it is not a ninth exported table or a change to candidate identity.
+    quarantine_path = root / 'work/fact_semantic_quarantines.json'
+    quarantines = json.loads(quarantine_path.read_text()) if quarantine_path.exists() else []
+    entries = [(r['fact_id'], r['affected_quantity'], r['reason']) for r in quarantines
+               if r['status'] == 'exclude_dependent_numeric_attribution_keep_raw_fact']
+    if entries:
+        values = ','.join('(' + ','.join(sql_literal(v) for v in row) + ')' for row in entries)
+        db.execute('CREATE TEMP VIEW semantic_fact_quarantines AS SELECT * FROM (VALUES '
+                   + values + ') AS q(fact_id,affected_quantity,reason)')
+    else:
+        db.execute('CREATE TEMP VIEW semantic_fact_quarantines AS SELECT '
+                   'NULL::VARCHAR AS fact_id,NULL::VARCHAR AS affected_quantity,'
+                   'NULL::VARCHAR AS reason WHERE FALSE')
     return db
 
 

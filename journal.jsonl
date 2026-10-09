@@ -6999,3 +6999,6 @@
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T17:32:56.678375+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 226, "remaining_unique_keys": 1078, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T17:37:01.028914+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 236, "remaining_unique_keys": 1068, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T17:50:22.152457+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 241, "remaining_unique_keys": 1063, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T17:52:35.656082+00:00", "event": "semantic_conflicts_recorded", "decision": "D0035", "quarantined_fact_ids": 16, "raw_facts_unchanged": true, "phase3_final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T17:58:00.934807+00:00", "event": "reading_measurement_boundaries_recorded", "decision": "D0036", "quarantined_fact_ids": 19, "raw_facts_unchanged": true, "phase3_final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T17:58:35.088003+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 250, "remaining_unique_keys": 1054, "final_delivery": false}
