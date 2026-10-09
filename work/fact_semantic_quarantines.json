@@ -247,7 +247,7 @@
     "content_key": "8bf9fec8af82638c58833ada3890a507d8c3d1dcd35ec7bd03494577582bd757",
     "accession": "0000950170-25-087926",
     "affected_quantity": "rpo_months37_60_share",
-    "reason": "Typed start2027-06-01 contradicts months37\u201360 following May31 2025: start2028-06-01",
+    "reason": "Typed start2027-06-01 contradicts months37–60 following May31 2025: start2028-06-01",
     "decision": "D0041",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   },
@@ -582,6 +582,132 @@
     "affected_quantity": "rpo_months37_60_share",
     "reason": "Narrative months37-60 after May31 2024 should start June1 2027; typed context starts June1 2026",
     "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a9415816e8c39071c220b2062431a50c086a3a597fd46b4d4e3fa2bb17f33166",
+    "content_key": "3e5b4b192f9b05dfabe7cef1fdf58272c02a5ba911fe9a437099aab65a4b25fa",
+    "accession": "0000950170-24-029904",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity and related instruments stock tagged solely equity securities",
+    "decision": "D0047",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "de43617cba3070af5038de5e72c92c723edcbab0053ee8a99169b062fa4d635a",
+    "content_key": "3e5b4b192f9b05dfabe7cef1fdf58272c02a5ba911fe9a437099aab65a4b25fa",
+    "accession": "0000950170-24-029904",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity and related instruments stock tagged solely equity securities",
+    "decision": "D0047",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "aa9969456f0999db36321240ce2b5977353595bacb402b03ccc75983f9d693e3",
+    "content_key": "3e5b4b192f9b05dfabe7cef1fdf58272c02a5ba911fe9a437099aab65a4b25fa",
+    "accession": "0000950170-24-029904",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity and related instruments stock tagged solely equity securities",
+    "decision": "D0047",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "81fd1843297da2753ed86384b88f8c8b3bf50153000cb7cf5cfd474b90cca25a",
+    "content_key": "dfb14d6f958e214855706213cedc84fa87d4400caf4ae1f3d7836b85dbcd6b86",
+    "accession": "0001045810-24-000029",
+    "affected_quantity": "depreciation_life_change_cost_of_revenue_effect",
+    "reason": "Narrative useful-life effects for fiscal year ended Jan28 2024 tagged only Q4 Oct30 2023-Jan28 2024",
+    "decision": "D0048",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "12eaea6b9cbc1c451c6edb69a61a29474d91e4dbad0134098f7984681f6674b5",
+    "content_key": "dfb14d6f958e214855706213cedc84fa87d4400caf4ae1f3d7836b85dbcd6b86",
+    "accession": "0001045810-24-000029",
+    "affected_quantity": "depreciation_life_change_operating_expense_effect",
+    "reason": "Narrative useful-life effects for fiscal year ended Jan28 2024 tagged only Q4 Oct30 2023-Jan28 2024",
+    "decision": "D0048",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "e79162a8f454fcc98a48547cf33dbd33c9f99ae69857ccab2a217780aa861777",
+    "content_key": "dfb14d6f958e214855706213cedc84fa87d4400caf4ae1f3d7836b85dbcd6b86",
+    "accession": "0001045810-24-000029",
+    "affected_quantity": "depreciation_life_change_operating_income_effect",
+    "reason": "Narrative useful-life effects for fiscal year ended Jan28 2024 tagged only Q4 Oct30 2023-Jan28 2024",
+    "decision": "D0048",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "968c43a6221a693e0f1d1a2dbffcc378d99201ab9306be1d5ca17a416914c33b",
+    "content_key": "dfb14d6f958e214855706213cedc84fa87d4400caf4ae1f3d7836b85dbcd6b86",
+    "accession": "0001045810-24-000029",
+    "affected_quantity": "depreciation_life_change_net_income_effect",
+    "reason": "Narrative useful-life effects for fiscal year ended Jan28 2024 tagged only Q4 Oct30 2023-Jan28 2024",
+    "decision": "D0048",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "fe47a7946d706c16be42a20bcee540e375d3594aab5afdfb0dbff0037c1a605f",
+    "content_key": "dfb14d6f958e214855706213cedc84fa87d4400caf4ae1f3d7836b85dbcd6b86",
+    "accession": "0001045810-24-000029",
+    "affected_quantity": "depreciation_life_change_basic_EPS_effect",
+    "reason": "Narrative useful-life effects for fiscal year ended Jan28 2024 tagged only Q4 Oct30 2023-Jan28 2024",
+    "decision": "D0048",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a43e53cdbf40531425135531b1c51aac2ab3f9a3d59bf08e8877a9194e70bd95",
+    "content_key": "dfb14d6f958e214855706213cedc84fa87d4400caf4ae1f3d7836b85dbcd6b86",
+    "accession": "0001045810-24-000029",
+    "affected_quantity": "depreciation_life_change_diluted_EPS_effect",
+    "reason": "Narrative useful-life effects for fiscal year ended Jan28 2024 tagged only Q4 Oct30 2023-Jan28 2024",
+    "decision": "D0048",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "d2597a0a785e3d0aa849cc7999ef2da7a5ceeb695d9d7ed71fc8d9d7a510cb86",
+    "content_key": "5d7d13de9a2f08e885a3ea5c1a8fbedef27ef5690682c7e4af8977cb22222f21",
+    "accession": "0001018724-24-000008",
+    "affected_quantity": "equity_warrant_fair_value_stock",
+    "reason": "Narrative total warrant fair value covers Level2 and Level3 whereas dimension claims Level2 only",
+    "decision": "D0049",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a7a36b6633b06e3b93e2f8af7e161380261c3882f80be433316c8b5595e7ff3a",
+    "content_key": "5d7d13de9a2f08e885a3ea5c1a8fbedef27ef5690682c7e4af8977cb22222f21",
+    "accession": "0001018724-24-000008",
+    "affected_quantity": "equity_warrant_fair_value_stock",
+    "reason": "Narrative total warrant fair value covers Level2 and Level3 whereas dimension claims Level2 only",
+    "decision": "D0049",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "9ee8c381c8c49593dff29084b4eb5eb811b4347c09c3e032aa554548e451bb93",
+    "content_key": "129b61d65bdce998cb88ff30ebfcfcd5576f07c2b05232c1d249666a14401616",
+    "accession": "0001652044-24-000022",
+    "affected_quantity": "goodwill_impairment_loss",
+    "reason": "Narrative goodwill impairments not material does not establish exact zero for 2021 to 2023",
+    "decision": "D0050",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "97f4368aedcf2d9bb4819d89b154841927f4b18fc3b58f4db7154a9fc9796e80",
+    "content_key": "129b61d65bdce998cb88ff30ebfcfcd5576f07c2b05232c1d249666a14401616",
+    "accession": "0001652044-24-000022",
+    "affected_quantity": "goodwill_impairment_loss",
+    "reason": "Narrative goodwill impairments not material does not establish exact zero for 2021 to 2023",
+    "decision": "D0050",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "fa11c93b9c056ce4069ee944132cb062c57aaadbf5e385978ddfb62442fbebd0",
+    "content_key": "129b61d65bdce998cb88ff30ebfcfcd5576f07c2b05232c1d249666a14401616",
+    "accession": "0001652044-24-000022",
+    "affected_quantity": "goodwill_impairment_loss",
+    "reason": "Narrative goodwill impairments not material does not establish exact zero for 2021 to 2023",
+    "decision": "D0050",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
