@@ -110,3 +110,14 @@ def test_wrapped_legal_name_preserves_all_words_and_punctuation():
     for other in ['BCH San Jose Holdings LLC','BCH San Jose, LLC','bch San Jose LLC']:
         with pytest.raises(ObservationRejected):
             validate_semantics(dict(row,counterparty=other),block,raw)
+
+
+def test_table_scale_requires_explicit_heading_and_currency_amount_cell():
+    raw=b'<div>Fiscal year 2018</div><div>(In millions)</div><table><tr><td>Total revenue</td><td>$</td><td>664</td></tr></table>'
+    body=normalize_html(raw)
+    block={'content_key':'scaled-table','text':body,'candidates':[]}
+    row={'content_key':'scaled-table','raw_byte_start':0,'raw_byte_end':len(raw),
+        'quote':body,'amount':'664000000','amount_origin':'narrative_only','unit':'USD','currency':'USD'}
+    validate_semantics(row,block,raw)
+    for bad in ['2018000000','664000']:
+        with pytest.raises(ObservationRejected):validate_semantics(dict(row,amount=bad),block,raw)

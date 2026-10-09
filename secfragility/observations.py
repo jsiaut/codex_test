@@ -66,11 +66,19 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
         # never accepted merely because the same number occurs elsewhere.
         tokens=re.finditer(r'(?<![\w.])([+-]?\d[\d,]*(?:\.\d+)?)\s*(billion|million|thousand)?',quote,re.I)
         matched=False
+        table_scales={m.group(1).lower() for m in re.finditer(r'\(In\s+(billions|millions|thousands)\)',quote,re.I)}
         for token in tokens:
             value=Decimal(token.group(1).replace(',',''))
             factor={None:1,'thousand':1000,'million':1000000,'billion':1000000000}[token.group(2).lower() if token.group(2) else None]
             if value*factor==Decimal(str(row['amount'])):
                 matched=True
+            if token.group(2) is None and len(table_scales)==1 and row.get('currency')=='USD':
+                # Explicit table scale, with a currency cell immediately before
+                # this amount. A year or a percentage cannot supply the amount.
+                prefix=quote[max(0,token.start()-24):token.start()]
+                if re.search(r'\$\s*(?:\|\s*)*$',prefix):
+                    table_factor={'thousands':1000,'millions':1000000,'billions':1000000000}[next(iter(table_scales))]
+                    if value*table_factor==Decimal(str(row['amount'])):matched=True
         if not matched:
             raise ObservationRejected('Montant narratif non retrouvé avec son échelle explicite dans la citation.')
         if any(f.get('value') is not None and Decimal(str(f['value']))==Decimal(str(row['amount']))
