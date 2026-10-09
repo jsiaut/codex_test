@@ -1069,5 +1069,50 @@
     "reason": "debt_equity_and_related_instruments_combined_not_equity_only",
     "decision": "D62",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "b5c123d40f1c1932101f6f0ce55e579a7bfaaadd6efb7e8fc34ec68029a0d6f4",
+    "content_key": "57c0153bc73389ea9b072668fc187fe25f2ba3c9415e4e53c229f61365753abe",
+    "accession": "0001018724-22-000005",
+    "affected_quantity": "equity_warrant_fair_value_stock",
+    "reason": "total_warrants_primarily_Level2_not_wholly_Level2",
+    "decision": "D63",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "0a6bd4a848b90d5db4c0c5b45db7f345e882951806527e673c331145ab643d0e",
+    "content_key": "57c0153bc73389ea9b072668fc187fe25f2ba3c9415e4e53c229f61365753abe",
+    "accession": "0001018724-22-000005",
+    "affected_quantity": "equity_warrant_fair_value_stock",
+    "reason": "total_warrants_primarily_Level2_not_wholly_Level2",
+    "decision": "D63",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "4e66edadd6bd282a0305eec27d7536e4b0b967894c303ce87fc3a3d35818c055",
+    "content_key": "819e1f083704ca55a6d6c4b9a1fbfe59b926237c62fd3ebbca28289db95f76ec",
+    "accession": "0001652044-22-000019",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "not_material_does_not_prove_numeric_zero",
+    "decision": "D64",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "696e4d2f31bc6952d9ea8ec22951bdd7402f967490691b745591ca3d96e84d30",
+    "content_key": "819e1f083704ca55a6d6c4b9a1fbfe59b926237c62fd3ebbca28289db95f76ec",
+    "accession": "0001652044-22-000019",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "not_material_does_not_prove_numeric_zero",
+    "decision": "D64",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "d678bf7cb724ca89f27bf1205e7b7c9761b47fade5cd538948d2bce3a554e036",
+    "content_key": "819e1f083704ca55a6d6c4b9a1fbfe59b926237c62fd3ebbca28289db95f76ec",
+    "accession": "0001652044-22-000019",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "not_material_does_not_prove_numeric_zero",
+    "decision": "D64",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]

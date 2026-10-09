@@ -269,3 +269,7 @@ D0060 — Meta Q2 2022 : lecture complète des cinq candidats et de la note. Le 
 D0061 — Oracle FY2022 : lecture complète des 59 candidats et des deux parties de la note. Deux stocks mixtes dette/actions sous balise actions seules mis en quarantaine. Aucun changement de durée de serveur ni clause de clôture Cerner dans ce bloc ; les clauses des dépôts ultérieurs ne sont pas importées. Les zéros goodwill sont ici explicitement confirmés par le texte, contrairement aux clauses « non significatif ».
 
 D62 — Lecture intégrale de la première note Oracle au 28 février 2022 : les deux stocks de placements privés mêlent dette, titres de capital et instruments associés ; leurs balises de titres de capital seuls ne justifient pas cette attribution. Deux faits exclus des calculs dépendants, données brutes conservées.
+
+D63 — Amazon FY2021 : trois en-têtes, 152 candidats et deux parties de texte intégralement lus. Les stocks totaux de warrants de 2020 et 2021 sont seulement principalement Level2 ; les deux balises exclusivement Level2 sont exclues des calculs dépendants sans remplacement narratif ni modification brute.
+
+D64 — Alphabet FY2021 : note entière et 21 candidats lus. Trois valeurs zéro de goodwill (2019–2021) balisent une absence de pertes matérielles, qui ne prouve pas une perte exactement nulle. Quarantaine sans remplacement numérique ni modification brute.
