@@ -1,0 +1,12 @@
+from work.authored_helpers import *
+k='5563727191e172c54f12457fd8d1836f37198b62870dbe9d5271986597400541'
+rows=repeat_chosen_rows('b3811f62bd2403b0ad54aa725b7baa5212858d7c3532b96f5937ec875a200c5d',['named_majority_owned_subsidiaries','trade_receivable_deferred_revenue_netting_policy'])
+rows += [dict(quote='we adopted Accounting Standards Update (ASU) 2016-13,',model_quantity='credit_loss_and_equity_standard_adopted',recast_cause='accounting_change',flag_unknown_reason='ASU2016_13_and2020_01_H1FY2021_no_exact_day_no_material_impact_not_zero'),abstention('was nominal.','Restricted cash nominal not exact zero; receivable impairment immaterial not zero and not investment F6. Full note no substantial doubt, equipment life change or nonmarketable stock clause. Reference-rate reform and income-tax standard pending; no actual covenant waiver or later tax-structure realignment imported.')]
+def t(fid,q,qty,**fields):rows.append(authored_tagged(k,fid,q,model_quantity=qty,**fields))
+q='were approximately $5.9 billion and $6.2 billion, respectively.'
+for fid in ['4f10e609057e358a56b54429aa24f6a43c6ee1dc0a5742492970739d959dca96','a3101e32af4a975761d85df5b2aa39c5d057752ab5b5b69bc247b5b4477f77bc']:t(fid,q,'revenue_recognized_from_opening_deferred_revenue',stage='recognized',amount_nature='opening_contract_liability_recognition_not_current_cash')
+q='were $34.4 billion as of November 30, 2020, approximately 60% of which we expect to recognize as revenues over the next twelve months and the remainder thereafter.'
+for fid,qty in [('032c359b7c3d9023189c897e8da1abc824a7335ac3d52b25d8eece21a547a69b','rpo_total'),('f9a8d602fc5e977a00ad551920e6a5594985a94790ae91cfc0076280d56baa85','rpo_next_12m_share')]:t(fid,q,qty,flag_unknown_reason='not_cash_no_named_customer_no_exact24m_bucket')
+q='Financing receivables sold to financial institutions were $300 million and $977 million for the three and six months ended November 30, 2020, respectively, and $196 million and $876 million for the three and six months ended November 30, 2019, respectively.'
+for fid in ['b708c7d2f16be85f97dabfc717c45204db27e75349396c70d2714be5eda55e80','a0107edf7f16db32ca81835793026785b72c9c4bd655f786584796e2eb4a2c53','20cbdf32c0f329cc4a9d9de4cb292797ee932d8e9ae8216ee8c6897eba5f06fa','ee8bd3034b458dafc5aff4784162b3d341e88b52471e7f949ebae43b9bdc673a']:t(fid,q,'financing_receivables_sold',stage='recognized',amount_nature='receivables_transferred_not_explicit_narrative_cash_receipts',flag_unknown_reason='anonymous_parties_nonrecourse_generally90days_Q_YTD_not_additive')
+save(k,rows)

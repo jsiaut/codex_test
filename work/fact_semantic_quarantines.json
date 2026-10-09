@@ -1177,5 +1177,32 @@
     "reason": "Text January30 stock tagged October29 signing date",
     "decision": "D0067",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "94d47cad891ac17cb4dab5e6d16260c7776a2e62796844368d50c8115e712f1c",
+    "content_key": "e734e067d8a513d105e512eaf96252bdfc73cadacc980d56d5f7be0630f9f7e2",
+    "accession": "0001058057-20-000061",
+    "affected_quantity": "deferred_acquisition_financing_cost_stock",
+    "reason": "Text October31 balance sheet stock tagged October29 signing date",
+    "decision": "D0068",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "00c9a3ece7aca54dc997788d656565d357b70a5aa37eb40bd9646bb2d70beafe",
+    "content_key": "e734e067d8a513d105e512eaf96252bdfc73cadacc980d56d5f7be0630f9f7e2",
+    "accession": "0001058057-20-000061",
+    "affected_quantity": "deferred_acquisition_financing_cost_stock",
+    "reason": "Text October31 balance sheet stock tagged October29 signing date",
+    "decision": "D0068",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "214a196bbfa16eed58382e49311a257a4d97b193330b60a4ae486b57f19e3a91",
+    "content_key": "e734e067d8a513d105e512eaf96252bdfc73cadacc980d56d5f7be0630f9f7e2",
+    "accession": "0001058057-20-000061",
+    "affected_quantity": "deferred_acquisition_financing_cost_stock",
+    "reason": "Text October31 balance sheet stock tagged October29 signing date",
+    "decision": "D0068",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]

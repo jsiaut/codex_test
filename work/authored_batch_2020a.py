@@ -1,0 +1,5 @@
+from work.authored_helpers import *
+k='f6802b4d678a6db1439eb60741823d52dcb7db8c3657dbd7fe7ead0935416cbf'
+save(k,[authored_control(k,'were effective to provide reasonable assurance that the information required to be disclosed by us','disclosure_controls_effective',event_present=True),authored_control(k,'There were no changes in our internal control over financial reporting that occurred during our last fiscal quarter','no_material_ICFR_change_quarter',flag_unknown_reason='generic_limits_not_MW_quarter_nochange_not_F5_absence')])
+k='7cb5093570283a16b804df4204a7343db42c23f8fc0a8d03bea2be3429823cfa'
+save(k,[authored_control(k,'our disclosure controls and procedures were effective.','disclosure_controls_effective',event_present=True),authored_control(k,'There have been no changes in our internal control over financial reporting during the three months ended October 31, 2020','no_material_ICFR_change_quarter',flag_unknown_reason='COVID_and_generic_limits_not_MW_quarter_nochange_not_F5_absence')])
