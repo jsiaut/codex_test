@@ -9,10 +9,10 @@
     "related_parties": 15
   },
   "validation_rejected_attempts_by_phase": {
-    "semantic": 11,
-    "schema": 6
+    "schema": 6,
+    "semantic": 11
   },
-  "updated_at": "2026-10-09T15:07:44.797727+00:00",
+  "updated_at": "2026-10-09T15:11:48.366968+00:00",
   "read_packet_logging_started_2026_10_09": true,
   "independent_audit_performed": false
 }

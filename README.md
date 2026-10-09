@@ -50,12 +50,15 @@ sous le verrou de session. Aucune extension du premier passage n’est ouverte.
 `https://github.com/jsiaut/codex_test`. Les tables Parquet utilisent Git LFS.
 La lecture crée un point de sauvegarde toutes les dix clés terminées ou après
 dix minutes de travail. Ces commits intermédiaires ne déclarent pas l’exécution
-terminée. Le cache est exclu de Git et conservé séparément dans les pièces
-jointes d’une release GitHub de sauvegarde, avec son empreinte SHA-256.
+terminée. Le cache est exclu de Git et conservé dans une archive de reprise
+sous `backup/`, transférée avec Git LFS et accompagnée de son empreinte SHA-256.
 
 Pour reprendre sur une nouvelle machine, cloner le dépôt, exécuter `git lfs
-pull`, télécharger l’archive de sauvegarde de la release, vérifier son empreinte
-puis l’extraire à la racine. Ne pas restaurer le verrou ni le propriétaire de
+pull`, installer les dépendances, puis lancer `python -m secfragility.backup
+--restore backup/sec-project-2-20261009T150746Z.tar.zst --manifest
+backup/sec-project-2-20261009T150746Z.tar.zst.json`. Cette commande vérifie
+l’empreinte et conserve les fichiers versionnés les plus récents. Ne pas
+restaurer le verrou ni le propriétaire de
 session : la nouvelle session doit acquérir son propre verrou. Le fichier
 `work/run.json` conserve l’instant logique de l’exécution inachevée.
 

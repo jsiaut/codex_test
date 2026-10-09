@@ -105,3 +105,5 @@ Deux fins de phrases de rapports Broadcom, démarrant en minuscule, avaient ét�
 ## D0025 — Sauvegardes distantes intermédiaires
 
 L’utilisateur demande des sauvegardes régulières et choisit explicitement le dépôt GitHub jsiaut/codex_test. L’historique initial est conservé ; les tables volumineuses utilisent Git LFS, et une archive distincte conserve le cache non versionné et les fichiers de reprise. Le lecteur pousse un point de sauvegarde toutes les dix clés terminées ou toutes les dix minutes de travail. Ces commits ne remplacent ni le commit de livraison en fin d’exécution, ni les preuves de lecture, ni un audit indépendant. Un échec réseau de GitHub laisse les observations et le commit local intacts et est signalé au conducteur.
+
+L’API GitHub accepte les commits, Git LFS et la création de release, mais le serveur uploads.github.com refuse même le petit manifeste avec HTTP 401. Aucun jeton n’est modifié ni aucune connexion détournée. L’archive de reprise passe donc par Git LFS sous backup/, avec son manifeste ; son empreinte est vérifiée à la restauration, qui ne remplace pas les fichiers déjà suivis par Git.

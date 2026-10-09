@@ -6,5 +6,8 @@
   "authorized_at": "2026-10-09T15:06:45.502041+00:00",
   "completed_block_interval": 10,
   "minutes_interval": 10,
-  "cache_strategy": "separate_release_archive"
+  "cache_strategy": "git_lfs_restart_archive",
+  "snapshot_path": "backup/sec-project-2-20261009T150746Z.tar.zst",
+  "snapshot_manifest": "backup/sec-project-2-20261009T150746Z.tar.zst.json",
+  "snapshot_source_commit": "e7691510d2928962a4fd2373131133dd69c9e76a"
 }

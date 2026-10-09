@@ -19,7 +19,7 @@ def snapshot(root: Path, destination: Path):
     skip_paths = {'work/session.lock', 'work/foreground_owner.json', 'work/checkpoint_state.json'}
     def selected(info):
         name = info.name.removeprefix('./')
-        if any(p in skip_parts for p in Path(name).parts) or name in skip_paths:
+        if name == 'backup' or name.startswith('backup/') or any(p in skip_parts for p in Path(name).parts) or name in skip_paths:
             return None
         return info
     with archive.open('wb') as raw:
@@ -41,8 +41,52 @@ def snapshot(root: Path, destination: Path):
     return dict(archive=str(archive), checksum=str(checksum), manifest=str(manifest), source_commit=commit)
 
 
+def restore(root: Path, archive: Path, manifest: Path):
+    metadata = json.loads(manifest.read_text())
+    with archive.open('rb') as f:
+        actual = hashlib.file_digest(f, 'sha256').hexdigest()
+    if actual != metadata['sha256']:
+        raise ValueError('Archive SHA-256 differs from the saved manifest.')
+    tracked = set(subprocess.run(['git', 'ls-files'], cwd=root, check=True,
+        capture_output=True, text=True).stdout.splitlines())
+    count = 0
+    with archive.open('rb') as raw:
+        with zstandard.ZstdDecompressor().stream_reader(raw) as decompressed:
+            with tarfile.open(fileobj=decompressed, mode='r|') as tar:
+                for member in tar:
+                    name = member.name.removeprefix('./')
+                    relative = Path(name)
+                    if relative.is_absolute() or '..' in relative.parts:
+                        raise ValueError('Unsafe archive member path.')
+                    if name in tracked or name in ('work/session.lock', 'work/foreground_owner.json', 'work/checkpoint_state.json'):
+                        continue
+                    if not member.isfile():
+                        if member.isdir():
+                            (root / relative).mkdir(parents=True, exist_ok=True)
+                            continue
+                        raise ValueError('Non-regular member in restart archive.')
+                    target = root / relative
+                    # Preserve existing restart data; this command is for a fresh clone.
+                    if target.exists():
+                        continue
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    with tar.extractfile(member) as source, target.open('wb') as output:
+                        while chunk := source.read(1024 * 1024):
+                            output.write(chunk)
+                    count += 1
+    return dict(restored_files=count, source_commit=metadata['source_commit'])
+
+
 if __name__ == '__main__':
     p = argparse.ArgumentParser()
-    p.add_argument('--destination', type=Path, required=True)
+    p.add_argument('--destination', type=Path)
+    p.add_argument('--restore', type=Path)
+    p.add_argument('--manifest', type=Path)
     a = p.parse_args()
-    print(json.dumps(snapshot(Path('.').resolve(), a.destination)))
+    if a.restore:
+        if not a.manifest:p.error('--restore requires --manifest')
+        result=restore(Path('.').resolve(),a.restore,a.manifest)
+    else:
+        if not a.destination:p.error('--destination is required for a snapshot')
+        result=snapshot(Path('.').resolve(),a.destination)
+    print(json.dumps(result))

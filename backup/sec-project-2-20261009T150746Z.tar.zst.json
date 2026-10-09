@@ -1,0 +1,21 @@
+{
+  "source_commit": "e7691510d2928962a4fd2373131133dd69c9e76a",
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "created_at": "2026-10-09T15:08:03.440897+00:00",
+  "archive": "sec-project-2-20261009T150746Z.tar.zst",
+  "archive_bytes": 953011233,
+  "sha256": "09bc9db764904896fad7daac602669f1142fa6187dad20cdba110759dcb09512",
+  "cached_responses": 6977,
+  "cached_response_bytes": 384241510,
+  "excludes": [
+    ".git",
+    ".pytest_cache",
+    ".venv",
+    "__pycache__",
+    "work/checkpoint_state.json",
+    "work/foreground_owner.json",
+    "work/session.lock"
+  ],
+  "final_delivery": false,
+  "independent_audit_performed": false
+}
