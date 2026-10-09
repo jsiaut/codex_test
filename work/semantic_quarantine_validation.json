@@ -1,8 +1,8 @@
 {
-  "quarantine_count": 19,
-  "missing_raw_ids": [],
-  "eligible_direct_rows": 19,
+  "quarantine_count": 21,
+  "missing_fact_ids": [],
+  "direct_eligible_rows": 21,
   "unexpected_nonnull_values": 0,
-  "raw_facts": 616302,
+  "raw_fact_count": 616302,
   "final_delivery": false
 }
