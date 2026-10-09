@@ -1,0 +1,20 @@
+[
+  {
+    "observation_id": "a39c1a45d489381bdd77d2e1835f449659b519ed9e0b6fe64be0e5bc9158415c",
+    "reason": "category_assignment_not_explicit_in_this_contractual_disclosure",
+    "scope": "category_and_amount_edges",
+    "detail": "Item404 discloses equipment leases and total contractual cash payments; debt classification of each ordinal is not independently established. Preserve quote and amount but exclude category-dependent measures until resolved."
+  },
+  {
+    "observation_id": "0b387c24fc3bb1cc16039309ed26a171a2b3742dba180d93bb5e162fc8bc1bc4",
+    "reason": "category_assignment_not_explicit_in_this_contractual_disclosure",
+    "scope": "category_and_amount_edges",
+    "detail": "Item404 discloses equipment leases and total contractual cash payments; debt classification of each ordinal is not independently established. Preserve quote and amount but exclude category-dependent measures until resolved."
+  },
+  {
+    "observation_id": "cac894920fbba230865d7f63cff93e390e6ed2278744fb5075f0f8d7dfe82194",
+    "reason": "category_assignment_not_explicit_in_this_contractual_disclosure",
+    "scope": "category_and_amount_edges",
+    "detail": "Item404 discloses equipment leases and total contractual cash payments; debt classification of each ordinal is not independently established. Preserve quote and amount but exclude category-dependent measures until resolved."
+  }
+]

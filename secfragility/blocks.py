@@ -34,6 +34,20 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
     governance=re.compile(r'^(?:certain\s+relationships(?:\s+and\s+related.*)?|related\s+(?:party|person)\s+transactions|transactions\s+with\s+related\s+(?:parties|persons)|related\s+persons?\s+transactions)$',re.I)
     headings=[]
     anchors={key:n for n in tree.iter() for key in (n.get('id'),n.get('name') if local_tag(n)=='a' else None) if key}
+    def heading_size(node):
+        sizes=[]
+        for n in [node,*node.iterdescendants()]:
+            for m in re.finditer(r'font(?:-size)?\s*:\s*(?:[a-z]+\s+)*([0-9.]+)(pt|px)',n.get('style') or '',re.I):
+                sizes.append(float(m.group(1))*(0.75 if m.group(2).lower()=='px' else 1))
+        return max(sizes,default=0)
+    def anchor_heading(target,label):
+        desired=re.sub(r'\s+',' ',label).strip().lower()
+        for n,pos in positions.items():
+            if positions[target]<=pos<=positions[target]+18000 and len(n)<8 and local_tag(n) in ('p','div','span','h1','h2','h3','b','strong'):
+                candidate=re.sub(r'\s+',' ',normalize_space(render(n))).strip().lower()
+                if candidate==desired and not any((a.get('href') or '').startswith('#') for a in n.iter('a')):
+                    return n,pos
+        return target,positions[target]
     # Proxy TOCs provide actual section anchors. A TOC entry is a pointer,
     # never the start of the related-person narrative.
     governance_sections=[]
@@ -42,6 +56,7 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
         target=anchors.get((link.get('href') or '').split('#',1)[-1]) if '#' in (link.get('href') or '') else None
         if not governance.match(label) or target is None or target not in positions:
             continue
+        heading,start=anchor_heading(target,label);level=heading_size(heading)
         tables=[p for p in link.iterancestors() if local_tag(p)=='table']
         container=tables[0] if tables else link.getparent()
         following=[]
@@ -50,8 +65,13 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
             ptarget=anchors.get((peer.get('href') or '').split('#',1)[-1]) if '#' in (peer.get('href') or '') else None
             if not plabel or plabel.isdigit() or ptarget is None or ptarget not in positions:
                 continue
-            if positions[ptarget]>positions[target]:following.append(positions[ptarget])
-        governance_sections.append({'node':target,'pos':positions[target],'label':label,
+            if positions[ptarget]>start:
+                # TOC peers may include nested policy/transaction headings.
+                # Their semantic membership, rather than typography shared
+                # imperfectly across pages, keeps them inside Item 404.
+                if re.search(r'related\s+(?:party|person)\s+transactions?',plabel,re.I) or governance.match(plabel):continue
+                following.append(positions[ptarget])
+        governance_sections.append({'node':heading,'pos':start,'label':label,
             'item':'404','end':min(following) if following else None})
     for node,pos in positions.items():
         if local_tag(node) not in ('p','div','span','b','strong','font','h1','h2','h3','h4','td'):
@@ -92,7 +112,7 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
             size_pattern=r'font(?:-size)?\s*:\s*(?:[a-z]+\s+)*([0-9.]+)pt'
             current_sizes=[float(m.group(1)) for n in current_nodes
                 for m in re.finditer(size_pattern,n.get('style') or '',re.I)]
-            current_size=max(current_sizes,default=0)
+            current_size=heading_size(h['node'])
             for n,pos in positions.items():
                 if pos<=start+500 or pos>=end:continue
                 t=normalize_space(render(n));style=n.get('style','')
@@ -104,6 +124,8 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
                 if bold and sizes and max(sizes)>=current_size and not governance.match(t.rstrip('.:')):
                     end=pos;break
         fragment=raw[start:end]
+        if item=='404' and any(b.get('item')=='404' and b['raw_byte_start']<=start and end<=b['raw_byte_end'] for b in output):
+            continue
         try:text=normalize_space(render(parse_html(fragment)))
         except Exception:continue
         # A table of contents heading ends almost immediately at its next item.

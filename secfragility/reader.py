@@ -16,6 +16,8 @@ def serve(root,key=None,part=0,body=False):
     row=next((r for r in q if not (root/'work/observations'/(r['content_key']+'.jsonl')).exists()),None) if not key else next(r for r in q if r['content_key']==key or r['occurrence_id']==key)
     if row is None:return {'queue_empty':True}
     block=json.loads((root/row['path']).read_text())
+    if block['block_class'] not in ('related_parties','going_concern'):
+        block=dict(block,assurance_level='not_applicable')
     exhibit_header=block['block_class']=='exhibit' and not body
     if exhibit_header:
         # Initial disclosure is the opening natural paragraphs. Long exhibits
@@ -38,10 +40,12 @@ def store(root,key,authored):
     for authored_row in authored:
         row={k:block[k] for k in ['content_key','document_id','accession','group','entity_id','knowledge_date','assurance_level']}
         row['group_id']=row.pop('group')
+        financial_note=block['block_class'] in ('related_parties','going_concern')
+        if not financial_note:row['assurance_level']='not_applicable'
         row.update(abstained=False,locator=f"rawbytes:{block['raw_byte_start']}:{block['raw_byte_end']}",
             raw_byte_start=block['raw_byte_start'],raw_byte_end=block['raw_byte_end'],
             filing_status='filed',tier='D' if block['block_class']=='exhibit' else
-                'A' if block['assurance_level']=='audited' else 'B' if block['assurance_level']=='reviewed' else 'C',
+                'A' if financial_note and block['assurance_level']=='audited' else 'B' if financial_note and block['assurance_level']=='reviewed' else 'C',
             location=block.get('location',block['block_class']),source_perspective='reporting_entity',accounting_framework='us_gaap')
         row.update(authored_row);rows.append(row)
     result=submit(create(root),root,block,(root/block['source_path']).read_bytes(),rows,run['as_of'])

@@ -61,3 +61,11 @@ Une composante présentée dans une linkbase ancienne ne disparaît pas de C1/C2
 ## D0015 — Obligation non comptabilisée et bail non commencé
 
 Le concept standard UnrecordedUnconditionalPurchaseObligationBalanceSheetAmount couvre explicitement plusieurs catégories dans sa définition, dont les baux non commencés. Lorsque le libellé propre du déposant affirme ces baux, sa grandeur est lease_not_commenced ; sinon elle reste une obligation d'achat non comptabilisée à périmètre large, chevauchement possible. Aucun bail n'est déduit du seul nom standard. La clôture et, lorsqu'elle est disponible, l'ouverture du pont sont publiées ; additions et commencements ne sont pas reconstitués par solde. Les concepts d'extensions sans paragraphe ASC attesté restent non résolus.
+
+## D0016 — Ancres vides et sous-sections d'Item 404
+
+L'ancre de table des matières d'Alphabet précède un bandeau de navigation ; son absence de taille typographique avait provoqué une borne au premier sous-titre. Le départ est résolu vers le titre réel, et les liens de sous-sections de transactions/politique de parties liées restent dans l'Item 404. La borne finale suit le prochain sujet de la table des matières, sans comparaison de tailles entre pages. Les blocs imbriqués déjà entièrement couverts sont écartés comme doublons de découpage. Les anciennes et nouvelles clés sont conservées dans section_boundary_changes ; aucune observation de l'ancien faux bloc d'Alphabet n'avait été écrite. Les sections de gouvernance, de contrôle et des 8-K ne prennent pas le niveau d'assurance des états financiers seulement parce qu'elles figurent dans le même formulaire.
+
+## D0017 — Quarantaine de classification contractuelle
+
+Trois observations de paiements contractuels sur la durée des équipements Valor, dans l'Item 404 du prospectus SpaceX, avaient été classées comme échéancier de dette par rapprochement avec la note financière. La qualification de chaque contrat ordinal n'est pas explicitement établie dans cet extrait. Les citations et montants restent conservés, mais observation_quarantines exclut leurs arêtes de montant et les mesures dépendant de cette catégorie jusqu'à résolution. Aucun total de ces engagements avec la dette comptabilisée ni aucun principal de dette n'est publié par hypothèse. Le fichier d'observations original n'est pas modifié.

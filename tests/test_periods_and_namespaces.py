@@ -24,6 +24,22 @@ def test_proxy_toc_is_pointer_and_next_peer_bounds_body():
     assert 'Unrelated ownership' not in blocks[0]['text']
 
 
+def test_proxy_subheading_anchor_does_not_truncate_related_transactions():
+    raw=b'''<html><body><table><tr><td><a href="#related">Certain Relationships and Related Transactions</a>
+      <a href="#policy">Related Party Transactions Policy and Procedure</a><a href="#next">Security Ownership</a></td></tr></table>
+      <div id="related"></div><div style="font-size:7pt">Navigation banner</div>
+      <div style="font-size:20pt;font-weight:700">Certain Relationships and Related Transactions</div>
+      <div id="policy"></div><div style="font-size:16pt;font-weight:700">Related Party Transactions Policy and Procedure</div>
+      <p>The committee reviews the terms of transactions involving directors.</p>
+      <p>The company obtained equipment from a related entity on market terms.</p>
+      <div id="next"></div><div style="font-size:20pt;font-weight:700">Security Ownership</div><p>Unrelated material.</p></body></html>'''
+    blocks=section_blocks(raw,form='DEF 14A',config={'normalizer_version':'1'})
+    assert len(blocks)==1
+    assert 'obtained equipment' in blocks[0]['text']
+    assert 'Navigation banner' not in blocks[0]['text']
+    assert 'Unrelated material' not in blocks[0]['text']
+
+
 def test_iso_duration_preserved_without_guessing_days_to_years():
     raw=b'''<xbrl xmlns="http://www.xbrl.org/2003/instance" xmlns:us-gaap="http://fasb.org/us-gaap/2026">
     <context id="c"><entity><identifier scheme="s">1</identifier></entity><period><instant>2026-06-30</instant></period></context>
