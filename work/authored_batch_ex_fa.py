@@ -1,0 +1,5 @@
+from work.authored_helpers import *
+save('9575a8e5e17f9325f7c5b513f0ed21de013bad51bd8c7d856cd7dac3c1916ec9',[
+dict(abstention('THIRD SUPPLEMENTAL INDENTURE','financial_parties_only: Firstphysicalpage read afterunderlying1.01. Originalnewnotes indenture with financialtrustee/initialunderwriters noItem3.03; §11.1 explicitly stopsSupplementalIndenturewithout3.03atheader. Noactualnoteholderinferredfromtrustee; bodyexcluded, datesnot actualcash.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=1843,locator='rawbytes:0:1843')])
+save('4b3b921868355ef52b86125df1484ef12830865c6749ceeba361541910a520c3',[
+dict(abstention('CREDIT AGREEMENT','financial_parties_only: Firstphysicalpage read afterfull1.01. Borrower namedindirectDECoreWeavesub; all otherparties bankagents/financiallenders confirmedsameaccEX10.2preliminaryAfinancialinstitutions. Originalcreditagreement notautonomousAmendment/Waiver/Consent; bodyexcluded11.1. Omittedconfidentialinfo[*]notzero/no assumedcustomercontractidentities.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=5527,locator='rawbytes:0:5527')])
