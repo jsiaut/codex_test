@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/jsiaut/codex_test",
+  "remote_commit_tested": "82d1d9442f99e4275d1e05fec86b40d336438902",
+  "archive_source_commit": "e7691510d2928962a4fd2373131133dd69c9e76a",
+  "archive_sha256_verified": "09bc9db764904896fad7daac602669f1142fa6187dad20cdba110759dcb09512",
+  "restored_nonversioned_files": 17436,
+  "queue_occurrences": 2337,
+  "missing_blocks": 0,
+  "restored_cached_responses": 6977,
+  "facts_parquet_bytes": 137396552,
+  "uncommitted_versioned_changes": [],
+  "method": "fresh_remote_clone_then_git_lfs_pull_then_checksum_verified_restore",
+  "final_delivery": false,
+  "independent_audit_performed": false
+}

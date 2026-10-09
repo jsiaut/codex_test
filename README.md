@@ -54,7 +54,7 @@ terminée. Le cache est exclu de Git et conservé dans une archive de reprise
 sous `backup/`, transférée avec Git LFS et accompagnée de son empreinte SHA-256.
 
 Pour reprendre sur une nouvelle machine, cloner le dépôt, exécuter `git lfs
-pull`, installer les dépendances, puis lancer `python -m secfragility.backup
+install --local` puis `git lfs pull`, installer les dépendances, puis lancer `python -m secfragility.backup
 --restore backup/sec-project-2-20261009T150746Z.tar.zst --manifest
 backup/sec-project-2-20261009T150746Z.tar.zst.json`. Cette commande vérifie
 l’empreinte et conserve les fichiers versionnés les plus récents. Ne pas
