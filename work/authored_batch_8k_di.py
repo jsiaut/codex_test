@@ -1,0 +1,3 @@
+from work.authored_helpers import *
+save('d90295caf274a081584d9b16781df83d4c6ac8a272a6599e3d71d660aa4592d9',[abstention('its election to have an early settlement.','Full item including pricing/placement restrictions and entire caution list read. May19election/participation/pricing not actual May21settlement or numerical new-face/cash. Releases not imported; generic risks not actual defaults/F4.')])
+save('9f37e676811b041e734d7bef514fe8f2982582277bda2819a30531e20a0433bc',[abstention('announcing the early tender results of its previously announced registered exchange offers','Full item read. May14earlytender and pricing announcements no actual settlement/face/cash or financial-clause amendment; release not imported.')])
