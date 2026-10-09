@@ -8,6 +8,23 @@ L='{http://www.xbrl.org/2003/linkbase}';X='{http://www.w3.org/1999/xlink}'
 P=etree.XMLParser(resolve_entities=False,no_network=True,huge_tree=True)
 
 
+def first_financial_note_role(instance: dict):
+    """Issuer report order among financial notes, excluding SEC governance tags.
+
+    ECD and CYD disclosures also use MenuCategory=Notes. They do not become
+    the financial statements' Note 1 merely by preceding it in FilingSummary.
+    """
+    roles={r['role']:int(r.get('order',999999)) for r in instance['report'].values()
+        if r.get('menuCat')=='Notes' and r.get('groupType')=='disclosure'
+        and not r['role'].startswith('http://xbrl.sec.gov/ecd/')}
+    financial={role:order for role,order in roles.items() if any(
+        tag.get('xbrltype')=='textBlockItemType'
+        and name.split('_',1)[0] not in {'ecd','cyd','dei'}
+        and role in (tag.get('presentation') or [])
+        for name,tag in instance['tag'].items())}
+    return min(financial,key=financial.get) if financial else None
+
+
 @lru_cache(maxsize=1)
 def standard(root_string):
     z=zipfile.ZipFile(Path(root_string)/'cache/datasets/us-gaap/2026/us-gaap-2026.zip')

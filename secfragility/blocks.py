@@ -6,7 +6,7 @@ import yaml
 from .text import parse_html,render,normalize_space,extract_inline_blocks,extract_classic_blocks,content_key,local_tag,requested_contract_exhibit
 from .xbrl import parse_instance,digest
 from .evidence import periodic_assurance,filing_status,tier
-from .metadata import load as load_metadata
+from .metadata import load as load_metadata,first_financial_note_role
 
 
 def offsets(raw: bytes,tree):
@@ -203,18 +203,16 @@ def queue(root: Path):
                 except Exception as exc:
                     excluded.append({'group':group,'accession':accession,'reason':'parse_failed','element':'classic_notes','detail':str(exc)})
                 break
+        has_going_concern=any('goingconcern' in (b['label']+b['concept']).lower() for b in natural)
+        first_role=first_financial_note_role(next(iter(metadata['instance'].values()))) if metadata and not has_going_concern else None
         for block in natural:
             label=re.sub(r'[^a-z0-9]','',(block['label']+' '+block['concept']).lower())
             wanted=('relatedparty' in label or 'relatedperson' in label)
             going='goingconcern' in label
-            if not any('goingconcern' in (b['label']+b['concept']).lower() for b in natural):
+            if not has_going_concern:
                 # First Notes role, determined by issuer presentation order,
                 # covers the note-1 fallback without guessing a concept name.
-                meta_inst=next(iter(metadata['instance'].values()))
-                roles={r['role']:int(r.get('order',999999)) for r in meta_inst['report'].values()
-                    if r.get('menuCat')=='Notes' and r.get('groupType')=='disclosure'}
-                if roles:
-                    first_role=min(roles,key=roles.get)
+                if first_role:
                     going=first_role in block.get('note_roles',[])
             block['block_class']='related_parties' if wanted else 'going_concern' if going else 'outside_first_pass'
             if going and meta['filingDate']<inv['groups'][group]['analysis_start']:

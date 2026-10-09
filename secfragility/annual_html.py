@@ -2,6 +2,7 @@ from pathlib import Path
 import json,yaml
 from .xbrl import digest
 from .mapping import build_mapping,apply_mapping
+from .document_order import provenance
 
 
 def rows(root:Path,collection:dict,as_of:str,mappings:list):
@@ -15,6 +16,7 @@ def rows(root:Path,collection:dict,as_of:str,mappings:list):
         choice['rule']='D1_annual_html_label_correspondence_to_quarter_mapping'
         choice['mapping_source_accession']='0001628280-26-052535'
     mappings.extend(mapping);document_id=digest([res['url']])
+    document_rank=provenance(str(root),m['accessionNumber'])['physical'].get(m['primaryDocument'],-2)
     for rank,r in enumerate(validation['rows']):
         unit='http://www.xbrl.org/2003/iso4217:USD'
         fact={'fact_id':digest(['annual_html',document_id,r['statement_kind'],r.get('html_row_rank',rank),r['period_end']]),
@@ -25,7 +27,8 @@ def rows(root:Path,collection:dict,as_of:str,mappings:list):
             'accounting_framework':'us_gaap','reporting_scope':'as_if_combined','source_perspective':'reporting_entity',
             'value':r['value'],'is_nil':False,'explicit_zero':r['value'] in ['0','-0'],'decimals':r['decimals'],
             'is_tagged':False,'locator':f"rawbytes:{r['raw_byte_start']}:{r['raw_byte_end']};label={r['label']};year={r['period_end'][:4]}",
-            'primary_statement_occurrence':True,'primary_statement_role':r['statement_kind'],'occurrence_rank':rank,'document_rank':0,
+            'primary_statement_occurrence':True,'primary_statement_role':r['statement_kind'],'occurrence_rank':rank,'document_rank':document_rank,
+            'document_rank_source':'SGML_DOCUMENT_order' if document_rank>=0 else 'unresolved_physical_document_order',
             'acceptance_datetime':m['acceptanceDateTime'],'knowledge_date':m['filingDate'],'filing_status':'filed','assurance_level':'audited',
             'location':'annual_audited_statements_in_424B4','tier':'A','coverage_state':'explicit_zero' if r['value'] in ['0','-0'] else 'observed',
             'recast_cause':'common_control_combination','as_of':as_of}

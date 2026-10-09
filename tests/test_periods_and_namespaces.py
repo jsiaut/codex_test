@@ -75,6 +75,20 @@ def test_large_candidate_header_is_served_completely_before_text(tmp_path):
     assert parts[-1]['text']=='The complete contract clause.'
 
 
+def test_note_one_fallback_ignores_earlier_regulatory_disclosures():
+    from secfragility.metadata import first_financial_note_role
+    instance={'report':{
+        'R1':{'role':'http://xbrl.sec.gov/ecd/role/PvpDisclosure','order':'8','menuCat':'Notes','groupType':'disclosure'},
+        'R2':{'role':'cyber','order':'10','menuCat':'Notes','groupType':'disclosure'},
+        'R3':{'role':'financial_note_1','order':'11','menuCat':'Notes','groupType':'disclosure'},
+        'R4':{'role':'financial_note_2','order':'12','menuCat':'Notes','groupType':'disclosure'}},
+        'tag':{'ecd_PayVsPerformance':{'xbrltype':'textBlockItemType','presentation':['http://xbrl.sec.gov/ecd/role/PvpDisclosure']},
+        'cyd_RiskManagement':{'xbrltype':'textBlockItemType','presentation':['cyber']},
+        'us-gaap_SignificantAccountingPoliciesTextBlock':{'xbrltype':'textBlockItemType','presentation':['financial_note_1']},
+        'issuer_RevenueNote':{'xbrltype':'textBlockItemType','presentation':['financial_note_2']}}}
+    assert first_financial_note_role(instance)=='financial_note_1'
+
+
 def test_committee_sentence_fragment_is_not_a_proxy_heading():
     raw=(b'<div><p>The committee reviews <span>related party transactions.</span></p>'
          b'<p>Its audit oversight report describes review of financial statements and '

@@ -13,6 +13,7 @@ from .mapping import build_mapping,apply_mapping
 from .xbrl import parse_instance,digest
 from .text import parse_html,local_tag,render,normalize_space
 from .metadata import load as load_metadata
+from .document_order import provenance,fact_order
 
 
 def load_jsonl(db,table: str,path: Path):
@@ -59,7 +60,7 @@ def companyfacts_rows(root: Path,collection: dict,inventory: dict,as_of: str):
                             'accounting_framework':framework,'reporting_scope':scope,
                             'source_perspective':'reporting_entity','value':value,'is_nil':False,'explicit_zero':value==0,
                             'is_tagged':True,'locator':f'companyfacts:{taxonomy}/{concept}/units/{unit};accn={accession};start={start};end={end}',
-                            'occurrence_rank':0,'document_rank':-1,
+                            'occurrence_rank':0,'document_rank':-1,'document_rank_source':'companyfacts_API_aggregate',
                             'acceptance_datetime':context.get('acceptanceDateTime',fact['filed']+'T23:59:59+00:00'),
                             'knowledge_date':fact['filed'],'filing_status':'filed' if evidence_tier!='E' else 'unclassified',
                             'assurance_level':assurance,'location':'companyfacts_unbounded',
@@ -72,6 +73,7 @@ def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
         if filing['status']!='collected':
             continue
         row=filing['metadata'];group=filing['group'];resources=filing['resources']
+        source_order=provenance(str(root),accession)
         meta=load_metadata(root,resources,accession)
         mapping=build_mapping(meta,yaml.safe_load((root/'config.yaml').read_text()),group,accession,replacements) if meta else []
         mappings.extend(mapping)
@@ -128,6 +130,9 @@ def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
                 assurance_level=assurance,as_of=as_of,reporting_scope='as_if_combined' if group=='SPCX' else 'consolidated',taxonomy_replacements=replacements)
             apply_mapping(facts,mapping)
             for fact in facts:
+                rank,rank_source,source_document_id=fact_order(name,fact,source_order)
+                fact.update(document_rank=rank,document_rank_source=rank_source,source_document_id=source_document_id)
+                if rank==-2:fact['coverage_state']='unknown'
                 fact['primary_statement_occurrence']=(fact['locator'][3:] in primary_ids) if primary_known and fact['locator'].startswith('id:') else None
                 fact['primary_statement_role']=primary_roles.get(fact['locator'][3:]) if fact['locator'].startswith('id:') else None
                 fact['primary_statement_parenthetical']=primary_parenthetical.get(fact['locator'][3:]) if fact['locator'].startswith('id:') else None
@@ -145,9 +150,11 @@ def document_rows(root: Path,collection: dict,as_of: str):
         yield {'document_id':digest([source['url'],as_of]),'group_id':source['group'],'entity_id':'cik:'+cik,
             'cik':cik,'url':source['url'],'cache_path':str(p.relative_to(root)),'sha256':hashlib.sha256(raw).hexdigest(),
             'filing_status':'unclassified','document_kind':'api_aggregate',
+            'document_rank':-1,'document_rank_source':'companyfacts_API_aggregate',
             'byte_count':len(raw),'parse_status':'observed','as_of':as_of}
     for accession,filing in collection['filings'].items():
         row=filing['metadata']
+        source_order=provenance(str(root),accession)
         for name,res in filing['resources'].items():
             raw=(root/res['path']).read_bytes()
             status=filing_status(row['form'])
@@ -155,6 +162,8 @@ def document_rows(root: Path,collection: dict,as_of: str):
             yield {'document_id':digest([res['url']]),'group_id':filing['group'],
                 'entity_id':'cik:'+row['cik'],'cik':row['cik'],'accession':accession,
                 'url':res['url'],'cache_path':res['path'],'sha256':hashlib.sha256(raw).hexdigest(),
+                'document_rank':source_order['physical'].get(name,-2),
+                'document_rank_source':'SGML_DOCUMENT_order' if name in source_order['physical'] else 'derived_or_metadata_resource_without_SGML_rank',
                 'form':row['form'],'filing_status':status,'assurance_level':assurance,
                 'document_kind':'instance' if name.endswith('_htm.xml') else 'metadata' if name.endswith(('.xml','.json','.xsd')) else 'unclassified',
                 'acceptance_datetime':row['acceptanceDateTime'],'filing_date':row['filingDate'],
