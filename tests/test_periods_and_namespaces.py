@@ -58,6 +58,23 @@ def test_contract_break_after_parent_and_unpaginated_document():
     assert 'Unpaginated agreement.' in page['text']
 
 
+def test_large_candidate_header_is_served_completely_before_text(tmp_path):
+    import json
+    from secfragility.reader import serve,DISPLAY_CEILING
+    folder=tmp_path/'work';folder.mkdir()
+    candidates=[{'fact_id':str(i),'dimensions':json.dumps({'typed_member':'x'*900}),
+        'value':str(i),'unit':'USD','period_end':'2026-06-30'} for i in range(65)]
+    block={'content_key':'k','occurrence_id':'o','block_class':'item404','text':'The complete contract clause.',
+        'candidates':candidates}
+    (folder/'block.json').write_text(json.dumps(block))
+    (folder/'queue.json').write_text(json.dumps([{'content_key':'k','path':'work/block.json'}]))
+    first=serve(tmp_path,'k');parts=[first]+[serve(tmp_path,'k',part=i) for i in range(1,first['parts'])]
+    assert all(len(json.dumps(p,ensure_ascii=False))<=DISPLAY_CEILING for p in parts)
+    assert [f['fact_id'] for p in parts for f in p['candidates']]==[str(i) for i in range(65)]
+    assert all(p['packet_kind']=='candidate_header' for p in parts[:-1])
+    assert parts[-1]['text']=='The complete contract clause.'
+
+
 def test_committee_sentence_fragment_is_not_a_proxy_heading():
     raw=(b'<div><p>The committee reviews <span>related party transactions.</span></p>'
          b'<p>Its audit oversight report describes review of financial statements and '

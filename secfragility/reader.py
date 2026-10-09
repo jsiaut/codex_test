@@ -8,6 +8,10 @@ from .observations import submit
 from .text import chunks,exhibit_first_page
 from .session import command as session_command
 
+# The specification allows up to 80,000 serialized characters. Smaller
+# packets also survive the execution tool's output limit without truncation.
+DISPLAY_CEILING=30000
+
 def block_for(root,key):
     q=json.loads((root/'work/queue.json').read_text())
     row=next(r for r in q if r['content_key']==key or r['occurrence_id']==key)
@@ -39,23 +43,47 @@ def serve(root,key=None,part=0,body=False):
     fields=['fact_id','canonical_concept','value','unit','currency','period_start','period_end','dimensions','decimals']
     candidates=[{k:f.get(k) for k in fields} for f in block['candidates']]
     header=json.dumps({'metadata':metadata,'candidates':candidates},ensure_ascii=False)
-    ceiling=80000-len(header)-200
-    if ceiling<2000:raise ValueError('Candidate header exceeds readable packet; split the candidates with explicit reading progress.')
+    candidate_packets=[]
+    text_candidates=candidates
+    if len(header)>DISPLAY_CEILING//2:
+        # Header pieces are presentation fragments of the SAME natural block.
+        # Every candidate is served before its complete text; none is filtered.
+        start=0;group=[]
+        for candidate in candidates:
+            trial=group+[candidate]
+            size=len(json.dumps({'metadata':metadata,'candidates':trial},ensure_ascii=False))+500
+            if size>DISPLAY_CEILING and group:
+                candidate_packets.append((start,group));start+=len(group);group=[candidate]
+            elif size>DISPLAY_CEILING:
+                raise ValueError('One candidate exceeds display ceiling; explicit candidate continuation required.')
+            else:group=trial
+        if group:candidate_packets.append((start,group))
+        text_candidates=[]
+    header=json.dumps({'metadata':metadata,'candidates':text_candidates},ensure_ascii=False)
+    ceiling=DISPLAY_CEILING-len(header)-500
     def packet(i,portions):
-        return {'metadata':metadata,'candidates':candidates,'exhibit_header':exhibit_header,
-            'part':i,'parts':len(portions),'text':portions[i]}
+        common={'metadata':metadata,'exhibit_header':exhibit_header,'part':i,
+            'parts':len(candidate_packets)+len(portions),'candidate_header_parts':len(candidate_packets),
+            'total_candidates':len(candidates)}
+        if i<len(candidate_packets):
+            start,group=candidate_packets[i]
+            return dict(common,packet_kind='candidate_header',candidates=group,
+                candidate_start=start,candidate_end=start+len(group),text='')
+        return dict(common,packet_kind='text',candidates=text_candidates,
+            text_part=i-len(candidate_packets),text=portions[i-len(candidate_packets)])
     while True:
         portions=list(chunks(block,ceiling))
-        largest=max(len(json.dumps(packet(i,portions),ensure_ascii=False)) for i in range(len(portions)))
-        if largest<=80000:break
-        ceiling-=largest-80000+200
+        largest=max(len(json.dumps(packet(i,portions),ensure_ascii=False)) for i in range(len(candidate_packets)+len(portions)))
+        if largest<=DISPLAY_CEILING:break
+        ceiling-=largest-DISPLAY_CEILING+200
         if ceiling<2000:raise ValueError('Serialized packet header exceeds reading ceiling.')
     result=packet(part,portions)
     encoded=json.dumps(result,ensure_ascii=False)
     log=root/'work/read_packets.jsonl'
     with log.open('a') as f:
         f.write(json.dumps(dict(content_key=block['content_key'],occurrence_id=block['occurrence_id'],
-            part=part,parts=len(portions),exhibit_header=exhibit_header,text_chars=len(portions[part]),
+            part=part,parts=result['parts'],packet_kind=result['packet_kind'],
+            exhibit_header=exhibit_header,text_chars=len(result['text']),
             packet_chars=len(encoded),packet_sha256=hashlib.sha256(encoded.encode()).hexdigest(),
             served_at=datetime.now(timezone.utc).isoformat()))+'\n')
     return result

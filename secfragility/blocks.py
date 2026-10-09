@@ -258,7 +258,13 @@ def queue(root: Path):
         if meta['form'] in ('8-K','8-K/A') and filing.get('discovery_path'):
             disc=json.loads((root/filing['discovery_path']).read_text())
             for header in disc['headers']:
-                if not requested_contract_exhibit(header['type']) or header['filename'] not in resources:continue
+                if not requested_contract_exhibit(header['type']):
+                    if header['type'].startswith('EX-101') and header['filename'] in resources:
+                        excluded.append({'group':group,'accession':accession,'reason':'policy_excluded',
+                            'element':digest([resources[header['filename']]['url']]),
+                            'detail':'ressource XBRL EX-101 de phase 1, hors file des contrats EX-10/EX-4'})
+                    continue
+                if header['filename'] not in resources:continue
                 res=resources[header['filename']];exraw=(root/res['path']).read_bytes()
                 text=normalize_space(render(parse_html(exraw)))
                 block={'text':text,'candidates':[],'label':header.get('description',''),'exhibit_type':header['type'],
