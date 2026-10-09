@@ -322,5 +322,140 @@
     "reason": "Narrative not material does not establish exact zero goodwill impairment",
     "decision": "D0043",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "4e6403ebfff08835d1ecf569327a89423e63de233e45512fcff2a0c62741ab10",
+    "content_key": "4d1926db43f8783bfe34603462d1198d04ed462578de23894c1d2aecdcf4f0c8",
+    "accession": "0000950170-24-134973",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "2a897d175ec96536b01f30f9570c7bfc57c662e249ec9fbd9c2b16055ec581e7",
+    "content_key": "4d1926db43f8783bfe34603462d1198d04ed462578de23894c1d2aecdcf4f0c8",
+    "accession": "0000950170-24-134973",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "c7e97eafb4f1a3d34e3fb27829f89f2e75ef502d4dfc71aa5061b9abfeb1c9c8",
+    "content_key": "4d1926db43f8783bfe34603462d1198d04ed462578de23894c1d2aecdcf4f0c8",
+    "accession": "0000950170-24-134973",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "64001f793714fcc4831d2a1e7e65fb88653cc8f18f26b90a1dd68564783a7db5",
+    "content_key": "4d1926db43f8783bfe34603462d1198d04ed462578de23894c1d2aecdcf4f0c8",
+    "accession": "0000950170-24-134973",
+    "affected_quantity": "server_network_useful_life",
+    "reason": "Tangible servers networking useful life tagged as finite lived intangible asset life",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "74a985259bb47e2ee5839e27d1e8fdc2f4be5b6530788da39b7f84b897f1afe7",
+    "content_key": "4d1926db43f8783bfe34603462d1198d04ed462578de23894c1d2aecdcf4f0c8",
+    "accession": "0000950170-24-134973",
+    "affected_quantity": "server_network_useful_life",
+    "reason": "Tangible servers networking useful life tagged as finite lived intangible asset life",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "5ac86e1ce99e8680805c741e1acc54018d0f0edf56cee487c8041a86ff7f219b",
+    "content_key": "85a78e933c3d76e312a926fee4799a615a2b21da059ff86756d56ef16836d356",
+    "accession": "0000950170-25-037143",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a43edcff0e2d784732bc81b05f1e43db23623b8ef46ad252a31619c409902196",
+    "content_key": "85a78e933c3d76e312a926fee4799a615a2b21da059ff86756d56ef16836d356",
+    "accession": "0000950170-25-037143",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "0be59ef04de5d8697304c27025edb05a904b3be6afe92192f8590a2b7bef6f80",
+    "content_key": "85a78e933c3d76e312a926fee4799a615a2b21da059ff86756d56ef16836d356",
+    "accession": "0000950170-25-037143",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "cabc353ccf91bf0b86e33db05ff28210bf141741229e6f00f20542889a6ffdb7",
+    "content_key": "8bf9fec8af82638c58833ada3890a507d8c3d1dcd35ec7bd03494577582bd757",
+    "accession": "0000950170-25-087926",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "04ce875480c638e7674a7aa78b1ba2a3456d07f8df2cc50a2540f6eede1985ad",
+    "content_key": "8bf9fec8af82638c58833ada3890a507d8c3d1dcd35ec7bd03494577582bd757",
+    "accession": "0000950170-25-087926",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "e598dd39a0fb2e16d81259948c37ff6a16c4692a90a7b25a9ce73a72bac19b21",
+    "content_key": "8bf9fec8af82638c58833ada3890a507d8c3d1dcd35ec7bd03494577582bd757",
+    "accession": "0000950170-25-087926",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "189fb5465cd62c86589e4060af6b0a413a963d5574b483fd62b443ccfebc0fe1",
+    "content_key": "8bf9fec8af82638c58833ada3890a507d8c3d1dcd35ec7bd03494577582bd757",
+    "accession": "0000950170-25-087926",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "0dfd11264617f012307b93720a09008251fb4b2fb09107c748cfb99c3e758664",
+    "content_key": "cd006b0009c496cb04499ff95e6c6b5f338391aed7b733fcda91336f87a3c53e",
+    "accession": "0001193125-25-200095",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "f8c959150b8b87b12875b0b527fc2f10d911b5564fb99045ea23ff8d419fa0a1",
+    "content_key": "cd006b0009c496cb04499ff95e6c6b5f338391aed7b733fcda91336f87a3c53e",
+    "accession": "0001193125-25-200095",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "2c25a2c5a30068221ee1149db8ea797028d91460aad2073f180509892dc72669",
+    "content_key": "cd006b0009c496cb04499ff95e6c6b5f338391aed7b733fcda91336f87a3c53e",
+    "accession": "0001193125-25-200095",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]

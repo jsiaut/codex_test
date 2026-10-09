@@ -226,3 +226,10 @@ Le raccourcissement de six à cinq ans d’un sous-ensemble des serveurs et rés
 ### D0043 — Goodwill Alphabet FY2024
 
 La note annuelle 2024, lue intégralement, qualifie les pertes sur goodwill de non matérielles pour les périodes présentées. Les trois zéros balisés pour 2022–2024 ne prouvent pas un zéro exact et restent bruts, exclus des calculs dépendants dans ce dépôt. La quarantaine d’un dépôt ultérieur ne remplace pas cette preuve propre à l’accession. L’adoption ASU2023-07 en 2024 et la mise à jour des comparatifs concernent les disclosures ; la mention des placements et arrangements commerciaux contemporains reste anonyme et sans allocation de montant.
+
+
+### D0044 — Périmètre combiné des placements Oracle et vie des équipements
+
+La note de novembre 2024 est intégralement lue, avec ses 68 candidats. Ses stocks non-marketable réunissent dette, actions et instruments liés, y compris le total des placements Ampere après la description de dette convertible ; ils ne prouvent pas des stocks exclusivement en actions comme le concept EquitySecuritiesFvNiAndWithoutReadilyDeterminableFairValue. Les trois faits sont exclus de l’attribution dépendante. Deux candidats de durée relatifs aux serveurs et réseaux portent un concept de vie d’actifs incorporels ; leurs faits bruts et durées restent conservés sans attribution d’une vie incorporelle.
+
+La confrontation explicite des dix faits déjà choisis dans les notes entièrement lues de février, mai et août 2025 confirme le même conflit de périmètre. Leurs observations historiques ne sont ni remplacées ni resoumises : dix quarantaines supplémentaires excluent les calculs dépendants. Les montants d’investissements convertibles de la période et les parts de propriété restent distincts de ces soldes combinés. Cette revue n’est pas une nouvelle passe de lecture.
