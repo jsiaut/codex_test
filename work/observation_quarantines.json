@@ -16,5 +16,89 @@
     "reason": "category_assignment_not_explicit_in_this_contractual_disclosure",
     "scope": "category_and_amount_edges",
     "detail": "Item404 discloses equipment leases and total contractual cash payments; debt classification of each ordinal is not independently established. Preserve quote and amount but exclude category-dependent measures until resolved."
+  },
+  {
+    "observation_id": "b5353b47e38f8888a4ed99fab151ca86f99e15230c0fc656200e786b85ca2512",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All five body packets read; article2 confines new series; DTC explicitly in article2 and forms. No Item3.03."
+  },
+  {
+    "observation_id": "f2b5af609fb1db270feef81a77360fc2525e18a192804739ddbd1d6131e7abd4",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All five body packets read; article2 confines new series; DTC explicitly in article2 and forms. No Item3.03."
+  },
+  {
+    "observation_id": "3a937bbc4805e90098ac7bd0af404761049e53d34daa2a47ccd3507b0d1f536e",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All five body packets read; article2 confines new series; DTC explicitly in article2 and forms. No Item3.03."
+  },
+  {
+    "observation_id": "022841b12c726d518ecbeebeca83079f58d5825699a0c4e6a5f7eb16cfe38f34",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All five body packets read; article2 confines new series; DTC explicitly in article2 and forms. No Item3.03."
+  },
+  {
+    "observation_id": "ad2aee1961ad66ae3b5868a04af007c5955d93164bbc51e20d93e71e3e8ed459",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All five body packets read; article2 confines new series; DTC explicitly in article2 and forms. No Item3.03."
+  },
+  {
+    "observation_id": "9d06c098af30abeab53d62f1143a99e5902eee76fe7890f1638cd62eb5252b8e",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All five body packets read; article2 confines new series; DTC explicitly in article2 and forms. No Item3.03."
+  },
+  {
+    "observation_id": "58ef59d71292f07eedeb3cb205038a8875cc998f8c80d67b80a63aa47c43c7b6",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All four body packets read; financial DTC/Cede global holder explicit. No Item3.03."
+  },
+  {
+    "observation_id": "eadd72a3d94a91b29fcd448bc63327bfbd906d17bd7e1862796cfb84a082c8f8",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. All four body packets read; financial DTC/Cede global holder explicit. No Item3.03."
+  },
+  {
+    "observation_id": "74950c4ce60d404ee25868c266e43fd9ccf8900b2b8bf2892371fe2eb897cb06",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. Complete one body packet read; additional notes form same class as April14 original; original bf49c72b financial registered DTC holder and11 financial initialpurchasers explicitly proved. Actual body3.1 clause change observed but no Item3.03, so excluded from firstpass F4 by fixed11.1rule."
+  },
+  {
+    "observation_id": "fc48ae08020aa0ec54a73a106367a787ea6891666f8dc89312541907677e5386",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. Complete one body packet read; additional notes form same class as April14 original; original bf49c72b financial registered DTC holder and11 financial initialpurchasers explicitly proved. Actual body3.1 clause change observed but no Item3.03, so excluded from firstpass F4 by fixed11.1rule."
+  },
+  {
+    "observation_id": "f422a7e379e7e9f633bd55b9303cd4374bb01530b6b240e1a7dc061f67a225c8",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. Complete one body packet read; additional notes form same class as April14 original; original bf49c72b financial registered DTC holder and11 financial initialpurchasers explicitly proved. Actual body3.1 clause change observed but no Item3.03, so excluded from firstpass F4 by fixed11.1rule."
+  },
+  {
+    "observation_id": "c3b4acea25e2ceec24533525096d5ba57b5b794c74a5110a48765d12db2914ef",
+    "reason": "financial_parties_only",
+    "scope": "all_derived_measures_links_and_events",
+    "decision": "D89",
+    "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. Complete one body packet read; additional notes form same class as April14 original; original bf49c72b financial registered DTC holder and11 financial initialpurchasers explicitly proved. Actual body3.1 clause change observed but no Item3.03, so excluded from firstpass F4 by fixed11.1rule."
   }
 ]

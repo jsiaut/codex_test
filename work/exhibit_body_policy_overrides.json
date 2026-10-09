@@ -1,0 +1,35 @@
+[
+  {
+    "content_key": "5111b0a3f21ea4d0c6706546970e050895c74f90c67e4d4e72b9228026c1805f",
+    "group": "META",
+    "accession": "0001193125-26-204128",
+    "reason": "financial_parties_only",
+    "raw_byte_start": 2059,
+    "raw_byte_end": 239241,
+    "decision": "D89",
+    "body_personally_read": true,
+    "detail": "All five body packets read; article2 confines new series; DTC explicitly in article2 and forms. No Item3.03."
+  },
+  {
+    "content_key": "83d3b91e011cd2ad2c05b4f972fa8655636b9d273fd8e90c7f6cce6d8f9d86b3",
+    "group": "MRVL",
+    "accession": "0001193125-26-157134",
+    "reason": "financial_parties_only",
+    "raw_byte_start": 2343,
+    "raw_byte_end": 201997,
+    "decision": "D89",
+    "body_personally_read": true,
+    "detail": "All four body packets read; financial DTC/Cede global holder explicit. No Item3.03."
+  },
+  {
+    "content_key": "285affe4f734d81b51b903ebcb5a35c4ba9993dfc63cb64657bb79944c53252b",
+    "group": "CRWV",
+    "accession": "0001769628-26-000183",
+    "reason": "financial_parties_only",
+    "raw_byte_start": 13017,
+    "raw_byte_end": 35917,
+    "decision": "D89",
+    "body_personally_read": true,
+    "detail": "Complete one body packet read; additional notes form same class as April14 original; original bf49c72b financial registered DTC holder and11 financial initialpurchasers explicitly proved. Actual body3.1 clause change observed but no Item3.03, so excluded from firstpass F4 by fixed11.1rule."
+  }
+]
