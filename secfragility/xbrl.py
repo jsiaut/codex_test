@@ -26,7 +26,19 @@ def namespace_family(uri: str) -> str:
         return 'srt'
     if 'ifrs' in uri:
         return 'ifrs'
-    return re.sub(r'/(?:\d{4}(?:-\d{2}-\d{2})?|\d{8})/?$', '', uri)
+    if uri in {XBRLI,XBRLDI,XSI} or uri.startswith(('http://www.xbrl.org/','http://www.w3.org/','http://www.iso.org/')):
+        return uri
+    return re.sub(r'/(?:\d{4}(?:-\d{2}-\d{2})?|\d{8})(?=/|$)', '', uri).rstrip('/')
+
+
+def filing_namespaces(root,resources):
+    for name,res in resources.items():
+        if name.endswith('_htm.xml') or name.endswith('.xml') and not name.endswith(('_cal.xml','_pre.xml','_def.xml','_lab.xml')):
+            raw=(root/res['path']).read_bytes()[:50000]
+            marker=re.search(rb'<(?:[\w.-]+:)?xbrl\b[^>]*>',raw,re.I)
+            if marker:
+                return {p.decode() if p else None:u.decode() for p,u in re.findall(rb'xmlns(?::([^\s=]+))?\s*=\s*["\']([^"\']+)',marker.group())}
+    return {}
 
 
 def canonical_qname(name: str, nsmap: dict) -> str:

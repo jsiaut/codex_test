@@ -6,6 +6,7 @@ import yaml
 from .text import parse_html,render,normalize_space,extract_inline_blocks,extract_classic_blocks,content_key,local_tag
 from .xbrl import parse_instance,digest
 from .evidence import periodic_assurance,filing_status,tier
+from .metadata import load as load_metadata
 
 
 def offsets(raw: bytes,tree):
@@ -116,6 +117,7 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
 
 def queue(root: Path):
     cfg=yaml.safe_load((root/'config.yaml').read_text());run=json.loads((root/'work/run.json').read_text())
+    replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
     state=json.loads((root/'work/collection.json').read_text());inv=json.loads((root/'work/inventory.json').read_text())
     queue=[];excluded=[];all_blocks=[]
     blockdir=root/'work/blocks';blockdir.mkdir(parents=True,exist_ok=True)
@@ -135,22 +137,24 @@ def queue(root: Path):
             candidates.extend(parse_instance((root/res['path']).read_bytes(),entity_id='cik:'+meta['cik'],
                 reporting_identity='reporter:'+group,group_id=group,document_id=digest([res['url']]),accession=accession,
                 acceptance_datetime=meta['acceptanceDateTime'],knowledge_date=meta['filingDate'],
-                assurance_level=periodic_assurance(meta['form']),as_of=run['as_of']))
+                assurance_level=periodic_assurance(meta['form']),as_of=run['as_of'],taxonomy_replacements=replacements,
+                reporting_scope='as_if_combined' if group=='SPCX' else 'consolidated'))
         natural=[]
         note_resource=resource
-        if 'MetaLinks.json' in resources and b'ix:nonnumeric' in raw.lower():
+        metadata=load_metadata(root,resources,accession)
+        if metadata and b'ix:nonnumeric' in raw.lower():
             try:
-                natural=extract_inline_blocks(raw,json.loads((root/resources['MetaLinks.json']['path']).read_text()),
+                natural=extract_inline_blocks(raw,metadata,
                     candidates,normalizer_version=cfg['normalizer_version'])
             except Exception as exc:
                 excluded.append({'group':group,'accession':accession,'reason':'parse_failed','element':'natural_notes','detail':str(exc)})
-        elif 'MetaLinks.json' in resources:
+        elif metadata:
             for ins_name in disc.get('instances',[]):
                 if ins_name not in resources:continue
                 note_resource=resources[ins_name]
                 try:
                     natural=extract_classic_blocks((root/note_resource['path']).read_bytes(),
-                        json.loads((root/resources['MetaLinks.json']['path']).read_text()),candidates,
+                        metadata,candidates,
                         normalizer_version=cfg['normalizer_version'])
                 except Exception as exc:
                     excluded.append({'group':group,'accession':accession,'reason':'parse_failed','element':'classic_notes','detail':str(exc)})
@@ -162,7 +166,7 @@ def queue(root: Path):
             if not any('goingconcern' in (b['label']+b['concept']).lower() for b in natural):
                 # First Notes role, determined by issuer presentation order,
                 # covers the note-1 fallback without guessing a concept name.
-                meta_inst=next(iter(json.loads((root/resources['MetaLinks.json']['path']).read_text())['instance'].values()))
+                meta_inst=next(iter(metadata['instance'].values()))
                 roles={r['role']:int(r.get('order',999999)) for r in meta_inst['report'].values()
                     if r.get('menuCat')=='Notes' and r.get('groupType')=='disclosure'}
                 if roles:
@@ -181,6 +185,30 @@ def queue(root: Path):
             block['block_class']='item404' if item=='404' else 'controls' if item in ('4','9A') else '8k_item'
             block['priority']=0 if item=='404' else 1 if item in ('4','9A') else 2
             queue.append((filing,resource,block))
+        if group=='SPCX' and accession=='0001628280-26-042639':
+            # Annual notes in this prospectus are audited HTML, not iXBRL.
+            # Bounds are the actual annual note headings (D1/D2).
+            annual_ranges=[('related_parties','Note 18 — Related Party Transactions',
+                raw.rfind(b'<div ',0,9609692),raw.rfind(b'<div ',0,9628654)),
+                ('going_concern','Note 1 — annual basis of presentation',7336456,7361893)]
+            for cls,label,start,end in annual_ranges:
+                text=normalize_space(render(parse_html(raw[start:end])))
+                block={'text':text,'candidates':[],'label':label,'concept':'untagged_annual_note',
+                    'block_class':cls,'priority':0 if cls=='related_parties' else 1,
+                    'raw_byte_start':start,'raw_byte_end':end,'source_ranges':[[start,end]],
+                    'assurance_level':'audited','location':'annual_audited_notes_in_424B4',
+                    'content_key':content_key(text,[],cfg['normalizer_version'])}
+                queue.append((filing,resource,block))
+        if group=='CRWV' and accession=='0001193125-25-067651':
+            # Annual Note 14 is covered by the Deloitte 2024/2023 and RSM
+            # 2022 opinions in this same prospectus (D0012).
+            start,end=3463351,3477806
+            text=normalize_space(render(parse_html(raw[start:end])))
+            queue.append((filing,resource,{'text':text,'candidates':[],
+                'label':'Note 14 — annual Related Party Transactions','concept':'untagged_annual_note',
+                'block_class':'related_parties','priority':0,'raw_byte_start':start,'raw_byte_end':end,
+                'source_ranges':[[start,end]],'assurance_level':'audited','location':'annual_audited_notes_in_424B4',
+                'content_key':content_key(text,[],cfg['normalizer_version'])}))
         # Every eligible EX-10/EX-4 enters the queue, initially by its first
         # page; classification by actual parties occurs only after human reading.
         if meta['form'] in ('8-K','8-K/A') and filing.get('discovery_path'):
@@ -201,7 +229,7 @@ def queue(root: Path):
         block.update(group=filing['group'],accession=meta['accessionNumber'],entity_id='cik:'+meta['cik'],
             form=meta['form'],knowledge_date=meta['filingDate'],acceptance_datetime=meta['acceptanceDateTime'],
             source_path=res['path'],document_id=digest([res['url']]),as_of=run['as_of'],
-            assurance_level=periodic_assurance(meta['form']))
+            assurance_level=block.get('assurance_level',periodic_assurance(meta['form'])))
         occurrence=digest([key,block['document_id'],block['raw_byte_start']])
         block['occurrence_id']=occurrence
         path=blockdir/(occurrence+'.json');path.write_text(json.dumps(block,ensure_ascii=False,default=str))

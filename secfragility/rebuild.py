@@ -5,12 +5,14 @@ import json
 import hashlib
 import re
 import yaml
+import zstandard
 from .archives import filing_base
 from .database import create,export,sql_literal,table_counts
 from .evidence import periodic_assurance,tier,filing_status
 from .mapping import build_mapping,apply_mapping
 from .xbrl import parse_instance,digest
-from .text import parse_html,local_tag
+from .text import parse_html,local_tag,render,normalize_space
+from .metadata import load as load_metadata
 
 
 def load_jsonl(db,table: str,path: Path):
@@ -25,6 +27,7 @@ def write_jsonl(path: Path,rows):
 
 
 def companyfacts_rows(root: Path,collection: dict,inventory: dict,as_of: str):
+    replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
     for cik,source in collection['companyfacts'].items():
         group=source['group']
         meta={r['accessionNumber']:r for issuer in inventory['groups'][group]['issuers'].values() for r in issuer['filings']}
@@ -37,7 +40,7 @@ def companyfacts_rows(root: Path,collection: dict,inventory: dict,as_of: str):
                         accession=fact['accn']; form=fact['form']
                         context=meta.get(accession,{})
                         start,end=fact.get('start'),fact['end']
-                        canonical=taxonomy+':'+concept
+                        canonical=replacements.get(taxonomy+':'+concept,taxonomy+':'+concept)
                         normalized_unit='http://www.xbrl.org/2003/iso4217:'+unit if re.fullmatch('[A-Z]{3}',unit) else (
                             'http://www.xbrl.org/2003/iso4217:USD/http://www.xbrl.org/2003/instance:shares' if unit=='USD/shares' else
                             'http://www.xbrl.org/2003/instance:'+unit)
@@ -47,9 +50,9 @@ def companyfacts_rows(root: Path,collection: dict,inventory: dict,as_of: str):
                         framework='ifrs' if taxonomy.startswith('ifrs') else 'us_gaap'
                         scope='as_if_combined' if group=='SPCX' and fact['filed']>='2026-05-20' else 'consolidated'
                         semantic=digest([canonical,'reporter:'+group,start,end,normalized_unit,'{}',framework,scope])
-                        yield {'fact_id':digest(['companyfacts',cik,accession,canonical,unit,start,end]),
+                        yield {'fact_id':digest(['companyfacts',cik,accession,taxonomy+':'+concept,unit,start,end]),
                             'semantic_key':semantic,'document_id':document_id,'accession':accession,
-                            'entity_id':'cik:'+cik,'group_id':group,'concept':canonical,
+                            'entity_id':'cik:'+cik,'group_id':group,'concept':taxonomy+':'+concept,
                             'canonical_concept':canonical,'taxonomy_namespace':taxonomy,'taxonomy_version':None,
                             'period_start':start,'period_end':end,'unit':normalized_unit,
                             'currency':unit if re.fullmatch('[A-Z]{3}',unit) else None,'dimensions':'{}',
@@ -64,16 +67,18 @@ def companyfacts_rows(root: Path,collection: dict,inventory: dict,as_of: str):
 
 
 def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
+    replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
     for accession,filing in collection['filings'].items():
         if filing['status']!='collected':
             continue
         row=filing['metadata'];group=filing['group'];resources=filing['resources']
-        meta=json.loads((root/resources['MetaLinks.json']['path']).read_text()) if 'MetaLinks.json' in resources else None
-        mapping=build_mapping(meta,yaml.safe_load((root/'config.yaml').read_text()),group,accession) if meta else []
+        meta=load_metadata(root,resources,accession)
+        mapping=build_mapping(meta,yaml.safe_load((root/'config.yaml').read_text()),group,accession,replacements) if meta else []
         mappings.extend(mapping)
         discovery=json.loads((root/filing['discovery_path']).read_text()) if filing.get('discovery_path') else {}
         primary_ids=set()
         primary_roles={}
+        primary_parenthetical={}
         primary_document=row.get('primaryDocument')
         primary_known=False
         if primary_document in resources:
@@ -102,6 +107,13 @@ def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
                 if node.get('id') and note_boundary is not None and positions[node]<note_boundary and not any(local_tag(a) in ('ix:nonnumeric','ix:continuation','ix:hidden','ix:header') for a in node.iterancestors()):
                     primary_ids.add(node.get('id'))
                     primary_roles[node.get('id')]=statement_role
+                    cells=[a for a in node.iterancestors() if local_tag(a) in ('td','th')]
+                    row_nodes=[a for a in node.iterancestors() if local_tag(a)=='tr']
+                    if cells and row_nodes:
+                        row_cells=row_nodes[0].xpath('./td|./th')
+                        label_cell=next((c for c in row_cells if re.search(r'[A-Za-z]',normalize_space(render(c)))),None)
+                        primary_parenthetical[node.get('id')]=cells[0] is label_cell
+                    else:primary_parenthetical[node.get('id')]=None
         for name,resource in resources.items():
             if name not in discovery.get('instances',[]) and not name.endswith('_htm.xml'):
                 continue
@@ -113,11 +125,12 @@ def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
             facts=parse_instance((root/resource['path']).read_bytes(),entity_id='cik:'+row['cik'],
                 reporting_identity='reporter:'+group,group_id=group,document_id=digest([resource['url']]),
                 accession=accession,acceptance_datetime=row['acceptanceDateTime'],knowledge_date=row['filingDate'],
-                assurance_level=assurance,as_of=as_of,reporting_scope='as_if_combined' if group=='SPCX' else 'consolidated')
+                assurance_level=assurance,as_of=as_of,reporting_scope='as_if_combined' if group=='SPCX' else 'consolidated',taxonomy_replacements=replacements)
             apply_mapping(facts,mapping)
             for fact in facts:
                 fact['primary_statement_occurrence']=(fact['locator'][3:] in primary_ids) if primary_known and fact['locator'].startswith('id:') else None
                 fact['primary_statement_role']=primary_roles.get(fact['locator'][3:]) if fact['locator'].startswith('id:') else None
+                fact['primary_statement_parenthetical']=primary_parenthetical.get(fact['locator'][3:]) if fact['locator'].startswith('id:') else None
             if assurance=='unknown':
                 for fact in facts:
                     fact.update(filing_status='unclassified',tier='E',coverage_state='not_processed')
@@ -126,9 +139,11 @@ def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
 
 def document_rows(root: Path,collection: dict,as_of: str):
     for cik,source in collection['companyfacts'].items():
-        p=root/source['path'];raw=p.read_bytes()
+        version=as_of.replace(':','-').replace('+','_')
+        p=root/'cache/api'/hashlib.sha256(source['url'].encode()).hexdigest()/(version+'.bin.zst')
+        raw=zstandard.ZstdDecompressor().decompress(p.read_bytes())
         yield {'document_id':digest([source['url'],as_of]),'group_id':source['group'],'entity_id':'cik:'+cik,
-            'cik':cik,'url':source['url'],'cache_path':source['path'],'sha256':hashlib.sha256(raw).hexdigest(),
+            'cik':cik,'url':source['url'],'cache_path':str(p.relative_to(root)),'sha256':hashlib.sha256(raw).hexdigest(),
             'filing_status':'unclassified','document_kind':'api_aggregate',
             'byte_count':len(raw),'parse_status':'observed','as_of':as_of}
     for accession,filing in collection['filings'].items():

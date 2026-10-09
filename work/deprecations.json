@@ -1,0 +1,1487 @@
+{
+  "package_url": "https://xbrl.fasb.org/us-gaap/2026/us-gaap-2026.zip",
+  "package_sha256": "f4c8b8b5697ba7d825a8614b159611cd25a46640e98a9737cda1e4a672bd4c81",
+  "source_member": "us-gaap-2026/elts/us-gaap-depcon-def-2026.xml",
+  "mapping": {
+    "us-gaap:CapitalizedSoftwareDevelopmentCostsForSoftwareSoldToCustomers": "us-gaap:CapitalizedComputerSoftwareNet",
+    "us-gaap:ReceivablesTradeAndOtherAccountsReceivableAllowanceForDoubtfulAccountsPolicy": "us-gaap:CreditLossFinancialInstrumentPolicyTextBlock",
+    "us-gaap:EnvironmentalExitCostsReasonablyPossibleAdditionalLossesBestEstimate": "us-gaap:EnvironmentalExitCostsReasonablyPossibleAdditionalLoss",
+    "us-gaap:LossContingencyAccrualProvision": "us-gaap:LossContingencyLossInPeriod",
+    "us-gaap:ProductLiabilityContingencyAccrualPresentValue": "us-gaap:LossContingencyAccrualProductLiabilityNet",
+    "us-gaap:MalpracticeLossContingencyAccrualNotRecognized1": "us-gaap:MalpracticeLossContingencyDescription",
+    "us-gaap:DerivativeDescriptionOfObjective": "us-gaap:ObjectivesForUsingDerivativeInstruments",
+    "us-gaap:SharesSubjectToMandatoryRedemptionSettlementTermsReasonForUncertainRedemption": "us-gaap:PreferredStockReasonWhySecurityIsNotRedeemable",
+    "us-gaap:ScheduleOfUnrecognizedTaxBenefitsExcludingAmountsPertainingToExaminedTaxReturnsRollForwardTableTextBlock": "us-gaap:ScheduleOfUnrecognizedTaxBenefitsRollForwardTableTextBlock",
+    "us-gaap:TemporaryEquityAccretionOfInterest": "us-gaap:TemporaryEquityAccretionToRedemptionValue",
+    "us-gaap:DeferredRevenueLeasesCurrent": "us-gaap:DeferredRentCreditCurrent",
+    "us-gaap:DeferredRevenueLeasesNet": "us-gaap:DeferredRentCredit",
+    "us-gaap:DeferredRevenueLeasesNetNoncurrent": "us-gaap:DeferredRentCreditNoncurrent",
+    "us-gaap:MajorPropertyClassAxis": "us-gaap:PropertyPlantAndEquipmentByTypeAxis",
+    "us-gaap:MajorPropertyClassDomain": "us-gaap:PropertyPlantAndEquipmentTypeDomain",
+    "us-gaap:OptionIndexedToIssuersEquityEquityAxis": "us-gaap:OptionIndexedToIssuersEquityTypeAxis",
+    "us-gaap:CostsAssociatedWithExitOrDisposalActivitiesOrRestructuringsPolicy": "us-gaap:CostsAssociatedWithExitOrDisposalActivitiesOrRestructuringsPolicyTextBlock",
+    "us-gaap:EnvironmentalCostExpensePolicy": "us-gaap:EnvironmentalCostsPolicy",
+    "us-gaap:EnvironmentalCostsCapitalizationPolicy": "us-gaap:EnvironmentalCostsPolicy",
+    "us-gaap:RestructuringAndRelatedCostDescription": "us-gaap:RestructuringAndRelatedActivitiesDescription",
+    "us-gaap:CustomersLiabilityForAcceptancesNet": "us-gaap:DueFromCustomerAcceptances",
+    "us-gaap:InvestmentsInAndAdvancesToAffiliatesLineItems": "us-gaap:ScheduleOfInvestmentsLineItems",
+    "us-gaap:AccountsAndFinancingReceivablesAfterAllowanceForCreditLossCurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsAndFinancingReceivablesAfterAllowanceForCreditLossCurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsAndFinancingReceivablesAfterAllowanceForCreditLossNoncurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsAndFinancingReceivablesAfterAllowanceForCreditLossNoncurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsAndFinancingReceivablesAfterAllowanceForCreditLossRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsAndFinancingReceivablesAfterAllowanceForCreditLossRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsPayableCurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsPayableCurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsPayableNoncurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsPayableNoncurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsPayableRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsPayableRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsReceivableAfterAllowanceForCreditLossCurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsReceivableAfterAllowanceForCreditLossCurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsReceivableAfterAllowanceForCreditLossNoncurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsReceivableAfterAllowanceForCreditLossNoncurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:AccountsReceivableAfterAllowanceForCreditLossRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:AccountsReceivableAfterAllowanceForCreditLossRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:DeferredTaxesBusinessCombinationValuationAllowanceAllocatedToContributedCapital": "us-gaap:BusinessCombinationOrJointVentureFormationValuationAllowanceDeferredTaxAssetEffectOnContributedCapitalIncreaseDecrease",
+    "us-gaap:DeferredTaxesBusinessCombinationValuationAllowanceAvailableToReduceGoodwill": "us-gaap:BusinessCombinationOrJointVentureFormationValuationAllowanceDeferredTaxAssetEffectOnGoodwillIncreaseDecrease",
+    "us-gaap:BusinessCombinationStepAcquisitionEquityInterestInAcquireeRemeasurementGainOrLossFinancialStatementCaption": "us-gaap:BusinessCombinationAchievedInStagesPreacquisitionEquityInterestInAcquireeRemeasurementGainLossStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration",
+    "us-gaap:BusinessAcquisitionEquityInterestIssuedOrIssuableBasisForDeterminingValue": "us-gaap:BusinessCombinationCostOfAcquiredEntityEquityInterestsIssuedAndIssuableFairValueMethod",
+    "us-gaap:BusinessCombinationSegmentReportingAssignmentOfGoodwillNotComplete": "us-gaap:BusinessCombinationGoodwillReportingUnitAssignmentNotComplete",
+    "us-gaap:BusinessCombinationIndemnificationAssetsRangeOfOutcomesMaximumUnlimited": "us-gaap:BusinessCombinationIndemnificationAssetRangeOfOutcomesMaximumAmountUnlimited",
+    "us-gaap:BusinessCombinationSeparatelyRecognizedTransactionsAdditionalDisclosuresAcquisitionCostExpensedFinancialStatementCaption": "us-gaap:BusinessCombinationSeparatelyRecognizedTransactionAcquisitionRelatedCostExpensedStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration",
+    "us-gaap:CharityCareMethodology": "us-gaap:CharityCareDisclosureTextBlock",
+    "us-gaap:ClosedBlockDividendObligationAssumptions": "us-gaap:ClosedBlockAccountingPolicy",
+    "us-gaap:CompensatedAbsencesNotAccrued": "us-gaap:CompensatedAbsenceLiabilityInestimable",
+    "us-gaap:ProductLiabilityContingencyManagementAssessmentProcess": "us-gaap:LossContingencyDisclosures",
+    "us-gaap:LossContingencyActionsTakenByPlaintiffsRepresentative": "us-gaap:LossContingencyDisclosures",
+    "us-gaap:CostOfRevenueRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:CostOfRevenueRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherFootnotesDisclosingDerivativeRelatedInformationCrossReference": "us-gaap:DerivativeInstrumentsAndHedgingActivitiesDisclosureTextBlock",
+    "us-gaap:DescriptionOfRegulatoryCapitalRequirementsUnderInsuranceRegulations": "us-gaap:DividendPaymentRestrictionsScheduleDescription",
+    "us-gaap:EntityNotSubjectToIncomeTaxesPolicy": "us-gaap:EntityNotSubjectToIncomeTax",
+    "us-gaap:DebtInstrumentThirdPartyCreditEnhancement": "us-gaap:FairValueLiabilityWithInseparableThirdPartyCreditEnhancement",
+    "us-gaap:FinancialGuaranteeInsuranceContractsRiskManagementActivitiesPoliciesForPlacementInGrouping": "us-gaap:FinancialGuaranteeInsuranceContractsRiskManagementActivitiesMitigatingClaimLiabilitiesPolicy",
+    "us-gaap:ScheduleOfInsuredFinancialObligationsWithCreditDeteriorationLineItems": "us-gaap:FinancialGuaranteeInsuranceContractsClaimLiabilityAbstract",
+    "us-gaap:ScheduleOfInsuredFinancialObligationsWithCreditDeteriorationTextBlock": "us-gaap:FinancialGuaranteeInsuranceContractsClaimLiabilityTableTextBlock",
+    "us-gaap:ScheduleOfInsuredFinancialObligationsWithCreditDeteriorationTable": "us-gaap:FinancialGuaranteeInsuranceContractsClaimLiabilityTable",
+    "us-gaap:SharesSubjectToMandatoryRedemptionSettlementTermsContractLimit": "us-gaap:FinancialInstrumentMandatorilyRedeemableLiabilityClassifiedSettlementTermsContractLimit",
+    "us-gaap:LoansAndLeasesReceivablePrepaymentEstimateAssumptionsPolicy": "us-gaap:FinanceLoansAndLeasesReceivablePolicy",
+    "us-gaap:FinancingReceivableAfterAllowanceForCreditLossCurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:FinancingReceivableAfterAllowanceForCreditLossCurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:FinancingReceivableAfterAllowanceForCreditLossNoncurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:FinancingReceivableAfterAllowanceForCreditLossNoncurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:FinancingReceivableAfterAllowanceForCreditLossRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:FinancingReceivableAfterAllowanceForCreditLossRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:DisclosureOfChangeOfDateForAnnualGoodwillImpairmentTest": "us-gaap:GoodwillDisclosureTextBlock",
+    "us-gaap:ReasonForChangeInDateOfAnnualGoodwillImpairmentTest": "us-gaap:GoodwillDisclosureTextBlock",
+    "us-gaap:GuaranteeObligationsUnlimitedExposure": "us-gaap:GuaranteeTermNoLimitationToMaximumPotentialFuturePayment",
+    "us-gaap:GuaranteeObligationsTerm": "us-gaap:GuarantorObligationTerm1",
+    "us-gaap:IntangibleAssetsArisingFromInsuranceContractsAcquiredInBusinessCombinationMember": "us-gaap:InsuranceContractsAcquiredInBusinessCombinationMember",
+    "us-gaap:LongDurationContractsRevenueRecognitionPolicy": "us-gaap:LongDurationContractsPolicy",
+    "us-gaap:InterestExpenseRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:InterestExpenseOperatingRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:InterestIncomeOperatingRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:InterestIncomeOperatingRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:InventoryRelatedText": "us-gaap:InventoryCostMethodExtensibleEnumeration",
+    "us-gaap:LIFOInventoryRelatedText": "us-gaap:InventoryCostMethodExtensibleEnumeration",
+    "us-gaap:CausesOfIncreaseDecreaseInLiabilityForUnpaidClaimsAndClaimsAdjustmentExpensePremiumDescription": "us-gaap:LiabilityForUnpaidClaimsAndClaimsAdjustmentExpenseAdditionalOrReturnPremium",
+    "us-gaap:LossContingencyInestimableLoss": "us-gaap:LossContingencyInestimableLoss1",
+    "us-gaap:ProductLiabilityContingencyLossInestimableStatement": "us-gaap:LossContingencyInestimableLoss1",
+    "us-gaap:LossContingencyLawsuitFilingDate": "us-gaap:LossContingencyLawsuitFilingDate1",
+    "us-gaap:LossContingencyDomicileOfLitigation": "us-gaap:LossContingencyLitigationJurisdictionExtensibleEnumeration",
+    "us-gaap:LossContingencyTrialOrAlternativeDisputeResolution": "us-gaap:LossContingencyNontrialDecisionStatusExtensibleEnumeration",
+    "us-gaap:LossContingencySettlementAgreementCounterpartysName": "us-gaap:LossContingencySettlementAgreementCounterpartyNameExtensibleEnumeration",
+    "us-gaap:LossContingencySettlementAgreementDate": "us-gaap:LossContingencySettlementAgreementDate1",
+    "us-gaap:NotesPayableCurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:NotesPayableCurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:NotesPayableNoncurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:NotesPayableNoncurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:NotesPayableRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:NotesPayableRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:UnamortizedCostsCapitalizedLessRelatedDeferredIncomeTaxesExceedCeilingLimitationsCostCenter": "us-gaap:IndustrySpecificPoliciesOilAndGasTextBlock",
+    "us-gaap:CapitalizedExploratoryWellCostsInterimSignificantChange": "us-gaap:SuspendedWellCostsDisclosureTextBlock",
+    "us-gaap:GasBalancingPolicyPolicyTextBlock": "us-gaap:GasBalancingArrangementsPolicy",
+    "us-gaap:OperatingCostAndExpenseRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OperatingCostAndExpenseRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherLiabilityCurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OtherLiabilityCurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherLiabilityNoncurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OtherLiabilityNoncurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherLiabilityRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OtherLiabilityRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherOperatingIncomeRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OtherOperatingIncomeRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherReceivableAfterAllowanceForCreditLossCurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OtherReceivableAfterAllowanceForCreditLossCurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherReceivableAfterAllowanceForCreditLossNoncurrentRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OtherReceivableAfterAllowanceForCreditLossNoncurrentRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:OtherReceivableAfterAllowanceForCreditLossRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:OtherReceivableAfterAllowanceForCreditLossRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:PostemploymentLiabilityNotAccrued": "us-gaap:PostemploymentBenefitLiabilityInestimable",
+    "us-gaap:RetailLandSalesDescriptionTextBlock": "us-gaap:RealEstateDisclosureTextBlock",
+    "us-gaap:LoansAndLeasesReceivableNonmortgageLoanValuationPolicy": "us-gaap:ReceivablesPolicyTextBlock",
+    "us-gaap:RelatedAndNonrelatedPartyStatusAxis": "us-gaap:RelatedPartyTransactionsByRelatedPartyAxis",
+    "us-gaap:RelatedAndNonrelatedPartyStatusDomain": "us-gaap:RelatedPartyDomain",
+    "us-gaap:RestructuringAndRelatedActivitiesLiabilityNotRecognized": "us-gaap:RestructuringAndRelatedActivitiesLiabilityNotRecognized1",
+    "us-gaap:RestructuringAndRelatedCostCaptionThatIncludesRestructuringCharges": "us-gaap:RestructuringIncurredCostStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration",
+    "us-gaap:RevenueRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:RevenueRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:ExplanationOfInterestRevenueReportedNetOfInterestExpense": "us-gaap:SegmentInterestRevenueReportedNetOfInterestExpense",
+    "us-gaap:SellingGeneralAndAdministrativeExpensesRelatedAndNonrelatedPartyStatusExtensibleEnumeration": "us-gaap:SellingGeneralAndAdministrativeExpensesRelatedPartyTypeExtensibleEnumeration",
+    "us-gaap:ShareBasedCompensationArrangementByShareBasedPaymentAwardMethodOfMeasuringCostOfAward": "us-gaap:ShareBasedCompensationOptionAndIncentivePlansPolicy",
+    "us-gaap:ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsMethodUsed": "us-gaap:ShareBasedPaymentArrangementValuationTechniqueExtensibleEnumeration",
+    "us-gaap:PropertyLiabilityReserveEstimatePolicy": "us-gaap:ShortDurationContractsPolicy",
+    "us-gaap:ShortDurationContractsRevenueRecognitionPolicy": "us-gaap:ShortDurationContractsPolicy",
+    "us-gaap:ShortDurationContractsDescription": "us-gaap:ShortDurationInsuranceAndDepositContractsTextBlock",
+    "us-gaap:StatutoryAccountingPracticesFutureDividendPaymentsRestrictions": "us-gaap:StatutoryAccountingPracticeFutureDividendPaymentRestriction",
+    "us-gaap:StatutoryAccountingPracticesRiskBasedCapitalRequirementsComplianceAssertion": "us-gaap:StatutoryAccountingPracticeRiskBasedCapitalTriggeringEventWithoutPermittedPractice",
+    "us-gaap:SubsequentEventAmountInestimable": "us-gaap:SubsequentEventAmountInestimable1",
+    "us-gaap:SummaryOfPositionsForWhichSignificantChangeInUnrecognizedTaxBenefitsIsReasonablyPossibleTextBlock": "us-gaap:SummaryOfIncomeTaxContingenciesTextBlock",
+    "us-gaap:LiabilityForAsbestosAndEnvironmentalClaimsDescription": "us-gaap:UnpaidPolicyClaimsAndClaimsAdjustmentExpensePolicy",
+    "us-gaap:PriceRiskDerivativesTable": "us-gaap:DerivativeTable",
+    "us-gaap:ForeignCurrencyFairValueHedgeDerivativeTable": "us-gaap:DerivativeTable",
+    "us-gaap:PriceRiskDerivativesLineItems": "us-gaap:DerivativeLineItems",
+    "us-gaap:ForeignCurrencyFairValueHedgeDerivativeLineItems": "us-gaap:DerivativeLineItems",
+    "us-gaap:DerivativesMethodsOfAccountingHedgeDocumentation": "us-gaap:DerivativesPolicyTextBlock",
+    "us-gaap:DiscontinuedOperationName": "us-gaap:DiscontinuedOperationNameExtensibleEnumeration",
+    "us-gaap:DisposalGroupNotDiscontinuedOperationName": "us-gaap:DisposalGroupNotDiscontinuedOperationNameExtensibleEnumeration",
+    "us-gaap:NameOfReportingCategoryDomain": "us-gaap:InvestmentTypeCategorizationMember",
+    "us-gaap:PrincipleTransactionRevenueDescriptionOfReportingCategoryAxis": "us-gaap:InvestmentTypeAxis",
+    "us-gaap:CustomerSecuritiesForWhichEntityHasRightToSellOrRepledgeAxis": "us-gaap:FinancialInstrumentAxis",
+    "us-gaap:CustomerSecuritiesForWhichEntityHasRightToSellOrRepledgeSecuritiesTypeDomain": "us-gaap:TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+    "us-gaap:SecuritiesFinancingTransactionsAccountingPolicy": "us-gaap:SecuritiesBorrowedAndLoanedPolicy",
+    "srt:SignificantEconomicInterestInStandardizedMeasureOfDiscountedFutureNetCashFlowsAttributableToConsolidatedSubsidiaryIesWithSignificantMinorityInterests": "srt:OilAndGasStandardizedMeasureDiscountedFutureNetCashFlowConsolidatedSubsidiaryWithNoncontrollingInterest",
+    "us-gaap:AirlineDestinationDisclosureLineItems": "us-gaap:DisaggregationOfRevenueLineItems",
+    "us-gaap:AirlineDestinationTable": "us-gaap:DisaggregationOfRevenueTable",
+    "us-gaap:AirlineDestinationTableTextBlock": "us-gaap:DisaggregationOfRevenueTableTextBlock",
+    "us-gaap:SignificantPurchaseAndSupplyCommitmentExcludingLongtermCommitmentTextBlock": "us-gaap:CommitmentsDisclosureTextBlock",
+    "us-gaap:QualitativeAndQuantitativeInformationTransferorsContinuingInvolvementInTransferredFinancialAssetsTransferOrTransfereeDomain": "us-gaap:TransactionDomain",
+    "us-gaap:QualitativeAndQuantitativeInformationTransferorsContinuingInvolvementTransferredFinancialAssetsByTransferOrTransfereeAxis": "us-gaap:TransactionTypeAxis",
+    "us-gaap:BalanceSheetLocationAxis": "us-gaap:StatementOfFinancialPositionLocationBalanceAxis",
+    "us-gaap:IncomeStatementLocationAxis": "us-gaap:StatementOfIncomeLocationBalanceAxis",
+    "us-gaap:OtherComprehensiveIncomeLocationAxis": "us-gaap:OtherComprehensiveIncomeBalanceAxis",
+    "us-gaap:StatementOfFinancialPositionLocationActivityAccrualAxis": "us-gaap:SfpLocationActivityAccrualAxis",
+    "us-gaap:StatementOfFinancialPositionLocationActivityCapitalizationAxis": "us-gaap:SfpLocationActivityCapitalizationAxis",
+    "us-gaap:LoansAndLeasesReceivableGainLossOnSalesNet": "us-gaap:GainLossOnSaleOfNotesReceivable",
+    "us-gaap:LoansAndLeasesReceivableRelatedPartiesDescription": "us-gaap:RelatedPartyTransactionDescriptionOfTransaction",
+    "us-gaap:ReconciliationOfAssetsFromSegmentToConsolidatedTable": "us-gaap:ScheduleOfSegmentReportingInformationBySegmentTable",
+    "us-gaap:ReconciliationOfOperatingProfitLossFromSegmentsToConsolidatedTable": "us-gaap:ScheduleOfSegmentReportingInformationBySegmentTable",
+    "us-gaap:ReconciliationOfOtherSignificantReconcilingItemsFromSegmentsToConsolidatedTable": "us-gaap:ScheduleOfSegmentReportingInformationBySegmentTable",
+    "us-gaap:ReconciliationOfRevenueFromSegmentsToConsolidatedTable": "us-gaap:ScheduleOfSegmentReportingInformationBySegmentTable",
+    "us-gaap:ScheduleOfEntityWideDisclosureOnGeographicAreasLongLivedAssetsInIndividualForeignCountriesByCountryTextBlock": "us-gaap:LongLivedAssetsByGeographicAreasTableTextBlock",
+    "us-gaap:ScheduleOfRevenueFromExternalCustomersAttributedToForeignCountriesByGeographicAreaTextBlock": "us-gaap:RevenueFromExternalCustomersByGeographicAreasTableTextBlock",
+    "us-gaap:SegmentReportingAssetReconcilingItemLineItems": "us-gaap:SegmentReportingInformationLineItems",
+    "us-gaap:SegmentReportingOtherSignificantReconcilingItemLineItems": "us-gaap:SegmentReportingInformationLineItems",
+    "us-gaap:SegmentReportingReconcilingItemForOperatingProfitLossFromSegmentToConsolidatedLineItems": "us-gaap:SegmentReportingInformationLineItems",
+    "us-gaap:SegmentReportingRevenueReconcilingItemLineItems": "us-gaap:SegmentReportingInformationLineItems",
+    "us-gaap:ImpairedIntangibleAssetFactsAndCircumstancesLeadingToImpairment": "us-gaap:ImpairedIntangibleAssetDescription",
+    "us-gaap:ClassificationOfInstitutionCreditUnions": "us-gaap:ComplexCreditUnion",
+    "us-gaap:NameOfPromptCorrectiveActionCategory": "us-gaap:PromptCorrectiveActionCategoryExtensibleEnumeration",
+    "us-gaap:RealEstateOwnedValuationAllowanceComponent": "us-gaap:RealEstateOwnedValuationAllowance",
+    "us-gaap:ImpairedLongLivedAssetsHeldAndUsedFactsAndCircumstancesLeadingToImpairment": "us-gaap:ImpairedLongLivedAssetsHeldAndUsedAssetDescription",
+    "us-gaap:PropertyPlantAndEquipmentImpairmentOrDisposalDisclosure": "us-gaap:PropertyPlantAndEquipmentDisclosureTextBlock",
+    "us-gaap:ImpairedAssetsToBeDisposedOfByMethodOtherThanSaleMethodForDeterminingFairValue": "us-gaap:ImpairedLongLivedAssetsHeldAndUsedMethodForDeterminingFairValue",
+    "us-gaap:ImpairedAssetsToBeDisposedOfByMethodOtherThanSaleSegmentClassification": "us-gaap:LongLivedAssetHeldAndUsedImpairmentLossSegmentExtensibleEnumeration",
+    "us-gaap:ImpairedLongLivedAssetsHeldAndUsedIncomeStatementClassification": "us-gaap:ImpairmentLongLivedAssetHeldForUseStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration",
+    "us-gaap:ContingentLiabilityReserveEstimatePolicy": "us-gaap:CommitmentsAndContingenciesPolicyTextBlock",
+    "us-gaap:PropertyPlantAndEquipmentDispositions": "us-gaap:PropertyPlantAndEquipmentPolicyTextBlock"
+  },
+  "excluded_non_whole_concept": [
+    {
+      "old": "us-gaap:EmployeeStockOwnershipPlanESOPClassificationOfDividends",
+      "replacement": "us-gaap:EmployeeStockOwnershipPlanESOPPolicy",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:EmployeeStockOwnershipPlanESOPEffectOnEarningsPerShare",
+      "replacement": "us-gaap:EmployeeStockOwnershipPlanESOPPolicy",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:EmployeeStockOwnershipPlanESOPMethodOfMeasuringCompensation",
+      "replacement": "us-gaap:EmployeeStockOwnershipPlanESOPPolicy",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:EmployeeStockOwnershipPlanESOPClassificationOfDividends",
+      "replacement": "us-gaap:GrandfatheredESOPExpenseRecognitionPolicy",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:EmployeeStockOwnershipPlanESOPEffectOnEarningsPerShare",
+      "replacement": "us-gaap:GrandfatheredESOPExpenseRecognitionPolicy",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:EmployeeStockOwnershipPlanESOPMethodOfMeasuringCompensation",
+      "replacement": "us-gaap:GrandfatheredESOPExpenseRecognitionPolicy",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ImpairedIntangibleAssetSegmentClassification",
+      "replacement": "us-gaap:ImpairmentIntangibleAssetFiniteLivedSegmentExtensibleEnumeration",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ImpairedIntangibleAssetIncomeStatementClassification",
+      "replacement": "us-gaap:ImpairmentOfIntangibleAssetFiniteLivedStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ImpairedIntangibleAssetIncomeStatementClassification",
+      "replacement": "us-gaap:ImpairmentOfIntangibleAssetIndefiniteLivedExcludingGoodwillStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ImpairedIntangibleAssetSegmentClassification",
+      "replacement": "us-gaap:ImpairmentIntangibleAssetIndefiniteLivedSegmentExtensibleEnumeration",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ImpairedIntangibleAssetSegmentClassification",
+      "replacement": "us-gaap:ImpairmentIntangibleAssetSegmentExtensibleEnumeration",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ImpairedIntangibleAssetIncomeStatementClassification",
+      "replacement": "us-gaap:ImpairmentIntangibleAssetStatementOfIncomeOrComprehensiveIncomeExtensibleEnumeration",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ComputerSoftwareIntangibleAssetMember",
+      "replacement": "us-gaap:SoftwareAndSoftwareDevelopmentCostsMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ComputerSoftwareIntangibleAssetMember",
+      "replacement": "us-gaap:SoftwareDevelopmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ComputerSoftwareIntangibleAssetMember",
+      "replacement": "us-gaap:SoftwarePurchasedMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ComputerSoftwareIntangibleAssetMember",
+      "replacement": "us-gaap:SoftwareInDevelopmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:ComputerSoftwareIntangibleAssetMember",
+      "replacement": "us-gaap:SoftwareInternallyDevelopedAndPurchasedMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:IncomeLossFromContinuingOperationsPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasicAndDiluted",
+      "replacement": "us-gaap:IncomeLossFromContinuingOperationsPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasic",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:IncomeLossFromContinuingOperationsPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasicAndDiluted",
+      "replacement": "us-gaap:IncomeLossFromContinuingOperationsNetOfTaxPerOutstandingLimitedPartnershipUnitDiluted",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:IncomeLossFromDiscontinuedOperationsNetOfTaxPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasicAndDiluted",
+      "replacement": "us-gaap:IncomeLossFromDiscontinuedOperationsNetOfTaxPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasic",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:IncomeLossFromDiscontinuedOperationsNetOfTaxPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasicAndDiluted",
+      "replacement": "us-gaap:IncomeLossFromDiscontinuedOperationsNetOfTaxPerOutstandingLimitedPartnershipUnitDiluted1",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:NetIncomeLossPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasicAndDiluted",
+      "replacement": "us-gaap:NetIncomeLossPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasic",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:NetIncomeLossPerOutstandingLimitedPartnershipAndGeneralPartnershipUnitBasicAndDiluted",
+      "replacement": "us-gaap:NetIncomeLossNetOfTaxPerOutstandingLimitedPartnershipUnitDiluted",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-partConcept-deprecatedAggregateConcept"
+    },
+    {
+      "old": "us-gaap:DividendDeclaredMember",
+      "replacement": "us-gaap:CommonStockDividendsPerShareDeclared",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:DividendDeclaredMember",
+      "replacement": "us-gaap:DividendsCommonStock",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:DividendDeclaredMember",
+      "replacement": "us-gaap:DividendsPreferredStock",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:DividendPaidMember",
+      "replacement": "us-gaap:PaymentsOfOrdinaryDividends",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:DividendDeclaredMember",
+      "replacement": "us-gaap:PreferredStockDividendsPerShareDeclared",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionCostMember",
+      "replacement": "us-gaap:SecuritiesReceivedAsCollateral",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionCostMember",
+      "replacement": "us-gaap:CollateralSecuritiesRepledgedDeliveredOrUsed",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesSoldUnderAgreementsToRepurchaseFairValueOfCollateral",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:FairValueOfSecuritiesReceivedAsCollateralThatHaveBeenResoldOrRepledged",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:FairValueOfSecuritiesReceivedAsCollateralThatCanBeResoldOrRepledged",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesReceivedAsCollateralAmountRepledgedAndSold",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesHeldAsCollateralAtFairValue",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionCostMember",
+      "replacement": "us-gaap:SecuritiesBorrowed",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionCostMember",
+      "replacement": "us-gaap:SecuritiesLoaned",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionCostMember",
+      "replacement": "us-gaap:SecuritiesSoldUnderAgreementsToRepurchase",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionCostMember",
+      "replacement": "us-gaap:SecuritiesPurchasedUnderAgreementsToResell",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionCostMember",
+      "replacement": "us-gaap:SecuritiesForReverseRepurchaseAgreements",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesBorrowedFairValueDisclosure",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesLoanedOrSoldUnderAgreementsToRepurchaseFairValueDisclosure",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesLoanedFairValueOfCollateral",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesBorrowedFairValueOfCollateral",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:SecuritiesFinancingTransactionFairValueMember",
+      "replacement": "us-gaap:SecuritiesPurchasedUnderAgreementsToResellFairValueOfCollateral",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-mutuallyExclusiveConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsFinancialGuaranteeInsuranceContracts",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:InitialFranchiseFees",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredHealthCare",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredLifeAndAnnuity",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredOther",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsPropertyCasualtyAndLiability",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetAccidentAndHealth",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetLife",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetOtherInsurance",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetPropertyAndCasualty",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PropertyManagementFeeRevenue",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpenseDisabilityAccidentAndHealth",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityNetForClaimsAndClaimsAdjustmentExpenseFinancialGuaranteeInsuranceContracts",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpensePropertyCasualtyLiability",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsDisabilityAndAccidentBenefits",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsIndividualAndGroupAnnuitiesAndSupplementaryContracts",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsOtherContracts",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForTitleClaimsAndClaimsAdjustmentExpense",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsLife",
+      "replacement": "srt:ProductOrServiceAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpenseDisabilityAccidentAndHealth",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsFinancialGuaranteeInsuranceContracts",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredHealthCare",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredLifeAndAnnuity",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredOther",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsPropertyCasualtyAndLiability",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetAccidentAndHealth",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetLife",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetOtherInsurance",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetPropertyAndCasualty",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityNetForClaimsAndClaimsAdjustmentExpenseFinancialGuaranteeInsuranceContracts",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpensePropertyCasualtyLiability",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsDisabilityAndAccidentBenefits",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsIndividualAndGroupAnnuitiesAndSupplementaryContracts",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsOtherContracts",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForTitleClaimsAndClaimsAdjustmentExpense",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsLife",
+      "replacement": "srt:ProductsAndServicesDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetAccidentAndHealth",
+      "replacement": "us-gaap:AccidentAndHealthInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpenseDisabilityAccidentAndHealth",
+      "replacement": "us-gaap:AccidentAndHealthInsuranceExcludingWorkersCompensationMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsDisabilityAndAccidentBenefits",
+      "replacement": "us-gaap:AccidentAndHealthInsuranceExcludingWorkersCompensationMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfCreditRiskHedgeEffectiveness",
+      "replacement": "us-gaap:CreditRiskContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:MaturityOfCreditRiskDerivative",
+      "replacement": "us-gaap:CreditRiskContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsForeignCurrencyFairValueHedgeNet",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsInterestRateFairValueHedgeNet",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsPriceRiskFairValueHedgeNet",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfCreditRiskHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfForeignCurrencyCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfInterestRateCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfPriceRiskCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:DerivativeContractTypeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsForeignCurrencyFairValueHedgeNet",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsInterestRateFairValueHedgeNet",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsPriceRiskFairValueHedgeNet",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfCreditRiskHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfForeignCurrencyCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfInterestRateCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfPriceRiskCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:MaturityOfCreditRiskDerivative",
+      "replacement": "us-gaap:DerivativeInstrumentRiskAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfCreditRiskHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeExcludedComponentGainLossRecognizedInEarnings",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskHedgeEffectiveness",
+      "replacement": "us-gaap:DerivativeExcludedComponentGainLossRecognizedInEarnings",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityNetForClaimsAndClaimsAdjustmentExpenseFinancialGuaranteeInsuranceContracts",
+      "replacement": "us-gaap:FinancialGuaranteeInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsFinancialGuaranteeInsuranceContracts",
+      "replacement": "us-gaap:FinancialGuaranteeInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsForeignCurrencyFairValueHedgeNet",
+      "replacement": "us-gaap:ForeignExchangeContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:ForeignExchangeContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:ForeignExchangeContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfForeignCurrencyCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:ForeignExchangeContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfCreditRiskHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfCashFlowHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfCashFlowHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfCashFlowHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfCashFlowHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfCashFlowHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfCreditRiskHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfFairValueHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfForeignCurrencyFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfFairValueHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfFairValueHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfFairValueHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskHedgeEffectiveness",
+      "replacement": "us-gaap:GainLossFromComponentsExcludedFromAssessmentOfFairValueHedgeEffectivenessNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsForeignCurrencyFairValueHedgeNet",
+      "replacement": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsFairValueHedgeNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsInterestRateFairValueHedgeNet",
+      "replacement": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsFairValueHedgeNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsPriceRiskFairValueHedgeNet",
+      "replacement": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsFairValueHedgeNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfForeignCurrencyCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:GainLossOnDiscontinuationOfCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfInterestRateCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:GainLossOnDiscontinuationOfCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfPriceRiskCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:GainLossOnDiscontinuationOfCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredHealthCare",
+      "replacement": "us-gaap:HealthInsuranceProductLineMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsOtherContracts",
+      "replacement": "us-gaap:OtherInsuranceProductLineMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredOther",
+      "replacement": "us-gaap:OtherInsuranceProductLineMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetOtherInsurance",
+      "replacement": "us-gaap:OtherInsuranceProductLineMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsInterestRateFairValueHedgeNet",
+      "replacement": "us-gaap:InterestRateContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:InterestRateContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfInterestRateFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:InterestRateContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfInterestRateCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:InterestRateContractMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpenseDisabilityAccidentAndHealth",
+      "replacement": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpense",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityNetForClaimsAndClaimsAdjustmentExpenseFinancialGuaranteeInsuranceContracts",
+      "replacement": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpense",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpensePropertyCasualtyLiability",
+      "replacement": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpense",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForTitleClaimsAndClaimsAdjustmentExpense",
+      "replacement": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpense",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsDisabilityAndAccidentBenefits",
+      "replacement": "us-gaap:LiabilityForFuturePolicyBenefits",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsIndividualAndGroupAnnuitiesAndSupplementaryContracts",
+      "replacement": "us-gaap:LiabilityForFuturePolicyBenefits",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsOtherContracts",
+      "replacement": "us-gaap:LiabilityForFuturePolicyBenefits",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsLife",
+      "replacement": "us-gaap:LiabilityForFuturePolicyBenefits",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsIndividualAndGroupAnnuitiesAndSupplementaryContracts",
+      "replacement": "us-gaap:LifeAndAnnuityInsuranceProductLineMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredLifeAndAnnuity",
+      "replacement": "us-gaap:LifeAndAnnuityInsuranceProductLineMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForFuturePolicyBenefitsLife",
+      "replacement": "us-gaap:LifeInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetLife",
+      "replacement": "us-gaap:LifeInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PropertyManagementFeeRevenue",
+      "replacement": "us-gaap:ManagementServiceMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsFinancialGuaranteeInsuranceContracts",
+      "replacement": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredHealthCare",
+      "replacement": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredLifeAndAnnuity",
+      "replacement": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PolicyholderBenefitsAndClaimsIncurredOther",
+      "replacement": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsPropertyCasualtyAndLiability",
+      "replacement": "us-gaap:PolicyholderBenefitsAndClaimsIncurredNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetAccidentAndHealth",
+      "replacement": "us-gaap:PremiumsEarnedNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetLife",
+      "replacement": "us-gaap:PremiumsEarnedNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetOtherInsurance",
+      "replacement": "us-gaap:PremiumsEarnedNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetPropertyAndCasualty",
+      "replacement": "us-gaap:PremiumsEarnedNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossFromHedgedFirmCommitmentNotQualifyingAsPriceRiskFairValueHedgeNet",
+      "replacement": "us-gaap:PriceRiskDerivativeMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskCashFlowHedgeEffectiveness",
+      "replacement": "us-gaap:PriceRiskDerivativeMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskFairValueHedgeEffectiveness",
+      "replacement": "us-gaap:PriceRiskDerivativeMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnComponentsExcludedFromAssessmentOfPriceRiskHedgeEffectiveness",
+      "replacement": "us-gaap:PriceRiskDerivativeMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GainLossOnDiscontinuationOfPriceRiskCashFlowHedgeDueToForecastedTransactionProbableOfNotOccurringNet",
+      "replacement": "us-gaap:PriceRiskDerivativeMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForClaimsAndClaimsAdjustmentExpensePropertyCasualtyLiability",
+      "replacement": "us-gaap:PropertyLiabilityAndCasualtyInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:IncurredClaimsPropertyCasualtyAndLiability",
+      "replacement": "us-gaap:PropertyLiabilityAndCasualtyInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PremiumsEarnedNetPropertyAndCasualty",
+      "replacement": "us-gaap:PropertyLiabilityAndCasualtyInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:PropertyManagementFeeRevenue",
+      "replacement": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:InitialFranchiseFees",
+      "replacement": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:RevenueRecognitionMilestoneMethodRevenueRecognized",
+      "replacement": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LiabilityForTitleClaimsAndClaimsAdjustmentExpense",
+      "replacement": "us-gaap:TitleInsuranceSegmentMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:MaturityOfCreditRiskDerivative",
+      "replacement": "us-gaap:DerivativeMaturityDates",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LoansReceivableDescriptionOfVariableRateBasis",
+      "replacement": "us-gaap:VariableRateAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LoansReceivableDescriptionOfVariableRateBasis",
+      "replacement": "us-gaap:VariableRateDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LoansAndLeasesReceivableRelatedParties",
+      "replacement": "us-gaap:NotesReceivableGross",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LoansReceivableDescriptionOfVariableRateBasis",
+      "replacement": "us-gaap:NotesReceivableGross",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LoansReceivableDescriptionOfVariableRateBasis",
+      "replacement": "us-gaap:NotesReceivableNet",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:InitialFranchiseFees",
+      "replacement": "us-gaap:FranchiseMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:RevenueRecognitionMilestoneMethodRevenueRecognized",
+      "replacement": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:RevenueRecognitionMilestoneMethodRevenueRecognized",
+      "replacement": "us-gaap:RevenueFromCollaborativeArrangementExcludingRevenueFromContractWithCustomer",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:RevenueRecognitionMilestoneMethodRevenueRecognized",
+      "replacement": "us-gaap:RevenueNotFromContractWithCustomer",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:RevenueRecognitionMilestoneMethodRevenueRecognized",
+      "replacement": "us-gaap:Revenues",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:RevenueRecognitionMilestoneMethodRevenueRecognized",
+      "replacement": "us-gaap:TypeOfArrangementAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:RevenueRecognitionMilestoneMethodRevenueRecognized",
+      "replacement": "us-gaap:ArrangementsAndNonarrangementTransactionsMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsGross",
+      "replacement": "srt:OilAndGasProductiveWellGrossNumber",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsGross",
+      "replacement": "srt:OilAndGasProductiveWellGrossNumber",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsGross",
+      "replacement": "srt:ReserveQuantitiesByTypeOfReserveAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsNet",
+      "replacement": "srt:ReserveQuantitiesByTypeOfReserveAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsGross",
+      "replacement": "srt:ReserveQuantitiesByTypeOfReserveAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsNet",
+      "replacement": "srt:ReserveQuantitiesByTypeOfReserveAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsGross",
+      "replacement": "srt:TypeOfReserveDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsNet",
+      "replacement": "srt:TypeOfReserveDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsGross",
+      "replacement": "srt:TypeOfReserveDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsNet",
+      "replacement": "srt:TypeOfReserveDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsGross",
+      "replacement": "srt:NaturalGasReservesMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsNet",
+      "replacement": "srt:NaturalGasReservesMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveGasWellsNumberOfWellsNet",
+      "replacement": "srt:OilAndGasProductiveWellNetNumber",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsNet",
+      "replacement": "srt:OilAndGasProductiveWellNetNumber",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsGross",
+      "replacement": "srt:CrudeOilMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ProductiveOilWellsNumberOfWellsNet",
+      "replacement": "srt:CrudeOilMember",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ReservesShareOfEquityMethodInvesteesNetProvedOilAndGasReserves",
+      "replacement": "us-gaap:EquityMethodInvestmentNonconsolidatedInvesteeAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "srt:ReservesShareOfEquityMethodInvesteesNetProvedOilAndGasReserves",
+      "replacement": "us-gaap:EquityMethodInvestmentNonconsolidatedInvesteeDomain",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GeneralPartnersShareOfUndistributedEarningsIncentiveDistributionRightEmbeddedInGeneralPartnerInterest",
+      "replacement": "us-gaap:IncentiveDistributionMadeToManagingMemberOrGeneralPartnerAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:ManagingMemberOrGeneralPartnerSubsequentDistributionAmount",
+      "replacement": "us-gaap:IncentiveDistributionMadeToManagingMemberOrGeneralPartnerAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:GeneralPartnersShareOfUndistributedEarningsIncentiveDistributionRightEmbeddedInGeneralPartnerInterest",
+      "replacement": "us-gaap:UndistributedEarningsDiluted",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:ManagingMemberOrGeneralPartnerSubsequentDistributionAmount",
+      "replacement": "us-gaap:SubsequentEventTypeAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:ManagingMemberOrGeneralPartnerSubsequentDistributionAmount",
+      "replacement": "us-gaap:IncentiveDistributionDistributionPerYear",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    },
+    {
+      "old": "us-gaap:LoansAndLeasesReceivableRelatedParties",
+      "replacement": "us-gaap:RelatedPartyTransactionsByRelatedPartyAxis",
+      "reason": "dimensional_partial_or_mutually_exclusive_deprecation",
+      "arcrole": "http://www.xbrl.org/2009/arcrole/dep-dimensionallyQualifiedConcept-deprecatedConcept"
+    }
+  ],
+  "ambiguous": [
+    "us-gaap:ReservesRelatedToRoyaltyInterestsNotAvailable",
+    "us-gaap:BusinessCombinationIndemnificationAssetsBasisForAmount",
+    "us-gaap:BusinessCombinationIndemnificationAssetsRangeOfOutcomesInestimable",
+    "us-gaap:BusinessCombinationStepAcquisitionEquityInterestInAcquireeValuationTechniques",
+    "us-gaap:BusinessCombinationAcquisitionOfLessThan100PercentNoncontrollingInterestSignificantInputs",
+    "us-gaap:BusinessCombinationAcquisitionOfLessThan100PercentNoncontrollingInterestValuationTechnique",
+    "us-gaap:ProductLiabilityContingencyTimeFrameOfDisbursements",
+    "us-gaap:SiteContingencyTimeFrameOfDisbursements",
+    "us-gaap:DisposalGroupIncludingDiscontinuedOperationSegmentThatIncludesDisposalGroup",
+    "us-gaap:GovernmentContractReceivableUnbilledAmounts",
+    "us-gaap:ImpairedAssetsToBeDisposedOfByMethodOtherThanSaleFactsAndCircumstancesLeadingToImpairment",
+    "us-gaap:NewDateOfAnnualGoodwillImpairmentTest"
+  ]
+}

@@ -1,6 +1,8 @@
 from pathlib import Path
 from .database import sql_literal
 from .controls import calculation_arcs
+from .xbrl import filing_namespaces
+from .metadata import load as load_metadata
 import json
 
 
@@ -10,15 +12,23 @@ def run(db,root:Path,collection:dict,as_of:str):
     # division to decide whether an accounting equation is within precision.
     db.execute(f'''INSERT INTO controls
       (control,group_id,period_start,period_end,view,as_of,breakdown_key,status,lhs,rhs,residual,tolerance,tolerance_basis,explanation_code,evidence)
-      WITH q AS (
+      WITH source_terms AS (
+       SELECT f.*,CASE WHEN model_quantity='cash_and_restricted_cash_total' THEN 'cf_total'
+        WHEN model_quantity='cash_and_equivalents' THEN 'cash'
+        WHEN model_quantity IN ('restricted_cash_current','restricted_cash_and_equiv_current') THEN 'restricted_current'
+        ELSE 'restricted_noncurrent' END AS term_key
+       FROM eligible_instance_occurrences f WHERE dimensions='{{}}' AND period_start IS NULL AND value IS NOT NULL
+        AND model_quantity IN ('cash_and_restricted_cash_total','cash_and_equivalents','restricted_cash_current','restricted_cash_noncurrent',
+          'restricted_cash_and_equiv_current','restricted_cash_and_equiv_noncurrent')
+       QUALIFY row_number() OVER (PARTITION BY accession,period_end,unit,term_key ORDER BY
+         CASE WHEN model_quantity LIKE 'restricted_cash_and_equiv_%' THEN 0 ELSE 1 END,document_rank DESC,occurrence_rank DESC)=1
+      ), q AS (
        SELECT f.group_id,f.accession,f.period_end,f.unit,f.accounting_framework,
         max(value) FILTER (WHERE model_quantity='cash_and_restricted_cash_total') AS cf_cash,
-        sum(value) FILTER (WHERE model_quantity IN ('cash_and_equivalents','restricted_cash_current','restricted_cash_noncurrent')) AS bs_cash,
-        count(DISTINCT model_quantity) AS terms,count(p.half_unit) AS precisions,sum(p.half_unit) AS tolerance,
+        sum(value) FILTER (WHERE term_key!='cf_total') AS bs_cash,
+        count(DISTINCT term_key) AS terms,count(p.half_unit) AS precisions,sum(p.half_unit) AS tolerance,
         to_json(list(f.fact_id)) AS evidence,max(f.acceptance_datetime) AS accepted
-       FROM eligible_instance_occurrences f LEFT JOIN precision_units p USING(decimals)
-       WHERE dimensions='{{}}' AND period_start IS NULL AND value IS NOT NULL
-        AND model_quantity IN ('cash_and_restricted_cash_total','cash_and_equivalents','restricted_cash_current','restricted_cash_noncurrent')
+       FROM source_terms f LEFT JOIN precision_units p USING(decimals)
        GROUP BY ALL
       ) SELECT 'c3_cash_reconciliation',group_id,period_end,period_end,'as_known',{stamp},unit,
        CASE WHEN terms<4 OR precisions<terms THEN 'not_testable' WHEN abs(cf_cash-bs_cash)<=tolerance THEN 'ok' ELSE 'mismatch' END,
@@ -110,15 +120,18 @@ def run(db,root:Path,collection:dict,as_of:str):
     rows=[]
     for acc,f in collection['filings'].items():
         res=f['resources']
-        if 'MetaLinks.json' not in res:continue
-        m=next(iter(json.loads((root/res['MetaLinks.json']['path']).read_text())['instance'].values()))
+        metadata=load_metadata(root,res,acc)
+        if metadata is None:continue
+        m=next(iter(metadata['instance'].values()))
         roles={r['role']:r for r in m['report'].values() if r.get('groupType')=='disclosure'}
+        namespaces=filing_namespaces(root,res)
         for name,r in res.items():
             if not name.endswith('_cal.xml'):continue
-            for a in calculation_arcs((root/r['path']).read_bytes()):
-                role=roles.get(a['role']);child=m['tag'].get(a['child'].replace(':','_',1),{})
+            replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
+            for a in calculation_arcs((root/r['path']).read_bytes(),namespaces,replacements):
+                role=roles.get(a['role']);child=m['tag'].get(a['child_lexical'].replace(':','_',1),{})
                 if not role or a['role'] not in child.get('presentation',[]):continue
-                if a['parent'].endswith((':LesseeOperatingLeaseLiabilityPaymentsDue',':FinanceLeaseLiabilityPaymentsDue',':UnrecordedUnconditionalPurchaseObligationBalanceOnBalanceSheetDate')):
+                if a['parent'].endswith((':LesseeOperatingLeaseLiabilityPaymentsDue',':FinanceLeaseLiabilityPaymentsDue',':UnrecordedUnconditionalPurchaseObligationBalanceOnBalanceSheetDate',':UnrecordedUnconditionalPurchaseObligationBalanceSheetAmount')):
                     c='c10_maturity_sums'
                 elif a['parent']=='us-gaap:RevenueRemainingPerformanceObligation':c='c13_rpo'
                 else:continue
@@ -143,6 +156,14 @@ def run(db,root:Path,collection:dict,as_of:str):
        QUALIFY row_number() OVER (PARTITION BY control,group_id,period_start,period_end,parent,role,unit ORDER BY acceptance_datetime DESC,accession DESC)=1''')
     dimension_controls(db,as_of)
     tax_controls(db,as_of)
+    db.execute(f'''INSERT INTO controls
+      (control,group_id,period_start,period_end,view,as_of,breakdown_key,status,lhs,rhs,residual,tolerance,tolerance_basis,explanation_code,evidence)
+      SELECT 'c13_rpo',group_id,coalesce(period_start,period_end),period_end,'as_known',{stamp},'percentage_range|'||dimensions||'|'||unit,
+       CASE WHEN value BETWEEN 0 AND 1 THEN 'ok' ELSE 'mismatch' END,value,1,
+       CASE WHEN value>1 THEN value-1 WHEN value<0 THEN value ELSE 0 END,0,'instance',
+       CASE WHEN value NOT BETWEEN 0 AND 1 THEN 'rpo_percentage_outside_unit_interval' END,to_json([fact_id])
+       FROM selected_as_known WHERE canonical_concept='us-gaap:RevenueRemainingPerformanceObligationPercentage'
+        AND value IS NOT NULL AND coverage_state!='conflicting' ''')
 
 
 def dimension_controls(db,as_of):

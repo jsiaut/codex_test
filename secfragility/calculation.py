@@ -16,8 +16,9 @@ def prepare_views(db,root: Path,as_of: str):
     import yaml
     cfg=yaml.safe_load((root/'config.yaml').read_text())
     from .mapping import SUPPLEMENTAL_ANCHORS
+    replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
     db.execute('CREATE TEMP TABLE anchor_order (model_quantity VARCHAR,canonical_concept VARCHAR,priority INTEGER)')
-    rows=[(q,'us-gaap:'+c,p) for q,cs in dict(cfg['concept_anchors'],**cfg.get('concept_anchors_to_verify',{}),**SUPPLEMENTAL_ANCHORS).items() for p,c in enumerate(cs)]
+    rows=[(q,replacements.get('us-gaap:'+c,'us-gaap:'+c),p) for q,cs in dict(cfg['concept_anchors'],**cfg.get('concept_anchors_to_verify',{}),**SUPPLEMENTAL_ANCHORS).items() for p,c in enumerate(cs)]
     db.executemany('INSERT INTO anchor_order VALUES (?,?,?)',rows)
     for view in ('as_known','revised'):
         db.execute(f'''CREATE VIEW quantities_{view} AS

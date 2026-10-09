@@ -204,8 +204,10 @@ def extract_classic_blocks(raw: bytes, meta: dict, facts: list[dict], *, normali
         ctx=contexts.get(node.get('contextRef'))
         end_date=ctx.findtext('.//{http://www.xbrl.org/2003/instance}endDate') if ctx is not None else None
         if not end_date and ctx is not None:end_date=ctx.findtext('.//{http://www.xbrl.org/2003/instance}instant')
-        candidates=[f for f in facts if f['period_end']==end_date]
         definition=definitions[concept];label=definition.get('lang',{}).get('en-us',{}).get('role',{}).get('label',concept)
+        roles=set(definition.get('presentation',[])) & note_roles
+        candidates=[f for f in facts if f['period_end']==end_date and
+            roles.intersection(inst['tag'].get(f['concept'].replace(':','_',1),{}).get('presentation',[]))]
         output.append({'text':text,'concept':concept,'label':label,'candidates':candidates,
             'raw_byte_start':marker.start(),'raw_byte_end':end,'source_ranges':[[marker.start(),end]],
             'source_format':'escaped_html_instance','content_key':content_key(text,candidates,normalizer_version),

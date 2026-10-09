@@ -33,3 +33,31 @@ Le contrôle C1 ne doit pas additionner au montant sans dimension d'un concept l
 ## D0008 — Admission de la série annuelle SpaceX, non balisée
 
 Le rapport PwC du 424B4 (octets 6675682–6704012) couvre les bilans au 31 décembre 2025 et 2024 et les trois exercices clos en 2025. Son opinion mentionne séparément les regroupements sous contrôle commun, le fractionnement des actions et le changement de secteurs, datés du 7 mai 2026 ; l'opinion initiale est du 30 mars 2026. Le parseur a validé les composantes des actifs et des passifs, les trois sections de flux, le résultat au début des flux et les mouvements du déficit accumulé. Les vingt-huit correspondances de postes de bilan retrouvées dans le comparatif balisé de 2025 passent à la tolérance d'arrondi. La série correspondante est admise, `is_tagged=false`, avec son périmètre `as_if_combined` et sa première date publique ; les libellés sans correspondance restent exclus. Les comparaisons historiques en vue `as_known` ne peuvent utiliser ces états avant leur publication.
+
+## D0009 — Correction de D0007 par emplacement dans le tableau
+
+La règle de D0007, qui écartait une composante dimensionnée dès que le même concept existait sans dimension, est trop large : AMD affiche aussi des lignes distinctes pour des composantes liées. Le critère est désormais l'emplacement physique, défini indépendamment des valeurs : un fait inséré dans la cellule du libellé est parenthétique ; un fait dans une cellule de montant est une composante affichée. C1 exclut les montants parenthétiques et conserve les lignes distinctes. Les concepts et valeurs sont inchangés. Cette correction d'implémentation est documentée séparément des décisions de correspondance.
+
+## D0010 — Trésorerie restreinte et équivalents
+
+Les concepts `RestrictedCashAndCashEquivalentsAtCarryingValue` (courant selon sa définition) et `RestrictedCashAndCashEquivalentsNoncurrent`, présentés notamment par CoreWeave, deviennent deux correspondances supplémentaires distinctes. Le rapprochement C3 préfère leur montant combiné aux seuls espèces restreintes quand les deux sont publiés, selon une priorité fixée avant le calcul ; il ne les additionne pas. Les composantes absentes restent inconnues. La pièce nouvelle utilisée est la définition et la présentation dans le dernier 10-Q de CoreWeave ; aucun échec C3 n'avait été corrigé par ces correspondances.
+
+## D0011 — Dépréciations et espaces de noms
+
+Le paquet FASB US GAAP 2026 épinglé contient une linkbase `depcon-def`. Seuls les remplacements univoques de concepts entiers (`dep-concept-deprecatedConcept` ou `essence-alias`, du concept courant vers le concept déprécié) sont aplatis ; les remplacements conditionnés par une dimension, partiels, mutuellement exclusifs ou ambigus restent séparés. Les relations retenues, écartées et l'empreinte du paquet sont conservées dans `work/deprecations.json`. Les dates des espaces de noms d'extensions sont retirées de l'identité canonique, y compris lorsqu'elles précèdent `/taxonomy` ; les unités et espaces de noms XBRL standard ne sont pas altérés. Les valeurs et occurrences source sont conservées.
+
+## D0012 — Rapports classiques et notes annuelles CoreWeave
+
+Lorsque MetaLinks est absent, les rôles et catégories proviennent de FilingSummary et les présentations, libellés et types de ses linkbases et schémas effectivement déposés. Les types et définitions standards sont documentés séparément par le paquet FASB épinglé. La sélection des notes ne repose jamais sur leur suffixe. Les faits candidats classiques doivent être présentés dans le rôle de la note, en plus de leur compatibilité de période ; une égalité de montant ne permet aucune attribution de contrepartie. Le prospectus CoreWeave 0001193125-25-067651 porte les opinions Deloitte des états 2024/2023 (octets 2532867–2538111) et RSM des états 2022, hors bilan 2022 (2538111–2542753). Sa note 14 annuelle (3463351–3477806) est donc lue comme une note auditée. L'absence d'opinion d'audit sur le contrôle interne ne devient pas une faiblesse significative.
+
+## D0013 — Tirets annuels non balisés ; réexamen de D0008
+
+Le parseur avait assimilé les tirets nus des états annuels SpaceX à zéro. Cette erreur contredit §7.3 et ne peut être justifiée par un rapprochement. Les tirets deviennent inconnus, les équations qui en dépendent `not_testable` ; le bilan comparatif reste rapproché pour ses nombres explicites. D0008 est suspendue et seule la nouvelle validation D1 décide l'admission de la série entière. Les notes textuelles auditées restent dans la tranche. Cette correction ne change ni les concepts, ni les seuils, ni les critères E/F.
+
+## D0014 — Présentations de concepts historiques sans définition moderne
+
+Une composante présentée dans une linkbase ancienne ne disparaît pas de C1/C2 au motif que son concept n'existe plus dans le schéma 2026. Son rôle effectivement déposé est conservé ; son type et sa définition restent inconnus et ne permettent aucune correspondance de grandeur. Cette correction complète les termes de l'équation sans modifier les valeurs, les poids déposés, les correspondances ou la tolérance. Les parts dimensionnées sans emplacement primaire établi ne sont pas assimilées à des lignes physiques distinctes.
+
+## D0015 — Obligation non comptabilisée et bail non commencé
+
+Le concept standard UnrecordedUnconditionalPurchaseObligationBalanceSheetAmount couvre explicitement plusieurs catégories dans sa définition, dont les baux non commencés. Lorsque le libellé propre du déposant affirme ces baux, sa grandeur est lease_not_commenced ; sinon elle reste une obligation d'achat non comptabilisée à périmètre large, chevauchement possible. Aucun bail n'est déduit du seul nom standard. La clôture et, lorsqu'elle est disponible, l'ouverture du pont sont publiées ; additions et commencements ne sont pas reconstitués par solde. Les concepts d'extensions sans paragraphe ASC attesté restent non résolus.

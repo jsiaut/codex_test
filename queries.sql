@@ -18,7 +18,8 @@ SELECT * EXCLUDE (value,coverage_state),
       THEN NULL ELSE value END AS value,
  CASE WHEN count(DISTINCT value) OVER (PARTITION BY accession,semantic_key,document_rank)>1
       THEN 'conflicting' ELSE coverage_state END AS coverage_state
-FROM facts WHERE tier IN ('A','B','C','D') AND filing_status='filed' AND NOT is_nil;
+FROM facts WHERE tier IN ('A','B','C','D') AND filing_status='filed' AND NOT is_nil
+ AND acceptance_datetime<=as_of AND knowledge_date<=as_of::DATE;
 
 CREATE VIEW eligible_instance_occurrences AS
 SELECT * FROM eligible_facts WHERE document_rank>=0

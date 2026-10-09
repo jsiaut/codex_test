@@ -17,12 +17,13 @@ def validate(root:Path):
             bounds=d.execute('SELECT min(rank) FILTER (WHERE label=?),min(rank) FILTER (WHERE label=?) FROM native WHERE kind=? AND year=?',[label_key(opening),label_key(closing),kind,year]).fetchone()
             if None in bounds:equations.append({'control':control,'year':year,'status':'not_testable','reason':'native_boundary_label_missing','labels':[opening,closing]});continue
             start,end=bounds
-            lhs,rhs,terms=d.execute('SELECT sum(value) FILTER (WHERE rank>=? AND rank<?),max(value) FILTER (WHERE rank=?),count(*) FILTER (WHERE rank>=? AND rank<?) FROM native WHERE kind=? AND year=?',[start if plus_opening else start+1,end,end,start if plus_opening else start+1,end,kind,year]).fetchone()
+            lhs,rhs,terms,known=d.execute('SELECT sum(value) FILTER (WHERE rank>=? AND rank<?),max(value) FILTER (WHERE rank=?),count(*) FILTER (WHERE rank>=? AND rank<?),count(value) FILTER (WHERE rank>=? AND rank<?) FROM native WHERE kind=? AND year=?',[start if plus_opening else start+1,end,end,start if plus_opening else start+1,end,start if plus_opening else start+1,end,kind,year]).fetchone()
             residual=lhs-rhs if lhs is not None and rhs is not None else None
             tolerance=Decimal('0.5')*(terms+1)
             equations.append({'control':control,'kind':kind,'year':year,'labels':[opening,closing],
                 'lhs_million':str(lhs),'rhs_million':str(rhs),'residual_million':str(residual),'tolerance_million':str(tolerance),
-                'status':'ok' if residual is not None and abs(residual)<=tolerance else 'mismatch'})
+                'status':'not_testable' if known!=terms else 'ok' if residual is not None and abs(residual)<=tolerance else 'mismatch',
+                'reason':'untagged_dash_not_explicit_zero' if known!=terms else None})
     # Ranges use printed statement headings/subtotals, and all native rows,
     # including those without an admissible concept correspondence.
     eq('C1','balance_sheet','Cash and cash equivalents','Total current assets',plus_opening=True)
@@ -50,7 +51,7 @@ def validate(root:Path):
             if header is not None:index=header;continue
             if index is None or len(cells)<=index:continue
             label=next((x for x in cells if x),'');v=cells[index].replace('$','').replace(',','').strip()
-            if v in ('-','–','—'):value='0'
+            if v in ('-','–','—'):value=None
             elif re.fullmatch(r'\(?-?\d+(?:\.\d+)?\)?',v):value=('-' if v.startswith('(') else '')+v.strip('()')
             else:continue
             equity.append((len(equity),label_key(label),value))
@@ -60,10 +61,11 @@ def validate(root:Path):
         opening='balances at december 31 '+str(int(year)-1);closing='balances at december 31 '+year
         bounds=d.execute('SELECT min(rank) FILTER (WHERE label=?),min(rank) FILTER (WHERE label=?) FROM equity',[opening,closing]).fetchone()
         if None in bounds:equations.append({'control':'C6_retained_earnings','year':year,'status':'not_testable','reason':'retained_earnings_column_unresolved'});continue
-        lhs,rhs,count=d.execute('SELECT sum(value) FILTER(WHERE rank>=? AND rank<?),max(value) FILTER(WHERE rank=?),count(*) FILTER(WHERE rank>=? AND rank<?) FROM equity',[bounds[0],bounds[1],bounds[1],bounds[0],bounds[1]]).fetchone()
+        lhs,rhs,count,known=d.execute('SELECT sum(value) FILTER(WHERE rank>=? AND rank<?),max(value) FILTER(WHERE rank=?),count(*) FILTER(WHERE rank>=? AND rank<?),count(value) FILTER(WHERE rank>=? AND rank<?) FROM equity',[bounds[0],bounds[1],bounds[1],bounds[0],bounds[1],bounds[0],bounds[1]]).fetchone()
         residual=lhs-rhs;tolerance=Decimal('0.5')*(count+1)
         equations.append({'control':'C6_retained_earnings','year':year,'lhs_million':str(lhs),'rhs_million':str(rhs),'residual_million':str(residual),
-            'tolerance_million':str(tolerance),'status':'ok' if abs(residual)<=tolerance else 'mismatch'})
+            'tolerance_million':str(tolerance),'status':'not_testable' if known!=count else 'ok' if abs(residual)<=tolerance else 'mismatch',
+            'reason':'untagged_dash_not_explicit_zero' if known!=count else None})
     d.execute("CREATE TABLE facts AS SELECT * FROM read_parquet(?)",[str(root/'tables/facts.parquet')])
     comparisons=[]
     for r in s['rows']:

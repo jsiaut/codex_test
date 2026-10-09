@@ -40,7 +40,8 @@ def prepare(db,root:Path,as_of:str):
        CASE WHEN b.accession=a.accession THEN 0 ELSE 1 END,b.acceptance_datetime DESC,b.accession DESC,b.occurrence_rank DESC)=1''')
     for view in ['as_known','revised']:
         cutoff='AND a.acceptance_datetime<=k.public_at' if view=='as_known' else ''
-        db.execute(f'''CREATE VIEW quarter_quantities_{view} AS SELECT a.* FROM quarter_candidates a
+        snapshot='k.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
+        db.execute(f'''CREATE VIEW quarter_quantities_{view} AS SELECT a.*,{snapshot} AS snapshot_at FROM quarter_candidates a
           JOIN anchor_order ao USING(model_quantity,canonical_concept)
           LEFT JOIN quarter_cutoffs k ON k.group_id=a.group_id AND k.start_date=a.period_start AND k.end_date=a.period_end
           WHERE a.acceptance_datetime<={sql_literal(as_of)}::TIMESTAMPTZ {cutoff}
@@ -55,11 +56,12 @@ def measures(db,as_of):
     stamp=sql_literal(as_of)+'::TIMESTAMPTZ'
     for view in ['as_known','revised']:
         source='quarter_quantities_'+view
+        stamp='a.snapshot_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
         for quantity in ['revenue_total','cfo','capex_cash','finance_lease_principal_payments']:
             db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,value,unit,currency,status,coverage_state,
               knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework)
              SELECT '{quantity}',group_id,period_start,period_end,'{view}',{stamp},value,unit,currency,'computed','observed',knowledge_date,
-              to_json([tier]),lineage,'reporting_entity',accounting_framework FROM {source} WHERE model_quantity='{quantity}' ''')
+              to_json([tier]),lineage,'reporting_entity',accounting_framework FROM {source} a WHERE model_quantity='{quantity}' ''')
         for measure,a,b,term in [('capex_to_cfo','capex_cash','cfo','without'),('capex_to_revenue','capex_cash','revenue_total','none'),
               ('gross_margin','gross_profit','revenue_total','none'),('operating_margin','operating_income','revenue_total','none')]:
             db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,term,value,unit,numerator,denominator,status,nd_reason,
@@ -76,7 +78,7 @@ def measures(db,as_of):
             condition=f"a.model_quantity='{minuend}'" if measure=='fcf_basic' else f"a.measure='{minuend}' AND a.view='{view}' AND a.status='computed'"
             db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,value,unit,currency,status,coverage_state,
              knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework)
-             SELECT '{measure}',a.group_id,a.period_start,a.period_end,'{view}',{stamp},a.value-b.value,a.unit,a.currency,'computed','observed',
+             SELECT '{measure}',a.group_id,a.period_start,a.period_end,'{view}',{'a.as_of' if view=='as_known' else stamp},a.value-b.value,a.unit,a.currency,'computed','observed',
               greatest(a.knowledge_date,b.knowledge_date),to_json([a.evidence_profile,b.tier::VARCHAR]) {'' if measure!='fcf_basic' else ''},
               to_json(list_concat(from_json(a.lineage,'["VARCHAR"]'),from_json(b.lineage,'["VARCHAR"]'))),'reporting_entity',a.accounting_framework
               FROM {left} a JOIN {source} b ON a.group_id=b.group_id AND CAST(a.period_start AS DATE)=b.period_start

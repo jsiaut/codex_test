@@ -1,6 +1,13 @@
 cache/
 work/session.lock
 work/network_state.json
+work/foreground_owner.json
+work/compiled_metadata/
+work/blocks/
+work/calibration_tables/
+work/quarter_calibration_tables/
+work/output_bootstrap/
+work/*.log
 .venv/
 __pycache__/
 .pytest_cache/

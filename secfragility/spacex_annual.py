@@ -76,18 +76,21 @@ def parse_primary_tables(root: Path):
                 key=label_key(first);numeric=[]
                 for value in strings[1:]:
                     stripped=value.replace('$','').replace(',','').strip()
-                    if stripped in ('-','–','—'):numeric.append(Decimal(0));continue
+                    if stripped in ('-','–','—'):numeric.append(None);continue
                     if not re.fullmatch(r'\(?-?\d+(?:\.\d+)?\)?',stripped) or stripped in years:continue
                     number=Decimal(stripped.strip('()'))
                     if stripped.startswith('('):number=-number
                     numeric.append(number)
                 if len(numeric)!=len(years):continue
-                native.append({'kind':kind,'label_key':key,'display_values':dict(zip(years,map(str,numeric)))})
+                native.append({'kind':kind,'label_key':key,'display_values':{y:str(v) if v is not None else None for y,v in zip(years,numeric)}})
                 concepts=labels.get((kind,key),set())
                 if len(concepts)!=1:
                     rejections.append({'kind':kind,'label':first,'reason':'unmatched_label' if not concepts else 'ambiguous_label_match','concepts':sorted(concepts)});continue
                 concept=next(iter(concepts));negated=preferred.get((kind,concept),'').startswith('negated')
                 for year,value in zip(years,numeric):
+                    if value is None:
+                        rejections.append({'kind':kind,'label':first,'year':year,'reason':'untagged_dash_not_explicit_zero'})
+                        continue
                     if negated:value=-value
                     rows.append({'concept':concept,'label':first,'statement_kind':kind,'period_start':None if kind=='balance_sheet' else year+'-01-01',
                         'html_row_rank':len(native)-1,

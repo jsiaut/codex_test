@@ -5,13 +5,14 @@ from pathlib import Path
 import json
 from lxml import etree
 from .database import sql_literal
-from .xbrl import half_unit
+from .xbrl import half_unit,canonical_qname,filing_namespaces
+from .metadata import load as load_metadata
 
 XLINK='http://www.w3.org/1999/xlink'
 LINK='http://www.xbrl.org/2003/linkbase'
 
 
-def calculation_arcs(raw: bytes) -> list[dict]:
+def calculation_arcs(raw: bytes,namespace_map=None,replacements=None) -> list[dict]:
     tree=etree.fromstring(raw,etree.XMLParser(resolve_entities=False,no_network=True,huge_tree=True))
     result=[]
     for link in tree.iter(f'{{{LINK}}}calculationLink'):
@@ -22,7 +23,12 @@ def calculation_arcs(raw: bytes) -> list[dict]:
             if arc.tag!=f'{{{LINK}}}calculationArc':continue
             source,target=loc.get(arc.get(f'{{{XLINK}}}from')),loc.get(arc.get(f'{{{XLINK}}}to'))
             if source and target:
-                result.append({'role':role,'parent':source,'child':target,'weight':arc.get('weight','1')})
+                canonical_parent=canonical_qname(source,namespace_map) if namespace_map and source.split(':',1)[0] in namespace_map else source
+                canonical_child=canonical_qname(target,namespace_map) if namespace_map and target.split(':',1)[0] in namespace_map else target
+                result.append({'role':role,
+                    'parent':(replacements or {}).get(canonical_parent,canonical_parent),
+                    'child':(replacements or {}).get(canonical_child,canonical_child),
+                    'parent_lexical':source,'child_lexical':target,'weight':arc.get('weight','1')})
     return result
 
 
@@ -33,15 +39,18 @@ def component_controls(db,root: Path,collection: dict,as_of: str):
     rows=[]
     for accession,filing in collection['filings'].items():
         resources=filing['resources']
-        if 'MetaLinks.json' not in resources:continue
-        meta=next(iter(json.loads((root/resources['MetaLinks.json']['path']).read_text())['instance'].values()))
+        metadata=load_metadata(root,resources,accession)
+        if metadata is None:continue
+        meta=next(iter(metadata['instance'].values()))
         roles={r['role']:r for r in meta['report'].values() if r.get('groupType')=='statement'}
         tags=meta['tag']
+        namespaces=filing_namespaces(root,resources)
         for name,res in resources.items():
             if not name.endswith('_cal.xml'):continue
-            for arc in calculation_arcs((root/res['path']).read_bytes()):
+            replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
+            for arc in calculation_arcs((root/res['path']).read_bytes(),namespaces,replacements):
                 report=roles.get(arc['role'])
-                child=tags.get(arc['child'].replace(':','_',1),{})
+                child=tags.get(arc['child_lexical'].replace(':','_',1),{})
                 if not report or arc['role'] not in child.get('presentation',[]):continue
                 if arc['parent'] in {'us-gaap:AssetsCurrent','us-gaap:Assets','us-gaap:LiabilitiesCurrent',
                     'us-gaap:Liabilities','us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest',
@@ -56,11 +65,8 @@ def component_controls(db,root: Path,collection: dict,as_of: str):
     precisions=[(str(d),str(half_unit(d))) for d in range(-18,7)]+[('INF','0')]
     db.execute('CREATE TEMP TABLE precision_units (decimals VARCHAR,half_unit DECIMAL(38,12))')
     db.executemany('INSERT INTO precision_units VALUES (?,?)',precisions)
-    db.execute('''CREATE TEMP VIEW eligible_component_occurrences AS SELECT c.* FROM eligible_instance_occurrences c
-      LEFT JOIN eligible_instance_occurrences total ON total.accession=c.accession
-       AND total.canonical_concept=c.canonical_concept AND total.dimensions='{}' AND total.value IS NOT NULL
-       AND total.period_start IS NOT DISTINCT FROM c.period_start AND total.period_end=c.period_end AND total.unit=c.unit
-      WHERE c.dimensions='{}' OR total.fact_id IS NULL''')
+    db.execute('''CREATE TEMP VIEW eligible_component_occurrences AS SELECT * FROM eligible_instance_occurrences
+      WHERE dimensions='{}' OR primary_statement_parenthetical=false''')
     # Every equation is checked WITHIN its deposit. A later comparative cannot
     # fill a component missing from the statement under examination.
     db.execute(f'''INSERT INTO controls

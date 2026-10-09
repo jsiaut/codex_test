@@ -7,9 +7,21 @@ import json
 if __name__=='__main__':
  r=Path('.').resolve();db=create(r);run=json.loads((r/'work/run.json').read_text());collection=json.loads((r/'work/collection.json').read_text())
  for t in ['documents','facts']:db.execute(f"INSERT INTO {t} BY NAME SELECT * FROM read_parquet('tables/{t}.parquet')")
+ from .mapping import refresh
+ refresh(db,r,collection)
  core_calibration(db,r,run['as_of']);component_controls(db,r,collection,run['as_of']);concentration_controls(db,run['as_of'])
  lease_controls(db,run['as_of']);eps_controls(db,run['as_of'],'0.10');extended(db,r,collection,run['as_of'])
  export(db,r/'work/calibration_tables');print(table_counts(db));print(db.execute('SELECT control,status,count(*) FROM controls GROUP BY ALL ORDER BY 1,2').fetchall())
  from .quarter_series import prepare,measures
- prepare(db,r,run['as_of']);measures(db,run['as_of']);export(db,r/'work/quarter_calibration_tables')
+ prepare(db,r,run['as_of']);measures(db,run['as_of'])
+ from .tier1_numeric import stocks,tagged_components
+ stocks(db,run['as_of']);tagged_components(db,run['as_of'])
+ from .ttm import run as ttm
+ ttm(db,run['as_of'])
+ from .tier1_numeric import liquidity_and_leases
+ liquidity_and_leases(db,run['as_of'])
+ from .metadata_signals import run as signals
+ signals(db,r,run['as_of'])
+ db.execute('UPDATE measures SET information_cutoff=as_of,as_of=?',[run['as_of']])
+ export(db,r/'work/quarter_calibration_tables')
  print(db.execute('SELECT measure,view,count(*) FROM measures GROUP BY ALL ORDER BY 1,2').fetchall())

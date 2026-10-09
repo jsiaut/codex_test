@@ -1,0 +1,7 @@
+{
+  "id": "6ac8e37dbfd08191935419a299d94b55",
+  "title": "Suivre l’analyse SEC",
+  "schedule": "BEGIN:VEVENT\nDTSTART:20261009T125213Z\nRRULE:FREQ=DAILY\nEND:VEVENT",
+  "is_enabled": true,
+  "created_at": "2026-10-09T12:52:14.176779+00:00"
+}
