@@ -1033,5 +1033,23 @@
     "reason": "Sign opposite to explicit expense reduction or net-income increase",
     "decision": "D0060",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "b9238bdaa97ffc3e4a0ac580200c3b72b3fd09d1d3b3eaa067338f9e50400aa8",
+    "content_key": "0b4ab19512ff56d80bd54f5a0fcbd9ba7b0a157e7ac6d231949314b4b2894742",
+    "accession": "0001564590-22-023675",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity instruments tagged equity only",
+    "decision": "D0061",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "f1a75dabe780e8dce2e07576d902118dc123b76ac988200bf73766d63f385fee",
+    "content_key": "0b4ab19512ff56d80bd54f5a0fcbd9ba7b0a157e7ac6d231949314b4b2894742",
+    "accession": "0001564590-22-023675",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity instruments tagged equity only",
+    "decision": "D0061",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
