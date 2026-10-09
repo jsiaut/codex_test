@@ -247,7 +247,7 @@
     "content_key": "8bf9fec8af82638c58833ada3890a507d8c3d1dcd35ec7bd03494577582bd757",
     "accession": "0000950170-25-087926",
     "affected_quantity": "rpo_months37_60_share",
-    "reason": "Typed start2027-06-01 contradicts months37–60 following May31 2025: start2028-06-01",
+    "reason": "Typed start2027-06-01 contradicts months37\u201360 following May31 2025: start2028-06-01",
     "decision": "D0041",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   },
@@ -456,6 +456,51 @@
     "affected_quantity": "nonmarketable_equity_stock",
     "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
     "decision": "D0044",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "578be98c69e5257d8806c584c0ee828ca2ba6ddb27d8b23de45fa708aadf2371",
+    "content_key": "3c7c6ad98f4a2b0620bb8f72a78a9716fe3ce0427f63e7b3330c7685cc6cd07e",
+    "accession": "0000950170-24-104905",
+    "affected_quantity": "server_network_useful_life",
+    "reason": "Tangible servers/networking useful life tagged as finite-lived intangible asset useful life",
+    "decision": "D0045",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "56bf4b90a3e427355c57a9cf11f4479f3f74303a6f8544a65a2e8b9f81914a2e",
+    "content_key": "3c7c6ad98f4a2b0620bb8f72a78a9716fe3ce0427f63e7b3330c7685cc6cd07e",
+    "accession": "0000950170-24-104905",
+    "affected_quantity": "server_network_useful_life",
+    "reason": "Tangible servers/networking useful life tagged as finite-lived intangible asset useful life",
+    "decision": "D0045",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "1bc6e2bf89d9edb29b498d612e377dd4dc7154bd19240bc576a107ac6fa6e02a",
+    "content_key": "3c7c6ad98f4a2b0620bb8f72a78a9716fe3ce0427f63e7b3330c7685cc6cd07e",
+    "accession": "0000950170-24-104905",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0045",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "f1ea5eff69c18931a713f332ee138b5ff2215e52fd4d0831277ae868d4771837",
+    "content_key": "3c7c6ad98f4a2b0620bb8f72a78a9716fe3ce0427f63e7b3330c7685cc6cd07e",
+    "accession": "0000950170-24-104905",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments carrying value tagged solely equity securities",
+    "decision": "D0045",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "57e93144fe135f9ecd6179ba853210d0e7568013d8e0503bcbfeaf7c604a19ec",
+    "content_key": "3c7c6ad98f4a2b0620bb8f72a78a9716fe3ce0427f63e7b3330c7685cc6cd07e",
+    "accession": "0000950170-24-104905",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Ampere combined equity and convertible debt carrying value tagged solely equity securities",
+    "decision": "D0045",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
