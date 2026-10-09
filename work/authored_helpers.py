@@ -36,3 +36,24 @@ def save(key, rows):
     result=store(ROOT,key,aligned)
     print(dict(key=key,accepted=result['accepted'],rejected=[x['error'] for x in result['rejected']]))
     return result
+
+
+def repeat_chosen_rows(key, quantities):
+    """Copy specified earlier authored rows only after the new block was read.
+
+    The caller explicitly chooses each quantity and checks its current clause.
+    No passage is selected from the new block; provenance is always rebuilt.
+    """
+    import json
+    prior=[json.loads(line) for line in (ROOT/'work/observations'/(key+'.jsonl')).read_text().splitlines()]
+    remove={'record_kind','as_of','observation_id','content_key','document_id','accession','group_id',
+        'entity_id','knowledge_date','assurance_level','locator','raw_byte_start','raw_byte_end',
+        'filing_status','tier','location','source_perspective','accounting_framework'}
+    result=[]
+    for quantity in quantities:
+        choices=[r for r in prior if r['record_kind']=='observation' and r.get('model_quantity')==quantity]
+        if len(choices)!=1:raise ValueError('Specified prior authored row is not unique: '+quantity)
+        if choices[0].get('amount_origin')=='tagged_reference':
+            raise ValueError('Tagged references must be authored for the current occurrence.')
+        result.append({k:v for k,v in choices[0].items() if k not in remove})
+    return result
