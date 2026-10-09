@@ -1,0 +1,4 @@
+from work.authored_helpers import *
+
+key='fbbbf80e54dee9a00cf3291685e0ee8b28b2b8c1f8e5772eb6c8d16226e8d6be'
+save(key,[dict(abstention('FOURTH SUPPLEMENTAL INDENTURE','Complete physical header0:2561 read; same1.01 09621791 and8.01 d30a554f fully reread. Named financial underwriter representatives JPMorganSecuritiesLLC/BofASecuritiesInc/WellsFargoSecuritiesLLC establish financial issuance; no Item3.03. EX4 supplemental is new two-series1bn issuance, not authorized autonomous F4 body under11.1. Body2561:261111 excluded financial_parties_only unread/unexploited. Historical U.S.BankTrust successor to U.S.BankNA reference is not a newly dated current covenant amendment; no F4 from title alone. Independent net992.3m approximation vs two exactunderwriterprices992.335m compatible rounding remains separate.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=2561,locator='rawbytes:0:2561')])

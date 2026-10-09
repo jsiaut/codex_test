@@ -1,0 +1,70 @@
+[
+  {
+    "content_key": "989e7c515312bd186500da1a19650d97204cdddc85c34242911b5ddc22134d15",
+    "full_reading_complete": false,
+    "body_parts_personally_read_in_full": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "body_parts_unread": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "proof": "Holder initially DTC nominee, clearing agency defined; all11 InitialPurchasers financial named firms. Sole scope proof, entire2313:962814 body financial_parties_only unexploited."
+  },
+  {
+    "content_key": "211c29d691fe761d4ec0f40c70433c5fef9827c3f30658fd41ea0a908adbc3f7",
+    "full_reading_complete": false,
+    "body_parts_personally_read_in_full": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "body_parts_unread": [
+      10,
+      11
+    ],
+    "proof": "ArticleVIII pp70:71 EACH Lender commercial loans and applicable facilities ordinary course. Sole scope proof, entire4500:543326 financial_parties_only unexploited."
+  },
+  {
+    "content_key": "1bf25eb26c30639c1be44c73843bf94115be489f0efea27a14680a7d04d38463",
+    "header_personally_read": true,
+    "header_raw_end": 714,
+    "total_body_parts": 25,
+    "full_reading_complete": false,
+    "body_parts_personally_read_in_full": [
+      0,
+      1,
+      2
+    ],
+    "next_body_part": 3,
+    "scope_determination_complete": false,
+    "submitted_observations": false,
+    "proof": "In progress, solely establishing financial holders/InitialPurchasers. Header trustee alone and independent Item1.01 549dfd02 fully reread do not establish actual holder identities. No body amounts or links exploited."
+  }
+]
