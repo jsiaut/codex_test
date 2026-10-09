@@ -273,3 +273,5 @@ D62 — Lecture intégrale de la première note Oracle au 28 février 2022 : les
 D63 — Amazon FY2021 : trois en-têtes, 152 candidats et deux parties de texte intégralement lus. Les stocks totaux de warrants de 2020 et 2021 sont seulement principalement Level2 ; les deux balises exclusivement Level2 sont exclues des calculs dépendants sans remplacement narratif ni modification brute.
 
 D64 — Alphabet FY2021 : note entière et 21 candidats lus. Trois valeurs zéro de goodwill (2019–2021) balisent une absence de pertes matérielles, qui ne prouve pas une perte exactement nulle. Quarantaine sans remplacement numérique ni modification brute.
+
+D65 — Marvell juillet 2021 : cinq candidats et première note entière lus. Innovium est une intention d’acquisition annoncée après clôture, avec prix brut en actions de 1,1 milliard, cash et exercices attendus mêlés de 145 millions et coût net de 955 millions. Les deux dernières balises isolent à tort du cash acquis seul et une contrepartie en capital ; quarantaine sans remplacement. Aucune clôture effective d’octobre importée.

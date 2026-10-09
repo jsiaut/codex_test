@@ -1114,5 +1114,23 @@
     "reason": "not_material_does_not_prove_numeric_zero",
     "decision": "D64",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "1689a69ac540a64bebfc223b7afd2e669ca3d75b6d257ca351cb612a73359e1e",
+    "content_key": "cce4d65ab7c185edff967e8cc6d47b0938f36794eda23dcdd997aa028ba2850b",
+    "accession": "0001835632-21-000022",
+    "affected_quantity": "anticipated_acquired_cash_and_exercise_proceeds_mixed",
+    "reason": "includes_expected_exercise_proceeds_not_solely_acquired_cash",
+    "decision": "D65",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "bbb44714924ecc33ad2f5e56b8a3b8662f4dbf835ee4460a68092fdde9e0b469",
+    "content_key": "cce4d65ab7c185edff967e8cc6d47b0938f36794eda23dcdd997aa028ba2850b",
+    "accession": "0001835632-21-000022",
+    "affected_quantity": "anticipated_acquisition_net_cost",
+    "reason": "net_cost_after_cash_and_exercise_proceeds_not_equity_consideration_transferred",
+    "decision": "D65",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
