@@ -835,5 +835,59 @@
     "reason": "Combined debt equity instruments tagged equity only",
     "decision": "D0054",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "de9d6139d4f296c099d0a6c588b4c16b3dec79a3ee6b7680f3fd5a72151851a4",
+    "content_key": "c555acde468337dac219cc091576478d213f18aa5bad20595491404a5094133c",
+    "accession": "0001018724-23-000004",
+    "affected_quantity": "forecast_video_life_operating_income_effect",
+    "reason": "Operating income forecast typed NetIncomeLoss",
+    "decision": "D0055",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "85aff175b7a05cfc3ab430e8cd329a52a897512b44ce2753ce32b64061774bdb",
+    "content_key": "c555acde468337dac219cc091576478d213f18aa5bad20595491404a5094133c",
+    "accession": "0001018724-23-000004",
+    "affected_quantity": "equity_warrant_fair_value_stock",
+    "reason": "Total warrants only primarily Level2 cannot be wholly allocated to Level2",
+    "decision": "D0055",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "39a2b6affd1e7aa5c4d1962dcd96e7447f90181cc42c4cd5d589c19a2223949b",
+    "content_key": "c555acde468337dac219cc091576478d213f18aa5bad20595491404a5094133c",
+    "accession": "0001018724-23-000004",
+    "affected_quantity": "equity_warrant_fair_value_stock",
+    "reason": "Total warrants only primarily Level2 cannot be wholly allocated to Level2",
+    "decision": "D0055",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "8236db684c76dfd9f787a027489b7aa27c5eab2d6356f95cf4aa460388ce114d",
+    "content_key": "041a1a42dba5d2dcd15d6603812ee0e36bc393164c6ad01b4aace88d3ed3bd31",
+    "accession": "0001652044-23-000016",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "Not material is not explicit zero",
+    "decision": "D0056",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "212d9436c459019ffdf7c67e807c29bcae1ac39a2915f6494d4fce103eed73ae",
+    "content_key": "041a1a42dba5d2dcd15d6603812ee0e36bc393164c6ad01b4aace88d3ed3bd31",
+    "accession": "0001652044-23-000016",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "Not material is not explicit zero",
+    "decision": "D0056",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "4199344b0a2b784a63a9c16a6a621679afe492faaa101de42064f5fca526e17c",
+    "content_key": "041a1a42dba5d2dcd15d6603812ee0e36bc393164c6ad01b4aace88d3ed3bd31",
+    "accession": "0001652044-23-000016",
+    "affected_quantity": "goodwill_impairment",
+    "reason": "Not material is not explicit zero",
+    "decision": "D0056",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
