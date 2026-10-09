@@ -20,11 +20,16 @@
     15,
     16,
     17,
-    18
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
   ],
-  "next_body_part": 19,
-  "full_reading_complete": false,
-  "submitted_observations": false,
+  "next_body_part": null,
+  "full_reading_complete": true,
+  "submitted_observations": true,
   "notes": [
     "HEADER FULL: autonomous AmendmentNo3 datedMay2,2025, full CoreWeaveInc DE Borrower/CoreWeaveCashManagementLLC DE guarantor; financial JPM agent/lender plus otherlenders. FULL body required regardless financial-only.",
     "PART0 full amendment signed MichaelIntrator for both; 11 named financial lender signaturepages. Effective conditions4.01\u20134.06; independently Item1.01 actualeffective to be reread. Section3 increased RevolvingCommitments/noticeperiod waived. 5.03 no continuingDefault assertion; 5.04 reasonablybelieves complianceMar31,25 NOT actualfullcovenanttestproof. 6.06 outstandingloans REEVIDENCED, assignments/reallocation not newfilerfunding;6.08NO NOVATION,6.09 reaffirmallpriorpaymentguarantee/security. ANNEXA AmendedSchedule2.01 andANNEXB ExistingDebt ONLYHEADINGS no amounts. ExhibitA fullconformed agreement follows.",
@@ -46,6 +51,13 @@
     "PART15 newmonitor\u00a75.15 notifychangesSPVII/IV/FutureSPVSignificantDebt principal \u00b1300m orGPUcreditamendcashdecrease>300m/materiallyadverse toLenders; obligationNOTproofoccurredactualSPVamend/cash. GenericGuarantorjoins/Restricted\u2192Unrestrictedrelease/conversionunsecuredtosecured optionalunderothercreditlimits NOTactualownership/control/acquisition/consolidation/guaranteecall.",
     "PART16 covenantsPERMISSIONSnotactualdebt: TechnologyFinanceCorporationleasecap14,621,750.01notactualoutstanding/date; old2025notes55.125m/125m followedreserved redlineNOTcurrentdebt/repay. OpenAI7bn project credit/guaranteepermission repeatednotadditive notactualfunding/call. SyntheticSeniorNote $1,0500,000,000 unusable.",
     "PART17 \u00a76.04f ConductorTechnologiesInc stockpurchaseJan1,23 escrowoptioncashcap9,084,514.53 NOTnewactualMay2purchase/stockownership. \u00a76.07r servicesforequityPERMISSIONgenericnotactualcustomertransaction/E5recognizedcontra. \u00a76.07s CohereInc directORviaMagnetarAIVenturesI-CohereLLC investmentcap125m PERMITTEDnotactualpaid primary/secondary/valued investment; noactualfundmembership/conso. IntrafilerSPVinvestments genericcapital/GPUservers/MSAscontributions permittedNOToccurred.",
-    "PART18 totalnetleverage6x optional7x4QIFMaterialAcq+Notice (max3increases2Qgap) NOTactualwaiver/covenantbreach; mincontractedRV1bn projectedIG +0.75projectednonIG NOTactualrecognizedRV/RPO. Restricted\u2192Unrestrictedinvestunless2bnUnrestrictedCash: DebtRatio1.5 or1.2IFcure ANDreceiveequalFVassets/cash exceptcure; notactualCFcashflow/funding/default. Art8Guarantors jointseveral primaryunconditionalpaymentguaranteeandcontinuing untilallpaid; CoreWeaveCashManagementLLC signedsoleactualnamedguarantor. Noactualguarcall, capNDnot1.5bnprincipal asguaranteecap. \u00a76.08 synthetic1,6500,000,000 unusable."
-  ]
+    "PART18 totalnetleverage6x optional7x4QIFMaterialAcq+Notice (max3increases2Qgap) NOTactualwaiver/covenantbreach; mincontractedRV1bn projectedIG +0.75projectednonIG NOTactualrecognizedRV/RPO. Restricted\u2192Unrestrictedinvestunless2bnUnrestrictedCash: DebtRatio1.5 or1.2IFcure ANDreceiveequalFVassets/cash exceptcure; notactualCFcashflow/funding/default. Art8Guarantors jointseveral primaryunconditionalpaymentguaranteeandcontinuing untilallpaid; CoreWeaveCashManagementLLC signedsoleactualnamedguarantor. Noactualguarcall, capNDnot1.5bnprincipal asguaranteecap. \u00a76.08 synthetic1,6500,000,000 unusable.",
+    "PART19 default/acceleration/guarreinstatement definitionsconditionalnotoccurredF3/F9/F10. RighttoCure \u00a79.03 CONTRIBUTIONincludedEBITDAONLYcovenantNOTRV/CFO;notice+within10daysfunds, max2per4Q/max5total; prevent10daysolecovenantacceleration/defaultinterest conditionallynotactualwaiver/usedcure. RedlinewaterfallEighthFifth notautomaticcurrentorder.",
+    "PART20 agent/arrangerindependentduties, \u00a710.04 EACHLender ordinarycommercialloansmaking/acquiringholding financiallendingrole D92; remainsautonomousAmendmentFULLreadrequired. ERISA alternativesnotactualfundidentity/conso. ErroneousagentpaymentdoesNOTsatisfy borrowerobligations/notactualcash.",
+    "PART21 legalnoticeaddressesstyleoldnewmixed notjurisownershipproof; \u00a711.02generalpermissionforfuturewrittenamend/waivernotactualdatedF4;feesandindemnityformulasnotpayments; transferparticipationsnotprimarycash.",
+    "PART22 financialApprovedFunddefinition ordinarycredit with managerrelation NOTactualfundownership/conso. Transferssecondaryloanparticipations generalpermissionnotactualfunding. Noactualnewcash/call/default.",
+    "PART23FULL terminalBorrowerPortalclauses. No conformedoriginalsignaturepages appended/no actualDisclosureLetter schedules/FormsA-L attached; AnnexA/B ONLYHEADINGS. Entire24bodypartsFULLpersonallyread untruncated."
+  ],
+  "accepted_count": 12,
+  "rejected_count": 0
 }

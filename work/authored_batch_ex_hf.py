@@ -1,0 +1,3 @@
+from work.authored_helpers import *
+
+save('f90ad20035d5bd6dd2a604b946aabd17be5741d9fff5347717476140c5d1108d',[dict(abstention('GLOBAL SECURITY','Completephysicalheader0:4027 personallyread; sameindependent8.01 b9ff16e0 fullyreread actualMay1,25 USDfourseriesclosing. DTC/Cede explicitfinancialregisteredholderdepository, literalDEPOSITORY preservednotaliascorrected. Original2065globalnote/no3.03. Entirebody4027:42712financial_parties_onlyexcludedUNREAD. Header500m×No1/2/3 per-noteformsnotseries1.5bnduplicateinflow;historical2016notcurrentF4. No bodyamount/link/covenant/F4 exploited.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=4027,locator='rawbytes:0:4027')])
