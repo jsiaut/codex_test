@@ -285,3 +285,5 @@ D0068 — Marvell octobre 2020 : lecture intégrale des 15 candidats et de la no
 D0069 — Amazon 8-K du 14 septembre 2026 : six observations numériques en livres sterling rejetées par le validateur qui ne reconnaissait pas le symbole £. Défaut corrigé pour les passes futures avec test de devise, sans réadmission ni seconde passe sémantique du bloc existant. Les six lignes originales restent rejetées et la couverture numérique reste incomplète, sans équivalent USD inventé.
 
 D0070 — Amazon 8-K du 12 juin 2026 : livres canadiennes conservées en CAD, sans taux de change inventé. Validation étendue à C$ avant la première passe de ce bloc ; un test prouve que C$ ne justifie pas USD. Les rejets GBP déjà écrits restent intacts. Prix public, principal et estimation nette non additionnables.
+
+D0071 — Alphabet 8-K du 21 mai 2026 : principal en JPY conservé sans conversion USD ; la description littérale « Japanese yen-denominated » établit la devise. Validateur étendu avant la première passe et test distinguant le symbole ¥ seul, insuffisant pour identifier la devise. Principal agrégé et sept séries non additionnables.

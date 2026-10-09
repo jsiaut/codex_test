@@ -175,3 +175,17 @@ def test_canadian_dollars_do_not_prove_US_dollars():
     validate_semantics(row,block,raw)
     with pytest.raises(ObservationRejected,match='Devise narrative'):
         validate_semantics(dict(row,currency='USD',unit='USD'),block,raw)
+
+
+def test_yen_requires_unambiguous_currency_description():
+    for description,accepted in [('Japanese yen-denominated notes',True),('notes',False)]:
+        raw=f'<div>Issued ¥576.9 billion of {description}.</div>'.encode()
+        body=normalize_html(raw)
+        block={'content_key':'yen','text':body,'candidates':[]}
+        row={'content_key':'yen','raw_byte_start':0,'raw_byte_end':len(raw),
+            'quote':body,'amount':'576900000000','amount_origin':'narrative_only',
+            'unit':'JPY','currency':'JPY'}
+        if accepted:validate_semantics(row,block,raw)
+        else:
+            with pytest.raises(ObservationRejected,match='Devise narrative'):
+                validate_semantics(row,block,raw)

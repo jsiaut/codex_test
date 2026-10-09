@@ -88,7 +88,8 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
         if currency:
             currency_tokens={'USD':['USD','U.S. dollar','US dollar','US$'],
                 'EUR':['€','EUR','euro'],'GBP':['£','GBP','pounds sterling','sterling'],
-                'CAD':['C$','CAD','Canadian dollar']}.get(currency,[currency])
+                'CAD':['C$','CAD','Canadian dollar'],
+                'JPY':['JPY','Japanese yen','yen-denominated']}.get(currency,[currency])
             currency_evidenced=any(s in quote for s in currency_tokens)
             if currency=='USD':
                 currency_evidenced=currency_evidenced or bool(re.search(r'(?<![A-Za-z])\$',quote))
