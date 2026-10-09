@@ -1,0 +1,7 @@
+from work.authored_helpers import *
+save('efeb341dc36e8f94c5dac71b7e8d013a164f3cb36091453001c35fc6b83d0832',[
+dict(quote='Marvell shareholders voted to approve the issuance of Marvell common shares',counterparty='Cavium, Inc.',counterparty_evidence='named',model_quantity='Cavium_merger_shareholder_issuance_approval',flag_unknown_reason='announcedMar16_exactvote_dayunknown_proposedacq_notactualsharesissued_orcash/conso'),abstention('previously announced proposed acquisition','Entire item read. Voteapproval notactualclosing/currentconso; only99.1furnished.')])
+save('3b5387fa767bfe98436b2ff7098648ceeca80ea5ac3a148ef588403917869165',[
+dict(quote='Broadcom Cayman L.P. (the “Partnership”), of which the Company is the General Partner',counterparty='Broadcom Cayman L.P.',counterparty_evidence='named',model_quantity='Broadcom_Cayman_LP_current_generalpartner',flag_unknown_reason='Company_alias_only_fullname_companion_confirmation_pending_not_fuzzy_inferred'),abstention('in the amount of $1.75 per LP Unit','Entireitem read. FutureMar29ordinarydividend andparallelLPdistribution per unitnot aggregate actualcash; no addpayergroups/guarcall.')])
+save('65196fd5d9122d1cbe92eea7a820c0fba80b676081cb4764e365a4a0b573a2ca',[
+abstention('dividend of $0.06 per share to be paid on April 18, 2018','Entire item includingexhibitlist/signature read. Futureper-sharedividend notaggregateactualcash/financing/distress; only99.1furnished.')])
