@@ -150,3 +150,16 @@ def test_table_scale_requires_explicit_heading_and_currency_amount_cell():
     validate_semantics(row,block,raw)
     for bad in ['2018000000','664000']:
         with pytest.raises(ObservationRejected):validate_semantics(dict(row,amount=bad),block,raw)
+
+
+def test_sterling_narrative_requires_actual_currency_evidence():
+    raw='<div>The estimated net proceeds were approximately £4.235 billion.</div>'.encode()
+    body=normalize_html(raw)
+    block={'content_key':'sterling','text':body,'candidates':[]}
+    row={'content_key':'sterling','raw_byte_start':0,'raw_byte_end':len(raw),
+        'quote':body,'amount':'4235000000','amount_origin':'narrative_only',
+        'unit':'GBP','currency':'GBP'}
+    validate_semantics(row,block,raw)
+    for wrong_currency in ['USD','EUR']:
+        with pytest.raises(ObservationRejected,match='Devise narrative'):
+            validate_semantics(dict(row,currency=wrong_currency,unit=wrong_currency),block,raw)

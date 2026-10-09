@@ -85,7 +85,8 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
                and f.get('unit')==row.get('unit') and f.get('currency')==row.get('currency') for f in block['candidates']):
             raise ObservationRejected('Montant disponible en XBRL : tagged_reference requis.')
         if row.get('currency') and not any(s in quote for s in
-                ({'USD':['$','USD','U.S. dollar','US dollar'],'EUR':['€','EUR','euro']}.get(row['currency'],[row['currency']]))):
+                ({'USD':['$','USD','U.S. dollar','US dollar'],'EUR':['€','EUR','euro'],
+                  'GBP':['£','GBP','pounds sterling','sterling']}.get(row['currency'],[row['currency']]))):
             raise ObservationRejected('Devise narrative non démontrée par la citation.')
     if row.get('abstained') and row.get('amount') is not None:
         raise ObservationRejected('Une abstention ne peut pas porter de montant.')
