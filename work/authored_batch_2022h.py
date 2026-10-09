@@ -1,0 +1,11 @@
+from work.authored_helpers import *
+k='f568c999482a55e778ce70cb352b2e524f676ae6bcb3dc46ed4b851904b2b339'
+rows=repeat_chosen_rows('55320fe17ce395b43c378545eb62d255a17ee8b6a3d7da9310253365233fdc98',['consolidation_scope','intercompany_elimination','presentation_reclassification'])
+rows += [dict(quote='Fiscal years 2023 and 2022 are both 52-week years. The second quarters of fiscal years 2023 and 2022 were both 13-week quarters.',model_quantity='fiscal_calendar'),abstention('There have been no material changes to our significant accounting policies','Complete note no explicit substantial doubt or actual useful life change; no later fully amortized intangible writeoff imported.')]
+save(k,rows)
+k='973ddb07fd868651b3c76058fc43ffa58ec643d3966096cfadbc2c4e85467d8d'
+save(k,[authored_control(k,'our management, including our Chief Executive Officer and Chief Financial Officer, has concluded that our disclosure controls and procedures (as defined in Rule 13a-15 under the Securities Exchange Act of 1934, as amended) were effective to provide reasonable assurance.','disclosure_controls_effective',event_present=True),dict(quote='During the second quarter of fiscal year 2023, we completed the consolidated financial reporting phase of the implementation, which included updating our internal control over financial reporting.',model_quantity='ERP_financial_reporting_phase_completed',flag_unknown_reason='actual_Q2_reporting_phase_not_entire_ERP_completion_or_MW'),authored_control(k,'There were no other changes that occurred during the second quarter of fiscal year 2023','no_other_material_ICFR_change_quarter',flag_unknown_reason='ERP_update_exception_no_other_changes_and_generic_limits_not_F5_absence')])
+k='a49f436f96db9eefbcb2948c356c508e644ab7c2482134a2c0ff212ba526dfc6'
+rows=repeat_chosen_rows('dd201e7e5e97fbf6f12ff180c3efe0c1cc13e068004d4d7fb9d92627ee4a9fed',['issuer_legal_name_jurisdiction','consolidation_scope','intercompany_elimination','presentation_reclassification','fiscal_calendar'])
+rows.append(abstention('Actual results could differ from these estimates and such differences could affect the results of operations reported in future periods.','Complete note no explicit substantial doubt; generic estimate variability not actual F6 or life change.'))
+save(k,rows)

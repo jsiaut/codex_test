@@ -961,5 +961,77 @@
     "reason": "Combined debt equity instruments tagged equity only",
     "decision": "D0058",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "0205d5763dffc25a0808d387e5617aa9bf670d400f0f4486b1d84cb533f159e0",
+    "content_key": "ea7fd8ecacd6f0e21509980e0b5b75ce04408aac490b17e7a1ae9ccd2c2e75ea",
+    "accession": "0001018724-22-000019",
+    "affected_quantity": "life_change_net_income_effect",
+    "reason": "Positive earnings benefit from reduced net loss tagged negative NetIncomeLoss or EPS effect",
+    "decision": "D0059",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "c8638a1cbb4af4ce65e265f945d7b02128b2c71a0f37f4415c69f64a8d9d1c27",
+    "content_key": "ea7fd8ecacd6f0e21509980e0b5b75ce04408aac490b17e7a1ae9ccd2c2e75ea",
+    "accession": "0001018724-22-000019",
+    "affected_quantity": "life_change_net_income_effect",
+    "reason": "Positive earnings benefit from reduced net loss tagged negative NetIncomeLoss or EPS effect",
+    "decision": "D0059",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "2b9e394c628de4c291f5e96c39d5aeb6b5af79288ff0f15cca4e3de40018ccf8",
+    "content_key": "ea7fd8ecacd6f0e21509980e0b5b75ce04408aac490b17e7a1ae9ccd2c2e75ea",
+    "accession": "0001018724-22-000019",
+    "affected_quantity": "life_change_net_income_effect",
+    "reason": "Positive earnings benefit from reduced net loss tagged negative NetIncomeLoss or EPS effect",
+    "decision": "D0059",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "18cb2e59894237b7b65665c8eb1869f1f10ec7ca257199d7965b0e986494a6e8",
+    "content_key": "ea7fd8ecacd6f0e21509980e0b5b75ce04408aac490b17e7a1ae9ccd2c2e75ea",
+    "accession": "0001018724-22-000019",
+    "affected_quantity": "life_change_net_income_effect",
+    "reason": "Positive earnings benefit from reduced net loss tagged negative NetIncomeLoss or EPS effect",
+    "decision": "D0059",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "b4bccbe19ab93f780846ee9dc06fc36ab7bdc1ac0ddb244585f41d50904de5fe",
+    "content_key": "ea7fd8ecacd6f0e21509980e0b5b75ce04408aac490b17e7a1ae9ccd2c2e75ea",
+    "accession": "0001018724-22-000019",
+    "affected_quantity": "life_change_net_income_effect",
+    "reason": "Positive earnings benefit from reduced net loss tagged negative NetIncomeLoss or EPS effect",
+    "decision": "D0059",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "1c0ba815ad72d449ff4b9727ee4ef1663af0d293a12dbeb3e8c9211830386005",
+    "content_key": "ea7fd8ecacd6f0e21509980e0b5b75ce04408aac490b17e7a1ae9ccd2c2e75ea",
+    "accession": "0001018724-22-000019",
+    "affected_quantity": "life_change_net_income_effect",
+    "reason": "Positive earnings benefit from reduced net loss tagged negative NetIncomeLoss or EPS effect",
+    "decision": "D0059",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "14148ff907ccb605c0c38d4151d4968470edcf916925fc8ec6a2f4c3d07c77b5",
+    "content_key": "4c74dbc21e20f6f79b6b302ff0a4b9020bc151cce02ca8cc9280e17c87dde21b",
+    "accession": "0001326801-22-000082",
+    "affected_quantity": "depreciation_life_change_expense_effect",
+    "reason": "Sign opposite to explicit expense reduction or net-income increase",
+    "decision": "D0060",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "e51d0184993fb6a2c993e7a93aa83d1040e5037163669185f92a9499bc80755f",
+    "content_key": "4c74dbc21e20f6f79b6b302ff0a4b9020bc151cce02ca8cc9280e17c87dde21b",
+    "accession": "0001326801-22-000082",
+    "affected_quantity": "life_change_net_income_effect",
+    "reason": "Sign opposite to explicit expense reduction or net-income increase",
+    "decision": "D0060",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
