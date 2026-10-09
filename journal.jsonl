@@ -7027,3 +7027,5 @@
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T19:19:35.509967+00:00", "event": "semantic_quarantine_added", "decision": "D0049", "added": 2, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T19:21:09.957152+00:00", "event": "semantic_quarantine_added", "decision": "D0050", "added": 3, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T19:21:10.321515+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 392, "remaining_unique_keys": 912, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T19:22:21.683546+00:00", "event": "semantic_quarantine_added", "decision": "D0051", "added": 2, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T19:22:59.875107+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 402, "remaining_unique_keys": 902, "final_delivery": false}

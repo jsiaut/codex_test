@@ -709,5 +709,23 @@
     "reason": "Narrative goodwill impairments not material does not establish exact zero for 2021 to 2023",
     "decision": "D0050",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "81e916e030ac7cf30669dbf7dd68a2bea6c35046987083dc007297943021e8b9",
+    "content_key": "d876103386174f4f6029ec7b934aae33911789d0c1163695d059e6ec9fc49445",
+    "accession": "0000950170-23-069682",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Narrative combines debt investments equity securities and related instruments whereas concept is equity only",
+    "decision": "D0051",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "9a7fa79d152a30e1d499459bc31ac7d255ee6c96bec59da825d4b56cf5904834",
+    "content_key": "d876103386174f4f6029ec7b934aae33911789d0c1163695d059e6ec9fc49445",
+    "accession": "0000950170-23-069682",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Narrative combines debt investments equity securities and related instruments whereas concept is equity only",
+    "decision": "D0051",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
