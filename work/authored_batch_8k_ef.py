@@ -1,0 +1,7 @@
+from work.authored_helpers import *
+save('2cf85b02e1641cd2ac46d74f62780f8b2849cfe03c02f8ea5aefa2c6af2e083b',[
+dict(quote='On October 12, 2018, Broadcom Inc. (“Broadcom”) and CA, Inc. (“CA”) obtained clearance under the antitrust laws of the European Union',counterparty='CA, Inc.',counterparty_evidence='named',model_quantity='CA_acquisition_last_regulatory_approval_received',event_date='2018-10-12',flag_unknown_reason='regulatoryapproval_not_actualclose_or_currentconsolidation'),abstention('expects the acquisition of CA to be completed on November 5, 2018','Entire item/caution/signature read. Expectedfutureclosing not actualNov5 proof, no finance amount/financialwaiver or actualcapacitytermination.')])
+save('8ca4e0b208e02a2fee29bc2d4f2b0fc1f8782888bb53d40f440370bf52f52612',[
+money('repurchase of up to an additional $12.0 billion','12','1000000000','existing_shareholders',counterparty_evidence='anonymous',stage='available',model_quantity='additional_optional_buyback_authorization',amount_qualifier='up_to',amount_nature='actual_authorized_limit_not_cashpaid',flag_unknown_reason='exact_boardapproval_day_unknown_announcedSep17'),abstention('cash dividend of $0.19 per share','Entire item read. FutureOct30payment/Oct16recorddate notactualaggregatecash.')])
+save('b642b96ac26f001ba1e06ded3fcad4c592812777bb0322201da1cc0055c32036',[
+abstention('quarterly dividend of $0.06 per share to be paid on October 23, 2018.','Entire item read. Futuredividend per share notaggregateactualcash/funding/distress. OnlyEx99.1furnished.')])
