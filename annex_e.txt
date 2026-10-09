@@ -1,0 +1,34 @@
+## Annexe E — Énoncés de réfutation
+
+**Statut.** Ces énoncés sont écrits avant toute exécution, parce que la tentation permanente, sur une thèse contestée, est de collecter les exemples qui illustrent la conclusion attendue. Leurs critères (issues, seuils, grille, règles d'agrégation) sont transcrits dans `config.yaml` et commités avant la première requête (§11.1) ; tout changement ultérieur est signalé en tête de la note de synthèse, avec le diff et le résultat sous les critères d'origine. Le code confronte les énoncés aux mesures à chaque exécution ; chaque issue est une cellule de `measures` (`annex_e_outcome`, l'énoncé, le point de grille et `date_basis` dans `breakdown_key`), et la note cite cette confrontation, y compris quand le résultat est vide. Identifiants : `E1` à `E6` pour les énoncés, `E7` à `E9` pour les règles.
+
+**E.0 Conventions.**
+
+- **Issues.** E.1 : `supported`, `not_supported` ou `indeterminate`. E.2 et E.3 : `supported`, `refuted` ou `indeterminate`. E.5 : `supported` ou `indeterminate`, jamais `refuted`. E.4 et E.6 sont descriptifs, ont leurs propres issues et n'entrent pas dans E.7. Une mesure `not_determinable` conduit toujours à `indeterminate`, avec son `nd_reason` pour motif ; les autres motifs sont `search_incomplete`, `date_missing`, `interval_straddles_threshold` (intervalle à cheval sur un seuil) et `precondition_not_met`.
+- **Vue principale `as_known`** : chaque exercice est évalué avec les dépôts connus à la date limite de dépôt de son rapport annuel (10-K, 20-F ou 40-F), plafonnée à l'`as_of` de l'exécution ; l'`as_of` de la cellule porte cette date. La vue `revised` est publiée en sensibilité.
+- **Unité** : la paire (groupe fournisseur, groupe économique client). Les mesures se lisent par exercice fiscal du fournisseur, et chaque énoncé rend une issue par paire, sur les exercices de la fenêtre.
+- **Précondition de puissance** : une mesure `computed` ou `bounded`.
+- **Grille** : E.2 et E.3 s'évaluent à chaque point de la grille, un seuil haut s ∈ {5 %, 10 %, 20 %} et un seuil bas s/2. Le point s = 10 % est le résultat de tête ; les deux autres sont publiés à côté, jamais à sa place.
+- **Fenêtre allongée** : la fenêtre d'analyse (§11.1), de l'exercice `window.start_fiscal_year` à `as_of`, reculée de quatre trimestres.
+- **Recherche complète** : tous les dépôts du fournisseur et, s'il dépose, du client, sur la fenêtre allongée, ont été traités ; aucun candidat pertinent n'est `not_processed` ni `parse_failed` ; aucune clause pertinente n'est `redacted` ; aucune requête ni période de données pertinente n'est exclue pour `search_incomplete` ou `not_processed`.
+
+**E.1 Lien documenté.** Pour chaque paire où F vaut `active`, sous la politique `exposure_outstanding`, pendant au moins un trimestre de la fenêtre allongée : `supported` si au moins une pièce L1 à L5 est trouvée ; `not_supported` si la recherche est complète et n'en trouve aucune ; `indeterminate` sinon. Publication : nombre de paires par issue, avec la couverture contractuelle (`contract_coverage`, §2.5).
+
+**E.2 Dépendance de revenu** (`documented_revenue_dependency`, politique `exposure_outstanding`). À chaque point s de la grille : `supported` si `value_lower ≥ s` sur au moins deux exercices consécutifs ; `refuted` si `value_upper < s/2` sur tous les exercices évaluables, avec au moins deux exercices évaluables ; `indeterminate` sinon. Au point de tête, 10 % est le seuil de publication d'ASC 280, et 5 % laisse une marge d'un demi-seuil.
+
+**E.3 Dépendance du carnet** (`documented_backlog_dependency`) : mêmes règles et même grille, sur le RPO de fin d'exercice.
+
+**E.4 Chronologie** (descriptif). Pour les paires qui ont un engagement de financement daté et au moins un engagement d'achat daté, deux lectures séparées (`date_basis`) : sur les dates d'engagement (t_f = date de l'engagement de financement ; achats = engagements d'achat) et sur les dates de versement (t_f = date du versement ou du tirage ; achats = paiements). `compatible` si un engagement d'achat, ou un paiement, du client est daté dans [t_f − 90 jours ; t_f + 365 jours] ; `indeterminate` si une date manque ; `incompatible` dans tous les autres cas. Énoncé descriptif, jamais présenté comme une preuve.
+
+**E.5 Contrepartie au client.** `supported` si le fournisseur publie une contrepartie payable au client comptabilisée en réduction du revenu, ou un revenu contre une contrepartie non monétaire reçue de lui ; `indeterminate` sinon, y compris quand le fournisseur ne publie rien sur ce point ; jamais `refuted`. Énoncé unilatéral : l'absence de publication ne réfute rien.
+
+**E.6 Cycles** (descriptif). Décompte des `documented_path` par valeur de `temporal` et par conclusion ; issue unique `descriptive`.
+
+**E.7 Non-discrimination** (règle). Si plus de 70 % des issues de paire de E.1 et de E.2 réunies sont `indeterminate`, au point de tête de la grille, le résultat principal publié est : « les pièces déposées ne permettent pas de discriminer entre les deux lectures ». Il est publié avec ce taux et la ventilation de ses motifs, dont `anonymous`, `channel_indirect`, `non_filer`, `redacted`, `not_processed` et `parse_failed`. C'est un résultat, pas un échec.
+
+**E.8 Agrégation** (règle). Aucune règle « au moins une paire » ne fonde une conclusion globale ; les résultats se publient paire par paire, avec la part des paires dans chaque issue.
+
+**E.9 Engagements de rendu** (règle). Un numérateur vide est publié `not_determinable`, avec `named_edge_coverage`, `documented_pair_coverage` et `customer_concentration_anonymous` à côté. Les énoncés E.1 à E.3 portent leurs deux directions dans leurs issues : `supported` pour la lecture circulaire, `refuted` ou `not_supported` pour l'autre lecture ; il n'y a pas d'énoncé miroir séparé. E.5 est unilatéral ; E.4 et E.6 sont descriptifs.
+
+
+
