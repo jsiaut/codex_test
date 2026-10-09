@@ -207,3 +207,10 @@ Lecture complète de la note 1 : les montants de 417 millions USD au 31 mai 2025
 ### D0040 — Chronologie Q1 CoreWeave et précision des actions au client
 
 Note 1 Q1 2025 lue intégralement : 500 millions USD d’escrow constituent bien le solde restricted cash au 31 mars, contrairement aux contextes postérieurs à la libération d’avril. Le fait deferred offering costs de 31 millions au 31 mars contredit le reclassement en capitaux propres lors de l’IPO achevée et reste exclu des calculs. Les 8 750 000 actions exactes au client stratégique, émises le 31 mars à 40 USD, expliquent 350 millions ; une présentation ultérieure à 9 millions arrondis ne prouve donc pas une contradiction. Préserver les anciens flags immuables et résoudre cette différence par la précision dans la phase 3. Le client demeure anonyme dans cette note ; le renvoi à Note 2 ne prouve pas à lui seul un nom ou un traitement contra-revenue.
+
+
+### D0041 — Contexte RPO FY2025 Oracle et essai de schéma Q3
+
+La confrontation à la note de février 2025 a permis de repérer un conflit supplémentaire dans la note annuelle FY2025 déjà lue : le membre typé du taux de 23 % porte le 1er juin 2027 alors que « month 37 to month 60 » après le 31 mai 2025 commence le 1er juin 2028. Le fait et l’observation historique restent immuables ; une quarantaine exclut leur utilisation numérique dépendante. Le total RPO et les tranches correctes ne sont pas exclus.
+
+La ligne des 48,4 milliards de leases non commencés de février 2025 employait category au lieu de la colonne category_id. Son unique deuxième essai de schéma corrige ce nom ; le rejet initial est conservé et les 36 lignes acceptées au premier essai ne sont pas resoumises.

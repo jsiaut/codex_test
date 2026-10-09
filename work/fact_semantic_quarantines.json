@@ -241,5 +241,14 @@
     "reason": "March31 deferred asset context contradicts completed IPO reclassification to equity",
     "decision": "D0040",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "c178b53faf09a5b740397836dfaf240d717c84b77ddcde88d1aa0d1964b8ea25",
+    "content_key": "8bf9fec8af82638c58833ada3890a507d8c3d1dcd35ec7bd03494577582bd757",
+    "accession": "0000950170-25-087926",
+    "affected_quantity": "rpo_months37_60_share",
+    "reason": "Typed start2027-06-01 contradicts months37–60 following May31 2025: start2028-06-01",
+    "decision": "D0041",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
