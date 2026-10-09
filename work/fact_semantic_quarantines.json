@@ -1132,5 +1132,23 @@
     "reason": "net_cost_after_cash_and_exercise_proceeds_not_equity_consideration_transferred",
     "decision": "D65",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "db95761a1537e1d281a479298a82252b05d9601b66e2287436752a1197d9b23d",
+    "content_key": "af317afd34911e5ce26c4694fda0dc1e79d3fd9ba8a1c5e43cd40e373f93e43a",
+    "accession": "0001564590-21-033616",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Equity and related instruments combined stock does not establish equity-only amount",
+    "decision": "D0066",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "19084bcd24f6225149841e62f24e4a0e942335c605273a967d645ab56c113f8c",
+    "content_key": "af317afd34911e5ce26c4694fda0dc1e79d3fd9ba8a1c5e43cd40e373f93e43a",
+    "accession": "0001564590-21-033616",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Equity and related instruments combined stock does not establish equity-only amount",
+    "decision": "D0066",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
