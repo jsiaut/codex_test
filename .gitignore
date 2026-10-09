@@ -13,6 +13,7 @@ work/*.log
 __pycache__/
 .pytest_cache/
 *.duckdb
+**/.export-*/
 work/filings/
 work/companyfacts/
 work/rebuild/

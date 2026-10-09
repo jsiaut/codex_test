@@ -86,12 +86,18 @@ def insert(db, table: str, row: dict):
 
 
 def export(db, destination: Path):
+    from tempfile import TemporaryDirectory
     destination.mkdir(parents=True, exist_ok=True)
-    for table in TABLES:
-        info = db.execute(f"PRAGMA table_info('{table}')").fetchall()
-        keys = [r[1] for r in info if r[5]]
-        target = destination / (table + '.parquet')
-        db.execute(f'COPY (SELECT * FROM {table} ORDER BY {",".join(keys)}) TO {sql_literal(str(target))} (FORMAT PARQUET)')
+    # Git checkpoints can run while cached facts are being reconstructed.
+    # Keep the prior exports until every new file has finished writing.
+    with TemporaryDirectory(prefix='.export-', dir=destination) as staging:
+        for table in TABLES:
+            info = db.execute(f"PRAGMA table_info('{table}')").fetchall()
+            keys = [r[1] for r in info if r[5]]
+            target = Path(staging) / (table + '.parquet')
+            db.execute(f'COPY (SELECT * FROM {table} ORDER BY {",".join(keys)}) TO {sql_literal(str(target))} (FORMAT PARQUET)')
+        for table in TABLES:
+            (Path(staging) / (table + '.parquet')).replace(destination / (table + '.parquet'))
 
 
 def table_counts(db) -> dict:
