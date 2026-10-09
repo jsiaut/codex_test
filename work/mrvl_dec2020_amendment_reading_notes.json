@@ -1,14 +1,41 @@
 {
   "content_key": "9169a0735e34cc19446118ac8b7b918fb6edb5c4f2924169a4b16656a49946d7",
-  "status": "partial_personal_reading_do_not_submit_before_all_parts",
+  "status": "complete_personal_reading_header_and_all14_body_packets",
   "parts": 14,
-  "personally_read_full_parts": [0, 1, 2, 3, 4],
-  "same_item_full_rereads": ["d23ffc18a9e7dfc9e9ba6a1e10b21b4d48972bfe39048c61e24787ab328df561", "75832cbd60fc69a298c45b1cc9b10de519cd1aa76cbed93ff53ac655c4f5f6d3"],
+  "personally_read_full_parts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "same_item_full_rereads": [
+    "d23ffc18a9e7dfc9e9ba6a1e10b21b4d48972bfe39048c61e24787ab328df561",
+    "75832cbd60fc69a298c45b1cc9b10de519cd1aa76cbed93ff53ac655c4f5f6d3"
+  ],
   "notes": [
     "0: Autonomous Amendment No1 December7,2020 to June13,2018 credit. Sec2 delete stricken/add double-underlined AnnexA; conformed redline actually present despite first [To be attached] label. Preserve raw and text, joined TOC page numbers not finance amounts. Sec4 signatures and no-default certificate conditions. Sec5 NO implied waiver/novation; Dec2 commitment termination notice terminates old revolving on effective date, independent Item1.02 actualDec7; old term remains. All signatures banks. Company signature transposes MARVELL GROUP TECHNOLOGY LTD; do not invent separate issuer/alias; header and independent Item full legal issuer correct. Final F4 quote can use 'the Credit Agreement is hereby amended to delete the stricken text' and actualDec7 signed independently confirmed. No actual distress/default/cure inferred.",
     "1: Old Cavium bridge850m capacity and definitions, not new Dec2020 funding/current balance. Cavium-into-MergerSub conflict in old Item not fixed by contractual prospective definition. EBITDA covenant starts GAAP operating income with D&A/noncash/SBC/restructuring/transaction/etc adjustments, excludes some income; no GAAP EBITDA/CFO claim. Acq debt excluded from cov leverage while acquisition not closed, not GAAP off-balance debt. Changecontrol40percent and reorganization exception contractual only, not actual control.",
     "2: General guarantee definition is not actual guarantee issuance/call. Inphi Corporation DE and MauiHoldcoInc DE legal definitions; prospective Indigo-into-Inphi differs from independent Item1.01 proposed direction but actualApr20 closure remains independent. Merger agreement definition names Marvell Acquisition Company Ltd versus later actual Maui Acquisition Company Ltd: distinct unresolved legal spelling, no fuzzy alias. Historical Inphi initial notes287.5m2016/506m2020 and MTG2018two500m are old issuance amounts, not current principal or new cash. Generic thresholds100m materialdebt/50m acq and5percent subsidiaries not actual exposures.",
     "3: Historical original500mRCF/900mterm from2018 not new Dec7 commitments; oldRCF terminated by amendment/Item while term remains. Original term deadline2018 not actual expiry event recorded here. Permitted liens/deposits/leases/guarantees are rights not actual pledges. ParentCompanyGuaranteeIFANY tied generic permitted reorganization, no issued/called support inferred. Specified permitted bank eligibility does not make all unidentified lender aliases resolved.",
-    "4: Sec1.04 covenant accounting ignores debt FV discount/convertible split and freezes lease classification pre2016-12-31 despite ASC842; only covenant basis, not published GAAP measures. Proforma4Q transaction calculations, FX compliance exceptions, conditionalMFN amendments not actual distinct F4/default. Orig loan funding/interest/prepayment procedures and min5m/multiple1m loan sizes not actual draws/currentdebt/cap. Continue full ordered parts5-13 before any save."
+    "4: Sec1.04 covenant accounting ignores debt FV discount/convertible split and freezes lease classification pre2016-12-31 despite ASC842; only covenant basis, not published GAAP measures. Proforma4Q transaction calculations, FX compliance exceptions, conditionalMFN amendments not actual distinct F4/default. Orig loan funding/interest/prepayment procedures and min5m/multiple1m loan sizes not actual draws/currentdebt/cap. Continue full ordered parts5-13 before any save.",
+    "5: Default +2percent interest, old ticking/commitment fees, prospective LIBOR fallback, regulatory costs, break funding and tax gross-up conditional, not actual default/payments; private fee amounts ND.",
+    "6: Ratable insufficient funds, defaulting lender cure, assignment/setoff conditional. Optional bridge request requires separate Bridge Facility Agreement; old850m cap not actual new facility/draw. Historical2018 Deloitte representations not current auditor assessment.",
+    "7: Solvency/legal/environment warranties, disclosure projections expressly uncertain, original effective/funding conditions, annual audited no-going-concern delivery obligation and compliance certificate requirements not actual default, F5 or F10. Old Cavium use-of-proceeds not new Dec2020 cash.",
+    "8: Subsidiary guarantees, capital leases, earnouts, liens and sale-leasebacks PERMISSIONS only, not actual issuance or funded investments. Added Inphi debt allowances and pari-passu guarantee condition after closing not actual current group. Reorganization/merger permission conditional on assumption, KYC and no default.",
+    "9: Sec6.06 old3.00:1 and amended4.75:1 commencing fiscal quarter following Inphi closing, proforma at closing. No breach. All default/cross-default/acceleration and historical Cavium clean-up provisions conditional, not actual triggers.",
+    "10: Agents powers/resignation, ERISA lender representations, notices, amendment voting and consent rules do not prove new funding/waiver/default. General origreement no-waiver rule preserved.",
+    "11: Expenses, indemnification and assignment/participation fee3500/minimum5m conditional, not paid fees or actual assignments. No identified outside nonfinancial financing receiver. Original integration and bridge commitments references not newly executed bridge.",
+    "12: Boilerplate jurisdiction, confidentiality, bail-in, judgment-currency risks conditional. Sec9.19 generic Delaware holding reorganization prospective, future parent guaranty and Company remaining primary obligor conditioned on actual consummation and documented acts.",
+    "13: Sec9.20 specific Inphi concurrent reorganization prospective Marvell Acquisition Company Ltd Bermuda into MTG surviving whole MauiTopco; legal spelling differs later actual Maui Acquisition Company Ltd, no alias. New-guaranty actions required after closing, not current guarantee issued/called. Final AnnexA company/bank/unnamed lender signature forms blank, initial amendment signatures actually executed. No further schedules or exhibit contents appended."
   ]
 }
