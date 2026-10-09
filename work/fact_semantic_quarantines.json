@@ -1150,5 +1150,32 @@
     "reason": "Equity and related instruments combined stock does not establish equity-only amount",
     "decision": "D0066",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "f7bc6e82f3439f8cb4cef8e1fc91662cb54574254b1b8552e651128cb60920f3",
+    "content_key": "b769557452626a23cd67ab5b6ff18e22db8cd00eae3190ea98da939f7dafd315",
+    "accession": "0001058057-21-000009",
+    "affected_quantity": "deferred_acquisition_financing_and_equity_issuance_cost_stock",
+    "reason": "Text January30 stock tagged October29 signing date",
+    "decision": "D0067",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "d59507b23fb2280834d658b8ca5d904d90ec43b2c3fd95ff87262b158dc07ec1",
+    "content_key": "b769557452626a23cd67ab5b6ff18e22db8cd00eae3190ea98da939f7dafd315",
+    "accession": "0001058057-21-000009",
+    "affected_quantity": "deferred_acquisition_financing_and_equity_issuance_cost_stock",
+    "reason": "Text January30 stock tagged October29 signing date",
+    "decision": "D0067",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "db2fa9f96b5715b6fed85e4e763364e31aa5510cef3ea5e13eb1827dded00377",
+    "content_key": "b769557452626a23cd67ab5b6ff18e22db8cd00eae3190ea98da939f7dafd315",
+    "accession": "0001058057-21-000009",
+    "affected_quantity": "deferred_acquisition_financing_and_equity_issuance_cost_stock",
+    "reason": "Text January30 stock tagged October29 signing date",
+    "decision": "D0067",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
