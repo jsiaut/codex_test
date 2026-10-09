@@ -169,5 +169,23 @@
     "reason": "FY2025 narrative goodwill impairments not material does not establish exact zero despite zero-valued tag",
     "decision": "D0036",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "f4cb33b587565d3c4a50b2ce39da251a26dd9dc03cd2b100333d20aaf10ac390",
+    "content_key": "4a3bb9e18d895dbf33b66cd0f47fb3234f8053d1005a5a6658eb56ab4fd0746d",
+    "accession": "0001769628-25-000062",
+    "affected_quantity": "restricted_cash_stock",
+    "reason": "IPO member September30 context contradicts restriction lifted in April2025; separate March31 DDTL fact not excluded",
+    "decision": "D0037",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "c183a298b20b54d88a823b68b9a2b5b08c329b60822da4c813fd9be81f937c29",
+    "content_key": "4a3bb9e18d895dbf33b66cd0f47fb3234f8053d1005a5a6658eb56ab4fd0746d",
+    "accession": "0001769628-25-000062",
+    "affected_quantity": "deferred_offering_cost_stock",
+    "reason": "September30 deferred asset context contradicts historical IPO reclassification to equity",
+    "decision": "D0037",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
