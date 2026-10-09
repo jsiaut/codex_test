@@ -1,0 +1,4 @@
+from work.authored_helpers import *
+save('d6a53d58e91d1cd21af5a0da792d3eef6a779c362650eeac1143fc7e76a525cc',[abstention('On December 12, 2019, the Company announced that the Board has declared a quarterly cash dividend','Full item read. Common3.25futureDec31recordDec23and preferred20futureDec31recordDec15distinct securities; reportDec10not announcementDec12. No actualaggregatecash/primaryfinance/preferredconversion.')])
+save('846185bce8645e4a222c19993ed1935bc48513c4a6a66226523af3d55667ac54',[abstention('declared a cash dividend of $0.24 per share','Full item read. FutureJan23,2020/recordJan9not actualaggregatepayout/debt. Declarationdayunknown.')])
+save('305804d6951e044b699f7ae1463afef4a46c52ec15b5c8a5f083ac2e2c817ada',[abstention('declared the payment of its quarterly dividend of $0.06 per share','Full item read including Bermuda law/allconditions. Dec5announcement futureJan16,2020/recordDec26not actualaggregatecash or distress; releaseonlyfurnished.')])
