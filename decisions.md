@@ -197,3 +197,8 @@ L’accélération de l’échéance de la dette au closing de l’IPO est un d�
 ### D0038 — Contextes historiques IPO CoreWeave dans le dépôt Q2 2025
 
 La note 1 lue intégralement annonce la libération de 500 millions USD au cours d’avril 2025 et le reclassement des frais IPO de 31 millions USD en capitaux propres. Les contextes de restricted cash IPO au 30 juin et DDTL au 30 avril, ainsi que celui de deferred offering costs au 30 juin, contredisent cette chronologie. Les trois faits bruts restent intacts ; leurs valeurs sont exclues des calculs dépendants par la quarantaine sémantique. La mention de maturité accélérée par l’IPO décrit un déclencheur contractuel et ne prouve pas un défaut financier.
+
+
+### D0039 — Concepts contradictoires des placements cotés Oracle FY2025
+
+Lecture complète de la note 1 : les montants de 417 millions USD au 31 mai 2025 et 207 millions au 31 mai 2024 correspondent à des titres de dette et actions marketable. Leur concept balisé without readily determinable fair value contredit ce périmètre. Les deux faits restent bruts et sont exclus des calculs dépendant de ce concept. Les soldes non-marketable combinés de 2,1 et 2,0 milliards restent distincts et ne sont pas entièrement attribués à Ampere.
