@@ -1,0 +1,14 @@
+from work.authored_helpers import *
+k='935dd9583beb63ac505b16ab8b9d87d1f592a7b7798ced35a70d847f3b6eab1e'
+rows=repeat_chosen_rows('a929216a13f2977c64ddc3227b9a650f8beb025ed0b6c492cb44e6c4c4ed705f',['trade_receivable_deferred_revenue_netting_policy','financing_receivables_nonrecourse_sales_policy','named_majority_owned_subsidiaries','nonoperating_other_mixed_investment_results'])
+rows += [dict(quote='During the first quarter of fiscal 2022, we adopted Accounting Standards Update (ASU) 2019-12, Income Taxes (Topic 740): Simplifying the Accounting for Income Taxes (ASU 2019-12),',model_quantity='ASU2019_12_adopted',recast_cause='accounting_change',flag_unknown_reason='Q1_FY2022_not_exact_day_no_material_impact_not_zero_no_ASU2021_08_adoption_here'),abstention('Restricted cash that was included within cash and cash equivalents','Nominal not zero. Complete note no substantial doubt, private stock or actual investment impairment or life change. Topic848 pending not actual financing covenant waiver.')]
+def t(fid,q,qty,**fields):rows.append(authored_tagged(k,fid,q,model_quantity=qty,**fields))
+q='The revenues recognized during the three months ended August 31, 2021 and 2020, respectively, that were included in the opening deferred revenues balances as of May 31, 2021 and 2020, respectively, were approximately $3.7 billion and $3.4 billion, respectively.'
+for fid in ['507f6fa2a7a6b84b7fd14acd96d9f2b5c671ad192e736a5f90f49012854fb17d','a93ea120fc5493e01413418b289ed1bc1fabb672476097211ab889fabaafff81']:t(fid,q,'opening_deferred_revenue_recognized',stage='recognized',amount_nature='recognized_from_opening_stock_not_current_cash')
+t('0e8575897d97fe46d7135cd46ebc324ac37c4d76292c41968248fa314bb5a78e','were $38.7 billion as of August 31, 2021,','RPO_total',amount_nature='contracted_revenue_not_cash',flag_unknown_reason='not_all_within24months')
+q='approximately 60% of which we expect to recognize as revenues over the next twelve months, 29% over the subsequent month 13 to month 36, and the remainder thereafter.'
+t('57455ba446c378e1f4c3b72f1f9f1b635110cb5410981a4af1babb585657f3f3',q,'RPO_share_next12months',flag_unknown_reason='starts_September2021_not_cash')
+t('9f9d581148c65113b884a9437dc1a50e53311e2f0207ed8d5403b14ae73f4837',q,'RPO_share_months13to36',flag_unknown_reason='starts_September2022_not_exact24month_amount')
+q='Financing receivables sold to financial institutions were $656 million and $677 million for the three months ended August 31, 2021 and 2020, respectively.'
+for fid in ['68a83f93d56179817de7e887a7f401a676a8d312cba8b3fa1dc841aa18ea13f4','3476bffc853b4b72f4ef1404700dc40436b9071c7a54416614540674186787ad']:t(fid,q,'customer_financing_receivables_sold',stage='recognized',counterparty_evidence='anonymous',amount_nature='sales_not_literal_cash_collection',flag_unknown_reason='customer_allocation_unknown')
+save(k,rows)
