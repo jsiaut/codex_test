@@ -502,5 +502,86 @@
     "reason": "Ampere combined equity and convertible debt carrying value tagged solely equity securities",
     "decision": "D0045",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "c88c768cc8297ad5cd16a4439dfaf89c90f2bc0430127f570c7a3fd81e99e7c4",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "server_useful_life",
+    "reason": "Tangible server useful life tagged as finite-lived intangible asset life",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "2c90d45d927c7062e189194f04c0440a703203a49ed8719eb4c6dcc6f74dba03",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "server_useful_life",
+    "reason": "Tangible server useful life tagged as finite-lived intangible asset life",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "e1578f10a41de950ce65794b1a99db0a2099ba211c777cf69ffa95d4b943ca43",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "private_investment_stock",
+    "reason": "Marketable debt equity stock tagged nonreadily determinable equity",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "83f54a262859a051e819b3bb63be78e0eb5d21dd34717146c9ff699a1d29f536",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "private_investment_stock",
+    "reason": "Marketable debt equity stock tagged nonreadily determinable equity",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "669ca455227b6658c02f408db3917a5f81d95332535de5fcf860aebaf218d47b",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments stock tagged solely equity",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "aa148259e5c9420252d7e541649bc279d829ff17cb8a160e635e8e028e43b043",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined debt equity instruments stock tagged solely equity",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "fbb70a17b03899b87f96200e5bd206997a7a8b179bfcc3f1544fb5ac7c291e12",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined Ampere equity and convertible debt stock tagged solely equity",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "02ac1d9b8eca05bd794a517e78ccde260d86a5da9f108fe0d7997f770747ee57",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "nonmarketable_equity_stock",
+    "reason": "Combined Ampere equity and convertible debt stock tagged solely equity",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "cfae99bb4c828dd8603933d453c711132b082210d5759ed08b3556b1fc37d00a",
+    "content_key": "d7438026691e41847e8b6e717d52fff6ce5054625fef8ad901206d586db891b4",
+    "accession": "0000950170-24-075605",
+    "affected_quantity": "rpo_months37_60_share",
+    "reason": "Narrative months37-60 after May31 2024 should start June1 2027; typed context starts June1 2026",
+    "decision": "D0046",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
