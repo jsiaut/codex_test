@@ -232,5 +232,14 @@
     "reason": "Narrative marketable debt and equity total mislabeled without readily determinable fair value",
     "decision": "D0039",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "382456a484c13a8e1af990d8f330f08bde19dd3c21aeeb97681c929b19d37248",
+    "content_key": "50dd184a87d5a61da8109406ae4f801dea6a79fc54522def4b4182c3c6869b32",
+    "accession": "0001769628-25-000014",
+    "affected_quantity": "deferred_offering_cost_stock",
+    "reason": "March31 deferred asset context contradicts completed IPO reclassification to equity",
+    "decision": "D0040",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]

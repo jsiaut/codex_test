@@ -202,3 +202,8 @@ La note 1 lue intégralement annonce la libération de 500 millions USD au cours
 ### D0039 — Concepts contradictoires des placements cotés Oracle FY2025
 
 Lecture complète de la note 1 : les montants de 417 millions USD au 31 mai 2025 et 207 millions au 31 mai 2024 correspondent à des titres de dette et actions marketable. Leur concept balisé without readily determinable fair value contredit ce périmètre. Les deux faits restent bruts et sont exclus des calculs dépendant de ce concept. Les soldes non-marketable combinés de 2,1 et 2,0 milliards restent distincts et ne sont pas entièrement attribués à Ampere.
+
+
+### D0040 — Chronologie Q1 CoreWeave et précision des actions au client
+
+Note 1 Q1 2025 lue intégralement : 500 millions USD d’escrow constituent bien le solde restricted cash au 31 mars, contrairement aux contextes postérieurs à la libération d’avril. Le fait deferred offering costs de 31 millions au 31 mars contredit le reclassement en capitaux propres lors de l’IPO achevée et reste exclu des calculs. Les 8 750 000 actions exactes au client stratégique, émises le 31 mars à 40 USD, expliquent 350 millions ; une présentation ultérieure à 9 millions arrondis ne prouve donc pas une contradiction. Préserver les anciens flags immuables et résoudre cette différence par la précision dans la phase 3. Le client demeure anonyme dans cette note ; le renvoi à Note 2 ne prouve pas à lui seul un nom ou un traitement contra-revenue.
