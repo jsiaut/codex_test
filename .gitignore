@@ -5,3 +5,11 @@ work/network_state.json
 __pycache__/
 .pytest_cache/
 *.duckdb
+work/filings/
+work/companyfacts/
+work/rebuild/
+work/*.xml
+work/MetaLinks.json
+work/spcx_blocks.json
+work/collection_progress.jsonl
+work/collection_errors.log

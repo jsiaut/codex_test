@@ -1,0 +1,23 @@
+Commit original : d9e886e92fe46c2bd3f2f497103dce895be8edd2
+Date du commit : 2026-10-09T10:21:25Z
+Première requête SEC : 2026-10-09T10:23:00.968199+00:00
+Critères inchangés : True
+
+## Annexe F — Événements de fragilité
+
+**Statut.** Cette liste est écrite avant toute exécution, pour la même raison que l'annexe E : choisie après avoir vu les séries, elle retiendrait ce qui monte. Elle est transcrite dans `config.yaml` et commitée avec les critères de l'annexe E, avant la première requête (§11.1) ; tout changement ultérieur est signalé en tête de la note de synthèse, avec le diff et les événements sous la liste d'origine. La liste est fermée. Chaque événement est un observable daté, publié avec sa pièce, sans pondération ni total et jamais résumé en un score : deux événements ne pèsent pas le double d'un seul, et c'est le lecteur qui juge ce qu'ils disent ensemble.
+
+**Publication.** Chaque événement est une cellule de `measures` (`fragility_event`, l'identifiant de l'observable dans `breakdown_key`), qui porte la période concernée et la date où sa pièce l'a rendu public (`knowledge_date`, §7.3), car c'est cet écart que rappelle §1. Comme pour les signaux (§4.5), l'univers attendu (§7.5) donne à chaque groupe, observable et trimestre une cellule dont l'état de couverture dit si la source a été lue : une source non lue ne passe jamais pour un trimestre sans événement. Aucune somme de ces cellules, ni entre observables, ni entre groupes, ni dans le temps.
+
+| Identifiant | Observable | Source |
+| --- | --- | --- |
+| `F1` | capex décaissé supérieur au CFO deux trimestres de suite | termes de `capex_to_cfo`, `term = without` (§6.2) |
+| `F2` | `fcf_after_counterparty_financing` négatif | §4.4 |
+| `F3` | un backstop ou une garantie dont `trigger_occurred = yes` | §5.3 |
+| `F4` | un amendement ou une dérogation de clause financière | `sig_covenant_events` (§4.5) |
+| `F5` | une faiblesse significative du contrôle interne | `sig_material_weakness` (§4.5) |
+| `F6` | une dépréciation d'investissement | `investment_impairment` (§6.2) |
+| `F7` | une baisse d'une durée d'amortissement publiée | `depreciation_life_published` (§6.2) |
+| `F8` | un `revenue_growth` en glissement annuel qui passe sous zéro | `revenue_growth`, `term = yoy` (§4.2) |
+| `F9` | un item 1.02 de 8-K sur un contrat de capacité | section 1.02 lue en phase 2 (§11.1) |
+| `F10` | un doute sur la continuité d'exploitation | `sig_going_concern` (§4.5) |
