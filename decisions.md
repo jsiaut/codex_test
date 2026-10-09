@@ -113,3 +113,23 @@ L’API GitHub accepte les commits, Git LFS et la création de release, mais le 
 L’ancre vide du proxy AMD 2019 est placée à l’intérieur du titre. La recherche du titre vers l’avant avait sélectionné sa répétition sur la page de continuation et omis la première page. L’ancre dont un parent porte exactement le titre est désormais reconnue comme départ ; la correction modifie une seule clé de la file entière. Le faux bloc garde une abstention archivée et le bloc complet est relu. Le test de régression passe.
 
 Le proxy date le septième amendement WSA du 29 janvier 2019, tandis que la note trimestrielle le date du 28 janvier : conflit conservé, pas de date choisie par hypothèse. Les noms Mubadala Investment Company PJSC et Mubadala Development Company PJSC ne sont pas fusionnés sans pièce d’identité. Une participation passant sous le seuil de désignation d’un administrateur n’est pas une sortie complète de capital. Les frais de waiver d’un contrat fournisseur ne deviennent pas un événement de covenant financier.
+
+## D0027 — HTML historique, tableaux répétés et portée des paiements
+
+Le proxy Amazon 2018 emploie des tailles ordinales FONT sans taille CSS. La borne compare les seules tailles ordinales publiées de titres principaux en majuscules, sans les convertir en points. La correction change une seule clé de la file ; le fragment antérieur reste archivé, le nouveau bloc est entièrement lu et son test de régression passe.
+
+Un montant de tableau sans suffixe monétaire peut utiliser l’échelle explicite « In millions », uniquement quand sa cellule est précédée du signe dollar. Une année ou un pourcentage ne peut fournir un montant en dollars. Les sous-tableaux déjà lus dans leur note parente sont néanmoins servis et relus ; une abstention de doublon de présentation évite une seconde attribution des mêmes flux. Un tiret isolé reste inconnu, jamais zéro.
+
+Un prix d’acquisition, un remboursement brut avant séquestre et une participation achetée ne prouvent ni une levée primaire ni un encaissement. Les montants et leur nature restent distincts. Les contrôles de la phase 2 portent la date de rapport réellement publiée dans submissions, distincte de la date de connaissance ; une conclusion sur les disclosure controls ne devient pas une affirmation d’absence de material weakness de l’ICFR.
+
+## D0028 — Fermetures des éléments inline imbriqués
+
+Dans la Note 1 Broadcom du trimestre clos le 2 août 2026, une continuation contient une autre continuation. La première fermeture rencontrée avait tronqué sa plage brute, alors que le texte servi comportait la fin du parent. Le validateur a refusé l’abstention dont la citation se trouvait après cette fausse borne. Ce rejet sémantique reste exclu au même as_of, sans correction rétroactive. Les deux autres observations admises du bloc restent conservées.
+
+Les fins de nonNumeric et de continuation correspondent désormais à leur propre ouverture, en comptant les éléments imbriqués de même nom. Les tests vérifient que le texte après l’élément enfant reste dans le bloc et sa plage brute, tandis que le texte extérieur reste exclu. La file est régénérée depuis le cache ; les éventuelles nouvelles clés exigent une lecture complète et ne réutilisent pas une ancienne passe par hypothèse.
+
+## D0029 — Type exact des pièces et première page physique
+
+Le préfixe EX-10 admettait à tort les ressources EX-101 de taxonomie. La file contractuelle accepte désormais uniquement les types EX-10 et EX-4 suivis éventuellement de leur numéro de pièce ; les EX-101 restent des ressources structurées de phase 1. Aucune observation n’avait été écrite sur ces faux blocs contractuels.
+
+L’en-tête servi d’un contrat suit la première rupture de page explicite du fichier, avec ses bornes brutes, même si les parties figurent après 6 000 caractères. Une rupture avant le premier texte est ignorée ; une rupture après un parent suit sa vraie fermeture. Sans pagination explicite, le document entier est servi et se lit avant toute exclusion fondée sur les parties. Les tests vérifient ces trois cas et la séparation EX-10/EX-101. Aucun classement financier n’est automatisé sur ces marqueurs.

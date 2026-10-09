@@ -50,6 +50,16 @@
     "duplicate": false
   },
   {
+    "content_key": "db1c36a411f65c98229abc983f06d37e90d3120af268da2c408a2d87a73d6e93",
+    "occurrence_id": "a30c5ad176070c4472a8995c6d9b291ba26845077ee739141bfe69ea833600b2",
+    "path": "work/blocks/a30c5ad176070c4472a8995c6d9b291ba26845077ee739141bfe69ea833600b2.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "item404",
+    "chars": 14301,
+    "duplicate": false
+  },
+  {
     "content_key": "f7b3f4a119b9cdb59ebf612764a16cce8d406ee1b6986ee68ec16cec130b6b9f",
     "occurrence_id": "7f627aefbf25992cd30b0bcfd65fa86b3751311639d92bbf0cb82543f926749a",
     "path": "work/blocks/7f627aefbf25992cd30b0bcfd65fa86b3751311639d92bbf0cb82543f926749a.json",
@@ -61,13 +71,13 @@
   },
   {
     "content_key": "db1c36a411f65c98229abc983f06d37e90d3120af268da2c408a2d87a73d6e93",
-    "occurrence_id": "a30c5ad176070c4472a8995c6d9b291ba26845077ee739141bfe69ea833600b2",
-    "path": "work/blocks/a30c5ad176070c4472a8995c6d9b291ba26845077ee739141bfe69ea833600b2.json",
+    "occurrence_id": "4ea7add0eb1f2f4585db0026a3102ce4c7154be75a35f023a4aca2a98c803f1a",
+    "path": "work/blocks/4ea7add0eb1f2f4585db0026a3102ce4c7154be75a35f023a4aca2a98c803f1a.json",
     "group": "SPCX",
-    "accession": "0001628280-26-042639",
+    "accession": "0001628280-26-040364",
     "block_class": "item404",
     "chars": 14301,
-    "duplicate": false
+    "duplicate": true
   },
   {
     "content_key": "a2853b5b637504699a40f2b6895cfaa4732543148d6511c4368fad252699c2a2",
@@ -390,16 +400,6 @@
     "duplicate": false
   },
   {
-    "content_key": "cc964a176b5649231be06d232c3c7eb5b52813040b21ed1adad77896332271dc",
-    "occurrence_id": "f077197146571d26c2e6956820b807770ee767a86d682474361a5c2e0d747511",
-    "path": "work/blocks/f077197146571d26c2e6956820b807770ee767a86d682474361a5c2e0d747511.json",
-    "group": "CRWV",
-    "accession": "0001193125-25-067651",
-    "block_class": "related_parties",
-    "chars": 8808,
-    "duplicate": false
-  },
-  {
     "content_key": "fcdeb524113721d268252ad3878cfdc5a7d75f1816691ec4b1ab8b9dd0c1b645",
     "occurrence_id": "93af13af7cc3f89dcf7b1b61ff8aee9e5388ecc13df14a33cb4a3bb18fb5024a",
     "path": "work/blocks/93af13af7cc3f89dcf7b1b61ff8aee9e5388ecc13df14a33cb4a3bb18fb5024a.json",
@@ -407,6 +407,16 @@
     "accession": "0001193125-25-067651",
     "block_class": "item404",
     "chars": 42330,
+    "duplicate": false
+  },
+  {
+    "content_key": "cc964a176b5649231be06d232c3c7eb5b52813040b21ed1adad77896332271dc",
+    "occurrence_id": "f077197146571d26c2e6956820b807770ee767a86d682474361a5c2e0d747511",
+    "path": "work/blocks/f077197146571d26c2e6956820b807770ee767a86d682474361a5c2e0d747511.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "related_parties",
+    "chars": 8808,
     "duplicate": false
   },
   {
@@ -3380,13 +3390,13 @@
     "duplicate": false
   },
   {
-    "content_key": "bd72db0ca76f5480c91743488e332a425265d63641114a84ab06f822b1a28cb7",
-    "occurrence_id": "b112ad30956617b293febe264140d05602e417ec59e50baa5196dd0116ae543b",
-    "path": "work/blocks/b112ad30956617b293febe264140d05602e417ec59e50baa5196dd0116ae543b.json",
+    "content_key": "3c7c6ad98f4a2b0620bb8f72a78a9716fe3ce0427f63e7b3330c7685cc6cd07e",
+    "occurrence_id": "8cddbb8bed54aa4a04c695d3642c232e969bc429ced4d874f377b8cdb2a58b12",
+    "path": "work/blocks/8cddbb8bed54aa4a04c695d3642c232e969bc429ced4d874f377b8cdb2a58b12.json",
     "group": "ORCL",
     "accession": "0000950170-24-104905",
     "block_class": "going_concern",
-    "chars": 1602,
+    "chars": 10608,
     "duplicate": false
   },
   {
@@ -4170,13 +4180,13 @@
     "duplicate": false
   },
   {
-    "content_key": "dff08fd609136fcb8cef53deebc0fb808e919e37448f6c84eb36eea2085dcb1c",
-    "occurrence_id": "5f66ae67e66201f1b264be1478cc28ab663d06d759458b652b92654bfd4e8343",
-    "path": "work/blocks/5f66ae67e66201f1b264be1478cc28ab663d06d759458b652b92654bfd4e8343.json",
+    "content_key": "a373610a5a776a26e065e75215694c227697850c7219c7dfdf7b7c182c9157d9",
+    "occurrence_id": "e71cdaeb0f133601c22767293f5fce8968215ebc621c2abc50b9d7e752db32c6",
+    "path": "work/blocks/e71cdaeb0f133601c22767293f5fce8968215ebc621c2abc50b9d7e752db32c6.json",
     "group": "ORCL",
     "accession": "0000950170-23-028914",
     "block_class": "going_concern",
-    "chars": 1898,
+    "chars": 49126,
     "duplicate": false
   },
   {
@@ -4330,13 +4340,13 @@
     "duplicate": false
   },
   {
-    "content_key": "9042a0ca42289393ffe76659aa6bd84ecef7480203ac140c19f534efed490d16",
-    "occurrence_id": "1c896085e26c9aae003755dc525dd9e3893fa1ddce06924994c62902b8be4c1b",
-    "path": "work/blocks/1c896085e26c9aae003755dc525dd9e3893fa1ddce06924994c62902b8be4c1b.json",
+    "content_key": "38cb910f2a52cd2f6c740e7095aed90066276e70e76d12dbdbdcb78d454f0cb6",
+    "occurrence_id": "4cf055187ea82c96e55c7932a9e6dd9480216578fd991be9cb06914d82a286c5",
+    "path": "work/blocks/4cf055187ea82c96e55c7932a9e6dd9480216578fd991be9cb06914d82a286c5.json",
     "group": "MSFT",
     "accession": "0000950170-23-014423",
     "block_class": "going_concern",
-    "chars": 779,
+    "chars": 11290,
     "duplicate": false
   },
   {
@@ -4350,13 +4360,13 @@
     "duplicate": false
   },
   {
-    "content_key": "496edcd9b146a6838aae22adc9ffad12e75488a0fec639abc3db96eb494e093d",
-    "occurrence_id": "a6b28e229e0f5e4f315b3f5fe3699e1a6fe8ab9dc03f0ecf12843938aecf8aa5",
-    "path": "work/blocks/a6b28e229e0f5e4f315b3f5fe3699e1a6fe8ab9dc03f0ecf12843938aecf8aa5.json",
+    "content_key": "eebf93dc8712d2d67d1ee0af3f76b0c6e72ee47bdef22a045d553e316c54dd4c",
+    "occurrence_id": "a95fea213e08853d805020d3411314c23a27801e629a9814a5bcf12402d18c61",
+    "path": "work/blocks/a95fea213e08853d805020d3411314c23a27801e629a9814a5bcf12402d18c61.json",
     "group": "ORCL",
     "accession": "0001564590-23-003413",
     "block_class": "going_concern",
-    "chars": 9312,
+    "chars": 10613,
     "duplicate": false
   },
   {
@@ -4510,13 +4520,13 @@
     "duplicate": false
   },
   {
-    "content_key": "c1ad7074459b1c24da9bb9a1071636f0fed9912d8ed2bc1b822def5d47a873b9",
-    "occurrence_id": "c2f64eec71728220e6729b8ebc64c2adb16611ba17c2454008b1c25babf8d266",
-    "path": "work/blocks/c2f64eec71728220e6729b8ebc64c2adb16611ba17c2454008b1c25babf8d266.json",
+    "content_key": "646f700c6a9738a7e04551724d5ac7e139a9bb8ba9217db3ae4b2d57435d7a0b",
+    "occurrence_id": "4230a26010b7506588267b3d58e65d8a32828c134058244cde54fa6744152f69",
+    "path": "work/blocks/4230a26010b7506588267b3d58e65d8a32828c134058244cde54fa6744152f69.json",
     "group": "MSFT",
     "accession": "0001564590-23-000733",
     "block_class": "going_concern",
-    "chars": 8228,
+    "chars": 11275,
     "duplicate": false
   },
   {

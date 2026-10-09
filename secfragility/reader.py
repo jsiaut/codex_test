@@ -5,7 +5,7 @@ from datetime import datetime,timezone
 import hashlib
 from .database import create
 from .observations import submit
-from .text import chunks
+from .text import chunks,exhibit_first_page
 from .session import command as session_command
 
 def block_for(root,key):
@@ -21,13 +21,21 @@ def serve(root,key=None,part=0,body=False):
     if block['block_class'] not in ('related_parties','going_concern'):
         block=dict(block,assurance_level='not_applicable')
     exhibit_header=block['block_class']=='exhibit' and not body
+    page=None
     if exhibit_header:
-        # Initial disclosure is the opening natural paragraphs. Long exhibits
-        # never enter the context before their parties have been read.
-        end=block['text'].rfind('\n',2500,6000)
-        block=dict(block,text=block['text'][:end if end!=-1 else 6000])
+        page=exhibit_first_page((root/block['source_path']).read_bytes())
+        block=dict(block,text=page['text'])
     metadata={k:block.get(k) for k in ['content_key','occurrence_id','group','entity_id','accession','form','item',
       'exhibit_type','label','block_class','raw_byte_start','raw_byte_end','knowledge_date','assurance_level']}
+    collection_path=root/'work/collection.json'
+    collection=json.loads(collection_path.read_text()) if collection_path.exists() else {}
+    filing=collection.get('filings',{}).get(block.get('accession'),{})
+    metadata['report_date']=filing.get('metadata',{}).get('reportDate') or None
+    metadata['filing_items']=filing.get('metadata',{}).get('items') or None
+    if page:
+        metadata['header_raw_byte_start']=0
+        metadata['header_raw_byte_end']=page['raw_byte_end']
+        metadata['header_boundary_status']=page['boundary_status']
     fields=['fact_id','canonical_concept','value','unit','currency','period_start','period_end','dimensions','decimals']
     candidates=[{k:f.get(k) for k in fields} for f in block['candidates']]
     header=json.dumps({'metadata':metadata,'candidates':candidates},ensure_ascii=False)

@@ -108,6 +108,19 @@ def content_key(text: str, candidates: list[dict], normalizer_version: str) -> s
     return digest([normalizer_version,text,semantic])
 
 
+def inline_element_end(raw: bytes, opening_end: int, tag: bytes) -> int:
+    """Match the physical closing tag, including nested elements of that name."""
+    pattern=re.compile(rb'<!--.*?-->|</?'+re.escape(tag)+rb'\b[^>]*>',re.I|re.S)
+    depth=1
+    for match in pattern.finditer(raw,opening_end):
+        token=match.group()
+        if token.startswith(b'<!--'):continue
+        if token.startswith(b'</'):depth-=1
+        elif not token.rstrip().endswith(b'/>'):depth+=1
+        if depth==0:return match.end()
+    raise ValueError('Élément inline sans fermeture correspondante : '+tag.decode())
+
+
 def extract_inline_blocks(raw: bytes, meta: dict, facts: list[dict], *, normalizer_version: str) -> list[dict]:
     """TextBlock type AND a note role, not a concept suffix (§9.2)."""
     inst = next(iter(meta['instance'].values()))
@@ -133,10 +146,7 @@ def extract_inline_blocks(raw: bytes, meta: dict, facts: list[dict], *, normaliz
         name,inline_id = name_match.group(1).decode(),id_match.group(1).decode()
         if name not in eligible or inline_id not in inline_facts:
             continue
-        closing = re.search(rb'</ix:nonNumeric\s*>',raw[match.end():],re.I)
-        if not closing:
-            raise ValueError('TextBlock sans fermeture.')
-        end = match.end() + closing.end()
+        end = inline_element_end(raw,match.end(),b'ix:nonNumeric')
         node = inline_facts[inline_id]
         fragment = raw[match.start():end]
         normalized = normalize_space(render(parse_html(fragment)))
@@ -156,9 +166,8 @@ def extract_inline_blocks(raw: bytes, meta: dict, facts: list[dict], *, normaliz
             continuation_tag = re.search(rb'<ix:continuation\b[^>]*\bid\s*=\s*["\']' +
                 re.escape(continuation.encode()) + rb'["\'][^>]*>', raw, re.I)
             if continuation_tag:
-                continuation_end = re.search(rb'</ix:continuation\s*>',raw[continuation_tag.end():],re.I)
-                if continuation_end:
-                    source_ranges.append([continuation_tag.start(),continuation_tag.end()+continuation_end.end()])
+                end=inline_element_end(raw,continuation_tag.end(),b'ix:continuation')
+                source_ranges.append([continuation_tag.start(),end])
             for child in cn.iter():
                 if child.get('id') in by_inline_id:
                     candidates.append(by_inline_id[child.get('id')])
@@ -228,6 +237,39 @@ def chunks(block: dict, max_chars: int, overlap_chars=1500):
         if end == len(text):
             break
         start = max(start+1,end-min(overlap_chars,max_chars//4))
+
+
+def requested_contract_exhibit(exhibit_type: str) -> bool:
+    # EX-101 is an XBRL resource, not an EX-10 contract.
+    return bool(re.fullmatch(r'EX-(?:10|4)(?:\.[A-Za-z0-9]+)*',exhibit_type,re.I))
+
+
+def exhibit_first_page(raw: bytes) -> dict:
+    """Use explicit filed pagination; without it, serve the whole document.
+
+    An arbitrary character prefix cannot establish the contract's parties.
+    """
+    tags=re.compile(rb'\x0c|<PAGE\s*>|<([A-Za-z][A-Za-z0-9:_.-]*)\b[^>]*>',re.I)
+    void={b'hr',b'br',b'img',b'meta',b'input',b'link',b'area',b'base',b'col',b'embed',b'param',b'source',b'track',b'wbr'}
+    for marker in tags.finditer(raw):
+        token=marker.group()
+        if token==b'\x0c' or re.fullmatch(rb'<PAGE\s*>',token,re.I):
+            end=marker.start()
+        else:
+            style=re.search(rb'\bstyle\s*=\s*(["\'])(.*?)\1',token,re.I|re.S)
+            if not style:continue
+            before=re.search(rb'(?:page-break-before\s*:\s*always|break-before\s*:\s*page)',style.group(2),re.I)
+            after=re.search(rb'(?:page-break-after\s*:\s*always|break-after\s*:\s*page)',style.group(2),re.I)
+            if before:end=marker.start()
+            elif after:
+                tag=marker.group(1).lower()
+                end=marker.end() if tag in void or token.rstrip().endswith(b'/>') else inline_element_end(raw,marker.end(),tag)
+            else:continue
+        text=normalize_space(render(parse_html(raw[:end]))) if end else ''
+        if text:
+            return {'text':text,'raw_byte_end':end,'boundary_status':'explicit_physical_page_break'}
+    return {'text':normalize_space(render(parse_html(raw))), 'raw_byte_end':len(raw),
+        'boundary_status':'unpaginated_full_document'}
 
 
 def autonomous_amendment(title: str, exhibit_type: str, filing_items: list[str]) -> bool:

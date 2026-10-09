@@ -3,7 +3,7 @@ from pathlib import Path
 import json
 import re
 import yaml
-from .text import parse_html,render,normalize_space,extract_inline_blocks,extract_classic_blocks,content_key,local_tag
+from .text import parse_html,render,normalize_space,extract_inline_blocks,extract_classic_blocks,content_key,local_tag,requested_contract_exhibit
 from .xbrl import parse_instance,digest
 from .evidence import periodic_assurance,filing_status,tier
 from .metadata import load as load_metadata
@@ -258,7 +258,7 @@ def queue(root: Path):
         if meta['form'] in ('8-K','8-K/A') and filing.get('discovery_path'):
             disc=json.loads((root/filing['discovery_path']).read_text())
             for header in disc['headers']:
-                if not header['type'].startswith(('EX-10','EX-4')) or header['filename'] not in resources:continue
+                if not requested_contract_exhibit(header['type']) or header['filename'] not in resources:continue
                 res=resources[header['filename']];exraw=(root/res['path']).read_bytes()
                 text=normalize_space(render(parse_html(exraw)))
                 block={'text':text,'candidates':[],'label':header.get('description',''),'exhibit_type':header['type'],

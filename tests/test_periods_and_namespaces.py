@@ -4,6 +4,60 @@ from secfragility.spacex_annual import label_key
 from secfragility.blocks import section_blocks
 
 
+def test_nested_inline_tags_preserve_full_text_and_physical_ranges():
+    from secfragility.text import extract_inline_blocks,normalize_space,render,parse_html
+    meta={'instance':{'x':{'tag':{'g_Note':{'xbrltype':'textBlockItemType',
+        'presentation':['r']}},'report':{'r':{'role':'r','groupType':'disclosure','menuCat':'Notes'}}}}}
+    for raw in [
+        b'<html><body><ix:nonNumeric id="n" name="g:Note"><p>First</p>'
+        b'<ix:nonNumeric id="inner" name="g:Policy">Inner</ix:nonNumeric>'
+        b'<p>Last after nested policy.</p></ix:nonNumeric><p>Outside.</p></body></html>',
+        b'<html><body><ix:nonNumeric id="n" name="g:Note" continuedAt="outer">First</ix:nonNumeric>'
+        b'<ix:continuation id="outer"><p>Next</p><ix:continuation id="inner">Inner</ix:continuation>'
+        b'<p>Last after nested continuation.</p></ix:continuation><p>Outside.</p></body></html>',
+    ]:
+        blocks=extract_inline_blocks(raw,meta,[],normalizer_version='1')
+        assert len(blocks)==1
+        block=blocks[0]
+        assert 'Last after nested' in block['text']
+        assert 'Outside' not in block['text']
+        physical='\n'.join(normalize_space(render(parse_html(raw[a:z]))) for a,z in block['source_ranges'])
+        assert 'Last after nested' in physical
+        assert 'Outside' not in physical
+
+
+def test_exhibit_101_is_not_contract_exhibit_10():
+    from secfragility.text import requested_contract_exhibit
+    assert requested_contract_exhibit('EX-10.1')
+    assert requested_contract_exhibit('EX-4.23')
+    assert requested_contract_exhibit('EX-10')
+    assert not requested_contract_exhibit('EX-101.SCH')
+    assert not requested_contract_exhibit('EX-40')
+
+
+def test_contract_header_follows_physical_page_even_after_six_thousand_chars():
+    from secfragility.text import exhibit_first_page
+    raw=(b'<html><body><div style="page-break-before:always"></div><p>Agreement</p><p>'
+        +b'Opening text. '*700+b'</p><p>Customer Corp is a party.</p>'
+        +b'<div style="page-break-before:always"></div><p>Second page body.</p></body></html>')
+    page=exhibit_first_page(raw)
+    assert page['boundary_status']=='explicit_physical_page_break'
+    assert 'Customer Corp is a party.' in page['text']
+    assert 'Second page' not in page['text']
+    assert page['raw_byte_end']>6000
+
+
+def test_contract_break_after_parent_and_unpaginated_document():
+    from secfragility.text import exhibit_first_page
+    raw=(b'<html><body><div style="page-break-after:always"><div>Nested</div>'
+        b'<p>First page parties.</p></div><p>Second page.</p></body></html>')
+    page=exhibit_first_page(raw)
+    assert 'First page parties.' in page['text'] and 'Second page.' not in page['text']
+    page=exhibit_first_page(b'<html><body><p>Unpaginated agreement.</p></body></html>')
+    assert page['boundary_status']=='unpaginated_full_document'
+    assert 'Unpaginated agreement.' in page['text']
+
+
 def test_committee_sentence_fragment_is_not_a_proxy_heading():
     raw=(b'<div><p>The committee reviews <span>related party transactions.</span></p>'
          b'<p>Its audit oversight report describes review of financial statements and '

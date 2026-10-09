@@ -14,6 +14,24 @@ USD = 'http://www.xbrl.org/2003/iso4217:USD'
 def abstention(quote, reason):
     return dict(abstained=True, quote=quote, abstention_reason=reason)
 
+def authored_control(key, quote, quantity, **fields):
+    """Attach the actual submitted report date to an explicitly read clause.
+
+    The caller supplies the quote and its meaning; neither is inferred here.
+    """
+    import json
+    block=block_for(ROOT,key)
+    collection=json.loads((ROOT/'work/collection.json').read_text())
+    date=collection['filings'][block['accession']]['metadata'].get('reportDate')
+    return dict(quote=quote,period_end=date or None,model_quantity=quantity) | fields
+
+def authored_tagged(key, fact_id, quote, **fields):
+    """Use one candidate explicitly chosen after the complete block was read."""
+    fact=next(f for f in block_for(ROOT,key)['candidates'] if f['fact_id']==fact_id)
+    return dict(quote=quote,amount=str(fact['value']),unit=fact['unit'],currency=fact.get('currency'),
+        period_start=fact.get('period_start'),period_end=fact.get('period_end'),
+        amount_origin='tagged_reference',tagged_fact_id=fact_id) | fields
+
 def money(quote, number, scale, counterparty, **fields):
     return dict(quote=quote, amount=str(Decimal(number)*Decimal(scale)),
         unit=USD, currency='USD', amount_origin='narrative_only',

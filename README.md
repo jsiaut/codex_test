@@ -61,6 +61,10 @@ l’empreinte et conserve les fichiers versionnés les plus récents. Ne pas
 restaurer le verrou ni le propriétaire de
 session : la nouvelle session doit acquérir son propre verrou. Le fichier
 `work/run.json` conserve l’instant logique de l’exécution inachevée.
+Après acquisition du verrou, exécuter `python -m secfragility.blocks` pour
+régénérer les blocs avec le parseur courant avant de reprendre la lecture.
+Le cache restauré permet cette opération sans requête SEC. Les observations
+déjà versionnées restent inchangées.
 
 Le dossier `audit/AUDITOR.md` prépare une vérification ultérieure ; aucun audit
 indépendant n’a été effectué.
