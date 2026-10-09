@@ -4,9 +4,26 @@
   "header_personally_read": true,
   "header_raw_end": 1400,
   "full_reading_complete": false,
-  "body_parts_personally_read_in_full": [0, 1, 2, 3, 4, 5, 6],
-  "truncated_tool_output_not_counted_as_read": [7],
-  "next_body_part": 7,
+  "body_parts_personally_read_in_full": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "truncated_tool_output_not_counted_as_read": [],
+  "next_body_part": null,
   "total_body_parts": 21,
   "reading_purpose": "Ordered reading solely to establish whether all actual Lenders are financial parties. No body amounts, links or contractual events admitted while determining scope.",
   "submitted_observations": false,
@@ -15,6 +32,17 @@
     "Preamble names LENDERS party hereto; definition points to Schedule2.01 and permitted assignments. ApprovedFund definition alone does not establish all Lenders as financial institutions.",
     "Referenced OpenAI, Dell Financial Services and Core Scientific commercial agreements do not make those counterparties parties to this credit agreement.",
     "Independent Item1.01 29bd14e04f2efb5fa6320f3cb9ccace6cf570bb7b624dc4f4c780dd6ea43dea0 fully reread:2.6bn capacity, not actual draw; Parent unconditional guarantee of CCACVII, not CCACV. Names of agents and arrangers plus generic lenders party thereto do not yet prove all actual Lender identities.",
-    "Part7 tool output was context-truncated and is explicitly not counted as read; must re-serve part7 in full before advancing."
-  ]
+    "Part7 tool output was context-truncated and is explicitly not counted as read; must re-serve part7 in full before advancing.",
+    "Part7 re-served in full; ordered parts7through13 each personally read in full without truncation. Still solely checking party classification. Section4.02(q) references a separate Interparty Agreement among OpenAI OpCo, LLC, DFS and agents, but these referenced counterparties are not Lenders under this credit agreement. No body clauses, amounts or links admitted.",
+    "Ordered parts14and15 full: Section8.19 expressly EACH Lender commercial-loan investing and provision of applicable facilities in ordinary business, sophisticated independent credit analysis. This establishes financial lending roles under11.1 without identifying private beneficial owners. Stop body reading at15; ENTIRE1400:573819 excluded, including personally read portions; no body amounts/links/clause/F4 exploited. No claim of complete21part reading. D92."
+  ],
+  "body_parts_not_read": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "scope_determination_complete": true,
+  "entire_body_excluded": "financial_parties_only"
 }
