@@ -287,3 +287,7 @@ D0069 — Amazon 8-K du 14 septembre 2026 : six observations numériques en livr
 D0070 — Amazon 8-K du 12 juin 2026 : livres canadiennes conservées en CAD, sans taux de change inventé. Validation étendue à C$ avant la première passe de ce bloc ; un test prouve que C$ ne justifie pas USD. Les rejets GBP déjà écrits restent intacts. Prix public, principal et estimation nette non additionnables.
 
 D0071 — Alphabet 8-K du 21 mai 2026 : principal en JPY conservé sans conversion USD ; la description littérale « Japanese yen-denominated » établit la devise. Validateur étendu avant la première passe et test distinguant le symbole ¥ seul, insuffisant pour identifier la devise. Principal agrégé et sept séries non additionnables.
+
+D0072 — CoreWeave 8-K du 14 avril 2026 : le texte indique littéralement 1 750 000 dollars de notes 9,750%2031, contre 1 750 000 000 pour cette même émission dans le dépôt du 21 avril. Les deux sources restent inchangées, conflit de montant signalé pour exclusion des agrégats dépendants, sans correction de faute présumée. Les convertibles distincts4bn et leurs produits/derivés ne sont pas affectés par ce conflit.
+
+D0073 — Marvell 8-K du 15 avril 2026 : Item8.01 indique prix de vente aux souscripteurs99,235% et prix public99,885% du principal1bn. Le prix aux souscripteurs implique992,35m, incompatible avec993,5m de produit net après discount et avant autres frais déclaré dans Item1.01. Observation initiale conservée ; calculs de cash dépendants à bloquer jusqu’à résolution explicite, sans modifier ni inventer de montant source.
