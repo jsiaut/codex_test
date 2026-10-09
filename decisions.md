@@ -192,3 +192,8 @@ La Note 1 CoreWeave de septembre 2025 est entièrement lue. Le fait de séquestr
 Les 36 590 000 actions IPO précisément publiées dans le trimestre sont compatibles avec les 37 millions arrondis publiés plus tard. La vérification d’une multiplication entre chiffres arrondis doit utiliser leurs intervalles de précision ; un écart de produit nominal ne prouve pas à lui seul une contradiction. Les flags historiques restent immuables et leur éventuelle résolution appartient aux contrôles de phase 3, avec preuve de précision, sans modification des observations ni fabrication de nombre exact.
 
 L’accélération de l’échéance de la dette au closing de l’IPO est un déclencheur contractuel documenté ; elle ne prouve ni défaut ni waiver de covenant financier. L’efficacité des swaps comme couverture ne désigne pas l’efficacité de l’ICFR. Les material weaknesses publiées dans le bloc de contrôle de septembre sont déjà existantes ; elles ne reçoivent pas une nouvelle date d’apparition à chaque rapport.
+
+
+### D0038 — Contextes historiques IPO CoreWeave dans le dépôt Q2 2025
+
+La note 1 lue intégralement annonce la libération de 500 millions USD au cours d’avril 2025 et le reclassement des frais IPO de 31 millions USD en capitaux propres. Les contextes de restricted cash IPO au 30 juin et DDTL au 30 avril, ainsi que celui de deferred offering costs au 30 juin, contredisent cette chronologie. Les trois faits bruts restent intacts ; leurs valeurs sont exclues des calculs dépendants par la quarantaine sémantique. La mention de maturité accélérée par l’IPO décrit un déclencheur contractuel et ne prouve pas un défaut financier.

@@ -187,5 +187,32 @@
     "reason": "September30 deferred asset context contradicts historical IPO reclassification to equity",
     "decision": "D0037",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "731b0cd3f32534bb837ab502328baee5f6dd526066021199b5355852d7a70088",
+    "content_key": "fce74d0e64f5b596cb45c8f65ca8c2b7157d5dfa8bdedd7eb15b30cefd45bc32",
+    "accession": "0001769628-25-000041",
+    "affected_quantity": "restricted_cash_stock",
+    "reason": "June30 IPO stock context contradicts reported April release",
+    "decision": "D0038",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "fde395b3754b7f8cc44b38beda3469765706fe107773d6ba89a265c45ebf9b98",
+    "content_key": "fce74d0e64f5b596cb45c8f65ca8c2b7157d5dfa8bdedd7eb15b30cefd45bc32",
+    "accession": "0001769628-25-000041",
+    "affected_quantity": "restricted_cash_stock",
+    "reason": "April30 DDTL stock context contradicts release during April",
+    "decision": "D0038",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "4fc148c46e33f0502892a6d183804749471d8c5d3314f6209d64eb7bd137310b",
+    "content_key": "fce74d0e64f5b596cb45c8f65ca8c2b7157d5dfa8bdedd7eb15b30cefd45bc32",
+    "accession": "0001769628-25-000041",
+    "affected_quantity": "deferred_offering_cost_stock",
+    "reason": "June30 deferred asset context contradicts historical IPO reclassification to equity",
+    "decision": "D0038",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
