@@ -1,0 +1,7 @@
+from work.authored_helpers import *
+for key,end,quote,reason in [
+ ('775b47663f9de94084bd22403a8a275cf6818ceca43366397a55cf4724d39360',6642,'Execution Version','AMZNDE new6series certificateNov20_25, expressGoldman/JPMorgan/MorganStanley financialunderwritermanagers. Prior2012WellsFargo/2022Computershare trusteesuccession historicalnotcurrentF4; originalcertificate no3.03 orautonomousamendment.'),
+ ('c827bc9d44386f2cdfe3b13addbc473afb000d0e4d8ae3fde27eb46593f926d2',3662,'GLOBAL SECURITY','AlphabetDE 2.375%2028 EUR1bn note, expressEuroclearBank/Clearstream financialdepos andBNYDepositoryNomineesfinancialregisteredholder. HeaderliteralDepositoryvsDepositary spellingdifferencepreserved nolegalaliasfromtypo; notneededtoestablishcategory.'),
+ ('5c8531ef7b0c7de1a5a22694549697e0bfcbc8ef65293b4142fbdea1d2e54f6a',3662,'GLOBAL SECURITY','AlphabetDE 2.875%2031 EUR1bn note, expressEuroclearBank/Clearstream financialdepos andBNYDepositoryNomineesfinancialregisteredholder. HeaderliteralDepositoryvsDepositary spellingdifferencepreserved nolegalaliasfromtypo; notneededtoestablishcategory.'),
+]:
+ save(key,[dict(abstention(quote,'Complete physical first page personally read. '+reason+' Body financial_parties_only, nofullbodyreadclaimed; ultimatebeneficialholdersunknown. Face/certificate denominations notactualnetcash orcustomerfinancing; noEURUSDconversion. NoItem3.03 orautonomousamendment.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=end,locator=f'rawbytes:0:{end}')])
