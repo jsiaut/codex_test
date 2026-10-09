@@ -106,3 +106,18 @@ def test_serialized_read_packets_respect_ceiling_with_escaping(tmp_path):
     assert all(p['text'] in text for p in packets)
     assert packets[0]['text'].startswith('A quoted description:')
     assert packets[-1]['text'].endswith('"preserve the contractual wording"\n')
+
+
+def test_anchor_inside_caption_does_not_jump_to_continued_page():
+    raw=b'''<html><body><table><tr><td><a href="#rp">Certain Relationships and Related Transactions</a></td></tr>
+    <tr><td><a href="#next">Other Matters</a></td></tr></table>
+    <p><b><a name="rp"></a>Certain Relationships and Related Transactions</b></p>
+    <p>The company bought equipment from a named related supplier during the fiscal year. The first page contains the actual identity and the commercial terms.</p>
+    <p><b>Certain Relationships and Related Transactions</b> (continued)</p>
+    <p>The second page states the purchase amount and a conditional minimum purchase obligation.</p>
+    <div id="next">Other Matters</div><p>Unrelated meeting details.</p></body></html>'''
+    blocks=section_blocks(raw,form='DEF 14A',config={'normalizer_version':'1'})
+    assert len(blocks)==1
+    assert 'actual identity and the commercial terms' in blocks[0]['text']
+    assert 'conditional minimum purchase' in blocks[0]['text']
+    assert 'Unrelated meeting details' not in blocks[0]['text']

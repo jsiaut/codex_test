@@ -42,6 +42,13 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
         return max(sizes,default=0)
     def anchor_heading(target,label):
         desired=re.sub(r'\s+',' ',label).strip().lower()
+        # An empty TOC anchor can sit INSIDE the actual heading. Searching
+        # forward from it would skip that heading and select a repeated
+        # "continued" caption on the next page, dropping the first page.
+        for parent in target.iterancestors():
+            candidate=re.sub(r'\s+',' ',normalize_space(render(parent))).strip().lower()
+            if candidate==desired and not any((a.get('href') or '').startswith('#') for a in parent.iter('a')):
+                return target,positions[target]
         for n,pos in positions.items():
             if positions[target]<=pos<=positions[target]+18000 and len(n)<8 and local_tag(n) in ('p','div','span','h1','h2','h3','b','strong'):
                 candidate=re.sub(r'\s+',' ',normalize_space(render(n))).strip().lower()

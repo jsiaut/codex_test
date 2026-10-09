@@ -361,8 +361,8 @@
   },
   {
     "content_key": "db7fe426ecc6731b133ea9a7911cf49676d0d8832055b99f82657b1e3ad91329",
-    "occurrence_id": "26d9e09231b515514e44d126fd7c4b5db3d5c3757cec6945a251265ca5c32994",
-    "path": "work/blocks/26d9e09231b515514e44d126fd7c4b5db3d5c3757cec6945a251265ca5c32994.json",
+    "occurrence_id": "596930d291c7b8e005dd5cd2893916ad58111b76d4fa06efa9e31fd378bbca51",
+    "path": "work/blocks/596930d291c7b8e005dd5cd2893916ad58111b76d4fa06efa9e31fd378bbca51.json",
     "group": "GOOGL",
     "accession": "0001308179-25-000511",
     "block_class": "item404",
@@ -1560,13 +1560,13 @@
     "duplicate": false
   },
   {
-    "content_key": "982e45a51f582061d0fb13c716893749df6d92611d7e3217e673d2690ea4f40a",
-    "occurrence_id": "eefcb25c8702c7f23e02096c654a1652a764a36353c02e28c863a0abc0eee9b9",
-    "path": "work/blocks/eefcb25c8702c7f23e02096c654a1652a764a36353c02e28c863a0abc0eee9b9.json",
+    "content_key": "5168b937dccbdff105c54eb084183501cab1d3673f01fdc9860096d42a02804a",
+    "occurrence_id": "a739c2d65d434ef5bc30ff966ef46d62830eef138675c2c6f30dd0580ecfb5fa",
+    "path": "work/blocks/a739c2d65d434ef5bc30ff966ef46d62830eef138675c2c6f30dd0580ecfb5fa.json",
     "group": "AMD",
     "accession": "0001193125-19-082205",
     "block_class": "item404",
-    "chars": 1163,
+    "chars": 6219,
     "duplicate": false
   },
   {
