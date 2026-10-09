@@ -57,3 +57,34 @@ def repeat_chosen_rows(key, quantities):
             raise ValueError('Tagged references must be authored for the current occurrence.')
         result.append({k:v for k,v in choices[0].items() if k not in remove})
     return result
+
+
+def authored_anonymous_related_table(issuer, periods, revenue_quote, revenues,
+        expenses_quote, expenses, stock_quote, stock_dates, receivables, payables):
+    """Build explicitly chosen rows for a table already read in its entirety.
+
+    The caller supplies every quote, amount, column date and meaning. This
+    function does not inspect or extract the current block.
+    """
+    rows=[]
+    for number,(start,end) in zip(revenues,periods,strict=True):
+        rows.append(money(revenue_quote,number,'1000000','director_affiliated_entities',
+            counterparty_evidence='anonymous',period_start=start,period_end=end,receiver=issuer,
+            family='commercial',link_type='revenue_recognized',stage='recognized',amount_qualifier='exact',
+            amount_nature='anonymous_related_net_revenue_quarter_and_YTD_not_additive',
+            model_quantity='related_party_revenue_recognized_total',
+            flag_unknown_reason='individual_customers_and_financing_status_unallocated_related_party_perimeter_changes_unknown'))
+    for number,(start,end) in zip(expenses,periods,strict=True):
+        rows.append(money(expenses_quote,number,'1000000','director_affiliated_entities',
+            counterparty_evidence='anonymous',period_start=start,period_end=end,stage='recognized',
+            amount_qualifier='exact',amount_nature='anonymous_related_costs_and_expenses_including_inventory_purchases_not_cash',
+            model_quantity='related_costs_and_expenses_total',
+            flag_unknown_reason='individual_suppliers_unallocated_quarter_and_YTD_not_additive'))
+    for quantity,numbers in [('related_receivables_total',receivables),('related_payables_total',payables)]:
+        for number,end in zip(numbers,stock_dates,strict=True):
+            if number is None:continue  # Caller supplies a separate abstention for an unknown cell.
+            rows.append(money(stock_quote,number,'1000000','director_affiliated_entities',
+                counterparty_evidence='anonymous',period_end=end,stage='recognized',amount_qualifier='exact',
+                amount_nature='anonymous_related_trade_stock_not_explicit_financing',model_quantity=quantity,
+                flag_unknown_reason='individual_counterparties_terms_and_financing_component_not_disclosed'))
+    return rows
