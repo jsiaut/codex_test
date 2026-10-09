@@ -250,5 +250,77 @@
     "reason": "Typed start2027-06-01 contradicts months37–60 following May31 2025: start2028-06-01",
     "decision": "D0041",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "7d4c2ee9a4a0a55c359572e4e1a286dbc1e6f5294d2393142484bf49a0f88d3f",
+    "content_key": "0457d8612d46c90d48af3f1c5cab95f607408c31ce5f1c5faefbea3d9d5b6fb1",
+    "accession": "0001018724-25-000004",
+    "affected_quantity": "forecast_operating_income_estimate_change",
+    "reason": "Forecast operating-income increase900m tagged NetIncomeLoss, before-tax versus net-income contradiction",
+    "decision": "D0042",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "87881ed91a477b8acf4715ffe2e4ed121076437f653c9bed8f7efeb5104ac06e",
+    "content_key": "0457d8612d46c90d48af3f1c5cab95f607408c31ce5f1c5faefbea3d9d5b6fb1",
+    "accession": "0001018724-25-000004",
+    "affected_quantity": "forecast_operating_income_estimate_change",
+    "reason": "Forecast operating-income decrease700m tagged NetIncomeLoss, before-tax versus net-income contradiction",
+    "decision": "D0042",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "b917cab07db596dd8d420fa9dc34e1f7fafb877414a991b56bd73eead597fd5a",
+    "content_key": "0457d8612d46c90d48af3f1c5cab95f607408c31ce5f1c5faefbea3d9d5b6fb1",
+    "accession": "0001018724-25-000004",
+    "affected_quantity": "forecast_operating_income_estimate_change",
+    "reason": "Forecast operating-income decrease600m tagged NetIncomeLoss, before-tax versus net-income contradiction",
+    "decision": "D0042",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "afbf2dd4d3d6f8226eeece62712930a2ae76896d3a6fd646c4144edeba410668",
+    "content_key": "0457d8612d46c90d48af3f1c5cab95f607408c31ce5f1c5faefbea3d9d5b6fb1",
+    "accession": "0001018724-25-000004",
+    "affected_quantity": "equity_warrant_fair_value_by_level",
+    "reason": "Combined Level2 and3 warrant total tagged entirely Level2",
+    "decision": "D0042",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "d5484605ddbf98e9e611014daa1cacbec3ffaa53672927bb15032d758549361b",
+    "content_key": "0457d8612d46c90d48af3f1c5cab95f607408c31ce5f1c5faefbea3d9d5b6fb1",
+    "accession": "0001018724-25-000004",
+    "affected_quantity": "equity_warrant_fair_value_by_level",
+    "reason": "Combined Level2 and3 warrant total tagged entirely Level2",
+    "decision": "D0042",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "9976bd0f50da318b1bff4d3773386b82850c566d9362b51344322aa079e662ed",
+    "content_key": "3a5fe8da51fa3c9a5167c1e1da8b2729667e480115ba6c3575a43266ad0389cc",
+    "accession": "0001652044-25-000014",
+    "affected_quantity": "goodwill_impairment_exact_zero",
+    "reason": "Narrative not material does not establish exact zero goodwill impairment",
+    "decision": "D0043",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "3966acb3f1b59022361dcc5f0ccf3a6ce6840491c62ca863889b4dff5e722371",
+    "content_key": "3a5fe8da51fa3c9a5167c1e1da8b2729667e480115ba6c3575a43266ad0389cc",
+    "accession": "0001652044-25-000014",
+    "affected_quantity": "goodwill_impairment_exact_zero",
+    "reason": "Narrative not material does not establish exact zero goodwill impairment",
+    "decision": "D0043",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "bf210a51d603d8f6f363c407af349558828bf165ddbf93787a341077b1f71679",
+    "content_key": "3a5fe8da51fa3c9a5167c1e1da8b2729667e480115ba6c3575a43266ad0389cc",
+    "accession": "0001652044-25-000014",
+    "affected_quantity": "goodwill_impairment_exact_zero",
+    "reason": "Narrative not material does not establish exact zero goodwill impairment",
+    "decision": "D0043",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]

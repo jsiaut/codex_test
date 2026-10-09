@@ -214,3 +214,15 @@ Note 1 Q1 2025 lue intégralement : 500 millions USD d’escrow constituent bien
 La confrontation à la note de février 2025 a permis de repérer un conflit supplémentaire dans la note annuelle FY2025 déjà lue : le membre typé du taux de 23 % porte le 1er juin 2027 alors que « month 37 to month 60 » après le 31 mai 2025 commence le 1er juin 2028. Le fait et l’observation historique restent immuables ; une quarantaine exclut leur utilisation numérique dépendante. Le total RPO et les tranches correctes ne sont pas exclus.
 
 La ligne des 48,4 milliards de leases non commencés de février 2025 employait category au lieu de la colonne category_id. Son unique deuxième essai de schéma corrige ce nom ; le rejet initial est conservé et les 36 lignes acceptées au premier essai ne sont pas resoumises.
+
+
+### D0042 — Prévisions operating income Amazon et dimension des warrants
+
+La note annuelle 2024 est lue intégralement avec 168 candidats et cinq fragments ; deux affichages tronqués sont resservis seuls avant soumission. Les effets prévus 2025 de +900, −700 et −600 millions portent le concept NetIncomeLoss alors que les trois phrases nomment operating income. Ils ne deviennent ni du résultat net ni des effets réalisés. Cinq faits restent bruts mais exclus des calculs dépendants, dont les deux totaux de warrants décrits comme Level 2 et 3 alors que leur dimension désigne seulement Level 2.
+
+Le raccourcissement de six à cinq ans d’un sous-ensemble des serveurs et réseaux prend effet le 1er janvier 2025, connu dans le dépôt du 7 février : l’événement F7 est distinct de l’effet financier encore prévu. Les 920 millions de Q4 2024 sont une charge réalisée de dépréciation accélérée et charges liées ; le total ne devient pas exclusivement une perte sur placement. L’allongement antérieur et son effet net après impôt restent distincts.
+
+
+### D0043 — Goodwill Alphabet FY2024
+
+La note annuelle 2024, lue intégralement, qualifie les pertes sur goodwill de non matérielles pour les périodes présentées. Les trois zéros balisés pour 2022–2024 ne prouvent pas un zéro exact et restent bruts, exclus des calculs dépendants dans ce dépôt. La quarantaine d’un dépôt ultérieur ne remplace pas cette preuve propre à l’accession. L’adoption ASU2023-07 en 2024 et la mise à jour des comparatifs concernent les disclosures ; la mention des placements et arrangements commerciaux contemporains reste anonyme et sans allocation de montant.
