@@ -157,3 +157,11 @@ Le rang −1 désigne l’API companyfacts ; −2 désigne un rang physique non 
 Les MetaLinks de 2022 et antérieurs ne donnent ni menuCat ni order. Leur présence empêchait le recours à FilingSummary, et tous leurs blocs naturels de notes étaient ignorés. Les rôles sont désormais enrichis par jointure exacte avec les Role/RoleURI du FilingSummary réellement déposé, qui donne catégorie et ordre ; l’ordre des clés JSON n’est jamais utilisé comme ordre des notes. Le test reproduit le format ancien et vérifie la réadmission de la première note financière. Les blocs ajoutés, notamment les anciennes notes de parties liées, sont entièrement à lire.
 
 Les blocs de contrôle et de continuité se bornent sur reportDate, fin de la période comptable, et non sur filingDate. Un rapport annuel de l’exercice précédent déposé après le début du premier exercice analysé ne doit pas entrer dans cette tranche. La date de connaissance reste distincte et inchangée.
+
+## D0034 — Conflits balisés et deuxième essai de schéma
+
+La note annuelle Oracle 2026 nomme les 605 et 417 millions comme placements négociables en dette et actions, alors que leur concept balisé vise des actions sans juste valeur facilement déterminable. Ils ne deviennent pas des stocks privés par le nom du concept. Les 9,4 et 9,3 milliards de revenus issus de revenus différés portent aussi des contextes annuels décalés par rapport au texte. Les faits bruts restent intacts ; fact_semantic_quarantines exclut les attributions numériques concernées.
+
+Une ligne de la note trimestrielle Oracle utilisait standard_application comme cause de retraitement au lieu du nom d’énumération accounting_change. Son unique deuxième essai de schéma corrige ce nom et passe ; le premier rejet reste conservé.
+
+Le montant Microsoft OpenAI de 11,9 milliards est un financement cumulé, pas un flux de l’exercice et pas une preuve de composition exclusivement en numéraire. Les revenus de 24,1 milliards incluent les paiements de partage de revenus ; ils ne deviennent pas tous du revenu Azure. La cession Ampere Oracle donne des encaissements de 4,3 milliards pour un ensemble actions, dette et option, sans allocation arbitraire au principal remboursé.

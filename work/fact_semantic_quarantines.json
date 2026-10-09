@@ -1,0 +1,38 @@
+[
+  {
+    "fact_id": "6774af1eb4dcb7ef4582ef4428bcb35d25c0daa4194c8b2d137f8b0f7bbfd823",
+    "content_key": "7c35daf196ea3e049cc5db0a823032b2e86453223bedc71971e3ddf2d8de4930",
+    "accession": "0001193125-26-277521",
+    "affected_quantity": "revenue_recognized_from_opening_deferred_revenues",
+    "reason": "Tagged FY2025 disagrees with narrative FY2026 for 9.4 billion",
+    "decision": "D0034",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "112d0da4ebc6e424027be545e7722c892234f654431d3eb5cf347b6b8fd6665f",
+    "content_key": "7c35daf196ea3e049cc5db0a823032b2e86453223bedc71971e3ddf2d8de4930",
+    "accession": "0001193125-26-277521",
+    "affected_quantity": "revenue_recognized_from_opening_deferred_revenues",
+    "reason": "Tagged FY2024 disagrees with narrative FY2025 for 9.3 billion",
+    "decision": "D0034",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "b9b47b136862304c3ff88799e6880977cc0a591ab480b10c9751e662713b660a",
+    "content_key": "7c35daf196ea3e049cc5db0a823032b2e86453223bedc71971e3ddf2d8de4930",
+    "accession": "0001193125-26-277521",
+    "affected_quantity": "private_investment_stock",
+    "reason": "Concept nonreadily determinable contradicts narrative marketable debt and equity stock 605 million",
+    "decision": "D0034",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "f5863749db02c73b3657201af21af784ba5a59d61cf1767f9ee9d7639c8278c3",
+    "content_key": "7c35daf196ea3e049cc5db0a823032b2e86453223bedc71971e3ddf2d8de4930",
+    "accession": "0001193125-26-277521",
+    "affected_quantity": "private_investment_stock",
+    "reason": "Concept nonreadily determinable contradicts narrative marketable debt and equity stock 417 million",
+    "decision": "D0034",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  }
+]
