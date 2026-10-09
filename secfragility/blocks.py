@@ -215,7 +215,7 @@ def queue(root: Path):
                 if first_role:
                     going=first_role in block.get('note_roles',[])
             block['block_class']='related_parties' if wanted else 'going_concern' if going else 'outside_first_pass'
-            if going and meta['filingDate']<inv['groups'][group]['analysis_start']:
+            if going and (meta.get('reportDate') or meta['filingDate'])<inv['groups'][group]['analysis_start']:
                 block['block_class']='outside_first_pass'
             block['priority']=0 if wanted else 1
             all_blocks.append(dict(block,group=group,accession=accession))
@@ -223,7 +223,7 @@ def queue(root: Path):
             else:excluded.append({'group':group,'accession':accession,'reason':'not_processed','element':block['content_key'],'detail':'texte hors de la tranche initiale'})
         for block in section_blocks(raw,form=meta['form'],config=cfg):
             item=block['item']
-            if item in ('4','9A') and meta['filingDate']<inv['groups'][group]['analysis_start']:continue
+            if item in ('4','9A') and (meta.get('reportDate') or meta['filingDate'])<inv['groups'][group]['analysis_start']:continue
             block['block_class']='item404' if item=='404' else 'controls' if item in ('4','9A') else '8k_item'
             block['priority']=0 if item=='404' else 1 if item in ('4','9A') else 2
             queue.append((filing,resource,block))

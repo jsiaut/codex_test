@@ -25,6 +25,25 @@ def first_financial_note_role(instance: dict):
     return min(financial,key=financial.get) if financial else None
 
 
+def enrich_report_order(metadata: dict, summary_raw: bytes, summary_path: str):
+    """Join native MetaLinks reports to actual FilingSummary roles exactly.
+
+    Older MetaLinks has neither MenuCategory nor report order. Its dictionary
+    order is not the issuer's presentation order.
+    """
+    summary=etree.fromstring(summary_raw,P)
+    by_role={}
+    for order,report in enumerate(summary.findall('.//Report')):
+        role=report.findtext('Role') or report.findtext('RoleURI')
+        if role and role not in by_role:
+            by_role[role]={'menuCat':report.findtext('MenuCategory') or '',
+                'order':str(order),'metadata_source':summary_path}
+    for instance in metadata['instance'].values():
+        for report in instance['report'].values():
+            if report['role'] in by_role:report.update(by_role[report['role']])
+    return metadata
+
+
 @lru_cache(maxsize=1)
 def standard(root_string):
     z=zipfile.ZipFile(Path(root_string)/'cache/datasets/us-gaap/2026/us-gaap-2026.zip')
@@ -46,7 +65,11 @@ def standard(root_string):
 
 
 def load(root:Path,resources:dict,accession:str):
-    if 'MetaLinks.json' in resources:return json.loads((root/resources['MetaLinks.json']['path']).read_text())
+    if 'MetaLinks.json' in resources:
+        metadata=json.loads((root/resources['MetaLinks.json']['path']).read_text())
+        if 'FilingSummary.xml' in resources:
+            metadata=enrich_report_order(metadata,(root/resources['FilingSummary.xml']['path']).read_bytes(),resources['FilingSummary.xml']['path'])
+        return metadata
     if 'FilingSummary.xml' not in resources:return None
     reports={};tags={};fallback=standard(str(root));schema_tags={}
     for name,res in resources.items():

@@ -1,0 +1,890 @@
+{
+  "source_commit": "1abdf86006e64c81dfe2c11abccf52cf0c933f6e",
+  "decision": "D0033",
+  "old_unique": 1234,
+  "new_unique": 1304,
+  "added": [
+    {
+      "content_key": "c854c79c4e60c4548b8bbfe58f79321e92d2621eadf56ced183a8dd7b9207aba",
+      "occurrence_id": "9e495120a93e57af19f2a1503ddd51b09cf4bc9ccd30ba7962c04e8387544608",
+      "path": "work/blocks/9e495120a93e57af19f2a1503ddd51b09cf4bc9ccd30ba7962c04e8387544608.json",
+      "group": "MRVL",
+      "accession": "0001835632-21-000010",
+      "block_class": "going_concern",
+      "chars": 3771,
+      "duplicate": false
+    },
+    {
+      "content_key": "935dd9583beb63ac505b16ab8b9d87d1f592a7b7798ced35a70d847f3b6eab1e",
+      "occurrence_id": "d5b82a03e466fe1c8cc1145eaa6aaa5ef2d08535b6b75ff1e0173098eab70bc1",
+      "path": "work/blocks/d5b82a03e466fe1c8cc1145eaa6aaa5ef2d08535b6b75ff1e0173098eab70bc1.json",
+      "group": "ORCL",
+      "accession": "0001564590-21-047772",
+      "block_class": "going_concern",
+      "chars": 6490,
+      "duplicate": false
+    },
+    {
+      "content_key": "44b210a9a207f600aa411500d034f2ed66e10a705c3e0cbe5853e05d714b5977",
+      "occurrence_id": "ca3d90b5c3ec490c4b23de0d378fe3ba4add98c36c433572a06566d48ba23a29",
+      "path": "work/blocks/ca3d90b5c3ec490c4b23de0d378fe3ba4add98c36c433572a06566d48ba23a29.json",
+      "group": "AMZN",
+      "accession": "0001018724-21-000028",
+      "block_class": "going_concern",
+      "chars": 9083,
+      "duplicate": false
+    },
+    {
+      "content_key": "861809cd75ce3e30db0d901a74abb52cbf5cf07791f2ee4b1cb95ea5b405a747",
+      "occurrence_id": "fa64584d28c57a8a2b07b43195525faf1cf48568260963546168a3f7bbbef6d2",
+      "path": "work/blocks/fa64584d28c57a8a2b07b43195525faf1cf48568260963546168a3f7bbbef6d2.json",
+      "group": "GOOGL",
+      "accession": "0001652044-21-000047",
+      "block_class": "going_concern",
+      "chars": 4321,
+      "duplicate": false
+    },
+    {
+      "content_key": "af317afd34911e5ce26c4694fda0dc1e79d3fd9ba8a1c5e43cd40e373f93e43a",
+      "occurrence_id": "610e9820cf45155212e166de31694e0b5ae06c078f470f5b4e92c0c5bd577fde",
+      "path": "work/blocks/610e9820cf45155212e166de31694e0b5ae06c078f470f5b4e92c0c5bd577fde.json",
+      "group": "ORCL",
+      "accession": "0001564590-21-033616",
+      "block_class": "going_concern",
+      "chars": 50803,
+      "duplicate": false
+    },
+    {
+      "content_key": "6bb96b3546174a23e539eb729f2a66eb618daa6a34efcc63ab9860416d6929aa",
+      "occurrence_id": "fd5d8c61bcb925561f6bdd4434f8e07e4a80be30c97fa94f07a1a96a84fce2c7",
+      "path": "work/blocks/fd5d8c61bcb925561f6bdd4434f8e07e4a80be30c97fa94f07a1a96a84fce2c7.json",
+      "group": "AVGO",
+      "accession": "0001730168-21-000116",
+      "block_class": "going_concern",
+      "chars": 4309,
+      "duplicate": false
+    },
+    {
+      "content_key": "39a0cafd87db55cc7d420e87f10d6ecf0ad4c345b19484150941dd26712b7091",
+      "occurrence_id": "b36759b1b440c436b61db395875b74fac4533455a8d473a4a2b7e2a190513e85",
+      "path": "work/blocks/b36759b1b440c436b61db395875b74fac4533455a8d473a4a2b7e2a190513e85.json",
+      "group": "AVGO",
+      "accession": "0001730168-21-000045",
+      "block_class": "going_concern",
+      "chars": 4545,
+      "duplicate": false
+    },
+    {
+      "content_key": "0eadd720171975f1d02ca9d96fa2cecc7706b55885237976425dfdf81a55ce55",
+      "occurrence_id": "3c35634f1fc1d4a4807ca6c25f1232c5d6e32d1b26d22f121501a26f97646f07",
+      "path": "work/blocks/3c35634f1fc1d4a4807ca6c25f1232c5d6e32d1b26d22f121501a26f97646f07.json",
+      "group": "META",
+      "accession": "0001326801-21-000033",
+      "block_class": "going_concern",
+      "chars": 4617,
+      "duplicate": true
+    },
+    {
+      "content_key": "a5b65e4ce8380248e0a34091520ad31e4a6cd6b5d1c308bf77cbecef5d51f4fe",
+      "occurrence_id": "2d9ebe88076280cd8bd7bf34746bd405a33e45abf0dbaafc3d989623a60b0b78",
+      "path": "work/blocks/2d9ebe88076280cd8bd7bf34746bd405a33e45abf0dbaafc3d989623a60b0b78.json",
+      "group": "AVGO",
+      "accession": "0001730168-22-000118",
+      "block_class": "going_concern",
+      "chars": 2795,
+      "duplicate": false
+    },
+    {
+      "content_key": "ce5b46d418452dc03deab9f8eeae384874ea2308b300bc0ec722dc8c54f5cb5c",
+      "occurrence_id": "1eb512f50d93e27bf50ce1194efc42884ac298079b97282a9a0821235a69768b",
+      "path": "work/blocks/1eb512f50d93e27bf50ce1194efc42884ac298079b97282a9a0821235a69768b.json",
+      "group": "AVGO",
+      "accession": "0001730168-21-000153",
+      "block_class": "going_concern",
+      "chars": 3628,
+      "duplicate": false
+    },
+    {
+      "content_key": "a126202a62f409a19f2a9ee11fa674e57437093800edf96c66c1acb60d471ff2",
+      "occurrence_id": "dfcecc8b57f8c7f3ea96133851229a4feee88c9214de1e036a41099e3bedd797",
+      "path": "work/blocks/dfcecc8b57f8c7f3ea96133851229a4feee88c9214de1e036a41099e3bedd797.json",
+      "group": "AMZN",
+      "accession": "0001018724-22-000023",
+      "block_class": "going_concern",
+      "chars": 13661,
+      "duplicate": false
+    },
+    {
+      "content_key": "0b4ab19512ff56d80bd54f5a0fcbd9ba7b0a157e7ac6d231949314b4b2894742",
+      "occurrence_id": "c93bd08aaaaf749a65af226488f8ac8ff951fe36ffe4a1d1fd2d4f70678066c5",
+      "path": "work/blocks/c93bd08aaaaf749a65af226488f8ac8ff951fe36ffe4a1d1fd2d4f70678066c5.json",
+      "group": "ORCL",
+      "accession": "0001564590-22-023675",
+      "block_class": "going_concern",
+      "chars": 48721,
+      "duplicate": false
+    },
+    {
+      "content_key": "668634f74b10ed6bdca1d21f9a0ce90c92e9b60c9a1babb01ad6b5b7ebcfd300",
+      "occurrence_id": "88d850cdcac2cb19ebd6e1040803adfa0f51751da63b448de125019004ac10f0",
+      "path": "work/blocks/88d850cdcac2cb19ebd6e1040803adfa0f51751da63b448de125019004ac10f0.json",
+      "group": "AMZN",
+      "accession": "0001018724-21-000010",
+      "block_class": "going_concern",
+      "chars": 9313,
+      "duplicate": false
+    },
+    {
+      "content_key": "af07b22061603a32c5455e3e1b3b3d30380ed49105c12bfa7aebb9acc559dc67",
+      "occurrence_id": "32a3c601b8469400da833f5eccedafe66ee3749f6c6f323d0838fde3fe859330",
+      "path": "work/blocks/32a3c601b8469400da833f5eccedafe66ee3749f6c6f323d0838fde3fe859330.json",
+      "group": "NVDA",
+      "accession": "0001045810-21-000010",
+      "block_class": "going_concern",
+      "chars": 24609,
+      "duplicate": false
+    },
+    {
+      "content_key": "ee2efa608a81924243b2e6bc730c1c046dec8551f7339bfbabf259ee3423845b",
+      "occurrence_id": "395a882d2def318eec556c79018e1675e3503f349cae7c2c4505aad638a7a35e",
+      "path": "work/blocks/395a882d2def318eec556c79018e1675e3503f349cae7c2c4505aad638a7a35e.json",
+      "group": "AMD",
+      "accession": "0000002488-22-000016",
+      "block_class": "going_concern",
+      "chars": 667,
+      "duplicate": false
+    },
+    {
+      "content_key": "09d7babec121099195e12024d4a4ac77d4126388ee26bfcfae814fda26a2e7db",
+      "occurrence_id": "d9557e10c5b0eb2486f6ef3c4f4129d387c37f910cca02f96d6517bd32c3fa7b",
+      "path": "work/blocks/d9557e10c5b0eb2486f6ef3c4f4129d387c37f910cca02f96d6517bd32c3fa7b.json",
+      "group": "ORCL",
+      "accession": "0001564590-22-009859",
+      "block_class": "going_concern",
+      "chars": 9132,
+      "duplicate": false
+    },
+    {
+      "content_key": "4c74dbc21e20f6f79b6b302ff0a4b9020bc151cce02ca8cc9280e17c87dde21b",
+      "occurrence_id": "b27083f4597a09932a448786b65359bbe968a6df6460bbcb87832c4be638299c",
+      "path": "work/blocks/b27083f4597a09932a448786b65359bbe968a6df6460bbcb87832c4be638299c.json",
+      "group": "META",
+      "accession": "0001326801-22-000082",
+      "block_class": "going_concern",
+      "chars": 5832,
+      "duplicate": false
+    },
+    {
+      "content_key": "690b28a400f88d07d7f36a546e43d2b54e93720e223fc304ae46f38c4db1f664",
+      "occurrence_id": "a04d97d3f7a193abe6fe8aa5212bf6eb048fd733b612bffe52860d59bca3aac4",
+      "path": "work/blocks/a04d97d3f7a193abe6fe8aa5212bf6eb048fd733b612bffe52860d59bca3aac4.json",
+      "group": "MSFT",
+      "accession": "0001564590-22-015675",
+      "block_class": "going_concern",
+      "chars": 10580,
+      "duplicate": false
+    },
+    {
+      "content_key": "5bebd3ce97ec1d25f28432ada05e7fc98737c79c71b75be22b82ac5c2475410c",
+      "occurrence_id": "2d1420859ee9ed09eca379fb9abac95872037fbd933c6d1f4a819d4f7634fde5",
+      "path": "work/blocks/2d1420859ee9ed09eca379fb9abac95872037fbd933c6d1f4a819d4f7634fde5.json",
+      "group": "META",
+      "accession": "0001326801-22-000018",
+      "block_class": "going_concern",
+      "chars": 37575,
+      "duplicate": false
+    },
+    {
+      "content_key": "9aca7ea4d35ac06442aa416cc93afe576d87a0cf5d83f6b5d3a010f3e216fc0b",
+      "occurrence_id": "5adc2a57966289aed9a7b38ce96ae285c6ae4d3383309681ad0b7edb8fa039f2",
+      "path": "work/blocks/5adc2a57966289aed9a7b38ce96ae285c6ae4d3383309681ad0b7edb8fa039f2.json",
+      "group": "GOOGL",
+      "accession": "0001652044-22-000090",
+      "block_class": "going_concern",
+      "chars": 2654,
+      "duplicate": false
+    },
+    {
+      "content_key": "33f4806e0e9ba86b3fda289aa6ebd47251891a50fbe673743a76a94f8f7e2ccc",
+      "occurrence_id": "cbbd555a4e22cb2a1bf06beea26d0c1b4f4c4fa70de560999f24581607f80d07",
+      "path": "work/blocks/cbbd555a4e22cb2a1bf06beea26d0c1b4f4c4fa70de560999f24581607f80d07.json",
+      "group": "ORCL",
+      "accession": "0001564590-20-043448",
+      "block_class": "going_concern",
+      "chars": 7114,
+      "duplicate": false
+    },
+    {
+      "content_key": "f9364038cdbfe38c01b47be98ebae031357dd00741b5d5085f6a52faaf487178",
+      "occurrence_id": "8a7b7938e3182a9baf167c9b47cd0e9eaa7c11b4a819a98eba679a46bebb3560",
+      "path": "work/blocks/8a7b7938e3182a9baf167c9b47cd0e9eaa7c11b4a819a98eba679a46bebb3560.json",
+      "group": "MRVL",
+      "accession": "0001835632-21-000032",
+      "block_class": "going_concern",
+      "chars": 4407,
+      "duplicate": false
+    },
+    {
+      "content_key": "f46a88c2b7efa816b1ccf1f2f5763258dfa9b8bfc8ce97a86cc20afb38a70b0f",
+      "occurrence_id": "7ca928d58380c6c32b1f7a3184feeef43e16f87fd67476ebc597ac74f17317eb",
+      "path": "work/blocks/7ca928d58380c6c32b1f7a3184feeef43e16f87fd67476ebc597ac74f17317eb.json",
+      "group": "MSFT",
+      "accession": "0001564590-21-039151",
+      "block_class": "going_concern",
+      "chars": 31177,
+      "duplicate": false
+    },
+    {
+      "content_key": "fce26e972e5d95c5e881287912b437bec5087e63dcafa7e7d5e92e6cfaa5e611",
+      "occurrence_id": "a8df08677a882a3d33a11bd7cfc76e356595a4c9aa43974fa7f1e2b526663811",
+      "path": "work/blocks/a8df08677a882a3d33a11bd7cfc76e356595a4c9aa43974fa7f1e2b526663811.json",
+      "group": "NVDA",
+      "accession": "0001045810-22-000079",
+      "block_class": "going_concern",
+      "chars": 2385,
+      "duplicate": false
+    },
+    {
+      "content_key": "dd201e7e5e97fbf6f12ff180c3efe0c1cc13e068004d4d7fb9d92627ee4a9fed",
+      "occurrence_id": "48390c3a0d5abba86811dc3ed6f3371b5cbe93ebb2c3d7874423a2eac927af05",
+      "path": "work/blocks/48390c3a0d5abba86811dc3ed6f3371b5cbe93ebb2c3d7874423a2eac927af05.json",
+      "group": "MRVL",
+      "accession": "0001835632-22-000053",
+      "block_class": "going_concern",
+      "chars": 3236,
+      "duplicate": false
+    },
+    {
+      "content_key": "f7ac4141fcd6aff0bc3014bdc30dde67f2eb7f9cd9294a0da65d6aeee05e6ab9",
+      "occurrence_id": "b99e2e321197fc4d2de52cec73b1cd7ed0e4b622aa025f0d82da3cc4740891f3",
+      "path": "work/blocks/b99e2e321197fc4d2de52cec73b1cd7ed0e4b622aa025f0d82da3cc4740891f3.json",
+      "group": "MRVL",
+      "accession": "0001058057-20-000030",
+      "block_class": "going_concern",
+      "chars": 2044,
+      "duplicate": false
+    },
+    {
+      "content_key": "4db2a13f1b866312c932026c7c311c7a2cf0a8b72f5cf881058debde4cda3619",
+      "occurrence_id": "ed656c7e078137eba497a83f72f76566c007b92d23c5b63a20e475a7b88e60eb",
+      "path": "work/blocks/ed656c7e078137eba497a83f72f76566c007b92d23c5b63a20e475a7b88e60eb.json",
+      "group": "AVGO",
+      "accession": "0001730168-22-000029",
+      "block_class": "going_concern",
+      "chars": 4883,
+      "duplicate": false
+    },
+    {
+      "content_key": "d65e0437a17a382cb2bc93214c15581090b4dcc9800e06bfada9b9432aaaa031",
+      "occurrence_id": "c3058842dff5f5a485e87f0df6977507b52c16cfdd77f19e230217270ce91981",
+      "path": "work/blocks/c3058842dff5f5a485e87f0df6977507b52c16cfdd77f19e230217270ce91981.json",
+      "group": "GOOGL",
+      "accession": "0001652044-22-000029",
+      "block_class": "going_concern",
+      "chars": 1908,
+      "duplicate": false
+    },
+    {
+      "content_key": "e19f90ad8a908bf20937cdac74107b29e60f071bad2bcdd415bbab2e389690b2",
+      "occurrence_id": "84b16bb56c1f1cd4bee6946600bf875b41b9a6ff70aea0a3d424fce7aab19d37",
+      "path": "work/blocks/84b16bb56c1f1cd4bee6946600bf875b41b9a6ff70aea0a3d424fce7aab19d37.json",
+      "group": "MSFT",
+      "accession": "0001564590-20-047996",
+      "block_class": "going_concern",
+      "chars": 12448,
+      "duplicate": false
+    },
+    {
+      "content_key": "b769557452626a23cd67ab5b6ff18e22db8cd00eae3190ea98da939f7dafd315",
+      "occurrence_id": "82e3c5097ffb5ccfeacf147c3c82a2a713f0d6269ac851a9bccdd73eb53fbdb7",
+      "path": "work/blocks/82e3c5097ffb5ccfeacf147c3c82a2a713f0d6269ac851a9bccdd73eb53fbdb7.json",
+      "group": "MRVL",
+      "accession": "0001058057-21-000009",
+      "block_class": "going_concern",
+      "chars": 3301,
+      "duplicate": false
+    },
+    {
+      "content_key": "928dded8a839480d467effae54c259e8346ec6b33e81e28ec7fd545a39c5c310",
+      "occurrence_id": "3c28fa5514a33b0a26de0a8aada26d89f0891831ec81367c45ddc2bd7ba0bbc7",
+      "path": "work/blocks/3c28fa5514a33b0a26de0a8aada26d89f0891831ec81367c45ddc2bd7ba0bbc7.json",
+      "group": "MSFT",
+      "accession": "0001564590-21-020891",
+      "block_class": "going_concern",
+      "chars": 12572,
+      "duplicate": false
+    },
+    {
+      "content_key": "46b77218912f4f83f4cf234db98b30fadfe0993c70e3eb1c81363faf0d9e5883",
+      "occurrence_id": "9643bee64e81a039eb2a4389292b65c26a13a2cd786ca06d45d9e912fab3cbd0",
+      "path": "work/blocks/9643bee64e81a039eb2a4389292b65c26a13a2cd786ca06d45d9e912fab3cbd0.json",
+      "group": "GOOGL",
+      "accession": "0001652044-21-000057",
+      "block_class": "going_concern",
+      "chars": 4396,
+      "duplicate": false
+    },
+    {
+      "content_key": "53012a7d01194759d043f6fbf5e01d8f8ae227a25ab411603c92ed84baf2233e",
+      "occurrence_id": "ec017b9e68c9af30aa3954df9f19557ebad359e70a7ed13a78c7e0750aaf42d9",
+      "path": "work/blocks/ec017b9e68c9af30aa3954df9f19557ebad359e70a7ed13a78c7e0750aaf42d9.json",
+      "group": "NVDA",
+      "accession": "0001045810-20-000147",
+      "block_class": "going_concern",
+      "chars": 6622,
+      "duplicate": false
+    },
+    {
+      "content_key": "28f56605f117f00d87042ef4e7b2c8735115bee8dced4e248769fdf45eb56ba4",
+      "occurrence_id": "7573b485b6f45d072ff7d1bdb617fde0b34c27fb3529e3daeae087023a3d9e56",
+      "path": "work/blocks/7573b485b6f45d072ff7d1bdb617fde0b34c27fb3529e3daeae087023a3d9e56.json",
+      "group": "AVGO",
+      "accession": "0001730168-22-000094",
+      "block_class": "going_concern",
+      "chars": 4904,
+      "duplicate": false
+    },
+    {
+      "content_key": "8903a729a7ca8ef1546be20d11577d432d7ec352ec7493d8c3bd820b5639fa72",
+      "occurrence_id": "04ca2ea99a580474a61bc29ebbb429c2b75fb22ca80187e13c7c7451948df43f",
+      "path": "work/blocks/04ca2ea99a580474a61bc29ebbb429c2b75fb22ca80187e13c7c7451948df43f.json",
+      "group": "NVDA",
+      "accession": "0001045810-21-000064",
+      "block_class": "going_concern",
+      "chars": 3124,
+      "duplicate": false
+    },
+    {
+      "content_key": "1863025b92f85f263e6515f15be4fff4a9b6cf2fea3c6807c2828cf1bb29c2e3",
+      "occurrence_id": "082f30e82b4e7dca653b11bb03adcd99ef4d9c94e4381caeff8d2e6af82f2272",
+      "path": "work/blocks/082f30e82b4e7dca653b11bb03adcd99ef4d9c94e4381caeff8d2e6af82f2272.json",
+      "group": "MSFT",
+      "accession": "0001564590-22-035087",
+      "block_class": "going_concern",
+      "chars": 10444,
+      "duplicate": false
+    },
+    {
+      "content_key": "ff7788e4fe842fc79fc162993462d47185d57a3278d0053c266fdfd12c166000",
+      "occurrence_id": "a1bced80e6bff9307d41adffc4ac9ee064552b9ea4342a1193769e2432d2995f",
+      "path": "work/blocks/a1bced80e6bff9307d41adffc4ac9ee064552b9ea4342a1193769e2432d2995f.json",
+      "group": "AMD",
+      "accession": "0000002488-21-000116",
+      "block_class": "going_concern",
+      "chars": 3813,
+      "duplicate": false
+    },
+    {
+      "content_key": "51c4e46c728d53402ef597a17a8ea915fd317e9025594d1354543709cb4cbf3d",
+      "occurrence_id": "ba131b6b6d4afd5e8053ed5c5f2456081fd0eb9f5e417cb36ce39781e83b5c4c",
+      "path": "work/blocks/ba131b6b6d4afd5e8053ed5c5f2456081fd0eb9f5e417cb36ce39781e83b5c4c.json",
+      "group": "ORCL",
+      "accession": "0001564590-22-039278",
+      "block_class": "going_concern",
+      "chars": 10673,
+      "duplicate": false
+    },
+    {
+      "content_key": "baea0154d4f8d4081719d1a75a780064f390b064d699f2e4208c44f4ac659db3",
+      "occurrence_id": "b48dd866e0f51be7f9c0f5e0533da232ed3e164e18658c587eff2187ec0f10d0",
+      "path": "work/blocks/b48dd866e0f51be7f9c0f5e0533da232ed3e164e18658c587eff2187ec0f10d0.json",
+      "group": "MSFT",
+      "accession": "0001564590-22-026876",
+      "block_class": "going_concern",
+      "chars": 29917,
+      "duplicate": false
+    },
+    {
+      "content_key": "64c3a7d79d29cc6e5c0d20672221cdc839923edc845db36e8c2550857248fe59",
+      "occurrence_id": "82fc3e1a34e83bed031cd733f48d4de6db7960819c56572ec1eea8b94ef622dc",
+      "path": "work/blocks/82fc3e1a34e83bed031cd733f48d4de6db7960819c56572ec1eea8b94ef622dc.json",
+      "group": "MSFT",
+      "accession": "0001564590-21-051992",
+      "block_class": "going_concern",
+      "chars": 10565,
+      "duplicate": false
+    },
+    {
+      "content_key": "5563727191e172c54f12457fd8d1836f37198b62870dbe9d5271986597400541",
+      "occurrence_id": "bf8d7827203a19ccfc9cefc2b54941fed2211de76e8b5de1d54773e07a95fe67",
+      "path": "work/blocks/bf8d7827203a19ccfc9cefc2b54941fed2211de76e8b5de1d54773e07a95fe67.json",
+      "group": "ORCL",
+      "accession": "0001564590-20-056896",
+      "block_class": "going_concern",
+      "chars": 7624,
+      "duplicate": false
+    },
+    {
+      "content_key": "7acf692e16f68389cac29d1364e8bd38e8d6b971abc37f96a28a8f4256d1bd68",
+      "occurrence_id": "6010c5a76103bd96b622c2abb592f40aaa2890d1095d1d7ea927eb594e063653",
+      "path": "work/blocks/6010c5a76103bd96b622c2abb592f40aaa2890d1095d1d7ea927eb594e063653.json",
+      "group": "META",
+      "accession": "0001326801-22-000108",
+      "block_class": "going_concern",
+      "chars": 7783,
+      "duplicate": false
+    },
+    {
+      "content_key": "ddf58d02aad38a65fdf07adc72f0ef22a40cff898370829f50f1870d00baede1",
+      "occurrence_id": "29b1501d5515207681e741cc06e3cc1bdad490209b50177961c708db51b992d4",
+      "path": "work/blocks/29b1501d5515207681e741cc06e3cc1bdad490209b50177961c708db51b992d4.json",
+      "group": "ORCL",
+      "accession": "0001564590-22-031545",
+      "block_class": "going_concern",
+      "chars": 9524,
+      "duplicate": false
+    },
+    {
+      "content_key": "79f53e5e4472a89c0f07204865e1c34c6e917ef7afd07b63017f7d4fe126a684",
+      "occurrence_id": "f2e40d8c2f6498be1ca4126470621b4d466fbd449e176e3fcfd485d6f31bee72",
+      "path": "work/blocks/f2e40d8c2f6498be1ca4126470621b4d466fbd449e176e3fcfd485d6f31bee72.json",
+      "group": "NVDA",
+      "accession": "0001045810-21-000131",
+      "block_class": "going_concern",
+      "chars": 4061,
+      "duplicate": false
+    },
+    {
+      "content_key": "4a98985dae71859df76c01944de8aba1e89393d3817b1972934fb8b94be289fe",
+      "occurrence_id": "e64e272027f82c924591a9c805cdf51908457a37342c3e3020ca5c4dec0c7559",
+      "path": "work/blocks/e64e272027f82c924591a9c805cdf51908457a37342c3e3020ca5c4dec0c7559.json",
+      "group": "AMD",
+      "accession": "0000002488-22-000170",
+      "block_class": "going_concern",
+      "chars": 2760,
+      "duplicate": false
+    },
+    {
+      "content_key": "e3f5ad9dd5d1f537fb3ad30de7fca2f4e203e6e0e4711c255b604f009560afe1",
+      "occurrence_id": "1ec24b79740f8af6f7262557d14bc5d0634a73dcc09945e6e6152429a5bcc119",
+      "path": "work/blocks/1ec24b79740f8af6f7262557d14bc5d0634a73dcc09945e6e6152429a5bcc119.json",
+      "group": "AMD",
+      "accession": "0000002488-19-000104",
+      "block_class": "related_parties",
+      "chars": 3691,
+      "duplicate": false
+    },
+    {
+      "content_key": "c3bb5a5af2a0a51e8c6889fa8004ce0f671f1adf5b8024267d1056e576a98e0b",
+      "occurrence_id": "27d902cafba7b92ec72280de9b98ebb591b6aabb73a13b9449b65230e7ffee6a",
+      "path": "work/blocks/27d902cafba7b92ec72280de9b98ebb591b6aabb73a13b9449b65230e7ffee6a.json",
+      "group": "AMD",
+      "accession": "0000002488-19-000159",
+      "block_class": "related_parties",
+      "chars": 2394,
+      "duplicate": false
+    },
+    {
+      "content_key": "4755359ee07a9eb85e139a39364c4ddba0b45e3e2952d9fc0f9f5d7ac13f8c39",
+      "occurrence_id": "07f1596413c41ce633ab90ff461f1be4cb8f68fd850b89f355af2b3a37455b02",
+      "path": "work/blocks/07f1596413c41ce633ab90ff461f1be4cb8f68fd850b89f355af2b3a37455b02.json",
+      "group": "META",
+      "accession": "0001326801-22-000057",
+      "block_class": "going_concern",
+      "chars": 4419,
+      "duplicate": false
+    },
+    {
+      "content_key": "1f7d1e09d97881fb225c1b471f151dbfdd94d6921fa53182e7c3019a058fdb3d",
+      "occurrence_id": "d2eccf277d38f16fb5d3c63703c5f7cd26385ad503e5d6b95a9dea455d4f233a",
+      "path": "work/blocks/d2eccf277d38f16fb5d3c63703c5f7cd26385ad503e5d6b95a9dea455d4f233a.json",
+      "group": "NVDA",
+      "accession": "0001045810-21-000163",
+      "block_class": "going_concern",
+      "chars": 4582,
+      "duplicate": false
+    },
+    {
+      "content_key": "9298b59432bb09b775bd45e4ffaafcd003dd319b22c2c3e6925171f131d36975",
+      "occurrence_id": "80fe5b952195e18366d580b88a428f897f8d8c46a4cbf620bb86a94bcb384413",
+      "path": "work/blocks/80fe5b952195e18366d580b88a428f897f8d8c46a4cbf620bb86a94bcb384413.json",
+      "group": "META",
+      "accession": "0001326801-21-000065",
+      "block_class": "going_concern",
+      "chars": 6182,
+      "duplicate": false
+    },
+    {
+      "content_key": "f568c999482a55e778ce70cb352b2e524f676ae6bcb3dc46ed4b851904b2b339",
+      "occurrence_id": "9e4c930fc1b83407022ffacfdfa6a63ca29e87b4bd3e43e8169bc3fb08518f6d",
+      "path": "work/blocks/9e4c930fc1b83407022ffacfdfa6a63ca29e87b4bd3e43e8169bc3fb08518f6d.json",
+      "group": "NVDA",
+      "accession": "0001045810-22-000147",
+      "block_class": "going_concern",
+      "chars": 2141,
+      "duplicate": false
+    },
+    {
+      "content_key": "361f0b3d23c67789623e1dba67ac2a7977555e3cbe3c17ad7f5cfc75cb5b0b20",
+      "occurrence_id": "23b495882543767037c41d39e3c158cdc09c79cfb9484c8eba2dbe11d1c949ac",
+      "path": "work/blocks/23b495882543767037c41d39e3c158cdc09c79cfb9484c8eba2dbe11d1c949ac.json",
+      "group": "MRVL",
+      "accession": "0001835632-22-000028",
+      "block_class": "going_concern",
+      "chars": 3246,
+      "duplicate": false
+    },
+    {
+      "content_key": "e734e067d8a513d105e512eaf96252bdfc73cadacc980d56d5f7be0630f9f7e2",
+      "occurrence_id": "2fe9f7e8592a84f28ff441d6cccde4306aed5b941a3abd9a9cdc09bbb017544e",
+      "path": "work/blocks/2fe9f7e8592a84f28ff441d6cccde4306aed5b941a3abd9a9cdc09bbb017544e.json",
+      "group": "MRVL",
+      "accession": "0001058057-20-000061",
+      "block_class": "going_concern",
+      "chars": 5082,
+      "duplicate": false
+    },
+    {
+      "content_key": "445b57b3da75194aba04b3fbb3a5595952a34e0984a3e995b68b8052e59a9a34",
+      "occurrence_id": "1c46a6db74233592e148b3b8b2c67f72616c51b7482fe6a37c4e9dfdef7754b0",
+      "path": "work/blocks/1c46a6db74233592e148b3b8b2c67f72616c51b7482fe6a37c4e9dfdef7754b0.json",
+      "group": "MSFT",
+      "accession": "0001564590-22-002324",
+      "block_class": "going_concern",
+      "chars": 10589,
+      "duplicate": false
+    },
+    {
+      "content_key": "003be8e38c8e70910b4f8119722cfc4d8c84365e7abff7f0618d48c60626e763",
+      "occurrence_id": "c0d5ee8b2872f157e1a6766268bac9114c02a945432a57802227208085646a97",
+      "path": "work/blocks/c0d5ee8b2872f157e1a6766268bac9114c02a945432a57802227208085646a97.json",
+      "group": "AMZN",
+      "accession": "0001018724-21-000020",
+      "block_class": "going_concern",
+      "chars": 8944,
+      "duplicate": false
+    },
+    {
+      "content_key": "a49f436f96db9eefbcb2948c356c508e644ab7c2482134a2c0ff212ba526dfc6",
+      "occurrence_id": "88790919d8b6c313e471e47b6cb9b03071a75f1b175864b36b3598510be900ee",
+      "path": "work/blocks/88790919d8b6c313e471e47b6cb9b03071a75f1b175864b36b3598510be900ee.json",
+      "group": "MRVL",
+      "accession": "0001835632-22-000041",
+      "block_class": "going_concern",
+      "chars": 3232,
+      "duplicate": false
+    },
+    {
+      "content_key": "8536c7bee6d4325c92be52faa28d67a96d612f86b9b4e1ef7f3b3ca05b65611d",
+      "occurrence_id": "e710a8f7a5ca51afc8d3e66884807502f0b42bdb59261c52d2a0d8b92f08b0f5",
+      "path": "work/blocks/e710a8f7a5ca51afc8d3e66884807502f0b42bdb59261c52d2a0d8b92f08b0f5.json",
+      "group": "AMD",
+      "accession": "0000002488-22-000078",
+      "block_class": "going_concern",
+      "chars": 2708,
+      "duplicate": false
+    },
+    {
+      "content_key": "8d9f3447166b477fdcc5e1ae18f4899e46455d3a6e63bde989f1decd19d51912",
+      "occurrence_id": "55e9e069bd0ec1ae6c448a71d1347509c116a1be0c66afc0f44784ff46a44e2a",
+      "path": "work/blocks/55e9e069bd0ec1ae6c448a71d1347509c116a1be0c66afc0f44784ff46a44e2a.json",
+      "group": "GOOGL",
+      "accession": "0001652044-22-000071",
+      "block_class": "going_concern",
+      "chars": 2641,
+      "duplicate": false
+    },
+    {
+      "content_key": "ce4e481480326d13b41ee9f32b60389d5ba50f9238df99b0cde81a13d0d0748a",
+      "occurrence_id": "ab8f23581e1da472407e94556c9954c2ecb5652cce77833bd0c846c1108e1961",
+      "path": "work/blocks/ab8f23581e1da472407e94556c9954c2ecb5652cce77833bd0c846c1108e1961.json",
+      "group": "NVDA",
+      "accession": "0001045810-20-000065",
+      "block_class": "going_concern",
+      "chars": 3872,
+      "duplicate": false
+    },
+    {
+      "content_key": "ea7fd8ecacd6f0e21509980e0b5b75ce04408aac490b17e7a1ae9ccd2c2e75ea",
+      "occurrence_id": "d79c7051012fdece3df40761a462499380e32ee6563e7c7182e424e339013cad",
+      "path": "work/blocks/d79c7051012fdece3df40761a462499380e32ee6563e7c7182e424e339013cad.json",
+      "group": "AMZN",
+      "accession": "0001018724-22-000019",
+      "block_class": "going_concern",
+      "chars": 13618,
+      "duplicate": false
+    },
+    {
+      "content_key": "b50cb1cb6daea5d61c4281ae226ff399e51742b10503b507f5ec71e686aaa2a2",
+      "occurrence_id": "584f7eb1ac6d9afab59a83e76eae7ccf5fb0fb2ad2594caace87055688d6a6fc",
+      "path": "work/blocks/584f7eb1ac6d9afab59a83e76eae7ccf5fb0fb2ad2594caace87055688d6a6fc.json",
+      "group": "NVDA",
+      "accession": "0001045810-20-000189",
+      "block_class": "going_concern",
+      "chars": 6621,
+      "duplicate": false
+    },
+    {
+      "content_key": "a929216a13f2977c64ddc3227b9a650f8beb025ed0b6c492cb44e6c4c4ed705f",
+      "occurrence_id": "12964c3e27bf0324a8a6aad627d7c5639ed4ecbbab19335714cbe999fe6cb6f5",
+      "path": "work/blocks/12964c3e27bf0324a8a6aad627d7c5639ed4ecbbab19335714cbe999fe6cb6f5.json",
+      "group": "ORCL",
+      "accession": "0001564590-21-060022",
+      "block_class": "going_concern",
+      "chars": 7917,
+      "duplicate": false
+    },
+    {
+      "content_key": "899318362a402e5dffb7cb06cac73e04069a3385bb0d1750617d5d20beb32eb8",
+      "occurrence_id": "698cb5f1c2135f25da329513361e3330470c6a9f62bf7acb3c2a40c968410af6",
+      "path": "work/blocks/698cb5f1c2135f25da329513361e3330470c6a9f62bf7acb3c2a40c968410af6.json",
+      "group": "AVGO",
+      "accession": "0001730168-22-000081",
+      "block_class": "going_concern",
+      "chars": 4921,
+      "duplicate": false
+    },
+    {
+      "content_key": "7d75dfa0f2a8b53d33d80fe1b4f7a395c97bc518ec44987d77c5119182de6cc8",
+      "occurrence_id": "504adb566a454cd7b22f868670062b6b03667ca2977b5bed7c7c947dad8720ee",
+      "path": "work/blocks/504adb566a454cd7b22f868670062b6b03667ca2977b5bed7c7c947dad8720ee.json",
+      "group": "MSFT",
+      "accession": "0001564590-21-002316",
+      "block_class": "going_concern",
+      "chars": 12628,
+      "duplicate": false
+    },
+    {
+      "content_key": "a0ef3bbde98f583b287a422461f87304b9ae1bb3f25be3b17bbe41fc55e63c4c",
+      "occurrence_id": "7f35a7db072b7fea2a5942a40f76e652f4346c9d93388699570a1a0f56772ce5",
+      "path": "work/blocks/7f35a7db072b7fea2a5942a40f76e652f4346c9d93388699570a1a0f56772ce5.json",
+      "group": "AMZN",
+      "accession": "0001018724-22-000013",
+      "block_class": "going_concern",
+      "chars": 11727,
+      "duplicate": false
+    },
+    {
+      "content_key": "2d887a9a3a1c9ca7427a0c8bcb7aa367fb31e82ffa1d778b54b875166e1f467d",
+      "occurrence_id": "3a09fa364ae72928cbfd07127abd07a0f3a341c89c940c8bab29a692cec236e0",
+      "path": "work/blocks/3a09fa364ae72928cbfd07127abd07a0f3a341c89c940c8bab29a692cec236e0.json",
+      "group": "AMD",
+      "accession": "0000002488-22-000123",
+      "block_class": "going_concern",
+      "chars": 2742,
+      "duplicate": false
+    },
+    {
+      "content_key": "57c0153bc73389ea9b072668fc187fe25f2ba3c9415e4e53c229f61365753abe",
+      "occurrence_id": "a36ad87bdb6f449dde671ae6ff31c4eade2dfa7aeac65ee6edf0b0c64e57909a",
+      "path": "work/blocks/a36ad87bdb6f449dde671ae6ff31c4eade2dfa7aeac65ee6edf0b0c64e57909a.json",
+      "group": "AMZN",
+      "accession": "0001018724-22-000005",
+      "block_class": "going_concern",
+      "chars": 40425,
+      "duplicate": false
+    },
+    {
+      "content_key": "d478dfb20d3077a4ee626a08a22a674cbddc06cdd9aceb7f99ff2b9268e8c9ab",
+      "occurrence_id": "ab1080ce8a591377ed2ca417b99050341e0217f9ab268f9a7fbcdb21b20631c7",
+      "path": "work/blocks/ab1080ce8a591377ed2ca417b99050341e0217f9ab268f9a7fbcdb21b20631c7.json",
+      "group": "AMD",
+      "accession": "0000002488-21-000056",
+      "block_class": "going_concern",
+      "chars": 3999,
+      "duplicate": false
+    },
+    {
+      "content_key": "819e1f083704ca55a6d6c4b9a1fbfe59b926237c62fd3ebbca28289db95f76ec",
+      "occurrence_id": "327fc1efadc6f1151dfc972645c95b2c7b62c95d16b2af261dc7edb6b07006d5",
+      "path": "work/blocks/327fc1efadc6f1151dfc972645c95b2c7b62c95d16b2af261dc7edb6b07006d5.json",
+      "group": "GOOGL",
+      "accession": "0001652044-22-000019",
+      "block_class": "going_concern",
+      "chars": 28841,
+      "duplicate": false
+    },
+    {
+      "content_key": "f6e36f3e50f548cae65f01b7bffa3c4a9eb28193b1c05c3f4944e90e91b401da",
+      "occurrence_id": "5a52750522eaf892ffdf8f84780f0a75421c966ea4765ae4f8e33702bb102c7a",
+      "path": "work/blocks/5a52750522eaf892ffdf8f84780f0a75421c966ea4765ae4f8e33702bb102c7a.json",
+      "group": "NVDA",
+      "accession": "0001045810-22-000036",
+      "block_class": "going_concern",
+      "chars": 25278,
+      "duplicate": false
+    },
+    {
+      "content_key": "cce4d65ab7c185edff967e8cc6d47b0938f36794eda23dcdd997aa028ba2850b",
+      "occurrence_id": "6c1a22564718d79a0678cc772ded07ff651c4efd068c8d2567f2920aff5266d3",
+      "path": "work/blocks/6c1a22564718d79a0678cc772ded07ff651c4efd068c8d2567f2920aff5266d3.json",
+      "group": "MRVL",
+      "accession": "0001835632-21-000022",
+      "block_class": "going_concern",
+      "chars": 4569,
+      "duplicate": false
+    },
+    {
+      "content_key": "9c5557c7abc861577a9184ef63bec2d39530b1cdb4b7d726236b172858abe129",
+      "occurrence_id": "cf8da006483222bb15e5f26f15e02580dbb14f5972945c00a08d52b99d5d8859",
+      "path": "work/blocks/cf8da006483222bb15e5f26f15e02580dbb14f5972945c00a08d52b99d5d8859.json",
+      "group": "MRVL",
+      "accession": "0001058057-20-000046",
+      "block_class": "going_concern",
+      "chars": 3080,
+      "duplicate": false
+    },
+    {
+      "content_key": "1d95fa4571d8ea20679841f71b86fbbe90d92eda63a144df9d84a7f34a6d7327",
+      "occurrence_id": "b4b8e8b1e251cc70b0d6eef02db5fc4055421a74f8ca809810c5e7e1dcc798cf",
+      "path": "work/blocks/b4b8e8b1e251cc70b0d6eef02db5fc4055421a74f8ca809810c5e7e1dcc798cf.json",
+      "group": "MRVL",
+      "accession": "0001835632-22-000016",
+      "block_class": "going_concern",
+      "chars": 2264,
+      "duplicate": false
+    },
+    {
+      "content_key": "06e2f5318fecf0bad49d56a334b409f5b53a7364060c0ebd2123a75c37c71d0a",
+      "occurrence_id": "87e3aae24b67a2258e2e61316f312f0ffb0bd3cca3a2a42f3ee40d8ed36fd393",
+      "path": "work/blocks/87e3aae24b67a2258e2e61316f312f0ffb0bd3cca3a2a42f3ee40d8ed36fd393.json",
+      "group": "AMD",
+      "accession": "0000002488-21-000178",
+      "block_class": "going_concern",
+      "chars": 1743,
+      "duplicate": false
+    },
+    {
+      "content_key": "08e96927e75775a2863daf1ab26e029dc6c61a9e7fe866c6c0807dcfc0cebe2d",
+      "occurrence_id": "183b0b10e29b7cfe6ba17cb1bd89ebfecae43f90f557dc63e77b8e9238fbce43",
+      "path": "work/blocks/183b0b10e29b7cfe6ba17cb1bd89ebfecae43f90f557dc63e77b8e9238fbce43.json",
+      "group": "AVGO",
+      "accession": "0001730168-21-000123",
+      "block_class": "going_concern",
+      "chars": 4315,
+      "duplicate": false
+    },
+    {
+      "content_key": "5974a041306acbefeb6ebb6e1b90acca60cca269531a73d2a831dd2565709c4c",
+      "occurrence_id": "af9520a4f4aea9db7a9049476e103ee865d94d0c4759fbe0cc8565412a4ce4c1",
+      "path": "work/blocks/af9520a4f4aea9db7a9049476e103ee865d94d0c4759fbe0cc8565412a4ce4c1.json",
+      "group": "AMD",
+      "accession": "0000002488-20-000008",
+      "block_class": "related_parties",
+      "chars": 2901,
+      "duplicate": false
+    },
+    {
+      "content_key": "55320fe17ce395b43c378545eb62d255a17ee8b6a3d7da9310253365233fdc98",
+      "occurrence_id": "e016c7b1052f0eb2617ca12f1e7313105aa8773ce7465c65ed42e14d40ef512e",
+      "path": "work/blocks/e016c7b1052f0eb2617ca12f1e7313105aa8773ce7465c65ed42e14d40ef512e.json",
+      "group": "NVDA",
+      "accession": "0001045810-22-000166",
+      "block_class": "going_concern",
+      "chars": 2332,
+      "duplicate": false
+    },
+    {
+      "content_key": "b3811f62bd2403b0ad54aa725b7baa5212858d7c3532b96f5937ec875a200c5d",
+      "occurrence_id": "a111c8ba95b5071bff0e01a60b503c0d7a01c5d0fb2944bb05b1fa62bd05946f",
+      "path": "work/blocks/a111c8ba95b5071bff0e01a60b503c0d7a01c5d0fb2944bb05b1fa62bd05946f.json",
+      "group": "ORCL",
+      "accession": "0001564590-21-012539",
+      "block_class": "going_concern",
+      "chars": 9345,
+      "duplicate": false
+    },
+    {
+      "content_key": "d303a135233d4fb6af5853c8052187742014db3d562acbb14a308e083fd7f55f",
+      "occurrence_id": "5af77b4cd7b83c796fe108f2ac8825757ebe5b2b04ada9e32940978e60e8be6f",
+      "path": "work/blocks/5af77b4cd7b83c796fe108f2ac8825757ebe5b2b04ada9e32940978e60e8be6f.json",
+      "group": "GOOGL",
+      "accession": "0001652044-21-000020",
+      "block_class": "going_concern",
+      "chars": 4218,
+      "duplicate": false
+    }
+  ],
+  "removed": [
+    {
+      "content_key": "e9922d669736bbd7616408e1e2ae7a301fdc25594c8f8508a50578bed0ee139b",
+      "occurrence_id": "d1fd67e818ce6fae26b7904c1041fb2ecd7bcb5ce63dcc19ddbad2019f9f13ed",
+      "path": "work/blocks/d1fd67e818ce6fae26b7904c1041fb2ecd7bcb5ce63dcc19ddbad2019f9f13ed.json",
+      "group": "AMD",
+      "accession": "0001628280-21-001185",
+      "block_class": "controls",
+      "chars": 5358,
+      "duplicate": false
+    },
+    {
+      "content_key": "3cca143324d780f43942b270cecab1439f58947d8a97e7011406c759a5a2c1fe",
+      "occurrence_id": "15efb5813f174ec7c8b3d37b9d4a3b0b9a8e2d3fe2906e99218f601adc05ed07",
+      "path": "work/blocks/15efb5813f174ec7c8b3d37b9d4a3b0b9a8e2d3fe2906e99218f601adc05ed07.json",
+      "group": "MRVL",
+      "accession": "0001058057-20-000014",
+      "block_class": "controls",
+      "chars": 5650,
+      "duplicate": false
+    },
+    {
+      "content_key": "1e11d6cc63e7e14ac153b8a251ef07788e8de5b479c61fe3651d49b98e23ca9a",
+      "occurrence_id": "55e063a3a1e58904169587bdbf7fcc791c5072a3d6b13c6eab5a14e6d44abd66",
+      "path": "work/blocks/55e063a3a1e58904169587bdbf7fcc791c5072a3d6b13c6eab5a14e6d44abd66.json",
+      "group": "NVDA",
+      "accession": "0001045810-20-000010",
+      "block_class": "controls",
+      "chars": 2647,
+      "duplicate": false
+    },
+    {
+      "content_key": "243f3e1445705405b12249c184638f8c562d2ac0a97a22d4b94f81b427cb639b",
+      "occurrence_id": "2aa0f6b04dc3e687cbdc111d062e2a848df47c995f49127f9391b07964750366",
+      "path": "work/blocks/2aa0f6b04dc3e687cbdc111d062e2a848df47c995f49127f9391b07964750366.json",
+      "group": "ORCL",
+      "accession": "0001564590-20-030125",
+      "block_class": "controls",
+      "chars": 5078,
+      "duplicate": false
+    },
+    {
+      "content_key": "654483ecaf6c9c01c8a837fd86d8734decaece5a3e3784524049107fb4494613",
+      "occurrence_id": "e644b69e220fed02d39e2d9080fcc1761936750797c54eb248d029013cce137f",
+      "path": "work/blocks/e644b69e220fed02d39e2d9080fcc1761936750797c54eb248d029013cce137f.json",
+      "group": "AVGO",
+      "accession": "0001730168-20-000226",
+      "block_class": "controls",
+      "chars": 4845,
+      "duplicate": false
+    },
+    {
+      "content_key": "ce33f8461322d131dcfe9d533f24bfc144a7e097654771368e6a3bee783e93b5",
+      "occurrence_id": "7630eac04f65ad4236a168b893120d48d17fd1ddc9afb8cff34203842df4c2d9",
+      "path": "work/blocks/7630eac04f65ad4236a168b893120d48d17fd1ddc9afb8cff34203842df4c2d9.json",
+      "group": "MSFT",
+      "accession": "0001564590-20-034944",
+      "block_class": "controls",
+      "chars": 2594,
+      "duplicate": false
+    },
+    {
+      "content_key": "3b68f3ddff81c021fb726e4477593eeefc4e7ded6612d50cb8c07728fd018895",
+      "occurrence_id": "079c6677accc6ab3bebec9977dc5f0367015b7f9d16679ed10956a766ccf4e14",
+      "path": "work/blocks/079c6677accc6ab3bebec9977dc5f0367015b7f9d16679ed10956a766ccf4e14.json",
+      "group": "AMZN",
+      "accession": "0001018724-21-000004",
+      "block_class": "controls",
+      "chars": 7375,
+      "duplicate": false
+    },
+    {
+      "content_key": "014afea5fb1bc55309407d1a0424db3552c6372170b81c2d8564827132487055",
+      "occurrence_id": "391a25053caf77b0fea0bc6f713a91c1164aca855aaf036691b5c3a2633383be",
+      "path": "work/blocks/391a25053caf77b0fea0bc6f713a91c1164aca855aaf036691b5c3a2633383be.json",
+      "group": "GOOGL",
+      "accession": "0001652044-21-000010",
+      "block_class": "controls",
+      "chars": 4489,
+      "duplicate": false
+    },
+    {
+      "content_key": "e546b17e2debc9b6531da94bb8eaaf11c1019ff8dc73cf3ee6da3571ed0dbf45",
+      "occurrence_id": "9bb4f9cf1d3478bf2f7b1f260667be5f258bd2580864d2da1b835372343c466d",
+      "path": "work/blocks/9bb4f9cf1d3478bf2f7b1f260667be5f258bd2580864d2da1b835372343c466d.json",
+      "group": "META",
+      "accession": "0001326801-21-000014",
+      "block_class": "controls",
+      "chars": 3195,
+      "duplicate": false
+    }
+  ]
+}

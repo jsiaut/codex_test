@@ -151,3 +151,9 @@ L’ordre publié se choisit désormais parmi les rôles de notes représentés 
 La reconstruction affectait implicitement le rang zéro aux documents et faits d’instances. Le rang vient désormais de l’ordre des DOCUMENT réellement publié dans l’en-tête SGML. Pour une instance dérivée non présente dans cet en-tête, un fait n’hérite du rang de son document inline que si son identifiant et son concept y ont une origine unique ; deux documents portant le même identifiant ne sont pas départagés par hypothèse. Le document source et la règle sont conservés dans les tables.
 
 Le rang −1 désigne l’API companyfacts ; −2 désigne un rang physique non établi et exclut le fait de la sélection admissible. Les métadonnées et instances dérivées ne se voient pas inventer un rang de soumission. Le test vérifie un rang physique non nul, l’ambiguïté d’identifiant, un concept divergent et une instance classique. Les tables intermédiaires seront reconstruites avec cette règle avant les contrôles de livraison.
+
+## D0033 — MetaLinks ancien et date de la fenêtre comptable
+
+Les MetaLinks de 2022 et antérieurs ne donnent ni menuCat ni order. Leur présence empêchait le recours à FilingSummary, et tous leurs blocs naturels de notes étaient ignorés. Les rôles sont désormais enrichis par jointure exacte avec les Role/RoleURI du FilingSummary réellement déposé, qui donne catégorie et ordre ; l’ordre des clés JSON n’est jamais utilisé comme ordre des notes. Le test reproduit le format ancien et vérifie la réadmission de la première note financière. Les blocs ajoutés, notamment les anciennes notes de parties liées, sont entièrement à lire.
+
+Les blocs de contrôle et de continuité se bornent sur reportDate, fin de la période comptable, et non sur filingDate. Un rapport annuel de l’exercice précédent déposé après le début du premier exercice analysé ne doit pas entrer dans cette tranche. La date de connaissance reste distincte et inchangée.

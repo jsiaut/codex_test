@@ -89,6 +89,23 @@ def test_note_one_fallback_ignores_earlier_regulatory_disclosures():
     assert first_financial_note_role(instance)=='financial_note_1'
 
 
+def test_legacy_metalinks_uses_filing_summary_category_and_order():
+    from secfragility.metadata import enrich_report_order,first_financial_note_role
+    from secfragility.text import extract_inline_blocks
+    # Native dictionary order puts revenue before policies, and lacks menuCat.
+    instance={'report':{'R2':{'role':'revenue','groupType':'disclosure'},
+        'R1':{'role':'policies','groupType':'disclosure'}},'tag':{
+        'g_Note':{'xbrltype':'textBlockItemType','presentation':['policies']},
+        'g_Revenue':{'xbrltype':'textBlockItemType','presentation':['revenue']}}}
+    metadata={'instance':{'a':instance}}
+    summary=b'<FilingSummary><MyReports><Report><Role>policies</Role><MenuCategory>Notes</MenuCategory></Report><Report><Role>revenue</Role><MenuCategory>Notes</MenuCategory></Report></MyReports></FilingSummary>'
+    enrich_report_order(metadata,summary,'filed/FilingSummary.xml')
+    assert first_financial_note_role(instance)=='policies'
+    raw=b'<html><body><ix:nonNumeric id="n" name="g:Note">Complete first financial note.</ix:nonNumeric></body></html>'
+    blocks=extract_inline_blocks(raw,metadata,[],normalizer_version='1')
+    assert len(blocks)==1 and blocks[0]['text']=='Complete first financial note.'
+
+
 def test_committee_sentence_fragment_is_not_a_proxy_heading():
     raw=(b'<div><p>The committee reviews <span>related party transactions.</span></p>'
          b'<p>Its audit oversight report describes review of financial statements and '
