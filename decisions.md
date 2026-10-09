@@ -259,3 +259,5 @@ D0055 — Amazon FY2022 : 166 candidats et note entièrement lus. Prévision vid
 D0056 — Alphabet FY2022 : note et 19 candidats entièrement lus. Trois zéros goodwill exclus car non matériel ne prouve pas absence. Les liens investissement/contrat commercial restent anonymes. Allongement de janvier 2023 postérieur à la clôture 2022 ; approbation du split et effet au 15 juillet distingués.
 
 D0057 — Oracle FY2023 Q2 : lecture complète des 60 candidats et de la note. Deux durées de serveurs sous concept incorporel et deux stocks dette/actions sous concept actions seules mis en quarantaine, sans altérer les données brutes. RPO correctement datés, effets de durée avant impôt et stocks non assimilés à des paiements.
+
+D0058 — Oracle FY2023 Q1 : lecture complète des 35 candidats et de la note. Quatre conflits balise/texte supplémentaires mis en quarantaine, faits bruts inchangés. Les options évoquées vont ici jusqu’à décembre 2023, sans importer la date juin 2025 des dépôts ultérieurs ; l’investie reste anonyme dans ce bloc.

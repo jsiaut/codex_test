@@ -925,5 +925,41 @@
     "reason": "Combined debt equity instruments tagged equity only",
     "decision": "D0057",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "88d76fc5349e54b35da691835522c5012ffb3d88e9389cf5aa22c61dbe52f175",
+    "content_key": "ddf58d02aad38a65fdf07adc72f0ef22a40cff898370829f50f1870d00baede1",
+    "accession": "0001564590-22-031545",
+    "affected_quantity": "server_useful_life",
+    "reason": "Tangible server duration tagged finite-lived intangible",
+    "decision": "D0058",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a515bb357261b0c9c52c468d4bd664f9475a4b09e6c34469fb06de78f6f838bd",
+    "content_key": "ddf58d02aad38a65fdf07adc72f0ef22a40cff898370829f50f1870d00baede1",
+    "accession": "0001564590-22-031545",
+    "affected_quantity": "server_useful_life",
+    "reason": "Tangible server duration tagged finite-lived intangible",
+    "decision": "D0058",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "7cbb7487f210ffa171b44324fc30dee4764f791dd2fe63c80beeba267ee00468",
+    "content_key": "ddf58d02aad38a65fdf07adc72f0ef22a40cff898370829f50f1870d00baede1",
+    "accession": "0001564590-22-031545",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity instruments tagged equity only",
+    "decision": "D0058",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "2af65b6c18ae8423bfb63ecc77b1d5d86a1cdcc5306b1627a90052932551a21b",
+    "content_key": "ddf58d02aad38a65fdf07adc72f0ef22a40cff898370829f50f1870d00baede1",
+    "accession": "0001564590-22-031545",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity instruments tagged equity only",
+    "decision": "D0058",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
