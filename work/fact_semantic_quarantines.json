@@ -889,5 +889,41 @@
     "reason": "Not material is not explicit zero",
     "decision": "D0056",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "c2bf29c1ac1cefe407322f145a404bf0050c86c852167e01d811fc5d2e03c207",
+    "content_key": "51c4e46c728d53402ef597a17a8ea915fd317e9025594d1354543709cb4cbf3d",
+    "accession": "0001564590-22-039278",
+    "affected_quantity": "server_useful_life",
+    "reason": "Tangible server duration tagged finite-lived intangible",
+    "decision": "D0057",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "08d50b18ad5dc4d90fef16564eb26e183cfa5ee0b57e3a2aa1d382ceae28e233",
+    "content_key": "51c4e46c728d53402ef597a17a8ea915fd317e9025594d1354543709cb4cbf3d",
+    "accession": "0001564590-22-039278",
+    "affected_quantity": "server_useful_life",
+    "reason": "Tangible server duration tagged finite-lived intangible",
+    "decision": "D0057",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "9456b21888654cc2372867652aa1712a21f5a52136f68d2eb75e87f7aca7fc9a",
+    "content_key": "51c4e46c728d53402ef597a17a8ea915fd317e9025594d1354543709cb4cbf3d",
+    "accession": "0001564590-22-039278",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity instruments tagged equity only",
+    "decision": "D0057",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "d172c54fda625ba2daa4f9eeed7c27c95fbf1cb3fb6e32b34b033e8f2e9463ac",
+    "content_key": "51c4e46c728d53402ef597a17a8ea915fd317e9025594d1354543709cb4cbf3d",
+    "accession": "0001564590-22-039278",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity instruments tagged equity only",
+    "decision": "D0057",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]

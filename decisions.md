@@ -257,3 +257,5 @@ D0054 — Oracle FY2023 Q3 : lecture complète des 59 candidats et de la note. D
 D0055 — Amazon FY2022 : 166 candidats et note entièrement lus. Prévision vidéo 2023 de résultat opérationnel balisée résultat net, et deux stocks totaux de warrants seulement principalement Level2 sous dimension Level2 seule : trois quarantaines. Les allongements équipement et vidéo sont séparés, avant/après impôt distincts, aucun paiement Anthropic importé.
 
 D0056 — Alphabet FY2022 : note et 19 candidats entièrement lus. Trois zéros goodwill exclus car non matériel ne prouve pas absence. Les liens investissement/contrat commercial restent anonymes. Allongement de janvier 2023 postérieur à la clôture 2022 ; approbation du split et effet au 15 juillet distingués.
+
+D0057 — Oracle FY2023 Q2 : lecture complète des 60 candidats et de la note. Deux durées de serveurs sous concept incorporel et deux stocks dette/actions sous concept actions seules mis en quarantaine, sans altérer les données brutes. RPO correctement datés, effets de durée avant impôt et stocks non assimilés à des paiements.

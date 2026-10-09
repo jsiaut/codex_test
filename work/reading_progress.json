@@ -1,20 +1,20 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
   "active_unique_keys": 1304,
-  "completed_unique_keys": 462,
-  "remaining_unique_keys": 842,
-  "accepted_observations": 3289,
+  "completed_unique_keys": 472,
+  "remaining_unique_keys": 832,
+  "accepted_observations": 3350,
   "completed_occurrences_by_class": {
     "item404": 166,
     "related_parties": 31,
-    "going_concern": 143,
-    "controls": 147
+    "going_concern": 148,
+    "controls": 152
   },
   "validation_rejected_attempts_by_phase": {
     "semantic": 13,
     "schema": 10
   },
-  "updated_at": "2026-10-09T19:42:43.183607+00:00",
+  "updated_at": "2026-10-09T19:48:45.255779+00:00",
   "read_packet_logging_started_2026_10_09": true,
   "independent_audit_performed": false
 }
