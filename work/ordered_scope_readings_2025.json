@@ -60,11 +60,35 @@
     "body_parts_personally_read_in_full": [
       0,
       1,
-      2
+      2,
+      3,
+      4,
+      5
     ],
-    "next_body_part": 3,
-    "scope_determination_complete": false,
-    "submitted_observations": false,
-    "proof": "In progress, solely establishing financial holders/InitialPurchasers. Header trustee alone and independent Item1.01 549dfd02 fully reread do not establish actual holder identities. No body amounts or links exploited."
+    "next_body_part": null,
+    "scope_determination_complete": true,
+    "submitted_observations": true,
+    "proof": "Holder initially DTC nominee, DTC clearing agency; all11 InitialPurchasers financial named firms. Part5 re-served after context truncation and fully read. Sole scope proof, entire714:661086 financial_parties_only unexploited, parts6through24 unread.",
+    "body_parts_unread": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
   }
 ]
