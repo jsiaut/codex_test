@@ -1,0 +1,1510 @@
+{
+  "cik": "0001181412",
+  "accession": "0001628280-26-052535",
+  "base": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052535/",
+  "inventory": [
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "0001628280-26-052535-index-headers.html",
+      "type": "text.gif",
+      "size": ""
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "0001628280-26-052535-index.html",
+      "type": "text.gif",
+      "size": ""
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "0001628280-26-052535.txt",
+      "type": "text.gif",
+      "size": ""
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "0001628280-26-052535-xbrl.zip",
+      "type": "compressed.gif",
+      "size": "389718"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "a104-meshoptical2025equity.htm",
+      "type": "text.gif",
+      "size": "155657"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "a31-restatedcertificateoff.htm",
+      "type": "text.gif",
+      "size": "108994"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "a311-section302certificati.htm",
+      "type": "text.gif",
+      "size": "9680"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "a312-section302certificati.htm",
+      "type": "text.gif",
+      "size": "9682"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "a32-amendedandrestatedbyla.htm",
+      "type": "text.gif",
+      "size": "343811"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "a321-section906certificati.htm",
+      "type": "text.gif",
+      "size": "5737"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "a322-section906certificati.htm",
+      "type": "text.gif",
+      "size": "5671"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "FilingSummary.xml",
+      "type": "text.gif",
+      "size": "51159"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "MetaLinks.json",
+      "type": "text.gif",
+      "size": "1245857"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R1.htm",
+      "type": "text.gif",
+      "size": "55350"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R10.htm",
+      "type": "text.gif",
+      "size": "10190"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R11.htm",
+      "type": "text.gif",
+      "size": "23378"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R12.htm",
+      "type": "text.gif",
+      "size": "62239"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R13.htm",
+      "type": "text.gif",
+      "size": "11940"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R14.htm",
+      "type": "text.gif",
+      "size": "25306"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R15.htm",
+      "type": "text.gif",
+      "size": "47434"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R16.htm",
+      "type": "text.gif",
+      "size": "60737"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R17.htm",
+      "type": "text.gif",
+      "size": "6614"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R18.htm",
+      "type": "text.gif",
+      "size": "101962"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R19.htm",
+      "type": "text.gif",
+      "size": "59714"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R2.htm",
+      "type": "text.gif",
+      "size": "154598"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R20.htm",
+      "type": "text.gif",
+      "size": "24894"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R21.htm",
+      "type": "text.gif",
+      "size": "233894"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R22.htm",
+      "type": "text.gif",
+      "size": "45236"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R23.htm",
+      "type": "text.gif",
+      "size": "22223"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R24.htm",
+      "type": "text.gif",
+      "size": "10538"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R25.htm",
+      "type": "text.gif",
+      "size": "27540"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R26.htm",
+      "type": "text.gif",
+      "size": "11402"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R27.htm",
+      "type": "text.gif",
+      "size": "153014"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R28.htm",
+      "type": "text.gif",
+      "size": "12040"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R29.htm",
+      "type": "text.gif",
+      "size": "16723"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R3.htm",
+      "type": "text.gif",
+      "size": "51529"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R30.htm",
+      "type": "text.gif",
+      "size": "29626"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R31.htm",
+      "type": "text.gif",
+      "size": "24384"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R32.htm",
+      "type": "text.gif",
+      "size": "22828"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R33.htm",
+      "type": "text.gif",
+      "size": "56967"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R34.htm",
+      "type": "text.gif",
+      "size": "11905"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R35.htm",
+      "type": "text.gif",
+      "size": "21591"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R36.htm",
+      "type": "text.gif",
+      "size": "47209"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R37.htm",
+      "type": "text.gif",
+      "size": "60615"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R38.htm",
+      "type": "text.gif",
+      "size": "75902"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R39.htm",
+      "type": "text.gif",
+      "size": "30651"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R4.htm",
+      "type": "text.gif",
+      "size": "112085"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R40.htm",
+      "type": "text.gif",
+      "size": "46870"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R41.htm",
+      "type": "text.gif",
+      "size": "225395"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R42.htm",
+      "type": "text.gif",
+      "size": "45827"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R43.htm",
+      "type": "text.gif",
+      "size": "19387"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R44.htm",
+      "type": "text.gif",
+      "size": "9602"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R45.htm",
+      "type": "text.gif",
+      "size": "148503"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R46.htm",
+      "type": "text.gif",
+      "size": "10476"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R47.htm",
+      "type": "text.gif",
+      "size": "17110"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R48.htm",
+      "type": "text.gif",
+      "size": "14942"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R49.htm",
+      "type": "text.gif",
+      "size": "35568"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R5.htm",
+      "type": "text.gif",
+      "size": "5696"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R50.htm",
+      "type": "text.gif",
+      "size": "22177"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R51.htm",
+      "type": "text.gif",
+      "size": "12805"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R52.htm",
+      "type": "text.gif",
+      "size": "10409"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R53.htm",
+      "type": "text.gif",
+      "size": "12807"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R54.htm",
+      "type": "text.gif",
+      "size": "37423"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R55.htm",
+      "type": "text.gif",
+      "size": "8202"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R56.htm",
+      "type": "text.gif",
+      "size": "38512"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R57.htm",
+      "type": "text.gif",
+      "size": "31611"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R58.htm",
+      "type": "text.gif",
+      "size": "14354"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R59.htm",
+      "type": "text.gif",
+      "size": "15861"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R6.htm",
+      "type": "text.gif",
+      "size": "33830"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R60.htm",
+      "type": "text.gif",
+      "size": "63766"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R61.htm",
+      "type": "text.gif",
+      "size": "9040"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R62.htm",
+      "type": "text.gif",
+      "size": "8309"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R63.htm",
+      "type": "text.gif",
+      "size": "71916"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R64.htm",
+      "type": "text.gif",
+      "size": "280370"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R65.htm",
+      "type": "text.gif",
+      "size": "22361"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R66.htm",
+      "type": "text.gif",
+      "size": "37135"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R67.htm",
+      "type": "text.gif",
+      "size": "21420"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R68.htm",
+      "type": "text.gif",
+      "size": "30343"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R69.htm",
+      "type": "text.gif",
+      "size": "66940"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R7.htm",
+      "type": "text.gif",
+      "size": "205080"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R70.htm",
+      "type": "text.gif",
+      "size": "79182"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R71.htm",
+      "type": "text.gif",
+      "size": "163896"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R72.htm",
+      "type": "text.gif",
+      "size": "32720"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R73.htm",
+      "type": "text.gif",
+      "size": "58637"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R74.htm",
+      "type": "text.gif",
+      "size": "11993"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R75.htm",
+      "type": "text.gif",
+      "size": "15074"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R76.htm",
+      "type": "text.gif",
+      "size": "4938"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R77.htm",
+      "type": "text.gif",
+      "size": "13377"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R78.htm",
+      "type": "text.gif",
+      "size": "4905"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R79.htm",
+      "type": "text.gif",
+      "size": "18006"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R8.htm",
+      "type": "text.gif",
+      "size": "121916"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R80.htm",
+      "type": "text.gif",
+      "size": "14356"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R81.htm",
+      "type": "text.gif",
+      "size": "45630"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R82.htm",
+      "type": "text.gif",
+      "size": "29772"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R83.htm",
+      "type": "text.gif",
+      "size": "113730"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R84.htm",
+      "type": "text.gif",
+      "size": "6410"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R85.htm",
+      "type": "text.gif",
+      "size": "11632"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R86.htm",
+      "type": "text.gif",
+      "size": "36851"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "R9.htm",
+      "type": "text.gif",
+      "size": "4837"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "report.css",
+      "type": "text.gif",
+      "size": "2768"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "Show.js",
+      "type": "text.gif",
+      "size": "1086"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "spcx-20260630.htm",
+      "type": "text.gif",
+      "size": "2271923"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "spcx-20260630.xsd",
+      "type": "text.gif",
+      "size": "76993"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "spcx-20260630_cal.xml",
+      "type": "text.gif",
+      "size": "99265"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "spcx-20260630_def.xml",
+      "type": "text.gif",
+      "size": "386229"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "spcx-20260630_htm.xml",
+      "type": "text.gif",
+      "size": "2342145"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "spcx-20260630_lab.xml",
+      "type": "text.gif",
+      "size": "833916"
+    },
+    {
+      "last-modified": "2026-08-04 16:05:48",
+      "name": "spcx-20260630_pre.xml",
+      "type": "text.gif",
+      "size": "620393"
+    }
+  ],
+  "names": [
+    "0001628280-26-052535-index-headers.html",
+    "0001628280-26-052535-index.html",
+    "0001628280-26-052535.txt",
+    "0001628280-26-052535-xbrl.zip",
+    "a104-meshoptical2025equity.htm",
+    "a31-restatedcertificateoff.htm",
+    "a311-section302certificati.htm",
+    "a312-section302certificati.htm",
+    "a32-amendedandrestatedbyla.htm",
+    "a321-section906certificati.htm",
+    "a322-section906certificati.htm",
+    "FilingSummary.xml",
+    "MetaLinks.json",
+    "R1.htm",
+    "R10.htm",
+    "R11.htm",
+    "R12.htm",
+    "R13.htm",
+    "R14.htm",
+    "R15.htm",
+    "R16.htm",
+    "R17.htm",
+    "R18.htm",
+    "R19.htm",
+    "R2.htm",
+    "R20.htm",
+    "R21.htm",
+    "R22.htm",
+    "R23.htm",
+    "R24.htm",
+    "R25.htm",
+    "R26.htm",
+    "R27.htm",
+    "R28.htm",
+    "R29.htm",
+    "R3.htm",
+    "R30.htm",
+    "R31.htm",
+    "R32.htm",
+    "R33.htm",
+    "R34.htm",
+    "R35.htm",
+    "R36.htm",
+    "R37.htm",
+    "R38.htm",
+    "R39.htm",
+    "R4.htm",
+    "R40.htm",
+    "R41.htm",
+    "R42.htm",
+    "R43.htm",
+    "R44.htm",
+    "R45.htm",
+    "R46.htm",
+    "R47.htm",
+    "R48.htm",
+    "R49.htm",
+    "R5.htm",
+    "R50.htm",
+    "R51.htm",
+    "R52.htm",
+    "R53.htm",
+    "R54.htm",
+    "R55.htm",
+    "R56.htm",
+    "R57.htm",
+    "R58.htm",
+    "R59.htm",
+    "R6.htm",
+    "R60.htm",
+    "R61.htm",
+    "R62.htm",
+    "R63.htm",
+    "R64.htm",
+    "R65.htm",
+    "R66.htm",
+    "R67.htm",
+    "R68.htm",
+    "R69.htm",
+    "R7.htm",
+    "R70.htm",
+    "R71.htm",
+    "R72.htm",
+    "R73.htm",
+    "R74.htm",
+    "R75.htm",
+    "R76.htm",
+    "R77.htm",
+    "R78.htm",
+    "R79.htm",
+    "R8.htm",
+    "R80.htm",
+    "R81.htm",
+    "R82.htm",
+    "R83.htm",
+    "R84.htm",
+    "R85.htm",
+    "R86.htm",
+    "R9.htm",
+    "report.css",
+    "Show.js",
+    "spcx-20260630.htm",
+    "spcx-20260630.xsd",
+    "spcx-20260630_cal.xml",
+    "spcx-20260630_def.xml",
+    "spcx-20260630_htm.xml",
+    "spcx-20260630_lab.xml",
+    "spcx-20260630_pre.xml"
+  ],
+  "headers": [
+    {
+      "document_rank": 0,
+      "type": "10-Q",
+      "sequence": "1",
+      "filename": "spcx-20260630.htm",
+      "description": "10-Q"
+    },
+    {
+      "document_rank": 1,
+      "type": "EX-3.1",
+      "sequence": "2",
+      "filename": "a31-restatedcertificateoff.htm",
+      "description": "EX-3.1"
+    },
+    {
+      "document_rank": 2,
+      "type": "EX-3.2",
+      "sequence": "3",
+      "filename": "a32-amendedandrestatedbyla.htm",
+      "description": "EX-3.2"
+    },
+    {
+      "document_rank": 3,
+      "type": "EX-10.4",
+      "sequence": "4",
+      "filename": "a104-meshoptical2025equity.htm",
+      "description": "EX-10.4"
+    },
+    {
+      "document_rank": 4,
+      "type": "EX-31.1",
+      "sequence": "5",
+      "filename": "a311-section302certificati.htm",
+      "description": "EX-31.1"
+    },
+    {
+      "document_rank": 5,
+      "type": "EX-31.2",
+      "sequence": "6",
+      "filename": "a312-section302certificati.htm",
+      "description": "EX-31.2"
+    },
+    {
+      "document_rank": 6,
+      "type": "EX-32.1",
+      "sequence": "7",
+      "filename": "a321-section906certificati.htm",
+      "description": "EX-32.1"
+    },
+    {
+      "document_rank": 7,
+      "type": "EX-32.2",
+      "sequence": "8",
+      "filename": "a322-section906certificati.htm",
+      "description": "EX-32.2"
+    },
+    {
+      "document_rank": 8,
+      "type": "EX-101.SCH",
+      "sequence": "9",
+      "filename": "spcx-20260630.xsd",
+      "description": "XBRL TAXONOMY EXTENSION SCHEMA DOCUMENT"
+    },
+    {
+      "document_rank": 9,
+      "type": "EX-101.CAL",
+      "sequence": "10",
+      "filename": "spcx-20260630_cal.xml",
+      "description": "XBRL TAXONOMY EXTENSION CALCULATION LINKBASE DOCUMENT"
+    },
+    {
+      "document_rank": 10,
+      "type": "EX-101.DEF",
+      "sequence": "11",
+      "filename": "spcx-20260630_def.xml",
+      "description": "XBRL TAXONOMY EXTENSION DEFINITION LINKBASE DOCUMENT"
+    },
+    {
+      "document_rank": 11,
+      "type": "EX-101.LAB",
+      "sequence": "12",
+      "filename": "spcx-20260630_lab.xml",
+      "description": "XBRL TAXONOMY EXTENSION LABEL LINKBASE DOCUMENT"
+    },
+    {
+      "document_rank": 12,
+      "type": "EX-101.PRE",
+      "sequence": "13",
+      "filename": "spcx-20260630_pre.xml",
+      "description": "XBRL TAXONOMY EXTENSION PRESENTATION LINKBASE DOCUMENT"
+    },
+    {
+      "document_rank": 13,
+      "type": "XML",
+      "sequence": "15",
+      "filename": "R1.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 14,
+      "type": "XML",
+      "sequence": "16",
+      "filename": "R2.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 15,
+      "type": "XML",
+      "sequence": "17",
+      "filename": "R3.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 16,
+      "type": "XML",
+      "sequence": "18",
+      "filename": "R4.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 17,
+      "type": "XML",
+      "sequence": "19",
+      "filename": "R5.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 18,
+      "type": "XML",
+      "sequence": "20",
+      "filename": "R6.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 19,
+      "type": "XML",
+      "sequence": "21",
+      "filename": "R7.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 20,
+      "type": "XML",
+      "sequence": "22",
+      "filename": "R8.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 21,
+      "type": "XML",
+      "sequence": "23",
+      "filename": "R9.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 22,
+      "type": "XML",
+      "sequence": "24",
+      "filename": "R10.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 23,
+      "type": "XML",
+      "sequence": "25",
+      "filename": "R11.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 24,
+      "type": "XML",
+      "sequence": "26",
+      "filename": "R12.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 25,
+      "type": "XML",
+      "sequence": "27",
+      "filename": "R13.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 26,
+      "type": "XML",
+      "sequence": "28",
+      "filename": "R14.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 27,
+      "type": "XML",
+      "sequence": "29",
+      "filename": "R15.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 28,
+      "type": "XML",
+      "sequence": "30",
+      "filename": "R16.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 29,
+      "type": "XML",
+      "sequence": "31",
+      "filename": "R17.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 30,
+      "type": "XML",
+      "sequence": "32",
+      "filename": "R18.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 31,
+      "type": "XML",
+      "sequence": "33",
+      "filename": "R19.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 32,
+      "type": "XML",
+      "sequence": "34",
+      "filename": "R20.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 33,
+      "type": "XML",
+      "sequence": "35",
+      "filename": "R21.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 34,
+      "type": "XML",
+      "sequence": "36",
+      "filename": "R22.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 35,
+      "type": "XML",
+      "sequence": "37",
+      "filename": "R23.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 36,
+      "type": "XML",
+      "sequence": "38",
+      "filename": "R24.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 37,
+      "type": "XML",
+      "sequence": "39",
+      "filename": "R25.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 38,
+      "type": "XML",
+      "sequence": "40",
+      "filename": "R26.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 39,
+      "type": "XML",
+      "sequence": "41",
+      "filename": "R27.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 40,
+      "type": "XML",
+      "sequence": "42",
+      "filename": "R28.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 41,
+      "type": "XML",
+      "sequence": "43",
+      "filename": "R29.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 42,
+      "type": "XML",
+      "sequence": "44",
+      "filename": "R30.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 43,
+      "type": "XML",
+      "sequence": "45",
+      "filename": "R31.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 44,
+      "type": "XML",
+      "sequence": "46",
+      "filename": "R32.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 45,
+      "type": "XML",
+      "sequence": "47",
+      "filename": "R33.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 46,
+      "type": "XML",
+      "sequence": "48",
+      "filename": "R34.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 47,
+      "type": "XML",
+      "sequence": "49",
+      "filename": "R35.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 48,
+      "type": "XML",
+      "sequence": "50",
+      "filename": "R36.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 49,
+      "type": "XML",
+      "sequence": "51",
+      "filename": "R37.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 50,
+      "type": "XML",
+      "sequence": "52",
+      "filename": "R38.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 51,
+      "type": "XML",
+      "sequence": "53",
+      "filename": "R39.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 52,
+      "type": "XML",
+      "sequence": "54",
+      "filename": "R40.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 53,
+      "type": "XML",
+      "sequence": "55",
+      "filename": "R41.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 54,
+      "type": "XML",
+      "sequence": "56",
+      "filename": "R42.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 55,
+      "type": "XML",
+      "sequence": "57",
+      "filename": "R43.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 56,
+      "type": "XML",
+      "sequence": "58",
+      "filename": "R44.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 57,
+      "type": "XML",
+      "sequence": "59",
+      "filename": "R45.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 58,
+      "type": "XML",
+      "sequence": "60",
+      "filename": "R46.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 59,
+      "type": "XML",
+      "sequence": "61",
+      "filename": "R47.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 60,
+      "type": "XML",
+      "sequence": "62",
+      "filename": "R48.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 61,
+      "type": "XML",
+      "sequence": "63",
+      "filename": "R49.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 62,
+      "type": "XML",
+      "sequence": "64",
+      "filename": "R50.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 63,
+      "type": "XML",
+      "sequence": "65",
+      "filename": "R51.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 64,
+      "type": "XML",
+      "sequence": "66",
+      "filename": "R52.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 65,
+      "type": "XML",
+      "sequence": "67",
+      "filename": "R53.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 66,
+      "type": "XML",
+      "sequence": "68",
+      "filename": "R54.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 67,
+      "type": "XML",
+      "sequence": "69",
+      "filename": "R55.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 68,
+      "type": "XML",
+      "sequence": "70",
+      "filename": "R56.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 69,
+      "type": "XML",
+      "sequence": "71",
+      "filename": "R57.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 70,
+      "type": "XML",
+      "sequence": "72",
+      "filename": "R58.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 71,
+      "type": "XML",
+      "sequence": "73",
+      "filename": "R59.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 72,
+      "type": "XML",
+      "sequence": "74",
+      "filename": "R60.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 73,
+      "type": "XML",
+      "sequence": "75",
+      "filename": "R61.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 74,
+      "type": "XML",
+      "sequence": "76",
+      "filename": "R62.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 75,
+      "type": "XML",
+      "sequence": "77",
+      "filename": "R63.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 76,
+      "type": "XML",
+      "sequence": "78",
+      "filename": "R64.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 77,
+      "type": "XML",
+      "sequence": "79",
+      "filename": "R65.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 78,
+      "type": "XML",
+      "sequence": "80",
+      "filename": "R66.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 79,
+      "type": "XML",
+      "sequence": "81",
+      "filename": "R67.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 80,
+      "type": "XML",
+      "sequence": "82",
+      "filename": "R68.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 81,
+      "type": "XML",
+      "sequence": "83",
+      "filename": "R69.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 82,
+      "type": "XML",
+      "sequence": "84",
+      "filename": "R70.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 83,
+      "type": "XML",
+      "sequence": "85",
+      "filename": "R71.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 84,
+      "type": "XML",
+      "sequence": "86",
+      "filename": "R72.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 85,
+      "type": "XML",
+      "sequence": "87",
+      "filename": "R73.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 86,
+      "type": "XML",
+      "sequence": "88",
+      "filename": "R74.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 87,
+      "type": "XML",
+      "sequence": "89",
+      "filename": "R75.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 88,
+      "type": "XML",
+      "sequence": "90",
+      "filename": "R76.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 89,
+      "type": "XML",
+      "sequence": "91",
+      "filename": "R77.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 90,
+      "type": "XML",
+      "sequence": "92",
+      "filename": "R78.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 91,
+      "type": "XML",
+      "sequence": "93",
+      "filename": "R79.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 92,
+      "type": "XML",
+      "sequence": "94",
+      "filename": "R80.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 93,
+      "type": "XML",
+      "sequence": "95",
+      "filename": "R81.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 94,
+      "type": "XML",
+      "sequence": "96",
+      "filename": "R82.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 95,
+      "type": "XML",
+      "sequence": "97",
+      "filename": "R83.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 96,
+      "type": "XML",
+      "sequence": "98",
+      "filename": "R84.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 97,
+      "type": "XML",
+      "sequence": "99",
+      "filename": "R85.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 98,
+      "type": "XML",
+      "sequence": "100",
+      "filename": "R86.htm",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 99,
+      "type": "XML",
+      "sequence": "101",
+      "filename": "report.css",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 100,
+      "type": "XML",
+      "sequence": "102",
+      "filename": "Show.js",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 101,
+      "type": "XML",
+      "sequence": "104",
+      "filename": "FilingSummary.xml",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 102,
+      "type": "JSON",
+      "sequence": "107",
+      "filename": "MetaLinks.json",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 103,
+      "type": "ZIP",
+      "sequence": "108",
+      "filename": "0001628280-26-052535-xbrl.zip",
+      "description": "IDEA: XBRL DOCUMENT"
+    },
+    {
+      "document_rank": 104,
+      "type": "XML",
+      "sequence": "109",
+      "filename": "spcx-20260630_htm.xml",
+      "description": "IDEA: XBRL DOCUMENT"
+    }
+  ],
+  "xbrl_archives": [
+    "0001628280-26-052535-xbrl.zip"
+  ],
+  "instances": [
+    "spcx-20260630_htm.xml"
+  ],
+  "filing_summary": "FilingSummary.xml",
+  "metalinks": "MetaLinks.json"
+}

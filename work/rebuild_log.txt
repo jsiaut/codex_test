@@ -1,0 +1,1 @@
+{"documents": 3572, "facts": 526171, "observations": 0, "entities": 0, "links": 0, "measures": 0, "controls": 0, "exclusions": 0}

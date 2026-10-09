@@ -4,6 +4,20 @@ from secfragility.spacex_annual import label_key
 from secfragility.blocks import section_blocks
 
 
+def test_committee_sentence_fragment_is_not_a_proxy_heading():
+    raw=(b'<div><p>The committee reviews <span>related party transactions.</span></p>'
+         b'<p>Its audit oversight report describes review of financial statements and '
+         b'independence policies. This text describes committee responsibilities only.</p>'
+         b'<p style="font-size:14pt;font-weight:bold">CERTAIN RELATIONSHIPS AND RELATED PARTY TRANSACTIONS</p>'
+         b'<p>The company purchased services from a named related entity. The transaction '
+         b'is described here together with its approval process and reporting obligations.</p>'
+         b'<p style="font-size:14pt;font-weight:bold">OTHER INFORMATION</p></div>')
+    blocks=section_blocks(raw,form='DEF 14A',config={'normalizer_version':'1'})
+    assert len(blocks)==1
+    assert 'The company purchased services' in blocks[0]['text']
+    assert 'audit oversight report' not in blocks[0]['text']
+
+
 def test_issuer_namespace_date_is_attribute_even_inside_uri():
     assert namespace_family('http://www.microsoft.com/20260331/taxonomy')==namespace_family('http://www.microsoft.com/20250331/taxonomy')
     assert namespace_family('http://www.xbrl.org/2003/instance')=='http://www.xbrl.org/2003/instance'

@@ -8,7 +8,9 @@ User-Agent est celui fourni par l’utilisateur. Le réseau est centralisé, pla
 Le chantier est en cours. Les tables de faits issues d’une reconstruction
 intermédiaire ne constituent pas une livraison comptable validée. La lecture des
 blocs, les mesures, les contrôles et l’audit indépendant ne sont pas terminés.
-Les faits de l’annexe D ne sont jamais recopiés comme résultats.
+Les faits de l’annexe D ne sont jamais recopiés comme résultats. L’audit
+indépendant n’est pas réalisé, conformément à la demande de travailler sans
+sous-agent.
 
 ## Commandes
 
@@ -34,15 +36,28 @@ effective d’un bloc. Le module valide le schéma et les citations, contreparti
 faits candidats et unités. Un fichier versionné par clé de contenu conserve
 chaque passe et ses rejets. Aucune extraction par API de modèle n’est utilisée.
 
-## Éléments restant à terminer
+## Reprise et sauvegarde
 
-La vérification détaillée des endpoints de dépôt et des paquets de taxonomie,
-les décisions de périmètre SpaceX et des prédécesseurs, le raffinement des bornes
-fiscales de lecture, l’univers attendu et les files de blocs doivent être terminés.
-La correspondance exhaustive des concepts, les deux vues, les calculs SQL des
-mesures et contrôles, la lecture de tous les blocs de la tranche, le graphe et les
-rendus finaux restent ensuite à réaliser. Le dossier `audit/AUDITOR.md` prépare
-une vérification ultérieure ; aucun audit indépendant n’a été effectué.
+La collecte est conservée dans le cache. La phase 2 poursuit la lecture directe
+des blocs ; son avancement est généré dans `work/reading_progress.json`. Les
+tables intermédiaires et les calibrations ne constituent pas le résultat final.
+L’assemblage du graphe, les contrôles finaux et les rendus restent à terminer.
 
-Aucune extension du premier passage n’est ouverte. Aucune automatisation n’est
-installée tant que le pipeline complet et ses rendus n’ont pas été validés.
+Une tâche quotidienne reprend l’exécution ou surveille les nouveaux dépôts,
+sous le verrou de session. Aucune extension du premier passage n’est ouverte.
+
+À la demande de l’utilisateur, les commits sont poussés vers
+`https://github.com/jsiaut/codex_test`. Les tables Parquet utilisent Git LFS.
+La lecture crée un point de sauvegarde toutes les dix clés terminées ou après
+dix minutes de travail. Ces commits intermédiaires ne déclarent pas l’exécution
+terminée. Le cache est exclu de Git et conservé séparément dans les pièces
+jointes d’une release GitHub de sauvegarde, avec son empreinte SHA-256.
+
+Pour reprendre sur une nouvelle machine, cloner le dépôt, exécuter `git lfs
+pull`, télécharger l’archive de sauvegarde de la release, vérifier son empreinte
+puis l’extraire à la racine. Ne pas restaurer le verrou ni le propriétaire de
+session : la nouvelle session doit acquérir son propre verrou. Le fichier
+`work/run.json` conserve l’instant logique de l’exécution inachevée.
+
+Le dossier `audit/AUDITOR.md` prépare une vérification ultérieure ; aucun audit
+indépendant n’a été effectué.

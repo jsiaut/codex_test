@@ -1,0 +1,3 @@
+{"documents": 6679, "facts": 609196, "observations": 0, "entities": 0, "links": 0, "measures": 0, "controls": 0, "exclusions": 0}
+{"documents": 6679, "facts": 609196, "observations": 0, "entities": 0, "links": 0, "measures": 2594, "controls": 5161, "exclusions": 0}
+[('c1_balance_components', 'ok', 1110), ('c1_balance_components', 'mismatch', 4), ('c1_balance_components', 'not_testable', 235), ('c2_cash_flow_components', 'ok', 584), ('c2_cash_flow_components', 'mismatch', 1), ('c2_cash_flow_components', 'not_testable', 704), ('c9_lease_liability', 'ok', 163), ('c9_lease_liability', 'not_testable', 149), ('c14_eps_scale', 'ok', 317), ('c14_eps_scale', 'mismatch', 5), ('c14_eps_scale', 'not_testable', 85), ('c16_concentration', 'ok', 1804)]

@@ -1,0 +1,42 @@
+{
+  "source_accession": "0001628280-26-042639",
+  "source_path": "work/filings/0001628280-26-042639/spaceexplorationtechnologi.htm",
+  "raw_byte_start": 7336456,
+  "raw_byte_end": 7361893,
+  "knowledge_date": "2026-06-12",
+  "reporting_scope": "as_if_combined",
+  "decision": "published_retrospective_common_control_basis",
+  "entities": [
+    {
+      "legal_name": "X.AI Holdings Corp.",
+      "legal_date": "2026-02-02",
+      "parent_legal_name": "Space Exploration Technologies Corp.",
+      "common_control_start": null,
+      "date_reason": "exact_common_control_start_day_not_disclosed",
+      "consolidation_treatment": "consolidated_subsidiary"
+    },
+    {
+      "legal_name": "X Holdings Corp.",
+      "legal_date": "2025-03-28",
+      "parent_legal_name": "X.AI Holdings Corp.",
+      "common_control_start": null,
+      "date_reason": "exact_common_control_start_day_not_disclosed",
+      "consolidation_treatment": "consolidated_subsidiary"
+    },
+    {
+      "legal_name": "X.AI Corp.",
+      "legal_date": "2025-03-28",
+      "parent_legal_name": "X.AI Holdings Corp.",
+      "common_control_start": null,
+      "date_reason": "operations_begin_month_only_March_2023",
+      "consolidation_treatment": "consolidated_subsidiary"
+    }
+  ],
+  "pending_names": [
+    "X Corp.",
+    "X.AI LLC",
+    "CTC Property, LLC"
+  ],
+  "raw_normalized_note": "Note 1 - Nature of Business\nDescription of Business\nSpace Exploration Technologies Corp. and its wholly owned subsidiaries, collectively referred to as the “Company”\nor “SpaceX,” operate three segments – (i) the Space segment designs, manufactures, and launches reusable rockets\nto provide high cadence, reliable, and affordable access to space at unprecedented scale, (ii) the Connectivity\nsegment operates a worldwide high-speed, low-latency broadband network powered by thousands of Starlink\nsatellites in Low-Earth Orbit, delivering connectivity to millions of consumer, enterprise, and government customers\nthrough our Starlink offering, and (iii) the AI segment operates a vertically integrated AI platform spanning a\nfrontier LLM Grok, AI solutions for consumer and enterprise customers, X — a real-time information,\nentertainment, and free speech platform — and AI computational infrastructure.\nSpaceX is advancing the boundaries of space technology and human spaceflight through its Falcon launch vehicles\nand Dragon spacecraft and is currently developing Starship, a fully reusable transportation system that is designed to\ncarry crew, cargo, satellites, and data centers to Earth orbit, the Moon, Mars, and beyond.\nSpaceX operates Starlink which delivers high-speed, low-latency broadband internet to customers around the globe,\nincluding to those who live in some of the most remote places on Earth. The Company also provides access to\nsatellite-to-mobile texting and voice services to mobile users (referred to as “Starlink Mobile”).\nSpaceX operates a global platform for public conversation known as X (formerly known as Twitter) as well as the\nGrok suite of text and multi-modal AI models, accessible to individual users via online platforms such as x.com and\nto enterprise clients for applications in research, productivity, and decision-making.\nThe Company’s corporate headquarters is located in Starbase, Texas. SpaceX was incorporated in the state of\nDelaware on March 14, 2002 and converted into a corporation organized under the laws of the State of Texas on\nFebruary 14, 2024.\nOn May 4, 2026, the Company effected a five-for-one forward stock split of its authorized, issued, and outstanding\nshares of Class A, Class B, and Class C Common Stock (“2026 Stock Split”). The conversion rate of SpaceX\nRedeemable Convertible Preferred Stock was proportionately adjusted to factor in the 2026 Stock Split. All share\nand per share information has been retroactively adjusted to reflect the 2026 Stock Split for all periods presented.\nOn February 2, 2026, the Company completed its acquisition of X.AI Holdings Corp. (“xAI”), pursuant to which\nxAI became a wholly-owned subsidiary of the Company (“xAI Merger”). Prior to the xAI Merger, on March 28,\n2025, xAI completed its acquisition of X Holdings Corp. (“X”) and X.AI Corp., in which X and X.AI Corp. became\nwholly-owned subsidiaries of xAI (“X Merger”, and collectively with xAI Merger, “Mergers”). X.AI Corp began\noperations in March 2023 and Twitter, Inc. (“Twitter”) was acquired by Mr. Elon Musk in October 2022. The\nMergers were each effected through a share exchange.\nThe Mergers have been accounted for as reorganizations of entities under common control as Mr. Elon Musk had a\ncontrolling financial interest in the Company, xAI and X through his majority voting interest in each such entity\nduring the years presented in these consolidated financial statements. The Company’s consolidated financial\nstatements have been prepared to reflect the retrospective combination of the net assets of the entities at their\nhistorical carrying amounts for all periods presented. No new goodwill or other intangible assets have been recorded\nand all historical related party transactions between the entities have been eliminated in consolidation. The capital\nstock and shareholders’ equity for all periods presented reflects a continuation of the historical SpaceX capital stock\nand shareholders’ equity, combined with the historical capital stock and shareholders’ equity of X and xAI merged\nunder common control, as adjusted by the respective exchange ratios used to effect the Mergers, except for xAI’s\nhistorical redeemable convertible preferred stock. This presentation constitutes a change in reporting entity. Refer to\nF-11\nTable of Contents\nNote 13, Redeemable Convertible Preferred Stock and Shareholders’ Equity for additional details.\nAs the consolidated financial statements already reflect the reorganization of entities under common control for all\nperiods presented, separate financial statements of xAI and X are not provided.",
+  "as_of": "2026-10-09T10:24:21.129672+00:00"
+}

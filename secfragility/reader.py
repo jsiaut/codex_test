@@ -68,6 +68,15 @@ def store(root,key,authored,*,schema_retry=False):
         row.update(authored_row);rows.append(row)
     result=submit(create(root),root,block,(root/block['source_path']).read_bytes(),rows,run['as_of'],schema_retry=schema_retry)
     if result['accepted']:session_command(root,'touch')
+    # Persist actual reading work regularly even if a later block is interrupted.
+    from .checkpoint import checkpoint
+    try:
+        saved=checkpoint(root)
+        if saved:result['checkpoint']=saved
+    except Exception as exc:
+        # Observation persistence precedes GitHub; a remote failure cannot erase it.
+        result['checkpoint_error']=str(exc)
+        print('GitHub checkpoint failed: '+str(exc))
     return result
 
 if __name__=='__main__':

@@ -1,0 +1,13 @@
+{
+  "url": "https://xbrl.fasb.org/us-gaap/2026/us-gaap-2026.zip",
+  "sha256": "f4c8b8b5697ba7d825a8614b159611cd25a46640e98a9737cda1e4a672bd4c81",
+  "bytes": 7387980,
+  "taxonomy_package": true,
+  "schema_name": "us-gaap-2026/elts/us-gaap-2026.xsd",
+  "concept_count": 17182,
+  "missing_anchors": [],
+  "going_concern_concept_present": true,
+  "going_concern_type": "dtr-types:textBlockItemType",
+  "tier": "F",
+  "use": "concept_definitions_only_not_financial_evidence"
+}

@@ -2,6 +2,7 @@ cache/
 work/session.lock
 work/network_state.json
 work/foreground_owner.json
+work/checkpoint_state.json
 work/compiled_metadata/
 work/blocks/
 work/calibration_tables/

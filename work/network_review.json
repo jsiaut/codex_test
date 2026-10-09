@@ -1,0 +1,8 @@
+{
+  "max_requests_in_rolling_second": 5,
+  "sec_limit_respected": true,
+  "pipeline_rate_respected": true,
+  "pause_violations": [],
+  "requests": 4673,
+  "bytes_received": 1783472769
+}

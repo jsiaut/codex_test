@@ -97,3 +97,11 @@ La raison sociale BCH San Jose LLC est coupée par une ligne dans le proxy Alpha
 ## D0023 — Portée des montants historiques et des mentions accessoires
 
 L'achat Oracle d'une participation Ampere à un autre investisseur (proxy 2022, accession 0001193125-22-250158) est secondaire, distinct de l'investissement en dette convertible du même exercice. Les montants appliqués à une commande prépayée sont des composantes des achats, jamais de nouveaux paiements. Les fonds engagés et les placements personnels des fondateurs d'Alphabet ne se confondent pas avec des versements du groupe. Les mois publiés deviennent des plages mensuelles explicites, sans jour d'événement inventé ; ils ne prouvent pas une détention actuelle. Les mentions de parties liées dans les thèmes de surveillance du comité d'audit sont des abstentions de portée, pas des opérations, et les déclarations d'absence Item 404 ne deviennent jamais une absence de financement client.
+
+## D0024 — Fragments de phrases et classifications datées
+
+Deux fins de phrases de rapports Broadcom, démarrant en minuscule, avaient été assimilées à des titres de parties liées. Leur lecture et les abstentions originales restent archivées ; elles quittent la file active après correction du découpage. La régression du parseur passe. Le proxy Alphabet 2020 décrit la levée Viz d’août 2019 par un montant arrondi et une plage plus courte que les proxies suivants : les pièces restent distinctes, sans addition de deux levées présumées. La cessation de la qualification de partie liée de GLOBALFOUNDRIES chez AMD en mai 2019 ne constate pas une sortie de participation.
+
+## D0025 — Sauvegardes distantes intermédiaires
+
+L’utilisateur demande des sauvegardes régulières et choisit explicitement le dépôt GitHub jsiaut/codex_test. L’historique initial est conservé ; les tables volumineuses utilisent Git LFS, et une archive distincte conserve le cache non versionné et les fichiers de reprise. Le lecteur pousse un point de sauvegarde toutes les dix clés terminées ou toutes les dix minutes de travail. Ces commits ne remplacent ni le commit de livraison en fin d’exécution, ni les preuves de lecture, ni un audit indépendant. Un échec réseau de GitHub laisse les observations et le commit local intacts et est signalé au conducteur.

@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "repository": "jsiaut/codex_test",
+  "url": "https://github.com/jsiaut/codex_test",
+  "branch": "main",
+  "authorized_at": "2026-10-09T15:06:45.502041+00:00",
+  "completed_block_interval": 10,
+  "minutes_interval": 10,
+  "cache_strategy": "separate_release_archive"
+}

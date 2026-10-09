@@ -91,6 +91,8 @@ def section_blocks(raw: bytes, *, form: str, config: dict) -> list[dict]:
         elif form in ('DEF 14A','DEFA14A','424B4','10-K/A') and governance.match(text.rstrip('.:')) and not governance_sections:
             if re.search(r'\s\d{1,3}$',text):
                 continue  # unlinked table-of-contents entry with page number
+            if text[:1].islower() and text.endswith('.'):
+                continue  # trailing sentence span in committee responsibilities
             headings.append({'node':node,'pos':pos,'label':text,'item':'404'})
     headings.extend(governance_sections)
     # Remove nested copies of one heading by retaining the outermost position.

@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://www.sec.gov/search-filings/edgar-application-programming-interfaces",
+    "bytes": 68990,
+    "checks": {
+      "submissions_documented": true,
+      "companyfacts_documented": true,
+      "companyconcept_documented": true,
+      "pagination_documented": true
+    }
+  },
+  {
+    "url": "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data",
+    "bytes": 80346,
+    "checks": {}
+  },
+  {
+    "url": "https://www.sec.gov/about/developer-resources",
+    "bytes": 68422,
+    "checks": {}
+  }
+]

@@ -1,0 +1,1 @@
+{"occurrences": 2326, "unique_keys": 1332, "text_chars": 37286122, "not_processed_outside_scope": 7236}
