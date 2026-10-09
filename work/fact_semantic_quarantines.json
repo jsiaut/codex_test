@@ -727,5 +727,41 @@
     "reason": "Narrative combines debt investments equity securities and related instruments whereas concept is equity only",
     "decision": "D0051",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "fb9bb526e0f39a89e35b8e24362dd931baaabe87155b4f04c7150c4a899ca143",
+    "content_key": "54dd4154f045bb2a04e95976fb46b6cdbfbcde91513aa24c028a0623616ab0d3",
+    "accession": "0000950170-23-047713",
+    "affected_quantity": "revenue_recognized_from_opening_deferred_revenue",
+    "reason": "Narrative Q1FY2024 recognition during JunAug2023 whereas tagged FY2023 Jun2022May2023",
+    "decision": "D0052",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "91313fb660866492cf79e0b8b35247000341b54de5ae6c0a576409694ca996b1",
+    "content_key": "54dd4154f045bb2a04e95976fb46b6cdbfbcde91513aa24c028a0623616ab0d3",
+    "accession": "0000950170-23-047713",
+    "affected_quantity": "revenue_recognized_from_opening_deferred_revenue",
+    "reason": "Narrative Q1FY2023 recognition during JunAug2022 whereas tagged FY2022 Jun2021May2022",
+    "decision": "D0052",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "642f2bdb40de42488dfff4444a265674e7ea9a52251f7f47cb0dee627faf34a8",
+    "content_key": "54dd4154f045bb2a04e95976fb46b6cdbfbcde91513aa24c028a0623616ab0d3",
+    "accession": "0000950170-23-047713",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity and related instruments tagged equity only",
+    "decision": "D0052",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "03d30afdfd5368809ad23b3d0e66ef8fecb783e1a30f78d1417c7b3e5786c961",
+    "content_key": "54dd4154f045bb2a04e95976fb46b6cdbfbcde91513aa24c028a0623616ab0d3",
+    "accession": "0000950170-23-047713",
+    "affected_quantity": "non_marketable_investments_combined_stock",
+    "reason": "Combined debt equity and related instruments tagged equity only",
+    "decision": "D0052",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
