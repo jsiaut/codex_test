@@ -1,0 +1,3 @@
+from work.authored_helpers import *
+save('634881eacc1ffa874e56cc8e6a34aa7faa3a09ad9d6bdb911e9aff664ff2fe08',[
+dict(abstention('TERM LOAN AGREEMENT','financial_parties_only: Entire first physical page read after1.01. OriginalJun8 2026 loan, not autonomousAmendment/Waiver/Consent. Allnamedothersfinancialbanks/underwritingagents Citibank,JPMorgan,BofA,HSBCUK,WellsFargo,Barclays,BNP,Deutsche,Goldman,MorganStanley,RBC,SocGen,TD,Scotia,BBVA,Santander,BOC,ING,Intesa,Mizuho,NatWest; unnamedLENDERSfinancialroleidentitiespending no allocatedexposures. PhysicalpageendsNatWest, noinventedremainingnames. Bodyexcluded11.1; noactualdraw assumed fromcover.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=6751,locator='rawbytes:0:6751')])
