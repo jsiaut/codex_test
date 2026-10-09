@@ -1,7 +1,7 @@
 {
   "content_key": "f2d5a8374cd71e62dc8d16661c40113379cef9237bf5224ae30b936563286380",
   "accession": "0001193125-25-227562",
-  "full_reading_complete": false,
+  "full_reading_complete": true,
   "header_personally_read": true,
   "body_parts_personally_read_in_full": [
     0,
@@ -23,11 +23,16 @@
     16,
     17,
     18,
-    19
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
   ],
-  "next_body_part": 20,
+  "next_body_part": null,
   "total_body_parts": 25,
-  "submitted_observations": false,
+  "submitted_observations": true,
   "notes_authored_by_reader": [
     "EX10 title FIFTH AMENDMENT independently qualifies full body reading under11.1 regardless financialparties. Do not exclude body asEX4 mistakeD89.",
     "Part0 original amendment datedSep29_2025; signedBorrowerComputeAcquisitionCoIVLLC/ParentCoreWeaveInc MichaelIntrator andUSBank agents. LenderSignaturesOnFile not actualnamedfund signatures. Clause3 conditions, no default/MAE reps not proofa default occurred; determine effectiveevent usingauthorizedindependentItem1.01 after allbodyreading.",
@@ -41,7 +46,6 @@
     "Part6 BlackstoneLenderRepresentative >10percentParentEquity or<50percentoriginalBlackstoneheldloans replacementconditions notactualstake. Oldliquidity2percent, postQualifiedIPO/BalanceTriggergreater25m/1percent EXCLUDESFifthLoans explicitly; newFifthgreater10m/1percent notreliefautomaticallysameolddebt. 6.1bnMinimumFundedAmountdefinition older notactualdraw. NonIGcollateral/RVmax35percent,75mexception350maggregateeligibilitypermission notactualcustomeramounts. Bulletmaturityexcludedfromdebtservice; assumedamortizationpaid covenantratio only. Obligationsnewoldseparate until7.04waterfall.",
     "Part7 Parent CoreWeaveIncDE explicit. 1.4xPermittedRatioRequirements oldprojectcollateralratio notcurrentcompliance. ReceivablessecuritizationPermittedTakeoutNOTallowedforFifthfacility; ordinarypermittedfirstBlackstoneoffer notactualsale. PledgedParent/BorrowerassetscheckCollateralAgreementlater. ProjectedContractedCashFlows netpriorupfront payments isforecast notGAAPRV. SpecifiedForeignEntities oldSpainSL/UKLtd/SwedenAB endedJun13/Mar31/Apr30_2025 vsnewSpecifiedInterimObligors D.C.CompanySpainSL/UKLtd/SwedenAB/Parent selectedGPUthroughDec31_2025 orwrittenextension; doNOTaliasdifferentSpainfullnames frombrand orassumeactualguarreleasedafterdate. Thesearedefinitionproposalswithinredline untilRAWstylesverified.",
     "Part8 Fifthterm5years fromEACHactualFundingDate NOTSep29_2030automatic. CurrencyU.S.Dollars/$ explicit. UsedGPUServerpriceoriginalcostless6yearstraightlinehalfmonthdepreciation covenantformula notGAAPFV/actuallifechange. UnrestrictedCashdefinedallowsGAAPrestrictedaccountssolelyunderagentcontrol forCONTRACTcovenant, doNOTreplaceconsolidatedGAAPcash. UKtaxobligorEnglandWalesgenericdefinition notproofallnamedUKentitiesjurisdiction. Duplicateunchangeddefinitionsfrommovedredline notmultiplelegalcontracts. Section1.02AccountingUSGAAPconsistentfinancialstatementsdeliverypromise notactualstatementsreceived/auditorassurance; continuepart9.",
-    "No observations submitted untilALL25parts personallyread. Remainingparts20to24 unread. CurrentMetaMSA andAVGOheaders alreadyread, notprocessed.",
     "Part9 GAAPchangefreeze until agreement/noticewithdrawn conditional notactual accountingchange. Downgradealone expressly NOdefault. Fifthminimumfundedamount2.4bn future mandatoryminimum IFavailable/conditions; expressly notdefaultifmiss at commitmenttermination. Oldminimum6.1bn separate. Fifthborrowingnotice2businessdaysinitial vsolder5, ordinary14. Fifthconsolidationoptional NO maturitychange. Older automaticterminationconditional not actualF9. Fifthamortization lacks old lessAvailableCash concession; prospectivecontractamend cannotlower originalprojectedamortization withoutFifthRequiredLenderconsent.",
     "Part10 Oldfullyprepaid => Fifthfullcashprincipalinterestfees; partialvoluntaryoldorPermittedTakeout => SAMEpercentageFifthprincipalprepaid. No actualpayment inferred. NewFifthupfront1.50percentactualFUNDEDface one-time maynet/OID; no addingnettedfees twice. Fifthminimumshortfall3.00percent2.4bnminusactualborrowed earnedatcommitend due5businessdays; no actual72mfeeorzero shortfallassumed. DefaultRate+2percentconditional not actualdefault. Older1.5percentperannumfunded fee literal preserved, no correction toone-time. Privatefeelettersunknown.",
     "Part11 Alltaxgrossup/indemnity/refundUKVATclauses personallyread. No actualtaxcash reimbursement orconsolidatedVATmembership. Genericrevolvingloanrecipienttaxreferences do notcreate actualnewrevolver. Survivingtaxobligations afterrepayment language notactualtermination.",
@@ -52,6 +56,14 @@
     "Part16 Separateness5.14 assetsaccountsfinancialstatementsmaintained separate ORshownseparatememberconsolidatedgroup; legalSPEseparateness NOTnonconsolidatedGAAPproof. Fifthpostfundaccounts30days/control60days/collateralaccess120days futurepermissions; LendersmayIRREVOCABLYassumeaccesscosts>100k expresslyNOTBorrowerObligations(no actualexpenseassumption). 5.26redlineJune13January27_20256 requiresRAW dateproof. Requiredwarrantycoveragecapped2percentGPUcost notactualcash, reportedassetlifeorresidualvalueguar. FifthPermittedTakeout expresslyPROHIBITED.",
     "Part17 Disposalsaftercustomercontractordinaryexpiry mustcash proceeds≥allocatedfundinglessprepay and100percentdebtprepay; notactualGPUvaluation/sale. Stockbuyback100mpriorIPO/greater50m10percentEBITDAafter thresholds notactualbuybacks. Oldminimumliq15businessdayequitycure no actualwaiver/contribution. 99percentinvoiceRPpermission/85percentbilledpaidcovenant after98percentdeployed thresholds not actualnamedRV/invoicepayments. 200maggregatecontractvalue reductiondeemedmaterial fromSecondEffectiveDate not actualRVdrop/customeramendment.",
     "Part18 Fifth1.4xcoverage andfundedGPUratio startingInitialAmortizationdate plus85percentbilling after98deployment. Failures ofOLDfinancialcovenants doNOTconstituteFifthEventDefaultuntilOldaccelerated andviceversa. 90dayadditional/replacementcontracts cureconditional notactualreplacement; parentworkingcapitalrevolvercrossdefault vs2021noteagreement distinct. EquitycurecanDEEMbillpaid85percent orincreaseforecastcoverage—notactualcustomerRV/cash. Singlecurecanaddressmultiplecovenants/CashShortfall not multiplecashcontributions.",
-    "Part19 Afterremedies oldcollateralwaterfall first5priorityold thenSIXTHFifth AND viceversa FifththenSIXTHold, lastBorrowerafterallPaymentInFull. No currentcollateralrealizationcash ordefault. Fifthloanextensionnotobligatedwhilecashshortfall/financialbreachcontinuing despitecureaccelerationsuspended. AgentTrustCompanyNA vs BankNA separatelyfullnames notautomaticalias. Agentpowers/merger/succession/resignationconditional not actualchange; CoLeadnootherduties exceptasAgent/Lender notparentguarantee."
-  ]
+    "Part19 Afterremedies oldcollateralwaterfall first5priorityold thenSIXTHFifth AND viceversa FifththenSIXTHold, lastBorrowerafterallPaymentInFull. No currentcollateralrealizationcash ordefault. Fifthloanextensionnotobligatedwhilecashshortfall/financialbreachcontinuing despitecureaccelerationsuspended. AgentTrustCompanyNA vs BankNA separatelyfullnames notautomaticalias. Agentpowers/merger/succession/resignationconditional not actualchange; CoLeadnootherduties exceptasAgent/Lender notparentguarantee.",
+    "Part20 allagentindemnification/collateral/guarreleaseconditional, noactualreplacementloss/paidtax. 8.19eachLenderordinarycommercialloaninvestingfinancialroles;privateRegisters notnamedfundactualallocation. All5CoLeadnamedfullcompanies same4Blackstone+MagnetarFinancialLLC;not5newguarantees.",
+    "Part21 assign1mminimum/increments/3500processingfeeconditionalnotactualtrade. AffiliatedLenderCap30percentLOANS notactualequitystake;affiliatedloancontributioncanextinguishdebtfuturepermissionnotactualfundingcancellation. ParticipantRegistersnotpublicnames, noinventactualproviders.",
+    "Part22 DebtFundAffiliates49.9percentconsentingloanvotelimit NOTeconomicownershipceiling/conso. Ordinary9.08amendmentpermissions do notcountadditionalactualF4. NetShortLenderderivnotionalFXrules notactualCDSpositionsorUSDconversionauthorizedforexposures; counselsredlineMilbankKingSpalding notbrandalias.",
+    "Part23 releaseafterPaymentInFull futureconditionalnotactualParentguarreleased. Nonnovationtop8affirmcontinuing. 9.18subsidiarycessationalone needsBorrowercert+LeadLenderwrittenconsent, noautomaticguarreleasebasedoncorporatechange inferred. Confidentialfinstatements/modelandprivateSchedules absent noextrapolation.",
+    "Part24 bailin/QFC/ERISA/erroneouspaymentconditions noactualwriteoff/cashreturned/default. 9.27availabilityextensionupTo3monthsafterMar31_2026requiresLeadLendersnotactualextension. ConformedSIGNATUREPAGESintentionallyomitted. ExhibitBUpdatedSchedules/ExCDraftFirstCollateralAmendment onlytitles, noactualannexcontents. Fullreadingcompleteall25partsplusheader.",
+    "D91RAWstyles personallyread at413200:420850: redSTRIKEFirst/1 deleted, blueunderlineFifth/3comma0added withunchangedremainingdigits yields3,000,000,000 NOT13bn; effectiveAug29_2024deletedSept29_2025added. RAW446800:448500old100mcommitdeleted0added;485000:486800old5660mcommitdeleted0addedUNDRAWNonly. RAW999900:1002800oldJune13_2025deletedJan27_2026addedperfectiondeadline notactualwaiver/breach. RAWsourceunchanged immutable normalizedreadpacketsretainmixedstrings. IndependentItem1.011d4aee81fullreread confirmsSep29entered+3bn incremental capacity; noactualinitialfunding inferred. No13bnamountsubmitted/automaticparsercorrection; noSEMretry."
+  ],
+  "accepted_observations": 13,
+  "rejected_observations": 0
 }

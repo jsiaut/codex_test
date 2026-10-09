@@ -1,0 +1,20 @@
+{
+  "content_key": "6427b767b8eaf4ef7e85e767254de8761e1dc5c3db41085cb7236964b3cb6f5d",
+  "accession": "0001769628-25-000033",
+  "header_personally_read": true,
+  "header_raw_end": 1400,
+  "full_reading_complete": false,
+  "body_parts_personally_read_in_full": [0, 1, 2, 3, 4, 5, 6],
+  "truncated_tool_output_not_counted_as_read": [7],
+  "next_body_part": 7,
+  "total_body_parts": 21,
+  "reading_purpose": "Ordered reading solely to establish whether all actual Lenders are financial parties. No body amounts, links or contractual events admitted while determining scope.",
+  "submitted_observations": false,
+  "notes_authored_by_reader": [
+    "Original July28_2025 DDTL3, not an autonomous amendment. Full header and body parts0through6 read before interruption. Roles of named banks as agents or arrangers do not by themselves establish the identities of every Lender.",
+    "Preamble names LENDERS party hereto; definition points to Schedule2.01 and permitted assignments. ApprovedFund definition alone does not establish all Lenders as financial institutions.",
+    "Referenced OpenAI, Dell Financial Services and Core Scientific commercial agreements do not make those counterparties parties to this credit agreement.",
+    "Independent Item1.01 29bd14e04f2efb5fa6320f3cb9ccace6cf570bb7b624dc4f4c780dd6ea43dea0 fully reread:2.6bn capacity, not actual draw; Parent unconditional guarantee of CCACVII, not CCACV. Names of agents and arrangers plus generic lenders party thereto do not yet prove all actual Lender identities.",
+    "Part7 tool output was context-truncated and is explicitly not counted as read; must re-serve part7 in full before advancing."
+  ]
+}
