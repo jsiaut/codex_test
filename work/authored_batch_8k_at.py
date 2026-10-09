@@ -1,0 +1,3 @@
+from work.authored_helpers import *
+k='6a7dc6723df53dbaccc2601df174412de739bb7e1b258581d49768d04a5bd396'
+save(k,[dict(quote='On December 13, 2024, the Company announced that its Board of Directors had declared the payment of its quarterly dividend of $0.06 per share to be paid on January 30, 2025',event_date='2024-12-13',stage='signed',model_quantity='dividend_declared_future_payment'),abstention('A copy of the press release is furnished herewith as Exhibit 99.1','Full item including record date, furnished status and all future-dividend factors read. Future payment date is not actual cash paid; no aggregate cash amount or financing.')])
