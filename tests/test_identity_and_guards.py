@@ -163,3 +163,15 @@ def test_sterling_narrative_requires_actual_currency_evidence():
     for wrong_currency in ['USD','EUR']:
         with pytest.raises(ObservationRejected,match='Devise narrative'):
             validate_semantics(dict(row,currency=wrong_currency,unit=wrong_currency),block,raw)
+
+
+def test_canadian_dollars_do_not_prove_US_dollars():
+    raw='<div>The public offering price was C$13.967 billion.</div>'.encode()
+    body=normalize_html(raw)
+    block={'content_key':'canadian','text':body,'candidates':[]}
+    row={'content_key':'canadian','raw_byte_start':0,'raw_byte_end':len(raw),
+        'quote':body,'amount':'13967000000','amount_origin':'narrative_only',
+        'unit':'CAD','currency':'CAD'}
+    validate_semantics(row,block,raw)
+    with pytest.raises(ObservationRejected,match='Devise narrative'):
+        validate_semantics(dict(row,currency='USD',unit='USD'),block,raw)

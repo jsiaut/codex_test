@@ -7070,3 +7070,4 @@
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T20:36:38.324856+00:00", "event": "narrative_currency_validation_fixed", "decision": "D0069", "existing_semantic_rejections_preserved": 6, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T20:38:06.236241+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 622, "remaining_unique_keys": 682, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T20:39:33.349562+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 632, "remaining_unique_keys": 672, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-09T20:41:38.560344+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 642, "remaining_unique_keys": 662, "final_delivery": false}

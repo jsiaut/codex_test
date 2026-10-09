@@ -84,10 +84,16 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
         if any(f.get('value') is not None and Decimal(str(f['value']))==Decimal(str(row['amount']))
                and f.get('unit')==row.get('unit') and f.get('currency')==row.get('currency') for f in block['candidates']):
             raise ObservationRejected('Montant disponible en XBRL : tagged_reference requis.')
-        if row.get('currency') and not any(s in quote for s in
-                ({'USD':['$','USD','U.S. dollar','US dollar'],'EUR':['€','EUR','euro'],
-                  'GBP':['£','GBP','pounds sterling','sterling']}.get(row['currency'],[row['currency']]))):
-            raise ObservationRejected('Devise narrative non démontrée par la citation.')
+        currency=row.get('currency')
+        if currency:
+            currency_tokens={'USD':['USD','U.S. dollar','US dollar','US$'],
+                'EUR':['€','EUR','euro'],'GBP':['£','GBP','pounds sterling','sterling'],
+                'CAD':['C$','CAD','Canadian dollar']}.get(currency,[currency])
+            currency_evidenced=any(s in quote for s in currency_tokens)
+            if currency=='USD':
+                currency_evidenced=currency_evidenced or bool(re.search(r'(?<![A-Za-z])\$',quote))
+            if not currency_evidenced:
+                raise ObservationRejected('Devise narrative non démontrée par la citation.')
     if row.get('abstained') and row.get('amount') is not None:
         raise ObservationRejected('Une abstention ne peut pas porter de montant.')
     if row.get('conditionality')=='conditional':
