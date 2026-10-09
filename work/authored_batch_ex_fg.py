@@ -1,0 +1,3 @@
+from work.authored_helpers import *
+save('0cad49afffc50caa62bfbc13505711b00c9de19cd3358b3d5449d8bf30034c55',[
+dict(abstention('REGISTRATION RIGHTS AGREEMENT','financial_parties_only: Entire first physical page read after whole8.01, reread same8.01 expressly naming BofA Securities, Citigroup, Goldman Sachs, JPMorgan and Morgan Stanley financial initialpurchaser representatives and referring EX4.7. OriginalJun26 agreement not autonomous amendment and noItem3.03. Five note faces are sameunderlying debt, not additionalcash of registrationrights. Bodyexcluded11.1.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=3487,locator='rawbytes:0:3487')])
