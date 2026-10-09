@@ -1,0 +1,7 @@
+from work.authored_helpers import *
+save('aa030ad9b7883ef212e48f69de619f45d2462f6b8475a42655d94bb9cb7f2abf',[
+dict(quote='CFIUS has completed its review',counterparty='Cavium, Inc.',counterparty_evidence='named',model_quantity='Cavium_merger_CFIUS_review_completed',flag_unknown_reason='announcedMay24_exactreviewdayunknown_Chinaapprovalremaining_notactualclose'),abstention('The Merger remains subject to customary closing conditions','Full entireitem/caution read. Pendingnotactualconso/funding, no99pressreleasefullimport.')])
+save('aa16dbdf0e1d2522d6a263d947b4e4b5a298f3f90e6440652e6ae74fcf36b937',[
+abstention('the Board appointed Kenneth I. Chenault','Entire item read. Audit/compensationcommittee personnel appointment not financialcontrolassessment/MW/F5.')])
+save('06464e0b3a01483afe8c52be0eeeff4c9808fc05f54304c4355415cc820e1c3e',[
+money('from $3.0 billion to $7.0 billion','7','1000000000','lenders',counterparty_evidence='anonymous',family='financing',link_type='loan_or_facility',stage='available',event_date='2018-04-27',model_quantity='amended_revolver_committed_limit',amount_qualifier='exact',amount_nature='new7_limit_replaces_old3_notactualdraw',event_observable='F4',event_present=True,event_type='amendment',flag_unknown_reason='signed_existing2016facility_increase_and_maturityextension_Apr27_2021_no_actualbreach'),abstention('including backstopping any Notes that the Company may issue','Entire item read. Explicitfinancialclauseamendment F4; CPbackstoppurpose not additionalguarantee or actualCPissuance/cash, unsecuredfacility not draw.')])
