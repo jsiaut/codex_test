@@ -1,0 +1,9 @@
+from work.authored_helpers import *
+k='929b29a74aa353350764126534a73e1fbc163bf0233684d10bcd39baabf3e461'
+save(k,[authored_control(k,'were effective to provide reasonable assurance that the information required to be disclosed by us','disclosure_controls_effective',event_present=True),authored_control(k,'There were no changes in our internal control over financial reporting that occurred during our last fiscal quarter','no_material_ICFR_change_quarter',flag_unknown_reason='generic_inherent_limits_not_material_weakness')])
+k='4db2a13f1b866312c932026c7c311c7a2cf0a8b72f5cf881058debde4cda3619'
+rows=repeat_chosen_rows('28f56605f117f00d87042ef4e7b2c8735115bee8dced4e248769fdf45eb56ba4',['issuer_legal_name_jurisdiction','consolidation_scope','intercompany_elimination','fiscal_calendar'])
+rows += [dict(quote='We early adopted ASU 2021-08 at the beginning of fiscal year 2022 and it did not impact our condensed consolidated financial statements.',model_quantity='ASU2021_08_adopted_no_impact',recast_cause='accounting_change',flag_unknown_reason='fiscal_year_start_no_exact_day'),abstention('Actual results could differ materially from these estimates,','Complete note no substantial doubt or actual life change; generic estimates not actual investment impairment.')]
+save(k,rows)
+k='bf16e3145a9b0a3a94ceb88e3eb16b72c6b5c4596dd3df0cbee156d3a96f0c98'
+save(k,[authored_control(k,'our disclosure controls and procedures were effective at the reasonable assurance level.','disclosure_controls_effective',event_present=True),authored_control(k,'There was no change in our internal control over financial reporting identified in connection with the evaluation required by Rules 13a-15(d) and 15d-15(d) of the Exchange Act','no_material_ICFR_change_quarter',flag_unknown_reason='remote_work_COVID_not_MW')])

@@ -1051,5 +1051,23 @@
     "reason": "Combined debt equity instruments tagged equity only",
     "decision": "D0061",
     "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "eb88edd7cfe6de8c2fb3a0826947fb9bcdf3536b3ed5b3494f47101bb5964c6a",
+    "content_key": "09d7babec121099195e12024d4a4ac77d4126388ee26bfcfae814fda26a2e7db",
+    "accession": "0001564590-22-009859",
+    "affected_quantity": "private_investment_mixed_stock",
+    "reason": "debt_equity_and_related_instruments_combined_not_equity_only",
+    "decision": "D62",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
+  },
+  {
+    "fact_id": "a582e3458d58b4ad3250eb6440be0dc1c9e3ccde5ebd8a4f09e6e89555608ef5",
+    "content_key": "09d7babec121099195e12024d4a4ac77d4126388ee26bfcfae814fda26a2e7db",
+    "accession": "0001564590-22-009859",
+    "affected_quantity": "private_investment_mixed_stock",
+    "reason": "debt_equity_and_related_instruments_combined_not_equity_only",
+    "decision": "D62",
+    "status": "exclude_dependent_numeric_attribution_keep_raw_fact"
   }
 ]
