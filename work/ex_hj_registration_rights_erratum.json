@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-09T23:24:09.276596+00:00",
+  "content_key": "4f480d4fd497ed60e375a9cd51c64912aee24a3083e78d2012df62359bc2336b",
+  "source_item_key": "4b95a297a7cffbbca9463b1effb3a93a02ae24c52a319f87371cd43afd5a780e",
+  "field": "abstention_reason",
+  "original_count": 13,
+  "correct_count": 12,
+  "reason": "Manual recount of the twelve expressly named financial dealer managers in the fully read Item 8.01. The original immutable observation is preserved; the enumerated party list was correct. This count typo changes no scope decision, entity alias, amount, event, or link. No resubmission."
+}
