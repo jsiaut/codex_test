@@ -1,6 +1,8 @@
 """Serve natural blocks; persist only observations authored after actual reading."""
 from pathlib import Path
 import json,argparse
+from datetime import datetime,timezone
+import hashlib
 from .database import create
 from .observations import submit
 from .text import chunks
@@ -31,10 +33,26 @@ def serve(root,key=None,part=0,body=False):
     header=json.dumps({'metadata':metadata,'candidates':candidates},ensure_ascii=False)
     ceiling=80000-len(header)-200
     if ceiling<2000:raise ValueError('Candidate header exceeds readable packet; split the candidates with explicit reading progress.')
-    portions=list(chunks(block,ceiling))
-    return {'metadata':metadata,'candidates':candidates,'exhibit_header':exhibit_header,'part':part,'parts':len(portions),'text':portions[part]}
+    def packet(i,portions):
+        return {'metadata':metadata,'candidates':candidates,'exhibit_header':exhibit_header,
+            'part':i,'parts':len(portions),'text':portions[i]}
+    while True:
+        portions=list(chunks(block,ceiling))
+        largest=max(len(json.dumps(packet(i,portions),ensure_ascii=False)) for i in range(len(portions)))
+        if largest<=80000:break
+        ceiling-=largest-80000+200
+        if ceiling<2000:raise ValueError('Serialized packet header exceeds reading ceiling.')
+    result=packet(part,portions)
+    encoded=json.dumps(result,ensure_ascii=False)
+    log=root/'work/read_packets.jsonl'
+    with log.open('a') as f:
+        f.write(json.dumps(dict(content_key=block['content_key'],occurrence_id=block['occurrence_id'],
+            part=part,parts=len(portions),exhibit_header=exhibit_header,text_chars=len(portions[part]),
+            packet_chars=len(encoded),packet_sha256=hashlib.sha256(encoded.encode()).hexdigest(),
+            served_at=datetime.now(timezone.utc).isoformat()))+'\n')
+    return result
 
-def store(root,key,authored):
+def store(root,key,authored,*,schema_retry=False):
     block=block_for(root,key);run=json.loads((root/'work/run.json').read_text())
     rows=[]
     for authored_row in authored:
@@ -48,7 +66,7 @@ def store(root,key,authored):
                 'A' if financial_note and block['assurance_level']=='audited' else 'B' if financial_note and block['assurance_level']=='reviewed' else 'C',
             location=block.get('location',block['block_class']),source_perspective='reporting_entity',accounting_framework='us_gaap')
         row.update(authored_row);rows.append(row)
-    result=submit(create(root),root,block,(root/block['source_path']).read_bytes(),rows,run['as_of'])
+    result=submit(create(root),root,block,(root/block['source_path']).read_bytes(),rows,run['as_of'],schema_retry=schema_retry)
     if result['accepted']:session_command(root,'touch')
     return result
 

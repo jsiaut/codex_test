@@ -85,3 +85,15 @@ def test_citation_amount_and_named_counterparty_are_verified():
     with pytest.raises(ObservationRejected): validate_semantics(dict(row,amount='101'),block,raw)
     with pytest.raises(ObservationRejected): validate_semantics(dict(row,counterparty='Anthropic'),block,raw)
     with pytest.raises(ObservationRejected): validate_semantics(dict(row,quote='We paid Anthropic $100.'),block,raw)
+
+
+def test_quote_across_declared_continuations_excludes_page_footer():
+    raw=b'<div>Investor paid $100</div><div>Page 12</div><div>for the services.</div>'
+    first_end=raw.index(b'<div>Page');last_start=raw.index(b'<div>for')
+    block={'content_key':'continuation','text':'Investor paid $100\nfor the services.','candidates':[],
+        'source_ranges':[[0,first_end],[last_start,len(raw)]]}
+    row={'content_key':'continuation','raw_byte_start':0,'raw_byte_end':len(raw),
+        'quote':'Investor paid $100\nfor the services.','amount':'100','unit':'USD','currency':'USD','amount_origin':'narrative_only'}
+    validate_semantics(row,block,raw)
+    bad=dict(block,source_ranges=[[0,first_end],[last_start,len(raw)+1]])
+    with pytest.raises(ObservationRejected):validate_semantics(row,bad,raw)

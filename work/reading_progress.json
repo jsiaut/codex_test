@@ -1,0 +1,13 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "active_unique_keys": 1346,
+  "completed_unique_keys": 41,
+  "remaining_unique_keys": 1305,
+  "accepted_observations": 410,
+  "completed_occurrences_by_class": {
+    "item404": 30,
+    "related_parties": 11
+  },
+  "read_packet_logging_started_2026_10_09": true,
+  "independent_audit_performed": false
+}

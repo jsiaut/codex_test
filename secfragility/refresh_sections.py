@@ -1,15 +1,16 @@
 """Reconstruct proxy/Item-13 bounds without reparsing numeric instances."""
 from pathlib import Path
-import json,yaml
+import json,yaml,argparse
 from .blocks import section_blocks
 from .xbrl import digest
 from .evidence import periodic_assurance
 
-def run(root):
+def run(root,accession_filter=None):
     cfg=yaml.safe_load((root/'config.yaml').read_text());inv=json.loads((root/'work/inventory.json').read_text())
     state=json.loads((root/'work/collection.json').read_text());run=json.loads((root/'work/run.json').read_text())
-    old=json.loads((root/'work/queue.json').read_text());records=[r for r in old if r['block_class']!='item404']
+    old=json.loads((root/'work/queue.json').read_text());records=[r for r in old if r['block_class']!='item404' or (accession_filter and r['accession']!=accession_filter)]
     for accession,filing in state['filings'].items():
+        if accession_filter and accession!=accession_filter:continue
         if filing['status']!='collected':continue
         m=filing['metadata'];group=filing['group']
         if m['form'] not in ('DEF 14A','DEFA14A','10-K','10-K/A','424B4'):continue
@@ -36,4 +37,6 @@ def run(root):
         'new_item404_keys':sorted({r['content_key'] for r in records if r['block_class']=='item404'})},indent=2))
     print(json.dumps({'occurrences':len(records),'unique_keys':len(seen)}))
 
-if __name__=='__main__':run(Path('.').resolve())
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--accession');a=p.parse_args()
+    run(Path('.').resolve(),a.accession)

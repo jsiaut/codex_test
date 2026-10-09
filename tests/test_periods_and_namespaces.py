@@ -48,3 +48,47 @@ def test_iso_duration_preserved_without_guessing_days_to_years():
        acceptance_datetime='2026-08-01T12:00:00Z',knowledge_date='2026-08-01',assurance_level='reviewed',as_of='2026-10-09T00:00:00Z')
     assert len(facts)==1 and facts[0]['text_value']=='P5Y7M'
     assert facts[0]['value'] is None and not facts[0]['is_nil']
+
+
+def test_unlinked_proxy_toc_and_nested_same_font_heading_are_not_boundaries():
+    raw=b'''<html><body>
+    <div style="font-size:10pt;font-weight:700">CERTAIN RELATIONSHIPS AND RELATED PARTY TRANSACTIONS 57</div>
+    <div>QUESTIONS AND ANSWERS 64</div>
+    <div style="font-size:10pt;font-weight:700">CERTAIN RELATIONSHIPS AND RELATED PARTY TRANSACTIONS</div>
+    <p>The following paragraph introduces reportable transactions with related investors.</p>
+    <div style="font-size:10pt;font-weight:700">Equity Investment Agreements</div>
+    <p>The investor purchased shares pursuant to the described securities purchase agreement.</p>
+    <div style="font-size:10pt;font-weight:700">Policies for Related Party Transactions</div>
+    <p>The committee reviews these arrangements and applicable transactions.</p>
+    <div style="font-size:10pt;font-weight:700">QUESTIONS AND ANSWERS ABOUT THE MEETING</div>
+    <p>Unrelated meeting mechanics.</p></body></html>'''
+    blocks=section_blocks(raw,form='DEF 14A',config={'normalizer_version':'1'})
+    assert len(blocks)==1
+    assert 'investor purchased shares' in blocks[0]['text']
+    assert 'Unrelated meeting' not in blocks[0]['text']
+
+
+def test_large_nonbold_proxy_heading_bounds_section():
+    raw=b'''<html><body><div style="font-size:22pt;color:#ff9e15">Certain Relationships and Related Person Transactions</div>
+    <p>The company reports purchases from a related entity in the ordinary course of business.</p>
+    <p>Additional terms were reviewed by its audit committee on the stated dates.</p>
+    <div style="font-size:22pt;color:#ff9e15">Expenses of Solicitation</div><p>Unrelated solicitation costs.</p></body></html>'''
+    blocks=section_blocks(raw,form='DEF 14A',config={'normalizer_version':'1'})
+    assert len(blocks)==1 and 'Unrelated solicitation' not in blocks[0]['text']
+
+
+def test_serialized_read_packets_respect_ceiling_with_escaping(tmp_path):
+    import json
+    from secfragility.reader import serve
+    folder=tmp_path/'work';folder.mkdir()
+    text=('A quoted description: "preserve the contractual wording"\n'*1800)
+    block={'content_key':'k','occurrence_id':'o','block_class':'item404','group':'T',
+        'text':text,'candidates':[]}
+    (folder/'block.json').write_text(json.dumps(block))
+    (folder/'queue.json').write_text(json.dumps([{'content_key':'k','occurrence_id':'o','path':'work/block.json'}]))
+    first=serve(tmp_path,'k');assert first['parts']>1
+    packets=[first]+[serve(tmp_path,'k',i) for i in range(1,first['parts'])]
+    assert all(len(json.dumps(p,ensure_ascii=False))<=80000 for p in packets)
+    assert all(p['text'] in text for p in packets)
+    assert packets[0]['text'].startswith('A quoted description:')
+    assert packets[-1]['text'].endswith('"preserve the contractual wording"\n')

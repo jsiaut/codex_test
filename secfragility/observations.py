@@ -23,6 +23,13 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
     if not quote or quote not in block['text']:
         raise ObservationRejected('Citation non retrouvée mot pour mot dans le bloc normalisé.')
     normalized_raw=normalize_space(render(parse_html(raw[start:end])))
+    if block.get('source_ranges') and len(block['source_ranges'])>1:
+        pieces=[]
+        for a,z in block['source_ranges']:
+            if not start<=a<z<=end:
+                raise ObservationRejected('Continuation hors de la plage brute déclarée.')
+            pieces.append(normalize_space(render(parse_html(raw[a:z]))))
+        normalized_raw='\n'.join(pieces)
     if block.get('source_format')=='escaped_html_instance':
         normalized_raw=normalize_space(render(parse_html(normalized_raw.encode())))
     # Multi-part blocks retain the enclosing raw-byte range, including their
@@ -77,7 +84,7 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
             raise ObservationRejected('Déclencheur conditionnel non cité mot pour mot.')
 
 
-def submit(db, root: Path, block: dict, raw: bytes, rows: list[dict], as_of: str) -> dict:
+def submit(db, root: Path, block: dict, raw: bytes, rows: list[dict], as_of: str, *, schema_retry=False) -> dict:
     if not rows:
         raise ValueError('Au moins une observation ou une abstention est requise par bloc.')
     folder=root/'work/observations'
@@ -103,10 +110,21 @@ def submit(db, root: Path, block: dict, raw: bytes, rows: list[dict], as_of: str
     if path.exists():
         existing=[json.loads(line) for line in path.read_text().splitlines()]
         if any(r['as_of']==as_of for r in existing):
-            raise ValueError('Une passe déjà écrite ne se remplace pas ; nouvel as_of requis.')
+            failures=[json.loads(line) for line in reject_path.read_text().splitlines()] if reject_path.exists() else []
+            retry_done=any(r['record_kind']=='schema_retry' and r['as_of']==as_of for r in existing)
+            if not schema_retry or retry_done or not any(r['as_of']==as_of and r['phase']=='schema' for r in failures):
+                raise ValueError('Une passe déjà écrite ne se remplace pas ; nouvel as_of requis.')
+            # Complete the second schema attempt of the SAME reading pass.
+            # Preserve the premature first-attempt marker and original rejects.
+            # This is append-only and is never used for a new reading pass.
+            kind='schema_retry'
+        else:kind='pass'
+    else:
+        if schema_retry:raise ValueError('Aucune première tentative au schéma.')
+        kind='pass'
     # The pass marker persists even when every row was rejected (§7.4).
     with path.open('a') as f:
-        f.write(json.dumps({'record_kind':'pass','as_of':as_of,'content_key':block['content_key'],
+        f.write(json.dumps({'record_kind':kind,'as_of':as_of,'content_key':block['content_key'],
             'accepted_count':len(accepted)},ensure_ascii=False)+'\n')
         for row in accepted:
             f.write(json.dumps(dict(record_kind='observation',**row),ensure_ascii=False,default=str)+'\n')

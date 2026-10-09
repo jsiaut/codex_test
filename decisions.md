@@ -69,3 +69,21 @@ L'ancre de table des matières d'Alphabet précède un bandeau de navigation ; s
 ## D0017 — Quarantaine de classification contractuelle
 
 Trois observations de paiements contractuels sur la durée des équipements Valor, dans l'Item 404 du prospectus SpaceX, avaient été classées comme échéancier de dette par rapprochement avec la note financière. La qualification de chaque contrat ordinal n'est pas explicitement établie dans cet extrait. Les citations et montants restent conservés, mais observation_quarantines exclut leurs arêtes de montant et les mesures dépendant de cette catégorie jusqu'à résolution. Aucun total de ces engagements avec la dette comptabilisée ni aucun principal de dette n'est publié par hypothèse. Le fichier d'observations original n'est pas modifié.
+
+## D0018 — Titres non liés et niveaux des proxies
+
+Le proxy CoreWeave contient une table des matières sans liens et des sous-titres en caractères gras de même taille que le titre principal. Une entrée terminée par un numéro de page n'est pas une borne de section. Pour un titre principal entièrement en majuscules, les sous-titres de casse différente ne terminent pas la section. Chez Amazon, les titres principaux de grande taille ne sont pas gras : leur taille explicite permet de retrouver le prochain titre. Une distance arbitraire de 500 octets ne doit pas empêcher cette borne dans une courte section. Les régressions sont testées sur ces structures ; elles n'autorisent aucun filtrage des opérations.
+
+## D0019 — Deuxième tentative de schéma et citations de continuations
+
+Le premier enregistrement d'Alphabet comportait quatre erreurs de noms de champs (`approximate` au lieu de `approximately`, `event_kind` au lieu de `event_type`). Le code avait écrit trop tôt le marqueur de première tentative. La seconde tentative du même passage est ajoutée, sans écrasement, sous un marqueur `schema_retry` ; les quatre lignes brutes refusées restent dans le fichier de rejets. Les quatre corrections passent. Ce mécanisme ne constitue pas une nouvelle lecture et n'autorise pas un troisième essai ni la reprise d'un rejet sémantique. Les nouvelles passes de lecture requièrent toujours un nouvel `as_of`.
+
+Quatre lignes de la note annuelle CoreWeave traversaient un pied de page présent dans la plage brute englobante mais exclu des continuations iXBRL de la note. Elles ont été rejetées au contrôle sémantique. La validation assemble désormais uniquement les plages sources déclarées, vérifiées incluses dans la plage englobante. Les quatre rejets déjà écrits restent exclus pour cette exécution ; aucune retouche du fichier original ne les réadmet. Les observations suivantes passent cette vérification corrigée.
+
+## D0020 — Dates de contexte et nature des montants
+
+La note trimestrielle CoreWeave donne au montant de dépôt historiquement classé au 31 décembre 2024 un contexte balisé de mars ou juin 2025. L'attribution numérique de ce montant à son ancien solde est écartée et le conflit de dates documenté. Chez Microsoft, la borne de 10 % concerne les participations d'autres investisseurs à la signature de mars 2024 ; les contextes plus récents ne créent ni une détention actuelle certaine, ni un investissement de Microsoft. Les paiements de clients ne deviennent jamais des revenus reconnus ; les offres secondaires ne deviennent jamais une levée de fonds de l'émetteur ; une annonce d'acquisition ne date pas sa clôture.
+
+## D0021 — Plafond complet du paquet servi
+
+Le paquet sérialisé, et pas seulement le texte, est borné à 80 000 caractères. Les coupures restent naturelles avec recouvrement. À partir de cette correction, read_packets consigne la clé, la partie, le nombre de parties, l'en-tête de pièce éventuel, les caractères servis et l'empreinte du paquet. Les compteurs antérieurs ne sont pas inventés rétroactivement. Une émission de paquet par le code ne prouve pas à elle seule une lecture complète ; la passe d'observations validées en est le résultat conservé.
