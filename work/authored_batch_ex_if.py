@@ -1,0 +1,10 @@
+from work.authored_helpers import *
+
+for key,end,reason in [
+ ('0c258e7cadba8e7a04d04f26ad0358e167bb095a800d81c78f83636200abe398',5539,'Oct29 bridge commitment original, only identified outside financing counterparty JPMorgan financial bank. Inphi/Indigo proposed acquisition target, MauiHoldco and merger subsidiaries explicitly internal; Inphi not currently consolidated until independently actualApr20. Same Itemf705fff FULL reread commitment2.5bn conditional, no executed definitive bridge/draw; permanent financing intended substitution. No body amount/link/F4/entity alias admitted.'),
+ ('6e85c6e0c6354698f19a24d46bb7d95f2ddbe57cf9570ecbd862009770ab1813',5918,'Oct29 facilities commitment original only JPMorgan financial lender. Same Itemf705fff FULL reread1.5bnterm750+750 and JPM100m ofupTo750mRCF contingent definitive docs and merger, distinct Dec7actualterm1.75bn. Bridge2.5bn substitution not cumulative new cash. Current MauiHoldco wholly owned MTG; future reverse reorganization not retroactive; no actual target financing relationship. Body excluded unread.'),
+ ('68387d8a8b9432693522113e7c3835d7d0dd228b7716e7950be21e3f22a5d47e',4400,'Global note original explicit financial CedeCo registered payee; same Itemdfcad3f2 FULL reread actualAug5 aggregate2025series1bn versus500m denomination this form not conflict or additional issuance. Other notes6series total10bn derive only independent Item; environmental net proceeds allocation intended not paid. Historical2016base not newF4; body excluded unread.')
+]:
+ quote='October 29, 2020' if key[0]!='6' else ('JPMORGAN CHASE BANK, N.A.' if key.startswith('6e85') else 'GLOBAL SECURITY')
+ if key.startswith('6838'):quote='GLOBAL SECURITY'
+ save(key,[dict(abstention(quote,'Complete physical header personally read. '+reason+f' Entire body{end}:rawend excluded, including any scope-only reading; no body observations.'),model_quantity='exhibit_body_excluded_financial_parties_only',raw_byte_start=0,raw_byte_end=end,locator=f'rawbytes:0:{end}')])
