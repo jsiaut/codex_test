@@ -97,3 +97,16 @@ def test_quote_across_declared_continuations_excludes_page_footer():
     validate_semantics(row,block,raw)
     bad=dict(block,source_ranges=[[0,first_end],[last_start,len(raw)+1]])
     with pytest.raises(ObservationRejected):validate_semantics(row,bad,raw)
+
+
+def test_wrapped_legal_name_preserves_all_words_and_punctuation():
+    raw=b'<div>We paid BCH San<br>Jose LLC $100.</div>'
+    body=normalize_html(raw)
+    block={'content_key':'wrapped','text':body,'candidates':[]}
+    row={'content_key':'wrapped','raw_byte_start':0,'raw_byte_end':len(raw),
+        'quote':body,'counterparty':'BCH San Jose LLC','counterparty_evidence':'named',
+        'amount':'100','amount_origin':'narrative_only','unit':'USD','currency':'USD'}
+    validate_semantics(row,block,raw)
+    for other in ['BCH San Jose Holdings LLC','BCH San Jose, LLC','bch San Jose LLC']:
+        with pytest.raises(ObservationRejected):
+            validate_semantics(dict(row,counterparty=other),block,raw)

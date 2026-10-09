@@ -37,7 +37,10 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
     if quote not in normalized_raw:
         raise ObservationRejected('Citation absente de son emplacement brut.')
     cp=row.get('counterparty')
-    if row.get('counterparty_evidence')=='named' and (not cp or cp not in block['text']):
+    # A typeset legal name may wrap over lines. Only whitespace varies here;
+    # case, punctuation and every word still have to occur literally.
+    if row.get('counterparty_evidence')=='named' and (not cp or
+        re.sub(r'\s+',' ',cp) not in re.sub(r'\s+',' ',block['text'])):
         raise ObservationRejected('Contrepartie nommée absente du bloc.')
     if row.get('linkage_class'):
         lq=row.get('linkage_quote')

@@ -87,3 +87,13 @@ La note trimestrielle CoreWeave donne au montant de dépôt historiquement class
 ## D0021 — Plafond complet du paquet servi
 
 Le paquet sérialisé, et pas seulement le texte, est borné à 80 000 caractères. Les coupures restent naturelles avec recouvrement. À partir de cette correction, read_packets consigne la clé, la partie, le nombre de parties, l'en-tête de pièce éventuel, les caractères servis et l'empreinte du paquet. Les compteurs antérieurs ne sont pas inventés rétroactivement. Une émission de paquet par le code ne prouve pas à elle seule une lecture complète ; la passe d'observations validées en est le résultat conservé.
+
+## D0022 — Retours à la ligne dans les citations et les noms
+
+Les citations rédigées après lecture sont alignées sur les seuls espaces et retours à la ligne du texte effectivement servi avant leur soumission : les mots et la ponctuation ne changent pas et le validateur exige toujours le fragment source exact. L'outil ne sélectionne aucun passage et ne qualifie aucune opération. Six citations du proxy Alphabet 2024 avaient été refusées parce que des retours avaient été aplatis ; l'indemnisation y a aussi échoué au second essai de schéma, puis en sémantique. Ces refus restent conservés, sans réadmission dans cette exécution. La seconde tentative NVIDIA 2024 ajoute le déclencheur omis et passe.
+
+La raison sociale BCH San Jose LLC est coupée par une ligne dans le proxy Alphabet 2021, accession 0001308179-21-000256. La vérification d'un nom admet désormais uniquement cette variation des espaces : chaque mot, la casse et la ponctuation restent littéraux, sans correction typographique ni rapprochement flou. Les treize contrôles de validation et d'invariants ciblés passent. Le rejet antérieur de cette observation reste exclu pour ce passage.
+
+## D0023 — Portée des montants historiques et des mentions accessoires
+
+L'achat Oracle d'une participation Ampere à un autre investisseur (proxy 2022, accession 0001193125-22-250158) est secondaire, distinct de l'investissement en dette convertible du même exercice. Les montants appliqués à une commande prépayée sont des composantes des achats, jamais de nouveaux paiements. Les fonds engagés et les placements personnels des fondateurs d'Alphabet ne se confondent pas avec des versements du groupe. Les mois publiés deviennent des plages mensuelles explicites, sans jour d'événement inventé ; ils ne prouvent pas une détention actuelle. Les mentions de parties liées dans les thèmes de surveillance du comité d'audit sont des abstentions de portée, pas des opérations, et les déclarations d'absence Item 404 ne deviennent jamais une absence de financement client.
