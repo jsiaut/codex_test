@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='964dc98027eaa8a2faf77eee3e91f47af24232d95782c68fdc5ae820bd85b277'
+save(k,[dict(quote='Our lease liabilities were as follows (in millions):',abstained=True,abstention_reason='tagged_operating_and_finance_lease_totals_only_no_named_lessor_or_customer_lease_expense_gross_payments_and_present_value_distinct_not_additive')])

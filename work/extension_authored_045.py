@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='b92d532130116f19194b55f258c4a46ca4a19075fbb9499edc6a5ef480514f1b'
+save(k,[dict(quote='The Company’s CODM does not evaluate operating and reportable segments using asset or liability information.',model_quantity='segment_asset_liability_allocation_limit',issuer_treatment='CODM_no_segment_assets_or_liabilities',flag_unknown_reason='consolidated_debt_not_allocatable_to_AI_segment_from_this_note'),dict(quote='Capital expenditures | | | $ | 2,226 | | | | | $ | 2,699 | | | | | $ | 23,551 | | | | | $ | 28,476 | | | |',model_quantity='segment_capital_expenditure_disclosure_scope',flag_unknown_reason='segment_expenditures_additions_to_long_lived_assets_not_explicitly_cash_disbursements_no_substitution_for_cash_capex')])

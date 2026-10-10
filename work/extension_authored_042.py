@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='cb09b93aac0ec1b26dea67f5ba7c6fa3625ef0291bde2e6492faf3ee4493753d'
+save(k,[dict(quote='Certain financial statement details are as follows:',abstained=True,abstention_reason='tagged_balance_sheet_components_only_no_named_counterparty_rebates_and_credits_are_assets_not_disclosed_actual_ASC606_customer_deductions')])
