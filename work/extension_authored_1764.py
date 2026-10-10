@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='a61c311c8f3097f5c7d6f03af1e2bb80449aa1bc706defe72be47e3350c71fa0'
+save(k,[tagged(k,0,'long-term accounts receivable, net of allowance for doubtful accounts, was $2.3 billion and $2.2 billion, respectively',block='exposed_assets',model_quantity='receivables_noncurrent',issuer_treatment='2.3CurrentSept30_19_Not2.2PriorOrAutomaticConditionalContractAssets'),dict(quote='The consolidated financial statements include the accounts of Microsoft Corporation and its subsidiaries.',abstained=True,abstention_reason='FullMicrosoftCorporationAttested_NoJurisdictionInSource;GenericInvestmentImpairmentPolicyNotActualF6;HedgeAdoptionJuly1_19NoAdjustment_NotFinancialCovenantF4;CECLFutureJuly1_20')])
