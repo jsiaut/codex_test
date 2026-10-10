@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='61270aa934ec874dbc6934564365ae4ef3fe37a4f85e77c063e906f95427dc05'
+save(k,[tagged(k,14,'Net sales',model_quantity='segment_revenue',issuer_treatment='25.037bn_Q1AWS_NOTAIonly'),tagged(k,18,'Operating income',model_quantity='segment_operating_income',issuer_treatment='9.421bn_Q1AWS_GAAPsegProfit'),dict(quote='The AWS segment consists of amounts earned from global sales of compute, storage, database, and other services',abstained=True,abstention_reason='AWS totals do not isolate AI sales or establish named customer concentration. This note does not provide a segment asset denominator or a quantified individual customer share.')])
