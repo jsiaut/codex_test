@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ddfaff4701cbad47b57e8dc9b1654247f1e0f0de8f6912ffa1d6d6a607d95b11'
+save(k,[tagged(k,10,'16,186',model_quantity='cash_and_equivalents',issuer_treatment='16.186bnEX47.894Marketable_64.080bnCombined_Not57.948FVTable'),tagged(k,24,'11,819',model_quantity='marketable_debt_assets_maturing_next_twelve_months',issuer_treatment='11.819bnASSETMat_NotOwnDebtOutflow'),dict(quote='The allowance for credit losses was not material',abstained=True,abstention_reason='Immaterial unrealized fixed-income losses and allowance are unquantified, not zero and not private F6. Marketable maturities are asset maturities, not own-debt or commitments.')])

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='e1dcce6db9b1097eda59a4a47d74543731289aad6e5c9b2478a22657f1a3c1f0'
+save(k,[tagged(k,21,'57,948',model_quantity='cash_equivalents_and_marketable_securities_fair_value',issuer_treatment='57.948bnFV_EXBankCash_Mix9.346MoneyMarket298UST355Time55CorporateCashEq_AND47.894bnMarketable'),dict(quote='The aggregate absolute value of these Level 3 assets and liabilities was not material',abstained=True,abstention_reason='Level3 immaterial is not zero, and no quantified private investment or primary cash funding here.57.948bn fair-value table includes cash equivalents but excludes ordinary bank cash; not entire cash balance. Level1/2 marketable debt is not private F6.')])
