@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='3caad5e372c081b2b0eb7d9cd0562ed88abf611b6145c10f7a9e0d0954b2e2ab'
+save(k,[tagged(k,16,'2.20% Notes Due 2021 (1) | Level 2 | | $ | 999',model_quantity='notes_fair_value',issuer_treatment='999Own2021NotesFV_Not1BillionFACEOrCurrentFunding'),tagged(k,18,'3.20% Notes Due 2026 (1) | Level 2 | | $ | 1,022',model_quantity='notes_fair_value',issuer_treatment='1.022Own2026NotesFV_Not1BillionFACEOrAddDebt'),dict(quote='are not marked to fair value each period',abstained=True,abstention_reason='OwnNotesFVDisclosureNotRecurringLiabilityMeasurement_NotInvestmentE1OrF6')])

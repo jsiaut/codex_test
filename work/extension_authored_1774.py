@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='6babdaabc9b2508a43651adf7187ec3e2498a0a551d4cdede59751426c10bc8e'
+save(k,[tagged(k,12,'Total deferred revenues | | $ | 10,739',model_quantity='deferred_revenue',issuer_treatment='10.739HELD_Aug31_19_IN10.089Current650Long_NotNewCashOrAdditionalRPO'),tagged(k,0,'Cloud services and license support | | $ | 8,967',model_quantity='cloud_support_deferred_revenue',issuer_treatment='8.967CURRENTsubsetIN10.739TOTAL_NotCloudOnly'),dict(quote='fair value adjustments recorded for obligations assumed from our acquisitions reduced the cloud services and license support deferred revenues balances',abstained=True,abstention_reason='AcquisitionFairValueObligationMeasurementPolicy_NotCurrentCashOrQuantifiedSeparateSupport')])

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='e98e20be1779f77eb98b2c54fa225ae3af1a60357380f4fd099c84a3f291a5d4'
+save(k,[tagged(k,51,'Total | $ | 8,371 | | | $ | 1 | | | $ | — | | | $ | 8,372',model_quantity='cash_equivalents_and_marketable_securities',issuer_treatment='8.372EXCash_IN7.002CashEquiv1.370Market_NotPrivateInvestments'),tagged(k,103,'Less than 1 year | $ | 8,255 | | | $ | 8,255',model_quantity='marketable_securities_maturing_one_year',issuer_treatment='8.255ASSETFVMatWithinYear_NotOwnDebtDue'),dict(quote='there were no other-than-temporary impairment losses and net realized gains were not significant',abstained=True,abstention_reason='ExplicitNoMarketDebtOTTI_Q2SIXFY20_NotPrivateF6Zero')])
