@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='be95b6500f5b31d8511a4f8ed7cea47ff80f21675e3403479c8c909f80984c1d'
+save(k,[tagged(k,26,'26,468',model_quantity='recurring_fair_value_financial_assets_mixed',issuer_treatment='26.468bnASSETMIXCashEqMarketDebtDeriv_NotCashOnlyOrPrivateAI'),dict(quote='substantially all of our marketable securities investments mature within one year',abstained=True,abstention_reason='Substantially all is not an exact next12 amount.82.7bn own senior notes and90.2bn related FV do not establish private-investment F6. Recurring FV assets and35m derivative asset are not new financing, guarantee caps or quantified private holdings. Private holdings absence here is not zero.')])

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='817eb3f7b3bb15a210cd7458e4a514e8cc32aa46622bb5d4e9a31009475eb946'
+save(k,[tagged(k,12,'10,784',model_quantity='deferred_revenue_total',issuer_treatment='10.784bnDEF_10.011current773mLong'),tagged(k,0,'9,033',model_quantity='cloud_and_license_support_deferred_revenue_current',issuer_treatment='9.033bnCURRENTcloudANDlicenseSupport_NotRPOOrOCIalone'),dict(quote='revenues generally being recognized ratably over the contractual periods',abstained=True,abstention_reason='Deferred revenue stock represents advance payments already held and timing of recognition, not current fresh cash. Cloud and license support are combined and not standalone OCI/AI. No RPO amount or customer concentration threshold here.')])

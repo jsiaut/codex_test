@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='aabc16f2f8334993eaef41a37be565580223202fc4db7a32437cd933f8a74823'
+save(k,[tagged(k,36,'$463 million',model_quantity='deferred_revenue_total',issuer_treatment='463mCURRENTSept30_21_Not371mPriorDec20'),tagged(k,38,'$418 million',model_quantity='deferred_revenue_next_twelve_months_recognition',issuer_treatment='418mExpectedREV_LE1yr_NotRPOCash'),dict(quote='based on the addresses of our customers',abstained=True,abstention_reason='Customer-address revenue geography is not individual-customer concentration. No threshold disclosure here. Deferred revenue recognition is accounting timing, not fresh financing or contractual future cash. Advertising and other categories are not future FoA/Reality Labs segment figures.')])
