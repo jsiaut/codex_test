@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='4d1b95d6bb26456e50397640e6529d4414a4f5717962e53dd337135bd96ae79e'
+save(k,[tagged(k,89,'Cloud services | | $ | 24,506',model_quantity='cloud_revenue_scope',issuer_treatment='24506mCLOUDFY25_SUBSET44029cloudANDlicenseSUPPORT_IN49230segment_NOT24646infrastructureINCLUDINGlicensesupport_NOTallAI'),tagged(k,11,'Margin(1) | | $ | 30,930',model_quantity='cloud_operating_profit_scope',issuer_treatment='30930mcloudANDlicense_DIRECTcontrollableMARGIN_EXCLUDES9860RD1602GA2307intang1597segmentSBCothers_NOTAIprofit'),dict(quote='We do not track our assets for each business.',issuer_treatment='NOsegment_assets_NOOCIcapex_orAIassetsderive_fromgeography60143longlived')])

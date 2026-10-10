@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='96d51d2aa08cb566d79bbef328244d6d2cfe641410f7ab6d27faea792fe3c0a5'
+save(k,[tagged(k,88,'$108.2 billion of remaining performance obligations',model_quantity='remaining_performance_obligations',issuer_treatment='108200mRPOprimCloud_IN6800def_EXCLUDESorigtermLE1yANDcancellable_55percentNEXT24NOT12_TypedStartJuly1correct_NOTcash'),tagged(k,93,'Total deferred revenue as of June 30, 2025 was $6.8 billion.',model_quantity='contract_liability',issuer_treatment='6800mDEFRECASHreceivedORdue_INrefundable_mixedCloudsubscriptionsNOTallcash_NOTadditionalRPO'),dict(quote='based on the addresses of our customers',issuer_treatment='revenueGEOGRAPHYcustomerADDRESS_NOTenduserusage_country_NOindividual_client_names')])

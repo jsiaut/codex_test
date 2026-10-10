@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='00b34759b07c27cde974e4d721c4f005d3dc87fc898d621f87a07f854502cfd9'
+save(k,[tagged(k,4,'Total investments | | $ | 2,805',model_quantity='liquid_investment_scope',issuer_treatment='2805mIN2388cashEQ417marketsecurities_NOTallcashdoubleaddition_NOAIissuer_holdings'),dict(quote='Restricted cash',issuer_treatment='RESTRICTEDcashimmaterial_NOTzero_exact_NOTlicense_treatallliquidfundsfree'),dict(quote='Such realized gains and losses were insignificant for fiscal 2025, 2024 and 2023.',issuer_treatment='marketableASSETSrealizedgainlossinsignificant_NOTzero_or_isolatedcreditimpairment_NOF6')])

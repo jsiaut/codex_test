@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ec57b8dfca835ecd79f2c9b4720601277b810353d204773ff5bae678646ba26e'
+save(k,[tagged(k,30,'$90.3 billion and $86.5 billion of senior notes and other long-term borrowings and the related fair value hedges',model_quantity='debt_fair_value_comparison_basis',issuer_treatment='90300mdebtANDrelatedFVhedges_SCOPE_rounding_NOTAIinvestment_NOTindependentadditionaldebt_toNote6_FV81300same'),dict(quote='Derivative financial instruments',abstained=True,abstention_reason='Fair-value derivative assets and liabilities disclose no named AI counterparty or identifiable credit-support obligation.')])
