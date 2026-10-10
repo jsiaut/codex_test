@@ -1,0 +1,10 @@
+{
+  "content_keys": [
+    "5ca7ac89f830051e42b86cb03fad9277bb934541d6c0a0b13670fd946891c14e",
+    "5f5c63c6a0817d1aa4b8c102936f82b0b3520791fc9624fa901d7d11ef9dacd7"
+  ],
+  "issue": "Combined tool output truncated before full candidate/text display for 397; 396 displayed fully.",
+  "correction": "397 re-served alone with 7900-token allowance; complete single packet displayed before any store.",
+  "full_display_tool_chunk": "24c498",
+  "no_observations_stored_before_correction": true
+}

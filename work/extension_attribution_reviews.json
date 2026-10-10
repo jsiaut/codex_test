@@ -1,0 +1,10 @@
+[
+  {
+    "content_key": "badb50ca799cdd2a2dad74900c1e93d5f677c9e8d845e3b9953a087845e9da16",
+    "tagged_candidate_index": 108,
+    "affected_quantity": "DCSP_note_receivable",
+    "decision": "exclude_vie_unconsolidated_category_attribution_keep_gross_receivable_and_setoff",
+    "reason": "The DCSP lender/borrower arrangement is disclosed, but this block does not establish a VIE. category_id was assigned incorrectly in the accepted authoring. Raw observation is append-only and preserved; downstream classification must omit vie_unconsolidated.",
+    "assembly_status": "pending_phase3"
+  }
+]

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='00229ef27a85488d4b0dd0a704397dd9cc28c7e13170c148fba246577c385151'
+save(k,[tagged(k,6,'Total unconditional purchase commitments',block='contractual_outflows',category_id='purchase_obligation',component_kind='minimum_purchase',stage='signed',issuer_treatment='8248mMIXEDnoncancellable_or_significantpenalties_waferssubstratescloudsoftwareIP_5605FY25remainderNINE_NOTnext12_FirstAnniversaryTAGmisleading_notallAI_no_namedcounterparty'),dict(quote='there were no material legal proceedings',model_quantity='litigation_context',issuer_treatment='March29nomaterial_notnolegalrisk_allpossibleloss0_actualdefaultNO')])

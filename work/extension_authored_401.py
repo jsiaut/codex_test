@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='0d90cc1c98957150d4c81d9b4894c8e682b805255bcfb84f9785238336461c89'
+save(k,[dict(quote='Certain amounts from fiscal year 2024 have been reclassified to conform to current period presentation.',basis_break=True,recast_cause='presentation_reclassification',model_quantity='balance_sheet_presentation_change',issuer_treatment='FY24comparatives_relatedpayablesINAP_ROU_EQUITYmethodINothernoncurrent_relatedreceivablesINprepaidcurrent_NOTeconomicchanges_Q125andprior13weeks')])
