@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2d760292dc62bc53e842219e9f14d94514f568cb95bf5718a35b6852d34b3ac4'
+save(k,[tagged(k,40,'Other assets | | | | | | 194',model_quantity='other_assets_recurring_level3_fair_value',issuer_treatment='194m_RECURRING_OTHERLevel3_Not6.528bnPrivateNonrecurring_OR34DeltaFunding'),dict(quote='Assets remeasured at fair value within Level 3 during the nine months ended September 30, 2022 were not material.',abstained=True,abstention_reason='913 million is the prior December-2021 subset remeasured, not a new 2022 balance or loss. Public equities can also be Level 3, so hierarchy alone does not establish private holdings. No specific private-investee impairment amount or primary funding event is supplied.')])
