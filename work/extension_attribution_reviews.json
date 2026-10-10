@@ -41,5 +41,13 @@
     "decision": "preserve_conditional_right_to_consideration_remove_unconditional_word_from_interpretation",
     "reason": "The source distinguishes a contract asset conditional on a condition other than time from an unconditional receivable. Accepted issuer_treatment contains a contradictory UNCONDITIONAL word; preserve raw observation, use the exact source definition in downstream assembly.",
     "assembly_status": "pending_phase3"
+  },
+  {
+    "content_key": "e480d43f619f5a506321951ae71f99d07e8c1626bfa05185dbf4b39a110f8bf5",
+    "tagged_candidate_index": 373,
+    "affected_quantity": "derivative_liability",
+    "decision": "classify_535_as_gross_derivative_liability_use_candidate_375_for_500_balance_sheet_amount",
+    "reason": "Candidate 373 is 535m gross liabilities; the authored treatment describes 500m after 35m balance-sheet offset. Preserve raw 535m observation; downstream use candidate 375 for the 500m presented liability, with 203m further legal setoff, 2m cash and 263m noncash collateral giving 32m residual. Immediate attribution correction, no source re-estimate.",
+    "assembly_status": "pending_phase3"
   }
 ]

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='6b7d3ce21a3f3b838b46d3539e0d732e76e02cf30dec9e0f20e0c2fa1f595c06'
+save(k,[tagged(k,24,'Total cash equivalents and marketable securities | | $ | 52,302',block='exposed_assets',model_quantity='marketable_cash_equivalent_and_security_fair_value',issuer_treatment='52.302Jun30_20_EXBank5.938;ZeroLevel3ThisTable_NotZeroAllPrivateInvestments'),dict(quote='Beginning in 2020, we had other assets and liabilities classified within Level 3',abstained=True,abstention_reason='OtherLevel3AssetsAndLiabilitiesImmaterialUnquantified_NotZero. NoActualInvestmentImpairmentF6OrFreshPrimaryFunding. LiquidAssetFairValueTableNotPrivatePortfolio.')])
