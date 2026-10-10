@@ -1,4 +1,6 @@
-# Rendement et limites du premier passage
+# Rendement, changements et limites
+
+Exclusions locales de calcul après contrôle du lignage : {"source_not_known_at_information_cutoff": 541}. Les valeurs concernées sont retirées avec un motif explicite ; la vue révisée conserve les sources admissibles à l’arrêt de l’exécution. Les dates de disponibilité de l’information et l’arrêt des sources restent distincts.
 
 Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage livre les tables et le dossier d’audit. Aucun événement n’est sommé ni transformé en score. Les événements datés sont dans synthesis.md et series.csv.
 
@@ -7,7 +9,7 @@ Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage li
 | Statut rang 1 | Cellules |
 | --- | ---: |
 | computed | 35900 |
-| not_determinable | 181401 |
+| not_determinable | 181399 |
 | partial | 5373 |
 
 | Motif | Cellules |
@@ -16,7 +18,7 @@ Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage li
 | empty_numerator | 28488 |
 | complete_public_attribution_not_established | 24816 |
 | historical_filer_category_or_fiscal_dates_unestablished | 11550 |
-| missing_admissible_terms | 10389 |
+| missing_admissible_terms | 10387 |
 | fiscal_calendar_not_established | 5868 |
 | individual_source_component_not_an_additive_total | 3962 |
 | explicit_dated_event_not_established | 2651 |
@@ -128,7 +130,7 @@ Paires à financement de montant documenté : 2. Arêtes de montant : 13. Les co
 
 Blocs uniques traités : 3552 ; observations acceptées : 17029. Tentatives rejetées : {"schema": 60, "semantic": 47}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 237, "investments_note": 603, "lease_note": 185, "concentration_narrative": 839, "debt_note": 315, "commitments_note": 309} ; items 8-K : {"non renseigné": 457}.
 
-Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 6980, "bytes_received": 2099232340}. Durée calendaire depuis la première requête SEC : 130717.373354 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
+Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 6980, "bytes_received": 2099232340}. Durée calendaire depuis la première requête SEC : 131375.807727 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
 
 ## Exclusions
 
@@ -144,7 +146,7 @@ Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pi
 | validation_failed | 107 |
 | conflicting_tagged_reference | 13 |
 | not_public | 11 |
-| attribution_interpretation | 8 |
+| attribution_interpretation | 9 |
 | category_assignment_not_explicit_in_this_contractual_disclosure | 3 |
 | event_definition_mismatch | 2 |
 | net_proceeds_993_5_vs_independent_offer_price_992_35_unresolved | 1 |

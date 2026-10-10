@@ -74,7 +74,8 @@ def interpretations(db, root, as_of, record_exclusions=True):
             block = block_for(root, key)
             fids = {block['candidates'][i]['fact_id'] for i in indexes}
         selected = [o for o in candidates if
-                    (o.get('tagged_fact_id') in fids if indexes else
+                    (o['observation_id']==review['observation_id'] if review.get('observation_id') else
+                     o.get('tagged_fact_id') in fids if indexes else
                      review.get('quote', '') in o['quote'] if review.get('quote') else
                      o.get('model_quantity') == review['affected_quantity'])]
         if review['decision'].startswith('exclude_F4_'):
@@ -98,6 +99,9 @@ def interpretations(db, root, as_of, record_exclusions=True):
                               issuer_treatment='535m gross; 500m presented after 35m balance-sheet offset. Neither is cash collateral.')
             elif decision.startswith('correct_comparator_'):
                 change['issuer_treatment'] = '693m own convertible debt fair value; 86m principal and 84m net carrying amount.'
+            elif decision.startswith('classify_warrant_cap_'):
+                change.update(stage='signed',amount_qualifier='up_to',
+                              issuer_treatment='Signed maximum warrant entitlement; not issued common shares, a cash transfer or GAAP-recognized consideration.')
             else:
                 raise ValueError('Undocumented interpretation decision: ' + decision)
             if record_exclusions:

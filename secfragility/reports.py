@@ -48,11 +48,14 @@ def render(db,root,as_of,source,verification):
     csv_write(audit/'concepts.csv',mapping)
     admitted={r[0] for r in db.execute("SELECT observation_id FROM links WHERE edge_kind='amount'").fetchall()}
     blocked={r[0]:r[1] for r in db.execute('SELECT observation_id,reason FROM excluded_observations').fetchall()}
+    interpreted={o['observation_id']:o for o in rows(db,'SELECT observation_id,stage,amount_qualifier,issuer_treatment,model_quantity,block,category_id FROM interpreted_observations')}
     attrs=[dict(observation_id=o['observation_id'],accession=o['accession'],document_id=o['document_id'],counterparty=o['counterparty'],
                 evidence=o['counterparty_evidence'],amount=o['amount'],unit=o['unit'],currency=o['currency'],stage=o['stage'],
                 model_quantity=o['model_quantity'],quote=o['quote'],locator=o['locator'],tagged_fact_id=o['tagged_fact_id'],
                 amount_origin=o['amount_origin'],is_tagged=bool(o['tagged_fact_id']),numeric_edge_admitted=o['observation_id'] in admitted,
-                exclusion_reason=blocked.get(o['observation_id'])) for o in obs if o['counterparty'] and o['amount'] is not None]
+                exclusion_reason=blocked.get(o['observation_id']),
+                **{'interpreted_'+k:v for k,v in interpreted[o['observation_id']].items() if k!='observation_id'})
+           for o in obs if o['counterparty'] and o['amount'] is not None]
     csv_write(audit/'attributions.csv',attrs)
     # One row per published numeric field and deposited term. Reused terms are
     # kept with the measure key; this is an audit trail, not an additive ledger.
@@ -340,6 +343,7 @@ def extension_render(db,root,as_of,data):
         'preserve_conditional_':'Actif de contrat conservé comme droit conditionnel.',
         'classify_535_':'Montant brut de dérivé distingué du montant présenté après compensation.',
         'correct_comparator_':'Juste valeur de dette conservée ; comparateurs de nominal et de valeur nette corrigés.',
+        'classify_warrant_cap_':'Plafond de warrant conservé comme droit signé ; reconnaissance comptable retirée.',
     }
     corrections='| Décision | Observations concernées | État |\n| --- | ---: | --- |\n'+'\n'.join(
         f"| {next((v for k,v in descriptions.items() if r['decision'].startswith(k)),r['decision'])} | {len(r['matched_observations'])} | {r['assembly_status']} |" for r in reviews)
@@ -359,7 +363,7 @@ Les engagements d’achat, les baux non commencés et les garanties conditionnel
 
 Le texte de concentration distingue le revenu d’un client du solde de ses créances, et les ventes directes des distributeurs ou des intégrateurs. Les pourcentages anonymes gardent leur période et leur unité : aucune identité de client ni continuité entre exercices n’est déduite de leur ressemblance. Les revenus de marché spécialisé et de cloud conservent leur périmètre publié ; leur classement dans les séries de ventilation ne les transforme pas en secteur opérationnel autonome.
 
-Les remplacements ordinaires de facilité et les résiliations volontaires documentées ne deviennent pas des événements F4. Les pertes cumulées d’investissement ne sont pas attribuées au seul dernier trimestre sans date ou période compatible. Sept décisions d’attribution sont tracées ci-dessous et dans work/extension_interpretation_results.json ; elles corrigent l’interprétation d’assemblage sans réécrire les lectures.
+Les remplacements ordinaires de facilité et les résiliations volontaires documentées ne deviennent pas des événements F4. Les pertes cumulées d’investissement ne sont pas attribuées au seul dernier trimestre sans date ou période compatible. {len(reviews)} décisions d’attribution sont tracées ci-dessous et dans work/extension_interpretation_results.json ; elles corrigent l’interprétation d’assemblage sans réécrire les lectures.
 
 {corrections}
 
@@ -374,7 +378,7 @@ Les huit tables, le contrôle des cellules attendues et les invariants de livrai
 
 La lecture des investissements, dettes, baux, engagements et concentrations de clientèle est terminée. Les {data['reading']['completed_unique_keys']} blocs de la file complète sont traités ; les huit tables et les séries ont été recalculées au même arrêt des sources ({as_of}).
 
-Les résultats distinguent les financements versés des plafonds disponibles, les passifs locatifs des paiements futurs et les engagements fermes des garanties conditionnelles. Les concentrations de créances et de revenu restent distinctes. Sept corrections d’attribution sont documentées, avec conservation des observations d’origine.
+Les résultats distinguent les financements versés des plafonds disponibles, les passifs locatifs des paiements futurs et les engagements fermes des garanties conditionnelles. Les concentrations de créances et de revenu restent distinctes. {len(reviews)} corrections d’attribution sont documentées, avec conservation des observations d’origine.
 
 Les montants non attribuables à une identité confirmée ou à une période compatible restent indéterminés. La lecture ne suffit donc pas à démontrer une dépendance ou une circularité pour toutes les paires. Aucun score ni total global d’exposition n’est produit.
 

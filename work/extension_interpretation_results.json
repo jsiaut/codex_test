@@ -78,5 +78,17 @@
     "matched_observations": [
       "d3268d60fcf0898fccf18a16ac260bca61abf62a73bd5d3739b8a3e93bfcfe14"
     ]
+  },
+  {
+    "content_key": "e65b4545af0c22f764668c2024d2c2be5a756c35e3e2d54c7469c9704d2adf63",
+    "observation_id": "55bb5d30c47937c01343f00e5b8889778de75f4290b89e1fc466dfb256651d29",
+    "affected_quantity": "Meta_customer_performance_warrant_share_limit",
+    "decision": "classify_warrant_cap_as_signed_maximum_not_recognized_consideration",
+    "quote": "a performance-based warrant",
+    "detail": "160 million shares is the maximum warrant entitlement issued to Meta; the quote does not establish GAAP-recognized consideration, issued common shares, or a cash transfer. Keep the cap and grant date.",
+    "matched_observations": [
+      "55bb5d30c47937c01343f00e5b8889778de75f4290b89e1fc466dfb256651d29"
+    ],
+    "assembly_status": "applied"
   }
 ]

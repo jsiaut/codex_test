@@ -87,7 +87,7 @@ def run(db,root,as_of,entities,observations,resolve):
                      and g in (e.get('from_group_id'),e.get('to_group_id'))]
             for c in sorted(cp[g]):
                 pe=[e for e in visible if {e.get('from_group_id'),e.get('to_group_id')}=={g,c}]
-                commercial=[e for e in pe if e['family']=='commercial'];fund=[e for e in pe if e['family']=='financing' and e['edge_kind']=='amount' and e['event_type'] in ('funding','drawdown')]
+                commercial=[e for e in pe if e['family']=='commercial'];fund=[e for e in pe if e['family']=='financing' and e['edge_kind']=='amount' and (e['event_type'] in ('funding','drawdown') or e.get('resolution_evidence')=='current_primary_instrument_held')]
                 reciprocal=bool(any(e['from_group_id']==g for e in commercial) and any(e['to_group_id']==g for e in commercial))
                 structure='reciprocal_commercial' if reciprocal else 'commercial_and_financing' if commercial and fund else 'commercial_only' if commercial else 'financing_only' if fund else 'none'
                 linked=bool(any(e.get('linkage_class') and e['linkage_evidence']=='documented_link' for e in pe))

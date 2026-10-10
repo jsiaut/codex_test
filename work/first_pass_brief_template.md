@@ -7,7 +7,7 @@ Les comptes permettent de publier des séries de revenu, de trésorerie et d’i
 | Résultat des cellules prioritaires | Nombre |
 | --- | ---: |
 | calculée ou état de couverture établi | 35900 |
-| indéterminée | 181401 |
+| indéterminée | 181399 |
 | partielle | 5373 |
 
 Les événements sont datés et documentés, sans score. Les contradictions et éléments hors tranche restent visibles. L’audit indépendant n’est pas effectué puisque le travail a été réalisé sans sous-agent.

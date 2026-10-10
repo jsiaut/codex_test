@@ -42,3 +42,11 @@ def test_current_primary_holding_needs_explicit_primary_held_proof_and_current_d
     assert state(dict(holding,resolution_evidence=None))=='unknown'
     assert state(dict(holding,period_end='2025-12-31'))=='unknown'
     assert state(dict(holding,type='noncash_investment'))=='unknown'
+
+
+def test_signed_warrant_cap_is_distinct_from_recognized_customer_consideration():
+    recognized=dict(BASE,family='customer_consideration',stage='recognized',event_type='recognition',
+                    type='equity_or_warrants_to_customer')
+    assert state(recognized)=='active'
+    assert state(dict(recognized,stage='signed',unit='http://www.xbrl.org/2003/instance:shares',
+                      currency=None,amount=Decimal(160000000)))=='unknown'

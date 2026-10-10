@@ -56,5 +56,13 @@
     "decision": "correct_comparator_treatment_to_86_principal_84_net_preserve_693_fair_value",
     "reason": "The 693m fair value is correct. The newly authored issuer_treatment mistakenly cites 69m principal and 66m net; debt block 92de4ed2f61376c322ec73775b1116bf93579f00fef4a114b3cae9bd62175ed4 explicitly reports 86m principal and 84m net at July 30, 2017. Keep raw observation unchanged; correct only the interpretation. No change to amount.",
     "assembly_status": "pending_phase3"
+  },
+  {
+    "content_key": "e65b4545af0c22f764668c2024d2c2be5a756c35e3e2d54c7469c9704d2adf63",
+    "observation_id": "55bb5d30c47937c01343f00e5b8889778de75f4290b89e1fc466dfb256651d29",
+    "affected_quantity": "Meta_customer_performance_warrant_share_limit",
+    "decision": "classify_warrant_cap_as_signed_maximum_not_recognized_consideration",
+    "quote": "a performance-based warrant",
+    "detail": "160 million shares is the maximum warrant entitlement issued to Meta; the quote does not establish GAAP-recognized consideration, issued common shares, or a cash transfer. Keep the cap and grant date."
   }
 ]
