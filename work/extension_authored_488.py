@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='0d626020e27e6bfc70039c48a243dc37f81762cafdcade2f6fc80cd78445ce2a'
+save(k,[tagged(k,32,'Marketable equity securities | | | | | | 1,226',block='exposed_assets',model_quantity='public_equity_securities_held',issuer_treatment='1226mPUBLICHELD2024_UNKNOWNissuer_NOprimaryoriginproof_NOT2025newScaleinvestment'),tagged(k,40,'Restricted cash equivalents | | | | | | 1,193',model_quantity='restricted_cash_equivalents',issuer_treatment='1193mRESTRICTEDstock_NOTfreecash_ORfutureguaranteecap'),dict(quote='changes in the fair value recorded for these non-marketable equity securities were not material.',issuer_treatment='NONrecurringPRIVATEFVchangesimmaterial2024_NOTallprivateimpair0_42combinedelsewhere_NOT481unrealdebtF6')])

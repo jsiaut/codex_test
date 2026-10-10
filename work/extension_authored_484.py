@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ad0e4bfc34326d95a673d11897c9a4c95b2227df2e5b16d9017797aea98201ed'
+save(k,[tagged(k,0,'One customer accounted for approximately 24% and another customer accounted for 16% of the total consolidated accounts receivable balance as of December 28, 2024 and December 30, 2023, respectively.',counterparty_evidence='anonymous',model_quantity='customer_receivable_concentration',issuer_treatment='ONEanon24percentCONSOLAR_Dec28_2024_OTHERanon16percentPRIORDec30_2023_notTWOcurrent_NOTsamecustomer_ornamedAI_GamingAjoin'),dict(quote='no such counterparty has failed to meet its financial obligations to the Company.',issuer_treatment='FXHEDGEcounterpartyDEFAULTnoneTOdate_notalltradecustomercreditrisk0_noactualF4')])
