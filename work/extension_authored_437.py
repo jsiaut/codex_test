@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='67cead1813635af502249b17042822e80652760c7d701499d126c647eee24491'
+save(k,[dict(quote='Strategic investments',model_quantity='private_equity_carrying_value_scope',issuer_treatment='DEC2024strategic102220kHELD_ANONYMOUS_NOT60133kprimarycashinferredfromprior42087'),dict(quote='Notes receivable',model_quantity='dcsp_net_note_asset_scope',issuer_treatment='107597kNETnoteasset_NOT224mGROSS_DCSPfinancingsetoff_NOTcashfunding'),dict(quote='Escrow funds',model_quantity='escrow_asset_scope',issuer_treatment='336055kDEC2024escrowHELD_notfreecash_LATER304mrefund_notassumeall336055returned')])

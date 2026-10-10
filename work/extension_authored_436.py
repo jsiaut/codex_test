@@ -1,0 +1,4 @@
+from extension_authoring import save
+k='4b74322ca7d27ead3b32dc352cc288eda0953bffccc5c0615f1162f55b748c31'
+m=dict(amount_origin='narrative_only',amount_qualifier='exact',unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',period_end='2024-12-31')
+save(k,[dict(m,quote='the Company had $15.1 billion of unsatisfied RPO',amount='15100000000',model_quantity='remaining_performance_obligations',issuer_treatment='DEC2024RPO_IN4100mDEF_54percent24endingDec26_NOT12_42percent25to48_NOT15000mleasecommit'),dict(m,quote='was $2.0 billion and $4.1 billion, respectively',amount='4100000000',model_quantity='deferred_revenue',issuer_treatment='DEC2024currentANDnoncurrentDEF_STOCK_notnewcash_Q12025OpenAIpendingcontractNOTinDEC2024RPO'),dict(quote='represented 20%, 88%, and 96% of\ntotal revenue',model_quantity='committed_contract_revenue_share',issuer_treatment='96percentFY2024committedcloudcontracts_INcapacitydeliveredBEFOREcommitstart_NOT96percentonecustomer')])
