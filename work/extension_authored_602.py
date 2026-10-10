@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='1e8d7400b9eea142e6daaf46fb23f7f60dd3043871dcaaefb15e1bf1d7fa1d7a'
+save(k,[dict(quote='Certain immaterial prior period amounts have been reclassified to conform to current period presentation.',basis_break=True,recast_cause='presentation_reclassification',issuer_treatment='PRIORimmaterialpresentationreclassification_NOmaterialamountspecified'),dict(quote='each consisted of 13 weeks and 26 weeks, respectively.',abstained=True,abstention_reason='Fiscal quarters and half years are 13 and 26 weeks; this policy block gives no named primary investment, debt support, credit loss or individual concentration.')])

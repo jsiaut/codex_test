@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='0656d509340bed0b5ed4f16ca1c855fa418f535f3bfd59c6b8153bcc0075907b'
+save(k,[tagged(k,1,'Family of Apps | | | $ | 38,718',model_quantity='segment_revenue',issuer_treatment='38.718bn_Q2_FoA_NOTAIonly'),tagged(k,13,'Family of Apps | | | $ | 19,335',model_quantity='segment_operating_income',issuer_treatment='19.335bn_Q2_FoA_RLminus4.488bn_NOTcreditLoss'),dict(quote='most of which is allocated to the FoA segment.',abstained=True,abstention_reason='Usage-based infrastructure cost allocation does not isolate AI costs, assets, individual customer concentrations or credit exposure.')])

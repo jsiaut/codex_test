@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ddbaedf3a55f97d4b0ae707045c462a7f533f90c29e54b78d7c67122b9043007'
+save(k,[tagged(k,40,'Our total deferred revenue was $675 million',model_quantity='deferred_revenue',issuer_treatment='675m_HELD_notnewcash_IN637recognizeLT1yr_NOTRPOfull'),dict(quote='based on the addresses of our customers',model_quantity='geographic_revenue_basis',issuer_treatment='CUSTOMERaddress_NOTusers_orenddemand_geographies'),dict(quote='we expect $637 million of our deferred revenue to be realized in less than a year.',abstained=True,abstention_reason='Deferred revenue timing does not disclose full RPO or individual customer concentration, and does not identify AI customer financing or cash credit incentives.')])
