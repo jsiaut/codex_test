@@ -1,0 +1,4 @@
+from extension_authoring import save
+k='e015532b4b28808716ac3392993866ad1641390977607ad9e78609ba0fb0d36c'
+m=dict(amount_origin='narrative_only',unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',period_end='2019-02-02',amount_qualifier='exact')
+save(k,[dict(m,quote='At February 2, 2019, the estimated aggregate fair value of the 2023 Notes and 2028 Notes was $997.3 million',amount='997300000',model_quantity='own_debt_fair_value',issuer_treatment='OwnNotesFV_NotPrincipalOrNewCash'),dict(quote='Balance at February 2, 2019 | $ | — |',abstained=True,abstention_reason='NoCurrentLevel3Assets_PriorFY18SaleAndRealizedLossNotFY19InvestmentImpairment'),dict(quote='Total assets | $ | 16,829 | | | $ | 74,662 | | | $ | — | | | $ | 91,491 |',abstained=True,abstention_reason='RecurringFV91.491INCashEquivalentsAndSeveranceFund_NotAllCashOrPrivateInvestmentStock')])

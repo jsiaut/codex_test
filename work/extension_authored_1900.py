@@ -1,0 +1,4 @@
+from extension_authoring import save
+k='a421e11e0c44011acf41a2fbf839f5e064461b5ac1fbb1bcd8ac9c10a86d75a0'
+m=dict(amount_origin='narrative_only',unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',period_end='2019-02-02',amount_qualifier='exact')
+save(k,[dict(m,quote='Short-term, highly liquid investments of $90.8 million and $267.6 million as of February 2, 2019 and February 3, 2018, respectively, included in cash and cash equivalents',amount='90800000',model_quantity='cash_equivalent_investments',issuer_treatment='90.8CurrentINCashEq_NotPrior267.6OrPrivate'),dict(quote='There are no available-for-sale securities on hand at February 2, 2019.',abstained=True,abstention_reason='NoCurrentAFSSecurities_NotAllPrivateInvestmentsOrNoCashEquivalents'),dict(quote='As of February 2, 2019, the Company has no investments on hand.',abstained=True,abstention_reason='MarketableInvestmentScopeEX90.8CashEq_NotAllPrivateHoldings_NoRealizedLossAsF6')])

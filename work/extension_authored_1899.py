@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='3c3cec186708924d9e60f105cc7cbfc881c614caee7b655e59059cb9ca161a96'
+save(k,[dict(quote='There were no outstanding forward contracts at the year ended February 2, 2019 and February 3, 2018.',abstained=True,abstention_reason='NoOutstandingFXForwardsAtCurrentAndPriorYearEnd'),dict(quote='The Company did not have hedge ineffectiveness from derivative financial instruments in fiscal 2019, 2018 and 2017.',abstained=True,abstention_reason='NoHedgeIneffectiveness_NotPrivateInvestmentF6'),dict(quote='No cash flow hedges were terminated as a result of forecasted transactions that did not occur.',abstained=True,abstention_reason='NoForecastFailureCashFlowHedgeTermination')])
