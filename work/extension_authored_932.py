@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='457162b82f9faabd468d0852750e44524aa9f8c7f42b6527f4feba9a753d8e32'
+save(k,[tagged(k,41,'$ | 9,907',model_quantity='marketable_securities_balance',issuer_treatment='9.907bn_MARKETABLE_EX3.148cashEq_IN13.055totalFV_NotPrivateHELD'),dict(quote='driven primarily by changes in interest rates.',abstained=True,abstention_reason='The unrealized debt-security losses primarily reflect interest rates rather than isolated credit losses. Maturities describe investment assets, not NVIDIA debt repayments. No named private investee, primary investment cash or AI-chain bilateral exposure is disclosed.')])
