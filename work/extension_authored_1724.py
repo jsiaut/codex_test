@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='77b7651cc453181017339efd9879fb2e3f982533ed543e6e9db9e1f757f49f2b'
+save(k,[dict(quote='Our condensed consolidated financial statements include the accounts of NVIDIA Corporation and our wholly-owned subsidiaries.',abstained=True,abstention_reason='FullNVIDIACorporationLegalName_InIndependentAcc0001045810-19-000170;NoJurisdictionInThisQuote_NoBrandNodeWithoutRequiredProof'),dict(quote='Certain prior fiscal year balances have been reclassified to conform to the current fiscal year presentation.',basis_break=True,recast_cause='presentation_reclassification',abstained=True,abstention_reason='ActualGenericPriorPresentationReclass_NotSpecificSegmentChange;ASC842Jan28_19Same1722NoComparativeAdjust;CECLFutureFY21_NotF6')])

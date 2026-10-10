@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='dc1e491c04365528de22dbad3051bbbbfd98bff46329352f44bb809b10c91a2f'
+save(k,[tagged(k,16,'2.20% Notes Due 2021 (1) | Level 2 | | $ | 1,003',model_quantity='debt_fair_value',issuer_treatment='1.003BillionOwn2021NotesFV_NotDebtCarryingAmountOrNewCash;2026NotesFV1.051Billion'),dict(quote='These liabilities are carried on our Consolidated Balance Sheets at their original issuance value, net of unamortized debt discount and issuance costs, and are not marked to fair value each period.',abstained=True,abstention_reason='DebtFairValueDisclosure_NotRecurringBalanceSheetRemeasurementOrAdditionalBorrowing;MarketableAssetsSame1719')])
