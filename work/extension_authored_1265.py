@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='787c69e261e3f86ddbc528f63f639070ef7b5ef33d46f82a08b6071362bd6cb7'
+save(k,[tagged(k,32,'$36.5 million',block='exposed_assets',component_kind='interest_held',model_quantity='private_investments_held',issuer_treatment='36.5mPRIVATE_HELDJuly31_21_NotRecurringFVZero_NotCashFunding'),dict(quote='The tables do not include assets and liabilities that are measured at historical cost or any basis other than fair value',abstained=True,abstention_reason='RecurringFV table excludes historical-cost private investments. Level3 recurring zero is not private stock zero.3.2bn own senior-note FV and Inphi convertible422k are borrower liabilities, not private-investment F6. No actual private impairment amount or primary funding event here.')])
