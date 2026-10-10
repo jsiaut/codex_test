@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='1780e6a2a5cb599e5eff9fd8884f021f1ae72cc8f093e13f84251a99322cc7c2'
+save(k,[tagged(k,6,'Accrued property and equipment',model_quantity='accrued_capital_expenditures',issuer_treatment='1.744bn_PPEaccr_NOTcashORincrementalcommitment'),tagged(k,0,'Legal-related accruals',model_quantity='legal_accruals',issuer_treatment='7.791bn_LEGALstock_NOTAIcreditguarantee_ORF6'),dict(quote='Includes accruals for estimated fines, settlements, or other losses in connection with legal and related matters',abstained=True,abstention_reason='Accrued legal matters and capital expenditures do not establish actual primary financing, named AI credit support or a new contractual commitment outside recognized liabilities.')])

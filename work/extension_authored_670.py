@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='06298ea89284a0a5958ba76c5006477762a8af6a07bf3f9741af75b70d7d064c'
+save(k,[tagged(k,0,'we accrued aggregate legal liabilities of $665 million.',model_quantity='legal_accruals',issuer_treatment='665m_RECOGNIZEDlegalstock_NOTAIcredit_ORF6'),tagged(k,1,'approximately $600 million in aggregate beyond recorded amounts',model_quantity='additional_possible_legal_loss',amount_qualifier='approximately',issuer_treatment='600m_POSSIBLE_ADDITIONAL_EX665mrecorded_NOTguaranteecap'),dict(quote='these matters are subject to inherent uncertainties',abstained=True,abstention_reason='Ordinary cell-phone, privacy and other litigation is not a named AI financing or credit support obligation and does not establish an F6 credit loss.')])

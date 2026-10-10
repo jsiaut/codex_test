@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7dd9c0905214c0097a897b95251e4857fa238b908e6485557f1f3231286f4e61'
+save(k,[tagged(k,0,'The carrying amount of our long-term debt in the form of senior unsecured notes (the Notes) was $18.39 billion',block='recognized_liabilities',category_id='debt',model_quantity='debt_long_term_net',issuer_treatment='18.39bn_OWNcarry_NOTnewcash_NOT18.06FVloss'),dict(quote='The total estimated fair value of the Notes was $18.06 billion and $18.48 billion',abstained=True,abstention_reason='Changes in own-debt fair value do not establish credit losses, actual primary financing, cash repayment or a financial covenant stress event.')])
