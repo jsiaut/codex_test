@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='8dfb23d5a1f45d67f8603a5782790e8cb88acd78f018a257cdac56fe99013ea6'
+save(k,[tagged(k,24,'non-marketable equity investments had a carrying value of $48.6 million and $48.2 million',model_quantity='private_equity_carrying_value',issuer_treatment='48.6mHELD_private_ANONYMOUS_NOT0.4newcash_or_identifiableAIcounterparty'),tagged(k,11,'Marketable equity investments',model_quantity='public_equity_carrying_value',issuer_treatment='10.1mPUBLICHELD_prior15.6_notproof5.5impairment_NOF6_NQDC0.9_SEPARATEnotallAI'),dict(quote='The tables do not include assets that are measured at historical cost or any basis other than fair value',issuer_treatment='FVscopeONLY_notallinvestmentassets_3400mSENIORDEBTFV_NOTadditionaldebt_or_liquidity')])

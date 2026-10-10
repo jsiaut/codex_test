@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='b285d8b07f857f1ff24805e504c4a9f0a1ff370d401d92073e8882fac3b42c85'
+save(k,[tagged(k,3,'Semiconductor solutions',model_quantity='semiconductor_revenue_scope',issuer_treatment='16620mH1_8408mQ2_MIXEDnetworkAIwirelessindustrialIP_NOTallAI'),tagged(k,15,'Operating income:',model_quantity='semiconductor_operating_profit_scope',issuer_treatment='9512mH1_4806mQ2_SEMI_EXCLUDES7532unallocatedH1SBCintangetc_NOTAIprofit_NOsegmentassets_notintersegmentrevenues')])
