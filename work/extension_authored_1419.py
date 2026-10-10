@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='429e5af8fbd71a6fb705f84f5910fc939f50fac828d0d42a42902585b08d85e2'
+save(k,[tagged(k,28,'55,466',block='exposed_assets',model_quantity='fair_value_liquid_assets',issuer_treatment='FVDec31_20_EX6.488BankCash_IN9.755MM1.016UST305Time12CorpEQ44.378Market_Not61.954Combined'),dict(quote='we concluded no change in fair value from the initial carrying value of $5.82 billion was required',abstained=True,abstention_reason='Jio observable transactions no fair-value change; same July7_20 investment1418/1172, no F6 newprimarycash. OtherLevel3 aggregate immaterial notzero; no new named equity event here.')])

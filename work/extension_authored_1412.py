@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='1402f71d44e58b1759c9dcd359da06a976923003bbb53d9b6161d79dd39fe305'
+save(k,[tagged(k,12,'environmental liability of approximately $4 million',block='recognized_liabilities',category_id='loss_contingency',model_quantity='environmental_liability',issuer_treatment='HELDDec26_20_EstimatedNoInsuranceNet_NotCash'),dict(quote='the settlement was funded entirely by certain of the',abstained=True,abstention_reason='Hatamian historical settlement funded by insurers not AMD cash. Legal maxima unquantified/immaterial not zero. Xilinx Oct26_20 signed conditional CONTROL acquisition not actual primary investment cash. Environmental additional contingent costs unknown not guaranteed fixed4m extra. No F6/F4.')])

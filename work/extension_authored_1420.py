@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='3d1d3796c2a7cc3863057f61c8c1e125165f4e4364a4e3099c0268dc0e76bc84'
+save(k,[tagged(k,12,'17,576',block='exposed_assets',model_quantity='cash_and_cash_equivalents',issuer_treatment='Dec31_20_IN6.488Bank_EX44.378Market61.954Combined_NotAdditional55.466FV'),tagged(k,26,'12,826',block='exposed_assets',model_quantity='liquid_asset_maturity_12m',issuer_treatment='ASSETmaturityFV_EX31.552Later_NotIssuerDebtCashOut'),dict(quote='The allowance for credit losses was not material',abstained=True,abstention_reason='Immaterial credit allowance/unrealized losses not exactzero or F6.641m unrealized gain not new cash investment.17.576cashEq44.378Market61.954combined not sum each. No primary equity funding here.')])
