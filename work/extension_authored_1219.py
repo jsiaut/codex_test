@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='67a40c5ddd54ef23aba04958924006ca1ca6957d38df0dfb0b6e088f37ef3565'
+save(k,[tagged(k,0,'Designated as cash flow hedges | | | $ | 949',model_quantity='foreign_exchange_forward_notional'),tagged(k,2,'Not designated for hedge accounting | | | $ | 430',model_quantity='foreign_exchange_forward_notional'),dict(quote='The fair value of the contracts was not significant',abstained=True,abstention_reason='FX-forward notionals are not guarantee maxima, collateral commitments or investment cash. Insignificant fair value and expected gains/losses are not zero or private-investment F6. Eighteen-month maturities do not supply twelve-month support outflows.')])

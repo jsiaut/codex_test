@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ffbc47ec981c91e7fdbbe6cd1851a1c6dc945674bed563aff93f00655047135e'
+save(k,[tagged(k,16,'carrying value of $26.8 million',block='exposed_assets',component_kind='interest_held',model_quantity='private_equity_investments_carrying_amount'),dict(quote='The tables do not include assets and liabilities that are measured at historical cost',abstained=True,abstention_reason='Recurring table excludes historical-cost holdings; 26.8m private investments are separate carrying value rather than new cash or a private-investment F6 event. Time deposits and marketable equity are different assets; 3.1bn fair value is own debt. No named investee, jurisdiction or primary funding transaction is established.')])

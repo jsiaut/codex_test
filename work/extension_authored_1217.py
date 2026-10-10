@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='084cecacbad0c9d3b062e2f0ff4486ee4dca9e929cfcadeaf4fa02826860b801'
+save(k,[tagged(k,14,'Privately-held equity securities | | | Level 3 | | | | | | $ | 172',block='exposed_assets',component_kind='interest_held',model_quantity='private_equity_investments_carrying_amount',issuer_treatment='172mHELD_Not28mDeltaCash'),dict(quote='an investment in a publicly-traded equity security',abstained=True,abstention_reason='8m quarter and 126m nine-month unrealized gains concern public equity, not private-investment F6. Own-bond fair values are borrowing valuations, not portfolio funding. Private holding delta does not prove cash investment, investee identity or a primary round.')])
