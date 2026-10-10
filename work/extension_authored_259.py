@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='eaf42a40e7654c8f48394ab0dfcd4370fea3dfa0d738472b320770016e8569cb'
+save(k,[tagged(k,0,'aggregate amount of $261 million',category_id='standby_lc',block='contingent_obligations',stage='signed',issuer_treatment='Sep30_261m_LEASE_LCOUTSTANDING_not_capacitydespiteMaximumBorrowingTag_noDraw_compliantexpirethrough2041_separateRCFsubfacilitynoissuedRCF_LC_notcash'),dict(quote='not possible to determine the maximum potential amount',category_id='indemnification',block='contingent_obligations',issuer_treatment='indemnification_maxunknown_no_materialhistoricclaims_or_legal_accrual_NOTzero_exposure')])

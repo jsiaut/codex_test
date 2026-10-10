@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='923d4b2cd0d8f0b845ae3d138073e2c6268b1f7523227a6eaa3f740078b2f2b8'
+save(k,[tagged(k,44,'Net carrying amount',category_id='debt',block='recognized_liabilities',issuer_treatment='Oct26_8467m_carry999m_current7468m_long8500m_face_FV7600same_not_add'),tagged(k,53,'$575 million commercial paper program',family='financing',link_type='loan_or_facility',stage='available',issuer_treatment='575m_CPprogram_NOCPoutstanding_Oct26_andJan26_not_actualfunding_later25bnnot_applicable_thisdate'),dict(quote='The maturity of the notes is calendar year.',model_quantity='debt_maturity_period_scope',issuer_treatment='note2026_calendar_NOTFY26_999currentincluded8467_complied_nonfinancialcovenants_not_F4_amendment')])

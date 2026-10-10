@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='57e3e5cf977eb915a058d0694f223252ee4122e79c83547fe81df192d8bf92ec'
+save(k,[tagged(k,11,'future obligations of $7.5 billion',category_id='lease_not_commenced',block='contractual_outflows',issuer_treatment='Oct26_uncommenced7500m_primarilyDC_FY26Q4_toFY30_terms1.5_to15years_not_current_lease_debt'),tagged(k,8,'Present value of net future minimum lease payments',category_id='lease_liability',block='recognized_liabilities',issuer_treatment='2355mPV341current2014long_2854grossless499interest_same_notadd_118remainderFY26_not12months431FY27'),tagged(k,18,'Operating cash flow used for operating leases',model_quantity='lease_actual_cash_paid',issuer_treatment='nine301m_actualcash_NOT332m_expense_or752m_noncashROU')])
