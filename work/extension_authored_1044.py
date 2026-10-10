@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='91b96e6dfcfee2b435c5ce767b8d6292c759b557d0a8723dafd725f29133d0c0'
+save(k,[tagged(k,16,'$36.0 million',block='exposed_assets',component_kind='interest_held',model_quantity='private_equity_carrying_value'),tagged(k,3,'176.6',model_quantity='time_deposits_cash_equivalents'),dict(quote='non-marketable equity investments had a carrying value',abstained=True,abstention_reason='The 36m private investment stock does not identify investees, primary issuance, cash funding or a quantified observed impairment. Public equities and own-note fair values do not establish private AI-investee losses.')])
