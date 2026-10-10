@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='25b59ac45d55987e70be6b8e316d6cfbbbf0df8488ccb893e7dd7907aa551e2e'
+save(k,[tagged(k,68,'the recognition of $1.5 billion of revenues that were included in the deferred revenue balance as of December 31, 2018',model_quantity='revenue_from_prior_contract_liabilities',issuer_treatment='1.5NineMonthRecognitionPrior2018DEF_NotCurrentCashReceiptOrRPO'),dict(quote='Google other revenues | 4,640 | | | | 6,428',abstained=True,abstention_reason='6.428Q3FY19GoogleOtherINCloudOtherProducts_NotStandaloneCloudSegmentRevenue;GeographyCustomerAddressesNotDemand;DeferredPaymentsReceivedOrDueNotAllCash')])
