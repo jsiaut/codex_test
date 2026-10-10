@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='5c60738458424a56e280a4c992f4ed5f8c3f72bbeb0df71cfb05d7ad5134fab5'
+save(k,[tagged(k,0,'888',model_quantity='fx_forward_notional_cash_flow_hedge',issuer_treatment='888mFXNotional_NotGuaranteeMaxOrCashOutflow'),tagged(k,2,'402',model_quantity='fx_forward_notional_nonhedge',issuer_treatment='402mFXNotional_NotGuaranteeMaxOrCashOutflow'),dict(quote='mature within 18 months',abstained=True,abstention_reason='18month maturity does not quantify next12 cash. Insignificant FV and expected realized gains/losses are unquantified, not exact zero or actual investment F6. Explicit zero hedge ineffectiveness is not private-investment loss or third-party guarantee.')])
