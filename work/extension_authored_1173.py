@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7cc6baa62f6e0bab49783d1114f301de48e3f2b92cfe1daa497a38eca7d48d6f'
+save(k,[tagged(k,52,'$913 million was measured at fair value',block='exposed_assets',model_quantity='nonrecurring_level_three_private_equity_subset',issuer_treatment='913mSUBSET_6.78bnROUNDEDtotalSame1172_6.775bnExact_NotNewCash'),dict(quote='on a non-recurring basis.',abstained=True,abstention_reason='Nonrecurring fair-value measurement of a private-holdings subset is not itself an observed private AI impairment F6. The 6.78bn rounded holding repeats 6.775bn exact. Recurring fair-value subtotal excludes ordinary cash and cannot be used as total liquidity.')])
