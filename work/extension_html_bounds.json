@@ -1,0 +1,155 @@
+[
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 2 - Summary of Significant Accounting Policies",
+    "raw_byte_start": 7361632,
+    "raw_byte_end": 7621461,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 3 - Revenue",
+    "raw_byte_start": 7621461,
+    "raw_byte_end": 7707200,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 8 - Financial Instruments",
+    "raw_byte_start": 7950766,
+    "raw_byte_end": 8046075,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 9 - Investments in Unconsolidated Affiliates",
+    "raw_byte_start": 8046075,
+    "raw_byte_end": 8066811,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 10 - Debt",
+    "raw_byte_start": 8066811,
+    "raw_byte_end": 8289187,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 11 - Leases",
+    "raw_byte_start": 8289187,
+    "raw_byte_end": 8442558,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 12 - Balance Sheet Components",
+    "raw_byte_start": 8442558,
+    "raw_byte_end": 8487245,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 17 - Commitments and Contingencies",
+    "raw_byte_start": 9530630,
+    "raw_byte_end": 9609421,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 19 - Segments",
+    "raw_byte_start": 9628394,
+    "raw_byte_end": 9875386,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "1. Overview and Summary of Significant Accounting Policies",
+    "raw_byte_start": 2839984,
+    "raw_byte_end": 2938344,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "2. Revenue",
+    "raw_byte_start": 2938344,
+    "raw_byte_end": 2941295,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "3. Fair Value Measurements",
+    "raw_byte_start": 2941295,
+    "raw_byte_end": 3038752,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "7. Consolidated Balance Sheets Components",
+    "raw_byte_start": 3085765,
+    "raw_byte_end": 3100776,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "8. Leases",
+    "raw_byte_start": 3100776,
+    "raw_byte_end": 3158842,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "9. Commitments and Contingencies",
+    "raw_byte_start": 3158842,
+    "raw_byte_end": 3163793,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "10. Debt",
+    "raw_byte_start": 3163793,
+    "raw_byte_end": 3264931,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "15. Geographic Information",
+    "raw_byte_start": 3477806,
+    "raw_byte_end": 3486639,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  }
+]

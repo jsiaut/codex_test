@@ -72,6 +72,17 @@ def serve(root,key=None,part=0,body=False,compact=False):
         candidates=[[i,*[dictionaries[field].index(json.dumps(c[field],ensure_ascii=False,sort_keys=True))
             for field in fields[1:]]] for i,c in enumerate(candidates)]
         dictionaries={field:[json.loads(value) for value in values] for field,values in dictionaries.items()}
+        axes=[];members=[];encoded=[]
+        for value in dictionaries['dimensions']:
+            pairs=[]
+            for axis,member in json.loads(value or '{}').items():
+                if axis not in axes:axes.append(axis)
+                if member not in members:members.append(member)
+                pairs.append([axes.index(axis),members.index(member)])
+            encoded.append(pairs)
+        dictionaries['dimensions']=encoded
+        metadata['dimension_axes']=axes
+        metadata['dimension_members']=members
     if compact:
         metadata['candidate_columns']=['candidate_index',*fields[1:]]
         metadata['candidate_dictionaries']=dictionaries

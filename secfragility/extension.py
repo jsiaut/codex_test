@@ -13,7 +13,7 @@ from .xbrl import parse_instance, digest
 from .evidence import periodic_assurance
 
 PATTERNS = {
-    'investments_note': r'investment|securit|financial instruments|fair value|joint venture|variable interest|unconsolidated|subsequent event',
+    'investments_note': r'investment|\bsecurit|financial instruments|fair value|joint venture|variable interest|unconsolidated|subsequent event',
     'debt_note': r'\bdebt\b|borrow|notes payable|revolving|liabilities|financial instruments',
     'lease_note': r'lease',
     'commitments_note': r'commitment|contingen|guarantee|joint venture|variable interest|unconsolidated|subsequent event',

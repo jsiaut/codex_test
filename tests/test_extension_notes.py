@@ -8,6 +8,7 @@ def test_note_role_selection_includes_risk_and_combined_disclosures():
     assert 'investments_note' in families('Non-marketable Equity Securities')
     assert 'debt_note' in families('NOTES PAYABLE AND OTHER BORROWINGS')
     assert families('Income Taxes') == []
+    assert families('Cybersecurity Risk Management and Strategy Disclosure') == []
 
 
 def test_continuation_gaps_do_not_hide_separate_notes():

@@ -266,21 +266,6 @@
     "duplicate": false
   },
   {
-    "content_key": "b8a34110613026bac6d0c5cba63d470e8fa24a55475a0eb86e2c7113639dc715",
-    "occurrence_id": "28cea862fa09d59cc5075e2f68e56b5f18669e136dc61e47b67bcc7bd512e45a",
-    "path": "work/blocks/28cea862fa09d59cc5075e2f68e56b5f18669e136dc61e47b67bcc7bd512e45a.json",
-    "group": "MSFT",
-    "accession": "0001193125-26-323660",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 8198,
-    "knowledge_date": "2026-07-29",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "8094e9b40e159af0fc9629e714c5edae7d70aac6ad5f221828233530b62f6b0a",
     "occurrence_id": "8e1443b974931bdba4eb3f9c8f419af77505285202301eea0b4489a4a7b3e939",
     "path": "work/blocks/8e1443b974931bdba4eb3f9c8f419af77505285202301eea0b4489a4a7b3e939.json",
@@ -310,21 +295,6 @@
     "chars": 2693,
     "knowledge_date": "2026-07-23",
     "candidates": 3,
-    "duplicate": false
-  },
-  {
-    "content_key": "6495b51ba66ee0a9b6a752e5f944b629b1b851ae167192e48b8b691ec18161b9",
-    "occurrence_id": "4247bc9ea76192de899ac2864511cf4677062d7bfabe9e2affd040e4d7bb9c99",
-    "path": "work/blocks/4247bc9ea76192de899ac2864511cf4677062d7bfabe9e2affd040e4d7bb9c99.json",
-    "group": "ORCL",
-    "accession": "0001193125-26-277521",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 8683,
-    "knowledge_date": "2026-06-22",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -609,51 +579,6 @@
     "duplicate": false
   },
   {
-    "content_key": "bdd54633c6e96bbd9fdd3b0e42ec828ec148c2ab353608e9bdcd568babd2a428",
-    "occurrence_id": "275c27f961f10daeefa8ae3acd2d018bf577117ad03ece3d9da8890f2525611d",
-    "path": "work/blocks/275c27f961f10daeefa8ae3acd2d018bf577117ad03ece3d9da8890f2525611d.json",
-    "group": "MRVL",
-    "accession": "0001835632-26-000011",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1678,
-    "knowledge_date": "2026-03-11",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "48c0edf11e794933e7761bb178450c3eb864f72af205c1c8207c330523244faf",
-    "occurrence_id": "317ae3ed771484af56083475f3a8d3e8fdfc866c4f7c62619116a1281cf4f0dc",
-    "path": "work/blocks/317ae3ed771484af56083475f3a8d3e8fdfc866c4f7c62619116a1281cf4f0dc.json",
-    "group": "MRVL",
-    "accession": "0001835632-26-000011",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 4111,
-    "knowledge_date": "2026-03-11",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "9ccf6703263ddc5b195b4ec3e141478c523bf6340629b4ee10e060c1ba1303a5",
-    "occurrence_id": "6520876280fc3ce58b81a15a89f92beaad8c522c2e7a991a68aa60b8a2dc4097",
-    "path": "work/blocks/6520876280fc3ce58b81a15a89f92beaad8c522c2e7a991a68aa60b8a2dc4097.json",
-    "group": "MRVL",
-    "accession": "0001835632-26-000011",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1351,
-    "knowledge_date": "2026-03-11",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "47194e150a216226942c23c0a562ddf1f90f8794573094fb6e757b095934fc81",
     "occurrence_id": "cb830ff1ba7bbbf7c972d68a45065039c70e571ad6d8aa8f88115095f6dfa059",
     "path": "work/blocks/cb830ff1ba7bbbf7c972d68a45065039c70e571ad6d8aa8f88115095f6dfa059.json",
@@ -716,21 +641,6 @@
     "duplicate": false
   },
   {
-    "content_key": "8b67d524ecfc018d9360f6b5dc20251d0ca8b86d9ad887fb0470337c996c098d",
-    "occurrence_id": "725e8c414f48dab0616dc62e13841af710f3a11611f4d95bbd2b6b2a94079149",
-    "path": "work/blocks/725e8c414f48dab0616dc62e13841af710f3a11611f4d95bbd2b6b2a94079149.json",
-    "group": "CRWV",
-    "accession": "0001769628-26-000104",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 2528,
-    "knowledge_date": "2026-03-02",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "d87fef8d56ab33c7bec9f5474adbeae8f270a1a564229eb84628fc2981129de1",
     "occurrence_id": "74bd2d359c3eed1eaf1b5f7f1d23e6a30cf7a3ea06906fd61960aa47efb0b4fc",
     "path": "work/blocks/74bd2d359c3eed1eaf1b5f7f1d23e6a30cf7a3ea06906fd61960aa47efb0b4fc.json",
@@ -743,36 +653,6 @@
     "chars": 10036,
     "knowledge_date": "2026-03-02",
     "candidates": 123,
-    "duplicate": false
-  },
-  {
-    "content_key": "cc6525f22ed46623c1d34470971d07ec2eb08e6769bf52b865b7ec857b60cacb",
-    "occurrence_id": "d98286b7de58e351d9cd7915c963ab56ea9b00f514324d91e73f9a12b74baccb",
-    "path": "work/blocks/d98286b7de58e351d9cd7915c963ab56ea9b00f514324d91e73f9a12b74baccb.json",
-    "group": "CRWV",
-    "accession": "0001769628-26-000104",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 3546,
-    "knowledge_date": "2026-03-02",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "495f1616848ffb9920fe778d9be7938f096c3a26fc729ab57281adf39f5852a4",
-    "occurrence_id": "137ee1a8b1fc33023ffb878b6c8d8a75644c53dcb181216bd57c648707c43bd4",
-    "path": "work/blocks/137ee1a8b1fc33023ffb878b6c8d8a75644c53dcb181216bd57c648707c43bd4.json",
-    "group": "NVDA",
-    "accession": "0001045810-26-000021",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1757,
-    "knowledge_date": "2026-02-25",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -822,36 +702,6 @@
     "duplicate": false
   },
   {
-    "content_key": "d49d153d20d2a4dcbdf54b8a91788826d10294ca1a1716c9bc9b26089e4bc0f7",
-    "occurrence_id": "af97680450d5dd284a2b45b26916e8f32fe881e3c249340ada112d93eb8be829",
-    "path": "work/blocks/af97680450d5dd284a2b45b26916e8f32fe881e3c249340ada112d93eb8be829.json",
-    "group": "NVDA",
-    "accession": "0001045810-26-000021",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 2127,
-    "knowledge_date": "2026-02-25",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "0272208f394ada120af9b0ab83dd23a4a8bafd82e2159fc5b933cc4a52247c3e",
-    "occurrence_id": "04899f1dafce05e959aa2f5ab0b25423f595726275a94b3f8959410f4f873ad6",
-    "path": "work/blocks/04899f1dafce05e959aa2f5ab0b25423f595726275a94b3f8959410f4f873ad6.json",
-    "group": "AMZN",
-    "accession": "0001018724-26-000004",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1767,
-    "knowledge_date": "2026-02-06",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "584b3110dde51628a1d20773183fbd1dd441ed44f40eead4ea595423f35bf0d5",
     "occurrence_id": "1dbece632f3d126b289517ce5fb357089fd69fa17582ddc6bfc315fc3e7639e6",
     "path": "work/blocks/1dbece632f3d126b289517ce5fb357089fd69fa17582ddc6bfc315fc3e7639e6.json",
@@ -868,51 +718,6 @@
     "duplicate": false
   },
   {
-    "content_key": "2bb861206770f9dd79ea93258f3acf1704c297e421d76c612d35a2b59c6333a4",
-    "occurrence_id": "639ebe0bf03f0524f2dd6bae6d346c07ba185ccebb27c8f482ad0c2728a0eb86",
-    "path": "work/blocks/639ebe0bf03f0524f2dd6bae6d346c07ba185ccebb27c8f482ad0c2728a0eb86.json",
-    "group": "AMZN",
-    "accession": "0001018724-26-000004",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1825,
-    "knowledge_date": "2026-02-06",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "04c7a46d5b18a7d691580d00b313f1ceb2e8bc32b85991a56ba4022aa0812c5e",
-    "occurrence_id": "caa14ebce52cf7b0cbf5b00f33d3b3a553c37e79bb607c34ddce26eac3c54341",
-    "path": "work/blocks/caa14ebce52cf7b0cbf5b00f33d3b3a553c37e79bb607c34ddce26eac3c54341.json",
-    "group": "AMZN",
-    "accession": "0001018724-26-000004",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 443,
-    "knowledge_date": "2026-02-06",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "b4c241fbc10d4a63a771ca9878b518e88217ea814fdb739ebc2e69dea5739345",
-    "occurrence_id": "2836f9b15ab797ebae23a79bbceb4c9fad89f285e8ce95cdccc8e869aef110a7",
-    "path": "work/blocks/2836f9b15ab797ebae23a79bbceb4c9fad89f285e8ce95cdccc8e869aef110a7.json",
-    "group": "GOOGL",
-    "accession": "0001652044-26-000018",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1878,
-    "knowledge_date": "2026-02-05",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "daea0a4e19babd47333f9c705e86b020ee84d567a1177b61b18920ff35af78cd",
     "occurrence_id": "41247f66ec60b7863e65cab6487a6f06c7900647d4618f71e74a1e442a9ba646",
     "path": "work/blocks/41247f66ec60b7863e65cab6487a6f06c7900647d4618f71e74a1e442a9ba646.json",
@@ -926,21 +731,6 @@
     "chars": 413,
     "knowledge_date": "2026-02-05",
     "candidates": 1,
-    "duplicate": false
-  },
-  {
-    "content_key": "07ed98610228674b584d6cb60710b5766e1b34cde9b21b555ee496f83c45c0b3",
-    "occurrence_id": "4fa7e962291a0580dde884a8ceeacaa38f328c5c1b98a6d3195f2b84081a6777",
-    "path": "work/blocks/4fa7e962291a0580dde884a8ceeacaa38f328c5c1b98a6d3195f2b84081a6777.json",
-    "group": "GOOGL",
-    "accession": "0001652044-26-000018",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 2197,
-    "knowledge_date": "2026-02-05",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -976,21 +766,6 @@
     "duplicate": false
   },
   {
-    "content_key": "636c7aee8c930912ee095b14973a80a4b1242ddf42b96fc70821ae774adb1351",
-    "occurrence_id": "0de6525d9e0d62c37abe68d396caf75affeb48d173a3ce1d05932a1aee54ee48",
-    "path": "work/blocks/0de6525d9e0d62c37abe68d396caf75affeb48d173a3ce1d05932a1aee54ee48.json",
-    "group": "AMD",
-    "accession": "0000002488-26-000018",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 4697,
-    "knowledge_date": "2026-02-04",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "51d847760e2ced12ab83d9cbeac1f319d3eea0ee69587d99b04e8d325c856fd2",
     "occurrence_id": "0e066d2f1537c53574ee3f654cb0f9e5b53d6509469ef625e7246d2d6ce22fb9",
     "path": "work/blocks/0e066d2f1537c53574ee3f654cb0f9e5b53d6509469ef625e7246d2d6ce22fb9.json",
@@ -1020,21 +795,6 @@
     "chars": 541,
     "knowledge_date": "2026-02-04",
     "candidates": 2,
-    "duplicate": false
-  },
-  {
-    "content_key": "be43c86100b893a234b75c8b54cd2b8ae90df629a31b0c36bcddc6e436ecd8fd",
-    "occurrence_id": "20708e613e043d4b7e909d4770988e62032652c6180094189835775a4a7e02e8",
-    "path": "work/blocks/20708e613e043d4b7e909d4770988e62032652c6180094189835775a4a7e02e8.json",
-    "group": "AMD",
-    "accession": "0000002488-26-000018",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 916,
-    "knowledge_date": "2026-02-04",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -1070,21 +830,6 @@
     "duplicate": false
   },
   {
-    "content_key": "f3e240037efa0a3a3d7287ca6dedf79a10901813ebda59b80fbe2c4ae3f0b24b",
-    "occurrence_id": "482543c9028cd9a31d3cd8c3435d0f69a5cb4b39449ff0ab49f1284e3cf2eba1",
-    "path": "work/blocks/482543c9028cd9a31d3cd8c3435d0f69a5cb4b39449ff0ab49f1284e3cf2eba1.json",
-    "group": "META",
-    "accession": "0001628280-26-003942",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 4010,
-    "knowledge_date": "2026-01-29",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "907edc0730e68320939ba3ec017c2a900ee82c6e303db06318823cc208223812",
     "occurrence_id": "4d8ea3322bdfd11e748d0764be566578eaab4860a6f6b6a7a22dff8836e4509c",
     "path": "work/blocks/4d8ea3322bdfd11e748d0764be566578eaab4860a6f6b6a7a22dff8836e4509c.json",
@@ -1098,51 +843,6 @@
     "chars": 6892,
     "knowledge_date": "2026-01-29",
     "candidates": 157,
-    "duplicate": false
-  },
-  {
-    "content_key": "89a36d84358c426bd3ddb143042185af3cb1345c8f16cbd47928e28453572747",
-    "occurrence_id": "630ec34fa3a3f663470a373325234af567bf011f4d08e7da590055134fb5fad9",
-    "path": "work/blocks/630ec34fa3a3f663470a373325234af567bf011f4d08e7da590055134fb5fad9.json",
-    "group": "META",
-    "accession": "0001628280-26-003942",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1234,
-    "knowledge_date": "2026-01-29",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "ccd7aeccc4a0f3fbf5f43fb4ca007ee351be1bf4e01011527e0f4a85b3928025",
-    "occurrence_id": "73d1094181bc7a72f8ad7433fcba9fe5ee0e853d09b9ab5c5a41372254e16a4b",
-    "path": "work/blocks/73d1094181bc7a72f8ad7433fcba9fe5ee0e853d09b9ab5c5a41372254e16a4b.json",
-    "group": "META",
-    "accession": "0001628280-26-003942",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1655,
-    "knowledge_date": "2026-01-29",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "5b7abd9afdb6f17c4ac0836727e39d6f12a9a3e5500465f1730ccb4efc3a5bfc",
-    "occurrence_id": "c429338f7ed663712a2afbd1651c864e54c1441b518cc08ce177a75d3aa89f53",
-    "path": "work/blocks/c429338f7ed663712a2afbd1651c864e54c1441b518cc08ce177a75d3aa89f53.json",
-    "group": "META",
-    "accession": "0001628280-26-003942",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1103,
-    "knowledge_date": "2026-01-29",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -1176,81 +876,6 @@
     "duplicate": false
   },
   {
-    "content_key": "b3c713e051c6441e11fcc7ac20955e61352a4f4adca4663a9461befaf12d3ee1",
-    "occurrence_id": "00619a61deac12825d5d530be97ce404b248b29677b8a4ddfe8ff8ce69e84b13",
-    "path": "work/blocks/00619a61deac12825d5d530be97ce404b248b29677b8a4ddfe8ff8ce69e84b13.json",
-    "group": "AVGO",
-    "accession": "0001730168-25-000121",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 268,
-    "knowledge_date": "2025-12-18",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "fb75d031c1ad8e14170beb494292e6d2b18cfedea3168ef5e15bb751f320399a",
-    "occurrence_id": "02ed79b51784e4587adffb5b6f5a031fdf1eeedcd47b2748d435d4803cd72ef9",
-    "path": "work/blocks/02ed79b51784e4587adffb5b6f5a031fdf1eeedcd47b2748d435d4803cd72ef9.json",
-    "group": "AVGO",
-    "accession": "0001730168-25-000121",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 424,
-    "knowledge_date": "2025-12-18",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "b4b4392e6f5dd557969e200bfd4fbe7d47c207b6c96e031a9b2a7618e6b5d415",
-    "occurrence_id": "36a848c1e514bb34813e5f2ddd1c8ef288800713af4e3ac2077182a94c997fa5",
-    "path": "work/blocks/36a848c1e514bb34813e5f2ddd1c8ef288800713af4e3ac2077182a94c997fa5.json",
-    "group": "AVGO",
-    "accession": "0001730168-25-000121",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1238,
-    "knowledge_date": "2025-12-18",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "f106027d49674e3272d24ae21e2d7d28beb9592b45e4e7a0c340b889cb0aaa1f",
-    "occurrence_id": "6c22b33c870fa22065fc13e1c7fe23510e1adfb3dab3e6c088b8d591a09adcf4",
-    "path": "work/blocks/6c22b33c870fa22065fc13e1c7fe23510e1adfb3dab3e6c088b8d591a09adcf4.json",
-    "group": "AVGO",
-    "accession": "0001730168-25-000121",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1187,
-    "knowledge_date": "2025-12-18",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "37f7d50692da7a51bde92b0f535771275f59a6ec994751502a1e56963f252b08",
-    "occurrence_id": "8dcfda1b3560b90cec5862f8e798ed4999c192d4c204b0d904090f1f4dab9caf",
-    "path": "work/blocks/8dcfda1b3560b90cec5862f8e798ed4999c192d4c204b0d904090f1f4dab9caf.json",
-    "group": "AVGO",
-    "accession": "0001730168-25-000121",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 346,
-    "knowledge_date": "2025-12-18",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "9ebe7130452d120c77a87b89e964d78d95e2a6e616576bfa92bcfe3a1e2be9a9",
     "occurrence_id": "ad0b362b47a3d74de4f829ebef85784eaa1408688c6e8bccc73bf73ac849b14e",
     "path": "work/blocks/ad0b362b47a3d74de4f829ebef85784eaa1408688c6e8bccc73bf73ac849b14e.json",
@@ -1264,21 +889,6 @@
     "chars": 237,
     "knowledge_date": "2025-12-18",
     "candidates": 1,
-    "duplicate": false
-  },
-  {
-    "content_key": "08d41c16fc463e2bca8a6b765b40de6da4cefb40df121a1549258400052a27b8",
-    "occurrence_id": "b5293192570d5d84fee401ed088cec051bcab9ca2eb5b8675e6007994c78cbc0",
-    "path": "work/blocks/b5293192570d5d84fee401ed088cec051bcab9ca2eb5b8675e6007994c78cbc0.json",
-    "group": "AVGO",
-    "accession": "0001730168-25-000121",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 2644,
-    "knowledge_date": "2025-12-18",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -1781,21 +1391,6 @@
     "duplicate": false
   },
   {
-    "content_key": "f48c23e0240d23e6739454bf4bdff79070da388ce7ca7c559ea40ccc12959edf",
-    "occurrence_id": "02f29d465187259a1602f890adef1c2e545e1fa8994bf55aeb65f10177bc0f76",
-    "path": "work/blocks/02f29d465187259a1602f890adef1c2e545e1fa8994bf55aeb65f10177bc0f76.json",
-    "group": "MSFT",
-    "accession": "0000950170-25-100235",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 9156,
-    "knowledge_date": "2025-07-30",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "b25128d43c3cf1040cad98812f88c809e15fccd5831b97da8fe28aadaa3dc0c3",
     "occurrence_id": "ebd6701b5fa4dc46f43fc82b4317f13446c938b643da6d457cdc53c55d1f8907",
     "path": "work/blocks/ebd6701b5fa4dc46f43fc82b4317f13446c938b643da6d457cdc53c55d1f8907.json",
@@ -1855,21 +1450,6 @@
     "chars": 4043,
     "knowledge_date": "2025-06-18",
     "candidates": 34,
-    "duplicate": false
-  },
-  {
-    "content_key": "b7d8f2be3db6b87f0b187f9a9483f08ecd6e2a1df2cd6e5650d3afcb49378cb5",
-    "occurrence_id": "24d0bad00146bd096f5fa8e10a81820b9a20a569974d039523c5c33e7a907d22",
-    "path": "work/blocks/24d0bad00146bd096f5fa8e10a81820b9a20a569974d039523c5c33e7a907d22.json",
-    "group": "ORCL",
-    "accession": "0000950170-25-087926",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 9047,
-    "knowledge_date": "2025-06-18",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -2154,21 +1734,6 @@
     "duplicate": false
   },
   {
-    "content_key": "bdd54633c6e96bbd9fdd3b0e42ec828ec148c2ab353608e9bdcd568babd2a428",
-    "occurrence_id": "00985221b23059c97475c63fbbdf9466b97791c2475a5592327bf4450bb8a88e",
-    "path": "work/blocks/00985221b23059c97475c63fbbdf9466b97791c2475a5592327bf4450bb8a88e.json",
-    "group": "MRVL",
-    "accession": "0001835632-25-000057",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1678,
-    "knowledge_date": "2025-03-12",
-    "candidates": 0,
-    "duplicate": true
-  },
-  {
     "content_key": "7ded9711d512ff66d868986156980b5b0fc3385c0e70c53e8b4e064c67e1121f",
     "occurrence_id": "c6738587f59ded771f5d06bea120f4b8f20bf33f5c47ca6f1c835fc0379915cf",
     "path": "work/blocks/c6738587f59ded771f5d06bea120f4b8f20bf33f5c47ca6f1c835fc0379915cf.json",
@@ -2184,21 +1749,6 @@
     "duplicate": false
   },
   {
-    "content_key": "bf1683b8888d81578583abfec4fd547e8301c2c3c8d0b37693039b5ceebc7b6c",
-    "occurrence_id": "e2f067f8acb3479d01645bf54e4e92c0256acf7e2b07270c59ec0d548a498668",
-    "path": "work/blocks/e2f067f8acb3479d01645bf54e4e92c0256acf7e2b07270c59ec0d548a498668.json",
-    "group": "MRVL",
-    "accession": "0001835632-25-000057",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 4017,
-    "knowledge_date": "2025-03-12",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "9c0f3af4db284a97745706025a51beb6baf4309ecf140382d50e389f3e680d79",
     "occurrence_id": "9fcfb997387bcdc0b369d0cff23d954360ba117ae77770fbbe853ef377e4f49e",
     "path": "work/blocks/9fcfb997387bcdc0b369d0cff23d954360ba117ae77770fbbe853ef377e4f49e.json",
@@ -2211,21 +1761,6 @@
     "chars": 4760,
     "knowledge_date": "2025-03-11",
     "candidates": 34,
-    "duplicate": false
-  },
-  {
-    "content_key": "f7d4f45907f7a5b30ccc8a9f44c0289cf0c9a65d27fa71be7945ad2f50a36ffc",
-    "occurrence_id": "06b97a6e02d9bc547e7125683621864011d5186f98b1650c045fb2450d5cd297",
-    "path": "work/blocks/06b97a6e02d9bc547e7125683621864011d5186f98b1650c045fb2450d5cd297.json",
-    "group": "NVDA",
-    "accession": "0001045810-25-000023",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1753,
-    "knowledge_date": "2025-02-26",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -2261,21 +1796,6 @@
     "duplicate": false
   },
   {
-    "content_key": "00f66285874aa84a8594343f5cea76f0b1c0957bc2716aad0ce50049ffbce73c",
-    "occurrence_id": "7c22fbfae11a27b530e501a699b6eeca306b7ccdad82ccf7b3a91e81c6af5e59",
-    "path": "work/blocks/7c22fbfae11a27b530e501a699b6eeca306b7ccdad82ccf7b3a91e81c6af5e59.json",
-    "group": "NVDA",
-    "accession": "0001045810-25-000023",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 2094,
-    "knowledge_date": "2025-02-26",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "c67281db943f641baa3fde6a2e901826ca58903dd10062a9033fdabb4ac37cf9",
     "occurrence_id": "fd495a4dbde59c736bcbab6f2f11a5c88bc377df29f3e65d0fd68d803d714da1",
     "path": "work/blocks/fd495a4dbde59c736bcbab6f2f11a5c88bc377df29f3e65d0fd68d803d714da1.json",
@@ -2291,21 +1811,6 @@
     "duplicate": false
   },
   {
-    "content_key": "2bb861206770f9dd79ea93258f3acf1704c297e421d76c612d35a2b59c6333a4",
-    "occurrence_id": "2b8f8da3aa1cc00234d9e4c003c9b0e6154d375bfe473008a01044cdfb04d23c",
-    "path": "work/blocks/2b8f8da3aa1cc00234d9e4c003c9b0e6154d375bfe473008a01044cdfb04d23c.json",
-    "group": "AMZN",
-    "accession": "0001018724-25-000004",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1825,
-    "knowledge_date": "2025-02-07",
-    "candidates": 0,
-    "duplicate": true
-  },
-  {
     "content_key": "4785fd05ddda29998d57ea2e64f5ad561bbf064c39edae9b2c5ad7eda7c41ed8",
     "occurrence_id": "4ef5a110549dc56bf4614635c048714d76cdff190a1e142826db0346cba44c42",
     "path": "work/blocks/4ef5a110549dc56bf4614635c048714d76cdff190a1e142826db0346cba44c42.json",
@@ -2319,51 +1824,6 @@
     "chars": 5971,
     "knowledge_date": "2025-02-07",
     "candidates": 89,
-    "duplicate": false
-  },
-  {
-    "content_key": "9f15641bed86a3270c26c0c7fcedbc5b82c1b6c4932303a50f51084eab70d72b",
-    "occurrence_id": "7d745f222db898c450e818884e396e00fae3742224b4f38d009444f733f21746",
-    "path": "work/blocks/7d745f222db898c450e818884e396e00fae3742224b4f38d009444f733f21746.json",
-    "group": "AMZN",
-    "accession": "0001018724-25-000004",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1692,
-    "knowledge_date": "2025-02-07",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "04c7a46d5b18a7d691580d00b313f1ceb2e8bc32b85991a56ba4022aa0812c5e",
-    "occurrence_id": "af40598d669b5ef46f056563755ea8987fe7e24a89ce7774cccaf94caf215374",
-    "path": "work/blocks/af40598d669b5ef46f056563755ea8987fe7e24a89ce7774cccaf94caf215374.json",
-    "group": "AMZN",
-    "accession": "0001018724-25-000004",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 443,
-    "knowledge_date": "2025-02-07",
-    "candidates": 0,
-    "duplicate": true
-  },
-  {
-    "content_key": "d6170bd7341450eb765d0ebc7dcbae693b7fdf4893ff996f982c2bcc7785cc87",
-    "occurrence_id": "e81c4ec40e1c18b8974df4340b872c495c307d5307ddad16ad01324cc8326efd",
-    "path": "work/blocks/e81c4ec40e1c18b8974df4340b872c495c307d5307ddad16ad01324cc8326efd.json",
-    "group": "AMZN",
-    "accession": "0001018724-25-000004",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 511,
-    "knowledge_date": "2025-02-07",
-    "candidates": 0,
     "duplicate": false
   },
   {
@@ -2415,36 +1875,6 @@
     "duplicate": false
   },
   {
-    "content_key": "09cf73a897fc5e1dea10d3e4b1b9e8969e005cb2cce23d243320d062309c88b7",
-    "occurrence_id": "4eab30505e8e331d54f22dbb9af19461f7fcfa2ea5f440969bd64e4a373c2e2a",
-    "path": "work/blocks/4eab30505e8e331d54f22dbb9af19461f7fcfa2ea5f440969bd64e4a373c2e2a.json",
-    "group": "GOOGL",
-    "accession": "0001652044-25-000014",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 2202,
-    "knowledge_date": "2025-02-05",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "7811cc04c4fd9b4343deac83786c104e6e10acf0cfca32c4a55ebbfc0a14c460",
-    "occurrence_id": "8928918373c6242f4df7f1df70fa150b336c7368badc1957b0d506f7eae59ddf",
-    "path": "work/blocks/8928918373c6242f4df7f1df70fa150b336c7368badc1957b0d506f7eae59ddf.json",
-    "group": "GOOGL",
-    "accession": "0001652044-25-000014",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1875,
-    "knowledge_date": "2025-02-05",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "2c04a58f2907c5dd711029de1d8451c38a809ae9e1e824485f79ff6925ece17b",
     "occurrence_id": "9178487a4d76f355e93a72b4459d7a5967138d69c44d5cbf3f6ac2956bf3bd06",
     "path": "work/blocks/9178487a4d76f355e93a72b4459d7a5967138d69c44d5cbf3f6ac2956bf3bd06.json",
@@ -2477,21 +1907,6 @@
     "duplicate": false
   },
   {
-    "content_key": "9c4fcfbd1fd4fe5524845a837c1847a4b2a9be2027f40db640132bcabc1e1e22",
-    "occurrence_id": "44d953481b1a88a6a2baaf1fe089976b53d3153479506df0537c9bb08a0d16eb",
-    "path": "work/blocks/44d953481b1a88a6a2baaf1fe089976b53d3153479506df0537c9bb08a0d16eb.json",
-    "group": "META",
-    "accession": "0001326801-25-000017",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1298,
-    "knowledge_date": "2025-01-30",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
     "content_key": "0d626020e27e6bfc70039c48a243dc37f81762cafdcade2f6fc80cd78445ce2a",
     "occurrence_id": "54c62cd3e83e564d8086a455c4bb2e3e5c5d42b12424237f0f25ac57e20b8fc6",
     "path": "work/blocks/54c62cd3e83e564d8086a455c4bb2e3e5c5d42b12424237f0f25ac57e20b8fc6.json",
@@ -2505,51 +1920,6 @@
     "chars": 7027,
     "knowledge_date": "2025-01-30",
     "candidates": 151,
-    "duplicate": false
-  },
-  {
-    "content_key": "ac98d3163bc7f7292d1df8ba2ad2db2bd4f2e65c7f2fef7977850c40bd720f06",
-    "occurrence_id": "62dadc4516870e7cf0d388be74128f2b422cc601619a50a9bfe141203d76bf4a",
-    "path": "work/blocks/62dadc4516870e7cf0d388be74128f2b422cc601619a50a9bfe141203d76bf4a.json",
-    "group": "META",
-    "accession": "0001326801-25-000017",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 3603,
-    "knowledge_date": "2025-01-30",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "c3914e5d8a6799d74c5bc85192ab58b5167ca1ff7145000b93e2ca84536b6313",
-    "occurrence_id": "88bb60aba71cd68a9cfeb69d0d3c7ab76b4d3324a62150125b82f743a9832291",
-    "path": "work/blocks/88bb60aba71cd68a9cfeb69d0d3c7ab76b4d3324a62150125b82f743a9832291.json",
-    "group": "META",
-    "accession": "0001326801-25-000017",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1769,
-    "knowledge_date": "2025-01-30",
-    "candidates": 0,
-    "duplicate": false
-  },
-  {
-    "content_key": "7130222c87c6b8280c81ac3b5256fadb6ca03cab9e6032c539e374ddfc70a9d5",
-    "occurrence_id": "e5c2cf638f2bf852da4b6771dd7949bf7e02fe36f45fa46dcc422077dd7e37bd",
-    "path": "work/blocks/e5c2cf638f2bf852da4b6771dd7949bf7e02fe36f45fa46dcc422077dd7e37bd.json",
-    "group": "META",
-    "accession": "0001326801-25-000017",
-    "block_class": "investments_note",
-    "note_families": [
-      "investments_note"
-    ],
-    "chars": 1241,
-    "knowledge_date": "2025-01-30",
-    "candidates": 0,
     "duplicate": false
   },
   {
