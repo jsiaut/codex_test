@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='a0255d76dfe2c6dd51819352b90eac79723d9068e786772f4fb7361207512c14'
+save(k,[tagged(k,28,'had a carrying value of $44.1 million and $36.1 million, respectively',block='exposed_assets',model_quantity='private_equity_carrying_value',issuer_treatment='44.1m_HELDprivateEquity_NOT8mNewCash_FROM36.1priorBalance'),dict(quote='The estimated aggregate fair value of the unsecured senior notes was $3.1 billion',abstained=True,abstention_reason='Own-note fair value, routine measurement policy and marketable equities do not identify actual private primary cash funding, AI counterparties or isolated credit impairment. The employee severance fund is separate from private investments.')])

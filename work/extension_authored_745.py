@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='14eda252bf9e85d002fb83d37e3633166d7199a81ba4ef4af2889da040e485a6'
+save(k,[tagged(k,12,'Total deferred revenues | | $ | 10,129',model_quantity='deferred_revenue',issuer_treatment='10.129bn_HELD_IN8.878current1.251long_NOTRPO_ORnewCash'),tagged(k,0,'Cloud services and license support | | $ | 8,004',model_quantity='cloud_license_support_deferred_revenue_current',issuer_treatment='8.004bn_CURcloudANDsupport_NOTOCI_ORAIonly_IN10.129TotalDEF'),dict(quote='substantially represent customer payments made in advance',model_quantity='deferred_revenue_scope',issuer_treatment='CUSTOMERprepayments_RECOGNITIONratable_ORusage_NOidentifiedCustomerConcentration')])
