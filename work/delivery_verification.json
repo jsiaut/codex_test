@@ -1,0 +1,72 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "checks": {
+    "eight_tables": true,
+    "no_value_for_ND": true,
+    "ND_reason": true,
+    "amount_edge_admissible": true,
+    "no_pending_amount_edges": true,
+    "no_guarantee_only_financed": true,
+    "control_reasons": true,
+    "not_supported_search_incomplete": true,
+    "no_nonfinancial_F6": true,
+    "expected_cells_present": true,
+    "no_generalized_accounting_failure": true,
+    "criteria_frozen": true
+  },
+  "localized_invalid_aggregates": [],
+  "accounting_mismatches": [
+    {
+      "control": "c1_balance_components",
+      "group_id": "AMD",
+      "n": 1
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "MRVL",
+      "n": 4
+    },
+    {
+      "control": "c7_cash_continuity",
+      "group_id": "CRWV",
+      "n": 1
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "CRWV",
+      "n": 5
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "MRVL",
+      "n": 3
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "NVDA",
+      "n": 1
+    },
+    {
+      "control": "c2_cash_flow_components",
+      "group_id": "AMD",
+      "n": 2
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "AMD",
+      "n": 4
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "MSFT",
+      "n": 1
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "ORCL",
+      "n": 4
+    }
+  ],
+  "missing_expected_cells": 0,
+  "independent_audit_performed": false
+}

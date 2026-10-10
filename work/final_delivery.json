@@ -1,0 +1,22 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "timestamp": "2026-10-10T01:36:44.779357+00:00",
+  "event": "final_delivery",
+  "final_delivery": true,
+  "scope": "first_pass",
+  "tables": {
+    "documents": 6706,
+    "facts": 616302,
+    "observations": 6475,
+    "entities": 408,
+    "links": 715,
+    "measures": 241225,
+    "controls": 147844,
+    "exclusions": 18276
+  },
+  "offline_reproduction_verified": true,
+  "tests_passed": 76,
+  "independent_audit_performed": false,
+  "source_checkpoint": "5e82adb119eb49466466146e613eb94532c20587",
+  "repository": "https://github.com/jsiaut/codex_test"
+}

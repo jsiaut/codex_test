@@ -1051,6 +1051,20 @@
   },
   {
     "group_id": "AMZN",
+    "counterparty_id": "legal:db237b7db1910037e6fa14b31156b22adbfa302f9a4606b7c01c517778089f06",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "legal:db237b7db1910037e6fa14b31156b22adbfa302f9a4606b7c01c517778089f06",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AMZN",
     "counterparty_id": "legal:ea0de16abadcbe0db5944ba79f9817ec6cacf9ac00700992fc13d1c116fc7dc9",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -2465,20 +2479,6 @@
   },
   {
     "group_id": "CRWV",
-    "counterparty_id": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
-    "statement": "E1",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "CRWV",
-    "counterparty_id": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
-    "statement": "E2",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "CRWV",
     "counterparty_id": "legal:46e6fccbbb484182e2b7b1a3de3fae350caec1eabc446c2aa6df9e7db1c963cf",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -2571,20 +2571,6 @@
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:6864284acf9260b8de106bf02af13ac2dafc6409e05ac425ef294d2d4800eb6a",
-    "statement": "E2",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "CRWV",
-    "counterparty_id": "legal:6c6f32b28d7bdcf60bb66302901e123104074651e1afa2230e50918dfeaf5f47",
-    "statement": "E1",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "CRWV",
-    "counterparty_id": "legal:6c6f32b28d7bdcf60bb66302901e123104074651e1afa2230e50918dfeaf5f47",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
@@ -2731,6 +2717,20 @@
   },
   {
     "group_id": "CRWV",
+    "counterparty_id": "legal:ced203b7287a1e976801e03791d6424c95ced0685886c72d8bff0088540f0697",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:ced203b7287a1e976801e03791d6424c95ced0685886c72d8bff0088540f0697",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "CRWV",
     "counterparty_id": "legal:d216a43550261768c883c0a485b9a07708e18732619dbf035dcbbfb8f62e51a7",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -2781,6 +2781,20 @@
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:ed7483e4299aea7a0b835af962fbfdb9b863f2c398fd33ceb1cc1731a2256a6d",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
@@ -3347,20 +3361,6 @@
   },
   {
     "group_id": "AMD",
-    "counterparty_id": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
-    "statement": "E1",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "AMD",
-    "counterparty_id": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
-    "statement": "E2",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "AMD",
     "counterparty_id": "legal:2363457300eabfcc8daf33d89a66c3e964bfa3a20d8505598e0c021c281a0545",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -3453,6 +3453,20 @@
   {
     "group_id": "AMD",
     "counterparty_id": "legal:dd8fc9d65ec1e4d24299f40cc7272f3e4e8563a9832673e68dceaf23c839eef6",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
@@ -3697,6 +3711,20 @@
   },
   {
     "group_id": "AVGO",
+    "counterparty_id": "legal:2306a0887ebb43b56df8b98b7815f8073b36365ea313598213a96654a647797c",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "legal:2306a0887ebb43b56df8b98b7815f8073b36365ea313598213a96654a647797c",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AVGO",
     "counterparty_id": "legal:2374c953df5613da579b32080f984aed741a122b320269da9e320a789adff938",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -3809,20 +3837,6 @@
   },
   {
     "group_id": "AVGO",
-    "counterparty_id": "legal:67e69804403c538d9a24fb381ff668bc6b2e6d235bc0b978ea250bb45d42ac37",
-    "statement": "E1",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "AVGO",
-    "counterparty_id": "legal:67e69804403c538d9a24fb381ff668bc6b2e6d235bc0b978ea250bb45d42ac37",
-    "statement": "E2",
-    "outcome": "indeterminate",
-    "reason": "not_processed"
-  },
-  {
-    "group_id": "AVGO",
     "counterparty_id": "legal:6a57b8130cadf6cb90e8e1e5e8bfa5fd026ce9954db5b0523d9fef6f0d132f91",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -3837,28 +3851,28 @@
   },
   {
     "group_id": "AVGO",
-    "counterparty_id": "legal:6b6332bccfc0d6668e354bb07c3b71cccbaddc14e676e766803876b30d3be94b",
+    "counterparty_id": "legal:7059ba3d0da72266eaf07c278e5afce4cc160ed25655772322fb51a74a1c300d",
     "statement": "E1",
     "outcome": "indeterminate",
     "reason": "not_processed"
   },
   {
     "group_id": "AVGO",
-    "counterparty_id": "legal:6b6332bccfc0d6668e354bb07c3b71cccbaddc14e676e766803876b30d3be94b",
+    "counterparty_id": "legal:7059ba3d0da72266eaf07c278e5afce4cc160ed25655772322fb51a74a1c300d",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
   },
   {
     "group_id": "AVGO",
-    "counterparty_id": "legal:7059ba3d0da72266eaf07c278e5afce4cc160ed25655772322fb51a74a1c300d",
+    "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
     "statement": "E1",
     "outcome": "indeterminate",
     "reason": "not_processed"
   },
   {
     "group_id": "AVGO",
-    "counterparty_id": "legal:7059ba3d0da72266eaf07c278e5afce4cc160ed25655772322fb51a74a1c300d",
+    "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
@@ -3887,6 +3901,20 @@
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:8d54eee720f48030c41a264be16742dd983678e690d20ae12f399760929367e3",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "legal:93d5e62e80026dc4148fd80edd93d89b3ef7c77fcf55bc1f9a1f161da2618c1c",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "legal:93d5e62e80026dc4148fd80edd93d89b3ef7c77fcf55bc1f9a1f161da2618c1c",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
@@ -3957,6 +3985,20 @@
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:c764403a64f1947bdbf39d3faa5e71d534718c0d40eee2c1f526a0df09e62499",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "legal:cb329f5d2d050ec3d6a37431795dd6cc47f46cb0b9bd0c64a6289df97dee0ee3",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "legal:cb329f5d2d050ec3d6a37431795dd6cc47f46cb0b9bd0c64a6289df97dee0ee3",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
@@ -4349,6 +4391,20 @@
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:67e69804403c538d9a24fb381ff668bc6b2e6d235bc0b978ea250bb45d42ac37",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "not_processed"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "not_processed"
