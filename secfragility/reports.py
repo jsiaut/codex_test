@@ -22,6 +22,10 @@ def fnum(value):
     return 'ND' if value is None else format(value,'f') if isinstance(value,Decimal) else str(value)
 
 
+def number_id(value):
+    return digest(json.loads(json.dumps(value,default=str)))
+
+
 def render(db,root,as_of,source,verification):
     export(db,root/'tables')
     freeze_manifest(root);network=network_review(root)
@@ -62,7 +66,7 @@ def render(db,root,as_of,source,verification):
                 for t in terms:
                     if t['source_kind']=='document' and m['basis_break_reason']:
                         t=dict(t,locator=m['basis_break_reason'],accession=m['breakdown_key'].split('|')[0])
-                    w.writerow(dict(key,number_id=digest([key,field]),record_kind='measure',field=field,published_value=fnum(m[field]),unit=m['unit'],
+                    w.writerow(dict(key,number_id=number_id([key,field]),record_kind='measure',field=field,published_value=fnum(m[field]),unit=m['unit'],
                        **{k:t.get(k) for k in ['source_id','source_kind','accession','document_id','locator','is_tagged','tier','filing_status']}))
         # The control table itself carries every equation and original terms.
         # Index its numeric terms here for the independent audit as well.
@@ -72,7 +76,7 @@ def render(db,root,as_of,source,verification):
                 for k in json.loads(c['evidence']):
                     for t in source(k):
                         key={k:c[k] for k in ['group_id','period_start','period_end','view','as_of','breakdown_key','variant']}
-                        w.writerow(dict(key,measure=c['control'],term='none',number_id=digest([key,c['control'],field]),record_kind='control',field=field,
+                        w.writerow(dict(key,measure=c['control'],term='none',number_id=number_id([key,c['control'],field]),record_kind='control',field=field,
                            published_value=fnum(c[field]),unit='equation_unit',**{k:t.get(k) for k in ['source_id','source_kind','accession','document_id','locator','is_tagged','tier','filing_status']}))
     shutil.copy2(root/'tables/measures.parquet',audit/'measures.parquet');shutil.copy2(root/'tables/controls.parquet',audit/'controls.parquet')
     # Domain rules contain only normative rules, no production reasoning.

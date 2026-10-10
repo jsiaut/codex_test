@@ -5,7 +5,7 @@ from decimal import Decimal
 import yaml
 from .assembly import rows
 from .annexes import dependency_outcome,link_outcome,chronology_outcome
-from .database import insert
+from .database import insert,bulk_insert
 from .pairs import financed
 
 
@@ -22,7 +22,8 @@ def run(db,root,as_of):
             known=a['as_known_cutoff'] if view=='as_known' else as_of
             cutoff=known or as_of
             for c in registry[g]:
-                pe=[e for e in edges if {e.get('from_group_id'),e.get('to_group_id')}=={g,c} and str(e.get('knowledge_date') or '9999')<=cutoff[:10]] if known else []
+                pe=[e for e in edges if {e.get('from_group_id'),e.get('to_group_id')}=={g,c} and str(e.get('knowledge_date') or '9999')<=cutoff[:10]
+                    and str(e.get('event_date') or e.get('period_end') or '9999')<=a['period_end']] if known else []
                 active=known and financed(edges,g,c,q,u['quarters'],cutoff)=='active'
                 linked=[e['linkage_class'] for e in pe if e['linkage_evidence']=='documented_link']
                 for statement in ['E1','E2','E3','E4','E5','E6']:
@@ -65,7 +66,7 @@ def run(db,root,as_of):
                                 coverage_state='not_processed' if status=='not_determinable' else 'observed',outcome=outcome,value=value,
                                 lineage=json.dumps(lineage),financing_policy='exposure_outstanding',financing_state='active' if active else 'unknown')
                             if lineage:m['knowledge_date']=max(e['knowledge_date'] for e in pe if e['link_id'] in lineage)
-                            insert(db,'measures',m);results.append(m)
+                            results.append(m)
     # E7/E8: one outcome for each pair over its observed annual window, not one
     # vote per quarter or repeated annual cell.
     collapsed=defaultdict(list)
@@ -79,3 +80,5 @@ def run(db,root,as_of):
         outcome='supported' if any(r['outcome']=='supported' for r in rs) else 'refuted' if s=='E2' and all(r['outcome']=='refuted' for r in rs) else 'indeterminate'
         e7.append(dict(group_id=g,counterparty_id=c,statement=s,outcome=outcome,reason='not_processed' if outcome=='indeterminate' else None))
     (root/'work/annex_e_pair_outcomes.json').write_text(json.dumps(e7,indent=2)+'\n')
+
+    bulk_insert(db,'measures',results,root,'evaluation')

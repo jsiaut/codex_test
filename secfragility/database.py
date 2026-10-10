@@ -124,6 +124,22 @@ def insert(db, table: str, row: dict):
         [row[k] for k in keys])
 
 
+def bulk_insert(db,table,rows,root,tag):
+    """Same schema/defaults as insert, with exact typed JSON batch input."""
+    if table not in TABLES:raise ValueError(table)
+    info=db.execute(f"PRAGMA table_info('{table}')").fetchall()
+    defaults={r[1]:db.execute('SELECT '+r[4]).fetchone()[0] for r in info if r[4] is not None}
+    columns={r[1]:('VARCHAR' if r[2].startswith('ENUM') else r[2]) for r in info}
+    path=root/'work'/(tag+'_bulk.jsonl')
+    with path.open('w') as f:
+        for row in rows:
+            if set(row)-set(columns):raise ValueError('Unknown batch column')
+            f.write(json.dumps(dict(defaults,**row),default=str,ensure_ascii=False)+'\n')
+    if not rows:return
+    specification='{'+','.join(sql_literal(k)+':'+sql_literal(v) for k,v in columns.items())+'}'
+    db.execute(f'INSERT INTO {table} BY NAME SELECT * FROM read_json({sql_literal(str(path))},format=\'newline_delimited\',columns={specification})')
+
+
 def export(db, destination: Path):
     from tempfile import TemporaryDirectory
     destination.mkdir(parents=True, exist_ok=True)

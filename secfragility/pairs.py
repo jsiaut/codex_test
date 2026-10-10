@@ -4,7 +4,7 @@ from collections import defaultdict
 from datetime import date,timedelta
 from decimal import Decimal, ROUND_HALF_EVEN
 from .assembly import rows
-from .database import insert
+from .database import insert,bulk_insert
 from .xbrl import digest
 
 
@@ -39,6 +39,8 @@ def financed(edges,s,c,q,quarters,cutoff,policy='exposure_outstanding'):
 
 
 def run(db,root,as_of,entities,observations,resolve):
+    pending=[]
+    def emit(db,table,row):pending.append(row)
     u=json.loads((root/'work/expected_universe.json').read_text());inv=json.loads((root/'work/inventory.json').read_text())
     edges=rows(db,"SELECT * FROM links WHERE family IS NOT NULL")
     cp=defaultdict(set);cpnames={}
@@ -63,7 +65,9 @@ def run(db,root,as_of,entities,observations,resolve):
         g=q['group_id']
         for view in ('as_known','revised'):
             r=rev.get((g,q['period_start'],q['period_end'],view));cutoff=public.get((g,q['period_start'],q['period_end']),as_of) if view=='as_known' else as_of
-            visible=[e for e in edges if str(e.get('knowledge_date') or '9999')<=cutoff[:10] and g in (e.get('from_group_id'),e.get('to_group_id'))]
+            visible=[e for e in edges if str(e.get('knowledge_date') or '9999')<=cutoff[:10]
+                     and str(e.get('event_date') or e.get('period_end') or '9999')<=q['period_end']
+                     and g in (e.get('from_group_id'),e.get('to_group_id'))]
             for c in sorted(cp[g]):
                 pe=[e for e in visible if {e.get('from_group_id'),e.get('to_group_id')}=={g,c}]
                 commercial=[e for e in pe if e['family']=='commercial'];fund=[e for e in pe if e['family']=='financing' and e['edge_kind']=='amount' and e['event_type'] in ('funding','drawdown')]
@@ -76,7 +80,7 @@ def run(db,root,as_of,entities,observations,resolve):
                     m=row('relationship_conclusion',g,c,q,view,financing_policy=policy,financing_state=state,
                           edge_structure=structure,linkage_evidence='documented_link' if linked else 'search_incomplete',relationship_conclusion=conclusion)
                     if pe:m.update(status='computed',nd_reason=None,coverage_state='observed',lineage=json.dumps([e['link_id'] for e in pe]),knowledge_date=max(e['knowledge_date'] for e in pe))
-                    insert(db,'measures',m)
+                    emit(db,'measures',m)
                     candidates=[e for e in commercial if e['to_group_id']==g and e['from_group_id']==c and e['type']=='revenue_recognized'
                          and e['stage']=='recognized' and e['edge_kind']=='amount' and e['source_perspective']=='reporting_entity'
                          and e.get('sales_channel')=='direct' and str(e.get('period_start'))==q['period_start'] and str(e.get('period_end'))==q['period_end']
@@ -91,25 +95,25 @@ def run(db,root,as_of,entities,observations,resolve):
                         e=candidates[0]
                         if e['unit']==r['unit'] and e['accounting_framework']==r['accounting_framework'] and r['value']!=0:
                             v=number(e['amount'],r['value']);m.update(value=v,value_lower=v,value_upper=v,numerator=e['amount'],denominator=r['value'],unit='ratio',status='computed',nd_reason=None,coverage_state='observed',numerator_coverage='complete',knowledge_date=max(e['knowledge_date'],r['knowledge_date']),lineage=json.dumps([e['link_id']]+json.loads(r['lineage'])))
-                    insert(db,'measures',m)
+                    emit(db,'measures',m)
                 for term in ('numerator','denominator'):
                     m=row('documented_pair_coverage',g,c,q,view,term=term,numerator_coverage='complete' if candidates else 'absent',denominator_coverage='complete' if r else 'absent')
                     m.update(status='computed',nd_reason=None,coverage_state='observed',lineage=json.dumps([e['link_id'] for e in candidates]+(json.loads(r['lineage']) if r else [])))
-                    insert(db,'measures',m)
+                    emit(db,'measures',m)
                 m=row('contract_coverage',g,c,q,view)
                 if pe:m.update(status='partial',nd_reason='not_processed',coverage_state='observed',lineage=json.dumps([e['link_id'] for e in pe]),knowledge_date=max(e['knowledge_date'] for e in pe))
-                insert(db,'measures',m)
+                emit(db,'measures',m)
                 for metric in ['counterparty_exposure','consideration_to_customer','noncash_revenue_from_investees']:
                     m=row(metric,g,c,q,view,wrong_way=bool(commercial and fund))
-                    insert(db,'measures',m)
+                    emit(db,'measures',m)
                 for term in ['total','beyond_12m']:
                     m=row('documented_backlog_dependency',g,c,q,view,term=term,financing_policy='exposure_outstanding',financing_state=financed(edges,g,c,q,u['quarters'],cutoff))
-                    insert(db,'measures',m)
+                    emit(db,'measures',m)
             for term in ['named','anonymous','residual']:
                 m=row('named_edge_coverage',g,'none',q,view,term=term,overlap_possible=True,visible_pairs_count=len({e.get('from_group_id') if e.get('to_group_id')==g else e.get('to_group_id') for e in visible}),denominator=r['value'] if r else None)
                 m['nd_reason']='named_anonymous_overlap_and_complete_attribution_not_established'
-                insert(db,'measures',m)
-            insert(db,'measures',dict(row('investor_customer_revenue_share',g,'none',q,view,financing_policy='exposure_outstanding'),nd_reason='empty_numerator'))
+                emit(db,'measures',m)
+            emit(db,'measures',dict(row('investor_customer_revenue_share',g,'none',q,view,financing_policy='exposure_outstanding'),nd_reason='empty_numerator'))
     (root/'work/pair_registry.json').write_text(json.dumps({'pairs':{g:sorted(v) for g,v in cp.items()},'names':cpnames},ensure_ascii=False,indent=2)+'\n')
     # Individual exposures remain separate by deposited basis and instrument.
     for e in edges:
@@ -117,9 +121,11 @@ def run(db,root,as_of,entities,observations,resolve):
         o=next(o for o in observations if o['observation_id']==e['observation_id'])
         if not o.get('block') or not o.get('measurement_basis'):continue
         for view in ['as_known','revised']:
-            insert(db,'measures',dict(measure='counterparty_exposure',group_id=o['group_id'],counterparty_id=e['to_entity_id'] if e['from_group_id']==o['group_id'] else e['from_entity_id'],
+            emit(db,'measures',dict(measure='counterparty_exposure',group_id=o['group_id'],counterparty_id=e['to_entity_id'] if e['from_group_id']==o['group_id'] else e['from_entity_id'],
                 period_start=str(o['period_start'] or o['period_end'] or o['event_date']),period_end=str(o['period_end'] or o['event_date']),view=view,as_of=as_of,
                 breakdown_key='|'.join([o['block'],o.get('category_id') or 'unspecified',o['measurement_basis'],o.get('instrument_key') or e['link_id']]),
                 variant=e['link_id'],value=e['amount'],unit=e['unit'],currency=e['currency'],status='partial',nd_reason='not_processed',coverage_state='observed',
                 knowledge_date=e['knowledge_date'],lineage=json.dumps([e['link_id']]),evidence_profile=json.dumps([e['tier']]),wrong_way=None,
                 source_perspective=o['source_perspective'],accounting_framework=o['accounting_framework']))
+
+    bulk_insert(db,'measures',pending,root,'pairs')
