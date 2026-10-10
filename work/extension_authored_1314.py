@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='c77cb6bf64bb5509c6ae6804cf75ebd73b58cfd7aff561fb2490975ca872e7d2'
+save(k,[tagged(k,12,'9,454',model_quantity='deferred_revenue_total',issuer_treatment='9.454bnHELD_8.775bnCurrent679mLong'),tagged(k,0,'7,728',model_quantity='cloud_and_license_support_deferred_revenue_current',issuer_treatment='7.728bnCURRENTCloudANDLicenseSupport_NotOCIonly'),dict(quote='substantially represent customer payments made in advance',abstained=True,abstention_reason='Deferred held stock is not current-period cash financing or totalRPO; cloud/license support and hardware/services are mixed. Ratably recognized revenue does not establish exact forthcoming cash or whole AI-backlog amount.')])

@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='ffbf0e24b88e91cfbea715f6880688c7cdec2d3363a23b853193ba02a5070b9a'
+save(k,[dict(quote='In fiscal 2021, the cross-currency swap agreements and the January 2021 Notes matured and were settled in cash.',abstained=True,abstention_reason='Actual settlement disclosed but swap net cash payment amount/day not separately quantified;1.6bn fixed USD debt principal is not additional swap cash.4.3bn purchase/4.5bn sell FX notionals are not guarantees or loss exposure caps. Hedging changes to rate/currency are not financial covenant F4. Hedge gains/losses are not investment impairment F6;73m asset andzero liability repeat recurring table.')])
