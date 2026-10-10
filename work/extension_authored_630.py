@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7f7301ef93a598c0821bb2a7c6ae9274db2a232c6fe5ce1f5bb210c180cd8011'
+save(k,[tagged(k,20,'non-marketable equity investments had a carrying value of $50.5 million and $45.8 million, respectively',model_quantity='nonmarketable_equity_held',issuer_treatment='50.5m_HELD_NOT4.7m_cashchange_ORPRIMARYproof'),dict(quote='These securities relate to equity investments in privately-held companies.',abstained=True,abstention_reason='The unnamed private portfolio is a carrying stock, without proof of primary issuance or AI counterparty. Marketable equity, own senior notes fair value and employee severance funds are separate from private investments.')])
