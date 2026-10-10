@@ -1,0 +1,6 @@
+from work.authored_helpers import *
+
+save('98655edeb2e66a341fe8147b4e7479472d9d18cc6bfd7656fcafcb998cfecac4', [
+    abstention('BROADCOM INC. MANDATORY EMPLOYMENT ARBITRATION AGREEMENT',
+        'Header and all six ordered body packets 0-5 personally read in full; packet4 re-served after output truncation. Same Item8.01 ad59cb5f fully read. Original BroadcomCorporation2012plan PSU form with blank recipient, grant date, target and maximum shares, not an actual award or cash payment. ExhibitA four overlapping relativeTSR periods, linear interpolation and final maximum2x/100percent if negative absoluteTSR are award conditions, not actual issuance. Service/changeofcontrol/forfeiture conditions and arbitration are not actual financial amendment, cancellation, default or guarantee call. Main shares-only settlement and Danish generic cash-or-shares language do not establish an actual cash settlement. All ExhibitB country provisions and Annex1group, Annex2payroll/data vendors and Annex3Danish terms actually read. UK90day unpaidtax employer loan is hypothetical; tax and exchange-control thresholds are not financing exposures. GoogleInc, Box, Workday and ServiceNow appear only as administration/data vendors, without fundedcustomer linkage, commercial amounts or customer consideration.')
+])

@@ -1,0 +1,5 @@
+from work.authored_helpers import *
+
+save('090917febb6ef72026c7d034f28db29cddbfa5eac036e680e70945d7cd7e00ce',[
+ abstention('PERFORMANCE CRITERIA AND MEASUREMENT','Header and all six ordered body0-5 personally read without truncation; same Itemad59cb5f fully reread in this batch. Original Avago2009plan PSU blank recipient/date/number/max shares. ExA four overlapping TSR periods with25/50/75percentile factors, maximum2x and100percent if final absoluteTSRnegative, not actual shares issued/recognized compensation/funding. Service/CoC/noacceleration-beforeBaseDate conditions not actual event/default/F4; shares-only settlement versus Danish and/orcash template not actualcash proof. ExB allcountrytax/data provisions,Annex1group/Annex2payroll/data vendors/Annex3Danish andExC arbitration actually appended. UK90day unpaidtax possible employer loan not actual financing; tax/exchangecontrol thresholds not exposures. GoogleInc named data vendor only, no fundedcustomer attribution or link. No customer considerationE5, guarantee call or commercial revenue established.')
+])
