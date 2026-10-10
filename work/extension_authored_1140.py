@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='18aa87bb7dc5b304deabba20bac76adf21ac63c99c7252a9a81f018bd2986a2c'
+save(k,[tagged(k,0,'$ | 1,023',model_quantity='designated_fx_derivative_notional',issuer_treatment='1.023bnNOTIONAL_NotCreditSupportCap'),tagged(k,2,'$ | 408',model_quantity='nondesignated_fx_derivative_notional',issuer_treatment='408mNOTIONAL_NotCreditSupportCap'),dict(quote='The fair value of the contracts was not significant',abstained=True,abstention_reason='The note describes FX operating and monetary hedges; notional values are not collateral, guarantees, investee loans or future cash obligations. No quantified derivative credit support or investee F6 is established.')])

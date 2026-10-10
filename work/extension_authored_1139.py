@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='49c981fb59576aa4bb98d6767d694c40019696ed07123d4ac03282ad8547ae97'
+save(k,[tagged(k,15,'$ | 208',block='exposed_assets',model_quantity='nonmarketable_equity_carrying_value',issuer_treatment='208mHELDvs144mPrior_Not64mCashInvestment'),dict(quote='from an investment in a publicly-traded equity security',abstained=True,abstention_reason='The 48m gain relates to a public equity holding, not private AI impairment. Anonymous private holdings at 208m do not prove primary cash funding or identify counterparties. Own debt fair values are distinct from carrying values and do not measure F6.')])
