@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='12715791ed5bfe996945ea3b0d2dd1caf8d2d42db8f850131c00e57195802c26'
+save(k,[dict(quote='one reportable segment — the design, development and sale of integrated circuits.',model_quantity='reportable_segment_scope',issuer_treatment='ONEconsolidatedSegment_NotSeparateDataCenterOrAIProfit'),dict(quote='long-lived asset information based on the physical location of the assets',abstained=True,abstention_reason='The country table reports PPE physical location, not customer concentration, revenue geography, data-center assets or AI assets. A single reporting segment does not provide discrete market profit or an AI funding link.')])
