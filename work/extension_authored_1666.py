@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='800efa4cead120eb89dee9c9735778c09941ebef10c0eada3389ee8a24f69257'
+save(k,[tagged(k,12,'recorded an estimated environmental liability of approximately $3 million',model_quantity='environmental_loss_contingency_accrual',issuer_treatment='HELD3AlreadyRecorded_EXPotentialInsuranceRecoveries_NotCurrentPaymentOrInvestmentF6'),dict(quote='On August 9, 2019, the parties executed a formal settlement agreement.',abstained=True,abstention_reason='DickeySIGNEDAug9_19_PreliminaryApprovalOct4_19_NotFinalApprovalFeb21_20Yet_NoAmountOrActualCash;MontereyMAXUnquantified_NotZero;HatamianInsurerFunded2017NotCurrentParentCash.')])
