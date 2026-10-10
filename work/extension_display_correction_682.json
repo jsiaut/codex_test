@@ -1,0 +1,5 @@
+{
+  "content_key": "64347e27ee528acfaff2c40a31f8f4acf5ba8daa92dd86e596236b4fdede96a0",
+  "corrected_at": "2026-10-10T11:56:04.259364+00:00",
+  "reason": "Initial source output exceeded per-command token budget; complete text displayed again before any observation submission. All candidate dictionaries and rows had been displayed in initial packet."
+}

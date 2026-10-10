@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='344d6fa3e00c4225b7cb2bce1d2cdf911a4a08150c2791acd558fa6842e332d4'
+save(k,[tagged(k,1,'Semiconductor solutions',model_quantity='segment_revenue',issuer_treatment='7.390bn_Q1FY24SEMI_NOTAIonly'),tagged(k,7,'Operating income:',model_quantity='segment_operating_income',issuer_treatment='4.116bn_Q1FY24SEMI_EX4.748bnUnallocated'),dict(quote='does not evaluate each segment using discrete asset information.',abstained=True,abstention_reason='No segment asset denominator is provided. Broad semiconductor revenue does not isolate AI or quantify an individual customer concentration here, and segment profit excludes unallocated costs.')])

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='6abe198210d6047e06408f3f5c57927a60211ed79a7fcb62533059946925b5f6'
+save(k,[tagged(k,20,'non-marketable equity investments had a carrying value of $45.8 million and $36.1 million',model_quantity='private_equity_held',issuer_treatment='45.8m_PRIVATEheld_NOT9.7mactualprimary_EX9.3mpublic'),dict(quote='forward contracts and the severance pay fund are classified within Level 2',abstained=True,abstention_reason='Employee severance investments and foreign exchange hedges are not AI financing or credit support. Own-debt fair value of 3.3bn and private-investment stock changes do not establish F6 credit losses or primary cash funding.')])
