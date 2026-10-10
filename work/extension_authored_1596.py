@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='c364bd0a8eded9b14ca1320de284a70ee8219dae6698569869e1de369bfc0be6'
+save(k,[tagged(k,0,'On April 21, 2020, we entered into a definitive agreement to invest in Jio Platforms Limited, a subsidiary of Reliance Industries Limited, for approximately $5.7 billion',amount_qualifier='approximately',family='financing',stage='signed',event_type='signing',event_date='2020-04-21',model_quantity='equity_investment_agreement',counterparty='Jio Platforms Limited',counterparty_evidence='named',issuer_treatment='5.7SIGNEDApril21_20SUBSEQ_NotMar31Held_NotPaidYet;FXApproxLaterActualJuly7_205.8Or5.824SameTransaction_NotExtraFunding;NoPrimarySecondaryOrJurisdictionProofHere')])

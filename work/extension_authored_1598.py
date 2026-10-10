@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='679b14864a839bb7e237a3f7d686edf0d7e9beaea48952062de77d5d336aa5aa'
+save(k,[tagged(k,32,'Total cash equivalents and marketable securities | | $ | 55,632',block='exposed_assets',model_quantity='cash_equivalents_and_marketable_securities',issuer_treatment='55.632FVPortfolio_EXBankCash4.6571597_Not60.289FullCashMarket'),dict(quote='The aggregate absolute value of these Level 3 assets and liabilities was not material',abstained=True,abstention_reason='OtherLevel3AssetsLiabNotMaterial_NotZeroPrivateInvestments;Level3ZeroInLiquidTableOnly_NotAllCompanyAssets. NoActualInvestmentF6.')])

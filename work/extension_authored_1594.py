@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='31417ea3b0b0c93c9525436a0a7d7955540081285feeff30fe154b3cc92a3d68'
+save(k,[tagged(k,14,'Net sales | $ | 7,696 | | | $ | 10,219',model_quantity='aws_segment_revenue',issuer_treatment='10.219Q1CY20AWS_ThreeSegmentsStableHere_NotNamedCustomerRevenue'),tagged(k,18,'Operating income | $ | 2,223 | | | $ | 3,075',model_quantity='aws_segment_operating_profit',issuer_treatment='3.075Q1CY20AWS_UsageAllocatedInfrastructure_NotConsolidated3.989'),dict(quote='There are no internal revenue transactions between our reportable segments.',abstained=True,abstention_reason='SegmentDefinitionAndUsageAllocation_NoActualCurrentSegmentRecastOrCustomerConcentrationThresholdStatement;NoAWSAssetsInThisBlock.')])
