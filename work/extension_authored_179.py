@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='0c604ff3856dd88995cfc210af8ba7ac92dbbfc30142aef095a331add4371213'
+save(k,[tagged(k,22,'Accrued purchases | | | $ | 5,196',model_quantity='accrued_purchase_stock_scope',issuer_treatment='Dec315196m_unpaid_purchase_liability_not2025_cash_capex_or_primary_financing_difference_vs106m_not_cash_flow'),dict(quote='Contra-revenue asset',model_quantity='customer_consideration_asset_stock_scope',issuer_treatment='67m_current282m_noncurrent_stock_customer_identity_unknown_not_new_customer_cash_or_gross_contract_receivable_despite_XBRL_tag'),dict(quote='Escrow funds | | | —',model_quantity='escrow_balance_scope',issuer_treatment='Dec31zero_vs336m_prior_stock_reduction_not_proof_supplier_cash_payment_or_new_unrestricted_cash')])

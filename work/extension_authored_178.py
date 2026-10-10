@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='8e966b8dc89f28893c4bb529d197279651177006e5dd7ccbdf1d3816194cbc06'
+save(k,[dict(quote='based on the address of the customer as specified in the Company\'s customer contracts',model_quantity='revenue_geography_attribution_scope',issuer_treatment='4801m_US330m_other2025_contract_address_not_compute_asset_physical_location_or_named_customer_identity'),dict(quote='long-lived assets as property and equipment and operating lease right-of-use assets',model_quantity='asset_geographic_concentration_scope',issuer_treatment='88percent_US2025_includes_operating_ROU_not_customer_concentration_or_AI_cash_capex')])

@@ -1,0 +1,5 @@
+from extension_authoring import ROOT,tagged
+from secfragility.reader import store
+k='d87fef8d56ab33c7bec9f5474adbeae8f270a1a564229eb84628fc2981129de1'
+rows=[tagged(k,20,'up to $95 million related to a guarantee for certain contingent consideration',model_quantity='credit_support_guarantee_cap',block='contingent_obligations',category_id='guarantee',component_kind='guarantee_cap',conditionality='conditional',trigger_description='upon the achievement of certain milestones',issuer_treatment='JV_third_party_contingent_consideration_guarantee_in_max_loss_exposure_not_paid_or_additional_equity'),tagged(k,22,'maximum funding exposure to fund these latter construction and development costs is up to $200 million',model_quantity='JV_contingent_funding_cap',block='contingent_obligations',category_id='jv_funding_commitment',conditionality='conditional',trigger_description='to the extent the JV is unable to secure third-party financing',issuer_treatment='Dec31_projected_NJ_development_funding_cap_excludes_other_max_exposure_components_no_automatic_fair_value_offset')]
+print(store(ROOT,k,rows,schema_retry=True))
