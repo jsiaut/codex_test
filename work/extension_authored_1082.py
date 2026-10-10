@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='f7ea99f716ecaebdac0da28056be2864e3045eca3537e097e7de02734c717dd7'
+save(k,[tagged(k,26,'13,362',block='exposed_assets',model_quantity='recurring_fair_value_assets_total',issuer_treatment='13.362bn_MIXcashEqMarketable_NOTPrivateEquity_SAME1080investments'),tagged(k,32,'97',block='recognized_liabilities',model_quantity='derivative_liability_total'),dict(quote='senior notes and the related fair value hedges',abstained=True,abstention_reason='Own-debt fair value of 67bn is not an investee impairment or repayment. Recurring financial assets are cash-equivalent and marketable holdings rather than identified private AI investments. Derivative fair-value liabilities are not notional support caps.')])
