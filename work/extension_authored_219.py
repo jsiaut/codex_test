@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='c3fbb4e635a4eab3cbd8120d600e24e80276c0c228c1b889ae95fd6b26d3fa21'
+save(k,[tagged(k,33,'Deferred revenue was $1.08 billion',model_quantity='deferred_revenue_scope',issuer_treatment='Dec31_mostly_advertising_prepayments_credits_RL_software_updates_expected_le1year_not_AI_cloud_RPO_or_primary_equity'),dict(quote='based on the addresses of our customers',model_quantity='revenue_geography_attribution_scope',issuer_treatment='customer_address_not_compute_site_or_asset_geography'),dict(quote='Advertising | | | $ | 196,175',model_quantity='advertising_revenue_scope',issuer_treatment='196175m_component_of198759m_FoA200966m_total_not_all_AI_compute_sales_or_external_lab_dependence_no_named_customer')])
