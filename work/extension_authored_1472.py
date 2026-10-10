@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='a34f6738774eed98366feb1c1c1cf441ec803d704f6f54cce224e1c7ac987468'
+save(k,[dict(quote='we provided bank guarantees (in lieu of a cash payment) for the fines.',block='contingent_obligations',category_id='guarantee',model_quantity='regulatory_fine_bank_guarantee',issuer_treatment='SAMEECfinesAccruedLiabilities_NotCash_NotExtraGuarSum_Historical2017/2018/2019AmountsNotCurrentNewPayments'),dict(quote='we are unable to estimate the reasonably possible loss or range of loss, if any, arising from this matter.',abstained=True,abstention_reason='OraclehearingOct7_20_NoDecisionYet_NotApril5_21ReversalKnown. DOJOct20_20subsequentLawsuitNoQuantCash. IndemnityMAXunquantnotzero_NoF6. NoPurchaseCommitAmountHere_NotLater10.7bnImported.')])

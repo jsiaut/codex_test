@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2047522e47944ca691259365659e1c9f7537c836da5b7a5821c61b12d63acf9c'
+save(k,[tagged(k,26,'11,601',model_quantity='aws_segment_revenue',issuer_treatment='AWSQ3CY20_11.601_NotAllAI'),tagged(k,34,'3,535',model_quantity='aws_segment_operating_profit',issuer_treatment='AWSUsageAllocatedCosts_3.535Q3CY20'),tagged(k,28,'32,628',model_quantity='aws_segment_revenue',issuer_treatment='AWSNINECY20_32.628_NotAddQ3'),dict(quote='The majority of technology infrastructure costs are allocated to the AWS segment based on usage.',abstained=True,abstention_reason='ThreeSegments_NoInternalRevenue. NoSegmentAssetsCapexOrNamedCustomerConcentrationHere. AWSComputeStorageDatabaseOtherNotIsolatedAIRevenue.')])
