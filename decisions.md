@@ -368,3 +368,7 @@ Le 2026-10-10T06:35:26.868344+00:00, l’utilisateur ouvre les notes d’investi
 ## D105 — Notes complémentaires : restauration et ordre de lecture
 
 Les notes sans métadonnées XBRL des prospectus de SpaceX et CoreWeave sont délimitées par leurs titres et leurs plages d’octets, conservées dans extension_html_bounds.json et reconstruites depuis les sources immuables. Les notes intermédiaires et les événements ultérieurs explicitement non audités gardent le niveau C ; les notes annuelles auditées gardent le niveau A. La quarantaine des états annuels de SpaceX reste applicable. La file des cinq familles ouvertes est triée du dépôt le plus récent au plus ancien, puis par famille, sans filtrage lexical du contenu. Les critères, seuils et fenêtres restent identiques.
+
+## D106 — Alphabet : périmètre du carnet de commandes
+
+La note de revenus d’Alphabet indique qu’au premier trimestre 2026 le carnet inclut désormais les contrats dont le terme initial attendu est d’un an ou moins. Sans comparatifs retraités ni pont chiffré, une croissance traversant ce changement est marquée non comparable sur ce périmètre ; aucune correction d’erreur comptable n’est déduite de ce choix de présentation. Source : 0001652044-26-000071, rawbytes:815309:892203, observation rpo_reporting_scope_change.

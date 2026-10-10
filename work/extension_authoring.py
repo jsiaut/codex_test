@@ -21,6 +21,8 @@ def save(key, rows):
             print(dict(content_key=key,already_validated=True));return
         raise RuntimeError('Existing reading differs; never silently overwrite or reread it.')
     result = store(ROOT,key,rows)
-    print(result)
+    print({k:v for k,v in result.items() if k!='rejected'} | {
+        'rejected_count':len(result['rejected']),
+        'rejection_errors':[{'phase':r['phase'],'error':r['error']} for r in result['rejected']]})
     if result['rejected']:raise RuntimeError('Observation validation failed; original attempts retained.')
     return result

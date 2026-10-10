@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='1c2d183ad5c3ff7de41b0acbe1ba2d75e14846e0bc8351f6fa00ee77ad3286a5'
+save(k,[dict(quote='Restricted cash in money market',model_quantity='cash_management_financial_instrument_scope',abstained=True,abstention_reason='annual_fair_value_cash_government_security_tables_no_named_AI_investee_or_funding_flow',flag_unknown_reason='restricted_cash_not_automatically_available_liquidity_annual_numeric_quarantine_remains')])
