@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='048a97afeff2281f34f9745ec130e7208dcccf568b8eb8a77758de8a0b81b9b2'
+save(k,[tagged(k,0,'aggregate legal liabilities of $177 million.',model_quantity='legal_related_accruals',issuer_treatment='177m_HELDlegal_NOTAIcreditLoss'),tagged(k,1,'approximately $600 million in aggregate beyond recorded amounts',model_quantity='legal_possible_additional_loss',issuer_treatment='600m_POSSIBLEadditional_EX177held_NOTF6'),dict(quote='other claims and suits that arise from time to time in the ordinary course',abstained=True,abstention_reason='Ordinary litigation accruals and reasonably possible additional losses are distinct measures and do not identify isolated AI-investment impairments.')])

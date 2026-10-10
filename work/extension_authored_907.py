@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='5b10f12916621e2faff893be6b1215444ca3f3ae0ae6172d7d3b3b42358ed2ca'
+save(k,[tagged(k,12,'Total deferred revenues | | $ | 9,388',model_quantity='deferred_revenue',issuer_treatment='9.388bn_TOTALDEF_IN8.598cur790long_NOTRPO_ORnewCash'),tagged(k,0,'Cloud services and license support | | $ | 7,528',model_quantity='cloud_license_support_deferred_revenue_current',issuer_treatment='7.528bn_CURRENTMIXcloudANDsupport_NOTOCIonly'),dict(quote='customer payments made in advance for cloud or support contracts',abstained=True,abstention_reason='Deferred revenue is an existing customer advance balance spanning cloud and license support; it is not a disclosed standalone RPO or new AI financing cash flow.')])
