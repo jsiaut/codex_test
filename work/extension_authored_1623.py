@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='02cc126a149a57875c1e2f08b5e3339bfabd5173bd8f66ddfd5aabc07c5be836'
+save(k,[tagged(k,9,'$ | 9,270',model_quantity='google_segment_operating_profit',issuer_treatment='9.270WHOLEGoogleAdsCloudProducts_Q1CY20_NotCloudProfitOrConsolidated7.977'),tagged(k,17,'$ | 5,663',model_quantity='google_segment_capital_expenditures_accrual',issuer_treatment='5.663WHOLEGoogleSegmentACCRUAL_NotCashCloudOnly;Consolidated6.005CashIncludes238TimingReconAndOtherBets104'),dict(quote='Google is our only reportable segment.',abstained=True,abstention_reason='CurrentQ1CY20NotYetStandaloneCloudSegment;OtherBetsAggregate.126.385LongLivedGeoNotCloudAssets_CODMNoAssetEvaluation. SegmentDandAImpairCombinedNotInvestmentF6.')])
