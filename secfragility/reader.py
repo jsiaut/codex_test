@@ -12,6 +12,10 @@ from .session import command as session_command
 # packets also survive the execution tool's output limit without truncation.
 DISPLAY_CEILING=30000
 
+def financial_note(block):
+    return block['block_class'] in ('related_parties','going_concern',
+        'investments_note','debt_note','lease_note','commitments_note','concentration_narrative')
+
 def block_for(root,key):
     q=json.loads((root/'work/queue.json').read_text())
     row=next(r for r in q if r['content_key']==key or r['occurrence_id']==key)
@@ -22,7 +26,7 @@ def serve(root,key=None,part=0,body=False):
     row=next((r for r in q if not (root/'work/observations'/(r['content_key']+'.jsonl')).exists()),None) if not key else next(r for r in q if r['content_key']==key or r['occurrence_id']==key)
     if row is None:return {'queue_empty':True}
     block=json.loads((root/row['path']).read_text())
-    if block['block_class'] not in ('related_parties','going_concern'):
+    if not financial_note(block):
         block=dict(block,assurance_level='not_applicable')
     exhibit_header=block['block_class']=='exhibit' and not body
     page=None
@@ -94,12 +98,12 @@ def store(root,key,authored,*,schema_retry=False):
     for authored_row in authored:
         row={k:block[k] for k in ['content_key','document_id','accession','group','entity_id','knowledge_date','assurance_level']}
         row['group_id']=row.pop('group')
-        financial_note=block['block_class'] in ('related_parties','going_concern')
-        if not financial_note:row['assurance_level']='not_applicable'
+        is_note=financial_note(block)
+        if not is_note:row['assurance_level']='not_applicable'
         row.update(abstained=False,locator=f"rawbytes:{block['raw_byte_start']}:{block['raw_byte_end']}",
             raw_byte_start=block['raw_byte_start'],raw_byte_end=block['raw_byte_end'],
             filing_status='filed',tier='D' if block['block_class']=='exhibit' else
-                'A' if financial_note and block['assurance_level']=='audited' else 'B' if financial_note and block['assurance_level']=='reviewed' else 'C',
+                'A' if is_note and block['assurance_level']=='audited' else 'B' if is_note and block['assurance_level']=='reviewed' else 'C',
             location=block.get('location',block['block_class']),source_perspective='reporting_entity',accounting_framework='us_gaap')
         row.update(authored_row);rows.append(row)
     result=submit(create(root),root,block,(root/block['source_path']).read_bytes(),rows,run['as_of'],schema_retry=schema_retry)

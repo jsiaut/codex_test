@@ -1,0 +1,54 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "measured_at": "2026-10-10T06:38:14.462913+00:00",
+  "occurrences": 2418,
+  "unique_blocks": 2407,
+  "reused_blocks": 151,
+  "remaining_blocks": 2256,
+  "remaining_text_chars": 14606891,
+  "remaining_candidates": 116784,
+  "remaining_by_group": {
+    "ORCL": 175,
+    "AVGO": 237,
+    "MRVL": 241,
+    "NVDA": 319,
+    "CRWV": 50,
+    "AMD": 256,
+    "SPCX": 9,
+    "AMZN": 184,
+    "META": 267,
+    "MSFT": 238,
+    "GOOGL": 280
+  },
+  "remaining_by_primary_family": {
+    "investments_note": 631,
+    "debt_note": 312,
+    "lease_note": 180,
+    "commitments_note": 306,
+    "concentration_narrative": 827
+  },
+  "extraction_exclusions": [
+    {
+      "group": "GOOGL",
+      "accession": "0001193125-19-028757",
+      "reason": "parse_failed",
+      "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+    },
+    {
+      "group": "SPCX",
+      "accession": "0001628280-26-042639",
+      "reason": "parse_failed",
+      "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+    },
+    {
+      "group": "CRWV",
+      "accession": "0001193125-25-067651",
+      "reason": "parse_failed",
+      "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+    }
+  ],
+  "additional_sec_requests": 0,
+  "reading_duration_estimate": "not_established_before_extension_reading",
+  "criteria_changed": false,
+  "independent_audit_performed": false
+}

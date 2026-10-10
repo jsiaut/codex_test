@@ -1,8 +1,8 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "active_unique_keys": 1304,
+  "active_unique_keys": 3560,
   "completed_unique_keys": 1304,
-  "remaining_unique_keys": 0,
+  "remaining_unique_keys": 2256,
   "accepted_observations": 6475,
   "completed_occurrences_by_class": {
     "item404": 166,
@@ -16,7 +16,7 @@
     "semantic": 27,
     "schema": 24
   },
-  "updated_at": "2026-10-10T01:36:44.778939+00:00",
+  "updated_at": "2026-10-10T06:38:49.791354+00:00",
   "read_packet_logging_started_2026_10_09": true,
   "independent_audit_performed": false
 }

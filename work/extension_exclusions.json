@@ -1,0 +1,20 @@
+[
+  {
+    "group": "GOOGL",
+    "accession": "0001193125-19-028757",
+    "reason": "parse_failed",
+    "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "reason": "parse_failed",
+    "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "reason": "parse_failed",
+    "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+  }
+]
