@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='68368cfe63fcf11d8a89b7ccf6416ba23ecde85e5147002a448b2d2dbaf3c53c'
+save(k,[tagged(k,35,'646',block='recognized_liabilities',category_id='lease_liability',model_quantity='operating_lease_liability',issuer_treatment='646OPPV100cur546long_EX797Gross'),tagged(k,36,'67',block='recognized_liabilities',category_id='lease_liability',model_quantity='finance_lease_liability',issuer_treatment='67FINPV15cur52long_INBSdebtEX43.956DebtTable1502'),dict(quote='2020 (remainder)',abstained=True,abstention_reason='30OP4FIN_Q4FY20not12_FY21_117/17notrolling12.674OP74FINNewROUNINE_NONcash_Not92OPcash78OP9FINexpense.800PriorNov3_19MinimumNotCurrentUncommAmount. Topic842OptionalNov4_19adoption_NoImportLaterUncomm.')])
