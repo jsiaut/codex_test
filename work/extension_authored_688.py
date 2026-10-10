@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='011f93b2e7b26fee1c899ed424793cf2cb2ba5d4d224c312ccb7ebb69f3beeb7'
+save(k,[tagged(k,0,'The Company operates in one reportable segment',model_quantity='reportable_segment_count',issuer_treatment='ONEintegratedCircuitSegment_NOTDataCenterEndMarketSeparateSegment'),dict(quote='based on the physical location of the assets by geographic region',model_quantity='geographic_asset_basis',issuer_treatment='PHYSICALPPElocation_NOTcustomerRevenue_ORdemand'),dict(quote='consolidated financial performance.',abstained=True,abstention_reason='The single-segment structure and geographic PPE allocation do not provide an AI segment denominator or identify individual customers, financing, or commitments.')])

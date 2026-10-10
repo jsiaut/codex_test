@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='5698abd95b301deb12f75fb382b347110baeb74f2652420d1efd0dc03d19a9ec'
+save(k,[tagged(k,12,'Total deferred revenues | | $ | 10,196',model_quantity='deferred_revenue_total',issuer_treatment='10.196bn_HELD_IN8.931cur1.265long_NOTnewCash_ORRPO'),tagged(k,0,'Cloud services and license support | | $ | 7,999',model_quantity='deferred_revenue_cloud_and_license_support',issuer_treatment='7.999bn_CUR_IN10.196total_NOTcloudAlone_ORAIonly'),dict(quote='substantially represent customer payments made in advance',abstained=True,abstention_reason='Deferred-revenue balances describe advance billing across broad offerings, without an identified AI customer, newly paid cash amount, or remaining performance obligation schedule.')])
