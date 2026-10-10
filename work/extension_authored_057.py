@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='1bc8a2e350927373f8c3a972a873572f54fb2fab4683695a45ecf9ba304eba42'
+save(k,[dict(quote='Revenue allocated to remaining performance obligations, which includes unearned revenue and amounts expected to be invoiced and recognized as revenue in future periods, was $684 billion as of June 30, 2026.',model_quantity='RPO_unearned_revenue_overlap',issuer_treatment='RPO_contains_unearned_revenue_and_future_unbilled_amounts_not_additive_to_deferred_revenue_or_current_sales',flag_unknown_reason='customers_not_named_no_OpenAI_revenue_or_cash_amount_inferred_from_aggregate')])

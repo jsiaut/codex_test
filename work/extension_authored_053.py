@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='b08b3b410b1062ec8c7fbd0a0e6e7284dc6b5d6ae2efb47efae7bade3511e83e'
+save(k,[dict(quote='Our deferred revenue mostly relates to advertising prepayments and credits, as well as software updates and upgrades associated with Reality Labs hardware sales, the substantial majority of which are expected to be realized in less than a year.',model_quantity='deferred_revenue_business_scope',issuer_treatment='mainly_advertising_prepayments_credits_and_RL_software_updates',flag_unknown_reason='no_AI_lab_attribution_and_deferred_revenue_credits_not_actual_ASC606_deduction_flow')])

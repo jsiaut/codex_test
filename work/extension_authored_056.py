@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='8a41dd9f4fc23068acc05706533886b366cb29c0ad2911026f6c59dc83c450eb'
+save(k,[tagged(k,1,'adverse outcomes that we estimate could reach approximately $400 million in aggregate beyond recorded amounts are reasonably possible.',amount_qualifier='approximately',model_quantity='additional_reasonably_possible_legal_loss',amount_nature='possible_incremental_loss_beyond_accrual_not_current_recognized_liability_or_payment',block='contingent_obligations',category_id='loss_contingency',measurement_basis='reasonably_possible_loss_estimate',flag_unknown_reason='not_certain_loss_or_AI_only_named_counterparty_amount')])

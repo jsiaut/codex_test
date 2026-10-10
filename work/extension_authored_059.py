@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='3a5a4c0b01618e796e8c75b958a98cf17a6dfdffd4320eb20dcae5253dde7d30'
+save(k,[dict(quote='We had no commercial paper outstanding as of December 31, 2025 and June 30, 2026.',model_quantity='commercial_paper_undrawn_status',issuer_treatment='no_outstanding_commercial_paper',flag_unknown_reason='25bn_program_limit_not_cash'),dict(quote='Our short-term debt balance also includes the current portion of certain long-term debt.',model_quantity='short_term_debt_current_long_term_overlap',issuer_treatment='current_portion_already_in_short_term_debt_do_not_add_twice')])
