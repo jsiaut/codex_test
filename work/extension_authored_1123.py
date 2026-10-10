@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='3128565b8a20208cadfbfb42cf1f2d521b7f46929d3216d7e07a6e260d3e9bb0'
+save(k,[tagged(k,22,'total deferred revenue was $565 million',block='recognized_liabilities',model_quantity='deferred_revenue_total'),tagged(k,24,'$472 million of our deferred revenue to be realized in less than a year',model_quantity='deferred_revenue_next_12_months_revenue',issuer_treatment='472m_NEXT12_REVtiming_NotRPOorCash'),dict(quote='based on the addresses of our customers',abstained=True,abstention_reason='Customer-address geography is not individual customer concentration or end-demand. Deferred revenue is not an RPO total or a new payment commitment. Recast FoA/RL revenues repeat the segment note and do not isolate AI.')])

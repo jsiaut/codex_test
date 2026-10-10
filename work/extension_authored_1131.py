@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='33b02c9b93f9c228df55a934e7d37d92c5028066452a5ac07db0ec77505aaf47'
+save(k,[tagged(k,3,'5,821',model_quantity='google_cloud_segment_revenue'),tagged(k,13,'(931)',model_quantity='google_cloud_segment_operating_income',issuer_treatment='931mQCloudLoss_EX740mUnallocatedCorporateCost'),dict(quote='Our operating segments are not evaluated using asset information.',abstained=True,abstention_reason='No segment assets are disclosed. Geographic long-lived assets combine PPE and operating ROU assets and do not isolate AI infrastructure. Shared infrastructure costs are allocated to segments; Cloud includes platform, Workspace and other enterprise services without an isolated AI revenue amount or named customer concentration.')])
