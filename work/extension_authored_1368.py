@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='946ff82dbecafe333785273773d56ed307dca7c5fdb8eeba373de5a55ef8c402'
+save(k,[tagged(k,3,'114,645',model_quantity='cash_equivalent_investments',issuer_treatment='TimeDepositsHELD_Jan30_21_RecurringFV_EXbankCashPrivateHistoricalCost'),dict(quote='The tables do not include assets and liabilities that are measured at historical cost or any basis other than fair value',abstained=True,abstention_reason='115.268m recurring FV includes623k severance fund, not all cash/private portfolio. Level3zero pertains recurring FV only. 1.1bn own notes FV not investment impairment or new cash.')])
