@@ -1,9 +1,9 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
   "active_unique_keys": 3552,
-  "completed_unique_keys": 2455,
-  "remaining_unique_keys": 1097,
-  "accepted_observations": 11826,
+  "completed_unique_keys": 2465,
+  "remaining_unique_keys": 1087,
+  "accepted_observations": 11868,
   "completed_occurrences_by_class": {
     "item404": 166,
     "related_parties": 31,
@@ -11,17 +11,17 @@
     "controls": 219,
     "8k_item": 457,
     "exhibit": 237,
-    "investments_note": 309,
-    "lease_note": 104,
-    "concentration_narrative": 407,
+    "investments_note": 313,
+    "lease_note": 105,
+    "concentration_narrative": 411,
     "debt_note": 175,
-    "commitments_note": 157
+    "commitments_note": 158
   },
   "validation_rejected_attempts_by_phase": {
     "semantic": 40,
     "schema": 55
   },
-  "updated_at": "2026-10-10T15:05:53.413386+00:00",
+  "updated_at": "2026-10-10T15:08:14.959250+00:00",
   "read_packet_logging_started_2026_10_09": true,
   "independent_audit_performed": false
 }
