@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='60f4658a3b4b99519ed35539da55bde3ea68439f5b4098f9b36a16b2b85a9f7a'
+save(k,[tagged(k,14,'Privately-held equity securities | | | Level 3 | | | | | | $ | 1,019',block='exposed_assets',model_quantity='private_equity_carrying_value',issuer_treatment='1.019bn_HELDPrivateEquityFairValueTable_NOT731mPrimaryCashFrom288mPrior'),dict(quote='These liabilities are carried on our Condensed Consolidated Balance Sheets at their original issuance value, net of unamortized debt discount and issuance costs.',abstained=True,abstention_reason='The own-note fair values are not debt carrying amounts or credit-loss events. The private-equity balance has no named investee, proven new primary cash amount or isolated impairment in this note.')])
