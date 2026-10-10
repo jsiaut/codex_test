@@ -15,6 +15,15 @@ def prepare(db,root:Path,as_of:str):
        WHERE d.form IN ('10-K','10-K/A','10-KT','10-Q','10-Q/A','10-QT') AND f.dimensions='{}'
         AND f.coverage_state IN ('observed','explicit_zero') AND f.value IS NOT NULL
         AND f.model_quantity IS NOT NULL''')
+    db.execute('''CREATE VIEW filing_recast_differences AS
+      SELECT DISTINCT a.accession AS accession_a,b.accession AS accession_b,a.group_id,a.model_quantity
+      FROM periodic_occurrences a JOIN periodic_occurrences b ON a.group_id=b.group_id
+       AND a.accession!=b.accession AND a.canonical_concept=b.canonical_concept
+       AND a.period_start IS NOT DISTINCT FROM b.period_start AND a.period_end=b.period_end
+       AND a.unit=b.unit AND a.accounting_framework=b.accounting_framework
+       AND a.reporting_scope=b.reporting_scope
+      WHERE a.value!=b.value AND (precision_radius(a.decimals) IS NULL OR precision_radius(b.decimals) IS NULL
+       OR abs(a.value-b.value)>precision_radius(a.decimals)+precision_radius(b.decimals))''')
     # Each quarter has a historical information date: the first periodic filing
     # with its period end. This is a publication snapshot, separately from the
     # annual-deadline cutoffs required for Annex E.
@@ -26,7 +35,11 @@ def prepare(db,root:Path,as_of:str):
       SELECT q.group_id,q.start_date AS period_start,q.end_date AS period_end,a.model_quantity,
        a.unit,a.currency,a.accounting_framework,a.reporting_scope,a.accession,a.acceptance_datetime,a.knowledge_date,
        a.document_rank,a.occurrence_rank,a.canonical_concept,a.tier,
-       CASE WHEN a.period_start=q.start_date THEN a.value ELSE a.value-b.value END AS value,
+       CASE WHEN a.period_start!=q.start_date AND EXISTS (SELECT 1 FROM filing_recast_differences x
+         WHERE x.accession_a=a.accession AND x.accession_b=b.accession AND x.model_quantity=a.model_quantity)
+        THEN NULL WHEN a.period_start=q.start_date THEN a.value ELSE a.value-b.value END AS value,
+       (a.period_start!=q.start_date AND EXISTS (SELECT 1 FROM filing_recast_differences x
+         WHERE x.accession_a=a.accession AND x.accession_b=b.accession AND x.model_quantity=a.model_quantity)) AS recast_boundary,
        CASE WHEN a.period_start=q.start_date THEN to_json([a.fact_id]) ELSE to_json([a.fact_id,b.fact_id]) END AS lineage,
        CASE WHEN a.period_start=q.start_date THEN 'direct_quarter'
         ELSE 'ytd_difference_latest_inputs_known_at_deposit' END AS calculation_basis
@@ -44,7 +57,7 @@ def prepare(db,root:Path,as_of:str):
         db.execute(f'''CREATE VIEW quarter_quantities_{view} AS SELECT a.*,{snapshot} AS snapshot_at FROM quarter_candidates a
           JOIN anchor_order ao USING(model_quantity,canonical_concept)
           LEFT JOIN quarter_cutoffs k ON k.group_id=a.group_id AND k.start_date=a.period_start AND k.end_date=a.period_end
-          WHERE a.acceptance_datetime<={sql_literal(as_of)}::TIMESTAMPTZ {cutoff}
+          WHERE a.acceptance_datetime<={sql_literal(as_of)}::TIMESTAMPTZ AND a.value IS NOT NULL {cutoff}
           QUALIFY row_number() OVER (PARTITION BY a.group_id,a.model_quantity,a.period_start,a.period_end,a.unit,a.accounting_framework,a.reporting_scope
            ORDER BY CASE WHEN calculation_basis='direct_quarter' THEN 0 ELSE 1 END,ao.priority,
             a.acceptance_datetime DESC,a.accession DESC,a.document_rank DESC,a.occurrence_rank DESC)=1''')
@@ -101,6 +114,8 @@ def measures(db,as_of):
           AND a.accounting_framework=b.accounting_framework AND a.reporting_scope=b.reporting_scope
           AND a.period_end-b.period_end BETWEEN 350 AND 380 AND abs((a.period_end-a.period_start)-(b.period_end-b.period_start))<=7
           AND b.acceptance_datetime<=a.acceptance_datetime
-         WHERE a.model_quantity='revenue_total'
+         WHERE a.model_quantity='revenue_total' AND b.value IS NOT NULL AND NOT b.recast_boundary
+          AND NOT EXISTS (SELECT 1 FROM filing_recast_differences x WHERE x.accession_a=a.accession
+           AND x.accession_b=b.accession AND x.model_quantity=a.model_quantity)
          QUALIFY row_number() OVER (PARTITION BY a.group_id,a.period_start,a.period_end,a.unit
           ORDER BY CASE WHEN b.accession=a.accession THEN 0 ELSE 1 END,b.acceptance_datetime DESC,b.accession DESC)=1''')

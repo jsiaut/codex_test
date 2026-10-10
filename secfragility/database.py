@@ -60,7 +60,22 @@ def sql_literal(s: str) -> str:
 
 
 def create(root: Path):
+    from decimal import Decimal, InvalidOperation
     db = duckdb.connect()
+    def precision_radius(decimals):
+        if decimals is None:
+            return None
+        if str(decimals).upper() == 'INF':
+            return Decimal(0)
+        try:
+            d = int(decimals)
+            if not -25 <= d <= 12:
+                return None
+            return Decimal('0.5') * Decimal(10) ** (-d)
+        except (ValueError, InvalidOperation):
+            return None
+    db.create_function('precision_radius', precision_radius, ['VARCHAR'],
+                       'DECIMAL(38,12)', null_handling='special')
     db.execute('CREATE TYPE measure_id_t AS ENUM (' + ','.join(map(sql_literal, MEASURE_TERMS)) + ')')
     db.execute('CREATE TYPE control_id_t AS ENUM (' + ','.join(map(sql_literal, CONTROL_IDS)) + ')')
     schema = (root / 'schema.sql').read_text()
