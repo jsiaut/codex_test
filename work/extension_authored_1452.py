@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='d92e7a998db29f0a03d872bf5a368892d51af13f486bb4708e67a3275e1fc251'
+save(k,[tagged(k,39,'9,896',block='exposed_assets',model_quantity='cash_equivalents_and_marketable_securities',issuer_treatment='9.896Oct25_20_EXbank_IN2.008CashEq7.888Market_NotAllCash'),tagged(k,91,'9,330',block='exposed_assets',model_quantity='financial_assets_maturing_within_one_year_fair_value',issuer_treatment='ASSETmat9.330FV9.329Cost_NotIssuerCashPayment'),dict(quote='Net realized gains and unrealized gains and losses were not significant for all periods presented.',abstained=True,abstention_reason='Not exactzeroinvestmentimpairmentF6. Shortassetmaturitynot financingcash. No privateequityflowproof in this debtsecuritiesnote.')])
