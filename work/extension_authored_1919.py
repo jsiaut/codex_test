@@ -1,0 +1,4 @@
+from extension_authoring import save
+k='33a21152b55b8e6c56d75e39ea43ffb988e4c107c7e0acde21f6b5c3c99d843c'
+m=dict(amount_origin='narrative_only',unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',period_end='2019-01-27',amount_qualifier='exact')
+save(k,[dict(m,quote='(In millions) | | | | | | | | | | | | | |\nLess than one year | $ | 5,042 | | | $ | 5,034',amount='5034000000',model_quantity='marketable_investment_maturity_next12',issuer_treatment='5.034FVDEBTASSETMaturity_NotDebtOutflow'),dict(quote='Total | $ | 7,335 | | | $ | 1 | | | $ | (12 | ) | | $ | 7,324 | | | $ | 684 | | | $ | 6,640 |',abstained=True,abstention_reason='7.324CurrentCashEqMarketEXCash684CashEq6.640Market_NoScaleInQuote'),dict(quote='For fiscal years 2019, 2018, and 2017, there were no other-than-temporary impairment losses',abstained=True,abstention_reason='MarketableDEBTNoOTTI_NotPrivateInvestmentF6Zero')])
