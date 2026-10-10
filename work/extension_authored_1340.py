@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='1198c8f02e4dd835f72a36f172dfd78d103b54e46b893c5c549efd0666e17bd9'
+save(k,[tagged(k,14,'13,503',model_quantity='aws_segment_revenue',issuer_treatment='13.503bnAWSQ1CY21_NoStandaloneAIshare'),tagged(k,18,'4,163',model_quantity='aws_segment_operating_income',issuer_treatment='4.163bnAWSQ1CY21_UsageAllocatedInfrastructureAcrossSegments'),dict(quote='The majority of technology infrastructure costs are allocated to the AWS segment based on usage.',abstained=True,abstention_reason='AWS broad compute/storage/database service revenue is not AI-only. No segment assets or individual customer concentration amount in this note; allocated technology expenses not cash capex.')])

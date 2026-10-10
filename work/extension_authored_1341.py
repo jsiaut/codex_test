@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='d70d6693166e19a1b07a4675c490e7074a54b078e3d2bf4c8b64a56de0ce4686'
+save(k,[tagged(k,21,'57,828',model_quantity='cash_equivalents_marketable_securities_fair_value',issuer_treatment='57.828bnCashEqMarketFV_EXBankCash_IN12.291MM496UST269Time66CorpEq_NotAllCash'),dict(quote='The aggregate absolute value of these Level 3 assets and liabilities was not material',abstained=True,abstention_reason='Immaterial unquantified Level3 does not establish exact zero or absence of private exposure. Recurring cash-equivalent/marketable FV not primary AI equity investment or maximum credit support.')])
