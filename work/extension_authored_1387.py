@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='c7b17c28d125737e7552623e5586b7b63742b594ade72487c311f23f7f04bd5a'
+save(k,[tagged(k,15,'144',block='exposed_assets',model_quantity='private_equity_investments',issuer_treatment='PRIVATEHELDJan31_21_vs77Not67DeltaCash_NotCurrentRecurringFV144'),dict(quote='recorded at fair value on a non-recurring basis only if an impairment or observable price adjustment occurs',abstained=True,abstention_reason='Policy impairment/observable prices combined no explicit F6 quantified. Amount recorded not significant notzero. Own notes FV1.011/1.124/1.654/etc not investment impairment. No named investee, primary funding or cash evidence.')])

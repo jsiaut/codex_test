@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='b1309009147ed4d81d293a37048a83a96dd7411b0194a3d86879320544db3ada'
+save(k,[tagged(k,12,'8,758',model_quantity='deferred_revenue',issuer_treatment='HELD_Feb28_21_IN8.088cur670long_NotNewCashOrRPO'),tagged(k,0,'7,075',model_quantity='cloud_and_license_support_deferred_revenue',issuer_treatment='CURRENTMixedCloudANDSupport_NotStandaloneOCIorAI'),dict(quote='customer payments made in advance',abstained=True,abstention_reason='Historical advance stock not new equity investment/customer financing or known upcoming cash collection. Acquisition-assumed obligations no new cash. No named customer concentration or RPO quantification.')])

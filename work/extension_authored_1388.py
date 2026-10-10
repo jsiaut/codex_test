@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='c6e7ac8e18f43a76178d648b78c4e7fca6033692efb81e7041ad1014096cccfe'
+save(k,[tagged(k,41,'10,714',model_quantity='marketable_securities',issuer_treatment='DEBTASSETSJan31_21_EX637CashEq_IN11.351FV_NotOwnDebt'),tagged(k,40,'637',model_quantity='cash_equivalent_investments',issuer_treatment='DebtCashEq_NotAllBankCash_EX10.714Market'),tagged(k,91,'10,783',model_quantity='liquid_asset_maturity_12m',issuer_treatment='DEBTASSETFVLess1yr_NotIssuerObligation10.782cost'),dict(quote='Net realized gains and unrealized gains and losses were not significant',abstained=True,abstention_reason='Not explicit investment impairment orzeroF6. Asset maturity not debt principal outflow, no private equity investee or primary funding.')])

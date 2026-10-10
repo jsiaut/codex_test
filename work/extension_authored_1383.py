@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7ba489d12ef3e2f734b3a9958ad5666c1100c96a6288482cdfb668b6615b75e2'
+save(k,[tagged(k,26,'23,146',model_quantity='recurring_fair_value_assets',issuer_treatment='FVASSETMIX_Feb28_21_INCashEqMarketable71deriv_NotAllBankCashOrPrivate'),tagged(k,36,'$69.3 billion',block='recognized_liabilities',category_id='debt',issuer_treatment='OWNseniorNotesANDrelatedFVhedgesOutstandingRounded_Not15bnMarchIssueYetKnown'),dict(quote='substantially all of our marketable securities investments mature within one year',abstained=True,abstention_reason='Asset maturity substantially all not exact next12 debt outflow. 7.604bn commercialpaper assets not issuerCPdraw. Own debt76.3bn FV not investment impairment; no named AI cash investment or F4.')])
