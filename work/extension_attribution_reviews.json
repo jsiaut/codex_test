@@ -6,5 +6,32 @@
     "decision": "exclude_vie_unconsolidated_category_attribution_keep_gross_receivable_and_setoff",
     "reason": "The DCSP lender/borrower arrangement is disclosed, but this block does not establish a VIE. category_id was assigned incorrectly in the accepted authoring. Raw observation is append-only and preserved; downstream classification must omit vie_unconsolidated.",
     "assembly_status": "pending_phase3"
+  },
+  {
+    "content_key": "9761ca668dd4767a2d48a6ef758ba5a62a5149e8e3e2c551c3995c36c1cde600",
+    "tagged_candidate_index": 88,
+    "affected_quantity": "sig_covenant_events",
+    "decision": "exclude_F4_ordinary_revolver_replacement_keep_capacity_and_signing",
+    "reason": "October 2024 agreement replaces a prior facility on substantially the same terms; no financial covenant amendment or waiver is disclosed. Raw accepted observation is preserved; later interpretation of the same transaction must not classify the ordinary replacement as F4.",
+    "assembly_status": "pending_phase3"
+  },
+  {
+    "content_key": "9761ca668dd4767a2d48a6ef758ba5a62a5149e8e3e2c551c3995c36c1cde600",
+    "quote": "we had repaid outstanding borrowings and terminated the secured revolving credit facility",
+    "affected_quantity": "sig_covenant_events",
+    "decision": "exclude_F4_voluntary_debt_facility_termination_keep_termination_unknown_execution_day",
+    "reason": "The actual termination of an own-debt revolver does not disclose amendment or waiver of a financial covenant. A by-date is not an execution date and the prior 682m stock is not proof of exact repayment cash.",
+    "assembly_status": "pending_phase3"
+  },
+  {
+    "content_key": "9761ca668dd4767a2d48a6ef758ba5a62a5149e8e3e2c551c3995c36c1cde600",
+    "tagged_candidate_indexes": [
+      82,
+      88
+    ],
+    "affected_quantity": "contractual_outflows",
+    "decision": "exclude_undrawn_capacity_from_contractual_outflows_keep_available_liquidity",
+    "reason": "Undrawn borrowing limits are available resources, not payments owed; fees and actual drawn balances are different quantities.",
+    "assembly_status": "pending_phase3"
   }
 ]
