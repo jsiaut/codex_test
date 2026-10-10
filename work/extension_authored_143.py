@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='424be724d833b63ea9773d03b1f7dafa7c465793242bb75a87432604b411c760'
+save(k,[dict(quote='RL includes our virtual and augmented reality related consumer hardware, software, and content.',model_quantity='segment_AI_scope',issuer_treatment='two_published_segments_FoA_and_RL_do_not_isolate_AI_revenue_or_AI_profit'),dict(quote='Employee compensation includes employee payroll, share-based compensation, bonus, and employee benefits',model_quantity='segment_cost_allocation_scope',issuer_treatment='segment_expense_mixed_cash_noncash_and_broad_service_scope_not_peer_comparable_AI_cost')])
