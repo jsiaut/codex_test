@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='42a3e940c8775641c7776a6d4695d93a8cfb20270ebd0517ee6c0425f4f5fa6b'
+save(k,[tagged(k,26,'Net sales | | | $ | 22,140 | | | | | $ | 26,281',model_quantity='segment_revenue',issuer_treatment='26.281bn_Q2_AWS_globalCloud_NOTAIonly_SIX51.318bn_notadditive'),tagged(k,34,'Operating income | | | $ | 5,365 | | | | | $ | 9,334',model_quantity='segment_operating_income',issuer_treatment='9.334bn_Q2_AWS_SIX18.755bn_separate_consol29.979'),dict(quote='global sales of compute, storage, database, and other services',abstained=True,abstention_reason='AWS is not an AI-only revenue segment. No quantified individual customer concentration, named financing counterparty, RPO or segment asset balance is disclosed in this block.')])

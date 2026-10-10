@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='fa3310eb113f751b36987d8ad84cbcb52bbe12c0d98baf7958c7f904df5a0a1d'
+save(k,[tagged(k,10,'Total | | | $ | 6,207',model_quantity='nonmarketable_equity_held',issuer_treatment='6.207bn_HELD_private_IN6.151measurementalternative56mequitymethod_NOT66mactualcash'),tagged(k,4,'Cumulative impairment/downward adjustments',model_quantity='equity_cumulative_impairments_and_price_down',issuer_treatment='640m_CUMcombinedNOTcurrentcharge_NOTF6credit_599priorNOT41mcreditbydifference'),dict(quote='investments in privately-held companies without readily determinable fair values.',abstained=True,abstention_reason='No named investee, primary investment cash event, covenant amendment or customer credit loss is disclosed.')])
