@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='b46f422496a9f3fd7882ad66aed55952fc834a091fe98b930203d570b9af595a'
+save(k,[dict(quote='2026, of which $13,236 million was recognized as deferred revenue at March 31, 2026.',model_quantity='rpo_deferred_revenue_overlap_scope',issuer_treatment='27621m_March31_backlog_includes13236m_deferred_revenue_not_additive_or_current_sales',flag_unknown_reason='no_named_customer_concentration_or_backlog_allocation_in_this_note'),dict(quote='All of products revenue is attributable to the Connectivity segment.',model_quantity='product_revenue_segment_scope',issuer_treatment='product_revenue_not_AI_segment_compute_services')])

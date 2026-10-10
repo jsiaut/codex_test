@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='da9e239bda464630952196c447037fa4f56b2b4bf86b991275c7107241957ffa'
+save(k,[dict(quote='Rebates and credits',model_quantity='rebate_credit_asset_scope',abstained=True,abstention_reason='aggregate_asset_balance_not_actual_customer_consideration_or_named_customer',issuer_treatment='prepaid_asset_rebates_and_credits_not_ASC606_revenue_deduction_proof')])

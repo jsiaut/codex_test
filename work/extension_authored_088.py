@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='0b7262d866d62e9c34256b26af69d546a22fdadfe450fdc8ce6037fa45e98115'
+save(k,[dict(quote='Prior period\npresentations for segments conform to the current segment reporting structure.',model_quantity='published_segment_recast',recast_cause='segment_change',issuer_treatment='Q1_2026_three_segment_structure_recast_prior_segment_presentations_not_error_correction'),dict(quote='The Company’s CODM does not evaluate operating and reportable segments using\nasset or liability information.',model_quantity='segment_asset_liability_allocation_limit',flag_unknown_reason='no_AI_debt_asset_allocation_segment_capex_label_does_not_explicitly_establish_cash_basis')])

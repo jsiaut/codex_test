@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='c21e7b027335ef864720a4ce2ea030b9ce8372ab57a6b9ba6351528697794e81'
+save(k,[dict(quote='Accrued infrastructure purchases',model_quantity='infrastructure_purchase_accrual_scope',issuer_treatment='2669m_March31_accrual_unpaid_purchase_stock_not_cash_capex_or_new_financing_provider',flag_unknown_reason='no_named_vendor_or_AI_only_allocation_in_this_note'),dict(quote='Rebates and credits',model_quantity='rebate_credit_asset_scope',issuer_treatment='prepaid_asset_balance_not_actual_ASC606_customer_payment_or_revenue_reduction')])
