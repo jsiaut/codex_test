@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='799c740809e1065de2cb24fe5f895276b105a138c61498e6422f752fe4d82c56'
+save(k,[tagged(k,27,'335',model_quantity='deferred_revenue',issuer_treatment='Dec31_20_DEF_EX47Deposits_IN382Combined_NotRPOorNewCash'),tagged(k,29,'47',model_quantity='customer_deposits',issuer_treatment='HELD47SeparateDEF335_NotFull382NewCash'),dict(quote='based on the billing address of our customers',abstained=True,abstention_reason='Geographic billing revenue not AI consumption or individual customer concentration.84.169Advertising1.796Other not dedicatedAI revenue. No maturity or next12 cash for335DEF47Deposits; related balances not doublecount combined382.')])
