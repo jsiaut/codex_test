@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='1616e500fa42344b1ba01ffaea5f429a0921b28d08065e7b5211266d81f2732c'
+save(k,[tagged(k,14,'Privately-held equity securities | | | Level 3 | | | | | | $ | 676',block='exposed_assets',component_kind='interest_held',model_quantity='private_equity_carrying_value',issuer_treatment='676m_PRIVATEheld_NOT388mnewPrimaryCash_UnknownNames'),dict(quote='original issuance value, net of unamortized debt discount and issuance costs.',abstained=True,abstention_reason='Private equity carrying-value changes do not quantify primary cash investments. Debt fair values do not replace carrying debt or indicate credit losses on counterparties.')])
