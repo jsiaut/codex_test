@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='56ac7f64a743f75f91a36e0cc9c16ad762112ce396487efa92d25c162203cce6'
+save(k,[tagged(k,12,'Total deferred revenues',model_quantity='deferred_revenue',issuer_treatment='10368mDEFSTOCK_IN9019cur1349long_NOTnewcashflow_ALLbusinesses'),tagged(k,0,'Cloud services and license support',model_quantity='current_cloud_and_support_deferred_revenue',issuer_treatment='8048mCURcloudANDsupport_IN10368total_NOTOCIorAIonly_substantialadvancepayments_NOTeverydollarprovennewcash')])

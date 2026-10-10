@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='9c0f3af4db284a97745706025a51beb6baf4309ecf140382d50e389f3e680d79'
+save(k,[tagged(k,32,'estimated fair values of the senior notes and other long-term borrowings and the related fair value hedges',model_quantity='debt_and_related_hedges_fair_value',issuer_treatment='88800mFEB2025FV_SCOPEseniorOTHERlongtermANDrelatedFVhedges_on96300mcarryingcombined_NOTindependentdebtprincipal_oradditionalamount'),dict(quote='all of our marketable debt securities investments mature within one year',model_quantity='marketable_debt_asset_maturity_scope',issuer_treatment='SHORTmaturityDEBTASSETS_cashEQorAFS_notOracleborrowings_NOAIinvesteeidentification')])

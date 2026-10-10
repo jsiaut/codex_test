@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7c191de22e92e01a46bd2f7af2f7c2fb93ca29ace8facef1af7aff2180071051'
+save(k,[tagged(k,0,'we issued $14.0 billion, par value, of senior notes',event_type='funding',stage='drawn_or_paid',issuer_treatment='FY25NINE_NEW14000FACE_Feb2025ANDSep2024issued_MONTHnoexactdays_NET13923CARRYafter77UNAMORTcost_NOTactualcashproceeds_independentlyshown_USESrefiseniorTERMCP_interestpremiumfees_Cashretainedunknown'),dict(quote='There have been no other significant changes in our notes payable or other borrowing arrangements',model_quantity='borrowing_arrangement_change_disclosure_scope',issuer_treatment='NONEOTHERsignificantchanges_vsMay2024annual_NOTEscope_notautomaticzeroF4allfilings_compliantseniorFeb28')])
