@@ -10,12 +10,12 @@ def prepare(db,root:Path,as_of:str):
     rows=[(q['group_id'],q['period_start'],q['period_end'],q.get('fiscal_year_start'),q.get('quarter_number'))
         for q in universe['quarters'] if q['period_start']!='none' and q['period_end']!='none']
     if rows:db.executemany('INSERT INTO fiscal_quarters VALUES (?,?,?,?,?)',rows)
-    db.execute('''CREATE VIEW periodic_occurrences AS
+    db.execute('''CREATE TEMP TABLE periodic_occurrences AS
       SELECT f.* FROM eligible_instance_occurrences f JOIN documents d USING(document_id)
        WHERE d.form IN ('10-K','10-K/A','10-KT','10-Q','10-Q/A','10-QT') AND f.dimensions='{}'
         AND f.coverage_state IN ('observed','explicit_zero') AND f.value IS NOT NULL
         AND f.model_quantity IS NOT NULL''')
-    db.execute('''CREATE VIEW filing_recast_differences AS
+    db.execute('''CREATE TEMP TABLE filing_recast_differences AS
       SELECT DISTINCT a.accession AS accession_a,b.accession AS accession_b,a.group_id,a.model_quantity
       FROM periodic_occurrences a JOIN periodic_occurrences b ON a.group_id=b.group_id
        AND a.accession!=b.accession AND a.canonical_concept=b.canonical_concept
@@ -27,11 +27,11 @@ def prepare(db,root:Path,as_of:str):
     # Each quarter has a historical information date: the first periodic filing
     # with its period end. This is a publication snapshot, separately from the
     # annual-deadline cutoffs required for Annex E.
-    db.execute('''CREATE VIEW quarter_cutoffs AS SELECT q.group_id,q.start_date,q.end_date,
+    db.execute('''CREATE TEMP TABLE quarter_cutoffs AS SELECT q.group_id,q.start_date,q.end_date,
       min(d.acceptance_datetime) AS public_at FROM fiscal_quarters q JOIN documents d ON d.group_id=q.group_id
       JOIN periodic_occurrences f ON f.document_id=d.document_id AND f.period_end=q.end_date
       WHERE d.form IN ('10-K','10-KT','10-Q','10-QT') AND f.period_start IS NOT NULL GROUP BY ALL''')
-    db.execute('''CREATE VIEW quarter_candidates AS
+    db.execute('''CREATE TEMP TABLE quarter_candidates AS
       SELECT q.group_id,q.start_date AS period_start,q.end_date AS period_end,a.model_quantity,
        a.unit,a.currency,a.accounting_framework,a.reporting_scope,a.accession,a.acceptance_datetime,a.knowledge_date,
        a.document_rank,a.occurrence_rank,a.canonical_concept,a.tier,
@@ -54,7 +54,7 @@ def prepare(db,root:Path,as_of:str):
     for view in ['as_known','revised']:
         cutoff='AND a.acceptance_datetime<=k.public_at' if view=='as_known' else ''
         snapshot='k.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
-        db.execute(f'''CREATE VIEW quarter_quantities_{view} AS SELECT a.*,{snapshot} AS snapshot_at FROM quarter_candidates a
+        db.execute(f'''CREATE TEMP TABLE quarter_quantities_{view} AS SELECT a.*,{snapshot} AS snapshot_at FROM quarter_candidates a
           JOIN anchor_order ao USING(model_quantity,canonical_concept)
           LEFT JOIN quarter_cutoffs k ON k.group_id=a.group_id AND k.start_date=a.period_start AND k.end_date=a.period_end
           WHERE a.acceptance_datetime<={sql_literal(as_of)}::TIMESTAMPTZ AND a.value IS NOT NULL {cutoff}

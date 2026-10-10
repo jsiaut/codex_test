@@ -100,5 +100,26 @@
     "scope": "all_derived_measures_links_and_events",
     "decision": "D89",
     "detail": "Body outside authorized first-pass exception under11.1; preserve immutable accepted RAW observation but exclude amounts, relations, events and all downstream use. Complete one body packet read; additional notes form same class as April14 original; original bf49c72b financial registered DTC holder and11 financial initialpurchasers explicitly proved. Actual body3.1 clause change observed but no Item3.03, so excluded from firstpass F4 by fixed11.1rule."
+  },
+  {
+    "observation_id": "686f6175c4be935801d3193ec768598b2183b6a84843df19855407c7e45fbd88",
+    "decision": "D72",
+    "reason": "same_issue_literal_million_vs_billion_unresolved",
+    "scope": "all_dependent_numeric_attributions",
+    "detail": "Immutable original observation and independent source discrepancy retained; no averaged amount or silent correction."
+  },
+  {
+    "observation_id": "b91882ba658f18c39fa7caf22b24b0d76118470e2794b25472ad7285cd284005",
+    "decision": "D73",
+    "reason": "net_proceeds_993_5_vs_independent_offer_price_992_35_unresolved",
+    "scope": "all_dependent_numeric_attributions",
+    "detail": "Immutable original observation and independent source discrepancy retained; no averaged amount or silent correction."
+  },
+  {
+    "observation_id": "0617b927c580811d94a6508460452e71b70fa0a5b1b5130b9fbcf446f8af09e2",
+    "decision": "D97",
+    "reason": "primary_cash_and_exact_event_date_not_established",
+    "scope": "all_dependent_numeric_attributions",
+    "detail": "Published 7m and 6.75m rounded amounts alone may be compatible; primary cash form and exact event date are not established. Keep original quote, without numeric or dated attribution."
   }
 ]

@@ -1,5 +1,6 @@
 from __future__ import annotations
 from pathlib import Path
+from functools import lru_cache
 import json
 import duckdb
 
@@ -59,9 +60,12 @@ def sql_literal(s: str) -> str:
     return "'" + s.replace("'", "''") + "'"
 
 
-def create(root: Path):
+def create(root: Path, path=None):
     from decimal import Decimal, InvalidOperation
-    db = duckdb.connect()
+    from functools import lru_cache
+    db = duckdb.connect(str(path) if path else ':memory:')
+    db.execute('SET threads=4')
+    @lru_cache(maxsize=128)
     def precision_radius(decimals):
         if decimals is None:
             return None
@@ -104,10 +108,15 @@ def create(root: Path):
     return db
 
 
+@lru_cache(maxsize=64)
+def _columns(db,table):
+    return {r[1] for r in db.execute(f"PRAGMA table_info('{table}')").fetchall()}
+
+
 def insert(db, table: str, row: dict):
     if table not in TABLES:
         raise ValueError(table)
-    allowed = {r[1] for r in db.execute(f"PRAGMA table_info('{table}')").fetchall()}
+    allowed = _columns(db,table)
     if set(row) - allowed:
         raise ValueError(f'Colonnes inconnues : {set(row)-allowed}')
     keys = list(row)

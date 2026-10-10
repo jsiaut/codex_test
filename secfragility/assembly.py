@@ -68,8 +68,7 @@ def load(db,root,as_of):
        AND NOT EXISTS (SELECT 1 FROM excluded_observations q WHERE q.observation_id=o.observation_id)
        AND (tagged_fact_id IS NULL OR EXISTS (SELECT 1 FROM eligible_facts f
         WHERE f.fact_id=o.tagged_fact_id AND f.value IS NOT NULL AND f.coverage_state IN ('observed','explicit_zero')))''')
-    for row in db.execute("SELECT * FROM observations WHERE abstained AND model_quantity='exhibit_body_excluded_financial_parties_only'").fetchall():
-        cols=[x[0] for x in db.description];o=dict(zip(cols,row))
+    for o in rows(db,"SELECT * FROM observations WHERE abstained AND model_quantity='exhibit_body_excluded_financial_parties_only'"):
         if any(r.get('content_key')==o['content_key'] for r in json.loads((root/'work/exhibit_body_policy_overrides.json').read_text())):continue
         b=json.loads((root/by_key[o['content_key']][0]['path']).read_text())
         exclusion(db,as_of,'financial_parties_only','exhibit_body',o['content_key'],group_id=o['group_id'],

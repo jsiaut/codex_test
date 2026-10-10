@@ -5,7 +5,7 @@ from .database import sql_literal
 def stocks(db,as_of:str):
     for view in ['as_known','revised']:
         timestamp='q.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
-        db.execute(f'''CREATE VIEW snapshot_stocks_{view} AS SELECT f.*,q.start_date AS quarter_start,q.end_date AS quarter_end,
+        db.execute(f'''CREATE TEMP TABLE snapshot_stocks_{view} AS SELECT f.*,q.start_date AS quarter_start,q.end_date AS quarter_end,
           {timestamp} AS snapshot_at FROM eligible_instance_occurrences f
           JOIN quarter_cutoffs q ON q.group_id=f.group_id AND f.period_start IS NULL
            AND (f.period_end=q.end_date OR f.period_end=q.start_date-INTERVAL 1 DAY)

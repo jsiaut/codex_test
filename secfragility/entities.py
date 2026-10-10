@@ -10,7 +10,7 @@ def normalize(name):
     s=re.sub(r'^the\s+','',name.strip(),flags=re.I).lower()
     s=re.sub(r'[^\w\s]',' ',s)
     s=re.sub(r'\s+',' ',s).strip()
-    for long,short in [('corporation','corp'),('incorporated','inc'),('limited','ltd'),('public benefit corporation','pbc')]:
+    for long,short in [('public benefit corporation','pbc'),('corporation','corp'),('incorporated','inc'),('limited','ltd')]:
         s=re.sub(r'\b'+long+r'$',short,s)
     return s
 
@@ -56,6 +56,7 @@ def assemble(db,root,as_of):
                    consolidation_treatment='consolidated_subsidiary',membership_start=row['membership_end'],membership_end=None,
                    resolution_rule='completed_successor_transaction_distinct_legal_person')
         records.append(after)
+        index[normalize(row['legal_name'])].append(after)
     conso=json.loads((root/'work/entity_decisions.json').read_text())
     collection=json.loads((root/'work/collection.json').read_text())
     f=collection['filings'][conso['source_accession']]
@@ -93,14 +94,19 @@ def assemble(db,root,as_of):
     for row in records:insert(db,'entities',row)
     def resolve(name,o):
         if not name:return None
+        event=str(o.get('event_date') or o.get('period_end') or o['knowledge_date'])
+        def dated(options):
+            valid=[r for r in options if (not r.get('membership_start') or str(r['membership_start'])<=event)
+                   and (not r.get('membership_end') or event<str(r['membership_end']))]
+            return valid[0] if valid else options[0] if options else None
         if name==o['group_id']:
             # Explicit author-supplied issuer shorthand, identified by the filing CIK.
-            own=next((r for r in records if r['entity_id']==o['entity_id'] and r.get('alias_key') is None),None)
+            own=dated([r for r in records if r['entity_id']==o['entity_id'] and r.get('alias_key') is None])
             return own or issuer_by_group[o['group_id']]
         options=index.get(normalize(name),[])
         ids={r['entity_id'] for r in options}
-        if len(ids)==1:return options[0]
+        if len(ids)==1:return dated(options)
         j=jurisdiction(name,o['quote'])
         options=[r for r in options if r.get('jurisdiction')==j and j]
-        return options[0] if len({r['entity_id'] for r in options})==1 else None
+        return dated(options) if len({r['entity_id'] for r in options})==1 else None
     return records,observations,resolve

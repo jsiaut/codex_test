@@ -7,7 +7,7 @@ from .database import sql_literal
 
 def prepare_views(db,root: Path,as_of: str):
     db.execute((root/'queries.sql').read_text())
-    db.execute(f'''CREATE VIEW selected_as_known AS SELECT * FROM eligible_facts
+    db.execute(f'''CREATE TEMP TABLE selected_as_known AS SELECT * FROM eligible_facts
         WHERE knowledge_date<=CAST({sql_literal(as_of)} AS TIMESTAMPTZ)::DATE
         QUALIFY row_number() OVER (PARTITION BY semantic_key ORDER BY acceptance_datetime DESC,
           accession DESC,document_rank DESC,numeric_precision DESC,occurrence_rank DESC)=1''')
@@ -21,7 +21,7 @@ def prepare_views(db,root: Path,as_of: str):
     rows=[(q,replacements.get('us-gaap:'+c,'us-gaap:'+c),p) for q,cs in dict(cfg['concept_anchors'],**cfg.get('concept_anchors_to_verify',{}),**SUPPLEMENTAL_ANCHORS).items() for p,c in enumerate(cs)]
     db.executemany('INSERT INTO anchor_order VALUES (?,?,?)',rows)
     for view in ('as_known','revised'):
-        db.execute(f'''CREATE VIEW quantities_{view} AS
+        db.execute(f'''CREATE TEMP TABLE quantities_{view} AS
           SELECT f.* FROM selected_{view} f JOIN anchor_order a USING(model_quantity,canonical_concept)
           WHERE dimensions='{{}}' AND coverage_state IN ('observed','explicit_zero') AND value IS NOT NULL
           QUALIFY row_number() OVER (PARTITION BY group_id,model_quantity,period_start,period_end,unit,
