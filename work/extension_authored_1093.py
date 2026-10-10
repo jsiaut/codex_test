@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='f6de9fdc1b7c3c2be5ada64c84b4f5812abf3f5ec2e4fb1f315995ece809e2e8'
+save(k,[tagged(k,16,'non-marketable equity investments had a carrying value of $34.9 million',block='exposed_assets',model_quantity='nonmarketable_equity_carrying_value',issuer_treatment='34.9m_HELDApril30_22_AnonymousPrivate_NoNewCash'),dict(quote='investments in privately-held companies',abstained=True,abstention_reason='The carrying value of anonymous private holdings does not demonstrate a primary cash purchase or an isolated downward measurement. Liquid time deposits, public equity and the severance fund are separate assets. The issuer’s own debt fair value is not an investee F6 event.')])

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='16110fe74ea04737bbd420f8e4118cddf5f76cdb014b8af870690a13bd3e240a'
+save(k,[tagged(k,14,'Privately-held equity securities | | | Level 3 | | | | | | $ | 238',block='exposed_assets',model_quantity='nonmarketable_equity_fair_value',issuer_treatment='238m_HELD_Not30mDeltaPrimaryCash_vs208Prior'),dict(quote='investments in publicly-traded equity securities',abstained=True,abstention_reason='The 24m Q1 unrealized loss applies to public shares, not an identified private-investee F6. The anonymous private fair-value stock and its difference from prior-year stock do not prove new primary funding. Own-debt fair values are separate from carrying values and investee exposure.')])
