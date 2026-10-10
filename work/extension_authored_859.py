@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='71eb1bdf97edf88bfaa44fb706ca92b9307d41c72fdd4a7709a1fb698db6ac39'
+save(k,[tagged(k,24,'non-marketable equity investments had a carrying value of $36.0 million and $36.1 million, respectively',model_quantity='private_equity_investments_carrying',issuer_treatment='36m_PRIVATE_HELD_EX3.6public700kSeverance_NOT100kcreditLossFromDelta'),dict(quote='carrying value of investments in non-marketable equity securities',abstained=True,abstention_reason='Private carrying value combines observable repricing and impairments without isolating an AI credit event. Public shares and the severance fund are separate; own debt fair value and rate-resetting loans do not establish F6 or new primary AI funding.')])

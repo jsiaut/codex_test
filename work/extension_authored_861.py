@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='5b7b9d8553144d52f327b3b1ddbf8790642cc08a1fbc48ad758a9b597ff52f0b'
+save(k,[tagged(k,14,'Privately-held equity securities | | | Level 3 | | | | | | $ | 496',model_quantity='private_equity_investments_reported_fair_value',issuer_treatment='496m_PRIVATEHELDreportedFV_EX9public_NOT208mnewCashFromDelta'),dict(quote='These liabilities are carried on our Condensed Consolidated Balance Sheets at their original issuance value',abstained=True,abstention_reason='Own notes fair value differs from issuance value net of costs and does not establish F6. Private holding valuation changes do not prove new cash funding; public-equity unrealized losses do not isolate an AI credit impairment.')])
