@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='284dc4f6be360c29bb3f34e0824f5474e24148ddcc27ba9d342e28b737be75ef'
+save(k,[tagged(k,36,'Other assets | | | | | | 157',block='exposed_assets',component_kind='interest_held',model_quantity='other_assets_recurring_level3_fair_value',issuer_treatment='157m_OTHER_LEVEL3recurring_Not6.201bnPRIVATEmeasurementAlternative_No3DeltaImpairment'),dict(quote='Assets remeasured at fair value within Level 3',abstained=True,abstention_reason='Nonrecurring private remeasurement amounts are immaterial in 2022; the prior 913-million remeasured assets are a subset rather than total private holdings. Recurring other assets and fair-value hierarchy classifications do not establish a named investment, new cash, or an isolated impairment event.')])
