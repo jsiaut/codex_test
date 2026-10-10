@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='f9e2e114cc8bb22f79edb5bc6db9751076f6a27c741de2eccdc1e44c3ef7d182'
+save(k,[dict(quote='The Company operates in one reportable segment — the design, development and sale of integrated circuits.',model_quantity='segment_reporting_perimeter',issuer_treatment='ONEreportableSegment_NOTDCendMarket'),dict(quote='physical location of the assets by geographic region',abstained=True,abstention_reason='The asset table is geographic property and equipment, not data-center or AI segment assets. No separate end-market operating profit or identified individual customer is disclosed.')])
