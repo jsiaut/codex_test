@@ -62,6 +62,12 @@ def run(db,root,as_of):
     checks['expected_cells_present']=coverage==0
     # Failures are not generalized on most groups and most periods.
     mismatches=rows(db,"SELECT control,group_id,count(*) n FROM controls WHERE status='mismatch' AND tolerance_basis!='inferred' GROUP BY ALL")
+    generalized=db.execute("""WITH gp AS (SELECT group_id,period_start,period_end,bool_or(status='mismatch') failed
+      FROM controls WHERE control IN ('c1_balance_components','c2_cash_flow_components','c3_cash_reconciliation',
+       'c6_income_articulation','c7_cash_continuity') AND status IN ('ok','mismatch') AND tolerance_basis!='inferred' GROUP BY ALL),
+      g AS (SELECT group_id,sum(failed::INTEGER) failures,count(*) periods FROM gp GROUP BY ALL)
+      SELECT count(*) FROM g WHERE failures*2>periods""").fetchone()[0]
+    checks['no_generalized_accounting_failure']=generalized<6
     checks['criteria_frozen']=json.loads((root/'audit/criteria_manifest.json').read_text())['criteria_unchanged']
     result=dict(as_of=as_of,checks=checks,localized_invalid_aggregates=invalid,accounting_mismatches=mismatches,missing_expected_cells=coverage,independent_audit_performed=False)
     (root/'work/delivery_verification.json').write_text(json.dumps(result,indent=2,default=str)+'\n')

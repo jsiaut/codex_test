@@ -17,14 +17,17 @@ def financed(edges,s,c,q,quarters,cutoff,policy='exposure_outstanding'):
               and e.get('knowledge_date') and str(e['knowledge_date'])<=cutoff[:10]
               and e.get('elimination_status')=='external']
     dates=[x['period_end'] for x in quarters if x['group_id']==s and x['period_end']!='none' and x['period_end']<=q['period_end']]
-    dates=sorted(set(dates));left=dates[-9] if len(dates)>8 else None
+    dates=sorted(set(dates));left=dates[-9] if len(dates)>8 else min(
+        (x['period_start'] for x in quarters if x['group_id']==s and x['period_start']!='none'
+         and x['period_end']!='none' and x['period_end']<=q['period_end']),default=None)
     for e in eligible:
         d=str(e.get('event_date') or e.get('period_end') or '')
         qualifies=(e.get('edge_kind')=='amount' and e.get('family')=='financing' and e.get('stage')=='drawn_or_paid'
-          and e.get('event_type') in ('funding','drawdown') and e.get('currency') and e.get('unit')==e.get('currency'))
+          and e.get('event_type') in ('funding','drawdown') and e.get('currency') and e.get('unit')==e.get('currency')
+          and e.get('type')!='noncash_investment' and e.get('amount') is not None and e['amount']>0)
         # Recognized consideration needs the issuer's actual GAAP recognition;
         # a signed maximum warrant grant does not qualify.
-        qualifies=qualifies or (e.get('family')=='customer_consideration' and e.get('stage')=='recognized'
+        qualifies=qualifies or (e.get('edge_kind')=='amount' and e.get('family')=='customer_consideration' and e.get('stage')=='recognized'
              and e.get('event_type')=='recognition' and e.get('tier') in ('A','B','C'))
         if qualifies and d and d<=q['period_end'] and (policy=='ever_financed' or left and d>left):return 'active'
     # Current investment notes are not processed in the first pass. No lapse

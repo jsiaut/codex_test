@@ -4,7 +4,7 @@ from .database import sql_literal
 def run(db,as_of):
     for view in ('as_known','revised'):
         stamp='k.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
-        db.execute(f'''CREATE VIEW ttm_terms_{view} AS
+        db.execute(f'''CREATE TEMP TABLE ttm_terms_{view} AS
           SELECT a.*,k.start_date AS anchor_start,k.end_date AS anchor_end,{stamp} AS snapshot_at
           FROM quarter_cutoffs k JOIN quarter_candidates a ON k.group_id=a.group_id
            AND a.period_end<=k.end_date AND a.period_end>k.end_date-INTERVAL 800 DAY
@@ -13,7 +13,7 @@ def run(db,as_of):
           QUALIFY row_number() OVER (PARTITION BY k.group_id,k.start_date,k.end_date,a.model_quantity,a.period_start,a.period_end,a.unit,
            a.accounting_framework,a.reporting_scope ORDER BY CASE WHEN calculation_basis='direct_quarter' THEN 0 ELSE 1 END,
             ao.priority,a.acceptance_datetime DESC,a.accession DESC,a.document_rank DESC,a.occurrence_rank DESC)=1''')
-        db.execute(f'''CREATE VIEW ttm_quantities_{view} AS
+        db.execute(f'''CREATE TEMP TABLE ttm_quantities_{view} AS
           WITH ranked AS (SELECT *,row_number() OVER (PARTITION BY group_id,anchor_start,anchor_end,model_quantity,unit,
            accounting_framework,reporting_scope ORDER BY period_end DESC) AS quarter_rank FROM ttm_terms_{view}),
           ordered AS (SELECT *,lag(period_start) OVER (PARTITION BY group_id,anchor_start,anchor_end,model_quantity,unit,

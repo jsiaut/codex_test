@@ -1,2 +1,5 @@
 *.parquet filter=lfs diff=lfs merge=lfs -text
 backup/*.tar.zst filter=lfs diff=lfs merge=lfs -text
+audit/numbers.csv filter=lfs diff=lfs merge=lfs -text
+measures.csv filter=lfs diff=lfs merge=lfs -text
+series.csv filter=lfs diff=lfs merge=lfs -text

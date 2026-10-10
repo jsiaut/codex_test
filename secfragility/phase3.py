@@ -17,10 +17,13 @@ def run(root,reconstruct=False):
     else:
         path=root/'work/phase3.duckdb'
         if path.exists():path.unlink()
+        wal=root/'work/phase3.duckdb.wal'
+        if wal.exists():wal.unlink()
         db=create(root,path)
         for t in ['documents','facts']:
             where=" WHERE document_kind IS DISTINCT FROM 'submission_metadata'" if t=='documents' else ''
             db.execute(f"INSERT INTO {t} BY NAME SELECT * FROM read_parquet('tables/{t}.parquet'){where}")
+    db.execute('BEGIN TRANSACTION')
     collection=json.loads((root/'work/collection.json').read_text())
     from .mapping import refresh
     refresh(db,root,collection)
@@ -70,6 +73,7 @@ def run(root,reconstruct=False):
     db.execute('UPDATE measures SET tier=2 WHERE measure::VARCHAR NOT IN ('+','.join("'"+x+"'" for x in sorted(rank1))+')')
     from .verify_delivery import run as verify
     source,verification=verify(db,root,as_of)
+    db.execute('COMMIT')
     from .reports import render,package
     render(db,root,as_of,source,verification)
     package(root,as_of)

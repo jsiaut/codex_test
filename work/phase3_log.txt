@@ -1,3 +1,1 @@
 {"stage": "observations", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 0, "links": 0, "measures": 3210, "controls": 0, "exclusions": 17423}}
-{"stage": "graph", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 391, "links": 715, "measures": 3210, "controls": 0, "exclusions": 18263}}
-{"stage": "controls", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 391, "links": 715, "measures": 3210, "controls": 147104, "exclusions": 18263}}

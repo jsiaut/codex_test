@@ -258,7 +258,7 @@ def package(root,as_of):
             include=parts[0] in ['audit','tables','secfragility','tests'] and '__pycache__' not in parts
             include=include or len(parts)==1 and path.suffix in ['.md','.yaml','.sql','.csv','.json','.txt']
             include=include or parts[:2]==('work','observations')
-            include=include or str(rel) in ['work/expected_universe.json','work/annual_cutoffs.json','work/reading_progress.json','work/delivery_verification.json','work/pair_registry.json','work/annex_e_pair_outcomes.json','work/nonadditive_counts.json','backup/manifest.json']
+            include=include or str(rel) in ['work/expected_universe.json','work/annual_cutoffs.json','work/reading_progress.json','work/delivery_verification.json','work/pair_registry.json','work/annex_e_pair_outcomes.json','work/nonadditive_counts.json','backup/sec-project-2-20261009T150746Z.tar.zst.json','backup/sec-project-2-20261009T150746Z.tar.zst.sha256','work/observation_quarantines.json','work/fact_semantic_quarantines.json','work/exhibit_body_policy_overrides.json','work/parent_membership_evidence.json','work/entity_decisions.json','work/queue.json','work/run.json','work/inventory.json','work/collection.json','work/spcx_annual_validation.json','work/deprecations.json','work/concept_mappings.json']
             if include:z.write(path,rel)
     manifest=dict(as_of=as_of,archive=target.name,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size,
        repository='https://github.com/jsiaut/codex_test',independent_audit_performed=False)
