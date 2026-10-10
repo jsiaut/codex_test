@@ -1,0 +1,20 @@
+{
+  "authorized_at": "2026-10-10T06:35:26.868344+00:00",
+  "instruction": "On continue avec les notes complémentaires sur les investissements, dettes, baux, engagements et concentrations de clientèle",
+  "scope": [
+    "text"
+  ],
+  "components": [
+    "investments_note",
+    "debt_note",
+    "lease_note",
+    "commitments_note",
+    "concentration_narrative"
+  ],
+  "baseline_commit": "e05c077c7b6faba84537c546a77b67270ef040e5",
+  "source_as_of": "2026-10-09T10:24:21.129672+00:00",
+  "criteria_changed": false,
+  "other_extensions_opened": false,
+  "subagents_allowed": false,
+  "presented_yield": "user_brief_2.md"
+}

@@ -1,5 +1,18 @@
 user_agent: SEC_Project_2 quavas-s@hotmail.fr
-scope: first_pass
+scope:
+- text
+text_components:
+- investments_note
+- debt_note
+- lease_note
+- commitments_note
+- concentration_narrative
+scope_decision:
+  authorized_at: 2026-10-10T06:35:26.868344+00:00
+  user_instruction: "On continue avec les notes complémentaires sur les investissements, dettes, baux, engagements et concentrations de clientèle"
+  baseline_commit: e05c077c7b6faba84537c546a77b67270ef040e5
+  presented_yield: user_brief_2.md
+  other_text_components: not_opened
 window:
   start_fiscal_year: 2021
   include_interim: true
