@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='f55c68a958b8dc5b0ee87b96b5d6ed166185ef17971da6af0b6194f6d0ed1436'
+save(k,[tagged(k,0,'long-term accounts receivable, net of allowance for doubtful accounts, was $2.4 billion and $2.2 billion, respectively',block='exposed_assets',model_quantity='long_term_receivables',issuer_treatment='2.4HELDDec31_19Net_NotAutomaticallyConditionalOrNamedVendorFinancing'),dict(quote='As we did not hold derivative instruments requiring an adjustment upon adoption, there was no impact in our consolidated financial statements.',abstained=True,abstention_reason='Jul1_19HedgeGuidanceAdoptionNoAdjustment_NotFinancialCovenantF4OrInvestmentF6;CECLFutureJul1_20_NoPriorRecast')])

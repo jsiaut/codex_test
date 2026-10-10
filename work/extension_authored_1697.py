@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7658bd9ba9712a95fd80d0dbacd803d82583d21452d21b9b888d5f790b470ac9'
+save(k,[tagged(k,0,'As of December 31, 2019, we accrued aggregate legal liabilities of $319 million.',block='recognized_liabilities',category_id='loss_contingency',model_quantity='legal_contingency_accrual',issuer_treatment='319HELD_NotActualCash'),tagged(k,1,'adverse outcomes that we estimate could reach approximately $900 million in aggregate beyond recorded amounts are reasonably possible.',block='contingent_obligations',category_id='loss_contingency',model_quantity='legal_contingency_additional_possible_loss',issuer_treatment='900Beyond319Booked_NotFirmCommitmentOrUnconditionalTotal;ReasonablyPossible_NoSpecificPaymentDay')])
