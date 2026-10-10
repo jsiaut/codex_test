@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='94df4a8f098a8fdaa7d6db311bdd2314e0460f2d5943091e9f3a323b7dd3bc34'
+save(k,[dict(quote='Total face value',model_quantity='debt_face_carrying_FV_overlap_scope',issuer_treatment='Dec31_46207m_face40262m_netcarry_includes4837m_current35425m_noncurrent37300m_FV_same_positions_not_additive'),dict(quote='2026 (excluding the six months ended December 31, 2025)',model_quantity='fiscal_debt_maturity_bucket_scope',issuer_treatment='zero_principal_FY2026_REMAINDER_SIXmonths_not_zero_next12months_9250m_FY2027_not_calendar2027'),dict(quote='€4.1 billion',model_quantity='debt_issuance_currency_historical_scope',issuer_treatment='EUR2013_original_face_not_current_newcash_USD2701m_carrying_same_euro_notes_no_double_count')])

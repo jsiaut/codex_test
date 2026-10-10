@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='0fbdc8370c7014ce2dadba9b7e48c03cee8deebf09518a4b07606b789e6f6622'
+save(k,[dict(quote='Total undiscounted liabilities',model_quantity='lease_gross_PV_overlap_scope',issuer_treatment='Nov2_1725m_gross_less400m_interest1325m_PV_includes144m_current1181m_noncurrent_same_obligation_not_additive_mixed_facilities_land_data_centers'),tagged(k,3,'Cash paid for leases included in operating cash flows',model_quantity='lease_cash_paid',issuer_treatment='FY2025_277m_actualcash_not182m_expense_or220m_noncash_ROU_received'),dict(quote='impact of VMware leases acquired on November 22, 2023',model_quantity='acquired_lease_reporting_scope',issuer_treatment='2024_ROU1165m_includes_acquired_leases_not_cash_capex_or_organic_AI_buildout')])
