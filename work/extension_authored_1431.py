@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='1e886b6724d3ec2a88edfae22ef36523761bfe541a5ab31f5955e151703ec7a6'
+save(k,[tagged(k,0,'As of December 31, 2020, we accrued aggregate legal liabilities of $322 million.',block='recognized_liabilities',category_id='loss_contingency',model_quantity='legal_liabilities',issuer_treatment='322HELDDec31_20_NotCashPaid'),dict(quote='adverse outcomes that we estimate could reach approximately $500 million in aggregate beyond recorded amounts are reasonably possible.',abstained=True,abstention_reason='500 additional reasonably possible adverse outcomes beyond322accrued not fixed contractualcash. Claims deadline Sep23_21 not paymentmaturity; ordinary litigation not investmentimpairmentF6.')])
