@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='6904fbbc5460164d6973dd0ae40814d86de424f7df807dd4b0e51c45d2e0b9d1'
+save(k,[dict(quote='As of July 26, 2026, we complied with the required covenants under the outstanding notes.',period_end='2026-07-26',model_quantity='debt_covenant_compliance',issuer_treatment='outstanding_notes_covenants_compliant',trigger_occurred='no',instrument_key='NVDA_senior_notes_covenants'),dict(quote='As of July 26, 2026, our commercial paper program had a capacity of $25.0 billion, with no amounts outstanding.',period_end='2026-07-26',model_quantity='commercial_paper_outstanding_statement',instrument_key='NVDA_commercial_paper',issuer_treatment='commercial_paper_capacity_not_cash_or_committed_revolver')])
