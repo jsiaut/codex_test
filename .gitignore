@@ -22,3 +22,9 @@ work/MetaLinks.json
 work/spcx_blocks.json
 work/collection_progress.jsonl
 work/collection_errors.log
+
+*.duckdb.wal
+work/phase3_tables/
+work/phase3_log.txt
+
+work/expected_cells.ndjson

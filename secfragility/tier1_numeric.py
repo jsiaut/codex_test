@@ -87,6 +87,8 @@ def tagged_components(db,as_of):
            knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework,overlap_possible)
           SELECT 'exposure_matrix',f.group_id,q.start_date,q.end_date,'{view}',{stamp},
            'contractual_outflows|'||CASE WHEN EXISTS (SELECT 1 FROM eligible_instance_occurrences parent
+             JOIN disclosure_rules rule ON rule.accession=parent.accession AND rule.parent=parent.canonical_concept
+              AND rule.child=f.canonical_concept
              WHERE parent.accession=f.accession AND parent.model_quantity='lease_not_commenced'
               AND parent.dimensions=f.dimensions AND parent.period_end=f.period_end
               AND parent.mapping_evidence IS NOT NULL)

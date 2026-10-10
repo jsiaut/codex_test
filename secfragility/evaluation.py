@@ -39,12 +39,14 @@ def run(db,root,as_of):
                             elif known and statement in ('E2','E3'):
                                 # Annual power needs full-year same-basis coverage.
                                 metric='documented_revenue_dependency' if statement=='E2' else 'documented_backlog_dependency'
-                                years=rows(db,"SELECT status,value_lower,value_upper,nd_reason,period_end FROM measures WHERE measure=? AND group_id=? AND counterparty_id=? AND view=? AND period_start=? AND period_end=? AND financing_policy='exposure_outstanding'",[metric,g,c,view,a['period_start'],a['period_end']])
-                                for y in years:y['fiscal_year']=a['fiscal_year']
+                                years=rows(db,"SELECT status,value_lower,value_upper,nd_reason,period_end FROM measures WHERE measure=? AND group_id=? AND counterparty_id=? AND view=? AND period_end<=? AND financing_policy='exposure_outstanding' AND (knowledge_date IS NULL OR knowledge_date<=?::DATE)",[metric,g,c,view,a['period_end'],cutoff[:10]])
+                                annual_years={v['period_end']:v['fiscal_year'] for v in cutoffs if v['group_id']==g}
+                                years=[y for y in years if y['period_end'] in annual_years]
+                                for y in years:y['fiscal_year']=annual_years[y['period_end']]
                                 # First-pass annual numerators are unfilled rather
                                 # than composed from selected, high-only quarters.
                                 answer=dependency_outcome(years,Decimal(grid),criteria['E2'])
-                                outcome=answer['outcome'];reason=answer['reason'] or reason
+                                outcome=answer['outcome'];reason=(answer['reason'] or reason) if years else 'not_processed'
                             elif known and statement=='E4':
                                 fs=[e for e in pe if e['family']=='financing' and e['from_group_id']==g and (e['event_type'] in ('funding','drawdown') if basis=='payment' else e['stage'] in ('signed','available'))]
                                 ps=[e for e in pe if e['family']=='commercial' and e['from_group_id']==c and (e['event_type'] in ('payment','purchase') and e['stage']=='drawn_or_paid' if basis=='payment' else e['type']=='purchase_commitment')]

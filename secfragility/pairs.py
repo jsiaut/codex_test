@@ -53,7 +53,7 @@ def run(db,root,as_of,entities,observations,resolve):
              source_perspective='reporting_entity',accounting_framework='us_gaap',**extra)
         return base
     for q in u['quarters']:
-        if not q.get('in_analysis_window') or q['period_start']=='none':continue
+        if not q.get('in_analysis_window') or (q['period_start']=='none' or q['period_end']=='none'):continue
         g=q['group_id']
         for view in ('as_known','revised'):
             r=rev.get((g,q['period_start'],q['period_end'],view));cutoff=public.get((g,q['period_start'],q['period_end']),as_of) if view=='as_known' else as_of
@@ -73,7 +73,8 @@ def run(db,root,as_of,entities,observations,resolve):
                     insert(db,'measures',m)
                     candidates=[e for e in commercial if e['to_group_id']==g and e['from_group_id']==c and e['type']=='revenue_recognized'
                          and e['stage']=='recognized' and e['edge_kind']=='amount' and e['source_perspective']=='reporting_entity'
-                         and e.get('sales_channel')=='direct' and str(e.get('period_start'))==q['period_start'] and str(e.get('period_end'))==q['period_end']]
+                         and e.get('sales_channel')=='direct' and str(e.get('period_start'))==q['period_start'] and str(e.get('period_end'))==q['period_end']
+                         and any(o['observation_id']==e['observation_id'] and o['group_id']==g for o in observations)]
                     m=row('documented_revenue_dependency',g,c,q,view,financing_policy=policy,financing_state=state,
                           numerator_coverage='absent',denominator_coverage='complete' if r else 'absent')
                     if not candidates:m.update(nd_reason='empty_numerator',coverage_state='not_processed')
@@ -102,7 +103,7 @@ def run(db,root,as_of,entities,observations,resolve):
                 m=row('named_edge_coverage',g,'none',q,view,term=term,overlap_possible=True,visible_pairs_count=len({e.get('from_group_id') if e.get('to_group_id')==g else e.get('to_group_id') for e in visible}),denominator=r['value'] if r else None)
                 m['nd_reason']='named_anonymous_overlap_and_complete_attribution_not_established'
                 insert(db,'measures',m)
-            insert(db,'measures',row('investor_customer_revenue_share',g,'none',q,view,financing_policy='exposure_outstanding',nd_reason='empty_numerator') if False else dict(row('investor_customer_revenue_share',g,'none',q,view,financing_policy='exposure_outstanding'),nd_reason='empty_numerator'))
+            insert(db,'measures',dict(row('investor_customer_revenue_share',g,'none',q,view,financing_policy='exposure_outstanding'),nd_reason='empty_numerator'))
     (root/'work/pair_registry.json').write_text(json.dumps({'pairs':{g:sorted(v) for g,v in cp.items()},'names':cpnames},ensure_ascii=False,indent=2)+'\n')
     # Individual exposures remain separate by deposited basis and instrument.
     for e in edges:

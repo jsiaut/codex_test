@@ -7,11 +7,15 @@ from .database import insert
 
 def run(db,root,as_of):
     u=json.loads((root/'work/expected_universe.json').read_text())
-    quarters=[q for q in u['quarters'] if q.get('in_analysis_window') and q['period_start']!='none']
+    quarters=[q for q in u['quarters'] if q.get('in_analysis_window') and q['period_start']!='none' and q['period_end']!='none']
     collection=json.loads((root/'work/collection.json').read_text())
     obs=rows(db,'SELECT * FROM usable_observations');evidence=defaultdict(list)
     for o in obs:
         f=o.get('event_observable')
+        if not f and o.get('event_present') is False and o.get('model_quantity') in (
+             'annual_management_ICFR_effective','annual_management_ICFR_effectiveness','management_ICFR_effective',
+             'auditor_ICFR_effective','auditor_ICFR_effectiveness','annual_auditor_ICFR_effective'):
+            f='F5'
         if not f and o.get('trigger_occurred')=='yes' and o.get('family')=='credit_support':f='F3'
         if not f and o.get('event_type')=='amendment' and o.get('family') in ('financing','credit_support'):f='F4'
         if not f:continue

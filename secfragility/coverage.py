@@ -5,12 +5,11 @@ from .database import MEASURE_TERMS,sql_literal
 
 def run(db,root,as_of):
     u=json.loads((root/'work/expected_universe.json').read_text())
-    import pyarrow as pa
     cells=u['cells']
-    db.register('expected_cells_arrow',pa.Table.from_pylist(cells))
+    path=root/'work/expected_cells.ndjson'
+    path.write_text(''.join(json.dumps(c)+'\n' for c in cells))
     db.execute('''CREATE TEMP TABLE expected_cells AS SELECT measure,group_id,counterparty_id,period_start,period_end,
-                  view,term,breakdown_key FROM expected_cells_arrow''')
-    db.unregister('expected_cells_arrow')
+                  view,term,breakdown_key FROM read_json_auto('''+sql_literal(str(path))+''',format='newline_delimited')''')
     db.execute('''INSERT INTO measures (measure,group_id,counterparty_id,period_start,period_end,view,as_of,term,breakdown_key,
       status,nd_reason,coverage_state,financing_policy,financing_state,outcome)
       SELECT e.measure::measure_id_t,e.group_id,e.counterparty_id,e.period_start,e.period_end,e.view::view_t,?,e.term,e.breakdown_key,

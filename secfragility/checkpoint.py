@@ -56,7 +56,8 @@ def checkpoint(root: Path, *, force=False):
     staged = subprocess.run(
         ['git', 'diff', '--cached', '--quiet'], cwd=root, capture_output=True)
     if staged.returncode == 1:
-        command(root, 'git', 'commit', '-m', f"Checkpoint: {state['completed_unique_keys']} blocks read; phase 2 ongoing")
+        phase=json.loads((root/'work/run.json').read_text())['phase']
+        command(root, 'git', 'commit', '-m', f"Checkpoint: {state['completed_unique_keys']} blocks read; {phase} in progress")
     elif staged.returncode != 0:
         raise RuntimeError(staged.stderr.decode())
     commit = command(root, 'git', 'rev-parse', 'HEAD').stdout.strip()

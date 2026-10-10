@@ -60,6 +60,21 @@ def run(root,reconstruct=False):
     from .coverage import run as coverage
     coverage(db,root,as_of)
     print(json.dumps(dict(stage='coverage',counts=table_counts(db))),flush=True)
+    from .enrichment import run as enrichment
+    enrichment(db,as_of)
+    for g,data in json.loads((root/'work/inventory.json').read_text())['groups'].items():
+        db.execute("DELETE FROM measures WHERE group_id=? AND period_end!='none' AND period_end<?",[g,data['analysis_start']])
+    from .universe import DEPENDENCIES
+    import yaml
+    rank1=set(yaml.safe_load((root/'config.yaml').read_text())['tier1'])|DEPENDENCIES
+    db.execute('UPDATE measures SET tier=2 WHERE measure::VARCHAR NOT IN ('+','.join("'"+x+"'" for x in sorted(rank1))+')')
+    from .verify_delivery import run as verify
+    source,verification=verify(db,root,as_of)
+    from .reports import render,package
+    render(db,root,as_of,source,verification)
+    package(root,as_of)
+    state.update(phase='phase3',status='validated_ready_for_final_commit')
+    (root/'work/run.json').write_text(json.dumps(state,indent=2)+'\n')
     export(db,root/'work/phase3_tables')
     print(json.dumps(dict(stage='numeric',counts=table_counts(db))),flush=True)
     return db

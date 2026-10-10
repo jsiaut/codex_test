@@ -72,11 +72,26 @@ def assemble(db,root,as_of):
         records.append(row);index[norm].append(row)
     evidence=defaultdict(list)
     observations=rows(db,'SELECT * FROM usable_observations')
+    # A first-person transaction in the issuer's own filing can use the exact
+    # short form of that same legal name. This is local to that filing CIK;
+    # it never resolves a brand mentioned by another issuer.
+    own_short={r['entity_id']:re.sub(r'\s+(?:inc|corp|ltd)$','',r['normalized_name'])
+               for r in records if r.get('cik') and not r.get('alias_key')}
+    local_aliases=set()
     for o in observations:
         for field in ['counterparty','payer','receiver','ultimate_obligor']:
             name=o.get(field)
             if not name or name in inv['groups']:continue
             norm=normalize(name);j=jurisdiction(name,o['quote'])
+            if norm==own_short.get(o['entity_id']) and re.search(r'\b(?:we|our|us)\b',o['quote'],re.I):
+                key=(o['entity_id'],norm)
+                if key not in local_aliases:
+                    parent=next(r for r in records if r['entity_id']==o['entity_id'] and not r.get('alias_key'))
+                    records.append(dict(parent,alias=name,alias_key=digest(['local_issuer_name',name]),
+                        resolution_rule='exact_issuer_legal_name_short_form_first_person_same_filing_CIK',
+                        evidence_document_id=o['document_id'],evidence_locator=o['locator']))
+                    local_aliases.add(key)
+                continue
             evidence[(norm,j)].append((name,o))
     for (norm,j),mentions in sorted(evidence.items(),key=str):
         if norm in index:continue
@@ -92,6 +107,11 @@ def assemble(db,root,as_of):
         if not confirmed:exclusion(db,as_of,'pending_entity','entity',eid,entity_id=eid,counterparty_id=eid,
             detail='Name retained without alias, jurisdiction or consolidation guess.',coverage_state='unknown')
     for row in records:insert(db,'entities',row)
+    mrvl=next((o for o in observations if o.get('model_quantity')=='new_parent_subsidiary_structure_actual'),None)
+    if mrvl:
+        db.execute("UPDATE entities SET evidence_document_id=?,evidence_locator=?,knowledge_date=? WHERE group_id='MRVL' AND membership_start='2021-04-20'",[mrvl['document_id'],mrvl['locator'],mrvl['knowledge_date']])
+    for p in proof:
+        db.execute("UPDATE entities SET evidence_document_id=?,evidence_locator=?,knowledge_date=? WHERE group_id='AVGO' AND (membership_start=? OR membership_end=?)",[digest([p['url']]),p['locator'],p['knowledge_date'],p['legal_date'],p['legal_date']])
     def resolve(name,o):
         if not name:return None
         event=str(o.get('event_date') or o.get('period_end') or o['knowledge_date'])
@@ -99,7 +119,7 @@ def assemble(db,root,as_of):
             valid=[r for r in options if (not r.get('membership_start') or str(r['membership_start'])<=event)
                    and (not r.get('membership_end') or event<str(r['membership_end']))]
             return valid[0] if valid else options[0] if options else None
-        if name==o['group_id']:
+        if name==o['group_id'] or (normalize(name)==own_short.get(o['entity_id']) and re.search(r'\b(?:we|our|us)\b',o['quote'],re.I)):
             # Explicit author-supplied issuer shorthand, identified by the filing CIK.
             own=dated([r for r in records if r['entity_id']==o['entity_id'] and r.get('alias_key') is None])
             return own or issuer_by_group[o['group_id']]
