@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='67dd72bd3afa55971175324ab6cfc636e6513b9b2acff73bdcd8965c887f3767'
+save(k,[dict(quote='fulfillment network, data center, office, and physical store facilities',model_quantity='lease_perimeter_scope',issuer_treatment='Amazon_mixed_retail_logistics_data_center_assets_not_all_AI_or_AWS_only'),dict(quote='Gross lease liabilities',model_quantity='lease_gross_PV_overlap_scope',issuer_treatment='Dec31_gross121831m_op106914fin14917_vsPV101538m_op89252fin12286_current14199_subset_not_additive'),dict(quote='Gross assets acquired under finance leases',model_quantity='finance_lease_asset_stock_scope',issuer_treatment='55600m_gross_assets40400m_cum_amortization_stock_not_2025_cash_capex_20296m_total_lease_expense_not_cash_payment')])
