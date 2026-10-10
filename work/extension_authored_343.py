@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='13b57508e566585965523ecf13ab025ef778be0b01ea5c4d87d3e0e1dc6c4703'
+save(k,[tagged(k,36,'Restricted cash equivalents',model_quantity='restricted_cash_component',issuer_treatment='1704mRESTRICTED_EQ_IN44136mFVassets_total_NOTfreecash_4861marketEQ_anonymous_NOTallAI'),tagged(k,123,'Unrealized Losses',model_quantity='debt_investment_unrealized_loss',issuer_treatment='130mDEBTASSETUNREALIZED_not_creditF6_allowancecredit_IMMATERIAL_NOTzero_8355mFVlosspositions_BALANCE_NOTloss'),tagged(k,149,'unrealized losses on our marketable equity securities',model_quantity='public_equity_unrealized_loss',issuer_treatment='374mH1_511mQ2_UNREALIZED_ANONYMOUS_NOTcreditimpairment_isolatedF6_3388massetmaturityNOTissuerdebt_due')])

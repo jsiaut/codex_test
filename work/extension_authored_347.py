@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='e20c60a715fff0adee10c0aa2d07347b6d8e475c8c7a213705073b19c11ce860'
+save(k,[dict(quote='two reportable segments: Family of Apps (FoA) and Reality Labs (RL)',model_quantity='segment_reporting_scope',issuer_treatment='twoOperatingREPORTABLEsegments_NOseparateAI_compute_segment_FoAsocialmessaging_RLXR'),tagged(k,15,'Income from operations',model_quantity='family_of_apps_operating_income',issuer_treatment='46736mH1_24971mQ2_FoAmixed_NOTcompute_only_profit_employeeINnoncashSBC_otherINinfra_partnerlegal'),tagged(k,31,'Loss from operations',model_quantity='reality_labs_operating_loss',issuer_treatment='8739mH1_4530mQ2_RL_XR_loss_NOTAI_creditimpairment_F6_or_compute_margin')])

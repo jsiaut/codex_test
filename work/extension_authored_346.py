@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='e8eab8adeb6d23be07c69df58afe6f0fe12864e935fd727c3179fd22daeb0d17'
+save(k,[tagged(k,40,'Total deferred revenue was $876 million',model_quantity='deferred_revenue_balance',issuer_treatment='876mSTOCK_mostexpected<1year_NOT_AI_RPO_or_currentcash_paid_no_individualcustomer_shareHERE'),tagged(k,2,'Advertising',model_quantity='advertising_revenue_scope',issuer_treatment='87955mH1_46563mQ2_ADS_IN89048mFoA_89830mGROUP_NOTAI_compute_revenue_customerADDRESSgeo_not_individualconcentration')])
