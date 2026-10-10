@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='19382f9a94fb772d097a3145e0727b91cb7fa893264a62b3ed3835a21477bbf4'
+save(k,[tagged(k,30,'$89.9 billion and $75.9 billion of senior notes and other long-term borrowings and the related fair value hedges',model_quantity='own_borrowings_carrying_fair_value_disclosure',issuer_treatment='89.9bn_CARRY_INrelatedFVhedges_NOT79.9fairValue_ORisolatedAI'),dict(quote='all of our marketable debt securities investments mature within one year.',abstained=True,abstention_reason='The maturity statement concerns investment assets, not Oracle borrowings. Own borrowing fair value, market rates, derivatives and fair-value hierarchy do not identify counterparty AI credit impairment or a new primary funding transaction.')])
