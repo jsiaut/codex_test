@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='b0e70af5d9b32fad6c1e1ad0c1f3084ca051af790149f6cdfa2ac18c4db5b780'
+save(k,[tagged(k,42,'Publicly-held equity securities (1)',model_quantity='public_equity_holdings',issuer_treatment='Oct26_3869m_FV_stock_issuer_anon_not_namedCRWV_or_primarycash_received'),tagged(k,52,'$670 million and $2.4 billion',model_quantity='public_equity_unrealized_gain',issuer_treatment='nine2400m_Q670m_NET_unrealized_NONcash_not_F6_loss'),dict(quote='driven primarily by changes in interest rates',model_quantity='investment_loss_scope',issuer_treatment='AFSdebt_unrealized_mark1m_not_creditimpairment_F6_54952m_debtinvestments_not_own_debt_or_all_freecash')])

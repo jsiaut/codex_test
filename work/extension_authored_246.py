@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='ba62308788279ffa7ad8bc2151228cab4959fa0e779f44f7c2b89ba8f6f5436e'
+save(k,[dict(quote='one reportable segment',model_quantity='segment_scope',issuer_treatment='integratedcircuit_design_development_sale_allmarkets_not_separateAI_datacenter_profit'),dict(quote='including gain on sale of business',model_quantity='segment_profit_scope',issuer_treatment='CODM_consolidated_NETincome_nine2274m_Q1901.3m_includes_businessdisposal_gain_not_AI_operatingprofit_comparable_peers')])
