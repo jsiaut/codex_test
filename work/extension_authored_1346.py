@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='529d0b13fa97ec266368f19200c4263f812116a2a5fdfed1f30db8f9d864931a'
+save(k,[tagged(k,18,'$378 million',model_quantity='deferred_revenue_total',issuer_treatment='378mDEFMarch31_21_NotFirmRPOOrNewCash'),tagged(k,20,'$334 million of our deferred revenue to be realized in less than a year',model_quantity='deferred_revenue_recognition_next_twelve_months',issuer_treatment='334mNEXT12REVENUE_NotCash_FIRMtotalRPOunknown'),dict(quote='based on the addresses of our customers',abstained=True,abstention_reason='Customer-address geographic revenue is not ultimate end demand or individual customer concentration. Broad advertising/other revenue is not separate AI segment.')])
