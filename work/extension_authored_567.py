@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ffed5c0bae8c9f442c5ab9629d9ed9af78bd62859efdb457028d940bcaac4412'
+save(k,[tagged(k,1,'Semiconductor solutions | | | | | | $ | 7,274',model_quantity='segment_revenue',issuer_treatment='7.274bn_Q3FY24_ALLsemiconductors_INmobileStorageIndustrialNOTAIonly'),tagged(k,13,'Semiconductor solutions | | | | | | $ | 4,042',model_quantity='segment_operating_income',issuer_treatment='4.042bn_Q3FY24_SEMIprofit_EX4.160unallocated_NOTconsolAIprofit'),dict(quote='does not evaluate each segment using discrete asset information.',abstained=True,abstention_reason='No segment assets, individual customer concentration, or separate AI revenue is disclosed; broad semiconductor and software segments cannot identify a funded client.')])

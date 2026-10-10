@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='b32d4bd2abeb32cc51aabd9aa7827d0e0ddaa56a5014ebdd622b9616e45aa25f'
+save(k,[tagged(k,24,'non-marketable equity investments had a carrying value of $50.4 million and $45.8 million',model_quantity='nonmarketable_equity_held',issuer_treatment='50.4m_HELD_PRIVATE_NOT4.6mactualcashadd_NOT6.2publicsecurities'),dict(quote='estimated aggregate fair value of the unsecured senior notes was $3.4 billion',abstained=True,abstention_reason='Own senior-note fair value excludes the term loan and is not an asset credit loss. Unnamed private investments, treasury deposits, severance fund, and FX hedges do not establish primary funding to an identified AI client.')])
