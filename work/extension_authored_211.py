@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ad7b93fd3837f7c635460650cebb233b2f802e8f755474ef289ce3f222773256'
+save(k,[tagged(k,0,'One customer accounted for approximately 11% and another customer accounted for 24%',model_quantity='accounts_receivable_customer_concentration',amount_qualifier='approximately',issuer_treatment='11percent_Dec27_2025_AR_ANOTHER24percent_Dec28_2024_customer_unknown_different_text_despite_sameTopCustomerOne_tag_do_not_link_or_infer_revenue',flag_unknown_reason='customer_names_unknown'),dict(quote='no such counterparty has failed to meet its financial obligations',model_quantity='hedge_counterparty_default_status',issuer_treatment='historical_no_FX_hedge_counterparty_failure_not_guarantee_no_trade_AR_credit_loss')])

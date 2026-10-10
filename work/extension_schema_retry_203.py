@@ -1,0 +1,4 @@
+from extension_authoring import ROOT,tagged
+from secfragility.reader import store
+k='041c09ebc432194e8af95057402a3271833488ddf4e7d41af519f08470affa31'
+print(store(ROOT,k,[tagged(k,0,'maximum gross exposure is $4.1 billion',model_quantity='data_center_lease_guarantee_cap',category_id='guarantee',block='contingent_obligations',component_kind='guarantee_cap',family='credit_support',link_type='guarantee',conditionality='conditional',trigger_description='in the event of their default',trigger_occurred='unknown',issuer_treatment='subsequent_toDec27_partner_15year_lease_default_cap_reduced_by_partner_payments_OR_thirdparty_capacity_sales_not_called_cash_or_FV',flag_unknown_reason='commercial_partner_name_actual_agreement_day_and_trigger_occurrence_unknown_Feb3_tag_not_agreement_date')],schema_retry=True))
