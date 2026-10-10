@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='49825f4530fcc5147ce872a9a7e4d7fbf2ef13db02f58110c3068fd71907ab30'
+save(k,[tagged(k,6,'Total commitments',category_id='purchase_obligation',block='contractual_outflows',issuer_treatment='Sep27_12125m_MIXED_waferssubstrates_cloud_softwareIP_UNCOMMENCEDLEASES_INCLUDED_no_fivefamilydoublecount'),dict(quote='Remainder of 2025',model_quantity='commitment_period_scope',issuer_treatment='3778m_remainderFY25_THREEmonths_3960mFY26_NOT_next12months_notallAI_non_cancelor_significantpenalty')])

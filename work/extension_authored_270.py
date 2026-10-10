@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2f626d9459954f22c5adf79460b0fbfff073f28872d5bb4cfdc1bda8adbded5b'
+save(k,[dict(quote='combining the Client and Gaming segments',basis_break=True,recast_cause='segment_change',model_quantity='segment_basis_break',issuer_treatment='FY25threeinsteadfour_segments_priorretrospectiverecast_ClientGamingrevenue_still_separate_no_separateprofits'),tagged(k,3,'Data Center | | | $ | 4,341',model_quantity='datacenter_revenue',issuer_treatment='nine11255m_Q4341m_DC_mixedAI_CPU_GPU_FPGA_SmartNIC_NOT_allAI'),tagged(k,47,'Data Center | | | $ | 1,074',model_quantity='datacenter_operating_income',issuer_treatment='nine1851m_Q1074m_DC_segmentprofit_excludes_AllOther2925m_nine_intang1700mSBC1200m_not_AI_consolidatedprofit')])
