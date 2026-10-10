@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='53c3a322b655e9b3bd7a0269160cbcfa93a1c64cb7705009c94b0a4a94b19582'
+save(k,[tagged(k,0,'a $2.0 billion senior unsecured revolving credit facility',family='financing',link_type='loan_or_facility',stage='available',model_quantity='revolving_credit_facility_capacity',issuer_treatment='2UNDRAWNJun30_20_MaturityMay20_21NotDrawnPrincipalDue_2016May31TagNotSigningDay'),dict(quote='no amounts had been drawn down, and we were in compliance with the covenants',abstained=True,abstention_reason='UndrawnCapacityNotContractualOutflowOrDebtRepayment. ComplianceNotFinancialCovenantAmendmentF4. FutureDec24_20VoluntaryTerminationNotYetAtJuly31KnowledgeDate.')])

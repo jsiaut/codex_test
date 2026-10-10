@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='c6992a74d6e0e0b1bbcb069acda57041a4a9e8b42114f8d712626f11dabc5bb4'
+save(k,[tagged(k,26,'Net sales | | | $ | 8,381 | | | | | $ | 10,808',model_quantity='aws_segment_revenue',issuer_treatment='Q2CY20AWS10.808_IN21.027SIX_NotConsolidated88.912'),tagged(k,34,'Operating income | | | $ | 2,121 | | | | | $ | 3,357',model_quantity='aws_segment_operating_profit',issuer_treatment='Q2CY20AWS3.357_IN6.432SIX_UsageBasedAllocation'),dict(quote='The majority of technology infrastructure costs are allocated to the AWS segment based on usage.',abstained=True,abstention_reason='AWSAllocatedCostScope. NoNamedCustomerConcentrationOrSegmentAssetDisclosureHere. WholeCompanyEquityMethodLoss97NotSeparableInvestmentImpairmentF6.')])
