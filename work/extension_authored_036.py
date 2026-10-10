@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='5bc705eb20f239703d34e7db00ccc2a3aaa487291223e38a123ec18750370ea9'
+save(k,[dict(quote='The revenue allocated to remaining performance obligations does not include amounts which have an original expected duration of one year or less.',model_quantity='RPO_disclosure_scope',issuer_treatment='remaining_performance_obligations_only_original_contract_duration_over_one_year',flag_unknown_reason='not_all_customer_orders_not_recognized_revenue_named_amount_or_actual_customer_incentive_deduction')])

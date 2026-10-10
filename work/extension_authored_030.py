@@ -1,0 +1,4 @@
+from extension_authoring import save
+k='9d6a7a2e4cddf754cb307d18c48fd8721bc2a34026c8666d3817ad4734ff62c9'
+rows=[dict(quote="It is not possible to determine the maximum potential amount under these indemnification provisions due to the Company's limited history of prior indemnification claims and the unique facts and circumstances involved in each particular provision.",model_quantity='indemnification_maximum_exposure_uncertainty',block='contingent_obligations',category_id='indemnification',flag_unknown_reason='maximum_amount_not_estimable_no_zero_inferred_no_material_claims_to_date'),dict(quote='Any possible loss or range of loss in these matters cannot be reasonably estimated at this time.',model_quantity='litigation_loss_estimation_uncertainty',block='contingent_obligations',category_id='loss_contingency',flag_unknown_reason='securities_and_derivative_actions_losses_unestimable_no_material_accrual_not_zero_potential_exposure')]
+save(k,rows)

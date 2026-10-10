@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='35a9becbfbcac25a4bc0879fdfe8fbb723befc3e7f45b7ce8468b4fd2aab2868'
+save(k,[dict(quote='Certain amounts in prior period were reclassified to conform to current period presentation.',model_quantity='prior_period_reclassification_policy',issuer_treatment='conform_comparatives_to_current_presentation',recast_cause='presentation_reclassification',flag_unknown_reason='affected_quantities_not_identified_here_not_error_correction_or_restatement')])
