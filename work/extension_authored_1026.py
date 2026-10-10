@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='a686481da116beb2444a2895ba78da3dc319769a432751a0413991d186adc86a'
+save(k,[tagged(k,26,'3,364',model_quantity='recurring_fair_value_assets',issuer_treatment='3.364bn_MIXmoneyMarketTimeDepositCPDerivative_NotPrivateInvestment_ORallCash'),tagged(k,32,'166',block='recognized_liabilities',model_quantity='derivative_liability_total',issuer_treatment='166m_FV_NotNotional_ORcreditSupportCap'),dict(quote='the estimated fair values of the senior notes and other borrowings',abstained=True,abstention_reason='Own-borrowing market value is not a loss on an investee or a cash repayment. Recurring fair-value assets combine liquid securities and derivatives; no primary AI investment, named private investee or funding event is evidenced.')])
