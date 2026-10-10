@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='6095a47fdfac0ee7d86aa648f084899673e2740b055d0aeae336010555cb8553'
+save(k,[tagged(k,10,'14,496',model_quantity='cash_and_equivalents',issuer_treatment='14.496bn_EX43.579bnMarketable_Not58.075bnCashOnly'),tagged(k,24,'9,310',model_quantity='marketable_debt_assets_maturing_next_twelve_months',issuer_treatment='9.310bnASSETMat_NotOwnDebtOutflows'),dict(quote='The gross unrealized losses on our marketable securities were not material',abstained=True,abstention_reason='Marketable-security unrealized losses and credit allowance are immaterial and unquantified, not zero and not private-investment F6. Marketable debt maturities are held assets, not borrower principal repayments.')])
