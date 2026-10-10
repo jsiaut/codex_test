@@ -10,6 +10,9 @@ from .pairs import financed
 
 
 def run(db,root,as_of):
+    from .extension_assembly import opened
+    completed=bool(opened(root))
+    missing='complete_public_attribution_not_established' if completed else missing
     cfg=yaml.safe_load((root/'config.yaml').read_text());criteria=cfg['annex_e']
     cutoffs=json.loads((root/'work/annual_cutoffs.json').read_text())['annuals']
     registry=json.loads((root/'work/pair_registry.json').read_text())['pairs']
@@ -37,7 +40,7 @@ def run(db,root,as_of):
                         for basis in bases:
                             key=f'{statement}|grid={grid}|date_basis={basis}'
                             if not dated:key+='|unknown_fiscal_dates|FY'+str(a['fiscal_year'])
-                            reason=a.get('cutoff_reason') if not known else 'not_processed'
+                            reason=a.get('cutoff_reason') if not known else missing
                             outcome='indeterminate';status='not_determinable';value=None;lineage=[]
                             if known and statement=='E1':
                                 outcome=link_outcome(active=bool(active),linkage_classes=linked,search_complete=False)['outcome']
@@ -54,7 +57,7 @@ def run(db,root,as_of):
                                 # First-pass annual numerators are unfilled rather
                                 # than composed from selected, high-only quarters.
                                 answer=dependency_outcome(years,Decimal(grid),criteria['E2'])
-                                outcome=answer['outcome'];reason=(answer['reason'] or reason) if years else 'not_processed'
+                                outcome=answer['outcome'];reason=(answer['reason'] or reason) if years else missing
                             elif known and statement=='E4':
                                 fs=[e for e in pe if e['family']=='financing' and e['from_group_id']==g and (e['event_type'] in ('funding','drawdown') if basis=='payment' else e['stage'] in ('signed','available'))]
                                 ps=[e for e in pe if e['family']=='commercial' and e['from_group_id']==c and (e['event_type'] in ('payment','purchase') and e['stage']=='drawn_or_paid' if basis=='payment' else e['type']=='purchase_commitment')]
@@ -69,8 +72,8 @@ def run(db,root,as_of):
                             elif statement=='E6':outcome='descriptive'
                             m=dict(measure='annex_e_outcome',group_id=g,counterparty_id=c,period_start=a['period_start'],period_end=a['period_end'],
                                 view=view,as_of=cutoff,information_cutoff=known,variant='original' if known else 'cutoff_unresolved',breakdown_key=key,
-                                status=status,nd_reason=reason or 'not_processed' if status=='not_determinable' else None,
-                                coverage_state='not_processed' if status=='not_determinable' else 'observed',outcome=outcome,value=value,
+                                status=status,nd_reason=reason or missing if status=='not_determinable' else None,
+                                coverage_state=('unknown' if completed else 'not_processed') if status=='not_determinable' else 'observed',outcome=outcome,value=value,
                                 lineage=json.dumps(lineage),financing_policy='exposure_outstanding',financing_state='active' if active else 'unknown')
                             if lineage:m['knowledge_date']=max(e['knowledge_date'] for e in pe if e['link_id'] in lineage)
                             results.append(m)
@@ -85,7 +88,7 @@ def run(db,root,as_of):
     e7=[]
     for (g,c,s),rs in collapsed.items():
         outcome='supported' if any(r['outcome']=='supported' for r in rs) else 'refuted' if s=='E2' and all(r['outcome']=='refuted' for r in rs) else 'indeterminate'
-        e7.append(dict(group_id=g,counterparty_id=c,statement=s,outcome=outcome,reason='not_processed' if outcome=='indeterminate' else None))
+        e7.append(dict(group_id=g,counterparty_id=c,statement=s,outcome=outcome,reason=missing if outcome=='indeterminate' else None))
     (root/'work/annex_e_pair_outcomes.json').write_text(json.dumps(e7,indent=2)+'\n')
 
     bulk_insert(db,'measures',results,root,'evaluation')

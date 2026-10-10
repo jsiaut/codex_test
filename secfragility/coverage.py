@@ -4,6 +4,8 @@ from .database import MEASURE_TERMS,sql_literal
 
 
 def run(db,root,as_of):
+    from .extension_assembly import opened
+    completed=bool(opened(root))
     u=json.loads((root/'work/expected_universe.json').read_text())
     cells=u['cells']
     path=root/'work/expected_cells.ndjson'
@@ -32,6 +34,10 @@ def run(db,root,as_of):
          OR e.measure='fragility_event' AND m.breakdown_key=split_part(e.breakdown_key,'|',1)
          OR e.measure='exposure_matrix' AND m.breakdown_key LIKE split_part(e.breakdown_key,'|',1)||'|'||split_part(e.breakdown_key,'|',2)||'|%'||split_part(e.breakdown_key,'|',3)||'|%'
          OR e.measure='annex_e_outcome' AND starts_with(m.breakdown_key,split_part(e.breakdown_key,'|',1)||'|'||split_part(e.breakdown_key,'|',2)||'|'||split_part(e.breakdown_key,'|',3))))''',[as_of])
+    if completed:
+        db.execute("""UPDATE measures SET nd_reason='public_attribution_or_complete_terms_not_established',coverage_state='unknown'
+          WHERE nd_reason='not_processed' AND measure NOT IN ('documented_path','sig_distress_8k_items',
+          'sig_auditor_change_or_nonreliance','form_d_offering_amount','bdc_fv_to_cost','bdc_pik_share','bdc_non_accrual_share')""")
     # Every observed recast boundary remains an explicit excluded calculation,
     # not an invisible hole in the growth/difference series.
     db.execute('''INSERT INTO exclusions (exclusion_id,group_id,accession,element_type,element_id,reason,detail,coverage_state,period_start,period_end,as_of)

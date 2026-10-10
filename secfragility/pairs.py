@@ -24,7 +24,8 @@ def financed(edges,s,c,q,quarters,cutoff,policy='exposure_outstanding'):
     for e in eligible:
         d=str(e.get('event_date') or e.get('period_end') or '')
         qualifies=(e.get('edge_kind')=='amount' and e.get('family')=='financing' and e.get('stage')=='drawn_or_paid'
-          and e.get('event_type') in ('funding','drawdown') and e.get('currency') and e.get('unit')==e.get('currency')
+          and e.get('event_type') in ('funding','drawdown') and e.get('currency')
+          and e.get('unit') in (e.get('currency'),'http://www.xbrl.org/2003/iso4217:'+e.get('currency',''))
           and e.get('type')!='noncash_investment' and e.get('amount') is not None and e['amount']>0)
         # Recognized consideration needs the issuer's actual GAAP recognition;
         # a signed maximum warrant grant does not qualify.
@@ -33,12 +34,15 @@ def financed(edges,s,c,q,quarters,cutoff,policy='exposure_outstanding'):
         if qualifies and not e.get('event_date') and e.get('period_start') and left and str(e['period_start'])<=left:
             qualifies=False  # Do not assign a straddling annual flow to its closing day.
         if qualifies and d and d<=q['period_end'] and (policy=='ever_financed' or left and d>left):return 'active'
-    # Current investment notes are not processed in the first pass. No lapse
-    # or absence can be inferred from a censored cash history.
+    # An incomplete or unconfirmed financing history cannot establish absence.
     return 'unknown'
 
 
 def run(db,root,as_of,entities,observations,resolve):
+    from .extension_assembly import opened
+    completed=bool(opened(root))
+    missing='public_attribution_or_complete_terms_not_established' if completed else 'not_processed'
+    missing_state='unknown' if completed else 'not_processed'
     pending=[]
     def emit(db,table,row):pending.append(row)
     u=json.loads((root/'work/expected_universe.json').read_text());inv=json.loads((root/'work/inventory.json').read_text())
@@ -57,7 +61,7 @@ def run(db,root,as_of,entities,observations,resolve):
     def row(metric,g,c,q,view,**extra):
         base=dict(measure=metric,group_id=g,counterparty_id=c,period_start=q['period_start'],period_end=q['period_end'],
              view=view,as_of=as_of,information_cutoff=public.get((g,q['period_start'],q['period_end']),as_of) if view=='as_known' else as_of,
-             status='not_determinable',nd_reason='not_processed',coverage_state='not_processed',
+             status='not_determinable',nd_reason=missing,coverage_state=missing_state,
              source_perspective='reporting_entity',accounting_framework='us_gaap',**extra)
         return base
     for q in u['quarters']:
@@ -87,7 +91,7 @@ def run(db,root,as_of,entities,observations,resolve):
                          and any(o['observation_id']==e['observation_id'] and o['group_id']==g for o in observations)]
                     m=row('documented_revenue_dependency',g,c,q,view,financing_policy=policy,financing_state=state,
                           numerator_coverage='absent',denominator_coverage='complete' if r else 'absent')
-                    if not candidates:m.update(nd_reason='empty_numerator',coverage_state='not_processed')
+                    if not candidates:m.update(nd_reason='empty_numerator',coverage_state=missing_state)
                     elif not r:m['nd_reason']='missing_revenue_denominator'
                     elif state!='active':m['nd_reason']='financing_state_unknown'
                     elif len(candidates)!=1:m.update(status='blocked_overlap',coverage_state='unknown',nd_reason='attribution_overlap_not_resolved')
@@ -101,7 +105,7 @@ def run(db,root,as_of,entities,observations,resolve):
                     m.update(status='computed',nd_reason=None,coverage_state='observed',lineage=json.dumps([e['link_id'] for e in candidates]+(json.loads(r['lineage']) if r else [])))
                     emit(db,'measures',m)
                 m=row('contract_coverage',g,c,q,view)
-                if pe:m.update(status='partial',nd_reason='not_processed',coverage_state='observed',lineage=json.dumps([e['link_id'] for e in pe]),knowledge_date=max(e['knowledge_date'] for e in pe))
+                if pe:m.update(status='partial',nd_reason='complete_contract_terms_not_established' if completed else 'not_processed',coverage_state='observed',lineage=json.dumps([e['link_id'] for e in pe]),knowledge_date=max(e['knowledge_date'] for e in pe))
                 emit(db,'measures',m)
                 for metric in ['counterparty_exposure','consideration_to_customer','noncash_revenue_from_investees']:
                     m=row(metric,g,c,q,view,wrong_way=bool(commercial and fund))
@@ -125,7 +129,7 @@ def run(db,root,as_of,entities,observations,resolve):
             emit(db,'measures',dict(measure='counterparty_exposure',group_id=o['group_id'],counterparty_id=e['to_entity_id'] if e['from_group_id']==o['group_id'] else e['from_entity_id'],
                 period_start=str(o['period_start'] or o['period_end'] or o['event_date']),period_end=str(o['period_end'] or o['event_date']),view=view,as_of=as_of,
                 breakdown_key='|'.join([o['block'],o.get('category_id') or 'unspecified',o['measurement_basis'],o.get('instrument_key') or e['link_id']]),
-                variant=e['link_id'],value=e['amount'],unit=e['unit'],currency=e['currency'],status='partial',nd_reason='not_processed',coverage_state='observed',
+                variant=e['link_id'],value=e['amount'],unit=e['unit'],currency=e['currency'],status='partial',nd_reason='complete_contract_terms_not_established' if completed else 'not_processed',coverage_state='observed',
                 knowledge_date=e['knowledge_date'],lineage=json.dumps([e['link_id']]),evidence_profile=json.dumps([e['tier']]),wrong_way=None,
                 source_perspective=o['source_perspective'],accounting_framework=o['accounting_framework']))
 

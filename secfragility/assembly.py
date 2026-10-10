@@ -42,13 +42,21 @@ def load(db,root,as_of):
                     content_key=key,accession=by_key[key][0]['accession'],
                     detail=r['phase']+': '+r['error'],raw_line=json.dumps(r['raw_line'],ensure_ascii=False),coverage_state='unknown')
     # The collection's structural exclusions are never re-labelled absences.
-    for filename in ['work/block_exclusions.json','work/section_exclusions.json']:
+    recovered_bounds=root/'work/extension_html_bounds.json'
+    recovered=json.loads(recovered_bounds.read_text()) if recovered_bounds.exists() else []
+    recovered_accessions={r['accession'] for r in recovered
+        if any(q['accession']==r['accession'] and q['content_key'] in valid_keys for q in queue)}
+    for filename in ['work/block_exclusions.json','work/section_exclusions.json','work/extension_exclusions.json']:
         p=root/filename
         if p.exists():
             for rank,r in enumerate(json.loads(p.read_text())):
+                if r.get('content_key',r.get('element')) in valid_keys:
+                    continue  # This formerly excluded block has now been read.
+                if filename=='work/extension_exclusions.json' and r.get('reason')=='parse_failed' and r.get('accession') in recovered_accessions:
+                    continue  # Explicitly bounded HTML notes recovered and read.
                 exclusion(db,as_of,r.get('reason','not_processed'),'source_scope',filename+':'+str(rank),
                     group_id=r.get('group'),accession=r.get('accession'),content_key=r.get('content_key'),
-                    detail=json.dumps(r,ensure_ascii=False),coverage_state='not_processed')
+                    detail=json.dumps(r,ensure_ascii=False),coverage_state=r.get('reason') if r.get('reason') in ('parse_failed','policy_excluded') else 'not_processed')
     policies={}
     for filename in ['work/observation_quarantines.json','work/exhibit_body_policy_overrides.json']:
         p=root/filename
@@ -63,7 +71,9 @@ def load(db,root,as_of):
                     locator=f"rawbytes:{r['raw_byte_start']}:{r['raw_byte_end']}",detail=json.dumps(r,ensure_ascii=False),coverage_state='policy_excluded')
     db.execute('CREATE TEMP TABLE excluded_observations (observation_id VARCHAR PRIMARY KEY,reason VARCHAR)')
     if policies:db.executemany('INSERT INTO excluded_observations VALUES (?,?)',[(k,v['reason']) for k,v in policies.items()])
-    db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM observations o
+    from .extension_assembly import interpretations, opened
+    interpretations(db,root,as_of)
+    db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM interpreted_observations o
       WHERE NOT abstained AND tier IN ('A','B','C','D') AND filing_status='filed'
        AND EXISTS (SELECT 1 FROM documents d WHERE d.document_id=o.document_id
         AND d.acceptance_datetime IS NOT NULL AND d.acceptance_datetime<=o.as_of)
@@ -86,9 +96,10 @@ def load(db,root,as_of):
         oid,g,acc,fid=row
         exclusion(db,as_of,'conflicting_tagged_reference','observation',oid,group_id=g,accession=acc,
                   detail='Dependent amount, attribution, link and event excluded; deposited fact '+fid+' remains unchanged.',coverage_state='conflicting')
-    # Fixed first-pass scope leaves the other note families for the extension.
+    # Only unopened families remain outside the user's authorized extension.
     for g in sorted(json.loads((root/'work/inventory.json').read_text())['groups']):
         for family in ['investments_note','debt_note','lease_note','commitments_note','concentration_narrative']:
+            if family in opened(root):continue
             exclusion(db,as_of,'not_processed','note_family',g+':'+family,group_id=g,
                       detail='First-pass scope; extension not opened.',coverage_state='not_processed')
         exclusion(db,as_of,'not_public','securitization_detail',g,group_id=g,

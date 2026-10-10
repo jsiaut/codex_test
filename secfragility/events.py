@@ -6,6 +6,8 @@ from .database import insert
 
 
 def run(db,root,as_of):
+    from .extension_assembly import opened
+    completed=bool(opened(root))
     u=json.loads((root/'work/expected_universe.json').read_text())
     quarters=[q for q in u['quarters'] if q.get('in_analysis_window') and q['period_start']!='none' and q['period_end']!='none']
     collection=json.loads((root/'work/collection.json').read_text())
@@ -17,7 +19,8 @@ def run(db,root,as_of):
              'auditor_ICFR_effective','auditor_ICFR_effectiveness','annual_auditor_ICFR_effective'):
             f='F5'
         if not f and o.get('trigger_occurred')=='yes' and o.get('family')=='credit_support':f='F3'
-        if not f and o.get('event_type')=='amendment' and o.get('family') in ('financing','credit_support'):f='F4'
+        # F4 is a financial-covenant amendment/waiver, not an ordinary amendment
+        # to a loan, commercial contract or guarantee. The reading must say F4.
         if not f:continue
         if f=='F6' and o['model_quantity']!='investment_impairment':
             exclusion(db,as_of,'event_definition_mismatch','event',o['observation_id'],group_id=o['group_id'],
@@ -32,7 +35,10 @@ def run(db,root,as_of):
                    detail='A shared controls content key does not establish the state for another reporting date.',coverage_state='unknown')
                 continue
         q=next((q for q in quarters if q['group_id']==o['group_id'] and q['period_start']<=d<=q['period_end']),None)
-        if q:evidence[(q['group_id'],q['period_start'],q['period_end'],f)].append(o)
+        if q:
+            if f=='F6' and not o.get('event_date') and o.get('period_start') and str(o['period_start'])<q['period_start']:
+                continue  # A positive cumulative loss does not date it to Q3/Q4.
+            evidence[(q['group_id'],q['period_start'],q['period_end'],f)].append(o)
     public={(g,str(s),str(e)):str(t) for g,s,e,t in db.execute('SELECT * FROM quarter_cutoffs').fetchall()}
     ms=rows(db,"SELECT * FROM measures WHERE measure IN ('capex_to_cfo','revenue_growth','investment_impairment','fcf_after_counterparty_financing')")
     by=defaultdict(list)
@@ -43,7 +49,7 @@ def run(db,root,as_of):
             for f in ['F'+str(i) for i in range(1,11)]:
                 key=(g,s,e,f);valid=[o for o in evidence[key] if cutoff and str(o['knowledge_date'])<=cutoff[:10]]
                 base=dict(measure='fragility_event',group_id=g,period_start=s,period_end=e,view=view,as_of=as_of,
-                    information_cutoff=cutoff,breakdown_key=f,status='not_determinable',nd_reason='not_processed',coverage_state='not_processed',unit='event')
+                    information_cutoff=cutoff,breakdown_key=f,status='not_determinable',nd_reason='explicit_dated_event_not_established' if completed else 'not_processed',coverage_state='unknown' if completed else 'not_processed',unit='event')
                 if valid:
                     affirmative=[o for o in valid if o.get('event_present') or f in ('F3','F4')]
                     base.update(value=1 if affirmative else 0,status='computed',nd_reason=None,coverage_state='observed' if affirmative else 'explicit_zero',

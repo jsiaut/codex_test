@@ -18,7 +18,7 @@ def run(db,root,as_of):
     # Numeric lineage resolves to immutable facts, authored observations, links
     # or official metadata documents; bad evidence is localized, never set 0.
     facts={r['fact_id']:r for r in rows(db,'SELECT fact_id,document_id,accession,locator,is_tagged,tier,filing_status,currency,unit,accounting_framework,source_perspective,entity_id,reporting_scope FROM facts')}
-    obs={r['observation_id']:r for r in rows(db,'SELECT observation_id,document_id,accession,locator,tier,filing_status,currency,unit,accounting_framework,source_perspective,entity_id,abstained FROM observations')}
+    obs={r['observation_id']:r for r in rows(db,'SELECT observation_id,document_id,accession,locator,tier,filing_status,currency,unit,accounting_framework,source_perspective,entity_id,abstained,tagged_fact_id FROM observations')}
     links={r['link_id']:r for r in rows(db,'SELECT * FROM links')}
     docs={r['document_id']:r for r in rows(db,'SELECT * FROM documents')}
     blocked={r[0] for r in db.execute('SELECT observation_id FROM excluded_observations').fetchall()}
@@ -28,7 +28,9 @@ def run(db,root,as_of):
         if k in seen:return []
         seen.add(k)
         if k in facts:return [dict(facts[k],source_id=k,source_kind='fact')]
-        if k in obs:return [dict(obs[k],source_id=k,source_kind='observation',is_tagged=False)]
+        if k in obs:
+            o=obs[k];f=facts.get(o.get('tagged_fact_id'))
+            return [dict(o,source_id=k,source_kind='observation',is_tagged=bool(f and f['is_tagged']))]
         if k in links:
             l=links[k]
             if l.get('observation_id'):return source(l['observation_id'],seen)

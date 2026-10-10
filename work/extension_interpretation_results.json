@@ -5,7 +5,10 @@
     "affected_quantity": "DCSP_note_receivable",
     "decision": "exclude_vie_unconsolidated_category_attribution_keep_gross_receivable_and_setoff",
     "reason": "The DCSP lender/borrower arrangement is disclosed, but this block does not establish a VIE. category_id was assigned incorrectly in the accepted authoring. Raw observation is append-only and preserved; downstream classification must omit vie_unconsolidated.",
-    "assembly_status": "pending_phase3"
+    "assembly_status": "applied",
+    "matched_observations": [
+      "bfa72517b92202f4fd37a6b4a57df0ba107e361488a5d62c18d5a2f9dc63e8f5"
+    ]
   },
   {
     "content_key": "9761ca668dd4767a2d48a6ef758ba5a62a5149e8e3e2c551c3995c36c1cde600",
@@ -13,7 +16,10 @@
     "affected_quantity": "sig_covenant_events",
     "decision": "exclude_F4_ordinary_revolver_replacement_keep_capacity_and_signing",
     "reason": "October 2024 agreement replaces a prior facility on substantially the same terms; no financial covenant amendment or waiver is disclosed. Raw accepted observation is preserved; later interpretation of the same transaction must not classify the ordinary replacement as F4.",
-    "assembly_status": "pending_phase3"
+    "assembly_status": "applied",
+    "matched_observations": [
+      "7df8e19d3ebdc65cd4968fe2e9aa5e9638673124ecb6ab7795495b7ba50526f1"
+    ]
   },
   {
     "content_key": "9761ca668dd4767a2d48a6ef758ba5a62a5149e8e3e2c551c3995c36c1cde600",
@@ -21,7 +27,10 @@
     "affected_quantity": "sig_covenant_events",
     "decision": "exclude_F4_voluntary_debt_facility_termination_keep_termination_unknown_execution_day",
     "reason": "The actual termination of an own-debt revolver does not disclose amendment or waiver of a financial covenant. A by-date is not an execution date and the prior 682m stock is not proof of exact repayment cash.",
-    "assembly_status": "pending_phase3"
+    "assembly_status": "applied",
+    "matched_observations": [
+      "9c56418c9987c18ef14d120a8423685d79a09a61f56fded845c4630bbfe18fa3"
+    ]
   },
   {
     "content_key": "9761ca668dd4767a2d48a6ef758ba5a62a5149e8e3e2c551c3995c36c1cde600",
@@ -32,7 +41,11 @@
     "affected_quantity": "contractual_outflows",
     "decision": "exclude_undrawn_capacity_from_contractual_outflows_keep_available_liquidity",
     "reason": "Undrawn borrowing limits are available resources, not payments owed; fees and actual drawn balances are different quantities.",
-    "assembly_status": "pending_phase3"
+    "assembly_status": "applied",
+    "matched_observations": [
+      "24827424ca3bf66888af7ebcd0ec154e2e5dea24848260a2f07099da7cc8f539",
+      "7df8e19d3ebdc65cd4968fe2e9aa5e9638673124ecb6ab7795495b7ba50526f1"
+    ]
   },
   {
     "content_key": "23b21455ebaca1c879586cc81b000458dca18cc5309add09b90651f2a213e6fb",
@@ -40,7 +53,10 @@
     "affected_quantity": "contract_assets",
     "decision": "preserve_conditional_right_to_consideration_remove_unconditional_word_from_interpretation",
     "reason": "The source distinguishes a contract asset conditional on a condition other than time from an unconditional receivable. Accepted issuer_treatment contains a contradictory UNCONDITIONAL word; preserve raw observation, use the exact source definition in downstream assembly.",
-    "assembly_status": "pending_phase3"
+    "assembly_status": "applied",
+    "matched_observations": [
+      "e2c959c9d18edbcd152245fadc5ad0c43786372646c3ee2ee904275097659015"
+    ]
   },
   {
     "content_key": "e480d43f619f5a506321951ae71f99d07e8c1626bfa05185dbf4b39a110f8bf5",
@@ -48,13 +64,19 @@
     "affected_quantity": "derivative_liability",
     "decision": "classify_535_as_gross_derivative_liability_use_candidate_375_for_500_balance_sheet_amount",
     "reason": "Candidate 373 is 535m gross liabilities; the authored treatment describes 500m after 35m balance-sheet offset. Preserve raw 535m observation; downstream use candidate 375 for the 500m presented liability, with 203m further legal setoff, 2m cash and 263m noncash collateral giving 32m residual. Immediate attribution correction, no source re-estimate.",
-    "assembly_status": "pending_phase3"
+    "assembly_status": "applied",
+    "matched_observations": [
+      "e8327a1a012104ec961438dbbe39607020760d14e1a8e9ebed6b0d26b40cb2cd"
+    ]
   },
   {
     "content_key": "57540cb0fc2431e05aaa78bd9eec0e73d381cbc857685e30a83faa538cee9632",
     "affected_quantity": "own_convertible_debt_fair_value",
     "decision": "correct_comparator_treatment_to_86_principal_84_net_preserve_693_fair_value",
     "reason": "The 693m fair value is correct. The newly authored issuer_treatment mistakenly cites 69m principal and 66m net; debt block 92de4ed2f61376c322ec73775b1116bf93579f00fef4a114b3cae9bd62175ed4 explicitly reports 86m principal and 84m net at July 30, 2017. Keep raw observation unchanged; correct only the interpretation. No change to amount.",
-    "assembly_status": "pending_phase3"
+    "assembly_status": "applied",
+    "matched_observations": [
+      "d3268d60fcf0898fccf18a16ac260bca61abf62a73bd5d3739b8a3e93bfcfe14"
+    ]
   }
 ]

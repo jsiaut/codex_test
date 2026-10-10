@@ -1,0 +1,184 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "tables": {
+    "documents": 6706,
+    "facts": 616302,
+    "observations": 6475,
+    "entities": 408,
+    "links": 715,
+    "measures": 241225,
+    "controls": 147844,
+    "exclusions": 18276
+  },
+  "rank1_by_status": {
+    "not_determinable": 173671,
+    "computed": 34672,
+    "partial": 1165
+  },
+  "rank1_by_reason": {
+    "missing_admissible_terms": 10453,
+    "not_processed": 118204,
+    "empty_numerator": 27208,
+    "named_anonymous_overlap_and_complete_attribution_not_established": 1344,
+    "missing_compatible_consecutive_quarters": 194,
+    "dated_explicit_control_or_going_concern_state_not_established": 787,
+    "short_term_principal_not_included": 72,
+    "fiscal_calendar_not_established": 5832,
+    "historical_filer_category_or_fiscal_dates_unestablished": 10670,
+    "short_term_debt_and_other_components_not_established": 72
+  },
+  "controls_by_status": {
+    "ok": 145193,
+    "not_testable": 2625,
+    "mismatch": 26
+  },
+  "controls_by_id": {
+    "c1_balance_components": {
+      "ok": 1610,
+      "not_testable": 93,
+      "mismatch": 1
+    },
+    "c2_cash_flow_components": {
+      "ok": 1554,
+      "not_testable": 28,
+      "mismatch": 2
+    },
+    "c3_cash_reconciliation": {
+      "not_testable": 350,
+      "ok": 34
+    },
+    "c4_restatement_detection": {
+      "ok": 137268,
+      "not_testable": 13
+    },
+    "c5_bilateral": {
+      "not_testable": 718
+    },
+    "c6_income_articulation": {
+      "ok": 242
+    },
+    "c7_cash_continuity": {
+      "not_testable": 26,
+      "ok": 289,
+      "mismatch": 1
+    },
+    "c8_debt_rollforward": {
+      "not_testable": 258
+    },
+    "c9_lease_liability": {
+      "ok": 169,
+      "not_testable": 168
+    },
+    "c10_maturity_sums": {
+      "ok": 419,
+      "not_testable": 24
+    },
+    "c11_segments": {
+      "ok": 312,
+      "not_testable": 83
+    },
+    "c12_revenue_disaggregation": {
+      "not_testable": 620,
+      "ok": 721
+    },
+    "c13_rpo": {
+      "ok": 218
+    },
+    "c14_eps_scale": {
+      "ok": 402,
+      "mismatch": 9,
+      "not_testable": 108
+    },
+    "c15_tax_rate": {
+      "not_testable": 130,
+      "ok": 154,
+      "mismatch": 13
+    },
+    "c16_concentration": {
+      "ok": 1801,
+      "not_testable": 6
+    }
+  },
+  "exclusions_by_reason": {
+    "category_assignment_not_explicit_in_this_contractual_disclosure": 3,
+    "conflicting_tagged_reference": 13,
+    "direction_not_established": 122,
+    "event_definition_mismatch": 2,
+    "financial_parties_only": 214,
+    "net_proceeds_993_5_vs_independent_offer_price_992_35_unresolved": 1,
+    "not_processed": 16024,
+    "not_public": 11,
+    "pending_entity": 369,
+    "policy_excluded": 1104,
+    "primary_cash_and_exact_event_date_not_established": 1,
+    "relation_without_admissible_amount": 359,
+    "same_issue_literal_million_vs_billion_unresolved": 1,
+    "source_period_not_established": 1,
+    "validation_failed": 51
+  },
+  "reading": {
+    "as_of": "2026-10-09T10:24:21.129672+00:00",
+    "active_unique_keys": 1304,
+    "completed_unique_keys": 1304,
+    "remaining_unique_keys": 0,
+    "accepted_observations": 6475,
+    "completed_occurrences_by_class": {
+      "item404": 166,
+      "related_parties": 31,
+      "going_concern": 220,
+      "controls": 219,
+      "8k_item": 457,
+      "exhibit": 237
+    },
+    "validation_rejected_attempts_by_phase": {
+      "semantic": 27,
+      "schema": 24
+    },
+    "updated_at": "2026-10-10T01:36:44.778939+00:00",
+    "read_packet_logging_started_2026_10_09": true,
+    "independent_audit_performed": false
+  },
+  "network": {
+    "max_requests_in_rolling_second": 5,
+    "sec_limit_respected": true,
+    "pipeline_rate_respected": true,
+    "pause_violations": [],
+    "requests": 6980,
+    "bytes_received": 2099232340
+  },
+  "annex_e_pair_outcomes": {
+    "indeterminate": 656
+  },
+  "annex_e7_ratio": "1",
+  "invariants": {
+    "eight_tables": true,
+    "no_value_for_ND": true,
+    "ND_reason": true,
+    "amount_edge_admissible": true,
+    "no_pending_amount_edges": true,
+    "no_guarantee_only_financed": true,
+    "control_reasons": true,
+    "not_supported_search_incomplete": true,
+    "no_nonfinancial_F6": true,
+    "expected_cells_present": true,
+    "no_generalized_accounting_failure": true,
+    "criteria_frozen": true
+  },
+  "amount_edges": 10,
+  "documented_financing_pairs": 1,
+  "annex_e7_primary_reasons": {
+    "not_processed": 656
+  },
+  "recorded_coverage_conditions": {
+    "anonymous_observations": 1257,
+    "sales_channels": {},
+    "redacted_exclusions": 0,
+    "not_processed_exclusions": 17128,
+    "parse_failed_exclusions": 0,
+    "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"
+  },
+  "elapsed_wall_seconds_since_first_sec_request": "54769.752073",
+  "offline_reproduction_verified": true,
+  "tests_passed": 76,
+  "independent_audit_performed": false
+}

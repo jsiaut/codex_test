@@ -1,0 +1,9 @@
+{
+  "observation_count": 17029,
+  "accepted_amounts": 9412,
+  "quantity_count": 3187,
+  "missing_document_count": 0,
+  "missing_fact_count": 0,
+  "missing_document_ids": [],
+  "missing_fact_ids": []
+}

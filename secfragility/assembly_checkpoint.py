@@ -6,7 +6,9 @@ from .calculation import prepare_views
 AUX=['quarter_candidates','quarter_cutoffs','snapshot_stocks_as_known','snapshot_stocks_revised',
      'ttm_quantities_as_known','ttm_quantities_revised','excluded_observations']
 INPUTS=['config.yaml','schema.sql','queries.sql','work/run.json','work/observation_quarantines.json',
-        'work/fact_semantic_quarantines.json','work/exhibit_body_policy_overrides.json']
+        'work/fact_semantic_quarantines.json','work/exhibit_body_policy_overrides.json',
+        'work/extension_authorization.json','work/extension_attribution_reviews.json',
+        'work/expected_universe.json']
 
 
 def inputs(root):
@@ -28,7 +30,9 @@ def resume(root,as_of):
     for t in TABLES:db.execute('INSERT INTO '+t+' BY NAME SELECT * FROM read_parquet('+sql_literal(str(path/(t+'.parquet')))+')')
     prepare_views(db,root,as_of)
     for t in AUX:db.execute('CREATE TEMP TABLE '+t+' AS SELECT * FROM read_parquet('+sql_literal(str(path/(t+'.parquet')))+')')
-    db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM observations o
+    from .extension_assembly import interpretations
+    interpretations(db,root,as_of)
+    db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM interpreted_observations o
       WHERE NOT abstained AND tier IN ('A','B','C','D') AND filing_status='filed'
        AND EXISTS (SELECT 1 FROM documents d WHERE d.document_id=o.document_id AND d.acceptance_datetime<=o.as_of)
        AND NOT EXISTS (SELECT 1 FROM excluded_observations q WHERE q.observation_id=o.observation_id)

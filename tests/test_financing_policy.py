@@ -24,3 +24,12 @@ def test_future_publication_noncash_and_zero_do_not_establish_cash_financing():
 def test_pending_relation_and_repayment_are_not_new_financing():
     assert state(dict(BASE,edge_kind='relation'))=='unknown'
     assert state(dict(BASE,event_type='repayment'))=='unknown'
+
+
+def test_xbrl_currency_unit_establishes_the_same_cash_financing():
+    assert state(dict(BASE,unit='http://www.xbrl.org/2003/iso4217:USD'))=='active'
+    assert state(dict(BASE,unit='http://www.xbrl.org/2003/instance:shares'))=='unknown'
+
+
+def test_cumulative_flow_crossing_lookback_is_not_dated_to_its_closing_day():
+    assert state(dict(BASE,event_date=None,period_start='2025-01-01',period_end='2026-03-31'))=='unknown'

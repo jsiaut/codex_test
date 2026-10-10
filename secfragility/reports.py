@@ -27,6 +27,8 @@ def number_id(value):
 
 
 def render(db,root,as_of,source,verification):
+    from .extension_assembly import opened
+    extension=bool(opened(root))
     export(db,root/'tables')
     freeze_manifest(root);network=network_review(root)
     cfg=yaml.safe_load((root/'config.yaml').read_text());audit=root/'audit';audit.mkdir(exist_ok=True)
@@ -122,9 +124,9 @@ Les horizons de dépôt suivent les instructions du 10-K et Exchange Act Rule 0-
     if not events:event_md+='\nAucun événement affirmatif calculable ; les cellules non calculables et leurs motifs figurent dans les séries.'
     manifest=json.loads((audit/'criteria_manifest.json').read_text())
     configcommit=subprocess.check_output(['git','log','-1','--format=%H','--','config.yaml'],cwd=root,text=True).strip()
-    header=f'''# Premier passage — fragilité financière et relations documentées
+    header=f'''# Fragilité financière et relations documentées
 
-Situation des sources arrêtée au {as_of}. Périmètre : `first_pass` ; aucune extension de texte ou découverte ouverte.
+Situation des sources arrêtée au {as_of}. Périmètre : {'extension des cinq familles de notes autorisée ; découverte non ouverte' if extension else '`first_pass` ; aucune extension de texte ou découverte ouverte'}.
 
 Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `{manifest['original_commit']}` ; commit courant de config.yaml : `{configcommit}`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
 
@@ -171,15 +173,15 @@ Les plafonds et garanties publiés rendent certaines relations visibles sans pro
 
 {e7motif_md}
 
-Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {json.dumps(coverage_flags,ensure_ascii=False)}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. La concentration anonyme reste provisoire tant que son texte environnant n’est pas traité ; les non-déposants ne sont pas dénombrés par supposition.
+Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {json.dumps(coverage_flags,ensure_ascii=False)}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
 
 Les critères E sont confrontés aux paires et aux exercices dans measures.parquet, même pour les cellules vides. Les chemins de l’extension restent non déterminables, motif not_processed ; ils ne sont pas comptés comme inexistants.
 
 ## Exclusions et évolution
 
-Les motifs principaux sont publiés dans delta.md et audit/exclusions.csv. Les notes d’investissements, de dette, de baux, d’engagements et le texte de concentration hors tranche restent not_processed. Les dates limites, identités, précisions et bases non établies restent visibles. Aucun comparatif exclu ni contrat signé ne remplit un versement ou un revenu manquant.
+Les motifs principaux sont publiés dans delta.md et audit/exclusions.csv. Les cinq familles de notes autorisées sont lues et assemblées. Les autres textes et la découverte gardent leur état de couverture propre. Les dates limites, identités, précisions et bases non établies restent visibles. Aucun comparatif exclu ni contrat signé ne remplit un versement ou un revenu manquant.
 
-Ce premier rendu ne compare pas à une livraison antérieure : les valeurs nouvelles sont une base initiale. Les changements internes entre dépôts sont conservés par le contrôle de retraitement, avec leur cause connue ou inconnue. Les lectures et leur validation sont conservées pour les reprises.
+La comparaison avec le premier passage figure dans notes_complementaires.md. Les changements internes entre dépôts sont conservés par le contrôle de retraitement, avec leur cause connue ou inconnue. Les lectures et leur validation sont conservées pour les reprises.
 '''
     synthesis=header+'\n\n'.join(group_sections)+'\n\n'+circular
     (root/'synthesis.md').write_text(synthesis);(audit/'synthesis.md').write_text(synthesis)
@@ -241,7 +243,7 @@ Réseau : {json.dumps(maskednetwork,ensure_ascii=False)}. Durée calendaire depu
 
 ## Modifications et contrôles
 
-Aucune livraison antérieure validée n’existe : aucun changement inter-exécutions n’est imputé à tort à une nouvelle information. Les retraitements entre dépôts se lisent dans C4. Les observations originales restent inchangées ; les corrections de portée et de dépendance numérique passent par exclusions. Les critères E et F ne changent pas.
+Cette extension utilise le même arrêt des sources que le premier passage ; ses changements viennent de la lecture complémentaire et de l’assemblage. Les retraitements entre dépôts se lisent dans C4. Les observations originales restent inchangées ; les corrections de portée et de dépendance numérique passent par exclusions. Les critères E et F ne changent pas.
 
 {control_md}
 
@@ -255,7 +257,7 @@ Registre complet : {json.dumps(na,ensure_ascii=False)}. Paires sans candidat dan
 
 Les chiffres indicatifs de l’annexe D ne sont jamais importés. Les divergences de source, notamment montant nominal, coupon, prix net, date juridique et périmètre combiné, restent dans les exclusions ou les observations. Les séries annuelles de SpaceX qui échouent aux contrôles restent exclues. Les bases de liquidité incomplètes portent partial ou ND. Le dossier n’a pas reçu d’audit indépendant.
 
-Le texte hors tranche reste non traité ; l’extension ne s’ouvre que sur décision explicite après cette livraison. Le dépôt, les observations et la sauvegarde du cache permettent une reprise sans nouvelle lecture des blocs terminés.
+Les cinq familles de notes autorisées sont traitées ; la découverte, les prêteurs et les autres extensions ne sont pas ouverts. Le dépôt, les observations et la sauvegarde du cache permettent une reprise sans nouvelle lecture des blocs terminés.
 '''
     (root/'delta.md').write_text(delta)
     (root/'series.md').write_text('''# Séries temporelles
@@ -266,7 +268,7 @@ Lire delta.md d’abord, puis synthesis.md. Les références et les termes de ch
 ''')
     simple_status={'computed':'calculée ou état de couverture établi','partial':'partielle','not_determinable':'indéterminée','blocked_overlap':'chevauchement non résolu','not_applicable':'sans objet'}
     simple_table='| Résultat des cellules prioritaires | Nombre |\n| --- | ---: |\n'+'\n'.join(f'| {simple_status.get(k,k)} | {v} |' for k,v in sorted(rank_status.items()))
-    (root/'user_brief_2.md').write_text(f'''# Second point de contrôle
+    (root/('work/first_pass_brief_template.md' if extension else 'user_brief_2.md')).write_text(f'''# Second point de contrôle
 
 Le premier passage est livré. La file contient {progress['completed_unique_keys']} blocs uniques traités et aucune lecture restante. Le dépôt conserve les observations, les huit tables et le cache sauvegardé ; les rendus sont générés depuis les tables.
 
@@ -292,16 +294,87 @@ Installer requirements.txt. Restaurer le cache depuis la sauvegarde LFS et son m
 
 Le travail est régulièrement commité et poussé. L’exécution finale porte un commit distinct ; les points de sauvegarde intermédiaires ne valent pas livraison. Les sources API sauvegardées ne sont pas supposées reproductibles depuis EDGAR à une date ultérieure.
 ''')
+    if extension:
+        extension_render(db,root,as_of,data)
     return data
+
+
+def extension_render(db,root,as_of,data):
+    """A separate delivery preserves the original first-pass brief/archive."""
+    from .extension_assembly import FAMILIES
+    components=rows(db,'SELECT * FROM usable_observations WHERE amount IS NOT NULL ORDER BY group_id,period_end,accession,observation_id')
+    csv_write(root/'notes_components.csv',components)
+    reviews=json.loads((root/'work/extension_interpretation_results.json').read_text())
+    baseline=json.loads((root/'work/extension_baseline_summary.json').read_text())
+    queue=json.loads((root/'work/queue.json').read_text())
+    labels=dict(investments_note='Investissements',debt_note='Dettes',lease_note='Baux',
+                commitments_note='Engagements',concentration_narrative='Concentrations de clientèle')
+    family_rows=[]
+    for family in FAMILIES:
+        keys={q['content_key'] for q in queue if q['block_class']==family}
+        family_rows.append(f"| {labels[family]} | {len(keys)} | {sum((root/'work/observations'/(k+'.jsonl')).exists() for k in keys)} |")
+    counts='| Table | Premier passage | Après extension |\n| --- | ---: | ---: |\n'+'\n'.join(
+        f"| {name} | {baseline['tables'].get(name,0)} | {count} |" for name,count in data['tables'].items())
+    corrections='| Décision | Observations concernées | État |\n| --- | ---: | --- |\n'+'\n'.join(
+        f"| {r['decision']} | {len(r['matched_observations'])} | {r['assembly_status']} |" for r in reviews)
+    report=f'''# Notes complémentaires — investissements, dettes, baux, engagements et clientèle
+
+Sources arrêtées au {as_of}, comme au premier passage. Les critères et seuils restent ceux engagés avant la collecte. La lecture est terminée : {data['reading']['completed_unique_keys']} blocs uniques dans la file complète, aucune lecture restante.
+
+| Famille ouverte | Blocs uniques | Blocs lus |
+| --- | ---: | ---: |
+{chr(10).join(family_rows)}
+
+Les comptes ci-dessus sont propres à chaque famille : un même texte peut apparaître dans plusieurs familles. Ils ne s’ajoutent pas au total de blocs uniques.
+
+Les notes permettent de distinguer des montants que les seuls états principaux rapprochent mal : coût et juste valeur d’investissement, dette nominale et valeur comptable nette, passif locatif actualisé et paiements futurs bruts, capacité de crédit disponible et somme effectivement tirée. Le fichier notes_components.csv conserve chaque montant admissible avec son unité, sa période, sa condition, sa citation et son emplacement SEC. Les observations originales restent dans les tables et le journal de lecture, y compris les abstentions.
+
+Les engagements d’achat, les baux non commencés et les garanties conditionnelles restent séparés. Une échéance publiée pour le reste d’un exercice ne constitue pas automatiquement un horizon de douze mois. Un plafond de financement ou un montant signé ne prouve pas un versement. Les composants publiés séparément dans la matrice portent partial lorsqu’une addition ou un rapprochement n’est pas établi ; ils ne forment aucun total global d’exposition.
+
+Le texte de concentration distingue le revenu d’un client du solde de ses créances, et les ventes directes des distributeurs ou des intégrateurs. Les pourcentages anonymes gardent leur période et leur unité : aucune identité de client ni continuité entre exercices n’est déduite de leur ressemblance. Les revenus de marché spécialisé et de cloud conservent leur périmètre publié ; leur classement dans les séries de ventilation ne les transforme pas en secteur opérationnel autonome.
+
+Les remplacements ordinaires de facilité et les résiliations volontaires documentées ne deviennent pas des événements F4. Les pertes cumulées d’investissement ne sont pas attribuées au seul dernier trimestre sans date ou période compatible. Sept décisions d’attribution sont tracées ci-dessous et dans work/extension_interpretation_results.json ; elles corrigent l’interprétation d’assemblage sans réécrire les lectures.
+
+{corrections}
+
+La conclusion sur la dépendance financière reste celle enregistrée par paire dans synthesis.md et measures.csv. Une identité juridique non confirmée, un versement non établi ou un revenu client non attribuable laisse le résultat indéterminé. La lecture complète des cinq familles ne ferme pas la recherche dans les autres documents : la découverte, les prêteurs, les documents étrangers et les autres extensions restent hors du périmètre ouvert. Aucun ratio ne démontre à lui seul une demande artificielle.
+
+{counts}
+
+Les huit tables, le contrôle des cellules attendues et les invariants de livraison sont dans le dossier d’audit. Les conflits comptables locaux restent publiés ; aucune absence n’est convertie en zéro. Le travail a été effectué sans sous-agent et aucun audit indépendant n’est revendiqué. Le premier point de contrôle user_brief_2.md et son archive sont conservés séparément.
+'''
+    (root/'notes_complementaires.md').write_text(report)
+    brief=f'''# Point d’étape — notes complémentaires terminées
+
+La lecture des investissements, dettes, baux, engagements et concentrations de clientèle est terminée. Les {data['reading']['completed_unique_keys']} blocs de la file complète sont traités ; les huit tables et les séries ont été recalculées au même arrêt des sources ({as_of}).
+
+Les résultats distinguent les financements versés des plafonds disponibles, les passifs locatifs des paiements futurs et les engagements fermes des garanties conditionnelles. Les concentrations de créances et de revenu restent distinctes. Sept corrections d’attribution sont documentées, avec conservation des observations d’origine.
+
+Les montants non attribuables à une identité confirmée ou à une période compatible restent indéterminés. La lecture ne suffit donc pas à démontrer une dépendance ou une circularité pour toutes les paires. Aucun score ni total global d’exposition n’est produit.
+
+Lire notes_complementaires.md pour le périmètre, les changements et les limites ; synthesis.md pour les résultats par groupe et paire. notes_components.csv fournit les montants et leurs sources. Les vérifications sont dans audit/ et work/delivery_verification.json. Le premier passage reste conservé. Travail réalisé sans sous-agent ; aucun audit indépendant.
+'''
+    (root/'user_brief_extension.md').write_text(brief)
+    (root/'README.md').write_text('''# SEC_Project_2
+
+Extension des cinq familles de notes v6.14 livrée. Lire [user_brief_extension.md](user_brief_extension.md), [notes_complementaires.md](notes_complementaires.md), puis [synthesis.md](synthesis.md). Les montants individuels et leurs sources figurent dans notes_components.csv ; les huit tables sont dans tables/ et les vérifications dans audit/. Le premier passage reste conservé dans user_brief_2.md et l’historique Git.
+
+Les critères et l’arrêt des sources restent inchangés. Les autres extensions et la découverte ne sont pas ouverts. Aucun montant absent n’est remplacé par zéro, aucun total global d’exposition ni score n’est produit. Aucun audit indépendant n’est revendiqué.
+
+Installer requirements.txt et restaurer le cache LFS. python -m secfragility.phase3 assemble depuis les documents, faits et observations conservés ; --reconstruct reconstruit les faits depuis le cache. Ces commandes ne demandent aucune nouvelle requête SEC ni appel de modèle. Les observations et les décisions d’attribution sont nécessaires à la reproduction. Les sauvegardes intermédiaires sont distinctes du commit de livraison.
+''')
 
 
 def package(root,as_of):
     output=Path('/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output');output.mkdir(parents=True,exist_ok=True)
-    for name in ['synthesis.md','delta.md','user_brief_2.md','delivery_summary.json']:
+    from .extension_assembly import opened
+    extension=bool(opened(root))
+    names=['synthesis.md','delta.md','delivery_summary.json'] + (['user_brief_extension.md','notes_complementaires.md'] if extension else ['user_brief_2.md'])
+    for name in names:
         shutil.copy2(root/name,output/name)
     replay=root/'work/idempotency_verification.json'
     if replay.exists():shutil.copy2(replay,output/replay.name)
-    target=output/'SEC_Project_2_premier_passage.zip'
+    target=output/('SEC_Project_2_notes_complementaires.zip' if extension else 'SEC_Project_2_premier_passage.zip')
     with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for path in sorted(root.rglob('*')):
             rel=path.relative_to(root);parts=rel.parts
@@ -311,6 +384,7 @@ def package(root,as_of):
             include=include or parts[:2]==('work','observations')
             include=include or str(rel) in ['work/idempotency_verification.json','work/reproduction_inputs.json']
             include=include or str(rel) in ['work/expected_universe.json','work/annual_cutoffs.json','work/reading_progress.json','work/delivery_verification.json','work/pair_registry.json','work/annex_e_pair_outcomes.json','work/nonadditive_counts.json','backup/sec-project-2-20261009T150746Z.tar.zst.json','backup/sec-project-2-20261009T150746Z.tar.zst.sha256','work/observation_quarantines.json','work/fact_semantic_quarantines.json','work/exhibit_body_policy_overrides.json','work/parent_membership_evidence.json','work/entity_decisions.json','work/queue.json','work/run.json','work/inventory.json','work/collection.json','work/spcx_annual_validation.json','work/deprecations.json','work/concept_mappings.json']
+            include=include or parts[0]=='work' and len(parts)==2 and path.name.startswith('extension_') and path.suffix=='.json'
             if include:z.write(path,rel)
     manifest=dict(as_of=as_of,archive=target.name,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size,
        repository='https://github.com/jsiaut/codex_test',independent_audit_performed=False)

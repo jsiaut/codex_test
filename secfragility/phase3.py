@@ -13,6 +13,8 @@ def run(root,reconstruct=False,resume=False):
     queue=json.loads((root/'work/queue.json').read_text())
     assert all((root/'work/observations'/(r['content_key']+'.jsonl')).exists() for r in queue),'Phase2 queue not empty'
     state.update(phase='phase3',status='assembling');(root/'work/run.json').write_text(json.dumps(state,indent=2)+'\n')
+    from .extension_assembly import extend_universe
+    extend_universe(root)
     if resume:
         from .assembly_checkpoint import resume as restore
         db=restore(root,as_of);db.execute('BEGIN TRANSACTION')
@@ -61,9 +63,11 @@ def run(root,reconstruct=False,resume=False):
     liquidity_and_leases(db,as_of)
     from .numeric_extended import run as numeric
     numeric(db,as_of)
+    from .extension_assembly import components
+    components(db,root,as_of)
     from .metadata_signals import run as signals
     signals(db,root,as_of)
-    db.execute('UPDATE measures SET information_cutoff=as_of,as_of=?',[as_of])
+    db.execute('UPDATE measures SET information_cutoff=COALESCE(information_cutoff,as_of),as_of=?',[as_of])
     from .bilateral import run as bilateral
     bilateral(db,as_of)
     from .pairs import run as pairs
