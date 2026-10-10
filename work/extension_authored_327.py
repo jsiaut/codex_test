@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='9488bfa4deb6be35ea7de77aa7bb5cf107b86e0f1ea02105044853c2c9d7f0ab'
+save(k,[tagged(k,12,'87% and 90%',model_quantity='long_lived_asset_geographic_concentration',issuer_treatment='87pct_June30_US_PPEandOperatingROU_PHYSICALlocation_NOT_revenuecustomer_concentration_revenueCONTRACTcustomeraddress_not_compute_enduser')])
