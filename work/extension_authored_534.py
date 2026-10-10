@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='5ca7111fbaa56b0722089b258eb36d6d221c55514196b8cb5c5c49f213931c28'
+save(k,[tagged(k,6,'Accrued property and equipment | | | 2,312',model_quantity='capital_expenditure_accrual',issuer_treatment='2.312bn_PPEpayable_HELD_NOTnewcash_ORseparatepurchasecommitment'),dict(quote='Includes accruals for estimated fines, settlements, or other losses in connection with legal and related matters, as well as other legal fees.',abstained=True,abstention_reason='7.480bn legal accrual and mixed 5.705bn other liabilities do not identify AI credit support, supplier financing, or credit losses; employee and tax balances remain outside those categories.')])
