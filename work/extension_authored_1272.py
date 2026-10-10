@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='34737c620de0e40dca36db59cb75b3be33009711be867fd6dc11dc0c81a07ddc'
+save(k,[tagged(k,0,'902',model_quantity='fx_forward_notional_designated',issuer_treatment='902mNOTIONAL_HEDGE_NotGuarCapOrCash'),tagged(k,2,'423',model_quantity='fx_forward_notional_nondesignated',issuer_treatment='423mNOTIONAL_NOND_HEDGE_NotCreditSupportCap'),dict(quote='The fair value of the contracts was not significant',abstained=True,abstention_reason='FX-forward notionals902m/423m are not current liabilities, private funding, guarantee caps or F6. Unquantified immaterial fair value and next12 expected hedge gains/losses are not numerical zero.18-month maturities cannot be treated as twelve months.')])
