@@ -32,3 +32,6 @@ work/expected_cells.ndjson
 work/*_bulk.jsonl
 
 work/assembly_checkpoint/
+
+work/replay_reference/
+work/replay_spill/

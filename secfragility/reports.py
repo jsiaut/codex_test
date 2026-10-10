@@ -194,6 +194,17 @@ Ce premier rendu ne compare pas à une livraison antérieure : les valeurs nouve
     (root/'delivery_summary.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,default=str)+'\n')
     table_status='| Statut rang 1 | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in sorted(rank_status.items()))
     reason_status='| Motif | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in rank_reasons.most_common())
+    fstates=Counter((m['breakdown_key'],m['status'],m['nd_reason'] or '—') for m in series if m['measure']=='fragility_event' and m['view']=='as_known')
+    fstatus_md='| Observable | Statut | Motif | Cellules temporelles |\n| --- | --- | --- | ---: |\n'+'\n'.join(f'| {k[0]} | {k[1]} | {k[2]} | {v} |' for k,v in sorted(fstates.items()))
+    pair_metrics={'documented_revenue_dependency','investor_customer_revenue_share','named_edge_coverage','documented_pair_coverage','customer_concentration_anonymous','documented_backlog_dependency','consideration_to_customer','noncash_revenue_from_investees','contract_coverage'}
+    pstates=Counter((m['measure'],m['status'],m['nd_reason'] or '—') for m in series if m['measure'] in pair_metrics and m['view']=='as_known')
+    pstatus_md='| Mesure de relation / couverture | Statut | Motif | Cellules temporelles |\n| --- | --- | --- | ---: |\n'+'\n'.join(f'| {k[0]} | {k[1]} | {k[2]} | {v} |' for k,v in sorted(pstates.items()))
+    named_md='| Fournisseur | Dernière période | Part | Ratio | Dénominateur publié | Statut / motif |\n| --- | --- | --- | ---: | ---: | --- |'
+    for g in sorted(inv['groups']):
+        candidates=[m for m in series if m['measure']=='named_edge_coverage' and m['view']=='as_known' and m['group_id']==g and m['period_end']!='none']
+        latest=max((m['period_end'] for m in candidates),default=None)
+        for m in sorted((m for m in candidates if m['period_end']==latest),key=lambda m:(m['term'],m['variant'])):
+            named_md+=f"\n| {g} | {latest} | {m['term']} | {fnum(m['value'])} | {fnum(m['denominator'])} | {m['status']} / {m['nd_reason'] or '—'} |"
     exclusion_md='| Motif d’exclusion | Lignes |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in exclusion_reasons.most_common())
     queue=json.loads((root/'work/queue.json').read_text());classes=Counter(r['block_class'] for r in queue);items=Counter(r.get('item') or 'non renseigné' for r in queue if r['block_class']=='8k_item')
     maskednetwork={k:v for k,v in network.items() if k!='pause_violations'}
@@ -207,6 +218,16 @@ Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage li
 {table_status}
 
 {reason_status}
+
+Les tableaux suivants comptent des cellules et leurs états dans la vue as_known ; ils ne somment ni les événements ni les montants. Toutes les périodes et variantes figurent dans series.csv.
+
+{fstatus_md}
+
+{pstatus_md}
+
+Couverture nommée, anonyme et résiduelle par fournisseur, au dernier point fiscal :
+
+{named_md}
 
 Paires à financement de montant documenté : {data['documented_financing_pairs']}. Arêtes de montant : {data['amount_edges']}. Les couvertures nommée, anonyme et résiduelle restent au niveau du fournisseur dans les séries.
 
@@ -243,17 +264,21 @@ La feuille series.csv publie toutes les mesures de rang 1, les dépendances requ
 
 Lire delta.md d’abord, puis synthesis.md. Les références et les termes de chaque chiffre figurent dans audit/numbers.csv. Les tables Parquet conservent les décimales exactes.
 ''')
+    simple_status={'computed':'calculée ou état de couverture établi','partial':'partielle','not_determinable':'indéterminée','blocked_overlap':'chevauchement non résolu','not_applicable':'sans objet'}
+    simple_table='| Résultat des cellules prioritaires | Nombre |\n| --- | ---: |\n'+'\n'.join(f'| {simple_status.get(k,k)} | {v} |' for k,v in sorted(rank_status.items()))
     (root/'user_brief_2.md').write_text(f'''# Second point de contrôle
 
 Le premier passage est livré. La file contient {progress['completed_unique_keys']} blocs uniques traités et aucune lecture restante. Le dépôt conserve les observations, les huit tables et le cache sauvegardé ; les rendus sont générés depuis les tables.
 
-Les comptes balisés permettent de publier des séries de revenu, flux, investissement et certains composants d’exposition. Les conditions des contrats ne donnent souvent pas le financement effectif ou le revenu par client. La part indéterminée des issues E1 et E2 au point de tête est {fnum(e7ratio)}. Ce résultat tient d’abord à la tranche bornée et aux bases non attribuables ; il ne démontre aucune des deux lectures.
+Les comptes permettent de publier des séries de revenu, de trésorerie et d’investissement, ainsi que certains composants des engagements. Les conditions des contrats ne donnent souvent pas les versements effectifs ou le revenu par client. Les questions de dépendance restent indéterminées pour les paires examinées. Ce résultat tient d’abord au périmètre limité et aux montants qui ne peuvent pas être attribués ; il ne démontre aucune des deux lectures.
 
-{table_status}
+{simple_table}
 
 Les événements sont datés et documentés, sans score. Les contradictions et éléments hors tranche restent visibles. L’audit indépendant n’est pas effectué puisque le travail a été réalisé sans sous-agent.
 
-Une extension pourrait surtout résoudre les motifs not_processed : notes courantes d’investissements, de dette, de baux et d’engagements, puis texte de concentration. Elle ne rendrait pas publics les montants caviardés ou les comptes des non-déposants. Aucune extension n’est ouverte à ce stade ; votre décision explicite est requise par §11.1.
+Une extension chercherait surtout dans les notes courantes d’investissements, de dette, de baux et d’engagements, puis dans le texte de concentration des clients. Elle pourrait établir des financements ou des revenus aujourd’hui non traités. Elle ne rendrait pas publics les montants masqués ou les comptes des sociétés qui ne les déposent pas.
+
+Cette extension demanderait de nouvelles mesures de volume, une lecture personnelle et un nouveau calcul. Son volume et sa durée ne sont pas encore chiffrés ; les octets ne permettent pas d’estimer honnêtement le temps de lecture. Les documents déjà conservés et les blocs déjà lus seraient réutilisés. Le suivi quotidien reste limité au premier passage tant que vous n’avez pas décidé de l’étendre.
 ''')
     (root/'README.md').write_text('''# SEC_Project_2
 
@@ -274,6 +299,8 @@ def package(root,as_of):
     output=Path('/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output');output.mkdir(parents=True,exist_ok=True)
     for name in ['synthesis.md','delta.md','user_brief_2.md','delivery_summary.json']:
         shutil.copy2(root/name,output/name)
+    replay=root/'work/idempotency_verification.json'
+    if replay.exists():shutil.copy2(replay,output/replay.name)
     target=output/'SEC_Project_2_premier_passage.zip'
     with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for path in sorted(root.rglob('*')):
@@ -282,6 +309,7 @@ def package(root,as_of):
             include=parts[0] in ['audit','tables','secfragility','tests'] and '__pycache__' not in parts
             include=include or len(parts)==1 and path.suffix in ['.md','.yaml','.sql','.csv','.json','.txt']
             include=include or parts[:2]==('work','observations')
+            include=include or str(rel) in ['work/idempotency_verification.json','work/reproduction_inputs.json']
             include=include or str(rel) in ['work/expected_universe.json','work/annual_cutoffs.json','work/reading_progress.json','work/delivery_verification.json','work/pair_registry.json','work/annex_e_pair_outcomes.json','work/nonadditive_counts.json','backup/sec-project-2-20261009T150746Z.tar.zst.json','backup/sec-project-2-20261009T150746Z.tar.zst.sha256','work/observation_quarantines.json','work/fact_semantic_quarantines.json','work/exhibit_body_policy_overrides.json','work/parent_membership_evidence.json','work/entity_decisions.json','work/queue.json','work/run.json','work/inventory.json','work/collection.json','work/spcx_annual_validation.json','work/deprecations.json','work/concept_mappings.json']
             if include:z.write(path,rel)
     manifest=dict(as_of=as_of,archive=target.name,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size,
