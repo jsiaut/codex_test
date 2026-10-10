@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='12aec394e5794cf48c1c31fe945049afdffc79b6fbb3bd51b35de38d3efeaf09'
+save(k,[tagged(k,4,'Total | | | $ | 1,168',model_quantity='short_term_financial_investments',issuer_treatment='1.168bnHELD_CommercialPaper974mTimeDeposits194mASSETS'),dict(quote='This equity investment is classified as Level 1',abstained=True,abstention_reason='63m held equity and 60m quarter gain are publicly priced, not private-investment F6 or primary funding. CP974m is an asset rather than issuer CP borrowing. Debt fair values and FX-forward notionals888m/403m are not credit-support caps; immaterial fair value is not zero. This note does not quantify private portfolio, not proof of absence.')])
