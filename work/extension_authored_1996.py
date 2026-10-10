@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='9cef7c67f5d7557f0bb2ce83a5a76d0929da75a9687165bb75e941093cd5fb88'
+save(k,[dict(amount_origin='narrative_only',unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',period_end='2018-09-30',amount_qualifier='exact',quote='a $2.0 billion senior unsecured revolving credit facility',amount='2000000000',stage='available',model_quantity='credit_facility_undrawn',issuer_treatment='2UndrawnRCF_May2016SigningMonthOnly_NotF4'),dict(quote='As of September 30, 2018, no amounts had been drawn down, and we were in compliance with the covenants under this facility.',abstained=True,abstention_reason='UndrawnAndCompliant_NoNewFundingOrF4')])
