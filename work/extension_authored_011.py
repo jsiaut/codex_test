@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='fa9896aee6ad83566beca84ec29b535657ee0765b766f26128babaaf2a0b265b'
+save(k,[dict(quote='Deferred cloud revenues, deferred software revenues and deferred hardware revenues substantially represent customer payments made in advance for cloud or support contracts that are billed in advance with corresponding revenues generally being recognized ratably or based upon customer usage over the respective contractual periods.',model_quantity='deferred_revenue_recognition_policy',issuer_treatment='customer_prepayments_recognized_ratably_or_as_used',flag_unknown_reason='product_level_deferred_balances_no_named_customers_not_recognized_period_revenue')])

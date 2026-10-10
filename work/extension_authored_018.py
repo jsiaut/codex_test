@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='53def2d39025bf3b59a4bca4379d0405833cc28dd39df4d25cf4c4678c3dbd56'
+save(k,[dict(quote='As of August 1, 2026, the 2025 Revolving Credit Facility was undrawn and is available for draw down through June 30, 2030.',period_end='2026-08-01',model_quantity='revolver_undrawn_available_statement',instrument_key='MRVL_2025_revolver',issuer_treatment='undrawn_available_revolver_not_cash_balance'),dict(quote='As of August 1, 2026, the Company was in compliance with its debt covenants for the revolving line of credit agreement.',period_end='2026-08-01',model_quantity='debt_covenant_compliance',instrument_key='MRVL_2025_revolver',issuer_treatment='revolver_covenants_compliant',trigger_occurred='no')])

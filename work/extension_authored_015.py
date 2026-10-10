@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='ae40cb62d7790b24e9d33c25b699b0d12b63e02306c895f62e2d6dcb6f3869fa'
+save(k,[dict(quote='We sell certain of our trade accounts receivable on a non-recourse basis to third-party financial institutions pursuant to factoring arrangements. We account for these transactions as sales of receivables and present cash proceeds as cash provided by operating activities in the condensed consolidated statements of cash flows.',model_quantity='receivable_factoring_accounting_and_cashflow_policy',issuer_treatment='nonrecourse_sales_of_receivables_operating_cash_proceeds',category_id='receivables_transferred',judgment_sensitive=True,flag_unknown_reason='financial_institutions_unnamed_sales_flows_not_customer_financing')])
