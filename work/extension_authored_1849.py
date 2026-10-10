@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='ab63ffc6f9c842594b1165c7331730e52c98e97d6ffaafb52d73263b4e00be27'
+save(k,[dict(quote='Contract liabilities | $ | 131,936 | | | $ | 142,378 |\nTechnology license obligations | 50,876',abstained=True,abstention_reason='131.936CurrentDEFvs133.0RevenueNoteUnresolved_50.876TECHNoDollarPrefix_NoNumericPromotion'),dict(quote='The Company repurchased 2.4 million of its common shares for $50.0 million during the three months ended May 4, 2019.',abstained=True,abstention_reason='50OwnShareRepurchase_NotInvesteeCashFunding'),dict(quote='As of May 4, 2019, there are no changes in accumulated other comprehensive income (loss) by components.',abstained=True,abstention_reason='NoCurrentAOCIChange_NotPrivateInvestmentF6')])
