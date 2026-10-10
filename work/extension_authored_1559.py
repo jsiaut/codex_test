@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2367f2be84859e1ac2b631d4b13de9198b4ec754ea7e02f4d5476581ad6dfcff'
+save(k,[dict(quote='Certain prior period amounts have been reclassified to conform to current period presentation.',basis_break=True,recast_cause='presentation_reclassification',issuer_treatment='ActualPriorPresentationReclass_UnspecifiedNotNewDCStandaloneSegment'),dict(quote='This standard did not have an impact on the condensed consolidated financial statements upon adoption.',abstained=True,abstention_reason='CECLAdoptedQ1FY20ModifiedRetrospective_NoBalanceImpact_NotActualInvestmentImpairmentF6.13WeekQuarter26WeekSIXNotCalendarJune30. NoNamedCustomerOrFundingEvent.')])
