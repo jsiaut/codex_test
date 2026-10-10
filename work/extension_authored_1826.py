@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='e023ad0ea05f3d773c52f2e49051b88d831b56f2d2e5fba817e79cf1c236da32'
+save(k,[tagged(k,32,'Deferred revenue | $ | 164',model_quantity='deferred_revenue',issuer_treatment='164DEFJun30_19_IN198DEFplusDeposits_Not198DEF'),tagged(k,34,'Deposits | 34',model_quantity='customer_deposits'),tagged(k,36,'Total deferred revenue and deposits | $ | 198',model_quantity='deferred_revenue_and_deposits'),dict(quote='based on the billing address of our customer',abstained=True,abstention_reason='GeographyCustomerBilling_NotPhysicalDemand_NoSingleCustomerConcentration')])
