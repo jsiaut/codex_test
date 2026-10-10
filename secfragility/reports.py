@@ -40,10 +40,13 @@ def render(db,root,as_of,source,verification):
     csv_write(root/'measures.csv',measures)
     csv_write(audit/'exclusions.csv',exclusions)
     csv_write(audit/'concepts.csv',mapping)
+    admitted={r[0] for r in db.execute("SELECT observation_id FROM links WHERE edge_kind='amount'").fetchall()}
+    blocked={r[0]:r[1] for r in db.execute('SELECT observation_id,reason FROM excluded_observations').fetchall()}
     attrs=[dict(observation_id=o['observation_id'],accession=o['accession'],document_id=o['document_id'],counterparty=o['counterparty'],
                 evidence=o['counterparty_evidence'],amount=o['amount'],unit=o['unit'],currency=o['currency'],stage=o['stage'],
                 model_quantity=o['model_quantity'],quote=o['quote'],locator=o['locator'],tagged_fact_id=o['tagged_fact_id'],
-                amount_origin=o['amount_origin'],is_tagged=bool(o['tagged_fact_id'])) for o in obs if o['counterparty'] and o['amount'] is not None]
+                amount_origin=o['amount_origin'],is_tagged=bool(o['tagged_fact_id']),numeric_edge_admitted=o['observation_id'] in admitted,
+                exclusion_reason=blocked.get(o['observation_id'])) for o in obs if o['counterparty'] and o['amount'] is not None]
     csv_write(audit/'attributions.csv',attrs)
     # One row per published numeric field and deposited term. Reused terms are
     # kept with the measure key; this is an audit trail, not an additive ledger.
@@ -57,6 +60,8 @@ def render(db,root,as_of,source,verification):
                 if m[field] is None:continue
                 key={k:m[k] for k in ['measure','group_id','counterparty_id','period_start','period_end','view','as_of','term','breakdown_key','variant']}
                 for t in terms:
+                    if t['source_kind']=='document' and m['basis_break_reason']:
+                        t=dict(t,locator=m['basis_break_reason'],accession=m['breakdown_key'].split('|')[0])
                     w.writerow(dict(key,number_id=digest([key,field]),record_kind='measure',field=field,published_value=fnum(m[field]),unit=m['unit'],
                        **{k:t.get(k) for k in ['source_id','source_kind','accession','document_id','locator','is_tagged','tier','filing_status']}))
         # The control table itself carries every equation and original terms.

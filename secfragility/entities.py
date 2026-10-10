@@ -100,7 +100,7 @@ def assemble(db,root,as_of):
         confirmed=bool(full and j and len(independent)>=2)
         name,o=mentions[0];eid='legal:'+digest([norm,j])
         row=dict(entity_id=eid,membership_id='standalone',legal_name=name,normalized_name=norm,jurisdiction=j,
-          entity_status='confirmed' if confirmed else 'pending',economic_group_id=eid,consolidation_treatment='parent' if confirmed else 'undetermined',
+          entity_status='confirmed' if confirmed else 'pending',economic_group_id=eid,consolidation_treatment='undetermined',
           knowledge_date=o['knowledge_date'],resolution_rule='same_normalized_full_name_and_jurisdiction_two_independent_filings' if confirmed else 'identity_or_control_not_established',
           evidence_document_id=o['document_id'],evidence_locator=o['locator'],source_perspective='counterparty',as_of=as_of)
         records.append(row);index[norm].append(row)

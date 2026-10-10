@@ -29,7 +29,7 @@ def assemble(db,root,as_of,entities,observations,resolve):
             return date is not None and (not e.get('membership_start') or str(e['membership_start'])<=date) and (
                 not e.get('membership_end') or date<str(e['membership_end']))
         elimination='intragroup_not_eliminated' if same and not (member_at(a) and member_at(b)) else 'eliminated' if same else 'external'
-        confirmed=a['entity_status']==b['entity_status']=='confirmed'
+        confirmed=a['entity_status']==b['entity_status']=='confirmed' and a['consolidation_treatment']!='undetermined' and b['consolidation_treatment']!='undetermined'
         numeric=confirmed and o.get('amount') is not None and date is not None and elimination=='external'
         if o['family']=='financing':numeric=numeric and o['tier'] in ('A','B','C') and o['stage'] in ('drawn_or_paid','recognized')
         lid=digest(['evidence_edge',o['observation_id']])
@@ -83,12 +83,18 @@ def nonadditive(db,root,as_of):
       model_quantity AS quantity,dimensions,NULL::VARCHAR AS instrument_key,value FROM selected_revised WHERE value IS NOT NULL
       UNION ALL SELECT observation_id,group_id,coalesce(period_end,event_date),unit,model_quantity,'{}',instrument_key,amount
        FROM usable_observations WHERE amount IS NOT NULL''')
+    db.execute('''CREATE TEMP TABLE selected_nonadditive_amounts AS SELECT s.pair_id,s.side,a.*
+      FROM nonadditive_selectors s JOIN nonadditive_amounts a ON a.quantity=s.quantity''')
     db.execute('''INSERT INTO links (link_id,edge_kind,pair_id,relation_type,amount_a_id,amount_b_id,resolved,resolution_evidence,as_of)
-      SELECT DISTINCT sha256(sa.pair_id||a.amount_id||b.amount_id),'relation',sa.pair_id,'overlaps',a.amount_id,b.amount_id,false,
+      WITH matches AS (
+       SELECT a.pair_id,a.amount_id AS a_id,b.amount_id AS b_id FROM selected_nonadditive_amounts a
+        JOIN selected_nonadditive_amounts b ON a.pair_id=b.pair_id AND a.unit=b.unit AND a.group_id=b.group_id
+         AND a.period_end=b.period_end AND a.dimensions=b.dimensions WHERE a.side='a' AND b.side='b'
+       UNION SELECT a.pair_id,a.amount_id,b.amount_id FROM selected_nonadditive_amounts a
+        JOIN selected_nonadditive_amounts b ON a.pair_id=b.pair_id AND a.unit=b.unit AND a.instrument_key=b.instrument_key
+         WHERE a.side='a' AND b.side='b' AND a.instrument_key IS NOT NULL)
+      SELECT sha256(pair_id||a_id||b_id),'relation',pair_id,'overlaps',a_id,b_id,false,
        'Candidate by fixed register and group/date or explicit instrument. Allocation or comparable bases not established.',?
-      FROM nonadditive_selectors sa JOIN nonadditive_selectors sb ON sa.pair_id=sb.pair_id AND sa.side='a' AND sb.side='b'
-      JOIN nonadditive_amounts a ON a.quantity=sa.quantity JOIN nonadditive_amounts b ON b.quantity=sb.quantity
-       AND a.unit=b.unit AND ((a.group_id=b.group_id AND a.period_end=b.period_end AND a.dimensions=b.dimensions)
-        OR (a.instrument_key IS NOT NULL AND a.instrument_key=b.instrument_key))''',[as_of])
+       FROM matches''',[as_of])
     counts={p['id']:db.execute('SELECT count(*) FROM links WHERE pair_id=?',[p['id']]).fetchone()[0] for p in cfg['non_additive_pairs']}
     (root/'work/nonadditive_counts.json').write_text(json.dumps(counts,indent=2)+'\n')

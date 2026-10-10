@@ -1,7 +1,7 @@
 """Dated pair outputs. Empty and incompletely attributed numerators stay ND."""
 import json
 from collections import defaultdict
-from datetime import date
+from datetime import date,timedelta
 from decimal import Decimal, ROUND_HALF_EVEN
 from .assembly import rows
 from .database import insert
@@ -20,6 +20,7 @@ def financed(edges,s,c,q,quarters,cutoff,policy='exposure_outstanding'):
     dates=sorted(set(dates));left=dates[-9] if len(dates)>8 else min(
         (x['period_start'] for x in quarters if x['group_id']==s and x['period_start']!='none'
          and x['period_end']!='none' and x['period_end']<=q['period_end']),default=None)
+    if left and len(dates)<=8:left=str(date.fromisoformat(left)-timedelta(days=1))
     for e in eligible:
         d=str(e.get('event_date') or e.get('period_end') or '')
         qualifies=(e.get('edge_kind')=='amount' and e.get('family')=='financing' and e.get('stage')=='drawn_or_paid'

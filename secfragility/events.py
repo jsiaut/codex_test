@@ -54,7 +54,7 @@ def run(db,root,as_of):
                     a=by[(g,s,e,view,metric,term)]
                     b=by[(g,prior['period_start'],prior['period_end'],view,metric,term)] if prior else []
                     if len(a)==len(b)==1 and a[0]['status']==b[0]['status']=='computed':
-                        present=(a[0]['numerator']>a[0]['denominator'] and b[0]['numerator']>b[0]['denominator']) if f=='F1' else a[0]['value']<0<=b[0]['value']
+                        present=(a[0]['numerator']>a[0]['denominator'] and b[0]['numerator']>b[0]['denominator']) if f=='F1' else a[0]['numerator']*a[0]['denominator']<0 and b[0]['numerator']*b[0]['denominator']>=0
                         base.update(value=int(present),status='computed',nd_reason=None,coverage_state='observed' if present else 'explicit_zero',
                             knowledge_date=max(a[0]['knowledge_date'],b[0]['knowledge_date']),lineage=json.dumps(json.loads(a[0]['lineage'])+json.loads(b[0]['lineage'])))
                     else:base.update(nd_reason='missing_compatible_consecutive_quarters',coverage_state='unknown')

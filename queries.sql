@@ -30,19 +30,20 @@ SELECT f.*,
  count(*) FILTER (WHERE value IS NOT NULL AND upper(decimals)='INF') OVER w AS exact_values,
  max(value-precision_radius(decimals)) OVER w AS max_lower,
  min(value+precision_radius(decimals)) OVER w AS min_upper
+ ,min(value+precision_radius(decimals)) FILTER (WHERE upper(decimals)!='INF') OVER w AS finite_min_upper
 FROM facts f WINDOW w AS (PARTITION BY accession,semantic_key,document_rank);
 
 CREATE TEMP TABLE eligible_facts AS
-SELECT * EXCLUDE (value,coverage_state,rounding_radius,distinct_values,unknown_precisions,exact_values,max_lower,min_upper),
+SELECT * EXCLUDE (value,coverage_state,rounding_radius,distinct_values,unknown_precisions,exact_values,max_lower,min_upper,finite_min_upper),
  CASE WHEN EXISTS (SELECT 1 FROM conflicting_semantics q
                     WHERE q.accession=f.accession AND q.semantic_key=f.semantic_key)
         OR (distinct_values>1 AND (unknown_precisions>0 OR max_lower>min_upper
-             OR (max_lower=min_upper AND exact_values=0)))
+             OR (max_lower=min_upper AND (exact_values=0 OR finite_min_upper=min_upper))))
       THEN NULL ELSE value END AS value,
  CASE WHEN EXISTS (SELECT 1 FROM conflicting_semantics q
                     WHERE q.accession=f.accession AND q.semantic_key=f.semantic_key)
         OR (distinct_values>1 AND (unknown_precisions>0 OR max_lower>min_upper
-             OR (max_lower=min_upper AND exact_values=0)))
+             OR (max_lower=min_upper AND (exact_values=0 OR finite_min_upper=min_upper))))
       THEN 'conflicting' ELSE coverage_state END AS coverage_state
 FROM fact_precision_groups f WHERE tier IN ('A','B','C','D') AND filing_status='filed' AND NOT is_nil
  AND document_rank>=-1

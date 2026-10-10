@@ -14,7 +14,8 @@ def freeze_manifest(root: Path):
     current=yaml.safe_load((root/'config.yaml').read_text())
     dates=subprocess.check_output(['git','show','-s','--format=%cI',original],cwd=root,text=True).strip()
     journal=[json.loads(l) for l in (root/'journal.jsonl').read_text().splitlines()]
-    first=min(j['timestamp'] for j in journal) if journal else None
+    requests=[j for j in journal if 'timestamp' in j and 'status' in j and 'url' in j]
+    first=min(j['timestamp'] for j in requests) if requests else None
     manifest={'original_commit':original,'original_commit_date':dates,'first_sec_request':first,
         'config_sha256':hashlib.sha256((root/'config.yaml').read_bytes()).hexdigest(),
         'criteria_unchanged':all(committed[k]==current[k] for k in ('annex_e','annex_f','thresholds')),
@@ -35,7 +36,7 @@ def freeze_manifest(root: Path):
 
 
 def network_review(root: Path) -> dict:
-    rows=[json.loads(l) for l in (root/'journal.jsonl').read_text().splitlines()]
+    rows=[r for l in (root/'journal.jsonl').read_text().splitlines() if 'status' in (r:=json.loads(l)) and 'url' in r]
     from datetime import datetime
     stamps=[datetime.fromisoformat(r['timestamp']).timestamp() for r in rows]
     max_count=0;left=0

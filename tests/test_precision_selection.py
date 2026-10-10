@@ -28,3 +28,21 @@ def test_disjoint_rounding_intervals_block_both_occurrences(tmp_path):
     db.execute((source/'queries.sql').read_text())
     assert db.execute('SELECT count(*) FROM eligible_facts WHERE value IS NOT NULL').fetchone()[0] == 0
     assert db.execute('SELECT count(*) FROM facts WHERE value IS NOT NULL').fetchone()[0] == 2
+
+
+def test_exact_value_at_excluded_upper_boundary_conflicts(tmp_path):
+    source=Path(__file__).resolve().parents[1]
+    (tmp_path/'schema.sql').write_text((source/'schema.sql').read_text())
+    db=create(tmp_path);a=fact(instance())
+    b=dict(a,fact_id='upper-bound',occurrence_rank=2,value=Decimal('1500000'),decimals='INF')
+    insert(db,'facts',a);insert(db,'facts',b);db.execute((source/'queries.sql').read_text())
+    assert db.execute('SELECT count(*) FROM eligible_facts WHERE value IS NOT NULL').fetchone()[0]==0
+
+
+def test_exact_value_at_included_lower_boundary_remains_eligible(tmp_path):
+    source=Path(__file__).resolve().parents[1]
+    (tmp_path/'schema.sql').write_text((source/'schema.sql').read_text())
+    db=create(tmp_path);a=fact(instance())
+    b=dict(a,fact_id='lower-bound',occurrence_rank=2,value=Decimal('500000'),decimals='INF')
+    insert(db,'facts',a);insert(db,'facts',b);db.execute((source/'queries.sql').read_text())
+    assert db.execute('SELECT count(*) FROM eligible_facts WHERE value IS NOT NULL').fetchone()[0]==2

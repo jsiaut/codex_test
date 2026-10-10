@@ -32,8 +32,11 @@ def run(root,reconstruct=False):
     print(json.dumps(dict(stage='observations',counts=table_counts(db))),flush=True)
     from .entities import assemble as assemble_entities
     entities,observations,resolve=assemble_entities(db,root,as_of)
+    print(json.dumps(dict(stage='entities',count=len(entities))),flush=True)
     from .graph import assemble,nonadditive
-    assemble(db,root,as_of,entities,observations,resolve);nonadditive(db,root,as_of)
+    assemble(db,root,as_of,entities,observations,resolve)
+    print(json.dumps(dict(stage='amount_links',counts=table_counts(db))),flush=True)
+    nonadditive(db,root,as_of)
     print(json.dumps(dict(stage='graph',counts=table_counts(db))),flush=True)
     from .controls import component_controls,concentration_controls,lease_controls,eps_controls
     from .controls_extended import run as extended_controls
@@ -42,10 +45,14 @@ def run(root,reconstruct=False):
     print(json.dumps(dict(stage='controls',counts=table_counts(db))),flush=True)
     from .quarter_series import prepare,measures
     prepare(db,root,as_of);measures(db,as_of)
+    print(json.dumps(dict(stage='quarters',counts=table_counts(db))),flush=True)
     from .tier1_numeric import stocks,tagged_components,liquidity_and_leases
     stocks(db,as_of);tagged_components(db,as_of)
+    print(json.dumps(dict(stage='stocks',counts=table_counts(db))),flush=True)
     from .ttm import run as ttm
-    ttm(db,as_of);liquidity_and_leases(db,as_of)
+    ttm(db,as_of)
+    print(json.dumps(dict(stage='ttm',counts=table_counts(db))),flush=True)
+    liquidity_and_leases(db,as_of)
     from .numeric_extended import run as numeric
     numeric(db,as_of)
     from .metadata_signals import run as signals

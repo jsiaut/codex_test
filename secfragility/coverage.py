@@ -38,3 +38,13 @@ def run(db,root,as_of):
        model_quantity||'|'||period_start::VARCHAR||'|'||period_end::VARCHAR,'recast_boundary',
        'Comparative values differ beyond published precision across candidate filings; no mixed-basis subtraction.',
        'conflicting',period_start,period_end,? FROM quarter_candidates WHERE recast_boundary''',[as_of])
+    db.execute('''UPDATE measures m SET coverage_state='conflicting',nd_reason='conflicting_tagged_fact'
+      WHERE m.status='not_determinable' AND m.lineage='[]' AND EXISTS (
+       SELECT 1 FROM eligible_facts f WHERE f.group_id=m.group_id AND f.period_end::VARCHAR=m.period_end
+        AND f.model_quantity=m.measure::VARCHAR AND f.coverage_state='conflicting')''')
+    db.execute('''UPDATE measures m SET basis_break=true,basis_break_reason='No subtraction across incompatible comparative presentations.',
+      nd_reason='recast_boundary',coverage_state='conflicting',recast_cause='unknown'
+      WHERE m.status='not_determinable' AND m.lineage='[]' AND m.measure IN ('revenue_growth','revenue_total','cfo','capex_cash')
+       AND EXISTS (SELECT 1 FROM quarter_candidates q WHERE q.group_id=m.group_id AND q.period_start::VARCHAR=m.period_start
+        AND q.period_end::VARCHAR=m.period_end AND q.recast_boundary AND (q.model_quantity=m.measure::VARCHAR
+         OR m.measure='revenue_growth' AND q.model_quantity='revenue_total'))''')
