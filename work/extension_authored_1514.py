@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='455c5d6324badbfa853ae254310037001340f1ef79a37292b4dedf06a61d7d38'
+save(k,[tagged(k,12,'Investment in non-affiliated entities (1) | | | Level 3 | | | | | | $ | 110',block='exposed_assets',model_quantity='private_investment_carrying_amount',counterparty_evidence='anonymous',issuer_treatment='110HeldJul26_20Versus77PriorJan26_20_No33CashInference'),dict(quote='privately held and recorded at fair value on a non-recurring basis only if an impairment or observable price adjustment occurs in the period',abstained=True,abstention_reason='MeasurementPolicyNotEvidenceOfActualF6. ImmaterialMeasurementNotExactZero. OwnNotesFairValuesNotPrincipalOrPrivateInvestment;2021MaturityAtJul26_20RemainsBeyond12MonthsUntilDebtNoteConfirms.')])
