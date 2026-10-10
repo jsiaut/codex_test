@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='5fc1d86d9e45d46bd3277d437def4e7fc37efaae68a17a49b843e644d382681c'
+save(k,[tagged(k,59,'Present value of lease liabilities',category_id='lease_liability',block='recognized_liabilities',issuer_treatment='Sep30_97998mPV86233op11765fin_IN13321current84677long_GROSS117077minus19079interest_NOTaddgrossplusPV'),dict(quote='fulfillment network, data center, office, and physical store facilities',model_quantity='lease_business_scope',issuer_treatment='MIXEDretailAWS_planesvehicles_NOTallAI_grossfinasset56bnminusamort41.1bn_NOT_cash14988mleaseexpense_not_actualpayment')])
