@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='f500accb7c78802eb6d9fcde8df648537347b55b0409a52e9d26ddfb1312f2c1'
+save(k,[dict(quote='It is not possible to determine the maximum potential amount under these indemnification provisions',model_quantity='indemnity_maximum_exposure_limit',flag_unknown_reason='unestimable_maximum_despite_no_material_claims_not_zero_exposure'),dict(quote='Any possible loss or range of loss in these matters cannot be reasonably estimated at this time.',model_quantity='litigation_exposure_measurement_limit',issuer_treatment='no_material_accrual_as_of_March31_or_Dec31_not_proof_of_zero_possible_loss')])

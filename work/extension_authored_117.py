@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='edab9f8d19d7ab41e4fa28c91e277c6a46741940a807849c261f2f6fb7ca87b0'
+save(k,[dict(quote='Revenue by geography is based on the address of the customer as specified in the Company\'s customer contracts.',model_quantity='geographical_revenue_scope',issuer_treatment='contractual_customer_address_not_physical_compute_location_or_final_user_domicile'),dict(quote='It defines long-lived assets as property and equipment and lease right-of-use assets',model_quantity='geographical_asset_concentration_scope',issuer_treatment='88percent_US_includes_ROU_assets_not_total_corporate_assets_or_88percent_owned_PPE')])

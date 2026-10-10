@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='1397fe27e006077dc7c73fc3fd90a66d37b22f533f9afc56f9e0b6b78b5975ba'
+save(k,[dict(quote='Customer liabilities | | | $ | 1,469',model_quantity='customer_liability_stock_scope',issuer_treatment='1469m_recognized_current_liability_not_current_cash_incentive_paid_or_new_customer_funding',flag_unknown_reason='customer_identity_and_ASC606_credit_cash_components_unknown'),dict(quote='Accrued purchases | | | $ | 1,953',model_quantity='purchase_accrual_stock_scope',issuer_treatment='1953m_unpaid_purchases_not_cash_capex_or_named_vendor_financing_no_cash_flow_inferred_from_prior5196m')])
