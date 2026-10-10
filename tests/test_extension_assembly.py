@@ -20,7 +20,7 @@ def observation(oid,amount,basis,known='2026-04-30'):
     return dict(observation_id=oid,content_key='k',document_id='d',accession='a',group_id='S',entity_id='s',
         abstained=False,quote='Source amount retained',locator='rawbytes:0:30',raw_byte_start=0,raw_byte_end=30,
         amount=Decimal(amount),unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',
-        amount_origin='narrative',amount_qualifier='exact',model_quantity='lease_amount',
+        amount_origin='narrative_only',amount_qualifier='exact',model_quantity='lease_amount',
         period_end='2026-03-31',block='contractual_outflows',measurement_basis=basis,
         filing_status='filed',assurance_level='reviewed',tier='B',location='notes',knowledge_date=known,
         source_perspective='reporting_entity',accounting_framework='us_gaap',as_of='2026-10-09T00:00:00Z')

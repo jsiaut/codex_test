@@ -23,6 +23,15 @@ def financed(edges,s,c,q,quarters,cutoff,policy='exposure_outstanding'):
     if left and len(dates)<=8:left=str(date.fromisoformat(left)-timedelta(days=1))
     for e in eligible:
         d=str(e.get('event_date') or e.get('period_end') or '')
+        # The assembly marks this only from an explicitly authored current
+        # holding, classified as primary equity; a portfolio balance is not it.
+        held=(e.get('edge_kind')=='amount' and e.get('family')=='financing'
+              and e.get('type')=='equity_primary' and e.get('stage')=='recognized'
+              and e.get('tier') in ('A','B') and e.get('amount') is not None and e['amount']>0
+              and e.get('resolution_evidence')=='current_primary_instrument_held'
+              and str(e.get('period_end') or '')<=q['period_end']
+              and (policy=='ever_financed' or str(e.get('period_end') or '')==q['period_end']))
+        if held:return 'active'
         qualifies=(e.get('edge_kind')=='amount' and e.get('family')=='financing' and e.get('stage')=='drawn_or_paid'
           and e.get('event_type') in ('funding','drawdown') and e.get('currency')
           and e.get('unit') in (e.get('currency'),'http://www.xbrl.org/2003/iso4217:'+e.get('currency',''))
@@ -46,6 +55,10 @@ def run(db,root,as_of,entities,observations,resolve):
     pending=[]
     def emit(db,table,row):pending.append(row)
     u=json.loads((root/'work/expected_universe.json').read_text());inv=json.loads((root/'work/inventory.json').read_text())
+    db.execute("""UPDATE links SET resolution_evidence='current_primary_instrument_held'
+       WHERE edge_kind='amount' AND family='financing' AND type='equity_primary' AND stage='recognized' AND tier IN ('A','B')
+       AND EXISTS (SELECT 1 FROM usable_observations o WHERE o.observation_id=links.observation_id
+         AND o.component_kind='interest_held' AND o.link_type='equity_primary')""")
     edges=rows(db,"SELECT * FROM links WHERE family IS NOT NULL")
     cp=defaultdict(set);cpnames={}
     for g in inv['groups']:cp[g].update(set(inv['groups'])-set([g]));cp[g].update(['LAB:OpenAI','LAB:Anthropic'])
@@ -126,8 +139,13 @@ def run(db,root,as_of,entities,observations,resolve):
         o=next(o for o in observations if o['observation_id']==e['observation_id'])
         if not o.get('block') or not o.get('measurement_basis'):continue
         for view in ['as_known','revised']:
+            end=str(o['period_end'] or o['event_date'])
+            anchors=[(s,t) for (g,s,p),t in public.items() if g==o['group_id'] and p==end]
+            cutoff=anchors[0][1] if view=='as_known' and len(anchors)==1 else as_of if view=='revised' else None
+            if not cutoff or str(e['knowledge_date'])>cutoff[:10]:continue
             emit(db,'measures',dict(measure='counterparty_exposure',group_id=o['group_id'],counterparty_id=e['to_entity_id'] if e['from_group_id']==o['group_id'] else e['from_entity_id'],
                 period_start=str(o['period_start'] or o['period_end'] or o['event_date']),period_end=str(o['period_end'] or o['event_date']),view=view,as_of=as_of,
+                information_cutoff=cutoff,
                 breakdown_key='|'.join([o['block'],o.get('category_id') or 'unspecified',o['measurement_basis'],o.get('instrument_key') or e['link_id']]),
                 variant=e['link_id'],value=e['amount'],unit=e['unit'],currency=e['currency'],status='partial',nd_reason='complete_contract_terms_not_established' if completed else 'not_processed',coverage_state='observed',
                 knowledge_date=e['knowledge_date'],lineage=json.dumps([e['link_id']]),evidence_profile=json.dumps([e['tier']]),wrong_way=None,

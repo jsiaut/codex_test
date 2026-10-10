@@ -33,3 +33,12 @@ def test_xbrl_currency_unit_establishes_the_same_cash_financing():
 
 def test_cumulative_flow_crossing_lookback_is_not_dated_to_its_closing_day():
     assert state(dict(BASE,event_date=None,period_start='2025-01-01',period_end='2026-03-31'))=='unknown'
+
+
+def test_current_primary_holding_needs_explicit_primary_held_proof_and_current_date():
+    holding=dict(BASE,stage='recognized',event_type=None,tier='B',event_date=None,
+                 period_end='2026-03-31',resolution_evidence='current_primary_instrument_held')
+    assert state(holding)=='active'
+    assert state(dict(holding,resolution_evidence=None))=='unknown'
+    assert state(dict(holding,period_end='2025-12-31'))=='unknown'
+    assert state(dict(holding,type='noncash_investment'))=='unknown'

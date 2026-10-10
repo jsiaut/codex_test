@@ -4,4591 +4,4843 @@
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:0f6bb6688494bca2bcd34bdba41651c08df9109aac7f16fec0d5d12125381056",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:0f6bb6688494bca2bcd34bdba41651c08df9109aac7f16fec0d5d12125381056",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:18c86f6d95cb4c271a5ca2c484f9b29530f069b274620fe356bdac83cdb10b6d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:18c86f6d95cb4c271a5ca2c484f9b29530f069b274620fe356bdac83cdb10b6d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:36922ebe44e1364f72b1e5eb0adda9c15bbb3e8c8cc495c5de3e1d30fda384d1",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:36922ebe44e1364f72b1e5eb0adda9c15bbb3e8c8cc495c5de3e1d30fda384d1",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:472b5b2213efffb1b2762fa8a8cfc05627a3d982328a4498596dd015a79d6527",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:472b5b2213efffb1b2762fa8a8cfc05627a3d982328a4498596dd015a79d6527",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:550c1916c69a8c1e4b41e8ce4be95ff00333fd3f539be844d0813f1e7a0aff6a",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:550c1916c69a8c1e4b41e8ce4be95ff00333fd3f539be844d0813f1e7a0aff6a",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:8224930b1e4071b8d88941041b49b2f66fd713081c3b0c49aef120a70fb6c26c",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:8224930b1e4071b8d88941041b49b2f66fd713081c3b0c49aef120a70fb6c26c",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:f4ec57c8577013f9c67b5c1ef7657b82dc605ac105257f712c7b34d81b085b1e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "NVDA",
     "counterparty_id": "legal:f4ec57c8577013f9c67b5c1ef7657b82dc605ac105257f712c7b34d81b085b1e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:0040ce18eaa5c124e55aedffdf2f58fd1a0875c2c28138bc5f4d07cb615ac635",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:0040ce18eaa5c124e55aedffdf2f58fd1a0875c2c28138bc5f4d07cb615ac635",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:1993bb8c4a5ea159ce9549ac0fb380954f61cfe5f0f5dcfb5d2a1c06cb1bfd3f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:1993bb8c4a5ea159ce9549ac0fb380954f61cfe5f0f5dcfb5d2a1c06cb1bfd3f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:2757b77d812611166eee637937fd4df05bd45d01c43bffeff47aa52de2878ff3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:2757b77d812611166eee637937fd4df05bd45d01c43bffeff47aa52de2878ff3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:4851368a9c359cf36ccecf96e00e6ce1d44a98c984a88b5d934c02ff21ac6cba",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:4851368a9c359cf36ccecf96e00e6ce1d44a98c984a88b5d934c02ff21ac6cba",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "legal:510f78c3519cbfbb59e57a2b67d98d09ce012f39b8a700f6a59fbbd62d9e00e3",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "legal:510f78c3519cbfbb59e57a2b67d98d09ce012f39b8a700f6a59fbbd62d9e00e3",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:60e050944036c45c3b62bf765918ef1fadc7958bc2632c1f2475238cb7f5047e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:60e050944036c45c3b62bf765918ef1fadc7958bc2632c1f2475238cb7f5047e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:66f396e209f76e1ba6637616d76ee656469a46cd5c2fc8f689efba3e39e09d81",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:66f396e209f76e1ba6637616d76ee656469a46cd5c2fc8f689efba3e39e09d81",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:78235d8d8ae7c8b1f58430aa48797cddcefcf9208c6ececf3443b78f372184cf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:78235d8d8ae7c8b1f58430aa48797cddcefcf9208c6ececf3443b78f372184cf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:796829f2824ad6a5e4d160a7d4af701e7e422e03b1e6ea2aa602d1284c14830b",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:796829f2824ad6a5e4d160a7d4af701e7e422e03b1e6ea2aa602d1284c14830b",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:7bac493e92fb62847a1092b0a26e094f1edd559c66afc671b456c13f76db2aa9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:7bac493e92fb62847a1092b0a26e094f1edd559c66afc671b456c13f76db2aa9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:8c3cc612842a23666ecb59273dd9c7009016bcbaa17715023631efc80e4985dc",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:8c3cc612842a23666ecb59273dd9c7009016bcbaa17715023631efc80e4985dc",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:8f7805e63a4765bc92c0ed968616e954bbe29f685989b85210dd8e73f8314c2c",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:8f7805e63a4765bc92c0ed968616e954bbe29f685989b85210dd8e73f8314c2c",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:90d4b9311ab0076887a872bc441eb6b8635dc2a538245d16384fa2da625acd28",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:90d4b9311ab0076887a872bc441eb6b8635dc2a538245d16384fa2da625acd28",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:98f63d1f939e5386b38c0cb808858301092f588e826e6a8715042cf55c949ced",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:98f63d1f939e5386b38c0cb808858301092f588e826e6a8715042cf55c949ced",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:ba092b0e77719f085cff57de58adfeddf2ca7f08055c5da9882300b8a6f64cf9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:ba092b0e77719f085cff57de58adfeddf2ca7f08055c5da9882300b8a6f64cf9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:bd2bb6ffc873062d6d604ff8ad48bcc65ba8b48df942268a4ae1848d7fe8db47",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:bd2bb6ffc873062d6d604ff8ad48bcc65ba8b48df942268a4ae1848d7fe8db47",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:ced56c40261315e30d0806cbb209159decdcbc6bd9995a95228d9daa99350591",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:ced56c40261315e30d0806cbb209159decdcbc6bd9995a95228d9daa99350591",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:cf3489ebdaa5b0a5e3df66e50f728bda785f33ce54556af533cd7ce8ddbc74e9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:cf3489ebdaa5b0a5e3df66e50f728bda785f33ce54556af533cd7ce8ddbc74e9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:d6d1e672d902614b21451968ce5d6d9b9a27925780ebf975281699ed926f0653",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:d6d1e672d902614b21451968ce5d6d9b9a27925780ebf975281699ed926f0653",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "legal:e7cd0650217738f2c43b0adf9c1adec166ce0ed38c216bba0114d73896fa28d6",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "legal:e7cd0650217738f2c43b0adf9c1adec166ce0ed38c216bba0114d73896fa28d6",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:f20d9a9679062f45d86e6999c8b38ee6b52883d1cb3b7d652b2317338b4c0818",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "GOOGL",
     "counterparty_id": "legal:f20d9a9679062f45d86e6999c8b38ee6b52883d1cb3b7d652b2317338b4c0818",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:055eab7f9d3da93cf99ac803b31d65d1de32dcc012c939118799abf04ee45717",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:055eab7f9d3da93cf99ac803b31d65d1de32dcc012c939118799abf04ee45717",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:098c7b55f09ac7637255a86f5fb829c66101cd52e13ab22fe6f5f1fd5b4995ad",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:098c7b55f09ac7637255a86f5fb829c66101cd52e13ab22fe6f5f1fd5b4995ad",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:2748972d0e341dd1da562351c1a32b8f2f37e51c184ebae4230391ca5caef7a9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:2748972d0e341dd1da562351c1a32b8f2f37e51c184ebae4230391ca5caef7a9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:29fef020ed558f11b4ab812b0b124b38185afd4e47065ea243d38aa714629d67",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:29fef020ed558f11b4ab812b0b124b38185afd4e47065ea243d38aa714629d67",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:337834d2e98c5d4c09a0876dd198225cd18e80ab77a36e425de12545e284e7e2",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:337834d2e98c5d4c09a0876dd198225cd18e80ab77a36e425de12545e284e7e2",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:6131893f2ba7b40b7675118a9e21a6dc280519575e0730a987e25b40c1078832",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:6131893f2ba7b40b7675118a9e21a6dc280519575e0730a987e25b40c1078832",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:8224930b1e4071b8d88941041b49b2f66fd713081c3b0c49aef120a70fb6c26c",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:8224930b1e4071b8d88941041b49b2f66fd713081c3b0c49aef120a70fb6c26c",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:85e4270fa9138ef87622521c752598f94d54deb97bc540ad5d54873ff760aa01",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:85e4270fa9138ef87622521c752598f94d54deb97bc540ad5d54873ff760aa01",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:8c3b3baf2e0b85b6a6c0f687fb980f348a335458cd7bce3c3c9fbfc9babf3756",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:8c3b3baf2e0b85b6a6c0f687fb980f348a335458cd7bce3c3c9fbfc9babf3756",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:9dc42b205c872e9c3fa27d4487f89a6f1c92762bde817128b3cc8f93e267d385",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:9dc42b205c872e9c3fa27d4487f89a6f1c92762bde817128b3cc8f93e267d385",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:c6093da255d21e7a8ac43260664c079cda668f5af64b65f0df40bf88f6d47a0d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:c6093da255d21e7a8ac43260664c079cda668f5af64b65f0df40bf88f6d47a0d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:c6fae30e68d02bdd9ad1b9044517665be1121f9300071d0d0d8bae8c0cdd4040",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:c6fae30e68d02bdd9ad1b9044517665be1121f9300071d0d0d8bae8c0cdd4040",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:db237b7db1910037e6fa14b31156b22adbfa302f9a4606b7c01c517778089f06",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:db237b7db1910037e6fa14b31156b22adbfa302f9a4606b7c01c517778089f06",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:ea0de16abadcbe0db5944ba79f9817ec6cacf9ac00700992fc13d1c116fc7dc9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:ea0de16abadcbe0db5944ba79f9817ec6cacf9ac00700992fc13d1c116fc7dc9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:f4ec57c8577013f9c67b5c1ef7657b82dc605ac105257f712c7b34d81b085b1e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:f4ec57c8577013f9c67b5c1ef7657b82dc605ac105257f712c7b34d81b085b1e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:fbebcce09de084e7f3afc5e804b413d3fdb7f957bc8ede6445467d3f0999c5d2",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:fbebcce09de084e7f3afc5e804b413d3fdb7f957bc8ede6445467d3f0999c5d2",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:ff04eec3cbbd9a79b0fe1e07685c7f6df318ffcdfb8a9b4bd86e732e05fdffbf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMZN",
     "counterparty_id": "legal:ff04eec3cbbd9a79b0fe1e07685c7f6df318ffcdfb8a9b4bd86e732e05fdffbf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "legal:510f78c3519cbfbb59e57a2b67d98d09ce012f39b8a700f6a59fbbd62d9e00e3",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "legal:510f78c3519cbfbb59e57a2b67d98d09ce012f39b8a700f6a59fbbd62d9e00e3",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:86c7741924a4cc5364f29b1717a1a7178dd7d5cc9697fa99c987ff493401abde",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:86c7741924a4cc5364f29b1717a1a7178dd7d5cc9697fa99c987ff493401abde",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:96a8ac4acaa4502e691a35d38ddc66217aede0f8c9f8bd009adbae5003aaa3cc",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:96a8ac4acaa4502e691a35d38ddc66217aede0f8c9f8bd009adbae5003aaa3cc",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:98d79df01d6cf39924bcc83b6c505a515599ca7556ddf3ad16d0aef270f021cf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:98d79df01d6cf39924bcc83b6c505a515599ca7556ddf3ad16d0aef270f021cf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:d48d5d4daf85c09a186d96c4f114971055552f165122b7e4a41bc6fbcf523611",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "META",
     "counterparty_id": "legal:d48d5d4daf85c09a186d96c4f114971055552f165122b7e4a41bc6fbcf523611",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:25713471c593e6de387583cd1c5fa166c229964d8d74c9081f9e533b06e396c5",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:25713471c593e6de387583cd1c5fa166c229964d8d74c9081f9e533b06e396c5",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:25a06b7d9ab1df36d64898bb758c8977990b8b8a15bfa770c9e0a75da75826be",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:25a06b7d9ab1df36d64898bb758c8977990b8b8a15bfa770c9e0a75da75826be",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:3333acfffa4a819680c54f3da8b039c38749df47367c77b567921a5421e294c5",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:3333acfffa4a819680c54f3da8b039c38749df47367c77b567921a5421e294c5",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:338eb02bc88078a65bdd4e456eaf2c799c29b341c1cd392fc51adac2fceca17e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:338eb02bc88078a65bdd4e456eaf2c799c29b341c1cd392fc51adac2fceca17e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:fb9ba09f7078f215f42255bef772d8af3ad0ac29891a3332a11d621557e5ff0a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MSFT",
     "counterparty_id": "legal:fb9ba09f7078f215f42255bef772d8af3ad0ac29891a3332a11d621557e5ff0a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:046f635233b45189c7f4e5c897c07d9c8e884567942dd1d1daf62f0c8674f55b",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:046f635233b45189c7f4e5c897c07d9c8e884567942dd1d1daf62f0c8674f55b",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:05454abd32cdac82bab418cf9546fe10b467bb8407ef51d0a7616f48ad9017b9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:05454abd32cdac82bab418cf9546fe10b467bb8407ef51d0a7616f48ad9017b9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:119ee23d01cf45f14345193f17e176e1c92bc5ae29cfe81410c47f681fffa3b4",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:119ee23d01cf45f14345193f17e176e1c92bc5ae29cfe81410c47f681fffa3b4",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1993bb8c4a5ea159ce9549ac0fb380954f61cfe5f0f5dcfb5d2a1c06cb1bfd3f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1993bb8c4a5ea159ce9549ac0fb380954f61cfe5f0f5dcfb5d2a1c06cb1bfd3f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1d2311ff8e3e45bd86ed621e43585e8ac8a0a644948278eb4d7430f05042490f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1d2311ff8e3e45bd86ed621e43585e8ac8a0a644948278eb4d7430f05042490f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1d27f52799660e4b65f38a682fe5ff04419efed3c95a74eaebc66a57db4c4d01",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1d27f52799660e4b65f38a682fe5ff04419efed3c95a74eaebc66a57db4c4d01",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1f80e9f325994cc6664e5c82304eff595d314e51e930ef4e4c01309722d839bc",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:1f80e9f325994cc6664e5c82304eff595d314e51e930ef4e4c01309722d839bc",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:22dbce2ac22d4b61dab950fd3bfa3bba1fe74c8785db0d42ea53cd287add9691",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:22dbce2ac22d4b61dab950fd3bfa3bba1fe74c8785db0d42ea53cd287add9691",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:2697e316f7561cfbe6a5a858941c6ba3cc1b760c01cbe5813a6c0e7b2f5f6c0f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:2697e316f7561cfbe6a5a858941c6ba3cc1b760c01cbe5813a6c0e7b2f5f6c0f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:29dede6066dbbf1007b7a8e8345325b92e08758a8aa980df03fd02d2cc62f912",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:29dede6066dbbf1007b7a8e8345325b92e08758a8aa980df03fd02d2cc62f912",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:2b07295ce6dba1d49ab6b41044dc563fe886415ddcb09714d4cd3cceb75ef4b7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:2b07295ce6dba1d49ab6b41044dc563fe886415ddcb09714d4cd3cceb75ef4b7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:2d438cc7c5b00da42d3168daf5a8883ac61a1a2cb5e27b161acc346c969a14ea",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:2d438cc7c5b00da42d3168daf5a8883ac61a1a2cb5e27b161acc346c969a14ea",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:393ee16b4b18bb0e0fd825a70fdeaaefbe11c622ed773307f85e4afc53c3100b",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:393ee16b4b18bb0e0fd825a70fdeaaefbe11c622ed773307f85e4afc53c3100b",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:3ff2744cd4196629af329d589e8fd15f709d1a3fed19154d8400c8cdf733c9e4",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:3ff2744cd4196629af329d589e8fd15f709d1a3fed19154d8400c8cdf733c9e4",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:471699204a842b537d0f4fb45a267d85259eb74e8f42c05758ff55ec3fb68ac2",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:471699204a842b537d0f4fb45a267d85259eb74e8f42c05758ff55ec3fb68ac2",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:54b537aed96f4b036d3fff4d369dcff67c0a790438b355ec4729c3674def9af0",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:54b537aed96f4b036d3fff4d369dcff67c0a790438b355ec4729c3674def9af0",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:6f6841d79507b75afe8f0f602516678006580d0c073d6c5dabd85e8a1ada5a8e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:6f6841d79507b75afe8f0f602516678006580d0c073d6c5dabd85e8a1ada5a8e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:751923031fd96d7b1a0ce7e9f54bbbe92b89d376981df067f87aa09791b0571a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:751923031fd96d7b1a0ce7e9f54bbbe92b89d376981df067f87aa09791b0571a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:769d7ae90d1416d4a745b647d015a0537c18ecab13c6e226a79db93df270b788",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:769d7ae90d1416d4a745b647d015a0537c18ecab13c6e226a79db93df270b788",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:7ea6e3dc618de9dab968fdf48eaa5c0cc7ec5e0b243de40fddd77f719b6084cc",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:7ea6e3dc618de9dab968fdf48eaa5c0cc7ec5e0b243de40fddd77f719b6084cc",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:8394c2644d28188c19a4156034543ce04383c6e872c11c1cfd5e989d6fdf398e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:8394c2644d28188c19a4156034543ce04383c6e872c11c1cfd5e989d6fdf398e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:8681bb2604edba345dc1b3a5bb5320609c7550f46291471c3b7c031ab118fcb7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:8681bb2604edba345dc1b3a5bb5320609c7550f46291471c3b7c031ab118fcb7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:93d68331e2e002e5a0b075b8fad1ba1842df3725c508ae2d5c330fdf9ed3217a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:93d68331e2e002e5a0b075b8fad1ba1842df3725c508ae2d5c330fdf9ed3217a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:9a019be0c6ee479f0d17d599ef320e63d149e4ee9753ac47939a831ec55fa0b6",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:9a019be0c6ee479f0d17d599ef320e63d149e4ee9753ac47939a831ec55fa0b6",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:afacd0ed79d3096d1a6b394590819dea76c16e61a1b0fb0dc6a7049643a8473b",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:afacd0ed79d3096d1a6b394590819dea76c16e61a1b0fb0dc6a7049643a8473b",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:b49cae7026b2d94d03ebf0a83830f6e58daf1e3f0c3f30a4131160158bf9b65c",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:b49cae7026b2d94d03ebf0a83830f6e58daf1e3f0c3f30a4131160158bf9b65c",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c0694b12d0b309936ea270f02334116a838e7d2efb7504624c468800403fbb2f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c0694b12d0b309936ea270f02334116a838e7d2efb7504624c468800403fbb2f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c0e457fb211572d5fa7855256961055c598f44e4b664cbd4c306dbd8d7219f8d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c0e457fb211572d5fa7855256961055c598f44e4b664cbd4c306dbd8d7219f8d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c3b95ce1136908f88e21b276a9b92f07fd862d1dafb4bf15fa2d2a3c214a6ab7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c3b95ce1136908f88e21b276a9b92f07fd862d1dafb4bf15fa2d2a3c214a6ab7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c93b4bbc2c01af71e5dbc685ee2293f8147dbbe78e5f321468c26c11bdec11f7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:c93b4bbc2c01af71e5dbc685ee2293f8147dbbe78e5f321468c26c11bdec11f7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:ca27a4e5a71b7a6d780c0107dcb67d0700aa5730f4b4413dbdedd39a43b7ede4",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:ca27a4e5a71b7a6d780c0107dcb67d0700aa5730f4b4413dbdedd39a43b7ede4",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:cc3ffe8ad779d4f192681f681b1a309e2a2590fd0a75db5297f873993a7b2f2f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:cc3ffe8ad779d4f192681f681b1a309e2a2590fd0a75db5297f873993a7b2f2f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:d59dd293ed42053d5a524a97ac1b6dd39805a51115cec2d83b8e5c1b01b71b48",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:d59dd293ed42053d5a524a97ac1b6dd39805a51115cec2d83b8e5c1b01b71b48",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:dfbd88bb2b5be14d6b0637915fd8a03cac39fc46321b2bdef9517b4bc3f9d49a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:dfbd88bb2b5be14d6b0637915fd8a03cac39fc46321b2bdef9517b4bc3f9d49a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:e9fa4a0ad62c3c7a751d5a6033d0cf77669710bde68bb537136530647732523a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:e9fa4a0ad62c3c7a751d5a6033d0cf77669710bde68bb537136530647732523a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:fb562449c924a587fff5f462489cee4e0f2426d4750328fe28c841b53de29fdf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:fb562449c924a587fff5f462489cee4e0f2426d4750328fe28c841b53de29fdf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:fb84e20503a50e2ae99f278c6d2fdd88f24350b3b904addc48115731f9686546",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "ORCL",
     "counterparty_id": "legal:fb84e20503a50e2ae99f278c6d2fdd88f24350b3b904addc48115731f9686546",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:3ed8b6cfef4faac1791e272860579c3ce3f935d7cd9515da57489c04b40be9ca",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:3ed8b6cfef4faac1791e272860579c3ce3f935d7cd9515da57489c04b40be9ca",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:46e6fccbbb484182e2b7b1a3de3fae350caec1eabc446c2aa6df9e7db1c963cf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:46e6fccbbb484182e2b7b1a3de3fae350caec1eabc446c2aa6df9e7db1c963cf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:4ab1e53061fd038f5ed204a5c27ebc43c7fc86b9c2eaa3cc1062f939f1f36ff5",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:4ab1e53061fd038f5ed204a5c27ebc43c7fc86b9c2eaa3cc1062f939f1f36ff5",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:4f59ee4edc7afa4a967f664b6a36563135128e1b1db9f7c6eb6181ceb970e4a7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:4f59ee4edc7afa4a967f664b6a36563135128e1b1db9f7c6eb6181ceb970e4a7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:52bbcf04f83238b4a5c881f096237b0b75ed292470af3809abf193dcdb1d029e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:52bbcf04f83238b4a5c881f096237b0b75ed292470af3809abf193dcdb1d029e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:57e539a30bc75bc97e95955fe44b68c338f05ac2737e0df85a7abaf48d93802d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:57e539a30bc75bc97e95955fe44b68c338f05ac2737e0df85a7abaf48d93802d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:5f5f9aa4dede04647659dbd6c231a035416b4b506aab9660e5c8d20001cc298a",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:5f5f9aa4dede04647659dbd6c231a035416b4b506aab9660e5c8d20001cc298a",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:6716b0319844ecf3ee73302cb35d5fa363a1a0c71d7e3009f3ec48c5e2f5cafc",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:6716b0319844ecf3ee73302cb35d5fa363a1a0c71d7e3009f3ec48c5e2f5cafc",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:6864284acf9260b8de106bf02af13ac2dafc6409e05ac425ef294d2d4800eb6a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:6864284acf9260b8de106bf02af13ac2dafc6409e05ac425ef294d2d4800eb6a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:6cd55fa51bc41a6951371740c757b4ad95d72a49fcf93b652b73a052010621b0",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:6cd55fa51bc41a6951371740c757b4ad95d72a49fcf93b652b73a052010621b0",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:77e7012db1f0ae42025f8ef9266609aee3092f9a1832cecd19380dd3c6b69de7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:77e7012db1f0ae42025f8ef9266609aee3092f9a1832cecd19380dd3c6b69de7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:78a2d4da17c816c6658a0e01c620ef2dea806683807c8a157037d10064e83014",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:78a2d4da17c816c6658a0e01c620ef2dea806683807c8a157037d10064e83014",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:7b280f9df504a8191ce0752fb8b53fbd6745280c05272155451197b2056d7614",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:7b280f9df504a8191ce0752fb8b53fbd6745280c05272155451197b2056d7614",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:8758b6daf29895f2d9acd6337e1a2206f77cceb8d98e84e8ad80a292f981cd78",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:98ac366abd159364b5bb4dda0f8e6cdbffe13a09ce833f6a87eb4953ef6b63ed",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:98ac366abd159364b5bb4dda0f8e6cdbffe13a09ce833f6a87eb4953ef6b63ed",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:9a9b50c1eaca86a4b7023c99970b0a036b9bd7299890b77c2e4eb33926c1a602",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:9a9b50c1eaca86a4b7023c99970b0a036b9bd7299890b77c2e4eb33926c1a602",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:9d5b58f7f4ec42f4fe3164e8e41d41628e2b86f2fb0506fa6696d792af349e75",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:9d5b58f7f4ec42f4fe3164e8e41d41628e2b86f2fb0506fa6696d792af349e75",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:9e91d32f9bfff240328b42a5424f2300c9e52aa45105a0b505713f1b50efbcbc",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:9e91d32f9bfff240328b42a5424f2300c9e52aa45105a0b505713f1b50efbcbc",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:b8e729fa22c3eea4a9fc322f1107a4e7860093f2261f91f6b52c3ce20a6de7a0",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:b8e729fa22c3eea4a9fc322f1107a4e7860093f2261f91f6b52c3ce20a6de7a0",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:bc4b1bbfd1c463cce6943940420a04f4ad1bf9cca6b7dc1440d951bdeddb7728",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:bc4b1bbfd1c463cce6943940420a04f4ad1bf9cca6b7dc1440d951bdeddb7728",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:ced203b7287a1e976801e03791d6424c95ced0685886c72d8bff0088540f0697",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:ced203b7287a1e976801e03791d6424c95ced0685886c72d8bff0088540f0697",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:d216a43550261768c883c0a485b9a07708e18732619dbf035dcbbfb8f62e51a7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:d216a43550261768c883c0a485b9a07708e18732619dbf035dcbbfb8f62e51a7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:d225c2d7b74fe8754fa362b65816f5968ae0b4dc9b7679fc2374c549dc48d010",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:d225c2d7b74fe8754fa362b65816f5968ae0b4dc9b7679fc2374c549dc48d010",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:d5608ecc4a72a867bf4e1dc9f398d271f0a430f17bea7a0d25b31b20f5aa9459",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:d5608ecc4a72a867bf4e1dc9f398d271f0a430f17bea7a0d25b31b20f5aa9459",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:e015c27c909a34b0c43a47f65ba1ecee9d5cd50a179e3dc66322fdbaebd47da5",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "legal:e015c27c909a34b0c43a47f65ba1ecee9d5cd50a179e3dc66322fdbaebd47da5",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:ed7483e4299aea7a0b835af962fbfdb9b863f2c398fd33ceb1cc1731a2256a6d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:ed7483e4299aea7a0b835af962fbfdb9b863f2c398fd33ceb1cc1731a2256a6d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:fb562449c924a587fff5f462489cee4e0f2426d4750328fe28c841b53de29fdf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "CRWV",
     "counterparty_id": "legal:fb562449c924a587fff5f462489cee4e0f2426d4750328fe28c841b53de29fdf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:0604a13285e46c582e11106d0499014db41b9c987f073cbb3b06d10cf218100f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:0604a13285e46c582e11106d0499014db41b9c987f073cbb3b06d10cf218100f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:1b6bc30eac53b8ddeddb648c780c7320f21db34cd94191423d6224e1f4b61083",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:1b6bc30eac53b8ddeddb648c780c7320f21db34cd94191423d6224e1f4b61083",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:25e9995df975bdb269ef39fcc8719d26fe6c910b8655432b38e93f0cd4e31b6f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:25e9995df975bdb269ef39fcc8719d26fe6c910b8655432b38e93f0cd4e31b6f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:45c52f593efb27cfab349b7570dac6af82dab42b8445768a0a1a5f6ae57ff4cf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:45c52f593efb27cfab349b7570dac6af82dab42b8445768a0a1a5f6ae57ff4cf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "legal:510d4006ce0584bee213c6760367c95c64cd3ec0eef07f37096228c37272087e",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "legal:510d4006ce0584bee213c6760367c95c64cd3ec0eef07f37096228c37272087e",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:56a67aa42283903db673a5a2fb0c1eca41f965f2005fe3e22f330eebc0d83ed9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:56a67aa42283903db673a5a2fb0c1eca41f965f2005fe3e22f330eebc0d83ed9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:58caace17798a4dadcedad35536d9492b8778afa0566c51e8ecdcfbbfe920b53",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:58caace17798a4dadcedad35536d9492b8778afa0566c51e8ecdcfbbfe920b53",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:6496574710177bb0eacb05609468d99926636fe418c3bedc6fd05b8fb591e2f4",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:6496574710177bb0eacb05609468d99926636fe418c3bedc6fd05b8fb591e2f4",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:76d40ab0a02a23f43b57e2cfdf8e9325af337db3017710fd55fd2e2d1a1ec622",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:76d40ab0a02a23f43b57e2cfdf8e9325af337db3017710fd55fd2e2d1a1ec622",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:a4bc7117d0453c38fdab0bf4b2391c10669fb94b38570787c882c4977e16ef46",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:a4bc7117d0453c38fdab0bf4b2391c10669fb94b38570787c882c4977e16ef46",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:d5608ecc4a72a867bf4e1dc9f398d271f0a430f17bea7a0d25b31b20f5aa9459",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:d5608ecc4a72a867bf4e1dc9f398d271f0a430f17bea7a0d25b31b20f5aa9459",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:e2b996985a585a194e8c3627afc27bdb02642ff9d032db9bddc74b8101e4d6c9",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:e2b996985a585a194e8c3627afc27bdb02642ff9d032db9bddc74b8101e4d6c9",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:e8e6c14fd9f0f6302e172015238b036eb4e362f61917987085d93ed607ac49d8",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:e8e6c14fd9f0f6302e172015238b036eb4e362f61917987085d93ed607ac49d8",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:eac6fd684b0516a0186df57b316a1b4887ead468b86feb9426e32385d3116b0a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:eac6fd684b0516a0186df57b316a1b4887ead468b86feb9426e32385d3116b0a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:fba57f88c1dcccba14e46ee82be33eb02be403ce8ace426ef399ae9b92371aff",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "SPCX",
     "counterparty_id": "legal:fba57f88c1dcccba14e46ee82be33eb02be403ce8ace426ef399ae9b92371aff",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:2363457300eabfcc8daf33d89a66c3e964bfa3a20d8505598e0c021c281a0545",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:2363457300eabfcc8daf33d89a66c3e964bfa3a20d8505598e0c021c281a0545",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:2941bd1747509e29b62d73e6a430adfea23271bca9d51205c5bd283e6078eef3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:2941bd1747509e29b62d73e6a430adfea23271bca9d51205c5bd283e6078eef3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:330fdf392bab320d7b924131d53a6ff66c3bdb98d02ab91b0e650abacadd9223",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:330fdf392bab320d7b924131d53a6ff66c3bdb98d02ab91b0e650abacadd9223",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:7285e1c5a1a703df46667805b0b46507c1f9ffdec4d5d72feb871f623a75ce18",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:7285e1c5a1a703df46667805b0b46507c1f9ffdec4d5d72feb871f623a75ce18",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:7d773eb22eb9d5e69970626c754563a46aaaefc61a88d914d104f002d71714a7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:7d773eb22eb9d5e69970626c754563a46aaaefc61a88d914d104f002d71714a7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:9070e1c265cc341daede4206687354be48cb206d649027e1d4ec21a9b2007592",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:9070e1c265cc341daede4206687354be48cb206d649027e1d4ec21a9b2007592",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:93cca98f23ef203fe3882ca440564bc8c17142e806c90bce643c75d41b78e86a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:93cca98f23ef203fe3882ca440564bc8c17142e806c90bce643c75d41b78e86a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:b9497fb5b9dd88cbbf4881304e2af95ab650b1b977c7a3beb28349561e1cdaa4",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:b9497fb5b9dd88cbbf4881304e2af95ab650b1b977c7a3beb28349561e1cdaa4",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:cd9e913566d6d51a63958e7453c9f4cd62adc6b9e9b907b912f32840aad08b92",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "legal:cd9e913566d6d51a63958e7453c9f4cd62adc6b9e9b907b912f32840aad08b92",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:d8b47c0812611d30d30fa784f8694c9504352259fdabc4fd5f03b9f305717210",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:d8b47c0812611d30d30fa784f8694c9504352259fdabc4fd5f03b9f305717210",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:dd8fc9d65ec1e4d24299f40cc7272f3e4e8563a9832673e68dceaf23c839eef6",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:dd8fc9d65ec1e4d24299f40cc7272f3e4e8563a9832673e68dceaf23c839eef6",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AMD",
     "counterparty_id": "legal:f5215226d0b2c4ac4bc9deee43bef525cccdbc2f9fa909b3a9b4da87792c3d0e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "MRVL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "MRVL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:06120a553bf48f583490c7d47a551e8dde24434c43a4bfc0ba12a3013a07887e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:06120a553bf48f583490c7d47a551e8dde24434c43a4bfc0ba12a3013a07887e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:0a9d3a34115c169ef8c6faaf6bb7fb6b3708fa477e8f90727115a1cdb8865778",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:0a9d3a34115c169ef8c6faaf6bb7fb6b3708fa477e8f90727115a1cdb8865778",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:0aa8b59b597458eeac5562d7e63d696559005df1a8fd723d664cf1b068c56eb4",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:0aa8b59b597458eeac5562d7e63d696559005df1a8fd723d664cf1b068c56eb4",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:2306a0887ebb43b56df8b98b7815f8073b36365ea313598213a96654a647797c",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:2306a0887ebb43b56df8b98b7815f8073b36365ea313598213a96654a647797c",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:2374c953df5613da579b32080f984aed741a122b320269da9e320a789adff938",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:2374c953df5613da579b32080f984aed741a122b320269da9e320a789adff938",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:28acb638c03e10daed85ee436600e00e2ddfbde46a4c9a2b74d1e382e83dd167",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:28acb638c03e10daed85ee436600e00e2ddfbde46a4c9a2b74d1e382e83dd167",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:2941bd1747509e29b62d73e6a430adfea23271bca9d51205c5bd283e6078eef3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:2941bd1747509e29b62d73e6a430adfea23271bca9d51205c5bd283e6078eef3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:59b934d3efe43a9758bf9dccf55b7308d782e3e03e3c3658918ec5631084575e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:59b934d3efe43a9758bf9dccf55b7308d782e3e03e3c3658918ec5631084575e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:5d2cf2eb778cde6da1c7257988461bf2eb6a8d5dc53df564fa4c8441d290415d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:5d2cf2eb778cde6da1c7257988461bf2eb6a8d5dc53df564fa4c8441d290415d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:638d7f41405bef682b9449356061a8a9ce0deb263f45e06f42efbb54ba9e5c92",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:638d7f41405bef682b9449356061a8a9ce0deb263f45e06f42efbb54ba9e5c92",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:63b9282a6ea66cea5da1fd192772fbcdfd6956bc09648bd80d14d35b39c72b1d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:63b9282a6ea66cea5da1fd192772fbcdfd6956bc09648bd80d14d35b39c72b1d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:65070912a3d70b51085ad3175a87be6ac14cfa39f3ecd538b1030ff5fded575e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:65070912a3d70b51085ad3175a87be6ac14cfa39f3ecd538b1030ff5fded575e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:6a57b8130cadf6cb90e8e1e5e8bfa5fd026ce9954db5b0523d9fef6f0d132f91",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:6a57b8130cadf6cb90e8e1e5e8bfa5fd026ce9954db5b0523d9fef6f0d132f91",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:7059ba3d0da72266eaf07c278e5afce4cc160ed25655772322fb51a74a1c300d",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:7059ba3d0da72266eaf07c278e5afce4cc160ed25655772322fb51a74a1c300d",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:8cd38e602391aafc2e898ef16206b7fe0019141b49b035f099c6c90d70be5e1f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:8cd38e602391aafc2e898ef16206b7fe0019141b49b035f099c6c90d70be5e1f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:8d54eee720f48030c41a264be16742dd983678e690d20ae12f399760929367e3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:8d54eee720f48030c41a264be16742dd983678e690d20ae12f399760929367e3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:93d5e62e80026dc4148fd80edd93d89b3ef7c77fcf55bc1f9a1f161da2618c1c",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:93d5e62e80026dc4148fd80edd93d89b3ef7c77fcf55bc1f9a1f161da2618c1c",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:9c7e57ba09230c3ac36f8ad82c8652a4f17856186bb14e34e17a7a0b749d6d46",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:9c7e57ba09230c3ac36f8ad82c8652a4f17856186bb14e34e17a7a0b749d6d46",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:9f5acf77d25f5650e54c4801a59575b6bbbb7584226c2827f0a32423b504539f",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:9f5acf77d25f5650e54c4801a59575b6bbbb7584226c2827f0a32423b504539f",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:a354f009a3627ac586b66b99719c909391a068245fddf184699613dc612685de",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:a354f009a3627ac586b66b99719c909391a068245fddf184699613dc612685de",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:c00d80ee7c6a85c55418a00f8afe0ee09438fcca8b14b28a9459d61a1aa40cf3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:c00d80ee7c6a85c55418a00f8afe0ee09438fcca8b14b28a9459d61a1aa40cf3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:c764403a64f1947bdbf39d3faa5e71d534718c0d40eee2c1f526a0df09e62499",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:c764403a64f1947bdbf39d3faa5e71d534718c0d40eee2c1f526a0df09e62499",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:cb329f5d2d050ec3d6a37431795dd6cc47f46cb0b9bd0c64a6289df97dee0ee3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:cb329f5d2d050ec3d6a37431795dd6cc47f46cb0b9bd0c64a6289df97dee0ee3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d2f9c0d676dfc724b5717bcadc28efdb3e75974c6db0ba58052e53612054dcab",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d2f9c0d676dfc724b5717bcadc28efdb3e75974c6db0ba58052e53612054dcab",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d56527b62b01e2a5ef8b5dff4e2c239fa7c7a68e911d8b630fe2d011fcacb774",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d56527b62b01e2a5ef8b5dff4e2c239fa7c7a68e911d8b630fe2d011fcacb774",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d87af295d9209d3e79a1956212a39a1c7f688a5b1bfbc5d85141f3a594a6a34b",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d87af295d9209d3e79a1956212a39a1c7f688a5b1bfbc5d85141f3a594a6a34b",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d968fe9bc57684a60887c5f15f993411b2ea9e23e9de4321cb87fd7255ba34c6",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:d968fe9bc57684a60887c5f15f993411b2ea9e23e9de4321cb87fd7255ba34c6",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:e00984bb57f395a6d4bc079144b103d9f71ac3396d4cc07d8870d6286d14c808",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:e00984bb57f395a6d4bc079144b103d9f71ac3396d4cc07d8870d6286d14c808",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:e1065736440e1fcfa6d1861b278db3b01da3b7bf449ef53dd1bbf9289ff2d5da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:e1065736440e1fcfa6d1861b278db3b01da3b7bf449ef53dd1bbf9289ff2d5da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:e1e673a96438fedf4b3973b725fafab2c87426d186349aa11007e574b10a2aae",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:e1e673a96438fedf4b3973b725fafab2c87426d186349aa11007e574b10a2aae",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:f2e9333112ec07f56abfc38baabe01568338d88b9b64762196db0f0f20ef5393",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:f2e9333112ec07f56abfc38baabe01568338d88b9b64762196db0f0f20ef5393",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:fb9ba09f7078f215f42255bef772d8af3ad0ac29891a3332a11d621557e5ff0a",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:fb9ba09f7078f215f42255bef772d8af3ad0ac29891a3332a11d621557e5ff0a",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:fbebcce09de084e7f3afc5e804b413d3fdb7f957bc8ede6445467d3f0999c5d2",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "AVGO",
     "counterparty_id": "legal:fbebcce09de084e7f3afc5e804b413d3fdb7f957bc8ede6445467d3f0999c5d2",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "AMD",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "AMD",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "AMZN",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "AMZN",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "AVGO",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "AVGO",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "CRWV",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "CRWV",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "GOOGL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "GOOGL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "LAB:Anthropic",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "LAB:OpenAI",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "META",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "META",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "MSFT",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "MSFT",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "NVDA",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "NVDA",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "ORCL",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "ORCL",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "SPCX",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "SPCX",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:1134a1ea8e914443dd5b283260fbf82ffa66f7c351595610af6506d0ec3697fa",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:1134a1ea8e914443dd5b283260fbf82ffa66f7c351595610af6506d0ec3697fa",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:1263efe53efb551d8f4e408dd73d6f3298127f7c0d322408489d8f96d53e78b3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:1263efe53efb551d8f4e408dd73d6f3298127f7c0d322408489d8f96d53e78b3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:2941bd1747509e29b62d73e6a430adfea23271bca9d51205c5bd283e6078eef3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:2941bd1747509e29b62d73e6a430adfea23271bca9d51205c5bd283e6078eef3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:432b281f92dfdec2ca2c4da0e4fded8bd7d55664f7a3e9e09a33264e01f6185e",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:432b281f92dfdec2ca2c4da0e4fded8bd7d55664f7a3e9e09a33264e01f6185e",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:65fcd4d06df111933480cbb8600efab6b0aec53359aa3dc299dc507ff4b13439",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:65fcd4d06df111933480cbb8600efab6b0aec53359aa3dc299dc507ff4b13439",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:67e69804403c538d9a24fb381ff668bc6b2e6d235bc0b978ea250bb45d42ac37",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:67e69804403c538d9a24fb381ff668bc6b2e6d235bc0b978ea250bb45d42ac37",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:79c73089075933509235c9520e6e50f884b7156e854f238f7ca7c599ce278ad3",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:79c73089075933509235c9520e6e50f884b7156e854f238f7ca7c599ce278ad3",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:7b54e0ad2cc6e927ceb0cf723e9c2fc36e0384a376eb4a3586fbee2bdf8cf828",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:7b54e0ad2cc6e927ceb0cf723e9c2fc36e0384a376eb4a3586fbee2bdf8cf828",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:8ef59282bc047cbda1682b8b76e72ddfb081b3d13d784e812b33cfe4d793b1b7",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:8ef59282bc047cbda1682b8b76e72ddfb081b3d13d784e812b33cfe4d793b1b7",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:90d4b9311ab0076887a872bc441eb6b8635dc2a538245d16384fa2da625acd28",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:90d4b9311ab0076887a872bc441eb6b8635dc2a538245d16384fa2da625acd28",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:a354f009a3627ac586b66b99719c909391a068245fddf184699613dc612685de",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:a354f009a3627ac586b66b99719c909391a068245fddf184699613dc612685de",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:c28ad1989f56ae36d4d07b73779f4d3f5dd3170d5a9883523a6446b08168ed20",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:c28ad1989f56ae36d4d07b73779f4d3f5dd3170d5a9883523a6446b08168ed20",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:c41ad742fc13fd7dfb42e1c7cb67c63167d138be27a57662514f56e7dd184f76",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:c41ad742fc13fd7dfb42e1c7cb67c63167d138be27a57662514f56e7dd184f76",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:cb7b567a7e634e4534508119e24f0f1c94c35470dbfebb771379f62c45d4e880",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:cb7b567a7e634e4534508119e24f0f1c94c35470dbfebb771379f62c45d4e880",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:dc7105cb53269fa4a86ce5ee482b3823d432638b40f4f915376c2ded0ec34705",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:dc7105cb53269fa4a86ce5ee482b3823d432638b40f4f915376c2ded0ec34705",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:e1065736440e1fcfa6d1861b278db3b01da3b7bf449ef53dd1bbf9289ff2d5da",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:e1065736440e1fcfa6d1861b278db3b01da3b7bf449ef53dd1bbf9289ff2d5da",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:fb562449c924a587fff5f462489cee4e0f2426d4750328fe28c841b53de29fdf",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:fb562449c924a587fff5f462489cee4e0f2426d4750328fe28c841b53de29fdf",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:fbebcce09de084e7f3afc5e804b413d3fdb7f957bc8ede6445467d3f0999c5d2",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:fbebcce09de084e7f3afc5e804b413d3fdb7f957bc8ede6445467d3f0999c5d2",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:fc9f474db19f520e51412b9eea37af99b99a0f8ac053d94b1b6c94dab1ed8d5c",
     "statement": "E1",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   },
   {
     "group_id": "MRVL",
     "counterparty_id": "legal:fc9f474db19f520e51412b9eea37af99b99a0f8ac053d94b1b6c94dab1ed8d5c",
     "statement": "E2",
     "outcome": "indeterminate",
-    "reason": "not_processed"
+    "reason": "complete_public_attribution_not_established"
   }
 ]

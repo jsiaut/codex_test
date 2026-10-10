@@ -5,6 +5,9 @@ from .database import TABLES
 
 
 def run(db,root,as_of):
+    # Enrichment rows use their snapshot timestamp as as_of. Keep it as the
+    # information cutoff before normalizing the delivery's run timestamp.
+    db.execute('UPDATE measures SET information_cutoff=COALESCE(information_cutoff,as_of),as_of=?',[as_of])
     checks={}
     checks['eight_tables']=len(TABLES)==8
     checks['no_value_for_ND']=db.execute("SELECT count(*) FROM measures WHERE status IN ('not_determinable','blocked_overlap','not_applicable') AND value IS NOT NULL").fetchone()[0]==0
@@ -17,8 +20,8 @@ def run(db,root,as_of):
     checks['no_nonfinancial_F6']=db.execute("SELECT count(*) FROM measures m JOIN json_each(m.lineage) j ON true JOIN observations o ON j.value::VARCHAR=to_json(o.observation_id)::VARCHAR WHERE m.measure='fragility_event' AND m.breakdown_key='F6' AND o.model_quantity IS DISTINCT FROM 'investment_impairment'").fetchone()[0]==0
     # Numeric lineage resolves to immutable facts, authored observations, links
     # or official metadata documents; bad evidence is localized, never set 0.
-    facts={r['fact_id']:r for r in rows(db,'SELECT fact_id,document_id,accession,locator,is_tagged,tier,filing_status,currency,unit,accounting_framework,source_perspective,entity_id,reporting_scope FROM facts')}
-    obs={r['observation_id']:r for r in rows(db,'SELECT observation_id,document_id,accession,locator,tier,filing_status,currency,unit,accounting_framework,source_perspective,entity_id,abstained,tagged_fact_id FROM observations')}
+    facts={r['fact_id']:r for r in rows(db,'SELECT fact_id,document_id,accession,locator,is_tagged,tier,filing_status,currency,unit,accounting_framework,source_perspective,entity_id,reporting_scope,knowledge_date FROM facts')}
+    obs={r['observation_id']:r for r in rows(db,'SELECT observation_id,document_id,accession,locator,tier,filing_status,currency,unit,accounting_framework,source_perspective,entity_id,abstained,tagged_fact_id,knowledge_date FROM observations')}
     links={r['link_id']:r for r in rows(db,'SELECT * FROM links')}
     docs={r['document_id']:r for r in rows(db,'SELECT * FROM documents')}
     blocked={r[0] for r in db.execute('SELECT observation_id FROM excluded_observations').fetchall()}
@@ -46,6 +49,9 @@ def run(db,root,as_of):
         elif not keys:reason='missing_numeric_lineage'
         elif any(t.get('tier') in ('E','F') or t.get('filing_status')!='filed' for t in terms):reason='inadmissible_numeric_evidence'
         elif any(t['source_id'] in blocked or t['source_id'] in ineligible or t.get('abstained') for t in terms):reason='quarantined_numeric_dependency'
+        elif m['view']=='as_known' and (not m['information_cutoff'] or any(
+            t.get('knowledge_date') and str(t['knowledge_date'])>str(m['information_cutoff'])[:10] for t in terms)):
+            reason='source_not_known_at_information_cutoff'
         # Ratios and cash sums operate on one currency, framework and scope;
         # event/logical descriptions combine evidence without adding amounts.
         if m.get('unit')!='event' and m['measure'] not in ('depreciation_life_published','customer_concentration_anonymous','investment_gain_loss'):
@@ -62,6 +68,7 @@ def run(db,root,as_of):
       SELECT 1 FROM measures m WHERE m.measure::VARCHAR=e.measure AND m.group_id=e.group_id AND m.counterparty_id=e.counterparty_id
        AND m.period_start=e.period_start AND m.period_end=e.period_end AND m.view::VARCHAR=e.view AND m.term=e.term)''').fetchone()[0]
     checks['expected_cells_present']=coverage==0
+    checks['no_future_numeric_as_known']=db.execute("SELECT count(*) FROM measures WHERE view='as_known' AND value IS NOT NULL AND (information_cutoff IS NULL OR knowledge_date>information_cutoff::DATE)").fetchone()[0]==0
     # Failures are not generalized on most groups and most periods.
     mismatches=rows(db,"SELECT control,group_id,count(*) n FROM controls WHERE status='mismatch' AND tolerance_basis!='inferred' GROUP BY ALL")
     generalized=db.execute("""WITH gp AS (SELECT group_id,period_start,period_end,bool_or(status='mismatch') failed

@@ -41,8 +41,8 @@ def run(db,as_of):
            JOIN ttm_quantities_{view} da ON op.group_id=da.group_id AND op.anchor_start=da.anchor_start AND op.anchor_end=da.anchor_end
             AND op.unit=da.unit AND op.reporting_scope=da.reporting_scope AND op.accounting_framework=da.accounting_framework
             AND da.model_quantity='depreciation_amortization' AND da.window_rank=0 WHERE d.terms=2''')
-        # No proxy for the counterparty-cash financing total: current investment
-        # and debt notes were not read, even where an isolated flow is known.
+        # An isolated flow does not establish a complete counterparty-cash
+        # financing total or permit treating the unmatched remainder as zero.
         db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,term,value,unit,currency,status,
            coverage_state,knowledge_date,lineage,source_perspective,accounting_framework)
           WITH opening AS (SELECT group_id,quarter_start,quarter_end,unit,accounting_framework,

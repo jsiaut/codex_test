@@ -31,7 +31,7 @@ def resume(root,as_of):
     prepare_views(db,root,as_of)
     for t in AUX:db.execute('CREATE TEMP TABLE '+t+' AS SELECT * FROM read_parquet('+sql_literal(str(path/(t+'.parquet')))+')')
     from .extension_assembly import interpretations
-    interpretations(db,root,as_of)
+    interpretations(db,root,as_of,record_exclusions=False)
     db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM interpreted_observations o
       WHERE NOT abstained AND tier IN ('A','B','C','D') AND filing_status='filed'
        AND EXISTS (SELECT 1 FROM documents d WHERE d.document_id=o.document_id AND d.acceptance_datetime<=o.as_of)

@@ -11,11 +11,3274 @@
     "not_supported_search_incomplete": true,
     "no_nonfinancial_F6": true,
     "expected_cells_present": true,
+    "no_future_numeric_as_known": true,
     "no_generalized_accounting_failure": true,
     "criteria_frozen": true
   },
-  "localized_invalid_aggregates": [],
+  "localized_invalid_aggregates": [
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_cfo",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_cfo",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_cfo",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_cfo",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_cfo",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_cfo",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "capex_to_cfo",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_cfo",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_basic",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_basic",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_basic",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_basic",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_basic",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_basic",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "fcf_basic",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_basic",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_finance_leases",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "lease_not_commenced_bridge",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "lease_not_commenced_bridge",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "lease_not_commenced_bridge",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "exposure_matrix",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "exposure_matrix",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "exposure_matrix",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "exposure_matrix",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "receivables_collection_period",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "receivables_collection_period",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "receivables_collection_period",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "receivables_collection_period",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "receivables_collection_period",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "receivables_collection_period",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "receivables_collection_period",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "receivables_collection_period",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "receivables_collection_period",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "receivables_collection_period",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "receivables_collection_period",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "rpo_total",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "rpo_total",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "rpo_total",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "rpo_total",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "rpo_total",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "rpo_total",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "rpo_total",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "rpo_total",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "rpo_total",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "rpo_total",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_growth",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "revenue_growth",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "revenue_growth",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_growth",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "revenue_growth",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "revenue_growth",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "revenue_growth",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "investment_gain_loss",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "investment_gain_loss",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "liq_principal_due_to_cash",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_total",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_total",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_total",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_total",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_total",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "revenue_total",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "revenue_total",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "revenue_total",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "revenue_total",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "revenue_total",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "revenue_total",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "cfo",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "cfo",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "cfo",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "cfo",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_cash",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_cash",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_cash",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_cash",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_cash",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_cash",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "capex_cash",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_cash",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "finance_lease_principal_payments",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "fragility_event",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "fragility_event",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fragility_event",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "MSFT",
+      "measure": "fragility_event",
+      "period_end": "2020-12-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fragility_event",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "fragility_event",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "fragility_event",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "named_edge_coverage",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "named_edge_coverage",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "named_edge_coverage",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "exposure_matrix",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "exposure_matrix",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "exposure_matrix",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "exposure_matrix",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "exposure_matrix",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "lev_debt_and_leases_to_operating_income_plus_da",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_after_sbc",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_after_sbc",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_after_sbc",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_after_sbc",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_after_sbc",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "fcf_after_sbc",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "fcf_after_sbc",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "fcf_after_sbc",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "gross_margin",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "gross_margin",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "gross_margin",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "gross_margin",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "gross_margin",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "gross_margin",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "gross_margin",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "gross_margin",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "gross_margin",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "gross_margin",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "operating_margin",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "operating_margin",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "operating_margin",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "operating_margin",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "operating_margin",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "operating_margin",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "operating_margin",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_margin",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "operating_margin",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "operating_margin",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "operating_margin",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_revenue",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_revenue",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_revenue",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_revenue",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_revenue",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "capex_to_revenue",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "capex_to_revenue",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capex_to_revenue",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "working_capital",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "working_capital",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "working_capital",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "working_capital",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "working_capital",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "working_capital",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "working_capital",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "eq_equity_and_accumulated_deficit",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "cfo_net_income_gap",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "sbc_to_cfo",
+      "period_end": "2025-03-29",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "sbc_to_cfo",
+      "period_end": "2025-06-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "sbc_to_cfo",
+      "period_end": "2025-09-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "sbc_to_cfo",
+      "period_end": "2025-12-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "sbc_to_cfo",
+      "period_end": "2026-03-28",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AMD",
+      "measure": "sbc_to_cfo",
+      "period_end": "2026-06-27",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "AVGO",
+      "measure": "sbc_to_cfo",
+      "period_end": "2026-08-02",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "sbc_to_cfo",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "sbc_to_cfo",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "sbc_to_cfo",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2021-03-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2021-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2022-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2023-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2023-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2024-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2024-09-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "capitalized_interest",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "finance_lease_additions",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "GOOGL",
+      "measure": "operating_lease_rou_additions",
+      "period_end": "2025-06-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "operating_lease_rou_additions",
+      "period_end": "2021-10-31",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "operating_lease_rou_additions",
+      "period_end": "2023-07-30",
+      "reason": "source_not_known_at_information_cutoff"
+    },
+    {
+      "group_id": "NVDA",
+      "measure": "operating_lease_rou_additions",
+      "period_end": "2020-10-25",
+      "reason": "source_not_known_at_information_cutoff"
+    }
+  ],
   "accounting_mismatches": [
+    {
+      "control": "c7_cash_continuity",
+      "group_id": "CRWV",
+      "n": 1
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "MSFT",
+      "n": 1
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "CRWV",
+      "n": 5
+    },
     {
       "control": "c1_balance_components",
       "group_id": "AMD",
@@ -25,16 +3288,6 @@
       "control": "c14_eps_scale",
       "group_id": "MRVL",
       "n": 4
-    },
-    {
-      "control": "c7_cash_continuity",
-      "group_id": "CRWV",
-      "n": 1
-    },
-    {
-      "control": "c15_tax_rate",
-      "group_id": "CRWV",
-      "n": 5
     },
     {
       "control": "c15_tax_rate",
@@ -47,24 +3300,19 @@
       "n": 1
     },
     {
-      "control": "c2_cash_flow_components",
-      "group_id": "AMD",
-      "n": 2
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "AMD",
-      "n": 4
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "MSFT",
-      "n": 1
-    },
-    {
       "control": "c15_tax_rate",
       "group_id": "ORCL",
       "n": 4
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "AMD",
+      "n": 4
+    },
+    {
+      "control": "c2_cash_flow_components",
+      "group_id": "AMD",
+      "n": 2
     }
   ],
   "missing_expected_cells": 0,

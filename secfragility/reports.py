@@ -80,6 +80,17 @@ def render(db,root,as_of,source,verification):
                         key={k:c[k] for k in ['group_id','period_start','period_end','view','as_of','breakdown_key','variant']}
                         w.writerow(dict(key,measure=c['control'],term='none',number_id=number_id([key,c['control'],field]),record_kind='control',field=field,
                            published_value=fnum(c[field]),unit='equation_unit',**{k:t.get(k) for k in ['source_id','source_kind','accession','document_id','locator','is_tagged','tier','filing_status']}))
+        if extension:
+            for o in rows(db,'SELECT * FROM usable_observations WHERE amount IS NOT NULL'):
+                for field in ('amount','amount_upper'):
+                    if o[field] is None:continue
+                    for t in source(o['observation_id']):
+                        w.writerow(dict(number_id=number_id([o['observation_id'],field]),record_kind='note_component',
+                            measure=o['model_quantity'] or 'unclassified_authored_amount',group_id=o['group_id'],
+                            counterparty_id=o['counterparty_entity_id'] or 'none',period_start=o['period_start'],period_end=o['period_end'],
+                            view='source_observation',as_of=as_of,term='none',breakdown_key=o['measurement_basis'],
+                            variant=o['observation_id'],field=field,published_value=fnum(o[field]),unit=o['unit'],
+                            **{k:t.get(k) for k in ['source_id','source_kind','accession','document_id','locator','is_tagged','tier','filing_status']}))
     shutil.copy2(root/'tables/measures.parquet',audit/'measures.parquet');shutil.copy2(root/'tables/controls.parquet',audit/'controls.parquet')
     # Domain rules contain only normative rules, no production reasoning.
     (audit/'domain_rules.md').write_text('''# Règles du domaine appliquées
@@ -192,6 +203,9 @@ La comparaison avec le premier passage figure dans notes_complementaires.md. Les
       documented_financing_pairs=db.execute("SELECT count(DISTINCT from_group_id||'|'||to_group_id) FROM links WHERE edge_kind='amount' AND family='financing'").fetchone()[0])
     data['annex_e7_primary_reasons']=dict(e7motifs)
     data['recorded_coverage_conditions']=coverage_flags
+    if extension:
+        data['extension_scope']=sorted(opened(root))
+        data['extension_source_cutoff_unchanged']=as_of==json.loads((root/'work/extension_authorization.json').read_text())['source_as_of']
     data['elapsed_wall_seconds_since_first_sec_request']=str(Decimal(str((datetime.now(timezone.utc)-datetime.fromisoformat(manifest['first_sec_request'])).total_seconds())).quantize(Decimal('0.000001')))
     (root/'delivery_summary.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,default=str)+'\n')
     table_status='| Statut rang 1 | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in sorted(rank_status.items()))
@@ -211,7 +225,10 @@ La comparaison avec le premier passage figure dans notes_complementaires.md. Les
     queue=json.loads((root/'work/queue.json').read_text());classes=Counter(r['block_class'] for r in queue);items=Counter(r.get('item') or 'non renseigné' for r in queue if r['block_class']=='8k_item')
     maskednetwork={k:v for k,v in network.items() if k!='pause_violations'}
     na=json.loads((root/'work/nonadditive_counts.json').read_text());silent=[k for k,v in na.items() if not v]
-    delta=f'''# Rendement et limites du premier passage
+    local_reasons=Counter(r['reason'] for r in verification['localized_invalid_aggregates'])
+    delta=f'''# Rendement, changements et limites
+
+Exclusions locales de calcul après contrôle du lignage : {json.dumps(dict(local_reasons),ensure_ascii=False)}. Les valeurs concernées sont retirées avec un motif explicite ; la vue révisée conserve les sources admissibles à l’arrêt de l’exécution. Les dates de disponibilité de l’information et l’arrêt des sources restent distincts.
 
 Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage livre les tables et le dossier d’audit. Aucun événement n’est sommé ni transformé en score. Les événements datés sont dans synthesis.md et series.csv.
 
@@ -315,8 +332,17 @@ def extension_render(db,root,as_of,data):
         family_rows.append(f"| {labels[family]} | {len(keys)} | {sum((root/'work/observations'/(k+'.jsonl')).exists() for k in keys)} |")
     counts='| Table | Premier passage | Après extension |\n| --- | ---: | ---: |\n'+'\n'.join(
         f"| {name} | {baseline['tables'].get(name,0)} | {count} |" for name,count in data['tables'].items())
+    descriptions={
+        'exclude_vie_':'Créance de financement conservée ; attribution à une VIE retirée.',
+        'exclude_F4_ordinary_':'Remplacement ordinaire de facilité conservé ; événement F4 retiré.',
+        'exclude_F4_voluntary_':'Résiliation volontaire conservée ; événement F4 retiré.',
+        'exclude_undrawn_':'Capacité non tirée retirée des sorties contractuelles.',
+        'preserve_conditional_':'Actif de contrat conservé comme droit conditionnel.',
+        'classify_535_':'Montant brut de dérivé distingué du montant présenté après compensation.',
+        'correct_comparator_':'Juste valeur de dette conservée ; comparateurs de nominal et de valeur nette corrigés.',
+    }
     corrections='| Décision | Observations concernées | État |\n| --- | ---: | --- |\n'+'\n'.join(
-        f"| {r['decision']} | {len(r['matched_observations'])} | {r['assembly_status']} |" for r in reviews)
+        f"| {next((v for k,v in descriptions.items() if r['decision'].startswith(k)),r['decision'])} | {len(r['matched_observations'])} | {r['assembly_status']} |" for r in reviews)
     report=f'''# Notes complémentaires — investissements, dettes, baux, engagements et clientèle
 
 Sources arrêtées au {as_of}, comme au premier passage. Les critères et seuils restent ceux engagés avant la collecte. La lecture est terminée : {data['reading']['completed_unique_keys']} blocs uniques dans la file complète, aucune lecture restante.

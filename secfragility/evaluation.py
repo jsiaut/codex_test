@@ -12,7 +12,7 @@ from .pairs import financed
 def run(db,root,as_of):
     from .extension_assembly import opened
     completed=bool(opened(root))
-    missing='complete_public_attribution_not_established' if completed else missing
+    missing='complete_public_attribution_not_established' if completed else 'not_processed'
     cfg=yaml.safe_load((root/'config.yaml').read_text());criteria=cfg['annex_e']
     cutoffs=json.loads((root/'work/annual_cutoffs.json').read_text())['annuals']
     registry=json.loads((root/'work/pair_registry.json').read_text())['pairs']

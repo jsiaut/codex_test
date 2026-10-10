@@ -22,6 +22,16 @@ def capture(root):
     reference.mkdir(exist_ok=True)
     for table in TABLES:
         shutil.copy2(root / 'tables' / (table + '.parquet'), reference / (table + '.parquet'))
+    path=root/'work/reproduction_inputs.json'
+    names=set(json.loads(path.read_text())) if path.exists() else set()
+    names.update(str(p.relative_to(root)) for p in (root/'secfragility').rglob('*.py'))
+    names.update(str(p.relative_to(root)) for p in (root/'tests').glob('*.py'))
+    names.update(str(p.relative_to(root)) for p in (root/'work/observations').glob('*.jsonl'))
+    names.update('work/'+name for name in ['extension_authorization.json','extension_attribution_reviews.json',
+        'extension_html_bounds.json','extension_exclusions.json','queue.json','expected_universe.json',
+        'inventory.json','collection.json','annual_cutoffs.json'])
+    names.update(['config.yaml','schema.sql','queries.sql','requirements.txt'])
+    path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 
 

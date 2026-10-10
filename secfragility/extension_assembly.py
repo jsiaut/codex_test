@@ -58,7 +58,7 @@ def opened(root):
     return set(json.loads(p.read_text())['components']) if p.exists() else set()
 
 
-def interpretations(db, root, as_of):
+def interpretations(db, root, as_of, record_exclusions=True):
     """Apply named, already documented attribution decisions in a SQL view."""
     p = root / 'work/extension_attribution_reviews.json'
     reviews = json.loads(p.read_text()) if p.exists() else []
@@ -100,10 +100,11 @@ def interpretations(db, root, as_of):
                 change['issuer_treatment'] = '693m own convertible debt fair value; 86m principal and 84m net carrying amount.'
             else:
                 raise ValueError('Undocumented interpretation decision: ' + decision)
-            exclusion(db, as_of, 'attribution_interpretation', 'observation_interpretation',
-                      o['observation_id'] + ':' + decision, group_id=o['group_id'],
-                      accession=o['accession'], content_key=key,
-                      detail=json.dumps(review, ensure_ascii=False), coverage_state='observed')
+            if record_exclusions:
+                exclusion(db, as_of, 'attribution_interpretation', 'observation_interpretation',
+                          o['observation_id'] + ':' + decision, group_id=o['group_id'],
+                          accession=o['accession'], content_key=key,
+                          detail=json.dumps(review, ensure_ascii=False), coverage_state='observed')
         output.append(dict(review, matched_observations=[o['observation_id'] for o in selected],
                            assembly_status='applied' if selected else 'not_matched'))
     fields = sorted({field for change in changes.values() for field in change})
