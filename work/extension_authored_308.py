@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='152cdcb307e609687b2c39084f83ab5654c2291c47f650067c7517f7964cf33c'
+save(k,[tagged(k,24,'non-marketable equity investments had a carrying value of $73.0 million',model_quantity='private_equity_carrying_value',issuer_treatment='73000000_HELDprivate_ANONYMOUS_primaryorigin_NOTproven_NOspecificAI_or_delta24.8m_investmentcash'),tagged(k,46,'estimated aggregate fair value of the unsecured senior notes',model_quantity='debt_fair_value_control',amount_qualifier='approximately',issuer_treatment='4500m_FV_same_groupnotes_notaddition_to_carryprincipal_orcustomerfinancing')])

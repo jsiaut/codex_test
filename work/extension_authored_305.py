@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7874a536db231c3395896e3f796ae3d540684c68a05d2acd5ffc86797979c7ac'
+save(k,[tagged(k,3,'Semiconductor solutions',model_quantity='semiconductor_segment_revenue',issuer_treatment='25786m_NINE9166mQ3_wide_mixedAIphonesstorageIP_NOTallAI'),tagged(k,15,'Operating income:',model_quantity='semiconductor_segment_operating_income',issuer_treatment='14729m_NINE5217mQ3_direct_sharedalloc_NOTisolatedAIprofit_excludes12100m_unallocatedSBCintang'),dict(quote='does not evaluate each segment using discrete asset information',model_quantity='segment_asset_scope',issuer_treatment='NO_AI_segmentassets_DA_notseparatelypresented_nointersegmentrev_allperiods')])
