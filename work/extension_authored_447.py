@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='f46e8f75ef720d5012d4b7dc54af2c5acc47e1fee4da200c8b57e22d76e45a5c'
+save(k,[tagged(k,1,'Semiconductor solutions',model_quantity='semiconductor_revenue',issuer_treatment='8212mQ1FY2025_SEMImixedAIwirelessindustrialIP_IN14916consol_NOTallAI'),tagged(k,7,'Semiconductor solutions',model_quantity='semiconductor_operating_income',issuer_treatment='4706mQ1FY2025profit_EX3568unallocintangSBCrestructuring_NOTAIprofit_nointersegmentrev'),dict(quote='does not evaluate each segment using discrete asset information.',abstained=True,abstention_reason='Semiconductor segment assets and depreciation are not separately presented; its operating result excludes unallocated costs and cannot represent standalone AI profitability.')])
