@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ce77a3aae993c4a9079dd5b6d11b5707a688fe03ffe2a3b600e16c44fdccbc83'
+save(k,[tagged(k,133,'Less than one year',model_quantity='debt_security_assets_maturing_within_one_year',issuer_treatment='16.8bn_FV_ASSETmaturity_NOTownDebtoutflow'),dict(quote='The gross unrealized losses are related to fixed income securities, driven primarily by changes in interest rates.',abstained=True,abstention_reason='Interest rate driven unrealized treasury losses do not establish F6 credit loss. Treasury security maturities are asset liquidity rather than issuer debt payments or private primary AI investments.')])
