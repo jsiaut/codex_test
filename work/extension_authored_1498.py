@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='724b7a057fee66eb115f9ee3b23a91545246910700af7b8695a38daf660684bd'
+save(k,[tagged(k,26,'28,347',block='exposed_assets',model_quantity='cash_equivalents_and_marketable_securities_fair_value',issuer_treatment='MIX28.347_IN79Deriv_EXBankCash_NotAllCash'),tagged(k,36,'$70.8 billion and $71.6 billion of senior notes and the related fair value hedges',model_quantity='senior_notes_and_related_hedges_carrying_amount',issuer_treatment='70.8CURRENTOwnNotesANDHedges_Not80.6FV_NotF6'),dict(quote='Commercial paper debt securities',abstained=True,abstention_reason='9.029ASSETNotOwnDebt.143DerivLiabSame1497_NotGuarCap. SecuritiesSubstantiallyMatureWithinYearNotIssuerOwnCashPaymentSchedule. NoNamedPrivateInvestmentCashOrF6.')])

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='41a01f820696790e58eeb28ef5564614edfdff62bbbd9530afe21677fa0474f1'
+save(k,[tagged(k,202,'were $1.4 billion.',block='exposed_assets',model_quantity='private_investments_carrying_amount',issuer_treatment='ALTprivate1.4Sept30_20_IN2.657OtherMETHODCostNAV_NoChange1.4PriorNotCash'),tagged(k,98,'17,205',model_quantity='cash_and_cash_equivalents',issuer_treatment='IN5.725Bank_EX120.772ShortInvestments'),dict(quote='Due in one year or less | | $ | 35,327 | | | $ | 35,397',abstained=True,abstention_reason='35.397ASSETmaturityFV35.327cost_NotOwnDebtPayments.22UnrealizedDebtLossPrimRates_NotF6. NoNamedOpenAIPrimaryCashOrExplicitInvestmentImpairmentInBlock.')])

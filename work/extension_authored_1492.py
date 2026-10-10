@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='b2bf10613f013f1fa1ee9edaea03813b4f8a7c38220a860a747e5df3a9a9a551'
+save(k,[tagged(k,76,'63,552',block='recognized_liabilities',category_id='debt',model_quantity='debt_carrying_amount',issuer_treatment='63.552NETSept30_20_IN6.497cur57.055long_FACE67.606less542CostPlus89HedgeLess3.601ExchangePremium'),dict(quote='2021 (excluding the three months ended September 30, 2020)',abstained=True,abstention_reason='3.750NINEremainingFY21not12_FY22_8.052not12_Current6.497BookNotGrossMaturity. June20OwnDebtEXCHANGE10bnNotNewCash_NoLiteralDay_NoF4.77.7FVOwnDebtNotInvestmentF6.')])
