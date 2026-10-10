@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='be67a84fac592430cf1f3e2a679907f84e655a406c1cf3162b3675133e74de20'
+save(k,[tagged(k,24,'carrying value of $128.4 million',model_quantity='private_equity_holdings',issuer_treatment='Nov1_private_anon128.4m_measurement_alternative_primary_origin_not_proven_not_cash_injection'),tagged(k,26,'$42.7 million and $37.4 million',model_quantity='investment_unrealized_gain',issuer_treatment='Q42.7m_nine37.4m_NET_includes_observablepricechanges_NOT_cash_or_F6_loss'),tagged(k,50,'estimated aggregate fair value',model_quantity='debt_fair_value_control',issuer_treatment='Nov1_seniornote4500m_FV_not_incremental_debt_face_or_new_funding')])

@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='0282f8a419cbff8901f06645489ffd3a0c59ec6b6ad908913c6d29f62f615544'
+save(k,[tagged(k,30,'$106.1 billion and $90.3 billion of senior notes and other long-term borrowings',model_quantity='debt_carrying_scope',issuer_treatment='Nov30_106100m_borrowings_vs95800m_FV_same_positions_not_additive_historical90300m_prior'),dict(quote='all of our marketable debt securities investments mature within one year',model_quantity='marketable_debt_maturity_scope',issuer_treatment='shortterm_treasury_investments_not_private_AI_loan_or_equity_cash_financing_no_named_lab')])

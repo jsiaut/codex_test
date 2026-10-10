@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='f96a1f63956fe149c2ce678865f1c29484408d3afb1d78b645a99cb49ebc1ca0'
+save(k,[tagged(k,0,'Cloud | | $ | 3,281',model_quantity='cloud_customer_advances_stock',issuer_treatment='Nov30_3281m_cloud_current_subset9940m_totalcurrent_and11175m_totaldefrev_not_AI_isolated_or_new_cash'),dict(quote='customer payments made in advance',model_quantity='deferred_revenue_payment_basis',issuer_treatment='cloud_software_hardware_substantially_advance_payments_recognized_ratably_or_usage_services_prepayments_no_customer_identity_or_external_equity_funding')])
