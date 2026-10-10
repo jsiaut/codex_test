@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='961bc6a2dd46b50d8e46a3afccb18054c4fb283c20706e2a73a4ed7212e7790f'
+save(k,[dict(amount_origin='narrative_only',unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',period_end='2018-07-29',amount_qualifier='exact',quote='The estimated product returns and estimated product warranty liabilities was $16 million and $15 million as of July 29, 2018 and January 28, 2018, respectively.',amount='16000000',model_quantity='product_returns_warranty_liability',issuer_treatment='ProductWarranty_NotFinancialGuaranteeCap'),dict(quote='Maximum potential future payments cannot be estimated because many of these agreements do not have a maximum stated liability.',abstained=True,abstention_reason='IndemnificationMaximumUnquantified_NotZero')])
