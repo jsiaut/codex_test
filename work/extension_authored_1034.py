@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='cdc4634b5025c66e3848b4cf31262aadd1936792de74413914b9e84fdb88775e'
+save(k,[tagged(k,5,'$3,000 million',model_quantity='nonrecourse_receivables_sold',issuer_treatment='3bn_NINE_GROSSARsale_IN900mQ_CFO_NotDebt_ORExactNetCash'),tagged(k,22,'3,297',model_quantity='deferred_revenue_current',issuer_treatment='3.297bn_CURRENT_SUBSET3.740TOTAL_NotAllRPO'),dict(quote='cash proceeds as cash provided by operating activities',abstained=True,abstention_reason='Nonrecourse factoring is accounted for as an operating cash sale rather than debt; disclosed gross receivables sold do not quantify net proceeds after fees. Cash-equivalent instruments and general prepaid expenses are not a private AI investment or a named funding flow.')])

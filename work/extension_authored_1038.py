@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='21ebe2e7952e81a3d14c7d4a8ed89ad94f9e6066c10b0c0f6b4b91dfbacc56f1'
+save(k,[tagged(k,41,'14,023',model_quantity='marketable_debt_securities_carrying_value'),tagged(k,40,'2,569',model_quantity='cash_equivalents',issuer_treatment='2.569bn_CashEQ_ONLY_NotCashAndCashEQ'),tagged(k,127,'12,607',model_quantity='marketable_debt_assets_maturing_within_one_year',issuer_treatment='12.607bn_ASSETfairValueMaturity_NotOwnDebt'),dict(quote='driven primarily by changes in interest rates',abstained=True,abstention_reason='Fixed-income unrealized losses are not an isolated private-investee impairment. This note describes liquid asset holdings and asset maturities rather than new primary cash funding or the issuer debt maturity schedule.')])
