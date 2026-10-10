@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='7ec4e4235777fcef3527a624fb7b091c091b06a072b3fd38d9188b8789b0e9df'
+save(k,[tagged(k,12,'Total deferred revenues | | $ | 9,478',model_quantity='deferred_revenue_total',issuer_treatment='9.478bn_HELD_IN8.705cur773long_NotRPO_ORfutureCashFlow'),tagged(k,0,'Cloud services and license support | | $ | 7,758',model_quantity='cloud_and_support_deferred_revenue_current',issuer_treatment='7.758bn_HELD_CURRENT_cloudANDsupport_NotOCIonly'),dict(quote='customer payments made in advance',abstained=True,abstention_reason='These balances largely reflect payments already received and remaining recognition obligations. They are not new cash funding, guaranteed future inflows or a disclosed concentration by customer.')])
