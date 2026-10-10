@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='ebaf37f50899412b3d5eb44a5d14e1afb4f4a4022bbb523b8b69b467874fdd51'
+save(k,[tagged(k,36,'Deferred revenue | $ | 332',model_quantity='deferred_revenue'),tagged(k,38,'Deposits | 47',model_quantity='customer_deposits'),tagged(k,40,'379',model_quantity='deferred_revenue_and_customer_deposits',issuer_treatment='379CONTROL_IN332DEF47Deposits_NotAdd_NotRPO'),dict(quote='based on the addresses of our customers',abstained=True,abstention_reason='BillingGeoNotAIEndDemand. DEF/DepositsHELDNotNewCashOr12MonthBuckets. OtherRevenue249Q912NINENotDedicatedAI. NoCustomerConcentrationThresholdOrSeparateFoA/RLSegmentsHere.')])

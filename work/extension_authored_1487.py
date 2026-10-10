@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='51deb3d93f063ff9ee7e97dc1099e61010dd6687683fa937f22670d8764b4ed4'
+save(k,[dict(quote='the settlement was funded entirely by certain of the Company’s insurance carriers',abstained=True,abstention_reason='HistoricalHatamianSettlementNotAMDNewCash. MontereyUnspecifiedDamagesAndOtherLegalMAXunquantnotzero;NotMaterialAdverseBeliefNotZeroLiability. NoQuantFirmPurchaseLeaseFundingCommitmentOrF6InBlock.')])

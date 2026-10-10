@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='1c1758206af5096553331f91fe47d4decde4537c269f3755b841f0de9d402e43'
+save(k,[dict(quote='The Company offers incentive programs to certain customers, including cooperative advertising, marketing promotions, volume-based incentives, and special pricing arrangements.',abstained=True,abstention_reason='OrdinaryRevenueCreditsUnnamedUnquant_NotNamedCustomerEquityOrCapacityFunding.25Q15NINEpctOverTimeRevNotCustomerConcentration.30to60DayCreditNoSignificantFinancingComponents. GenericPriorReclassNotLaterFourSegmentsActualRecast;CECLmodifiedRetroNoAdoptionImpact;OwnConvertFutureASUEvaluationNotF4/F6.')])
