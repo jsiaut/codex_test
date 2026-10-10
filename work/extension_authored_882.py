@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='71363b4026b819953caafbf30a43fa948eaca4f2c7b0e1bd5a7fb9105ea4fc8e'
+save(k,[tagged(k,14,'$ | 21,354',model_quantity='aws_segment_revenue',issuer_treatment='21.354bn_Q_AWS_NOTAIonly_ORplusIdenticalProductRow'),tagged(k,18,'Operating income | | | $ | 6,518 | | | | | $ | 5,123',model_quantity='aws_segment_operating_income',issuer_treatment='5.123bn_Q_AWS_allocUsage_NOTconsolProfit'),dict(quote='global sales of compute, storage, database, and other services',abstained=True,abstention_reason='AWS includes multiple service categories, with no separately quantified AI revenue, individual customer concentration or segment assets. The identical AWS product and segment revenue rows refer to the same sales.')])
