@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='e03039eef9219651ae0adeb53b36e6cde83a861152c6bd47682c3d418c2758c5'
+save(k,[tagged(k,36,'$386 million',model_quantity='deferred_revenue_total'),tagged(k,38,'$348 million',model_quantity='deferred_revenue_recognition_next_twelve_months',issuer_treatment='348mEXPECTEDREV_NotNewCashOrTotalRPO'),dict(quote='based on the addresses of our customers',abstained=True,abstention_reason='Customer-address geography is not individual customer concentration or end demand. Advertising/other source table does not isolate AI.386m deferred revenue includes348m expected recognition within one year, not prospective cash or full RPO.')])

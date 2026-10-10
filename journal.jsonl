@@ -7307,3 +7307,4 @@
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T16:07:07.166544+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 2584, "remaining_unique_keys": 968, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T16:14:24.273872+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 2594, "remaining_unique_keys": 958, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T16:17:31.204860+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 2604, "remaining_unique_keys": 948, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T16:20:24.781399+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 2614, "remaining_unique_keys": 938, "final_delivery": false}
