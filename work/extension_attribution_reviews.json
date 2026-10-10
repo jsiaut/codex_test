@@ -33,5 +33,13 @@
     "decision": "exclude_undrawn_capacity_from_contractual_outflows_keep_available_liquidity",
     "reason": "Undrawn borrowing limits are available resources, not payments owed; fees and actual drawn balances are different quantities.",
     "assembly_status": "pending_phase3"
+  },
+  {
+    "content_key": "23b21455ebaca1c879586cc81b000458dca18cc5309add09b90651f2a213e6fb",
+    "tagged_candidate_index": 48,
+    "affected_quantity": "contract_assets",
+    "decision": "preserve_conditional_right_to_consideration_remove_unconditional_word_from_interpretation",
+    "reason": "The source distinguishes a contract asset conditional on a condition other than time from an unconditional receivable. Accepted issuer_treatment contains a contradictory UNCONDITIONAL word; preserve raw observation, use the exact source definition in downstream assembly.",
+    "assembly_status": "pending_phase3"
   }
 ]
