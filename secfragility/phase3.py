@@ -7,12 +7,16 @@ from .calculation import core_calibration
 from .assembly import load
 
 
-def run(root,reconstruct=False):
+def run(root,reconstruct=False,resume=False):
     faulthandler.dump_traceback_later(60,repeat=True)
     state=json.loads((root/'work/run.json').read_text());as_of=state['as_of']
     queue=json.loads((root/'work/queue.json').read_text())
     assert all((root/'work/observations'/(r['content_key']+'.jsonl')).exists() for r in queue),'Phase2 queue not empty'
     state.update(phase='phase3',status='assembling');(root/'work/run.json').write_text(json.dumps(state,indent=2)+'\n')
+    if resume:
+        from .assembly_checkpoint import resume as restore
+        db=restore(root,as_of);db.execute('BEGIN TRANSACTION')
+        return finish(db,root,as_of,state)
     if reconstruct:
         from .rebuild import rebuild
         db=rebuild(root)
@@ -65,6 +69,12 @@ def run(root,reconstruct=False):
     from .pairs import run as pairs
     pairs(db,root,as_of,entities,observations,resolve)
     print(json.dumps(dict(stage='pairs',counts=table_counts(db))),flush=True)
+    from .assembly_checkpoint import save
+    save(db,root,as_of)
+    return finish(db,root,as_of,state)
+
+
+def finish(db,root,as_of,state):
     from .events import run as events
     events(db,root,as_of)
     from .evaluation import run as evaluation
@@ -95,5 +105,5 @@ def run(root,reconstruct=False):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--reconstruct',action='store_true');a=p.parse_args()
-    run(Path('.').resolve(),a.reconstruct)
+    p=argparse.ArgumentParser();p.add_argument('--reconstruct',action='store_true');p.add_argument('--resume',action='store_true');a=p.parse_args()
+    run(Path('.').resolve(),a.reconstruct,a.resume)

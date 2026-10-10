@@ -16,10 +16,14 @@ def run(db,root,as_of):
     u=json.loads((root/'work/expected_universe.json').read_text());edges=rows(db,'SELECT * FROM links WHERE family IS NOT NULL')
     # Every potential path remains uncomputed until the text/discovery extension.
     results=[]
+    dependency_rows=defaultdict(list)
+    for m in rows(db,"SELECT * FROM measures WHERE measure IN ('documented_revenue_dependency','documented_backlog_dependency') AND financing_policy='exposure_outstanding'"):
+        dependency_rows[(m['measure'],m['group_id'],m['counterparty_id'],m['view'])].append(m)
     for a in cutoffs:
         g=a['group_id'];q=dict(group_id=g,period_start=a['period_start'],period_end=a['period_end'])
         for view in ('as_known','revised'):
-            known=a['as_known_cutoff'] if view=='as_known' else as_of
+            dated=a['period_start']!='none' and a['period_end']!='none'
+            known=(a['as_known_cutoff'] if view=='as_known' else as_of) if dated and not a.get('cutoff_reason') else None
             cutoff=known or as_of
             for c in registry[g]:
                 pe=[e for e in edges if {e.get('from_group_id'),e.get('to_group_id')}=={g,c} and str(e.get('knowledge_date') or '9999')<=cutoff[:10]
@@ -32,6 +36,7 @@ def run(db,root,as_of):
                     for grid in grids:
                         for basis in bases:
                             key=f'{statement}|grid={grid}|date_basis={basis}'
+                            if not dated:key+='|unknown_fiscal_dates|FY'+str(a['fiscal_year'])
                             reason=a.get('cutoff_reason') if not known else 'not_processed'
                             outcome='indeterminate';status='not_determinable';value=None;lineage=[]
                             if known and statement=='E1':
@@ -40,9 +45,11 @@ def run(db,root,as_of):
                             elif known and statement in ('E2','E3'):
                                 # Annual power needs full-year same-basis coverage.
                                 metric='documented_revenue_dependency' if statement=='E2' else 'documented_backlog_dependency'
-                                years=rows(db,"SELECT status,value_lower,value_upper,nd_reason,period_end FROM measures WHERE measure=? AND group_id=? AND counterparty_id=? AND view=? AND period_end<=? AND financing_policy='exposure_outstanding' AND (knowledge_date IS NULL OR knowledge_date<=?::DATE)",[metric,g,c,view,a['period_end'],cutoff[:10]])
-                                annual_years={v['period_end']:v['fiscal_year'] for v in cutoffs if v['group_id']==g}
-                                years=[y for y in years if y['period_end'] in annual_years]
+                                annual_years={v['period_end']:v['fiscal_year'] for v in cutoffs if v['group_id']==g and v['period_end']!='none'}
+                                annual_periods={(v['period_start'],v['period_end']) for v in cutoffs if v['group_id']==g and v['period_end']!='none'}
+                                years=[dict(y) for y in dependency_rows[(metric,g,c,view)] if y['period_end'] in annual_years
+                                   and y['period_end']<=a['period_end'] and (y['knowledge_date'] is None or str(y['knowledge_date'])<=cutoff[:10])
+                                   and ((y['period_start'],y['period_end']) in annual_periods if statement=='E2' else y['term']=='total')]
                                 for y in years:y['fiscal_year']=annual_years[y['period_end']]
                                 # First-pass annual numerators are unfilled rather
                                 # than composed from selected, high-only quarters.

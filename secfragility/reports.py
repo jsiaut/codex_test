@@ -105,6 +105,14 @@ Les horizons de dépôt suivent les instructions du 10-K et Exchange Act Rule 0-
     exclusion_reasons=Counter(e['reason'] for e in exclusions)
     ef=json.loads((root/'work/annex_e_pair_outcomes.json').read_text());efstats=Counter(e['outcome'] for e in ef)
     e7ratio=Decimal(efstats['indeterminate'])/Decimal(len(ef)) if ef else None
+    e7motifs=Counter(e['reason'] for e in ef if e.get('reason'))
+    e7motif_md='| Motif principal E7 | Issues de paire |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in sorted(e7motifs.items()))
+    coverage_flags=dict(anonymous_observations=sum(o['counterparty_evidence']=='anonymous' for o in obs),
+       sales_channels=dict(Counter(o['sales_channel'] for o in obs if o['sales_channel'])),
+       redacted_exclusions=sum(e['coverage_state']=='redacted' for e in exclusions),
+       not_processed_exclusions=sum(e['coverage_state']=='not_processed' for e in exclusions),
+       parse_failed_exclusions=sum(e['coverage_state']=='parse_failed' for e in exclusions),
+       non_filer='not_determinable: annual-reporting status not established for each external legal identity')
     efmd='| Issue de paire | Nombre |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in sorted(efstats.items()))
     events=[m for m in measures if m['measure']=='fragility_event' and m['view']=='as_known' and m['value']==1]
     def refs(m):
@@ -161,6 +169,10 @@ Les cellules de documented_revenue_dependency, documented_backlog_dependency, co
 
 Les plafonds et garanties publiés rendent certaines relations visibles sans prouver un financement versé. Le statut financé est daté, avec la sensibilité ever_financed à côté. La conclusion de chaque paire figure dans relationship_conclusion. Aucun ratio ni cycle ne démontre à lui seul une demande artificielle.
 
+{e7motif_md}
+
+Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {json.dumps(coverage_flags,ensure_ascii=False)}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. La concentration anonyme reste provisoire tant que son texte environnant n’est pas traité ; les non-déposants ne sont pas dénombrés par supposition.
+
 Les critères E sont confrontés aux paires et aux exercices dans measures.parquet, même pour les cellules vides. Les chemins de l’extension restent non déterminables, motif not_processed ; ils ne sont pas comptés comme inexistants.
 
 ## Exclusions et évolution
@@ -176,6 +188,8 @@ Ce premier rendu ne compare pas à une livraison antérieure : les valeurs nouve
       reading=progress,network=network,annex_e_pair_outcomes=dict(efstats),annex_e7_ratio=str(e7ratio),invariants=verification['checks'],
       amount_edges=db.execute("SELECT count(*) FROM links WHERE edge_kind='amount'").fetchone()[0],
       documented_financing_pairs=db.execute("SELECT count(DISTINCT from_group_id||'|'||to_group_id) FROM links WHERE edge_kind='amount' AND family='financing'").fetchone()[0])
+    data['annex_e7_primary_reasons']=dict(e7motifs)
+    data['recorded_coverage_conditions']=coverage_flags
     data['elapsed_wall_seconds_since_first_sec_request']=str(Decimal(str((datetime.now(timezone.utc)-datetime.fromisoformat(manifest['first_sec_request'])).total_seconds())).quantize(Decimal('0.000001')))
     (root/'delivery_summary.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,default=str)+'\n')
     table_status='| Statut rang 1 | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in sorted(rank_status.items()))

@@ -30,3 +30,5 @@ work/phase3_log.txt
 work/expected_cells.ndjson
 
 work/*_bulk.jsonl
+
+work/assembly_checkpoint/
