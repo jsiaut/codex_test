@@ -150,9 +150,9 @@ Dernière période de revenu exploitable : 2026-06-30. Les séries complètes so
 
 | liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
-
 | lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.782798 | ratio | partial / short_term_debt_and_other_components_not_established | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-407; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-937 |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
 
 | lev_debt_and_leases_to_operating_income_plus_da | leases / original | 0.649871 | ratio | computed / — | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-767; 0001018724-26-000026 / id:f-768; 0001018724-26-000026 / id:f-774; 0001018724-26-000026 / id:f-775 |
 
@@ -188,9 +188,9 @@ Dernière période de revenu exploitable : 2026-05-03. Les séries complètes so
 
 | fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| receivables_collection_period | none / receivables_only | 39.558976 | days | computed / — | 0001730168-26-000016 / id:f-32; 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-32 |
-
 | receivables_collection_period | none / original | 80.053094 | days | computed / — | 0001730168-26-000016 / id:f-319; 0001730168-26-000016 / id:f-32; 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463 |
+
+| receivables_collection_period | none / receivables_only | 39.558976 | days | computed / — | 0001730168-26-000016 / id:f-32; 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-32 |
 
 | rpo_total | none / original | 164600000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000054 / id:f-470 |
 
@@ -462,9 +462,9 @@ Dernière période de revenu exploitable : 2026-07-26. Les séries complètes so
 
 | liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
-
 | lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.165781 | ratio | partial / short_term_debt_and_other_components_not_established | 0001045810-25-000209 / id:f-312; 0001045810-25-000230 / id:f-320; 0001045810-25-000230 / id:f-54; 0001045810-25-000230 / id:f-56; 0001045810-26-000021 / id:f-305; 0001045810-26-000021 / id:f-90; 0001045810-26-000052 / id:f-208; 0001045810-26-000052 / id:f-42; 0001045810-26-000075 / id:f-148; 0001045810-26-000075 / id:f-304; 0001045810-26-000075 / id:f-54; 0001045810-26-000075 / id:f-815 |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
 
 | lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
 

@@ -1,0 +1,24 @@
+{
+  "delivered_at": "2026-10-10T23:01:30.241462+00:00",
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "scope": [
+    "investments_note",
+    "debt_note",
+    "lease_note",
+    "commitments_note",
+    "concentration_narrative"
+  ],
+  "baseline_commit": "e05c077c7b6faba84537c546a77b67270ef040e5",
+  "source_cutoff_unchanged": true,
+  "blocks_completed": 3552,
+  "observations": 17029,
+  "tests_passed": 85,
+  "invariants_validated": 13,
+  "attribution_reviews_applied": 8,
+  "eight_tables_reproduced": true,
+  "subagents_used": false,
+  "independent_audit_performed": false,
+  "repository": "https://github.com/jsiaut/codex_test",
+  "branch": "main",
+  "original_first_pass_brief_preserved": true
+}

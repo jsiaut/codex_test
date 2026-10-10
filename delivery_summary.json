@@ -148,7 +148,7 @@
       "schema": 60,
       "semantic": 47
     },
-    "updated_at": "2026-10-10T22:42:36.543492+00:00",
+    "updated_at": "2026-10-10T22:53:29.924747+00:00",
     "read_packet_logging_started_2026_10_09": true,
     "independent_audit_performed": false
   },
@@ -200,5 +200,8 @@
     "lease_note"
   ],
   "extension_source_cutoff_unchanged": true,
-  "elapsed_wall_seconds_since_first_sec_request": "131375.807727"
+  "elapsed_wall_seconds_since_first_sec_request": "131740.214145",
+  "final_status": "delivered",
+  "tests_passed": 85,
+  "idempotency_verified": true
 }

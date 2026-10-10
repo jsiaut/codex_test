@@ -7,3 +7,5 @@ Les résultats distinguent les financements versés des plafonds disponibles, le
 Les montants non attribuables à une identité confirmée ou à une période compatible restent indéterminés. La lecture ne suffit donc pas à démontrer une dépendance ou une circularité pour toutes les paires. Aucun score ni total global d’exposition n’est produit.
 
 Lire notes_complementaires.md pour le périmètre, les changements et les limites ; synthesis.md pour les résultats par groupe et paire. notes_components.csv fournit les montants et leurs sources. Les vérifications sont dans audit/ et work/delivery_verification.json. Le premier passage reste conservé. Travail réalisé sans sous-agent ; aucun audit indépendant.
+
+Vérification finale : 85 tests réussis, 13 invariants validés et les huit tables reproduites à l’identique à partir du cache.

@@ -130,7 +130,7 @@ Paires à financement de montant documenté : 2. Arêtes de montant : 13. Les co
 
 Blocs uniques traités : 3552 ; observations acceptées : 17029. Tentatives rejetées : {"schema": 60, "semantic": 47}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 237, "investments_note": 603, "lease_note": 185, "concentration_narrative": 839, "debt_note": 315, "commitments_note": 309} ; items 8-K : {"non renseigné": 457}.
 
-Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 6980, "bytes_received": 2099232340}. Durée calendaire depuis la première requête SEC : 131375.807727 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
+Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 6980, "bytes_received": 2099232340}. Durée calendaire depuis la première requête SEC : 131740.214145 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
 
 ## Exclusions
 
