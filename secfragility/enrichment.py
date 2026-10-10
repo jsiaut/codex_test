@@ -3,6 +3,10 @@ from .database import sql_literal
 
 
 def run(db,as_of):
+    db.execute('''UPDATE measures m SET lineage=r.lineage,knowledge_date=r.knowledge_date,evidence_profile=r.evidence_profile,unit='ratio'
+      FROM measures r WHERE m.measure='named_edge_coverage' AND m.lineage='[]' AND m.denominator=r.value
+       AND r.measure='revenue_total' AND r.status='computed' AND m.group_id=r.group_id
+       AND m.period_start=r.period_start AND m.period_end=r.period_end AND m.view=r.view''')
     for view in ['as_known','revised']:
         s='snapshot_stocks_'+view;q='quarter_quantities_'+view
         for quantity,category in [('debt_carrying_current','debt'),('debt_carrying_noncurrent','debt'),

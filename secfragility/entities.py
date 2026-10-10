@@ -94,7 +94,9 @@ def assemble(db,root,as_of):
                 continue
             evidence[(norm,j)].append((name,o))
     for (norm,j),mentions in sorted(evidence.items(),key=str):
-        if norm in index:continue
+        established=index.get(norm,[])
+        if any(r.get('cik') or r['consolidation_treatment']!='undetermined' for r in established):continue
+        if any(r.get('jurisdiction')==j for r in established):continue
         independent={o['accession'] for _,o in mentions}
         full=bool(re.search(r'\b(?:inc|corp|llc|lp|ltd|plc|pbc)\b$',norm))
         confirmed=bool(full and j and len(independent)>=2)
@@ -125,8 +127,15 @@ def assemble(db,root,as_of):
             return own or issuer_by_group[o['group_id']]
         options=index.get(normalize(name),[])
         ids={r['entity_id'] for r in options}
-        if len(ids)==1:return dated(options)
         j=jurisdiction(name,o['quote'])
+        if len(ids)==1:
+            known={r.get('jurisdiction') for r in options if r.get('jurisdiction')}
+            us={'DE':'delaware','CA':'california','WA':'washington','NV':'nevada','TX':'texas'}
+            known={us.get(x,x.lower() if len(x)>2 else None) for x in known};known.discard(None)
+            return None if j and known and j not in known else dated(options)
+        if not j:
+            generic=[r for r in options if r.get('jurisdiction') is None and r['entity_status']=='pending']
+            return dated(generic) if len({r['entity_id'] for r in generic})==1 else None
         options=[r for r in options if r.get('jurisdiction')==j and j]
         return dated(options) if len({r['entity_id'] for r in options})==1 else None
     return records,observations,resolve

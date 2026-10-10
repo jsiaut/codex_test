@@ -1,70 +1,11 @@
-# Modèle SEC — état du chantier
+# SEC_Project_2
 
-Ce dépôt exécute la spécification v6.14 fournie par l’utilisateur, sans sous-agent.
-Les critères E/F et les seuils ont été commités avant toute requête SEC. Le
-User-Agent est celui fourni par l’utilisateur. Le réseau est centralisé, plafonné
-à cinq requêtes par seconde, journalisé et protégé par un verrou.
+Premier passage v6.14 livré : lire [delta.md](delta.md), puis [synthesis.md](synthesis.md) et [series.md](series.md). Les huit tables sont dans tables/ ; les observations validées dans work/observations/ ; le dossier de vérification indépendante dans audit/. Aucun audit indépendant n’est revendiqué.
 
-Le chantier est en cours. Les tables de faits issues d’une reconstruction
-intermédiaire ne constituent pas une livraison comptable validée. La lecture des
-blocs, les mesures, les contrôles et l’audit indépendant ne sont pas terminés.
-Les faits de l’annexe D ne sont jamais recopiés comme résultats. L’audit
-indépendant n’est pas réalisé, conformément à la demande de travailler sans
-sous-agent.
+Le périmètre reste first_pass. Les critères engagés avant les requêtes et la date de situation figurent dans audit/criteria_manifest.json et delivery_summary.json. Les valeurs manquantes restent manquantes ; aucun score ou total global d’exposition.
 
-## Commandes
+## Reproduire
 
-Depuis la racine, avec les dépendances de `requirements.txt` :
+Installer requirements.txt. Restaurer le cache depuis la sauvegarde LFS et son manifeste, sans écraser les observations plus récentes ni restaurer d’ancien verrou. Depuis la racine, python -m secfragility.phase3 --reconstruct reconstruit depuis le cache et les observations conservées ; python -m secfragility.phase3 utilise les exports document/fait existants. Aucun appel de modèle par API et aucune nouvelle requête SEC pour la reproduction hors ligne.
 
-```sh
-python -m pytest -q
-python -m secfragility.inventory
-python -m secfragility.collect
-python -m secfragility.rebuild
-```
-
-L’inventaire et la collecte reprennent leurs points de contrôle. La reconstruction
-relit le cache local intégralement et écrit huit tables Parquet triées. Elle
-n’effectue aucune requête réseau.
-
-Un refus 403 persiste une pause de dix minutes et retourne le code de sortie 75.
-Un nouveau refus après cette pause suspend l’exécution (code 76). Le conducteur
-ne doit ni changer l’identité ni supprimer cet état pour contourner un refus.
-
-Les observations se soumettent par le module `observations` après lecture
-effective d’un bloc. Le module valide le schéma et les citations, contreparties,
-faits candidats et unités. Un fichier versionné par clé de contenu conserve
-chaque passe et ses rejets. Aucune extraction par API de modèle n’est utilisée.
-
-## Reprise et sauvegarde
-
-La collecte est conservée dans le cache. La phase 2 poursuit la lecture directe
-des blocs ; son avancement est généré dans `work/reading_progress.json`. Les
-tables intermédiaires et les calibrations ne constituent pas le résultat final.
-L’assemblage du graphe, les contrôles finaux et les rendus restent à terminer.
-
-Une tâche quotidienne reprend l’exécution ou surveille les nouveaux dépôts,
-sous le verrou de session. Aucune extension du premier passage n’est ouverte.
-
-À la demande de l’utilisateur, les commits sont poussés vers
-`https://github.com/jsiaut/codex_test`. Les tables Parquet utilisent Git LFS.
-La lecture crée un point de sauvegarde toutes les dix clés terminées ou après
-dix minutes de travail. Ces commits intermédiaires ne déclarent pas l’exécution
-terminée. Le cache est exclu de Git et conservé dans une archive de reprise
-sous `backup/`, transférée avec Git LFS et accompagnée de son empreinte SHA-256.
-
-Pour reprendre sur une nouvelle machine, cloner le dépôt, exécuter `git lfs
-install --local` puis `git lfs pull`, installer les dépendances, puis lancer `python -m secfragility.backup
---restore backup/sec-project-2-20261009T150746Z.tar.zst --manifest
-backup/sec-project-2-20261009T150746Z.tar.zst.json`. Cette commande vérifie
-l’empreinte et conserve les fichiers versionnés les plus récents. Ne pas
-restaurer le verrou ni le propriétaire de
-session : la nouvelle session doit acquérir son propre verrou. Le fichier
-`work/run.json` conserve l’instant logique de l’exécution inachevée.
-Après acquisition du verrou, exécuter `python -m secfragility.blocks` pour
-régénérer les blocs avec le parseur courant avant de reprendre la lecture.
-Le cache restauré permet cette opération sans requête SEC. Les observations
-déjà versionnées restent inchangées.
-
-Le dossier `audit/AUDITOR.md` prépare une vérification ultérieure ; aucun audit
-indépendant n’a été effectué.
+Le travail est régulièrement commité et poussé. L’exécution finale porte un commit distinct ; les points de sauvegarde intermédiaires ne valent pas livraison. Les sources API sauvegardées ne sont pas supposées reproductibles depuis EDGAR à une date ultérieure.

@@ -347,3 +347,8 @@ D99 — Une forme abrégée exacte du nom juridique du déposant peut désigner 
 
 D100 — Deux noms juridiques complets de même juridiction dans des dépôts indépendants établissent l’identité, pas le contrôle du groupe. Les appartenances étrangères non établies restent undetermined et leurs relations ne deviennent pas des montants agrégables. Les garanties seules et les financements non monétaires ou nuls ne rendent pas une paire financée.
 D101 — Les résidus de C1/C2 d’AMD, C7 de CoreWeave et les rapprochements BPA/taux restent publiés sans ajuster les valeurs ou les concepts. Les pièces et les équations déposées ne sont pas réconciliées au-delà des tolérances ; aucune correction de signe, complément d’actif ou convention de taux supposée n’est importé pour faire passer le contrôle.
+
+
+### D102 — Homonymes de juridictions différentes
+
+Le registre conserve séparément les mentions d’un même nom juridique dans des juridictions différentes, notamment Broadcom Corporation (California / Delaware, D80). Sans juridiction dans le passage, seule une identité provisoire non résolue peut être retenue ; aucune fusion ni attribution numérique n’est déduite du nom commun. Une juridiction explicitement contradictoire empêche la résolution vers une identité existante.

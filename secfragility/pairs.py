@@ -112,6 +112,7 @@ def run(db,root,as_of,entities,observations,resolve):
             for term in ['named','anonymous','residual']:
                 m=row('named_edge_coverage',g,'none',q,view,term=term,overlap_possible=True,visible_pairs_count=len({e.get('from_group_id') if e.get('to_group_id')==g else e.get('to_group_id') for e in visible}),denominator=r['value'] if r else None)
                 m['nd_reason']='named_anonymous_overlap_and_complete_attribution_not_established'
+                if r:m.update(lineage=r['lineage'],knowledge_date=r['knowledge_date'],evidence_profile=r['evidence_profile'],unit='ratio')
                 emit(db,'measures',m)
             emit(db,'measures',dict(row('investor_customer_revenue_share',g,'none',q,view,financing_policy='exposure_outstanding'),nd_reason='empty_numerator'))
     (root/'work/pair_registry.json').write_text(json.dumps({'pairs':{g:sorted(v) for g,v in cp.items()},'names':cpnames},ensure_ascii=False,indent=2)+'\n')
