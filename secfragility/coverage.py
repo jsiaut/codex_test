@@ -8,8 +8,9 @@ def run(db,root,as_of):
     cells=u['cells']
     path=root/'work/expected_cells.ndjson'
     path.write_text(''.join(json.dumps(c)+'\n' for c in cells))
-    db.execute('''CREATE TEMP TABLE expected_cells AS SELECT measure,group_id,counterparty_id,period_start,period_end,
-                  view,term,breakdown_key FROM read_json_auto('''+sql_literal(str(path))+''',format='newline_delimited')''')
+    fields=['measure','group_id','counterparty_id','period_start','period_end','view','term','breakdown_key']
+    columns='{'+','.join(sql_literal(k)+":'VARCHAR'" for k in fields)+'}'
+    db.execute('CREATE TEMP TABLE expected_cells AS SELECT * FROM read_json('+sql_literal(str(path))+",format='newline_delimited',columns="+columns+')')
     db.execute('''INSERT INTO measures (measure,group_id,counterparty_id,period_start,period_end,view,as_of,term,breakdown_key,
       status,nd_reason,coverage_state,financing_policy,financing_state,outcome)
       SELECT e.measure::measure_id_t,e.group_id,e.counterparty_id,e.period_start,e.period_end,e.view::view_t,?,e.term,e.breakdown_key,

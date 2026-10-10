@@ -41,13 +41,18 @@ def run(db,as_of):
         # and debt notes were not read, even where an isolated flow is known.
         db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,term,value,unit,currency,status,
            coverage_state,knowledge_date,lineage,source_perspective,accounting_framework)
+          WITH opening AS (SELECT group_id,quarter_start,quarter_end,unit,accounting_framework,
+             sum(CASE WHEN model_quantity IN ('receivables','inventories') THEN value ELSE -value END) AS value,
+             count(DISTINCT model_quantity) AS terms,max(knowledge_date) AS knowledge_date,to_json(list(fact_id)) AS lineage
+             FROM {s} WHERE period_end=quarter_start-INTERVAL 1 DAY
+              AND model_quantity IN ('receivables','inventories','accounts_payable','contract_liabilities_current') GROUP BY ALL)
           SELECT 'working_capital',a.group_id,a.period_start,a.period_end,'{view}',a.as_of,'change',a.value-b.value,a.unit,a.currency,
-           CASE WHEN a.status='computed' AND b.status='computed' THEN 'computed' ELSE 'partial' END,
-           'observed',greatest(a.knowledge_date,b.knowledge_date),to_json(from_json(a.lineage,'["VARCHAR"]')||from_json(b.lineage,'["VARCHAR"]')),
-           'reporting_entity',a.accounting_framework FROM measures a JOIN measures b ON a.group_id=b.group_id AND a.view=b.view
-            AND a.unit=b.unit AND a.accounting_framework=b.accounting_framework
-            AND try_cast(b.period_end AS DATE)+INTERVAL 1 DAY=try_cast(a.period_start AS DATE)
-            WHERE a.measure=b.measure AND a.measure='working_capital' AND a.term=b.term AND a.term='net' AND a.view='{view}' ''')
+           'computed','observed',greatest(a.knowledge_date,b.knowledge_date),
+           to_json(from_json(a.lineage,'["VARCHAR"]')||from_json(b.lineage,'["VARCHAR"]')),
+           'reporting_entity',a.accounting_framework FROM measures a JOIN opening b ON a.group_id=b.group_id
+            AND a.unit=b.unit AND a.accounting_framework=b.accounting_framework AND a.period_start=b.quarter_start::VARCHAR
+            AND a.period_end=b.quarter_end::VARCHAR WHERE a.measure='working_capital' AND a.term='net'
+             AND a.view='{view}' AND a.status='computed' AND b.terms=4''')
     db.execute("UPDATE links SET resolved=true,relation_type='same_measure',resolution_evidence='Identical immutable amount key; no additional amount.' WHERE amount_a_id=amount_b_id AND amount_a_id IS NOT NULL")
     db.execute("UPDATE measures SET constant_perimeter='as_if_combined' WHERE group_id='SPCX' AND status IN ('computed','partial','bounded') AND unit IS DISTINCT FROM 'event'")
     # Published precise concentration bounds. Anonymous identities stay tied to
