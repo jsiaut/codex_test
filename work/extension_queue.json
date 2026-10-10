@@ -36465,5 +36465,262 @@
     "knowledge_date": "2017-05-23",
     "candidates": 0,
     "duplicate": false
+  },
+  {
+    "content_key": "3d08f0809f32ce951c73e8c49b5f0fbeb03b1e6734c4615ec90214b1fcde4f55",
+    "occurrence_id": "ce6c5bab3bbfd42e768fb2cb7367e0169f3f8db510c7760079dc41fe5a87d12c",
+    "path": "work/blocks/ce6c5bab3bbfd42e768fb2cb7367e0169f3f8db510c7760079dc41fe5a87d12c.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 46949,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "00e29565de7ffbbb74e665f51b1ca22d2b707e17d9d0873f77d417f8561fa3be",
+    "occurrence_id": "1cc54ded7eff970d50f0f7341651e69545cd788babd3ecc2a00e12bfbf265597",
+    "path": "work/blocks/1cc54ded7eff970d50f0f7341651e69545cd788babd3ecc2a00e12bfbf265597.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 4123,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "1c2d183ad5c3ff7de41b0acbe1ba2d75e14846e0bc8351f6fa00ee77ad3286a5",
+    "occurrence_id": "b5126def3fc9ba374b33570c3f7b6ca9f217ad25867505b53904d208ce0a045e",
+    "path": "work/blocks/b5126def3fc9ba374b33570c3f7b6ca9f217ad25867505b53904d208ce0a045e.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "investments_note",
+    "note_families": [
+      "investments_note",
+      "debt_note"
+    ],
+    "chars": 2073,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "5dc9a5cfb3bfd7502d7c62e0ed2998d8ec11436c557b3541e9cf03150c1fe620",
+    "occurrence_id": "d5fc2615bdb349d8b6d83f804ef893e9a00742dec31b55f7f5c3c297b1c5cc2f",
+    "path": "work/blocks/d5fc2615bdb349d8b6d83f804ef893e9a00742dec31b55f7f5c3c297b1c5cc2f.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "investments_note",
+    "note_families": [
+      "investments_note",
+      "commitments_note"
+    ],
+    "chars": 3099,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "2029d4c7d98b9f6269a265b43d835e7a17bc75390c91c22852378573b19b3d33",
+    "occurrence_id": "1cf1f6867ea65bc1de113d8ed08dcef3455ce23c7aa4f63e8dfb6d0c47f828ec",
+    "path": "work/blocks/1cf1f6867ea65bc1de113d8ed08dcef3455ce23c7aa4f63e8dfb6d0c47f828ec.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "debt_note",
+    "note_families": [
+      "debt_note"
+    ],
+    "chars": 20538,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "a0068544c5d2a9fcc76561f8c90f402b173df7d4c00dbd381113e50be5e73003",
+    "occurrence_id": "ad6eaef001f81dba4afdc59c7b2706301a56c893496d9c6a7625a4c3d067a09c",
+    "path": "work/blocks/ad6eaef001f81dba4afdc59c7b2706301a56c893496d9c6a7625a4c3d067a09c.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "lease_note",
+    "note_families": [
+      "lease_note"
+    ],
+    "chars": 6306,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "da9e239bda464630952196c447037fa4f56b2b4bf86b991275c7107241957ffa",
+    "occurrence_id": "30fbd3625523092f1103d30b069c1c573cb806a310ff7cda9dd15580af7b2dce",
+    "path": "work/blocks/30fbd3625523092f1103d30b069c1c573cb806a310ff7cda9dd15580af7b2dce.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 1928,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "887030a271d7ae90df32a431ef2a1de8cf2e4201f154e558d682080769c9ad1d",
+    "occurrence_id": "0f87381876676a4d041a11bbeb49948821d0b5c30ab8f9f6a7b2d1ac8587628a",
+    "path": "work/blocks/0f87381876676a4d041a11bbeb49948821d0b5c30ab8f9f6a7b2d1ac8587628a.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "commitments_note",
+    "note_families": [
+      "commitments_note"
+    ],
+    "chars": 14750,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "64cc6ae44185c4dcea480cd2cff49a73ab1e2f20f10aa0ddac00ed0f32558c04",
+    "occurrence_id": "e13e4954f96b7090a00756340bb0332665805b56d9a5b5fd5fd9638adde5a117",
+    "path": "work/blocks/e13e4954f96b7090a00756340bb0332665805b56d9a5b5fd5fd9638adde5a117.json",
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 7280,
+    "knowledge_date": "2026-06-12",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "422a30377ce9b045fdac2f1adedd7f50fa2d17ffede8ff4d96f5e6c7c50f4d32",
+    "occurrence_id": "f865aa43800487a4b7a5011c929c052d2106777c4fda29382fe47f89389ea75f",
+    "path": "work/blocks/f865aa43800487a4b7a5011c929c052d2106777c4fda29382fe47f89389ea75f.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 52953,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "4b74322ca7d27ead3b32dc352cc288eda0953bffccc5c0615f1162f55b748c31",
+    "occurrence_id": "480caa8289340c4edf9bc175e440d1dcf051afa99a4732b462f8fbd642b098d6",
+    "path": "work/blocks/480caa8289340c4edf9bc175e440d1dcf051afa99a4732b462f8fbd642b098d6.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 1573,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "18940b217e029605020fe5ca94e5f5233a882e9bc8f239aef04457804defe733",
+    "occurrence_id": "ad608e211821768fb8ad9bfda9c824b84591bbd4418a06ad7848a608d86a0412",
+    "path": "work/blocks/ad608e211821768fb8ad9bfda9c824b84591bbd4418a06ad7848a608d86a0412.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "investments_note",
+    "note_families": [
+      "investments_note"
+    ],
+    "chars": 8762,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "67cead1813635af502249b17042822e80652760c7d701499d126c647eee24491",
+    "occurrence_id": "f5d757be404bd354968bf0653cc961c60dc21de582e5d0ae4c2b620b916097ae",
+    "path": "work/blocks/f5d757be404bd354968bf0653cc961c60dc21de582e5d0ae4c2b620b916097ae.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 1005,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "b2adcf03ca0e43af8af0d0238b4a472a0ba0c05b75ee563e39a895f2d5c4e322",
+    "occurrence_id": "eca3e6ee132357eede5c7c3fc6f0fd3801b5030413893bf07c2696bcd6daf06a",
+    "path": "work/blocks/eca3e6ee132357eede5c7c3fc6f0fd3801b5030413893bf07c2696bcd6daf06a.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "lease_note",
+    "note_families": [
+      "lease_note"
+    ],
+    "chars": 6274,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "02588949977bff27afbebbde3c1386a0c84d81ddea5d0b2f8a71192cc2fd7c65",
+    "occurrence_id": "3141adf8e9e79d7a172e9a741f4e6b7a28fdb532e33ea60445278437178e6a10",
+    "path": "work/blocks/3141adf8e9e79d7a172e9a741f4e6b7a28fdb532e33ea60445278437178e6a10.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "commitments_note",
+    "note_families": [
+      "commitments_note"
+    ],
+    "chars": 2886,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "75e5d40861a3fa15b6a15a5295ca02a9f0b1982cca8e6ab3f6e855d8389c18da",
+    "occurrence_id": "ffebdbefee147f5b74ecf3ca6b9b42758bda756b7238fee5707e8b99084b1b09",
+    "path": "work/blocks/ffebdbefee147f5b74ecf3ca6b9b42758bda756b7238fee5707e8b99084b1b09.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "debt_note",
+    "note_families": [
+      "debt_note"
+    ],
+    "chars": 35240,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "8de9f61ad9d25f5e38c4043898dbf064479656b0b14b6474f71a2b182b874331",
+    "occurrence_id": "36520a89f1e8e7aae39c99a8a25c00ec634d8cc551dae61554f7f7b50b9fe62b",
+    "path": "work/blocks/36520a89f1e8e7aae39c99a8a25c00ec634d8cc551dae61554f7f7b50b9fe62b.json",
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "block_class": "concentration_narrative",
+    "note_families": [
+      "concentration_narrative"
+    ],
+    "chars": 1278,
+    "knowledge_date": "2025-03-31",
+    "candidates": 0,
+    "duplicate": false
   }
 ]

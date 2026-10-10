@@ -3,6 +3,8 @@ from pathlib import Path
 import json,argparse
 from datetime import datetime,timezone
 import hashlib
+import re
+from lxml import etree
 from .database import create
 from .observations import submit
 from .text import chunks,exhibit_first_page
@@ -16,12 +18,25 @@ def financial_note(block):
     return block['block_class'] in ('related_parties','going_concern',
         'investments_note','debt_note','lease_note','commitments_note','concentration_narrative')
 
+def display_dimensions(value):
+    """Remove unused XML namespace declarations only in served typed dimensions."""
+    if not value:return value
+    dims=json.loads(value)
+    for axis,member in list(dims.items()):
+        if isinstance(member,str) and member.startswith('<'):
+            node=etree.fromstring(member.encode(),etree.XMLParser(resolve_entities=False,no_network=True))
+            prefixes={m.group(1) for n in node.iter() for text in [n.text or '',*n.attrib.values()]
+                for m in re.finditer(r'\b([A-Za-z_][\w.-]*):[A-Za-z_][\w.-]*',text)}
+            etree.cleanup_namespaces(node,keep_ns_prefixes=sorted(prefixes))
+            dims[axis]=etree.tostring(node,encoding='unicode')
+    return json.dumps(dims,ensure_ascii=False,separators=(',',':'))
+
 def block_for(root,key):
     q=json.loads((root/'work/queue.json').read_text())
     row=next(r for r in q if r['content_key']==key or r['occurrence_id']==key)
     return json.loads((root/row['path']).read_text())
 
-def serve(root,key=None,part=0,body=False):
+def serve(root,key=None,part=0,body=False,compact=False):
     q=json.loads((root/'work/queue.json').read_text())
     row=next((r for r in q if not (root/'work/observations'/(r['content_key']+'.jsonl')).exists()),None) if not key else next(r for r in q if r['content_key']==key or r['occurrence_id']==key)
     if row is None:return {'queue_empty':True}
@@ -46,6 +61,20 @@ def serve(root,key=None,part=0,body=False):
         metadata['header_boundary_status']=page['boundary_status']
     fields=['fact_id','canonical_concept','value','unit','currency','period_start','period_end','dimensions','decimals']
     candidates=[{k:f.get(k) for k in fields} for f in block['candidates']]
+    dictionaries={}
+    if compact:
+        # Lossless dictionary encoding of repeated fields. Candidate indexes
+        # address the immutable full fact IDs in this natural block. The
+        # validator still requires the full tagged_fact_id when storing.
+        for c in candidates:c['dimensions']=display_dimensions(c['dimensions'])
+        for field in fields[1:]:
+            dictionaries[field]=list(dict.fromkeys(json.dumps(c[field],ensure_ascii=False,sort_keys=True) for c in candidates))
+        candidates=[[i,*[dictionaries[field].index(json.dumps(c[field],ensure_ascii=False,sort_keys=True))
+            for field in fields[1:]]] for i,c in enumerate(candidates)]
+        dictionaries={field:[json.loads(value) for value in values] for field,values in dictionaries.items()}
+    if compact:
+        metadata['candidate_columns']=['candidate_index',*fields[1:]]
+        metadata['candidate_dictionaries']=dictionaries
     header=json.dumps({'metadata':metadata,'candidates':candidates},ensure_ascii=False)
     candidate_packets=[]
     text_candidates=candidates
@@ -121,5 +150,5 @@ def store(root,key,authored,*,schema_retry=False):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('action',choices=['serve','store']);p.add_argument('--key');p.add_argument('--part',type=int,default=0)
-    p.add_argument('--body',action='store_true');p.add_argument('--rows',type=Path);a=p.parse_args();r=Path('.').resolve()
-    print(json.dumps(serve(r,a.key,a.part,a.body) if a.action=='serve' else store(r,a.key,json.loads(a.rows.read_text())),ensure_ascii=False,default=str))
+    p.add_argument('--body',action='store_true');p.add_argument('--compact',action='store_true');p.add_argument('--rows',type=Path);a=p.parse_args();r=Path('.').resolve()
+    print(json.dumps(serve(r,a.key,a.part,a.body,a.compact) if a.action=='serve' else store(r,a.key,json.loads(a.rows.read_text())),ensure_ascii=False,default=str))
