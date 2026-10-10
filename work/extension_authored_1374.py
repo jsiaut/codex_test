@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='9abaa3c36155eda1ab2bca3d1e00a818f6e7e6ecfbf15c0506fd67833faec311'
+save(k,[dict(quote='The Company operates in one reportable segment — the design, development and sale of integrated circuits.',model_quantity='segment_scope',issuer_treatment='FY21OneICSegment_NotNetworkingProductGroupDCmarketAIOnly'),dict(quote='long-lived asset information based on the physical location of the assets',abstained=True,abstention_reason='326.125m geographic net PPE is stock not current cash capex or future construction commitment. No standalone DC segment assets or named customer exposure.')])
