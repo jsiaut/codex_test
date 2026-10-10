@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='4e54b6556c2fe85d5629b8616c9a65d868dcbffddaa27a652e1002133287a185'
+save(k,[dict(quote='On August 9, 2019, the parties executed a settlement agreement.',abstained=True,abstention_reason='DickeySettlementSignedAug9_19PreliminaryCourtApprovalOct4_19_NoAmountOrActualCash;LitigationLossMAXUnquantified;AdvancedMicroDevicesIncLegalNameInCaption_NoJurisdictionProof')])
