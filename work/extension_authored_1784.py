@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='1949dbaf7896e9f9b8ef7683bef21b088100a4fe010a31330fd2a27013722173'
+save(k,[tagged(k,0,'Designated as cash flow hedges | $ | 420',model_quantity='fx_cash_flow_hedge_notional',issuer_treatment='420HELDNOTIONALJul28_19_NotCashCollateralOrDebt'),tagged(k,2,'Not designated for hedge accounting | $ | 269',model_quantity='fx_nondesignated_forward_notional',issuer_treatment='269HELDNOTIONAL_NotCashOutflow'),dict(quote='The fair value of the contracts was not significant',abstained=True,abstention_reason='FVImmaterial_NotZero;18MonthMaturity_NotAllNext12Cash;NoIneffectivenessNotInvestmentF6')])

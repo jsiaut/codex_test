@@ -1,0 +1,7 @@
+{
+  "content_key": "471abd017b7af0d6d41fe5edae275b30afbad8c93dfc98300ff93efb1fd79e32",
+  "accepted": 2,
+  "semantic_rejected": 4,
+  "reason": "Quotes omit the explicit table scale. Original rejected attempts retained; no retry or corrected re-reading. Only 1.2bn private carrying value and no-OTTI abstention accepted. Do not import the four rejected table amounts as observations.",
+  "assembly_status": "pending_phase3"
+}
