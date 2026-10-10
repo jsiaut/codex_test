@@ -335,3 +335,5 @@ D93 — CoreWeave émission25juillet2025 : Item1.01 du8-K0001193125-25-165924 no
 ### D94 — Citation d’en-tête Activision 2017
 
 La citation normalisée « FIRST SUPPLEMENTAL INDENTURE » a été alignée sur une occurrence située après la frontière physique 0:2542. Le rejet sémantique est conservé, sans nouvelle soumission. Le corps 2542:520427 reste exclu `financial_parties_only` : pièce originale de série sans Item 3.03, trustee financier et porteur DTC/Cede prouvé dans les parties 0 et 1 de l’EX-4.10 lu dans l’ordre. Aucun montant, lien ou F4 issu de ce corps n’est admissible.
+
+D95 — Marvell juin2018 EX4.2 : la citation de titre soumise ne se trouvait pas dans la plage brute physique0:2439. Rejet sémantique immuable conservé, sans réessai. En-tête intégral lu et Item1.01 indépendant lu : trustee U.S.Bank et souscripteurs Goldman/Merrill financiers, aucun porteur non financier identifié, sans Item3.03. Corps2439:211979 exclu financial_parties_only et aucun montant/lien/F4 importé du corps.

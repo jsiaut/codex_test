@@ -42,5 +42,16 @@
     "decision": "D94",
     "body_personally_read": false,
     "detail": "Full physical header read, ordered original EX-4.10 parts 0,1 establish registered DTC/Cede financial holder; current Activision wholly-owned MSFT Item8.01 fully reread. Supplemental without Item3.03. Header abstention rejected because normalized full-body quote was located later than the explicit physical header range. Immutable semantic rejection preserved with no resubmission. Scope exclusion remains independently documented."
+  },
+  {
+    "content_key": "d975c4ffaa43e1678536736c99ad3aea4871180085f046083c7499fe23b434ee",
+    "group": "MRVL",
+    "accession": "0001193125-18-201053",
+    "reason": "financial_parties_only",
+    "raw_byte_start": 2439,
+    "raw_byte_end": 211979,
+    "decision": "D95",
+    "body_personally_read": false,
+    "detail": "Complete physical header read; financial USBank trustee and actual Goldman/Merrill underwriting in independent fully read Item1.01. FirstSupplemental withoutItem3.03; normalized submitted title matched later fullbody occurrence beyond header. Immutable semantic rejection preserved without retry; entirebody excluded."
   }
 ]
