@@ -151,5 +151,131 @@
     "raw_byte_end": 3486639,
     "assurance_level": "audited",
     "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 21 - Subsequent Events",
+    "raw_byte_start": 9906889,
+    "raw_byte_end": 9947220,
+    "assurance_level": "audited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 22 - Subsequent Events to the Original Issuance of the Consolidated Financial Statements (Unaudited)",
+    "raw_byte_start": 9947220,
+    "raw_byte_end": 9968872,
+    "assurance_level": "unaudited",
+    "report_period_end": "2025-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "17. Subsequent Events",
+    "raw_byte_start": 3508994,
+    "raw_byte_end": 3512923,
+    "assurance_level": "audited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "CRWV",
+    "accession": "0001193125-25-067651",
+    "label": "Note 18. Subsequent Events (Unaudited)",
+    "raw_byte_start": 3512923,
+    "raw_byte_end": 3521176,
+    "assurance_level": "unaudited",
+    "report_period_end": "2024-12-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 2 - Summary of Significant Accounting Policies",
+    "raw_byte_start": 10503527,
+    "raw_byte_end": 10545407,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 3 - Revenue",
+    "raw_byte_start": 10545407,
+    "raw_byte_end": 10608548,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 7 - Financial Instruments",
+    "raw_byte_start": 10754392,
+    "raw_byte_end": 10864238,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 8 - Investments in Unconsolidated Affiliates",
+    "raw_byte_start": 10864238,
+    "raw_byte_end": 10870882,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 9 - Debt",
+    "raw_byte_start": 10870882,
+    "raw_byte_end": 11065117,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 10 - Leases",
+    "raw_byte_start": 11065117,
+    "raw_byte_end": 11094991,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 11 - Balance Sheet Components",
+    "raw_byte_start": 11094991,
+    "raw_byte_end": 11143354,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 16 - Commitments and Contingencies",
+    "raw_byte_start": 11699022,
+    "raw_byte_end": 11751847,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 18 - Segments",
+    "raw_byte_start": 11772435,
+    "raw_byte_end": 11914288,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
+  },
+  {
+    "group": "SPCX",
+    "accession": "0001628280-26-042639",
+    "label": "Note 20 - Subsequent Events",
+    "raw_byte_start": 11933350,
+    "raw_byte_end": 11954091,
+    "assurance_level": "unaudited",
+    "report_period_end": "2026-03-31"
   }
 ]

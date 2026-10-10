@@ -364,3 +364,7 @@ Sources de D103 : 0001018724-25-000004 / id:f-1013 / dimensions {"us-gaap:Unreco
 ## D104 — Extension autorisée des cinq familles de notes
 
 Le 2026-10-10T06:35:26.868344+00:00, l’utilisateur ouvre les notes d’investissements, de dette, de baux, d’engagements et de concentration : bloc `text` de §14 limité à ces cinq familles. La date de situation et les critères E/F du premier passage sont conservés ; prêteurs, découverte, chemins, nouveaux groupes, corps des contrats d’origine et nouveaux items 8-K ne sont pas ouverts par cette instruction. Source : instruction explicite de l’utilisateur conservée dans work/extension_authorization.json ; référence livrée e05c077.
+
+## D105 — Notes complémentaires : restauration et ordre de lecture
+
+Les notes sans métadonnées XBRL des prospectus de SpaceX et CoreWeave sont délimitées par leurs titres et leurs plages d’octets, conservées dans extension_html_bounds.json et reconstruites depuis les sources immuables. Les notes intermédiaires et les événements ultérieurs explicitement non audités gardent le niveau C ; les notes annuelles auditées gardent le niveau A. La quarantaine des états annuels de SpaceX reste applicable. La file des cinq familles ouvertes est triée du dépôt le plus récent au plus ancien, puis par famille, sans filtrage lexical du contenu. Les critères, seuils et fenêtres restent identiques.

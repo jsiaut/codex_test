@@ -1,31 +1,31 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "measured_at": "2026-10-10T06:38:14.462913+00:00",
-  "occurrences": 2418,
-  "unique_blocks": 2407,
-  "reused_blocks": 151,
-  "remaining_blocks": 2256,
-  "remaining_text_chars": 14606891,
-  "remaining_candidates": 116784,
+  "measured_at": "2026-10-10T07:02:25.294148+00:00",
+  "occurrences": 2407,
+  "unique_blocks": 2399,
+  "reused_blocks": 170,
+  "remaining_blocks": 2229,
+  "remaining_text_chars": 14673544,
+  "remaining_candidates": 115212,
   "remaining_by_group": {
-    "ORCL": 175,
-    "AVGO": 237,
-    "MRVL": 241,
-    "NVDA": 319,
-    "CRWV": 50,
-    "AMD": 256,
-    "SPCX": 9,
-    "AMZN": 184,
-    "META": 267,
-    "MSFT": 238,
-    "GOOGL": 280
+    "ORCL": 172,
+    "AVGO": 230,
+    "MRVL": 235,
+    "NVDA": 313,
+    "CRWV": 56,
+    "AMD": 252,
+    "SPCX": 28,
+    "AMZN": 178,
+    "META": 256,
+    "MSFT": 235,
+    "GOOGL": 274
   },
   "remaining_by_primary_family": {
-    "investments_note": 631,
-    "debt_note": 312,
-    "lease_note": 180,
-    "commitments_note": 306,
-    "concentration_narrative": 827
+    "lease_note": 183,
+    "concentration_narrative": 839,
+    "debt_note": 315,
+    "commitments_note": 309,
+    "investments_note": 583
   },
   "extraction_exclusions": [
     {
@@ -38,13 +38,13 @@
       "group": "SPCX",
       "accession": "0001628280-26-042639",
       "reason": "parse_failed",
-      "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+      "detail": "No XBRL note presentation metadata; explicitly bounded HTML notes recovered separately."
     },
     {
       "group": "CRWV",
       "accession": "0001193125-25-067651",
       "reason": "parse_failed",
-      "detail": "No XBRL note presentation metadata; HTML notes require explicit bounds."
+      "detail": "No XBRL note presentation metadata; explicitly bounded HTML notes recovered separately."
     }
   ],
   "additional_sec_requests": 0,
