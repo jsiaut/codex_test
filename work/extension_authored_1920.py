@@ -1,0 +1,4 @@
+from extension_authoring import save
+k='4d1ac85276e381603b1d2fa91268e22023dbf76e2f4d453f8c0441be34124fff'
+m=dict(amount_origin='narrative_only',unit='http://www.xbrl.org/2003/iso4217:USD',currency='USD',period_end='2019-01-27',amount_qualifier='exact',model_quantity='derivative_notional')
+save(k,[dict(m,quote='(In millions) | | | | | |\nDesignated as cash flow hedges | $ | 408',amount='408000000',issuer_treatment='FXCashFlowHedgeNotional_NotCash_All18mo_NotAll12'),dict(m,quote='(In millions) | | | | | |\nDesignated as cash flow hedges | $ | 408 | | | $ | 104 |\nNot designated for hedge accounting | $ | 241',amount='241000000',issuer_treatment='FXNonHedgeNotional_NotCash'),dict(quote='there were no gains or losses associated with ineffectiveness.',abstained=True,abstention_reason='NoHedgeIneffectiveness_NotFinancialInvestmentF6')])
