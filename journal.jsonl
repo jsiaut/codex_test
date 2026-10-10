@@ -7161,3 +7161,4 @@
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T00:04:22.654604+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 1290, "remaining_unique_keys": 14, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T00:06:32.252627+00:00", "event": "semantic_rejection_scope_preserved", "decision": "D95", "content_key": "d975c4ffaa43e1678536736c99ad3aea4871180085f046083c7499fe23b434ee", "retried": false, "body_exclusion": "financial_parties_only"}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T00:07:00.169026+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 1300, "remaining_unique_keys": 4, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-10T00:07:25.478486+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 1304, "remaining_unique_keys": 0, "final_delivery": false}
