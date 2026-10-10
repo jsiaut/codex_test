@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='b157c72d9157dd82e331c8ab49d841f6def80390b0831595ff01e5e11516cb5a'
+save(k,[tagged(k,24,'50,119',block='exposed_assets',model_quantity='cash_equivalents_and_marketable_securities',issuer_treatment='50.119FVSept30_20_EX5.501Bank_IN6.116CashEq44.003Market'),dict(quote='no change in fair value from the initial carrying value of $5.82 billion was required',abstained=True,abstention_reason='Jioobservabletransactions noFVchange not actualF6. July7_20same5.824exact1462 not additionalcash. Level3immaterialnotzeroPrivateheld; recurringcashmarketexcludePrivate.')])

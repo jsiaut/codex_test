@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='bddf5b83f1d9ae193bf0b0e56193f1299c7ad2569274096429e9f5deaf3f93cb'
+save(k,[tagged(k,12,'11,617',block='exposed_assets',model_quantity='cash_and_cash_equivalents',issuer_treatment='11.617Sept30_20_IN5.501Bank_EX44.003Market55.620Combined'),tagged(k,26,'13,591',block='exposed_assets',model_quantity='financial_assets_maturing_within_one_year_fair_value',issuer_treatment='13.591ASSETmatFV_NotIssuerCashPayment'),dict(quote='The allowance for credit losses was not material as of September 30, 2020.',abstained=True,abstention_reason='Not quantifiedzeroF6.719unrealizedgain notinvestmentimpairmentcash. No privateprimaryflow or next12issuerobligation in assetcalendar.')])
