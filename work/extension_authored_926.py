@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='6275d7b220b7b0c1f4217f8dd9c01b20c7e1ca179a00bea99dce5b14aebb5beb'
+save(k,[tagged(k,3,'an estimated environmental liability of approximately $3.9 million',block='recognized_liabilities',category_id='loss_contingency',amount_qualifier='approximately',model_quantity='environmental_loss_contingency_liability',issuer_treatment='3.9m_ENVrecognized_HELD_NOTAIinvesteeCreditLoss'),dict(quote='based on mutually agreed upon terms.',abstained=True,abstention_reason='Patent settlements and collaborations disclose no quantified financing or primary investment. The environmental accrual is a recognized liability rather than an investee credit loss; statements of no material adverse effect do not establish zero contingent exposure.')])
