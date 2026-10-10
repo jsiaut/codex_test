@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='aa8e071ec7ef78c39f1b65d87753ac794437e932a005f36844aca902e70a2fcf'
+save(k,[dict(quote='foreign currency forward contracts to mitigate the impact of foreign currency exchange rate movements on our operating expenses',abstained=True,abstention_reason='Foreign_currency_hedges_1577m_designated_939m_nondesignated_NOT_AI_credit_support_or_cash_investment_notional_NOT_exposure_or_liability_FV_insignificant_NOT_zero')])

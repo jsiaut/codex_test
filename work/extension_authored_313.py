@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2006181cce9d2e85ff8f6a8e8df5bdd21e12f69f281c3168c80289331ffc6929'
+save(k,[dict(quote='one reportable segment',model_quantity='segment_reporting_scope',issuer_treatment='ONE_integrated_circuits_segment_NO_distinctAI_DCprofit_usingCONSOLnetincome'),tagged(k,43,'Net income (loss)',model_quantity='single_segment_consolidated_net_income',issuer_treatment='372.7m_SIX194.8mQ2_CONSOLnetincome_INtaxinterestintangSBC_NOT_AIsegmentoperatingprofit_or_compute_margin')])
