@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='c5b78d86a113909610b267a7d419f269667bda18ab65ecaefa78ccb448f70639'
+save(k,[tagged(k,3,'Enterprise, Embedded and Semi-Custom | 348',model_quantity='enterprise_embedded_semicustom_segment_revenue',issuer_treatment='348Q1FY20EESCServerEmbeddedConsoleMIX_NotStandaloneDC;CGIncludesDCGPUs'),tagged(k,9,'Enterprise, Embedded and Semi-Custom | (26',model_quantity='enterprise_embedded_semicustom_segment_operating_profit',issuer_treatment='Negative26Q1FY20_EESCsegment_NotConsolidated177OrStandaloneDCProfit'),dict(quote='The Company has the following two reportable segments:',abstained=True,abstention_reason='FY20TWOseg_NotLaterFOUR;NoCurrentSegmentRecastOrNamedConcentration.5LegalAccrualPRIORQ1FY19_NotCurrentInvestmentF6.')])

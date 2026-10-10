@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='16a2caaaf3c924470aba84e1f3a5f548a9f5d7b40aea04984c678612476ab9be'
+save(k,[dict(quote='Monterey Research seeks unspecified monetary damages',abstained=True,abstention_reason='LegalLossMAXUnquant_NotZero;NoSpecificCashAccrualOrInvestmentF6. DickeyFinalApprovalFeb21_20NotMaterial_NoActualCashAmount;Hatamian2017SettlementEntirelyInsurerFunded_NotCompanyInvestment.')])

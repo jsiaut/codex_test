@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='cc24f3a7fbd4ec4345d3a3e4b5be05a01e097c56187a62a4452a2f3c12c9cc82'
+save(k,[dict(quote='Certain prior period amounts have been reclassified to conform to current period presentation.',basis_break=True,recast_cause='presentation_reclassification',abstained=True,abstention_reason='ActualPriorPresentationReclassScopeUnspecified_NotCurrentStandaloneDCSegmentRecast. Q1FY20CECLModifiedRetroAdoptionNoImpact_NotInvestmentF6;EachQuarter13weeks.')])
