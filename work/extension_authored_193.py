@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='daea0a4e19babd47333f9c705e86b020ee84d567a1177b61b18920ff35af78cd'
+save(k,[tagged(k,0,'recognized approximately $32.0 billion of unrealized gains in our non-marketable investments',model_quantity='subsequent_private_equity_unrealized_gain',amount_qualifier='approximately',stage='recognized',event_type='observable_price_adjustment',issuer_treatment='January2026_subsequent_noncash_gain_after_Dec31_report_subject_to_final_valuations_not_cash_funding_or_exact_Q1_final_gain',flag_unknown_reason='issuer_names_transactions_primary_secondary_origin_and_price_setting_participation_unknown_tag_Q1_end_not_actual_date')])
