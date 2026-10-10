@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='3c3583e19509851bcd2bad0de766deea3cd7edb6257af9f70f1acba4ed4f5f88'
+save(k,[tagged(k,12,'8,718',block='recognized_liabilities',model_quantity='deferred_revenue',issuer_treatment='8.718Nov30_20_IN8.062cur656long_NotRPOorNewCash'),tagged(k,0,'7,057',block='recognized_liabilities',model_quantity='cloud_services_and_license_support_deferred_revenue_current',issuer_treatment='7.057IN8.062cur_CLOUDandLICENSESupport_NotStandaloneOCI'),dict(quote='generally being recognized ratably over the contractual periods.',abstained=True,abstention_reason='Revenue recognition not futurecashcollection.8.718deferral stocknot newcash orunrecognizedRPO; no standaloneOCIorAIshare. AcquiredperformanceobligationsFV not newprivatecashfunding.')])
