@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='b5863e5934efb4c314d5ccce56c9e0e01d2e335c6f531f477a01d9443a094e4d'
+save(k,[tagged(k,36,'Total deferred revenue was $772 million and $675 million',model_quantity='deferred_revenue',issuer_treatment='772mDEFERREDstock_IN721NEXTyear_NOTCloudRPO_orcashprimaryfinance'),dict(quote='based on the addresses of our customers',model_quantity='geographic_revenue_scope',issuer_treatment='GEOcustomerADDRESSES_notuserlocation_COMPUTEdemand_ORnamedcounterparty'),dict(quote='Advertising | | | $ | 160,633',abstained=True,abstention_reason='Advertising and app revenues do not isolate AI sales or financed customers; no remaining performance obligation total or individual customer concentration is disclosed in this note.')])
