@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='fc40b2fef1c086f4566e39184d2886fe5d0a10f4e665264bfb4ccaaef0220d6a'
+save(k,[tagged(k,0,'accrued aggregate legal liabilities of $530 million',block='recognized_liabilities',category_id='loss_contingency',component_kind='other',stage='recognized',issuer_treatment='530mLEGALrecognized_notallAI_orcashpaid'),tagged(k,1,'approximately $800 million in aggregate beyond recorded amounts',block='contingent_obligations',category_id='loss_contingency',component_kind='other',amount_qualifier='up_to',issuer_treatment='800mPOSSIBLEadditional_BEYOND530recognized_NOT1330recognized_orcashpaid')])

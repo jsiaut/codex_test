@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='a3b001cd660c8e91e728002905bc1b45d48f0e188ade487b41edd83a26bfbaf1'
+save(k,[tagged(k,12,'Revenue allocated to remaining performance obligations',model_quantity='rpo_context',issuer_treatment='321000mTOTALRPO_IN315000commercial_IN47476def_40percentTOTALnext12_not40percentcommercial_no_namedfinancedcustomer'),dict(quote='We have recast certain prior period amounts to conform to the way we internally manage and monitor our business.',basis_break=True,recast_cause='presentation_reclassification',model_quantity='contract_liability_presentation_change',issuer_treatment='priorsegmentdefRECAST_IC10240curpresentation_not100percentAzure_def118709addsNOTcash131417recogn9month')])
