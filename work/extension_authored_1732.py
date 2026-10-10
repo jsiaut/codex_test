@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='8a5b7bf12164165fa56a3b89ea925a2665982e176d0532f2176afc4bf3191f88'
+save(k,[tagged(k,32,'Deferred revenue | $ | 192',model_quantity='contract_liabilities_total',issuer_treatment='192DEF_HELDSept30_19_Separate33UnusedDEP_IN225Combined_NotActualCash'),tagged(k,34,'Deposits | 33',model_quantity='customer_deposits',issuer_treatment='33UnusedDeposits_IN225Combined_With192DeferredRevenue_NotAdditionalCashReceipt'),dict(quote='Revenue disaggregated by geography, based on the billing address of our customer',abstained=True,abstention_reason='GeographyCustomerBilling_NotEndDemand;NoNamedCustomerConcentrationOrStandaloneDCSegment')])

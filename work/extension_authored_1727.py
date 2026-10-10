@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='3553e907002e61c699985b2d7fa97587622a4ce4571e2628b8cb80b1777991c5'
+save(k,[tagged(k,22,'Total cash and cash equivalents, and marketable securities | $ | 52,269',model_quantity='cash_and_marketable_securities',issuer_treatment='52.269HELDSept30_19_IN15.979Cash36.290Marketable_NotPrivateExposure'),tagged(k,30,'Due in one year | $ | 12,933',model_quantity='marketable_securities_maturing_one_year',issuer_treatment='12.933MarketableASSETMaturesWithinYear_NotDebtDue'),dict(quote='we considered the unrealized losses on our marketable securities to be temporary in nature',abstained=True,abstention_reason='NoMarketableOTTIExplicit_NotZeroPrivateInvestmentF6')])

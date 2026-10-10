@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='53f8c9b7dad8304566e7802184e91a0d7c6da11a84bafdfcd19e3b5231d1209c'
+save(k,[tagged(k,0,'In May 2016, we entered into a $2.0 billion senior unsecured revolving credit facility',model_quantity='undrawn_credit_capacity',issuer_treatment='2BillionCapacityHistoricalMay2016TAG_StillUndrawnSept30_19BODY_NotNewFundingOrMay31SigningDay'),tagged(k,1,'As of September 30, 2019, no amounts had been drawn down',block='recognized_liabilities',category_id='debt',model_quantity='revolving_credit_balance',issuer_treatment='ExplicitZeroRCF_DueMay20_21Outside12_ComplianceNotF4')])
