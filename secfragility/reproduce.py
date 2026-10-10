@@ -35,7 +35,10 @@ def compare(root):
 
     def source_bag(value):
         # These two columns are unordered source-ID lists. Preserve duplicates.
-        return json.dumps(sorted(json.loads(value)), separators=(',', ':'))
+        parsed = json.loads(value)
+        if not isinstance(parsed, list):
+            raise ValueError('Expected an array of source IDs')
+        return json.dumps(sorted(parsed, key=lambda x: json.dumps(x, sort_keys=True)), separators=(',', ':'))
 
     db.create_function('source_bag', source_bag, ['VARCHAR'], 'VARCHAR')
     results = {}

@@ -34,7 +34,7 @@ def prepare(db,root:Path,as_of:str):
     db.execute('''CREATE TEMP TABLE quarter_candidates AS
       SELECT q.group_id,q.start_date AS period_start,q.end_date AS period_end,a.model_quantity,
        a.unit,a.currency,a.accounting_framework,a.reporting_scope,a.accession,a.acceptance_datetime,a.knowledge_date,
-       a.document_rank,a.occurrence_rank,a.canonical_concept,a.tier,
+       a.document_rank,a.numeric_precision,a.occurrence_rank,a.canonical_concept,a.tier,a.fact_id,
        CASE WHEN a.period_start!=q.start_date AND EXISTS (SELECT 1 FROM filing_recast_differences x
          WHERE x.accession_a=a.accession AND x.accession_b=b.accession AND x.model_quantity=a.model_quantity)
         THEN NULL WHEN a.period_start=q.start_date THEN a.value ELSE a.value-b.value END AS value,
@@ -50,7 +50,8 @@ def prepare(db,root:Path,as_of:str):
        AND b.acceptance_datetime<=a.acceptance_datetime
       WHERE (a.period_start=q.start_date OR (a.period_start=q.fy_start AND b.value IS NOT NULL))
       QUALIFY row_number() OVER (PARTITION BY a.fact_id,q.start_date,q.end_date ORDER BY
-       CASE WHEN b.accession=a.accession THEN 0 ELSE 1 END,b.acceptance_datetime DESC,b.accession DESC,b.occurrence_rank DESC)=1''')
+       CASE WHEN b.accession=a.accession THEN 0 ELSE 1 END,b.acceptance_datetime DESC,b.accession DESC,
+       b.document_rank DESC,b.numeric_precision DESC,b.occurrence_rank DESC,b.fact_id)=1''')
     for view in ['as_known','revised']:
         cutoff='AND a.acceptance_datetime<=k.public_at' if view=='as_known' else ''
         snapshot='k.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
@@ -60,7 +61,7 @@ def prepare(db,root:Path,as_of:str):
           WHERE a.acceptance_datetime<={sql_literal(as_of)}::TIMESTAMPTZ AND a.value IS NOT NULL {cutoff}
           QUALIFY row_number() OVER (PARTITION BY a.group_id,a.model_quantity,a.period_start,a.period_end,a.unit,a.accounting_framework,a.reporting_scope
            ORDER BY CASE WHEN calculation_basis='direct_quarter' THEN 0 ELSE 1 END,ao.priority,
-            a.acceptance_datetime DESC,a.accession DESC,a.document_rank DESC,a.occurrence_rank DESC)=1''')
+            a.acceptance_datetime DESC,a.accession DESC,a.document_rank DESC,a.numeric_precision DESC,a.occurrence_rank DESC,a.fact_id)=1''')
 
 
 def measures(db,as_of):
@@ -114,8 +115,11 @@ def measures(db,as_of):
           AND a.accounting_framework=b.accounting_framework AND a.reporting_scope=b.reporting_scope
           AND a.period_end-b.period_end BETWEEN 350 AND 380 AND abs((a.period_end-a.period_start)-(b.period_end-b.period_start))<=7
           AND b.acceptance_datetime<=a.acceptance_datetime
+         JOIN anchor_order bo ON bo.model_quantity=b.model_quantity AND bo.canonical_concept=b.canonical_concept
          WHERE a.model_quantity='revenue_total' AND b.value IS NOT NULL AND NOT b.recast_boundary
           AND NOT EXISTS (SELECT 1 FROM filing_recast_differences x WHERE x.accession_a=a.accession
            AND x.accession_b=b.accession AND x.model_quantity=a.model_quantity)
          QUALIFY row_number() OVER (PARTITION BY a.group_id,a.period_start,a.period_end,a.unit
-          ORDER BY CASE WHEN b.accession=a.accession THEN 0 ELSE 1 END,b.acceptance_datetime DESC,b.accession DESC)=1''')
+          ORDER BY CASE WHEN b.accession=a.accession THEN 0 ELSE 1 END,b.acceptance_datetime DESC,b.accession DESC,
+           CASE WHEN b.calculation_basis='direct_quarter' THEN 0 ELSE 1 END,bo.priority,
+           b.document_rank DESC,b.numeric_precision DESC,b.occurrence_rank DESC,b.fact_id)=1''')

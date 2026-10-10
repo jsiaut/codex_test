@@ -71,7 +71,7 @@ def assemble(db,root,as_of):
             evidence_locator=f"rawbytes:{conso['raw_byte_start']}:{conso['raw_byte_end']}",source_perspective='reporting_entity',as_of=as_of)
         records.append(row);index[norm].append(row)
     evidence=defaultdict(list)
-    observations=rows(db,'SELECT * FROM usable_observations')
+    observations=rows(db,'SELECT * FROM usable_observations ORDER BY knowledge_date,accession,document_id,observation_id')
     # A first-person transaction in the issuer's own filing can use the exact
     # short form of that same legal name. This is local to that filing CIK;
     # it never resolves a brand mentioned by another issuer.
@@ -101,10 +101,18 @@ def assemble(db,root,as_of):
         full=bool(re.search(r'\b(?:inc|corp|llc|lp|ltd|plc|pbc)\b$',norm))
         confirmed=bool(full and j and len(independent)>=2)
         name,o=mentions[0];eid='legal:'+digest([norm,j])
+        identity_proof=[];seen=set()
+        for _,mention in mentions:
+            if mention['accession'] not in seen:
+                identity_proof.append(mention);seen.add(mention['accession'])
+            if len(identity_proof)==2:break
+        known=identity_proof[-1]['knowledge_date'] if confirmed else o['knowledge_date']
+        locator=o['locator']
+        if confirmed:locator+='; corroborating_observation='+identity_proof[-1]['observation_id']
         row=dict(entity_id=eid,membership_id='standalone',legal_name=name,normalized_name=norm,jurisdiction=j,
           entity_status='confirmed' if confirmed else 'pending',economic_group_id=eid,consolidation_treatment='undetermined',
-          knowledge_date=o['knowledge_date'],resolution_rule='same_normalized_full_name_and_jurisdiction_two_independent_filings' if confirmed else 'identity_or_control_not_established',
-          evidence_document_id=o['document_id'],evidence_locator=o['locator'],source_perspective='counterparty',as_of=as_of)
+          knowledge_date=known,resolution_rule='same_normalized_full_name_and_jurisdiction_two_independent_filings' if confirmed else 'identity_or_control_not_established',
+          evidence_document_id=o['document_id'],evidence_locator=locator,source_perspective='counterparty',as_of=as_of)
         records.append(row);index[norm].append(row)
         if not confirmed:exclusion(db,as_of,'pending_entity','entity',eid,entity_id=eid,counterparty_id=eid,
             detail='Name retained without alias, jurisdiction or consolidation guess.',coverage_state='unknown')

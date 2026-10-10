@@ -10,7 +10,7 @@ def prepare_views(db,root: Path,as_of: str):
     db.execute(f'''CREATE TEMP TABLE selected_as_known AS SELECT * FROM eligible_facts
         WHERE knowledge_date<=CAST({sql_literal(as_of)} AS TIMESTAMPTZ)::DATE
         QUALIFY row_number() OVER (PARTITION BY semantic_key ORDER BY acceptance_datetime DESC,
-          accession DESC,document_rank DESC,numeric_precision DESC,occurrence_rank DESC)=1''')
+          accession DESC,document_rank DESC,numeric_precision DESC,occurrence_rank DESC,fact_id)=1''')
     # An anchor preference is fixed by its order in config BEFORE seeing any
     # control. Ambiguity within a chosen concept remains a conflict.
     import yaml
@@ -26,7 +26,7 @@ def prepare_views(db,root: Path,as_of: str):
           WHERE dimensions='{{}}' AND coverage_state IN ('observed','explicit_zero') AND value IS NOT NULL
           QUALIFY row_number() OVER (PARTITION BY group_id,model_quantity,period_start,period_end,unit,
             accounting_framework,reporting_scope ORDER BY priority,acceptance_datetime DESC,accession DESC,
-            document_rank DESC,occurrence_rank DESC)=1''')
+            document_rank DESC,numeric_precision DESC,occurrence_rank DESC,fact_id)=1''')
 
 
 def ratio_measures(db,as_of: str):

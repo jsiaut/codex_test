@@ -44,7 +44,7 @@ def run(db,root:Path,collection:dict,as_of:str):
       ), comparisons AS (
        SELECT *,lag(value) OVER w AS prior_value,lag(half_unit) OVER w AS prior_precision,
         lag(fact_id) OVER w AS prior_fact,lag(accession) OVER w AS prior_accession FROM distinct_deposits
-       WINDOW w AS (PARTITION BY semantic_key ORDER BY acceptance_datetime,accession,document_rank,occurrence_rank)
+       WINDOW w AS (PARTITION BY semantic_key ORDER BY acceptance_datetime,accession,document_rank,occurrence_rank,fact_id)
       ) SELECT 'c4_restatement_detection',group_id,coalesce(period_start,period_end),period_end,'as_known',{stamp},semantic_key||'|'||accession,
        CASE WHEN half_unit IS NULL OR prior_precision IS NULL THEN 'not_testable' ELSE 'ok' END,
        value,prior_value,value-prior_value,half_unit+prior_precision,'instance',
@@ -139,21 +139,25 @@ def run(db,root:Path,collection:dict,as_of:str):
     if rows:db.executemany('INSERT INTO disclosure_rules VALUES (?,?,?,?,?,?)',rows)
     db.execute(f'''INSERT INTO controls
       (control,group_id,period_start,period_end,view,as_of,breakdown_key,status,lhs,rhs,residual,tolerance,tolerance_basis,explanation_code,evidence)
-      WITH q AS (SELECT r.control,p.group_id,p.period_start,p.period_end,p.accession,r.parent,r.role,p.unit,p.value AS rhs,
+      WITH q AS (SELECT r.control,p.group_id,p.period_start,p.period_end,p.accession,r.parent,r.role,p.unit,p.dimensions,
+       p.accounting_framework,p.reporting_scope,p.value AS rhs,
        sum(r.weight*c.value) AS lhs,count(*) AS terms,count(c.value) AS found,count(cp.half_unit) AS known_precision,
        max(pp.half_unit) AS parent_precision,sum(abs(r.weight)*cp.half_unit)+max(pp.half_unit) AS tolerance,
        to_json(list(c.fact_id)||[any_value(p.fact_id)]) AS evidence,p.acceptance_datetime
        FROM disclosure_rules r JOIN eligible_instance_occurrences p ON p.accession=r.accession AND p.canonical_concept=r.parent
        LEFT JOIN eligible_instance_occurrences c ON c.accession=p.accession AND c.canonical_concept=r.child AND c.dimensions=p.dimensions
         AND c.period_start IS NOT DISTINCT FROM p.period_start AND c.period_end=p.period_end AND c.unit=p.unit
+        AND c.accounting_framework=p.accounting_framework AND c.reporting_scope=p.reporting_scope
        LEFT JOIN precision_units pp ON pp.decimals=p.decimals LEFT JOIN precision_units cp ON cp.decimals=c.decimals
        WHERE p.value IS NOT NULL GROUP BY ALL
-      ) SELECT control,group_id,coalesce(period_start,period_end),period_end,'as_known',{stamp},parent||'|'||role||'|'||unit,
+      ) SELECT control,group_id,coalesce(period_start,period_end),period_end,'as_known',{stamp},
+       parent||'|'||role||'|'||unit||'|'||dimensions||'|'||accounting_framework::VARCHAR||'|'||reporting_scope,
        CASE WHEN terms<2 THEN 'tautological' WHEN terms!=found OR known_precision!=terms OR parent_precision IS NULL THEN 'not_testable'
         WHEN abs(lhs-rhs)<=tolerance THEN 'ok' ELSE 'mismatch' END,lhs,rhs,lhs-rhs,tolerance,'instance',
        CASE WHEN terms!=found THEN 'missing_maturity_components' WHEN known_precision!=terms OR parent_precision IS NULL THEN 'precision_missing'
         WHEN abs(lhs-rhs)>tolerance THEN 'maturity_residual_unexplained' END,evidence FROM q
-       QUALIFY row_number() OVER (PARTITION BY control,group_id,period_start,period_end,parent,role,unit ORDER BY acceptance_datetime DESC,accession DESC)=1''')
+       QUALIFY row_number() OVER (PARTITION BY control,group_id,period_start,period_end,parent,role,unit,dimensions,accounting_framework,reporting_scope
+        ORDER BY acceptance_datetime DESC,accession DESC)=1''')
     dimension_controls(db,as_of)
     tax_controls(db,as_of)
     db.execute(f'''INSERT INTO controls

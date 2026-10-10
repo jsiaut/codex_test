@@ -194,7 +194,7 @@ Ce premier rendu ne compare pas à une livraison antérieure : les valeurs nouve
     (root/'delivery_summary.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,default=str)+'\n')
     table_status='| Statut rang 1 | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in sorted(rank_status.items()))
     reason_status='| Motif | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in rank_reasons.most_common())
-    fstates=Counter((m['breakdown_key'],m['status'],m['nd_reason'] or '—') for m in series if m['measure']=='fragility_event' and m['view']=='as_known')
+    fstates=Counter((m['breakdown_key'].split('|')[0],m['status'],m['nd_reason'] or '—') for m in series if m['measure']=='fragility_event' and m['view']=='as_known')
     fstatus_md='| Observable | Statut | Motif | Cellules temporelles |\n| --- | --- | --- | ---: |\n'+'\n'.join(f'| {k[0]} | {k[1]} | {k[2]} | {v} |' for k,v in sorted(fstates.items()))
     pair_metrics={'documented_revenue_dependency','investor_customer_revenue_share','named_edge_coverage','documented_pair_coverage','customer_concentration_anonymous','documented_backlog_dependency','consideration_to_customer','noncash_revenue_from_investees','contract_coverage'}
     pstates=Counter((m['measure'],m['status'],m['nd_reason'] or '—') for m in series if m['measure'] in pair_metrics and m['view']=='as_known')

@@ -12,7 +12,7 @@ def run(db,as_of):
            JOIN anchor_order ao USING(model_quantity,canonical_concept)
           QUALIFY row_number() OVER (PARTITION BY k.group_id,k.start_date,k.end_date,a.model_quantity,a.period_start,a.period_end,a.unit,
            a.accounting_framework,a.reporting_scope ORDER BY CASE WHEN calculation_basis='direct_quarter' THEN 0 ELSE 1 END,
-            ao.priority,a.acceptance_datetime DESC,a.accession DESC,a.document_rank DESC,a.occurrence_rank DESC)=1''')
+            ao.priority,a.acceptance_datetime DESC,a.accession DESC,a.document_rank DESC,a.numeric_precision DESC,a.occurrence_rank DESC,a.fact_id)=1''')
         db.execute(f'''CREATE TEMP TABLE ttm_quantities_{view} AS
           WITH ranked AS (SELECT *,row_number() OVER (PARTITION BY group_id,anchor_start,anchor_end,model_quantity,unit,
            accounting_framework,reporting_scope ORDER BY period_end DESC) AS quarter_rank FROM ttm_terms_{view}),
@@ -23,7 +23,7 @@ def run(db,as_of):
            sum(value) AS value,min(period_start) AS start_date,max(period_end) AS end_date,count(*) AS terms,
            sum(period_end-period_start+1) AS duration_days,max(knowledge_date) AS knowledge_date,
            bool_and(quarter_rank%4=1 OR period_end+INTERVAL 1 DAY=newer_start) AS contiguous,
-           to_json(flatten(list(from_json(lineage,'["VARCHAR"]')))) AS lineage,to_json(list(tier)) AS evidence_profile
+           to_json(flatten(list(from_json(lineage,'["VARCHAR"]') ORDER BY quarter_rank))) AS lineage,to_json(list(tier ORDER BY quarter_rank)) AS evidence_profile
            FROM ordered a WHERE quarter_rank<=8 AND NOT EXISTS (
             SELECT 1 FROM ranked b JOIN filing_recast_differences x ON x.accession_a=a.accession
              AND x.accession_b=b.accession AND x.model_quantity=a.model_quantity

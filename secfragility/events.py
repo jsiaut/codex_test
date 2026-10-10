@@ -9,7 +9,7 @@ def run(db,root,as_of):
     u=json.loads((root/'work/expected_universe.json').read_text())
     quarters=[q for q in u['quarters'] if q.get('in_analysis_window') and q['period_start']!='none' and q['period_end']!='none']
     collection=json.loads((root/'work/collection.json').read_text())
-    obs=rows(db,'SELECT * FROM usable_observations');evidence=defaultdict(list)
+    obs=rows(db,'SELECT * FROM usable_observations ORDER BY knowledge_date,accession,document_id,observation_id');evidence=defaultdict(list)
     for o in obs:
         f=o.get('event_observable')
         if not f and o.get('event_present') is False and o.get('model_quantity') in (

@@ -352,3 +352,8 @@ D101 — Les résidus de C1/C2 d’AMD, C7 de CoreWeave et les rapprochements BP
 ### D102 — Homonymes de juridictions différentes
 
 Le registre conserve séparément les mentions d’un même nom juridique dans des juridictions différentes, notamment Broadcom Corporation (California / Delaware, D80). Sans juridiction dans le passage, seule une identité provisoire non résolue peut être retenue ; aucune fusion ni attribution numérique n’est déduite du nom commun. Une juridiction explicitement contradictoire empêche la résolution vers une identité existante.
+
+
+### D103 — Reproduction, source directe et dimensions des échéanciers
+
+La comparaison intégrale a révélé une égalité de rang entre trimestre comparatif publié et différence cumulée (notamment META), ainsi que plusieurs échéanciers AMZN de dimensions différentes partageant une clé C10. La sélection comparative applique désormais la préférence du trimestre publié de §7.3 avant un identifiant de source stable ; les échéanciers gardent chacun leur dimension, cadre et périmètre dans leur clé, sans choix selon le résidu. Les faits et observations d’origine, le normaliseur, les blocs et leurs candidats restent inchangés ; les références équivalentes et profils de preuve ont un ordre déterministe. Pour une identité confirmée par deux dépôts indépendants, la publicité correspond à la seconde pièce et sa référence est conservée.

@@ -13,7 +13,7 @@ def stocks(db,as_of:str):
           WHERE f.dimensions='{{}}' AND f.value IS NOT NULL AND f.coverage_state IN ('observed','explicit_zero')
            AND f.acceptance_datetime<={timestamp}
           QUALIFY row_number() OVER (PARTITION BY f.group_id,q.start_date,q.end_date,f.model_quantity,f.period_end,f.unit,
-            f.accounting_framework,f.reporting_scope ORDER BY ao.priority,f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.occurrence_rank DESC)=1''')
+            f.accounting_framework,f.reporting_scope ORDER BY ao.priority,f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.numeric_precision DESC,f.occurrence_rank DESC,f.fact_id)=1''')
         db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,value,unit,currency,status,coverage_state,
           knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework,constant_perimeter)
          SELECT 'rpo_total',group_id,quarter_start,quarter_end,'{view}',snapshot_at,value,unit,currency,'computed','observed',
@@ -60,7 +60,7 @@ def stocks(db,as_of:str):
            AND q.period_start=f.period_start AND q.period_end=f.period_end AND f.acceptance_datetime<=q.snapshot_at
           WHERE f.model_quantity='investment_gain_loss' AND f.value IS NOT NULL
           QUALIFY row_number() OVER (PARTITION BY f.group_id,f.period_start,f.period_end,f.canonical_concept,f.dimensions,f.unit
-           ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.occurrence_rank DESC)=1''')
+           ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.numeric_precision DESC,f.occurrence_rank DESC,f.fact_id)=1''')
         for term,endpoint in [('opening','quarter_start-INTERVAL 1 DAY'),('closing','quarter_end')]:
             db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,term,value,unit,currency,
               status,coverage_state,knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework,overlap_possible)
@@ -99,7 +99,7 @@ def tagged_components(db,as_of):
           JOIN purchase_buckets b USING(canonical_concept)
           WHERE f.value IS NOT NULL AND f.acceptance_datetime<={stamp}
           QUALIFY row_number() OVER (PARTITION BY f.group_id,q.start_date,q.end_date,b.bucket,f.dimensions,f.unit,
-           f.accounting_framework,f.reporting_scope ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.occurrence_rank DESC)=1''')
+           f.accounting_framework,f.reporting_scope ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.numeric_precision DESC,f.occurrence_rank DESC,f.fact_id)=1''')
         for measure,quantity in [('customer_concentration_anonymous','concentration_risk_percentage'),('investment_impairment','investment_impairment')]:
             additional="""AND json_extract_string(f.dimensions,'$.\"us-gaap:ConcentrationRiskByTypeAxis\"')='us-gaap:CustomerConcentrationRiskMember'
                 AND json_extract_string(f.dimensions,'$.\"us-gaap:ConcentrationRiskByBenchmarkAxis\"') IN
@@ -114,7 +114,7 @@ def tagged_components(db,as_of):
              JOIN quarter_cutoffs q ON q.group_id=f.group_id AND q.start_date=f.period_start AND q.end_date=f.period_end
              WHERE f.model_quantity='{quantity}' AND f.value IS NOT NULL AND f.acceptance_datetime<={stamp} {additional}
               QUALIFY row_number() OVER (PARTITION BY f.group_id,f.period_start,f.period_end,f.canonical_concept,f.dimensions,f.unit
-               ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.occurrence_rank DESC)=1''')
+               ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.numeric_precision DESC,f.occurrence_rank DESC,f.fact_id)=1''')
         # ISO durations are preserved in facts. Months can be calculated exactly
         # when no day/time component is published; PnD is not estimated in years.
         db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,breakdown_key,value,unit,status,coverage_state,
@@ -127,7 +127,7 @@ def tagged_components(db,as_of):
           WHERE f.model_quantity='depreciation_life_published' AND regexp_full_match(f.text_value,'P([0-9]+Y([0-9]+M)?|[0-9]+M)')
            AND f.acceptance_datetime<={stamp}
           QUALIFY row_number() OVER (PARTITION BY f.group_id,q.start_date,q.end_date,f.dimensions
-           ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.occurrence_rank DESC)=1''')
+           ORDER BY f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.numeric_precision DESC,f.occurrence_rank DESC,f.fact_id)=1''')
 
 
 def liquidity_and_leases(db,as_of):

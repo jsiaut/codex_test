@@ -52,9 +52,9 @@ FROM fact_precision_groups f WHERE tier IN ('A','B','C','D') AND filing_status='
 CREATE TEMP TABLE eligible_instance_occurrences AS
 SELECT * FROM eligible_facts WHERE document_rank>=0
 QUALIFY row_number() OVER (PARTITION BY accession,semantic_key
- ORDER BY primary_statement_occurrence DESC NULLS LAST,document_rank DESC,numeric_precision DESC,occurrence_rank DESC)=1;
+ ORDER BY primary_statement_occurrence DESC NULLS LAST,document_rank DESC,numeric_precision DESC,occurrence_rank DESC,fact_id)=1;
 
 CREATE TEMP TABLE selected_revised AS
 SELECT * FROM eligible_facts
 QUALIFY row_number() OVER (PARTITION BY semantic_key
- ORDER BY acceptance_datetime DESC,accession DESC,document_rank DESC,numeric_precision DESC,occurrence_rank DESC)=1;
+ ORDER BY acceptance_datetime DESC,accession DESC,document_rank DESC,numeric_precision DESC,occurrence_rank DESC,fact_id)=1;
