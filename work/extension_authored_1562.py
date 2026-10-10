@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2c6250be30c68f5d48ad308c812092b61adab37ce31f2c61bc0438f89eae29cf'
+save(k,[tagged(k,32,'Derivative financial instruments | | $ | — | | | $ | 268',model_quantity='derivative_liability',issuer_treatment='268May31_20Total29AssetSeparate_NoNettingWithoutProof'),dict(quote='the estimated fair values of the senior notes and the related fair value hedges',abstained=True,abstention_reason='80.9OwnDebtAndRelatedHedgeFairValue_NotPrincipal71.6OrInvestmentAssetF6.30.881PortfolioIN29DerivativeASSET;30.852Portfolio1561EX29_NotAllBankCashOrPrivateInvestment.')])
