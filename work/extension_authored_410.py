@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2b9e170556f67d42e7ab8cd99407ab8a99bddb81b08675ba13884d7fdf9a0f59'
+save(k,[tagged(k,10,'Total non-marketable equity securities',model_quantity='private_equity_carrying_value',issuer_treatment='6168mHELD_IN6119measurementalternative49EQ_not98newcash_anonymous'),tagged(k,4,'Cumulative impairment/downward adjustments',model_quantity='combined_equity_downward_adjustment_cumulative',issuer_treatment='624mCUMULATIVEcombined_UNCHANGEDnotcurrentcharge_orisolatedimpairF6_300cumulativeupnotcurrentgain')])

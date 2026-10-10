@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='2206ab95483307225be65a11f428566c83ea9b7b9f14f2994be89319ce833a5f'
+save(k,[dict(quote='combining the Client and Gaming segments into one reportable segment',basis_break=True,recast_cause='segment_change',model_quantity='segment_presentation_change',issuer_treatment='FY25ClientGamingmerged_ALLpriorretrospectivelyadjusted_businessrevstillseparate_notfourreportables'),tagged(k,0,'Data Center',model_quantity='segment_revenue_context',issuer_treatment='3674mQ1DCmixAI_CPU_GPU_APU_DPU_FPGA_notpureAI_same7438total'),tagged(k,22,'Operating income (loss)',model_quantity='segment_profit_context',issuer_treatment='932mQ1DC_EX950AllOther_IN567intang364SBC_notfullAIprofit_noexpenseallocadd')])

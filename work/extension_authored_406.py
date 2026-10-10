@@ -1,0 +1,3 @@
+from extension_authoring import save,tagged
+k='1e89ef9d5cabeced9fc361cd470debcbee4777fd5ab2dc03715ddd1862d165e8'
+save(k,[tagged(k,47,'Present value of lease liabilities',block='recognized_liabilities',category_id='lease_liability',component_kind='lease_payment',stage='recognized',issuer_treatment='92114mPV_IN81731OP10383FIN_IN12243cur79871long_same109845grossminus17731interest_NOTadd_notallAI_4880Q1expense_NOTcash'),tagged(k,1,'Gross assets acquired under finance leases',model_quantity='finance_lease_asset_context',issuer_treatment='54700mGROSSHELD_PPEassets_vs40600cumamort_NOTcashadditions_or10383PVliability')])
