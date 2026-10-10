@@ -65,9 +65,14 @@ def load(db,root,as_of):
     if policies:db.executemany('INSERT INTO excluded_observations VALUES (?,?)',[(k,v['reason']) for k,v in policies.items()])
     db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM observations o
       WHERE NOT abstained AND tier IN ('A','B','C','D') AND filing_status='filed'
+       AND EXISTS (SELECT 1 FROM documents d WHERE d.document_id=o.document_id
+        AND d.acceptance_datetime IS NOT NULL AND d.acceptance_datetime<=o.as_of)
        AND NOT EXISTS (SELECT 1 FROM excluded_observations q WHERE q.observation_id=o.observation_id)
        AND (tagged_fact_id IS NULL OR EXISTS (SELECT 1 FROM eligible_facts f
         WHERE f.fact_id=o.tagged_fact_id AND f.value IS NOT NULL AND f.coverage_state IN ('observed','explicit_zero')))''')
+    for o in rows(db,'''SELECT o.observation_id,o.group_id,o.accession FROM observations o JOIN documents d USING(document_id)
+        WHERE NOT o.abstained AND (d.acceptance_datetime IS NULL OR d.acceptance_datetime>o.as_of)'''):
+        exclusion(db,as_of,'source_not_known_at_as_of','observation',o['observation_id'],group_id=o['group_id'],accession=o['accession'],coverage_state='unknown')
     for o in rows(db,"SELECT * FROM observations WHERE abstained AND model_quantity='exhibit_body_excluded_financial_parties_only'"):
         if any(r.get('content_key')==o['content_key'] for r in json.loads((root/'work/exhibit_body_policy_overrides.json').read_text())):continue
         b=json.loads((root/by_key[o['content_key']][0]['path']).read_text())

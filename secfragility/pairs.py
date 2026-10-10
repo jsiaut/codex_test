@@ -30,6 +30,8 @@ def financed(edges,s,c,q,quarters,cutoff,policy='exposure_outstanding'):
         # a signed maximum warrant grant does not qualify.
         qualifies=qualifies or (e.get('edge_kind')=='amount' and e.get('family')=='customer_consideration' and e.get('stage')=='recognized'
              and e.get('event_type')=='recognition' and e.get('tier') in ('A','B','C'))
+        if qualifies and not e.get('event_date') and e.get('period_start') and left and str(e['period_start'])<=left:
+            qualifies=False  # Do not assign a straddling annual flow to its closing day.
         if qualifies and d and d<=q['period_end'] and (policy=='ever_financed' or left and d>left):return 'active'
     # Current investment notes are not processed in the first pass. No lapse
     # or absence can be inferred from a censored cash history.

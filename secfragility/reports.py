@@ -1,7 +1,7 @@
 """Generated deliverables; all financial numbers come from exported records."""
 from pathlib import Path
 from decimal import Decimal
-from datetime import datetime
+from datetime import datetime,timezone
 from collections import Counter,defaultdict
 import csv,json,hashlib,subprocess,shutil,zipfile
 import yaml
@@ -172,6 +172,7 @@ Ce premier rendu ne compare pas à une livraison antérieure : les valeurs nouve
       reading=progress,network=network,annex_e_pair_outcomes=dict(efstats),annex_e7_ratio=str(e7ratio),invariants=verification['checks'],
       amount_edges=db.execute("SELECT count(*) FROM links WHERE edge_kind='amount'").fetchone()[0],
       documented_financing_pairs=db.execute("SELECT count(DISTINCT from_group_id||'|'||to_group_id) FROM links WHERE edge_kind='amount' AND family='financing'").fetchone()[0])
+    data['elapsed_wall_seconds_since_first_sec_request']=str(Decimal(str((datetime.now(timezone.utc)-datetime.fromisoformat(manifest['first_sec_request'])).total_seconds())).quantize(Decimal('0.000001')))
     (root/'delivery_summary.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,default=str)+'\n')
     table_status='| Statut rang 1 | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in sorted(rank_status.items()))
     reason_status='| Motif | Cellules |\n| --- | ---: |\n'+'\n'.join(f'| {k} | {v} |' for k,v in rank_reasons.most_common())
@@ -193,7 +194,7 @@ Paires à financement de montant documenté : {data['documented_financing_pairs'
 
 Blocs uniques traités : {progress['completed_unique_keys']} ; observations acceptées : {progress['accepted_observations']}. Tentatives rejetées : {json.dumps(progress['validation_rejected_attempts_by_phase'],ensure_ascii=False)}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {json.dumps(dict(classes),ensure_ascii=False)} ; items 8-K : {json.dumps(dict(items),ensure_ascii=False)}.
 
-Réseau : {json.dumps(maskednetwork,ensure_ascii=False)}. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
+Réseau : {json.dumps(maskednetwork,ensure_ascii=False)}. Durée calendaire depuis la première requête SEC : {data['elapsed_wall_seconds_since_first_sec_request']} secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
 
 ## Exclusions
 

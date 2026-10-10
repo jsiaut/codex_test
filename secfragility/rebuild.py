@@ -68,6 +68,7 @@ def companyfacts_rows(root: Path,collection: dict,inventory: dict,as_of: str):
 
 
 def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
+    config=yaml.safe_load((root/'config.yaml').read_text())
     replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
     for accession,filing in collection['filings'].items():
         if filing['status']!='collected':
@@ -75,7 +76,7 @@ def instance_rows(root: Path,collection: dict,as_of: str,mappings: list[dict]):
         row=filing['metadata'];group=filing['group'];resources=filing['resources']
         source_order=provenance(str(root),accession)
         meta=load_metadata(root,resources,accession)
-        mapping=build_mapping(meta,yaml.safe_load((root/'config.yaml').read_text()),group,accession,replacements) if meta else []
+        mapping=build_mapping(meta,config,group,accession,replacements) if meta else []
         mappings.extend(mapping)
         discovery=json.loads((root/filing['discovery_path']).read_text()) if filing.get('discovery_path') else {}
         primary_ids=set()

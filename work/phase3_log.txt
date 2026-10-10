@@ -1,5 +1,62 @@
+Timeout (0:01:00)!
+Thread 0x00007f85bf82f740 (most recent call first):
+  File "/workspace/work/secfragility/secfragility/xbrl.py", line 88 in parse_instance
+  File "/workspace/work/secfragility/secfragility/rebuild.py", line 127 in instance_rows
+  File "/workspace/work/secfragility/secfragility/rebuild.py", line 26 in write_jsonl
+  File "/workspace/work/secfragility/secfragility/rebuild.py", line 194 in rebuild
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 18 in run
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 99 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+Timeout (0:01:00)!
+Thread 0x00007f85bf82f740 (most recent call first):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 98 in compose_scalar_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 64 in compose_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 133 in compose_mapping_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 84 in compose_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 133 in compose_mapping_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 84 in compose_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 111 in compose_sequence_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 82 in compose_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 133 in compose_mapping_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 84 in compose_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 55 in compose_document
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/composer.py", line 36 in get_single_node
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/constructor.py", line 49 in get_single_data
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 81 in load
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/yaml/__init__.py", line 125 in safe_load
+  File "/workspace/work/secfragility/secfragility/rebuild.py", line 78 in instance_rows
+  File "/workspace/work/secfragility/secfragility/rebuild.py", line 26 in write_jsonl
+  File "/workspace/work/secfragility/secfragility/rebuild.py", line 194 in rebuild
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 18 in run
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 99 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+{"documents": 6679, "facts": 616302, "observations": 0, "entities": 0, "links": 0, "measures": 0, "controls": 0, "exclusions": 0}
 {"stage": "observations", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 0, "links": 0, "measures": 3210, "controls": 0, "exclusions": 17423}}
 {"stage": "entities", "count": 396}
-{"stage": "amount_links", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 434, "measures": 3210, "controls": 0, "exclusions": 18260}}
-{"stage": "graph", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 715, "measures": 3210, "controls": 0, "exclusions": 18260}}
-{"stage": "controls", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 715, "measures": 3210, "controls": 147104, "exclusions": 18260}}
+{"stage": "amount_links", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 434, "measures": 3210, "controls": 0, "exclusions": 18261}}
+{"stage": "graph", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 715, "measures": 3210, "controls": 0, "exclusions": 18261}}
+Timeout (0:01:00)!
+Thread 0x00007f85bf82f740 (most recent call first):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 258 in iterencode
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 200 in encode
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 238 in dumps
+  File "/workspace/work/secfragility/secfragility/metadata.py", line 122 in load
+  File "/workspace/work/secfragility/secfragility/controls.py", line 42 in component_controls
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 45 in run
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 99 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
+{"stage": "controls", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 715, "measures": 3210, "controls": 147104, "exclusions": 18261}}
+{"stage": "quarters", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 715, "measures": 5287, "controls": 147104, "exclusions": 18261}}
+{"stage": "stocks", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 715, "measures": 8562, "controls": 147104, "exclusions": 18261}}
+{"stage": "ttm", "counts": {"documents": 6679, "facts": 616302, "observations": 6475, "entities": 396, "links": 715, "measures": 9018, "controls": 147104, "exclusions": 18261}}
+Timeout (0:01:00)!
+Thread 0x00007f85bf82f740 (most recent call first):
+  File "/workspace/work/secfragility/secfragility/database.py", line 123 in insert
+  File "/workspace/work/secfragility/secfragility/pairs.py", line 107 in run
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 66 in run
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 99 in <module>
+  File "<frozen runpy>", line 88 in _run_code
+  File "<frozen runpy>", line 198 in _run_module_as_main
