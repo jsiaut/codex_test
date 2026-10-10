@@ -1,0 +1,3 @@
+from extension_authoring import save
+k='d614ec1e4960fe4056f837adfd6b9c4910d4447f35f16129be6356931c6fa2de'
+save(k,[dict(quote='declared a quarterly cash dividend',abstained=True,abstention_reason='subsequent_event_only_ordinary_dividend_declared_not_investment_debt_guarantee_or_namedAIclient_financing')])
