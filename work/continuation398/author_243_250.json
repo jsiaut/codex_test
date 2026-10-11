@@ -1,0 +1,119 @@
+[
+  {
+    "index": 243,
+    "classification": "material",
+    "summary": "Juin 2026 : Monarch Medical ajouté aux VOE consolidées, pas confusion avec JV datacenter FVO non consolidées. JV niveau 3 4,401457 Md$, revenu FV semestriel 245,385 M$ contre distributions 201,715 M$. DST obligation 714,785 M$ en FV, pas financement encaissé de ce montant pendant le semestre ; produit DST du rollforward 360,903 M$ diffère du net equity 360,832 M$. Méthodes sensibles aux cap rates et options, sans garantie de réalisation au bilan.",
+    "rows": [
+      {
+        "quote": "Monarch Medical Investors LLC under the VOE model.",
+        "model_quantity": "consolidation_perimeter_change_and_jv_non_cash_income",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : Monarch Medical ajouté aux VOE consolidées, pas confusion avec JV datacenter FVO non consolidées. JV niveau 3 4,401457 Md$, revenu FV semestriel 245,385 M$ contre distributions 201,715 M$. DST obligation 714,785 M$ en FV, pas financement encaissé de ce montant pendant le semestre ; produit DST du rollforward 360,903 M$ diffère du net equity 360,832 M$. Méthodes sensibles aux cap rates et options, sans garantie de réalisation au bilan.",
+        "measurement_basis": "June2026_JV_Level3_4_401457bn;DST_FV714_785m;not_cash_proceeds",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 244,
+    "classification": "material",
+    "summary": "S1 2026 : DST produit net 360,832 M$, dont T2 149,767 M$ inclus, et master lease payé 22,967 M$. Rachats ordinaires 252,448 M$ dont T2 143,542 M$ ; frais conseiller rachetés cash 24,741 M$, stocks remboursables 39,081 M$ plus NCI 150,799 M$. Ligne rachats NCI 36,239 M$ et note incluant échanges en titres nécessitent prudence avant attribution de tout montant au cash. Non-cash à l’émission n’exclut pas liquidité ultérieure.",
+    "rows": [
+      {
+        "quote": "redeemed for cash during the six months ended June 30, 2026",
+        "model_quantity": "adviser_fee_share_redemptions_and_remaining_cash_option",
+        "stage": "drawn_or_paid",
+        "issuer_treatment": "S1 2026 : DST produit net 360,832 M$, dont T2 149,767 M$ inclus, et master lease payé 22,967 M$. Rachats ordinaires 252,448 M$ dont T2 143,542 M$ ; frais conseiller rachetés cash 24,741 M$, stocks remboursables 39,081 M$ plus NCI 150,799 M$. Ligne rachats NCI 36,239 M$ et note incluant échanges en titres nécessitent prudence avant attribution de tout montant au cash. Non-cash à l’émission n’exclut pas liquidité ultérieure.",
+        "measurement_basis": "H1_2026_fee_share_cash24_741m;DST_net360_832m;NCI_repurchases_cash_mix_uncertain",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 245,
+    "classification": "material",
+    "summary": "Juin 2026 : opérating loyers futurs entrants 4,44038 Md$ excluent non-commencés. Financing receivables 597,642 M$ nets contre 11,500169 Md$ bruts ; S1 cash reçu 20,173 M$ contre revenu intérêts 31,083 M$. Caa2 480,91 M$ de base amortie concentre risque de crédit. DST master lease sortant 1,334718 Md$ lié à obligation financière, pas nouveau revenu ni dette indépendante à cumuler automatiquement.",
+    "rows": [
+      {
+        "quote": "Cash received from the sales-type leasing agreements was $20,173",
+        "model_quantity": "financing_lease_collections_and_dst_outflow_direction",
+        "stage": "drawn_or_paid",
+        "issuer_treatment": "Juin 2026 : opérating loyers futurs entrants 4,44038 Md$ excluent non-commencés. Financing receivables 597,642 M$ nets contre 11,500169 Md$ bruts ; S1 cash reçu 20,173 M$ contre revenu intérêts 31,083 M$. Caa2 480,91 M$ de base amortie concentre risque de crédit. DST master lease sortant 1,334718 Md$ lié à obligation financière, pas nouveau revenu ni dette indépendante à cumuler automatiquement.",
+        "measurement_basis": "H1_2026_financing_cash20_173m;DST_future_outflows1_334718bn"
+      }
+    ]
+  },
+  {
+    "index": 246,
+    "classification": "material",
+    "summary": "Événement post-juin : Sila acquis le 1er juillet 2026 pour coût total 2,452674 Md$, financé par crédit, 141 propriétés healthcare. Remplace le statut signé/pending d’avril : ne pas conserver comme simple engagement futur ni ajouter coût réalisé à ancien engagement equity 1,2 Md$. Cash disponible et dette du 30 juin ne reflètent pas ce financement ultérieur. Souscriptions post-juin nettes 381,293 M$ sur leur seul intervalle.",
+    "rows": [
+      {
+        "quote": "The acquisition was funded by proceeds from the Company’s credit facility.",
+        "model_quantity": "subsequent_sila_acquisition_closed_credit_funded",
+        "stage": "settled",
+        "issuer_treatment": "Événement post-juin : Sila acquis le 1er juillet 2026 pour coût total 2,452674 Md$, financé par crédit, 141 propriétés healthcare. Remplace le statut signé/pending d’avril : ne pas conserver comme simple engagement futur ni ajouter coût réalisé à ancien engagement equity 1,2 Md$. Cash disponible et dette du 30 juin ne reflètent pas ce financement ultérieur. Souscriptions post-juin nettes 381,293 M$ sur leur seul intervalle.",
+        "counterparty": "Sila",
+        "counterparty_evidence": "named",
+        "measurement_basis": "July1_2026_acquisitioncost2_452674bn;not_June_debt_or_plus_prior_commitment"
+      }
+    ]
+  },
+  {
+    "index": 247,
+    "classification": "context",
+    "summary": "Juin 2026 : dettes immobilières à FV 1,540287 Md$, 24 % unrated, HTM 287,817 M$ et BTS 3,709 M$ hors de ce total. Baisse des prêts immobiliers directs et transfert de deux CMBS vers JV ne prouvent pas baisse équivalente d’exposition économique ni remboursement cash. Maturité fully extended, collatéral gagé, aucun portefeuille intégralement identifié IA.",
+    "rows": [
+      {
+        "quote": "exclude our investments in CMBS investments classified as held-to-maturity and loans receivable",
+        "model_quantity": "real_estate_credit_fair_value_scope_exclusions",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : dettes immobilières à FV 1,540287 Md$, 24 % unrated, HTM 287,817 M$ et BTS 3,709 M$ hors de ce total. Baisse des prêts immobiliers directs et transfert de deux CMBS vers JV ne prouvent pas baisse équivalente d’exposition économique ni remboursement cash. Maturité fully extended, collatéral gagé, aucun portefeuille intégralement identifié IA.",
+        "measurement_basis": "June2026_FV1_540287bn;HTM287_817m;BTS3_709m"
+      }
+    ]
+  },
+  {
+    "index": 248,
+    "classification": "material",
+    "summary": "Juin 2026 : principal dette 2,328297 Md$ et échéances 2026 restantes 300,146 M$ ; revolver non tiré au 30 juin, sans préjuger du financement Sila du 1er juillet. Accordion portée à 6 Md$ conditionnelle, pas cash libre. Repos 444,621 M$ gardent initiale un à trois mois et appels de marge malgré échéance moyenne avril 2027 ; compliance déclarée à date ne chiffre pas marge de covenant.",
+    "rows": [
+      {
+        "quote": "an increase of the accordion cap, subject to the satisfaction of various conditions",
+        "model_quantity": "conditional_debt_capacity_and_post_balance_sheet_draw",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : principal dette 2,328297 Md$ et échéances 2026 restantes 300,146 M$ ; revolver non tiré au 30 juin, sans préjuger du financement Sila du 1er juillet. Accordion portée à 6 Md$ conditionnelle, pas cash libre. Repos 444,621 M$ gardent initiale un à trois mois et appels de marge malgré échéance moyenne avril 2027 ; compliance déclarée à date ne chiffre pas marge de covenant.",
+        "measurement_basis": "June2026_principal2_328297bn;revolver0_atdate;accordion6bn_conditional"
+      }
+    ]
+  },
+  {
+    "index": 249,
+    "classification": "context",
+    "summary": "S1 2026 : revenu segment 198,928 M$, bénéfice 236,876 M$ ; T2 inclus 102,003/67,22 M$. Un seul segment mêle loyers, intérêts, revenus FV JV et autres effets ; ne pas identifier ce bénéfice au cash IA disponible. Intérêts segment 69,082 M$ excluent amortissement financement, pas preuve de cash couverture globale.",
+    "rows": [
+      {
+        "quote": "one operating segment and one reportable segment as of June 30, 2026.",
+        "model_quantity": "single_segment_income_not_ai_cash_coverage",
+        "stage": "recognized",
+        "issuer_treatment": "S1 2026 : revenu segment 198,928 M$, bénéfice 236,876 M$ ; T2 inclus 102,003/67,22 M$. Un seul segment mêle loyers, intérêts, revenus FV JV et autres effets ; ne pas identifier ce bénéfice au cash IA disponible. Intérêts segment 69,082 M$ excluent amortissement financement, pas preuve de cash couverture globale.",
+        "measurement_basis": "H1_2026_segment_income236_876m;not_plus_Q2"
+      }
+    ]
+  },
+  {
+    "index": 250,
+    "classification": "material",
+    "summary": "Juin 2026 : conseiller conserve droit de racheter cash ses titres de management fees et special partners leurs unités, même initialement frais non-cash. Due affiliates 244,133 M$ inclut 185,184 M$ servicing fees, 19,908 M$ management et 30,04 M$ performance : ne pas convertir tout stock en cash exigible immédiat. STACK Miner JV développement au plus 3 % coûts ; frais structuration crédit Blue Owl CS 2,895 M$ payés au S1.",
+    "rows": [
+      {
+        "quote": "The Adviser and Blue Owl Capital Holdings LP have the ability to redeem the Class I shares for cash at their election",
+        "model_quantity": "related_party_fee_equity_cash_redemption_right",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : conseiller conserve droit de racheter cash ses titres de management fees et special partners leurs unités, même initialement frais non-cash. Due affiliates 244,133 M$ inclut 185,184 M$ servicing fees, 19,908 M$ management et 30,04 M$ performance : ne pas convertir tout stock en cash exigible immédiat. STACK Miner JV développement au plus 3 % coûts ; frais structuration crédit Blue Owl CS 2,895 M$ payés au S1.",
+        "measurement_basis": "June2026_affiliate_due244_133m;not_all_immediately_payable_cash",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
