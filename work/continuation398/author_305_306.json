@@ -1,0 +1,28 @@
+[
+  {
+    "index": 305,
+    "classification": "material",
+    "summary": "Dette juin13,727 Md$ bilan=AM5,895 dont warehouse nonrecours133 M$ anonyme+Athene7,832. Notes500 M$2026 principal et intérêts remboursés27mai, retirer des échéances futures. Notes AGM750 M$ émisesmars ; Athene1 Md$6,15% émises7août post-juin ne pas ajouter à cash/dette juin. Refinancement26juin AHLcap1,75 Md$2031 cov40%/networth22,1 ; liquidité2,6 Md$2027 AAReNW26,2, remplace facilités anciennes. Toutes non tirées juin. Intérêts H1369 M$ inclT2190 ne sont pas tous coupons cash.",
+    "rows": [
+      {
+        "quote": "AMH repaid in full the principal and accrued interest",
+        "model_quantity": "500m_may_notes_repaid_june_facilities_refinanced_august_postperiod",
+        "stage": "recognized",
+        "issuer_treatment": "Dette juin13,727 Md$ bilan=AM5,895 dont warehouse nonrecours133 M$ anonyme+Athene7,832. Notes500 M$2026 principal et intérêts remboursés27mai, retirer des échéances futures. Notes AGM750 M$ émisesmars ; Athene1 Md$6,15% émises7août post-juin ne pas ajouter à cash/dette juin. Refinancement26juin AHLcap1,75 Md$2031 cov40%/networth22,1 ; liquidité2,6 Md$2027 AAReNW26,2, remplace facilités anciennes. Toutes non tirées juin. Intérêts H1369 M$ inclT2190 ne sont pas tous coupons cash."
+      }
+    ]
+  },
+  {
+    "index": 306,
+    "classification": "context_only",
+    "summary": "Périmètre Apollo inclut retraite Athene ; Bridge transaction en actions consolidée depuis2sept2025. Ne pas fusionner fonds gérés et filiales opérationnelles sur la seule relation de gestion.",
+    "rows": [
+      {
+        "quote": "in an all-stock transaction",
+        "model_quantity": "organization_repeated_group_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Périmètre Apollo inclut retraite Athene ; Bridge transaction en actions consolidée depuis2sept2025. Ne pas fusionner fonds gérés et filiales opérationnelles sur la seule relation de gestion."
+      }
+    ]
+  }
+]

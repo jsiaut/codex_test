@@ -1,0 +1,58 @@
+[
+  {
+    "index": 307,
+    "classification": "material",
+    "summary": "Juin actifs FV groupe419,665 Md$=AM10,294+retraite409,371, L3 166,861 et NAV27,275 distincts. AM cash3,415+VIE1,272 inclut escrow68 M$ ; retraite cash21,957+VIE171 et rest1,583 M$ : pas tous disponibles parent. AM hierarchy exclut allocations231 M$, retraite L3 rollforward162,387 exclut MRB169. H1 pertes FVO1,534 Md$ inclut T2551, pas cash homogène. Hypothèques commerciales dégradées1,027/FV695 M$ et résidentielles1,912/FV1,728 ne prouvent pas défaut IA. Répétition impairment IPO257 M$2025 non nouvelle perte2026 ; valorisation subjective et contrôles limités.",
+    "rows": [
+      {
+        "quote": "the Company recognized an impairment loss of $257 million during the second quarter of 2025",
+        "model_quantity": "june_fair_value_scopes_and_prior_year_impairment_not_new_loss",
+        "stage": "recognized",
+        "issuer_treatment": "Juin actifs FV groupe419,665 Md$=AM10,294+retraite409,371, L3 166,861 et NAV27,275 distincts. AM cash3,415+VIE1,272 inclut escrow68 M$ ; retraite cash21,957+VIE171 et rest1,583 M$ : pas tous disponibles parent. AM hierarchy exclut allocations231 M$, retraite L3 rollforward162,387 exclut MRB169. H1 pertes FVO1,534 Md$ inclut T2551, pas cash homogène. Hypothèques commerciales dégradées1,027/FV695 M$ et résidentielles1,912/FV1,728 ne prouvent pas défaut IA. Répétition impairment IPO257 M$2025 non nouvelle perte2026 ; valorisation subjective et contrôles limités.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 308,
+    "classification": "material",
+    "summary": "Juin créances affiliées963 M$/dettes1,173 Md$ dont TRA768, clawback GP163 et employés69 hypothétiques, pas montants immédiatement exigibles. Athora stock3,191 Md$ et commitAthene134/AM57 M$ après PIC clôturé ; inclut conversion noncash. Atlas AFS4,8 Md$ ; absence montant engagement juin ne signifie pas zéro. ARI achat effectivement clôturé24avril pour8,7 Md$ incluant intérêts courus remplace9 Md$ signé. ADIP H1271 M$ apports/301 distributions inclut T2145/47, déjà Athene.",
+    "rows": [
+      {
+        "quote": "including accrued interest, for $8.7 billion from ARI.",
+        "model_quantity": "ari_actual_purchase_8_7bn_replaces_pending_commitment",
+        "stage": "recognized",
+        "issuer_treatment": "Juin créances affiliées963 M$/dettes1,173 Md$ dont TRA768, clawback GP163 et employés69 hypothétiques, pas montants immédiatement exigibles. Athora stock3,191 Md$ et commitAthene134/AM57 M$ après PIC clôturé ; inclut conversion noncash. Atlas AFS4,8 Md$ ; absence montant engagement juin ne signifie pas zéro. ARI achat effectivement clôturé24avril pour8,7 Md$ incluant intérêts courus remplace9 Md$ signé. ADIP H1271 M$ apports/301 distributions inclut T2145/47, déjà Athene.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 309,
+    "classification": "material",
+    "summary": "H1 rachats ouverts729 M$, taxes net settlement229, dividendes communs619+équivalents35 M$ cash, T1 inclus. Préférentielles1,4 Md$ converties31juillet à0,5074 en14,5873 millions actions aprèsjuin, aucun solde ensuite ; cash uniquement fractions et coupons finaux effectivement payés. Remplace risque remboursement cash principal. Achat intérêts employés juin entraîne177 M$ compensation dont46 reconnue et128 M$ actions à émettre, pas apport primaire IA. AOCI -3,209 Md$ non cash.",
+    "rows": [
+      {
+        "quote": "Following the Conversion, there were no shares of Mandatory Convertible Preferred Stock outstanding.",
+        "model_quantity": "july_mandatory_preferred_conversion_completed_no_principal_cash",
+        "stage": "recognized",
+        "issuer_treatment": "H1 rachats ouverts729 M$, taxes net settlement229, dividendes communs619+équivalents35 M$ cash, T1 inclus. Préférentielles1,4 Md$ converties31juillet à0,5074 en14,5873 millions actions aprèsjuin, aucun solde ensuite ; cash uniquement fractions et coupons finaux effectivement payés. Remplace risque remboursement cash principal. Achat intérêts employés juin entraîne177 M$ compensation dont46 reconnue et128 M$ actions à émettre, pas apport primaire IA. AOCI -3,209 Md$ non cash.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 310,
+    "classification": "material",
+    "summary": "Juin investissements groupe383,467 Md$ dont retraite377,142 déjà Athene et AM6,325. Allocations performance3,230 Md$=stock3,554+FV475-distributions799 M$ incluantT1667 ; pas comptabiliser799 comme nouveau revenu. AFS229,841 Md$/CECL704 M$/pertes latentes13,138 distincts. Repo3,244 dont1,269 avant1an, reverse142/collat787 non cash libre. Fonds30,304 Md$ sans calendrier distribution. AP Grange appel T2/gain673 M$ désormais réalisé, ne plus maintenir stockmars5,662 comme actif finjuin. Concentration anonyme générique ≠ preuve WHCO/IA.",
+    "rows": [
+      {
+        "quote": "Athene recognized a gain of $673 million.",
+        "model_quantity": "ap_grange_called_gain_realized_and_group_investments_not_additive",
+        "stage": "recognized",
+        "issuer_treatment": "Juin investissements groupe383,467 Md$ dont retraite377,142 déjà Athene et AM6,325. Allocations performance3,230 Md$=stock3,554+FV475-distributions799 M$ incluantT1667 ; pas comptabiliser799 comme nouveau revenu. AFS229,841 Md$/CECL704 M$/pertes latentes13,138 distincts. Repo3,244 dont1,269 avant1an, reverse142/collat787 non cash libre. Fonds30,304 Md$ sans calendrier distribution. AP Grange appel T2/gain673 M$ désormais réalisé, ne plus maintenir stockmars5,662 comme actif finjuin. Concentration anonyme générique ≠ preuve WHCO/IA.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "index": 301,
+    "classification": "material",
+    "summary": "SBC H1 478 M$ inclut T2246 et T1232, noncash ; unrecognized1,1 Md$ sur2,2 ans. Grant FV service883 M$ et performance30 M$ rémunération, pas financement client.",
+    "rows": [
+      {
+        "quote": "equity-based compensation expense of $478 million",
+        "model_quantity": "halfyear_employee_non_cash_compensation",
+        "stage": "recognized",
+        "issuer_treatment": "SBC H1 478 M$ inclut T2246 et T1232, noncash ; unrecognized1,1 Md$ sur2,2 ans. Grant FV service883 M$ et performance30 M$ rémunération, pas financement client."
+      }
+    ]
+  },
+  {
+    "index": 302,
+    "classification": "material",
+    "summary": "Commun0,5625$ déclaré4août pour31août, post-juin ; aucune preuve de paiement réalisé fournie dans cette courte note.",
+    "rows": [
+      {
+        "quote": "which will be paid on August 31, 2026",
+        "model_quantity": "post_june_common_dividend_declared",
+        "stage": "signed",
+        "issuer_treatment": "Commun0,5625$ déclaré4août pour31août, post-juin ; aucune preuve de paiement réalisé fournie dans cette courte note."
+      }
+    ]
+  },
+  {
+    "index": 303,
+    "classification": "material",
+    "summary": "Juin VIE AM investissements3,713 Md$, lignes subscription1,381 Md$ à6,25%, maturité0,08 an ; autres dettes501 M$ à11%, maturité0,38 an, emprunteur non nommé : risque renouvellement sans attribution WHCO/IA. Cash escrow68 M$ attendu12mois indisponible. AM maxVIE409 M$. Retraite139,108/148,068 Md$ portage/max déjà engagements inclus, fonds sous VIE consolidées, non additif. Non-recours annoncé ne supprime pas engagements distincts des autres notes.",
+    "rows": [
+      {
+        "quote": "Other debt obligations",
+        "model_quantity": "june_vie_501m_11percent_short_debt_unidentified",
+        "stage": "recognized",
+        "issuer_treatment": "Juin VIE AM investissements3,713 Md$, lignes subscription1,381 Md$ à6,25%, maturité0,08 an ; autres dettes501 M$ à11%, maturité0,38 an, emprunteur non nommé : risque renouvellement sans attribution WHCO/IA. Cash escrow68 M$ attendu12mois indisponible. AM maxVIE409 M$. Retraite139,108/148,068 Md$ portage/max déjà engagements inclus, fonds sous VIE consolidées, non additif. Non-recours annoncé ne supprime pas engagements distincts des autres notes.",
+        "counterparty_evidence": "anonymous",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 304,
+    "classification": "material",
+    "summary": "H1 Segment Income3,200 Md$=T11,522+T21,678, hors HoldCo98 M$ financement et autres ajustements. FRE1,513/SRE1,596/PII91 non cash-flow. Frais AM1,953 Md$ incluent785 M$ Athene déjà T1399+T2386, à éliminer. Revenus segments11,033 vs GAAP16,212 ; actifs477,285→494,048 Md$ après VIE/éliminations. Effets FV et revenus noncash ne prouvent pas encaissements IA.",
+    "rows": [
+      {
+        "quote": "not as a measure of liquidity",
+        "model_quantity": "halfyear_segment_intercompany_785m_and_gaap_perimeter",
+        "stage": "recognized",
+        "issuer_treatment": "H1 Segment Income3,200 Md$=T11,522+T21,678, hors HoldCo98 M$ financement et autres ajustements. FRE1,513/SRE1,596/PII91 non cash-flow. Frais AM1,953 Md$ incluent785 M$ Athene déjà T1399+T2386, à éliminer. Revenus segments11,033 vs GAAP16,212 ; actifs477,285→494,048 Md$ après VIE/éliminations. Effets FV et revenus noncash ne prouvent pas encaissements IA.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
