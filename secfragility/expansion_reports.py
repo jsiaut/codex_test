@@ -36,7 +36,11 @@ def render(db,root,as_of):
         assert exact in cf,exact
     registry=[]
     for cik,item in sorted(issuers.items()):
-        parent=rows(db,"SELECT entity_id,economic_group_id,consolidation_treatment,resolution_rule FROM entities WHERE cik=? AND alias_key IS NULL",[cik])
+        parent=rows(db,"""SELECT entity_id,economic_group_id,consolidation_treatment,resolution_rule FROM entities
+          WHERE cik=? AND alias_key='none' AND (membership_end IS NULL OR membership_end>?::TIMESTAMPTZ::DATE)
+          ORDER BY membership_start DESC NULLS LAST""",[cik,as_of])
+        if cik=='0001527469':
+            assert parent and parent[0]['economic_group_id']=='external:0001858681','Athene parent membership not established'
         registry.append(dict(cik=cik,name=item['name'],group_id=item['group'],
             main_group=cik!='0001527469',economic_group_id=parent[0]['economic_group_id'] if parent else None,
             consolidation_treatment=parent[0]['consolidation_treatment'] if parent else None,
@@ -52,10 +56,17 @@ def render(db,root,as_of):
     csv_write(root/'expansion_financial_metrics.csv',metrics)
     lender=[r for r in evidence if r.get('model_quantity') in ('lender_position_non_accrual_status','lender_position_PIK_terms','lender_non_accrual_schedule_legend','lender_PIK_schedule_legend')]
     csv_write(root/'expansion_lender_classification.csv',lender)
-    manifest=dict(source_cutoff=as_of,main_groups=23,added_main_groups=12,additional_reporter='Athene Holding Ltd.',
+    main_count=len(json.loads((root/'work/inventory.json').read_text())['groups'])
+    assert main_count==23 and len(groups)==12
+    verification=json.loads((root/'work/delivery_verification.json').read_text())
+    mismatches=sum(r['n'] for r in verification['accounting_mismatches'])
+    blocked=len(verification['localized_invalid_aggregates'])
+    manifest=dict(source_cutoff=as_of,main_groups=main_count,added_main_groups=len(groups),additional_reporter='Athene Holding Ltd.',
         periodic_sources=sum(len(s['periodic_filings']) for s in issuers.values()),
         supplemental_6k_sources=sum(len(s['supplemental_6k']) for s in issuers.values()),
         reading=scope,accepted_expansion_observations=len(evidence),
+        delivery_checks=verification['checks'],accounting_mismatch_rows=mismatches,
+        localized_invalid_aggregates=blocked,
         all_notes_exhaustively_reviewed=False,complete_contract_review=False,
         source_specific_6k_incorporation_proof=True,independent_audit_performed=False)
     (root/'expansion_summary.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
@@ -91,6 +102,8 @@ Les anciens comptes Yandex en roubles et les comparatifs Nebius publiés en doll
 Couverture : **{manifest['periodic_sources']} dépôts périodiques collectés** depuis les exercices clos en 2021, plus **{manifest['supplemental_6k_sources']} dépôts 6-K Nebius**. L'inventaire courant contient **{scope['nominated_unique_keys']} blocs uniques** : **{scope['active_unique_keys']} lus**, y compris les preuves déjà lues, et **{scope['deferred_unique_keys']} explicitement non traités**. Les notes historiques et les contrats complets restants ne sont pas déclarés lus. Le tableau expansion_note_coverage.csv conserve cette distinction par source et par bloc.
 
 Les identités sont dans expansion_entities.csv ; les citations et leurs octets sources dans expansion_evidence.csv ; les mesures standard de dernière période dans expansion_financial_metrics.csv ; les classifications de prêteurs dans expansion_lender_classification.csv. Les valeurs ND gardent leurs raisons. Les données et conclusions de la tranche précédente restent accessibles dans l'historique Git et ses archives.
+
+Les **{len(verification['checks'])} vérifications de livraison** passent et les cellules attendues sont présentes. Les rapprochements conservent **{mismatches} lignes de contrôle présentant un écart**, ainsi que **{blocked} agrégat local bloqué**. Ces alertes de précision ou de comparabilité restent dans audit/controls.csv et work/delivery_verification.json ; elles ne constituent pas une opinion d'audit sur les comptes des déposants. Les contrôles de livraison ne signifient pas que tous les rapprochements comptables aboutissent.
 '''
     (root/'entites_ajoutees.md').write_text(report)
     (root/'user_brief_expansion.md').write_text(f'''# Ajout des entités — point d'étape

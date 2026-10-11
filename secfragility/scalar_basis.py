@@ -19,8 +19,11 @@ def select(db,source,target,as_of,identity=('group_id','model_quantity','period_
       WHERE {match}) AS resolved
       FROM {source} s WHERE NOT EXISTS (SELECT 1 FROM {target} t WHERE t.fact_id=s.fact_id AND {match})''')
     for row in omitted:
-        exclusion(db,as_of,'superseded_reporting_basis' if row['resolved'] else 'conflicting_reporting_bases',
-            'scalar_quantity_candidate',target+':'+row['fact_id']+':'+json.dumps([row.get(k) for k in identity],default=str),group_id=row['group_id'],
+        reason='superseded_reporting_basis' if row['resolved'] else 'conflicting_reporting_bases'
+        element=target+':'+row['fact_id']+':'+json.dumps([row.get(k) for k in identity],default=str)
+        if db.execute('SELECT 1 FROM exclusions WHERE reason=? AND element_type=? AND element_id=? AND as_of=?',
+            [reason,'scalar_quantity_candidate',element,as_of]).fetchone():continue
+        exclusion(db,as_of,reason,'scalar_quantity_candidate',element,group_id=row['group_id'],
             detail=json.dumps({k:row.get(k) for k in set(identity)|{'fact_id','accession','model_quantity','period_start',
                 'period_end','unit','currency','accounting_framework','reporting_scope','acceptance_datetime'}},default=str,sort_keys=True),
             invariant='no_currency_conversion_or_arbitrary_basis_tiebreak',

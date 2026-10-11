@@ -63,3 +63,11 @@ def test_simultaneous_equity_bases_are_not_arbitrarily_selected(tmp_path):
     db=fixture(tmp_path,simultaneous=True,with_stocks=True);stocks(db,'2026-10-09T00:00:00Z')
     assert db.execute('SELECT count(*) FROM snapshot_stocks_revised').fetchone()[0]==0
     assert db.execute('SELECT count(*) FROM facts').fetchone()[0]==4
+
+
+def test_basis_audit_is_idempotent_when_checkpoint_views_are_recreated(tmp_path):
+    from secfragility.scalar_basis import select
+    db=fixture(tmp_path);before=db.execute('SELECT count(*) FROM exclusions').fetchone()[0]
+    db.execute('DROP TABLE quantities_revised')
+    select(db,'quantity_basis_candidates_revised','quantities_revised','2026-10-09T00:00:00Z')
+    assert db.execute('SELECT count(*) FROM exclusions').fetchone()[0]==before

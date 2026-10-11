@@ -33,7 +33,9 @@ def resume(root,as_of):
     from .extension_assembly import interpretations
     interpretations(db,root,as_of,record_exclusions=False)
     db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM interpreted_observations o
-      WHERE NOT abstained AND tier IN ('A','B','C','D') AND filing_status='filed'
+      WHERE NOT abstained AND tier IN ('A','B','C','D') AND
+       (filing_status='filed' OR (filing_status='furnished' AND EXISTS
+         (SELECT 1 FROM documents d WHERE d.document_id=o.document_id AND d.incorporated_by_reference)))
        AND EXISTS (SELECT 1 FROM documents d WHERE d.document_id=o.document_id AND d.acceptance_datetime<=o.as_of)
        AND NOT EXISTS (SELECT 1 FROM excluded_observations q WHERE q.observation_id=o.observation_id)
        AND (tagged_fact_id IS NULL OR EXISTS (SELECT 1 FROM eligible_facts f WHERE f.fact_id=o.tagged_fact_id

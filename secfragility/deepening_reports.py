@@ -58,7 +58,8 @@ def render(db,root,as_of,delivery):
         lo,hi=expected_bounds[r['term']]
         assert (r['value_lower'],r['value_upper'],r['denominator'])==(Decimal(lo),Decimal(hi),Decimal(5524000000))
     verification=json.loads((root/'work/delivery_verification.json').read_text())
-    assert sum(r['n'] for r in verification['accounting_mismatches'])==26
+    mismatch_count=sum(r['n'] for r in verification['accounting_mismatches'])
+    if not (root/'work/expansion/authorization.json').exists():assert mismatch_count==26
     numeric_table='| Déposant / CIK | Mesure | Période | Montant publié |\n| --- | --- | --- | ---: |\n'
     for r in actual:numeric_table+=f"| {r['group_id'].split(':')[-1]} | {r['measure']} | {r['period_start']} → {r['period_end']} | {amount(r['value'])} |\n"
     positions=rows(db,'SELECT * FROM targeted_lender_positions ORDER BY group_id,period_end,position_label,accession')
@@ -147,7 +148,7 @@ Sources arrêtées au **9 octobre 2026**. La découverte principale est le monta
 
 ## 1. Séries et dates
 
-La vue historique respecte désormais la date officielle de publication lorsqu’elle suit la réception du dépôt par la SEC. Les dernières périodes AMD et Broadcom sont rétablies. La synthèse utilise les données révisées et conserve la vue historique. Les contrôles de publication passent ; les **26 divergences comptables localisées** restent visibles et ne sont pas corrigées par hypothèse.
+La vue historique respecte désormais la date officielle de publication lorsqu’elle suit la réception du dépôt par la SEC. Les dernières périodes AMD et Broadcom sont rétablies. La synthèse utilise les données révisées et conserve la vue historique. Les contrôles de publication passent ; les **{mismatch_count} lignes de contrôle présentant un écart** restent visibles et ne sont pas corrigées par hypothèse.
 
 ## 2. CoreWeave et ses prêteurs
 

@@ -37,3 +37,4 @@ work/replay_reference/
 work/replay_spill/
 work/deepening_data/
 work/expansion/*.log
+work/duckdb_spill/

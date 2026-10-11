@@ -422,3 +422,11 @@ La reconstruction de l'ajout a exposé deux présentations du même exercice Neb
 ## D115 — Explication et compatibilité du contrôle EPS
 
 Le périmètre élargi a déclenché un écart EPS inférieur à 10 % mais supérieur à la tolérance issue des précisions de l'instance. Le statut utilisait cette tolérance publiée, alors que la génération de son explication testait uniquement 10 % : l'absence d'explication bloquait l'insertion. Le statut et l'explication utilisent maintenant la même tolérance ; aucun écart n'est reclassé pour faire passer le contrôle. Les termes doivent également avoir le même cadre comptable et périmètre, et l'unité du résultat net doit être la devise au numérateur de l'unité EPS. Les faits EPS par action peuvent avoir currency=NULL ; leur unité complète reste la preuve de devise. Deux cas de régression vérifient l'écart précis et le rejet d'un résultat net dans une autre devise.
+
+## D116 — Calculs avant cellules de couverture et reprise fidèle
+
+Les nouvelles capacités de crédit non tirées MSD exposent une collision entre une mesure numérique calculée et la cellule ND de couverture préalablement créée. L'enrichissement numérique précède maintenant le remplissage des seules cellules manquantes, après les événements et l'évaluation inchangés. Les reprises appliquent la même admission furnished/incorporation prouvée que l'assemblage complet ; les exclusions de bases de présentation sont idempotentes quand les vues sont reconstruites. Un test vérifie l'absence de doublons d'audit à cette reprise. Le nombre de rapprochements en écart dans les rapports devient celui du périmètre réellement calculé ; l'ancien contrôle de 26 écarts demeure dans le chemin sans ajout de groupes. Les seuils et critères E/F ne sont pas modifiés et les écarts restent visibles.
+
+## D117 — Ressources de reconstruction
+
+L'ajout porte le corpus à plus d'un million de faits et double le volume de mesures et contrôles. Le calcul est limité à 8 Go de mémoire DuckDB et utilise work/duckdb_spill pour ses temporaires, exclus de Git. Cette limite permet la reconstruction dans l'environnement de 16 Go sans modifier les sources, la précision, les critères ou les équations. La comparaison finale porte sur les huit tables complètes et les entrées immuables.

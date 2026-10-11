@@ -75,6 +75,9 @@ def create(root: Path, path=None):
     from functools import lru_cache
     db = duckdb.connect(str(path) if path else ':memory:')
     db.execute('SET threads=4')
+    db.execute("SET memory_limit='8GB'")
+    spill=root/'work/duckdb_spill';spill.mkdir(parents=True,exist_ok=True)
+    db.execute('SET temp_directory='+sql_literal(str(spill)))
     @lru_cache(maxsize=128)
     def precision_radius(decimals):
         if decimals is None:

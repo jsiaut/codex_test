@@ -88,11 +88,11 @@ def finish(db,root,as_of,state):
     events(db,root,as_of)
     from .evaluation import run as evaluation
     evaluation(db,root,as_of)
+    from .enrichment import run as enrichment
+    enrichment(db,as_of)
     from .coverage import run as coverage
     coverage(db,root,as_of)
     print(json.dumps(dict(stage='coverage',counts=table_counts(db))),flush=True)
-    from .enrichment import run as enrichment
-    enrichment(db,as_of)
     if (root/'work/deepening_authorization.json').exists():
         from .deepening_assembly import horizon_bounds,lender_positions,targeted_note_measures
         horizon_bounds(db,root,as_of)
