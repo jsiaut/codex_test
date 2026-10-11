@@ -39,7 +39,8 @@ def notes(root,ciks):
                 knowledge_date=m['filingDate'],assurance_level=assurance,as_of=run['as_of'])
         metadata=load(root,resources,acc)
         for b in extract_inline_blocks((root/primary['path']).read_bytes(),metadata,facts,normalizer_version=cfg['normalizer_version']):
-            if not any(s.lower() in b['text'].lower() for s in ('CoreWeave','OpenAI','Anthropic')):continue
+            import re
+            if not re.search(r'\b(?:CoreWeave|OpenAI|Anthropic)\b',b['text'],re.I):continue
             b.update(group=filing['group'],accession=acc,entity_id='cik:'+m['cik'],form=m['form'],
                 knowledge_date=m['filingDate'],acceptance_datetime=m['acceptanceDateTime'],as_of=run['as_of'],
                 source_path=primary['path'],document_id=digest([primary['url']]),assurance_level=assurance,
@@ -47,6 +48,21 @@ def notes(root,ciks):
             b['occurrence_id']=digest([b['content_key'],b['document_id'],b['raw_byte_start']])
             output.append(b)
     return output
+
+
+def contracts(root):
+    cfg=yaml.safe_load((root/'config.yaml').read_text());run=json.loads((root/'work/run.json').read_text())
+    result=[]
+    for url,r in sorted(json.loads((root/'work/deepening_contract_sources.json').read_text()).items()):
+        m=r['metadata'];res=r['resource'];raw=(root/res['path']).read_bytes()
+        text=normalize_html(raw);key=content_key(text,[],cfg['normalizer_version']);did=digest([url])
+        result.append(dict(content_key=key,occurrence_id=digest([key,did,0]),text=text,candidates=[],
+            group=r['group'],entity_id='cik:'+str(m['cik']).zfill(10),accession=m['accessionNumber'],
+            document_id=did,source_path=res['path'],raw_byte_start=0,raw_byte_end=len(raw),source_ranges=[[0,len(raw)]],
+            knowledge_date=m['filingDate'],acceptance_datetime=m['acceptanceDateTime'],as_of=run['as_of'],
+            assurance_level='not_applicable',location='contract_exhibit',block_class='exhibit',form=m['form'],
+            exhibit_type=r['header']['type'],label=r['header']['description']))
+    return result
 
 
 if __name__=='__main__':

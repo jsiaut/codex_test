@@ -92,9 +92,12 @@ def finish(db,root,as_of,state):
     from .enrichment import run as enrichment
     enrichment(db,as_of)
     if (root/'work/deepening_authorization.json').exists():
-        from .deepening_assembly import horizon_bounds,lender_positions
+        from .deepening_assembly import horizon_bounds,lender_positions,targeted_note_measures
         horizon_bounds(db,root,as_of)
         lender_positions(db,root,as_of)
+        targeted_note_measures(db,root,as_of)
+        from .deepening_form_d import measures as form_d_measures
+        form_d_measures(db,root,as_of)
     for g,data in json.loads((root/'work/inventory.json').read_text())['groups'].items():
         db.execute("DELETE FROM measures WHERE group_id=? AND period_end!='none' AND period_end<?",[g,data['analysis_start']])
     from .universe import DEPENDENCIES

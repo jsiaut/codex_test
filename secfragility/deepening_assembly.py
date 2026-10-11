@@ -60,7 +60,7 @@ def lender_positions(db, root, as_of):
                source_perspective,accounting_framework)
               SELECT '{metric}',group_id,entity_id,'none',period_end::VARCHAR,'{view}',?::TIMESTAMPTZ,
                 ?::TIMESTAMPTZ,accession||'|'||dimensions,'ratio','not_determinable','{reason}',
-                'not_disclosed',knowledge_date,lineage,to_json([tier]),2,'reporting_entity',accounting_framework
+                'not_processed',knowledge_date,lineage,to_json([tier]),2,'reporting_entity',accounting_framework
                 FROM targeted_lender_positions WHERE knowledge_date<=?::DATE''',[as_of,as_of,as_of[:10]])
     positions=rows(db,'SELECT * FROM targeted_lender_positions ORDER BY group_id,period_end,position_label')
     csv_write(root/'lender_positions.csv',positions)
@@ -74,6 +74,21 @@ def load_sources(db, root, as_of):
     registry=root/'work/deepening_filings.json'
     if not registry.exists():return
     import hashlib
+    contracts=root/'work/deepening_contract_sources.json'
+    if contracts.exists():
+        manifest=json.loads((root/'work/deepening_source_manifest.json').read_text())
+        for url,r in sorted(json.loads(contracts.read_text()).items()):
+            meta=r['metadata'];res=r['resource'];raw=(root/res['path']).read_bytes();did=digest([url])
+            if hashlib.sha256(raw).hexdigest()!=manifest[url]['sha256']:raise ValueError('Contract bytes changed')
+            if db.execute('SELECT count(*) FROM documents WHERE document_id=?',[did]).fetchone()[0]:continue
+            insert(db,'documents',dict(document_id=did,group_id=r['group'],entity_id='cik:'+str(meta['cik']).zfill(10),cik=str(meta['cik']).zfill(10),
+                accession=meta['accessionNumber'],document_rank=r['header']['document_rank'],document_rank_source='SGML_DOCUMENT_order',
+                url=url,cache_path=res['path'],sha256=manifest[url]['sha256'],form=meta['form'],exhibit_type=r['header']['type'],
+                filing_status='filed',assurance_level='not_applicable',location='contract_exhibit',document_kind='contract',tier='D',
+                acceptance_datetime=meta['acceptanceDateTime'],filing_date=meta['filingDate'],knowledge_date=meta['filingDate'],
+                byte_count=len(raw),parse_status='observed',as_of=as_of))
+    from .deepening_form_d import load as load_form_d
+    load_form_d(db,root,as_of)
     for accession,filing in sorted(json.loads(registry.read_text()).items()):
         meta=filing['metadata'];resources=filing['resources'];group=filing['group']
         assurance='audited' if meta['form'] in ('10-K','10-K/A') else 'reviewed' if meta['form'] in ('10-Q','10-Q/A') else 'unknown'
@@ -109,6 +124,26 @@ def load_sources(db, root, as_of):
             existing={x[0] for x in db.execute('SELECT fact_id FROM facts WHERE accession=?',[accession]).fetchall()}
             facts=[f for f in facts if f['fact_id'] not in existing]
             bulk_insert(db,'facts',facts,root,'deepening_facts')
+
+
+def targeted_note_measures(db,root,as_of):
+    """Report source-specific quantities without treating valuations as primary cash."""
+    allowed=['customer_working_capital_loan_received','customer_working_capital_loan_noncash_repayment',
+        'customer_working_capital_loan_outstanding','named_customer_revenue','customer_warrant_assets_capitalized',
+        'indirect_investment_carrying_amount','named_investment_acquisitions','named_investment_unrealized_gain',
+        'named_investment_carrying_amount','capital_solution_contract_size','purchase_obligation_guarantee_percentage',
+        'purchase_obligation_guarantee_carrying_amount','guarantee_reimbursement_percentage','customer_lease_incentive_asset',
+        'lease_letter_of_credit_requirement','vehicle_construction_remaining_contribution','indirect_property_investment_carrying_amount']
+    for view in ('as_known','revised'):
+        db.execute(f'''INSERT INTO measures
+          (measure,group_id,entity_id,period_start,period_end,view,as_of,information_cutoff,breakdown_key,value,unit,
+           status,coverage_state,knowledge_date,lineage,evidence_profile,tier,source_perspective,accounting_framework)
+          SELECT model_quantity,group_id,entity_id,COALESCE(period_start::VARCHAR,'none'),period_end::VARCHAR,'{view}',
+            ?::TIMESTAMPTZ,?::TIMESTAMPTZ,observation_id||'|'||COALESCE(measurement_basis,'unknown_basis'),amount,unit,
+            'computed',CASE WHEN amount=0 THEN 'explicit_zero' ELSE 'observed' END,knowledge_date,
+            to_json([observation_id,tagged_fact_id]),to_json([tier]),2,source_perspective,accounting_framework
+          FROM usable_observations WHERE model_quantity IN ({','.join(sql_literal(x) for x in allowed)})
+            AND amount IS NOT NULL AND period_end IS NOT NULL AND knowledge_date<=?::DATE''',[as_of,as_of,as_of[:10]])
 
 
 def horizon_bounds(db, root, as_of):

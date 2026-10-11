@@ -49,6 +49,16 @@ MEASURE_TERMS = {
     'bdc_fv_to_cost': ['none'], 'bdc_pik_share': ['none'], 'bdc_non_accrual_share': ['none'],
     'form_d_offering_amount': ['none']}
 
+# Source-specific descriptive quantities in the authorized targeted discovery.
+# These are tier 2 and do not alter the frozen annex E/F decision criteria.
+MEASURE_TERMS.update({name:['none'] for name in (
+    'customer_working_capital_loan_received','customer_working_capital_loan_noncash_repayment',
+    'customer_working_capital_loan_outstanding','named_customer_revenue','customer_warrant_assets_capitalized',
+    'indirect_investment_carrying_amount','named_investment_acquisitions','named_investment_unrealized_gain',
+    'named_investment_carrying_amount','capital_solution_contract_size','purchase_obligation_guarantee_percentage',
+    'purchase_obligation_guarantee_carrying_amount','guarantee_reimbursement_percentage','customer_lease_incentive_asset',
+    'lease_letter_of_credit_requirement','vehicle_construction_remaining_contribution','indirect_property_investment_carrying_amount')})
+
 CONTROL_IDS = ['c1_balance_components','c2_cash_flow_components','c3_cash_reconciliation',
     'c4_restatement_detection','c5_bilateral','c6_income_articulation','c7_cash_continuity',
     'c8_debt_rollforward','c9_lease_liability','c10_maturity_sums','c11_segments',

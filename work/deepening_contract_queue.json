@@ -1,0 +1,98 @@
+[
+  {
+    "content_key": "029e8673b9924bd4ba5a18420e26b90091356fbc3b0e9c20cb3edc35a98b5683",
+    "occurrence_id": "447b037239c682728fec40cbe7cd964e8e68f0787ab38621389704ffc9a58192",
+    "group": "CRWV",
+    "accession": "0001140361-25-036118",
+    "block_class": "exhibit",
+    "knowledge_date": "2025-09-25",
+    "path": "work/blocks/447b037239c682728fec40cbe7cd964e8e68f0787ab38621389704ffc9a58192.json",
+    "chars": 53358,
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "5e012e56432147a2b5fff521ca4e21986d5758e548b06ead83740e660b9d8fc1",
+    "occurrence_id": "b40107986ecc6314da505010f5acc94cce824d21d2bac8aff7cb7bfe68f4826f",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-025762",
+    "block_class": "exhibit",
+    "knowledge_date": "2026-04-17",
+    "path": "work/blocks/b40107986ecc6314da505010f5acc94cce824d21d2bac8aff7cb7bfe68f4826f.json",
+    "chars": 48621,
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "d5914126788f9c4d98073d283a795be08aca2eddd72680b05576b967cbeeac50",
+    "occurrence_id": "561f53a090d8f6372726b8a66eca193c7cef553f606d642a5d482d6d3487810f",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-025762",
+    "block_class": "exhibit",
+    "knowledge_date": "2026-04-17",
+    "path": "work/blocks/561f53a090d8f6372726b8a66eca193c7cef553f606d642a5d482d6d3487810f.json",
+    "chars": 23421,
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "b3290d22f2cc7d24a08eb7875aa4b7675653352bf71135d7ee674cda2ff5dae5",
+    "occurrence_id": "4b04850dd7faa0a031f85934d535e65f275ad73f2444fad3b5a078e9039cfef4",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-025762",
+    "block_class": "exhibit",
+    "knowledge_date": "2026-04-17",
+    "path": "work/blocks/4b04850dd7faa0a031f85934d535e65f275ad73f2444fad3b5a078e9039cfef4.json",
+    "chars": 54061,
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "950e63e45218f458c4ab9be35344d49818dfce18c073f7d4a9b063e45426a970",
+    "occurrence_id": "d4498d19960d6117aeb8f46c667d1d4cf8e5013dbbc9841031bc20aca54e09ec",
+    "group": "AMD",
+    "accession": "0000002488-26-000045",
+    "block_class": "exhibit",
+    "knowledge_date": "2026-02-24",
+    "path": "work/blocks/d4498d19960d6117aeb8f46c667d1d4cf8e5013dbbc9841031bc20aca54e09ec.json",
+    "chars": 1838,
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "a9b24054e76e4be53640ab49262822fe2d2b5f68af919e16b0987dbdc70acb01",
+    "occurrence_id": "e35e7c1c701a98c396485c48f53798a490697de9c688103a49493171ac34b0c0",
+    "group": "AMD",
+    "accession": "0000002488-26-000045",
+    "block_class": "exhibit",
+    "knowledge_date": "2026-02-24",
+    "path": "work/blocks/e35e7c1c701a98c396485c48f53798a490697de9c688103a49493171ac34b0c0.json",
+    "chars": 32,
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "a171384cc60d8934f165ee4e4a515f53439802612835f0b036b1146e5b8c5ed2",
+    "occurrence_id": "23537ff3bcafc79a2e9fe825cd3a4095e6b2af73180b13ebe9ffff7a87e33de6",
+    "group": "AMD",
+    "accession": "0000002488-26-000045",
+    "block_class": "exhibit",
+    "knowledge_date": "2026-02-24",
+    "path": "work/blocks/23537ff3bcafc79a2e9fe825cd3a4095e6b2af73180b13ebe9ffff7a87e33de6.json",
+    "chars": 44,
+    "candidates": 0,
+    "duplicate": false
+  },
+  {
+    "content_key": "3b0e325849d043543f413263d80b777372f0d9ceba88abae7773a096f8bd01df",
+    "occurrence_id": "6a49564898b1669276bdf7b17db134db5ef624f28ae76a006903481c4909a92b",
+    "group": "AMD",
+    "accession": "0000002488-26-000045",
+    "block_class": "exhibit",
+    "knowledge_date": "2026-02-24",
+    "path": "work/blocks/6a49564898b1669276bdf7b17db134db5ef624f28ae76a006903481c4909a92b.json",
+    "chars": 2799,
+    "candidates": 0,
+    "duplicate": false
+  }
+]
