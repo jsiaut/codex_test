@@ -1,6 +1,6 @@
 """Serve frozen remaining notes; save the executor's authored review only."""
 from pathlib import Path
-import argparse,json,math
+import argparse,json,math,re
 from datetime import datetime,timezone
 from .expansion_reading import show,submit
 
@@ -14,7 +14,9 @@ def display(root,start,count=1,part=None):
         for p in parts:
             packet=show(root,row['content_key'],p)
             print(f"BLOCK {index} {row['content_key'][:12]} | {b['group']} | {b['accession']} | {b.get('label')} | PART {p+1}/{packet['parts']}")
-            print(packet['text'])
+            # Collapse only repeated empty table separators for reading. Every
+            # word, populated cell and number remains; sources stay immutable.
+            print(re.sub(r'(?:\|[ \t]*){2,}', '| ', packet['text']))
 
 def save(root,path):
     authored=json.loads(path.read_text());out=[]
