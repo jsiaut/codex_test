@@ -3,6 +3,6 @@
   "sec_limit_respected": true,
   "pipeline_rate_respected": true,
   "pause_violations": [],
-  "requests": 6980,
-  "bytes_received": 2099232340
+  "requests": 7630,
+  "bytes_received": 5313231810
 }

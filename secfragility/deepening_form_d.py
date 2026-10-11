@@ -53,15 +53,17 @@ def load(db,root,as_of):
     registry=root/'work/deepening_form_d_filings.json'
     if not registry.exists():return
     manifest=json.loads((root/'work/deepening_source_manifest.json').read_text());disclosures=[]
+    def add(table,row):
+        pk='document_id' if table=='documents' else 'fact_id'
+        if not db.execute(f'SELECT count(*) FROM {table} WHERE {pk}=?',[row[pk]]).fetchone()[0]:insert(db,table,row)
     for key,r in sorted(json.loads(registry.read_text()).items()):
         s=r['source'];f=r['fields'];acc=s['adsh'];cik=s['ciks'][0];url=r['url'];did=digest([url])
         raw=(root/r['path']).read_bytes()
         if hashlib.sha256(raw).hexdigest()!=manifest[url]['sha256']:raise ValueError('Form D bytes changed')
-        if db.execute('SELECT count(*) FROM documents WHERE document_id=?',[did]).fetchone()[0]:continue
         original=etree.fromstring(raw,etree.XMLParser(resolve_entities=False,no_network=True))
         original_cik=original.findtext('primaryIssuer/cik')
         if original_cik and int(original_cik)!=int(cik):raise ValueError('Form D issuer CIK mismatch')
-        insert(db,'documents',dict(document_id=did,group_id='external:'+cik,entity_id='cik:'+cik,cik=cik,
+        add('documents',dict(document_id=did,group_id='external:'+cik,entity_id='cik:'+cik,cik=cik,
             accession=acc,document_rank=0,document_rank_source='primary_XML_form',url=url,cache_path=r['path'],
             sha256=manifest[url]['sha256'],form=s['file_type'],filing_status='filed',assurance_level='not_applicable',
             location='Form_D_Item_13',document_kind='structured_offering_disclosure',tier='C',
@@ -70,13 +72,13 @@ def load(db,root,as_of):
         for field,tag in [('total_offering_amount','totalOfferingAmount'),('total_amount_sold','totalAmountSold')]:
             value=f[field];numeric=Decimal(value) if value is not None and re.fullmatch(r'\d+(?:\.\d+)?',value) else None
             fid=digest([url,tag]);xpath='/edgarSubmission/offeringData/offeringSalesAmounts/'+tag
-            insert(db,'facts',dict(fact_id=fid,semantic_key=offering_key(cik,f['first_sale'],acc,tag),document_id=did,accession=acc,
+            add('facts',dict(fact_id=fid,semantic_key=offering_key(cik,f['first_sale'],acc,tag),document_id=did,accession=acc,
                 entity_id='cik:'+cik,group_id='external:'+cik,concept='secFormD:'+tag,canonical_concept='secFormD:'+tag,
                 taxonomy_namespace='SEC_Form_D_XML',model_quantity='form_d_offering_amount',period_end=s['file_date'],
                 unit='USD',currency='USD',dimensions=json.dumps(dict(first_sale=f['first_sale'],issuer_name=f['issuer_name'],
                     kind=field,underlying_primary_cash_established=False),sort_keys=True),accounting_framework='unknown',
                 reporting_scope='issuer_offering',source_perspective='reporting_entity',value=numeric,text_value=value,
-                is_nil=value is None,explicit_zero=numeric==0,decimals='INF' if numeric is not None else None,
+                is_nil=False,explicit_zero=numeric==0,decimals=None,
                 is_tagged=False,locator='XPath:'+xpath,occurrence_rank=1 if field=='total_offering_amount' else 2,
                 document_rank=0,document_rank_source='primary_XML_form',source_document_id=did,
                 acceptance_datetime=r['acceptance_datetime'],knowledge_date=s['file_date'],filing_status='filed',

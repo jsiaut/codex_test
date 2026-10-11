@@ -2,7 +2,7 @@
 
 Situation des sources arrêtée au 2026-10-09T10:24:21.129672+00:00. Périmètre : extension des cinq familles de notes autorisée ; découverte non ouverte.
 
-Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `d9e886e92fe46c2bd3f2f497103dce895be8edd2` ; commit courant de config.yaml : `e59807676c027121710f9469f8e1c976e40ce3a6`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
+Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `d9e886e92fe46c2bd3f2f497103dce895be8edd2` ; commit courant de config.yaml : `6b3f78c351e241d3fe5e1f9b8520f2b67f1d7643`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
 
 Les pièces déposées ne permettent pas de discriminer entre les deux lectures. La part indéterminée des issues de paire E1 et E2 au point de tête vaut 1 ; le périmètre borné et les numérateurs non attribuables en sont les premières limites. Cette proportion porte sur les paires publiées dans le registre, sans pondérer les montants. Les échéances non établies restent explicitement indéterminées. La sensibilité revised et les autres points de grille sont publiés dans les tables.
 
@@ -13,17 +13,17 @@ Aucun arrêt durable d’accès SEC ni échec comptable généralisé. Les éche
 | Contrôle | ok | mismatch | not_testable | tautological |
 | --- | ---: | ---: | ---: | ---: |
 | c10_maturity_sums | 419 | 0 | 24 | 0 |
-| c11_segments | 312 | 0 | 83 | 0 |
-| c12_revenue_disaggregation | 721 | 0 | 620 | 0 |
-| c13_rpo | 218 | 0 | 0 | 0 |
+| c11_segments | 316 | 0 | 87 | 0 |
+| c12_revenue_disaggregation | 735 | 0 | 649 | 0 |
+| c13_rpo | 221 | 0 | 0 | 0 |
 | c14_eps_scale | 402 | 9 | 108 | 0 |
 | c15_tax_rate | 154 | 13 | 130 | 0 |
-| c16_concentration | 1801 | 0 | 6 | 0 |
+| c16_concentration | 2878 | 0 | 8 | 0 |
 | c1_balance_components | 1610 | 1 | 93 | 0 |
 | c2_cash_flow_components | 1554 | 2 | 28 | 0 |
 | c3_cash_reconciliation | 34 | 0 | 350 | 0 |
-| c4_restatement_detection | 137268 | 0 | 13 | 0 |
-| c5_bilateral | 0 | 0 | 794 | 0 |
+| c4_restatement_detection | 143353 | 0 | 13 | 0 |
+| c5_bilateral | 0 | 0 | 796 | 0 |
 | c6_income_articulation | 242 | 0 | 0 | 0 |
 | c7_cash_continuity | 289 | 1 | 26 | 0 |
 | c8_debt_rollforward | 0 | 0 | 258 | 0 |
@@ -76,31 +76,29 @@ Les écarts sont conservés avec leurs deux termes, leur précision et leur expl
 
 ### AMD
 
-Dernière période de revenu exploitable : 2024-12-28. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-06-27. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
 | --- | --- | ---: | --- | --- | --- |
 
-| revenue_total | none / original | 7658000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-24-000163 / id:f-32; 0000002488-25-000012 / id:f-40 |
+| revenue_total | none / original | 11536000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-26-000123 / id:f-30 |
 
-| revenue_growth | ttm / original | 0.136905 | ratio | computed / — | 0000002488-24-000056 / id:f-30; 0000002488-24-000056 / id:f-31; 0000002488-24-000123 / id:f-30; 0000002488-24-000123 / id:f-31; 0000002488-24-000163 / id:f-30; 0000002488-24-000163 / id:f-31; 0000002488-24-000163 / id:f-32; 0000002488-24-000163 / id:f-33; 0000002488-25-000012 / id:f-40; 0000002488-25-000012 / id:f-41 |
+| revenue_growth | ttm / original | 0.395439 | ratio | computed / — | 0000002488-25-000166 / id:f-30; 0000002488-25-000166 / id:f-31; 0000002488-25-000166 / id:f-32; 0000002488-25-000166 / id:f-33; 0000002488-26-000018 / id:f-46; 0000002488-26-000018 / id:f-47; 0000002488-26-000076 / id:f-30; 0000002488-26-000076 / id:f-31; 0000002488-26-000123 / id:f-30; 0000002488-26-000123 / id:f-31 |
 
-| revenue_growth | yoy / original | 0.241569 | ratio | computed / — | 0000002488-24-000163 / id:f-32; 0000002488-24-000163 / id:f-33; 0000002488-25-000012 / id:f-40; 0000002488-25-000012 / id:f-41 |
+| revenue_growth | yoy / original | 0.501106 | ratio | computed / — | 0000002488-26-000123 / id:f-30; 0000002488-26-000123 / id:f-31 |
 
 | capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| capex_to_cfo | without / original | 0.160123 | ratio | computed / — | 0000002488-24-000163 / id:f-224; 0000002488-24-000163 / id:f-226; 0000002488-25-000012 / id:f-305; 0000002488-25-000012 / id:f-308 |
+| capex_to_cfo | without / original | 0.341505 | ratio | computed / — | 0000002488-26-000076 / id:f-181; 0000002488-26-000076 / id:f-183; 0000002488-26-000123 / id:f-248; 0000002488-26-000123 / id:f-250 |
 
-| fcf_basic | none / original | 1091000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-24-000163 / id:f-224; 0000002488-24-000163 / id:f-226; 0000002488-25-000012 / id:f-305; 0000002488-25-000012 / id:f-308 |
+| fcf_basic | none / original | 1558000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-26-000076 / id:f-181; 0000002488-26-000076 / id:f-183; 0000002488-26-000123 / id:f-248; 0000002488-26-000123 / id:f-250 |
 
 | fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| receivables_collection_period | none / receivables_only | 79.812157 | days | computed / — | 0000002488-24-000163 / id:f-126; 0000002488-24-000163 / id:f-32; 0000002488-25-000012 / id:f-116; 0000002488-25-000012 / id:f-40 |
+| receivables_collection_period | none / receivables_only | 52.520631 | days | computed / — | 0000002488-26-000076 / id:f-94; 0000002488-26-000123 / id:f-154; 0000002488-26-000123 / id:f-30 |
 
-| rpo_total | none / original | 85000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-25-000012 / id:f-471 |
-
-| rpo_total | none / text:7006690dde52f8c555a5b01e8fb3ee1739a19d3c73c67a9af5463bf0e6d2e3e7 | 85000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-25-000012 / rawbytes:1071663:1111717 |
+| rpo_total | none / original | 222000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-26-000123 / id:f-429 |
 
 | liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
@@ -116,13 +114,13 @@ Dernière période de revenu exploitable : 2024-12-28. Les séries complètes so
 
 | lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| lease_not_commenced_bridge | opening / original | 4287000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0000002488-24-000163 / id:f-872 |
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
 La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
 
 ### AMZN
 
-Dernière période de revenu exploitable : 2026-06-30. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -150,9 +148,9 @@ Dernière période de revenu exploitable : 2026-06-30. Les séries complètes so
 
 | liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.782798 | ratio | partial / short_term_debt_and_other_components_not_established | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-407; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-937 |
-
 | lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.782798 | ratio | partial / short_term_debt_and_other_components_not_established | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-407; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-937 |
 
 | lev_debt_and_leases_to_operating_income_plus_da | leases / original | 0.649871 | ratio | computed / — | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-767; 0001018724-26-000026 / id:f-768; 0001018724-26-000026 / id:f-774; 0001018724-26-000026 / id:f-775 |
 
@@ -168,31 +166,31 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### AVGO
 
-Dernière période de revenu exploitable : 2026-05-03. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-08-02. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
 | --- | --- | ---: | --- | --- | --- |
 
-| revenue_total | none / original | 22187000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000054 / id:f-1063 |
+| revenue_total | none / original | 29591000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000080 / id:f-1095 |
 
-| revenue_growth | ttm / original | 0.322880 | ratio | computed / — | 0001730168-25-000098 / id:f-1147; 0001730168-25-000098 / id:f-1148; 0001730168-25-000098 / id:f-1149; 0001730168-25-000098 / id:f-1150; 0001730168-25-000121 / id:f-129; 0001730168-25-000121 / id:f-130; 0001730168-26-000016 / id:f-859; 0001730168-26-000016 / id:f-860; 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-1064 |
+| revenue_growth | ttm / original | 0.486901 | ratio | computed / — | 0001730168-25-000098 / id:f-1149; 0001730168-25-000098 / id:f-1150; 0001730168-25-000121 / id:f-129; 0001730168-25-000121 / id:f-130; 0001730168-26-000016 / id:f-859; 0001730168-26-000016 / id:f-860; 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-1064; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-1096 |
 
-| revenue_growth | yoy / original | 0.478739 | ratio | computed / — | 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-1064 |
+| revenue_growth | yoy / original | 0.855003 | ratio | computed / — | 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-1096 |
 
 | capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| capex_to_cfo | without / original | 0.022015 | ratio | computed / — | 0001730168-26-000016 / id:f-184; 0001730168-26-000016 / id:f-186; 0001730168-26-000054 / id:f-242; 0001730168-26-000054 / id:f-244 |
+| capex_to_cfo | without / original | 0.037473 | ratio | computed / — | 0001730168-26-000054 / id:f-242; 0001730168-26-000054 / id:f-244; 0001730168-26-000080 / id:f-242; 0001730168-26-000080 / id:f-246 |
 
-| fcf_basic | none / original | 10262000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000016 / id:f-184; 0001730168-26-000016 / id:f-186; 0001730168-26-000054 / id:f-242; 0001730168-26-000054 / id:f-244 |
+| fcf_basic | none / original | 13665000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000054 / id:f-242; 0001730168-26-000054 / id:f-244; 0001730168-26-000080 / id:f-242; 0001730168-26-000080 / id:f-246 |
 
 | fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| receivables_collection_period | none / original | 80.053094 | days | computed / — | 0001730168-26-000016 / id:f-319; 0001730168-26-000016 / id:f-32; 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463 |
+| receivables_collection_period | none / original | 72.017962 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32; 0001730168-26-000080 / id:f-507 |
 
-| receivables_collection_period | none / receivables_only | 39.558976 | days | computed / — | 0001730168-26-000016 / id:f-32; 0001730168-26-000054 / id:f-1063; 0001730168-26-000054 / id:f-32 |
+| receivables_collection_period | none / receivables_only | 37.728820 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32 |
 
-| rpo_total | none / original | 164600000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000054 / id:f-470 |
+| rpo_total | none / original | 179200000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000080 / id:f-514 |
 
 | liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
@@ -214,7 +212,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### CRWV
 
-Dernière période de revenu exploitable : 2026-06-30. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -238,9 +236,9 @@ Dernière période de revenu exploitable : 2026-06-30. Les séries complètes so
 
 | rpo_total | none / original | 103700000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001769628-26-000366 / id:f-521 |
 
-| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+| liq_principal_due_to_cash | horizon_12m / original | 0.798877 à 1.918357 | ratio | bounded / annual_debt_buckets_bound_rolling_horizon_no_monthly_timing;principal_only;published_rounded_amounts | 0001769628-26-000366 / id:f-459; 0001769628-26-000366 / id:f-937; 0001769628-26-000366 / id:f-938 |
 
-| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+| liq_principal_due_to_cash | horizon_24m / original | 1.918356 à 2.717777 | ratio | bounded / annual_debt_buckets_bound_rolling_horizon_no_monthly_timing;principal_only;published_rounded_amounts | 0001769628-26-000366 / id:f-459; 0001769628-26-000366 / id:f-937; 0001769628-26-000366 / id:f-938; 0001769628-26-000366 / id:f-939 |
 
 | lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
 
@@ -258,7 +256,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### GOOGL
 
-Dernière période de revenu exploitable : 2026-06-30. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -302,7 +300,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### META
 
-Dernière période de revenu exploitable : 2026-06-30. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -346,7 +344,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### MRVL
 
-Dernière période de revenu exploitable : 2026-08-01. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-08-01. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -390,7 +388,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### MSFT
 
-Dernière période de revenu exploitable : 2026-06-30. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -434,7 +432,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### NVDA
 
-Dernière période de revenu exploitable : 2026-07-26. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-07-26. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -480,7 +478,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### ORCL
 
-Dernière période de revenu exploitable : 2026-08-31. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-08-31. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -526,7 +524,7 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 ### SPCX
 
-Dernière période de revenu exploitable : 2026-06-30. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
 
 | Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
 
@@ -584,7 +582,7 @@ Les plafonds et garanties publiés rendent certaines relations visibles sans pro
 | --- | ---: |
 | complete_public_attribution_not_established | 692 |
 
-Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1512, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 13689, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
+Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1513, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 13689, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
 
 Les critères E sont confrontés aux paires et aux exercices dans measures.parquet, même pour les cellules vides. Les chemins de l’extension restent non déterminables, motif not_processed ; ils ne sont pas comptés comme inexistants.
 

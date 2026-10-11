@@ -31,7 +31,9 @@ def capture(root):
         'extension_html_bounds.json','extension_exclusions.json','queue.json','expected_universe.json',
         'inventory.json','collection.json','annual_cutoffs.json'])
     names.update('work/'+name for name in ['deepening_authorization.json','deepening_filings.json',
-        'deepening_issuer_metadata.json','deepening_numeric_rules.json','deepening_source_manifest.json'])
+        'deepening_issuer_metadata.json','deepening_numeric_rules.json','deepening_source_manifest.json',
+        'deepening_form_d_filings.json','deepening_contract_sources.json','deepening_scope_exclusions.json',
+        'deepening_reading_queue.json','deepening_contract_queue.json','deepening_series_diagnostic.json'])
     names.update(['config.yaml','schema.sql','queries.sql','requirements.txt'])
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}

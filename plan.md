@@ -1,10 +1,10 @@
-# Plan du premier passage
+# Plan et état du projet
 
-Collecte terminée ; calculs structurés effectués ; lecture en cours. Les critères E/F et les seuils restent ceux du commit initial. Aucun audit indépendant n’est revendiqué.
+Premier passage et cinq familles de notes livrés. Les quatre approfondissements autorisés sont traités : dates et séries, liquidité/prêteurs CoreWeave, contrats NVIDIA–CoreWeave et AMD–Meta, contreparties privées et véhicules. Les critères E/F, les seuils et l’arrêt des sources restent ceux du commit initial. Aucun audit indépendant n’est revendiqué.
 
-La file contient 1348 clés distinctes, avant examen des en-têtes EX-10/EX-4. Les corps des contrats purement financiers seront exclus après lecture de leurs parties ; les amendements autonomes restent à lire. Les documents annuels SpaceX non balisés restent exclus par la nouvelle validation D1.
+La file contient 3575 clés distinctes, toutes traitées. La découverte reste bornée à la tranche documentée ; les candidats non lus, les anciennes archives non collectées et les contrats masqués restent explicitement hors couverture. Les états annuels SpaceX non balisés restent exclus par la validation D1.
 
-Ordre : parties liées et Item 404, contrôles et continuité, sections ciblées des 8-K, puis pièces annexées. Les observations sont persistées bloc par bloc. Assemblage, couverture, critères E/F, rendus et commit de fin suivent une fois la file vide.
+Les observations sont persistées bloc par bloc. La livraison finale comprend le recalcul, les contrôles, la reconstruction hors ligne intégrale, les rapports, les sources supplémentaires sauvegardées et un commit poussé distinct des checkpoints.
 
 Une durée de lecture ne se déduit pas des octets. Le nombre de blocs restants, les caractères effectivement servis et le temps sont enregistrés pour mesurer le rendement.
 

@@ -1,6 +1,6 @@
 # Rendement, changements et limites
 
-Exclusions locales de calcul après contrôle du lignage : {"source_not_known_at_information_cutoff": 541}. Les valeurs concernées sont retirées avec un motif explicite ; la vue révisée conserve les sources admissibles à l’arrêt de l’exécution. Les dates de disponibilité de l’information et l’arrêt des sources restent distincts.
+Exclusions locales de calcul après contrôle du lignage : {"source_not_known_at_information_cutoff": 1}. Les valeurs concernées sont retirées avec un motif explicite ; la vue révisée conserve les sources admissibles à l’arrêt de l’exécution. Les dates de disponibilité de l’information et l’arrêt des sources restent distincts.
 
 Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage livre les tables et le dossier d’audit. Aucun événement n’est sommé ni transformé en score. Les événements datés sont dans synthesis.md et series.csv.
 
@@ -8,9 +8,10 @@ Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage li
 
 | Statut rang 1 | Cellules |
 | --- | ---: |
-| computed | 35900 |
-| not_determinable | 181399 |
-| partial | 5373 |
+| bounded | 4 |
+| computed | 36202 |
+| not_determinable | 181093 |
+| partial | 5482 |
 
 | Motif | Cellules |
 | --- | ---: |
@@ -18,27 +19,27 @@ Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage li
 | empty_numerator | 28488 |
 | complete_public_attribution_not_established | 24816 |
 | historical_filer_category_or_fiscal_dates_unestablished | 11550 |
-| missing_admissible_terms | 10387 |
+| missing_admissible_terms | 10372 |
 | fiscal_calendar_not_established | 5868 |
-| individual_source_component_not_an_additive_total | 3962 |
+| individual_source_component_not_an_additive_total | 4069 |
 | explicit_dated_event_not_established | 2651 |
-| named_anonymous_overlap_and_complete_attribution_not_established | 1290 |
+| named_anonymous_overlap_and_complete_attribution_not_established | 1344 |
 | complete_contract_terms_not_established | 1037 |
-| dated_explicit_control_or_going_concern_state_not_established | 787 |
-| source_not_known_at_information_cutoff | 345 |
+| dated_explicit_control_or_going_concern_state_not_established | 786 |
 | qualified_source_amount | 232 |
 | missing_compatible_consecutive_quarters | 194 |
-| short_term_principal_not_included | 71 |
-| short_term_debt_and_other_components_not_established | 71 |
+| short_term_principal_not_included | 72 |
+| short_term_debt_and_other_components_not_established | 72 |
+| source_not_known_at_information_cutoff | 1 |
 
 Les tableaux suivants comptent des cellules et leurs états dans la vue as_known ; ils ne somment ni les événements ni les montants. Toutes les périodes et variantes figurent dans series.csv.
 
 | Observable | Statut | Motif | Cellules temporelles |
 | --- | --- | --- | ---: |
-| F1 | computed | — | 141 |
+| F1 | computed | — | 155 |
 | F1 | not_determinable | fiscal_calendar_not_established | 18 |
 | F1 | not_determinable | missing_compatible_consecutive_quarters | 68 |
-| F1 | not_determinable | source_not_known_at_information_cutoff | 15 |
+| F1 | not_determinable | source_not_known_at_information_cutoff | 1 |
 | F10 | not_determinable | dated_explicit_control_or_going_concern_state_not_established | 224 |
 | F10 | not_determinable | fiscal_calendar_not_established | 18 |
 | F2 | not_determinable | explicit_dated_event_not_established | 224 |
@@ -48,8 +49,8 @@ Les tableaux suivants comptent des cellules et leurs états dans la vue as_known
 | F4 | computed | — | 15 |
 | F4 | not_determinable | explicit_dated_event_not_established | 209 |
 | F4 | not_determinable | fiscal_calendar_not_established | 18 |
-| F5 | computed | — | 54 |
-| F5 | not_determinable | dated_explicit_control_or_going_concern_state_not_established | 170 |
+| F5 | computed | — | 55 |
+| F5 | not_determinable | dated_explicit_control_or_going_concern_state_not_established | 169 |
 | F5 | not_determinable | fiscal_calendar_not_established | 18 |
 | F6 | computed | — | 2 |
 | F6 | not_determinable | explicit_dated_event_not_established | 222 |
@@ -57,10 +58,9 @@ Les tableaux suivants comptent des cellules et leurs états dans la vue as_known
 | F7 | computed | — | 1 |
 | F7 | not_determinable | explicit_dated_event_not_established | 223 |
 | F7 | not_determinable | fiscal_calendar_not_established | 18 |
-| F8 | computed | — | 177 |
+| F8 | computed | — | 193 |
 | F8 | not_determinable | fiscal_calendar_not_established | 18 |
 | F8 | not_determinable | missing_compatible_consecutive_quarters | 31 |
-| F8 | not_determinable | source_not_known_at_information_cutoff | 16 |
 | F9 | not_determinable | explicit_dated_event_not_established | 224 |
 | F9 | not_determinable | fiscal_calendar_not_established | 18 |
 
@@ -71,9 +71,9 @@ Les tableaux suivants comptent des cellules et leurs états dans la vue as_known
 | contract_coverage | not_determinable | fiscal_calendar_not_established | 216 |
 | contract_coverage | not_determinable | public_attribution_or_complete_terms_not_established | 6500 |
 | contract_coverage | partial | complete_contract_terms_not_established | 510 |
-| customer_concentration_anonymous | computed | — | 63 |
+| customer_concentration_anonymous | computed | — | 65 |
 | customer_concentration_anonymous | not_determinable | fiscal_calendar_not_established | 18 |
-| customer_concentration_anonymous | not_determinable | missing_admissible_terms | 203 |
+| customer_concentration_anonymous | not_determinable | missing_admissible_terms | 202 |
 | documented_backlog_dependency | not_determinable | fiscal_calendar_not_established | 432 |
 | documented_backlog_dependency | not_determinable | public_attribution_or_complete_terms_not_established | 14020 |
 | documented_pair_coverage | computed | — | 14020 |
@@ -83,8 +83,7 @@ Les tableaux suivants comptent des cellules et leurs états dans la vue as_known
 | investor_customer_revenue_share | not_determinable | empty_numerator | 224 |
 | investor_customer_revenue_share | not_determinable | fiscal_calendar_not_established | 18 |
 | named_edge_coverage | not_determinable | fiscal_calendar_not_established | 54 |
-| named_edge_coverage | not_determinable | named_anonymous_overlap_and_complete_attribution_not_established | 618 |
-| named_edge_coverage | not_determinable | source_not_known_at_information_cutoff | 54 |
+| named_edge_coverage | not_determinable | named_anonymous_overlap_and_complete_attribution_not_established | 672 |
 | noncash_revenue_from_investees | not_determinable | fiscal_calendar_not_established | 216 |
 | noncash_revenue_from_investees | not_determinable | public_attribution_or_complete_terms_not_established | 7010 |
 
@@ -92,15 +91,15 @@ Couverture nommée, anonyme et résiduelle par fournisseur, au dernier point fis
 
 | Fournisseur | Dernière période | Part | Ratio | Dénominateur publié | Statut / motif |
 | --- | --- | --- | ---: | ---: | --- |
-| AMD | 2026-06-27 | anonymous | ND | ND | not_determinable / source_not_known_at_information_cutoff |
-| AMD | 2026-06-27 | named | ND | ND | not_determinable / source_not_known_at_information_cutoff |
-| AMD | 2026-06-27 | residual | ND | ND | not_determinable / source_not_known_at_information_cutoff |
+| AMD | 2026-06-27 | anonymous | ND | 11536000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
+| AMD | 2026-06-27 | named | ND | 11536000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
+| AMD | 2026-06-27 | residual | ND | 11536000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
 | AMZN | 2026-06-30 | anonymous | ND | 200606000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
 | AMZN | 2026-06-30 | named | ND | 200606000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
 | AMZN | 2026-06-30 | residual | ND | 200606000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
-| AVGO | 2026-08-02 | anonymous | ND | ND | not_determinable / source_not_known_at_information_cutoff |
-| AVGO | 2026-08-02 | named | ND | ND | not_determinable / source_not_known_at_information_cutoff |
-| AVGO | 2026-08-02 | residual | ND | ND | not_determinable / source_not_known_at_information_cutoff |
+| AVGO | 2026-08-02 | anonymous | ND | 29591000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
+| AVGO | 2026-08-02 | named | ND | 29591000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
+| AVGO | 2026-08-02 | residual | ND | 29591000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
 | CRWV | 2026-06-30 | anonymous | ND | 2575000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
 | CRWV | 2026-06-30 | named | ND | 2575000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
 | CRWV | 2026-06-30 | residual | ND | 2575000000.000000 | not_determinable / named_anonymous_overlap_and_complete_attribution_not_established |
@@ -128,9 +127,9 @@ Couverture nommée, anonyme et résiduelle par fournisseur, au dernier point fis
 
 Paires à financement de montant documenté : 2. Arêtes de montant : 13. Les couvertures nommée, anonyme et résiduelle restent au niveau du fournisseur dans les séries.
 
-Blocs uniques traités : 3552 ; observations acceptées : 17029. Tentatives rejetées : {"schema": 60, "semantic": 47}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 237, "investments_note": 603, "lease_note": 185, "concentration_narrative": 839, "debt_note": 315, "commitments_note": 309} ; items 8-K : {"non renseigné": 457}.
+Blocs uniques traités : 3572 ; observations acceptées : 17085. Tentatives rejetées : {"schema": 60, "semantic": 47}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 245, "investments_note": 618, "lease_note": 185, "concentration_narrative": 839, "debt_note": 315, "commitments_note": 309} ; items 8-K : {"non renseigné": 457}.
 
-Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 6980, "bytes_received": 2099232340}. Durée calendaire depuis la première requête SEC : 131740.214145 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
+Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 7630, "bytes_received": 5313231810}. Durée calendaire depuis la première requête SEC : 164108.991239 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
 
 ## Exclusions
 
@@ -138,9 +137,8 @@ Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pi
 | --- | ---: |
 | not_processed | 13689 |
 | policy_excluded | 1104 |
-| invalid_aggregate | 541 |
-| pending_entity | 441 |
-| relation_without_admissible_amount | 382 |
+| pending_entity | 443 |
+| relation_without_admissible_amount | 384 |
 | financial_parties_only | 214 |
 | direction_not_established | 175 |
 | validation_failed | 107 |
@@ -149,6 +147,7 @@ Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pi
 | attribution_interpretation | 9 |
 | category_assignment_not_explicit_in_this_contractual_disclosure | 3 |
 | event_definition_mismatch | 2 |
+| invalid_aggregate | 1 |
 | net_proceeds_993_5_vs_independent_offer_price_992_35_unresolved | 1 |
 | parse_failed | 1 |
 | primary_cash_and_exact_event_date_not_established | 1 |
@@ -162,17 +161,17 @@ Cette extension utilise le même arrêt des sources que le premier passage ; ses
 | Contrôle | ok | mismatch | not_testable | tautological |
 | --- | ---: | ---: | ---: | ---: |
 | c10_maturity_sums | 419 | 0 | 24 | 0 |
-| c11_segments | 312 | 0 | 83 | 0 |
-| c12_revenue_disaggregation | 721 | 0 | 620 | 0 |
-| c13_rpo | 218 | 0 | 0 | 0 |
+| c11_segments | 316 | 0 | 87 | 0 |
+| c12_revenue_disaggregation | 735 | 0 | 649 | 0 |
+| c13_rpo | 221 | 0 | 0 | 0 |
 | c14_eps_scale | 402 | 9 | 108 | 0 |
 | c15_tax_rate | 154 | 13 | 130 | 0 |
-| c16_concentration | 1801 | 0 | 6 | 0 |
+| c16_concentration | 2878 | 0 | 8 | 0 |
 | c1_balance_components | 1610 | 1 | 93 | 0 |
 | c2_cash_flow_components | 1554 | 2 | 28 | 0 |
 | c3_cash_reconciliation | 34 | 0 | 350 | 0 |
-| c4_restatement_detection | 137268 | 0 | 13 | 0 |
-| c5_bilateral | 0 | 0 | 794 | 0 |
+| c4_restatement_detection | 143353 | 0 | 13 | 0 |
+| c5_bilateral | 0 | 0 | 796 | 0 |
 | c6_income_articulation | 242 | 0 | 0 | 0 |
 | c7_cash_continuity | 289 | 1 | 26 | 0 |
 | c8_debt_rollforward | 0 | 0 | 258 | 0 |

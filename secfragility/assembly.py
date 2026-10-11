@@ -46,7 +46,7 @@ def load(db,root,as_of):
     recovered=json.loads(recovered_bounds.read_text()) if recovered_bounds.exists() else []
     recovered_accessions={r['accession'] for r in recovered
         if any(q['accession']==r['accession'] and q['content_key'] in valid_keys for q in queue)}
-    for filename in ['work/block_exclusions.json','work/section_exclusions.json','work/extension_exclusions.json']:
+    for filename in ['work/block_exclusions.json','work/section_exclusions.json','work/extension_exclusions.json','work/deepening_scope_exclusions.json']:
         p=root/filename
         if p.exists():
             for rank,r in enumerate(json.loads(p.read_text())):
@@ -56,7 +56,7 @@ def load(db,root,as_of):
                     continue  # Explicitly bounded HTML notes recovered and read.
                 exclusion(db,as_of,r.get('reason','not_processed'),'source_scope',filename+':'+str(rank),
                     group_id=r.get('group'),accession=r.get('accession'),content_key=r.get('content_key'),
-                    detail=json.dumps(r,ensure_ascii=False),coverage_state=r.get('reason') if r.get('reason') in ('parse_failed','policy_excluded') else 'not_processed')
+                    detail=json.dumps(r,ensure_ascii=False),coverage_state=r.get('reason') if r.get('reason') in ('parse_failed','policy_excluded','not_collected') else 'not_processed')
     policies={}
     for filename in ['work/observation_quarantines.json','work/exhibit_body_policy_overrides.json']:
         p=root/filename

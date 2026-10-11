@@ -1,14 +1,15 @@
 # Second point de contrôle
 
-Le premier passage est livré. La file contient 3552 blocs uniques traités et aucune lecture restante. Le dépôt conserve les observations, les huit tables et le cache sauvegardé ; les rendus sont générés depuis les tables.
+Le premier passage est livré. La file contient 3572 blocs uniques traités et aucune lecture restante. Le dépôt conserve les observations, les huit tables et le cache sauvegardé ; les rendus sont générés depuis les tables.
 
 Les comptes permettent de publier des séries de revenu, de trésorerie et d’investissement, ainsi que certains composants des engagements. Les conditions des contrats ne donnent souvent pas les versements effectifs ou le revenu par client. Les questions de dépendance restent indéterminées pour les paires examinées. Ce résultat tient d’abord au périmètre limité et aux montants qui ne peuvent pas être attribués ; il ne démontre aucune des deux lectures.
 
 | Résultat des cellules prioritaires | Nombre |
 | --- | ---: |
-| calculée ou état de couverture établi | 35900 |
-| indéterminée | 181399 |
-| partielle | 5373 |
+| bounded | 4 |
+| calculée ou état de couverture établi | 36202 |
+| indéterminée | 181093 |
+| partielle | 5482 |
 
 Les événements sont datés et documentés, sans score. Les contradictions et éléments hors tranche restent visibles. L’audit indépendant n’est pas effectué puisque le travail a été réalisé sans sous-agent.
 

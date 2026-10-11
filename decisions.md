@@ -372,3 +372,21 @@ Les notes sans métadonnées XBRL des prospectus de SpaceX et CoreWeave sont dé
 ## D106 — Alphabet : périmètre du carnet de commandes
 
 La note de revenus d’Alphabet indique qu’au premier trimestre 2026 le carnet inclut désormais les contrats dont le terme initial attendu est d’un an ou moins. Sans comparatifs retraités ni pont chiffré, une croissance traversant ce changement est marquée non comparable sur ce périmètre ; aucune correction d’erreur comptable n’est déduite de ce choix de présentation. Source : 0001652044-26-000071, rawbytes:815309:892203, observation rpo_reporting_scope_change.
+
+## D107 — Quatre approfondissements autorisés
+
+L’instruction « Ok on continue sur ces 4 points » ouvre la consolidation des dates/séries, la liquidité et les prêteurs publics de CoreWeave, les contrats ciblés NVIDIA–CoreWeave et AMD–Meta, puis les contreparties privées et véhicules. L’arrêt des sources reste 2026-10-09T10:24:21.129672+00:00 ; les critères E/F et les onze groupes principaux restent inchangés. Les déposants supplémentaires ont un groupe externe distinct. La tranche de découverte Notes Data Sets est limitée à octobre 2025–septembre 2026 ; les exclusions rendent visibles les archives anciennes non collectées et les candidats non lus.
+
+## D108 — Publication et échéances CoreWeave
+
+La connaissance historique commence au plus tardif de la réception SEC et de la date officielle de publication, sans introduire de dépôt publié ensuite. Les 26 divergences comptables préexistantes restent publiées sans modification de concept, signe ou périmètre pour faire passer les contrôles. Pour CoreWeave au 30 juin 2026, les échéances de principal par années civiles permettent des bornes à 12/24 mois ; aucune allocation mensuelle n’est supposée. Le libellé XBRL « NextTwelveMonths » décrit ici l’année 2027 entière. Les bornes ne couvrent ni intérêts, ni baux, ni autres obligations de financement. Référence : 0001769628-26-000366, échéancier de dette et work/deepening_numeric_rules.json.
+
+## D109 — Prêteurs et contrats masqués
+
+Coût et juste valeur des prêts CoreWeave sont rapprochés uniquement dans un même dépôt, instrument/dimensions, période, devise, cadre et périmètre. Les republications et comparatifs ne sont pas additionnés. Le PIK et le statut non-accrual restent not_processed dans cette tranche. Le MSA NVIDIA–CoreWeave fait prévaloir le bon de commande ; sa lecture ne reconstitue pas le bon de commande de septembre 2025 non retrouvé. Les annexes E/F du warrant AMD–Meta sont masquées. Une clause d’intention fiscale ne constitue pas une conclusion US GAAP.
+
+## D110 — Découverte descriptive et Form D
+
+Cerebras distingue le prêt reçu, les remboursements non monétaires, le principal restant, le revenu reconnu et l’actif de warrants ; ces bases ne sont pas additionnées. Le contrat lie une tranche de warrant au dépôt du prêt, mais plusieurs plafonds, délais et frais sont masqués. Les investissements indirects via SPV, valeurs comptables et gains non réalisés ne sont pas transformés en apports primaires aux laboratoires. Une garantie à 15 % de l’obligation d’achat restante n’est pas appliquée au plafond contractuel de 35 milliards sans connaître cette obligation restante.
+
+Les Form D / D-A sont des déclarations cumulatives par déposant/offre, pas des financements identifiés d’OpenAI ou Anthropic. Le rapprochement des amendements utilise le CIK et la date de première vente ; sans cette date, les dépôts restent distincts. L’Item 13 officiel peut inclure du non-monétaire et des engagements futurs obligatoires. Le XML ne fournit pas de précision XBRL : decimals reste absent ; « Indefinite » et les champs manquants restent indéterminés. La recherche nominative peut relever un nom de fonds sans prouver son exposition effective au laboratoire. Les observations et les fichiers originaux sont conservés.

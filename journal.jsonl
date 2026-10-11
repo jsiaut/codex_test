@@ -8061,3 +8061,4 @@
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "bytes": 149025, "error": null, "latency_seconds": 0.06816267967224121, "status": 200, "timestamp": "2026-10-11T07:42:23.569634+00:00", "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026025762/exhibit1013-sx1.htm"}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-11T07:46:25.340252+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 3562, "remaining_unique_keys": 5, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-11T07:53:12.785163+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 3572, "remaining_unique_keys": 3, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-11T08:13:48.285687+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 3575, "remaining_unique_keys": 0, "final_delivery": false}

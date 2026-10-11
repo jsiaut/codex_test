@@ -29,6 +29,10 @@ def number_id(value):
 def render(db,root,as_of,source,verification):
     from .extension_assembly import opened
     extension=bool(opened(root))
+    deepening=(root/'work/deepening_authorization.json').exists()
+    scope_label=('notes complémentaires, prêteurs publics, contrats ciblés et découverte bornée autorisés'
+        if deepening else 'extension des cinq familles de notes autorisée ; découverte non ouverte'
+        if extension else '`first_pass` ; aucune extension de texte ou découverte ouverte')
     export(db,root/'tables')
     freeze_manifest(root);network=network_review(root)
     cfg=yaml.safe_load((root/'config.yaml').read_text());audit=root/'audit';audit.mkdir(exist_ok=True)
@@ -140,7 +144,7 @@ Les horizons de dépôt suivent les instructions du 10-K et Exchange Act Rule 0-
     configcommit=subprocess.check_output(['git','log','-1','--format=%H','--','config.yaml'],cwd=root,text=True).strip()
     header=f'''# Fragilité financière et relations documentées
 
-Situation des sources arrêtée au {as_of}. Périmètre : {'extension des cinq familles de notes autorisée ; découverte non ouverte' if extension else '`first_pass` ; aucune extension de texte ou découverte ouverte'}.
+Situation des sources arrêtée au {as_of}. Périmètre : {scope_label}.
 
 Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `{manifest['original_commit']}` ; commit courant de config.yaml : `{configcommit}`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
 
@@ -316,7 +320,18 @@ Installer requirements.txt. Restaurer le cache depuis la sauvegarde LFS et son m
 Le travail est régulièrement commité et poussé. L’exécution finale porte un commit distinct ; les points de sauvegarde intermédiaires ne valent pas livraison. Les sources API sauvegardées ne sont pas supposées reproductibles depuis EDGAR à une date ultérieure.
 ''')
     if extension:
-        extension_render(db,root,as_of,data)
+        if deepening:
+            from .deepening_reports import render as deepening_render
+            deepening_render(db,root,as_of,data)
+            for name in ('audit/domain_rules.md','synthesis.md','delta.md','README.md'):
+                p=root/name
+                if p.exists():
+                    text=p.read_text().replace('L’extension de découverte n’est pas ouverte.',
+                        'La découverte ciblée est ouverte ; la tranche initiale de Notes Data Sets couvre les dépôts d’octobre 2025 à septembre 2026. Les périodes plus anciennes et les candidats non lus restent explicitement hors couverture.')
+                    text=text.replace('Les cinq familles de notes autorisées sont traitées ; la découverte, les prêteurs et les autres extensions ne sont pas ouverts.',
+                        'Les cinq familles de notes et les quatre approfondissements autorisés sont traités dans une tranche bornée ; voir approfondissements.md pour les sources, résultats et limites. Les nouveaux groupes ne sont pas ajoutés à l’univers principal des onze groupes.')
+                    p.write_text(text)
+        else:extension_render(db,root,as_of,data)
     return data
 
 
@@ -400,12 +415,19 @@ def package(root,as_of):
     output=Path('/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output');output.mkdir(parents=True,exist_ok=True)
     from .extension_assembly import opened
     extension=bool(opened(root))
-    names=['synthesis.md','delta.md','delivery_summary.json'] + (['user_brief_extension.md','notes_complementaires.md'] if extension else ['user_brief_2.md'])
+    deepening=(root/'work/deepening_authorization.json').exists()
+    names=['synthesis.md','delta.md','delivery_summary.json'] + (['user_brief_deepening.md','approfondissements.md',
+        'deepening_evidence.csv','deepening_measures.csv','lender_positions.csv','form_d_disclosures.csv'] if deepening else
+        ['user_brief_extension.md','notes_complementaires.md'] if extension else ['user_brief_2.md'])
     for name in names:
         shutil.copy2(root/name,output/name)
     replay=root/'work/idempotency_verification.json'
     if replay.exists():shutil.copy2(replay,output/replay.name)
-    target=output/('SEC_Project_2_notes_complementaires.zip' if extension else 'SEC_Project_2_premier_passage.zip')
+    target=output/('SEC_Project_2_approfondissements.zip' if deepening else 'SEC_Project_2_notes_complementaires.zip' if extension else 'SEC_Project_2_premier_passage.zip')
+    targeted_paths=set()
+    if deepening:
+        from .deepening_backup import source_paths
+        targeted_paths=source_paths(root)
     with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for path in sorted(root.rglob('*')):
             rel=path.relative_to(root);parts=rel.parts
@@ -416,6 +438,7 @@ def package(root,as_of):
             include=include or str(rel) in ['work/idempotency_verification.json','work/reproduction_inputs.json']
             include=include or str(rel) in ['work/expected_universe.json','work/annual_cutoffs.json','work/reading_progress.json','work/delivery_verification.json','work/pair_registry.json','work/annex_e_pair_outcomes.json','work/nonadditive_counts.json','backup/sec-project-2-20261009T150746Z.tar.zst.json','backup/sec-project-2-20261009T150746Z.tar.zst.sha256','work/observation_quarantines.json','work/fact_semantic_quarantines.json','work/exhibit_body_policy_overrides.json','work/parent_membership_evidence.json','work/entity_decisions.json','work/queue.json','work/run.json','work/inventory.json','work/collection.json','work/spcx_annual_validation.json','work/deprecations.json','work/concept_mappings.json']
             include=include or parts[0]=='work' and len(parts)==2 and path.name.startswith('extension_') and path.suffix=='.json'
+            include=include or deepening and ((parts[0]=='work' and len(parts)==2 and path.name.startswith('deepening_') and path.suffix in ('.json','.py')) or str(rel) in targeted_paths)
             if include:z.write(path,rel)
     manifest=dict(as_of=as_of,archive=target.name,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size,
        repository='https://github.com/jsiaut/codex_test',independent_audit_performed=False)

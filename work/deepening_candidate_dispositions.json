@@ -1,0 +1,1433 @@
+[
+  {
+    "accession": "0001858681-26-000040",
+    "group": "external:0001858681",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "APOLLO GLOBAL MANAGEMENT, INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 730883,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "b8d0defc555d3f95d616de2320a81a59a52448c327c9b3a52f7bfd8eb3ab68d0",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-044981",
+    "group": "external:0002021728",
+    "tag": "DebtDisclosureTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 264613,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "9c6be582477e512d9f6d9779df2098ded5670ed89acef0ff3a98c0f1954a7c51",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-044981",
+    "group": "external:0002021728",
+    "tag": "OtherIncomeAndOtherExpenseDisclosureTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 264654,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "ac3b2c98e3897c4f2253f4be95c15df95083860e465882e234d432f653f0322c",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-044981",
+    "group": "external:0002021728",
+    "tag": "RevenueFromContractWithCustomerTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 264659,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "2b44a173e87e7c192dbd83147afcb33e839eeb3001bd0d510f64a0fada8fe018",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-044981",
+    "group": "external:0002021728",
+    "tag": "StockholdersEquityNoteDisclosureTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 264682,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "41f670832952efd796279f6a2ae730c51f1d9ec7fb7b21e6f6f23e68b87fffd9",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-056357",
+    "group": "external:0002021728",
+    "tag": "DebtDisclosureTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 654630,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "32cc7637dde65b082240d130acefd1ff188d5ae5b9a751d5e07a8305f8805a6d",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-056357",
+    "group": "external:0002021728",
+    "tag": "OtherIncomeAndOtherExpenseDisclosureTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 654672,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "edf2ecf976362fed75a310332b6ee44b8c250a12cffebe27ef20928432144b43",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-056357",
+    "group": "external:0002021728",
+    "tag": "RevenueFromContractWithCustomerTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 654677,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "ae55119a4fe313850a4681591d38b9a92556c15c14ceaaf7cc00567f63732c1f",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-056357",
+    "group": "external:0002021728",
+    "tag": "StockholdersEquityNoteDisclosureTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 654707,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "c7fdb867faeeb6c79fc19f5e7a55eee09b4097214518df698ad8d1d78cbb114d",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-056357",
+    "group": "external:0002021728",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "CEREBRAS SYSTEMS INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 654708,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "958d639faac7e18852c3f06896d5d470fca962bac3889e91c622fb294744765d",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001825248-26-000024",
+    "group": "external:0001825248",
+    "tag": "FairValueDisclosuresTextBlock",
+    "issuer_name": "FRANKLIN BSP CAPITAL CORP",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 718133,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "2a40620ef194ab095a5c4879233c5fdb27e756e395fe95e75ee05fce8e0da77f",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-26-016664",
+    "group": "external:0001892492",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "EIGHTCO HOLDINGS INC.",
+    "source_archive": "2026_04_notes.zip",
+    "source_row": 353400,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "d2fa08814f1f3d81670a9f46cb9ea0e07a628f281ab185334aee91c309b8c0a7",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-222241",
+    "group": "external:0001849894",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "MSD INVESTMENT CORP.",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 364886,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "b827fb6d771332763607080cc47803a2f9c7df3925938cdc4caf5c1ac0106897",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-124538",
+    "group": "external:0001849894",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "MSD INVESTMENT CORP.",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 351277,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "d7ea5d569a738a633b53d1ff6f0c5665b68603b82a4065869aaaaf24eb2ae538",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-352436",
+    "group": "external:0001849894",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "MSD INVESTMENT CORP.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 378585,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "a3c94723eb71453b405682d3647fe38c85a144ca55e79d9f2ac52f9aaa8dbe5f",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-013232",
+    "group": "external:0001839341",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 605256,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "c19bdfaadf81aed9b10747a61d4700723e4258f6a953618a538dbcda2a53c414",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-26-023890",
+    "group": "external:0001892492",
+    "tag": "OtherInvetmentsDisclosureTextBlock",
+    "issuer_name": "EIGHTCO HOLDINGS INC.",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 611026,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "794e5e15b097e2cb167b5297d971703d23666a3c4c7bc7f9557b03263f128276",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-26-036637",
+    "group": "external:0001892492",
+    "tag": "OtherInvetmentsDisclosureTextBlock",
+    "issuer_name": "EIGHTCO HOLDINGS INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 536959,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "b3e20afbc2977f820588dfbba736afd0bf541755ad35bc0667861e734941454d",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-25-280735",
+    "group": "external:0001849894",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "MSD INVESTMENT CORP.",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 343964,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "890c5c06f21786e7ba069cc41f8a0f08e42ff9c912ce05a70d9194c06fee42bf",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0002031750-26-000064",
+    "group": "external:0002031750",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "ARES CORE INFRASTRUCTURE FUND",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 750540,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "3f5eda4008354eb69248b591e487e99e261559f4d0753a12453fd1615f2cc73d",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-085697",
+    "group": "external:0001675033",
+    "tag": "InvestmentsInAndAdvancesToAffiliatesScheduleOfInvestmentsTextBlock",
+    "issuer_name": "GREAT ELM CAPITAL CORP.",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 199901,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "0933720fc52544006925c5ea76a7f77dd77bff802d11b2fcd6b48c013a8651a7",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-335023",
+    "group": "external:0001675033",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "GREAT ELM CAPITAL CORP.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 195647,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "7f940ba975771ba37e21e40d57a2fe4906af36e96fa85f44efceecd354787b3e",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-121195",
+    "group": "external:0001905824",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "PIMCO CAPITAL SOLUTIONS BDC CORP.",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 340385,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "eff8f5a2bb76ec4eba4698c853a62579b54528987ee3c2fc4221ddef7a2a631b",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-25-277763",
+    "group": "external:0001905824",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "PIMCO CAPITAL SOLUTIONS BDC CORP.",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 304014,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "24ec2e386410fbd88f8c60c0a82fb0d36c7e36b4bc2e1b6d3cd9e43094260d09",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-333791",
+    "group": "external:0001794776",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "PALMER SQUARE CAPITAL BDC INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 185059,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "2cad72de269d22bff2192f7ac10b4c5754c734f2b0c2d271c24e20b7df671b5b",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-333791",
+    "group": "external:0001794776",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "PALMER SQUARE CAPITAL BDC INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 186264,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "7c8e8627fdcf64796f3ca77b40b9e050c741e54ef9e799f2e45751cb589866b8",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-338073",
+    "group": "external:0001902649",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "BLACKROCK PRIVATE CREDIT FUND",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 225355,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "c5bb5f293e251de8e04147439f6e6f6cf34ed36ca7255dccadfd0ee576bc792b",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-338073",
+    "group": "external:0001902649",
+    "tag": "DebtDisclosureTextBlock",
+    "issuer_name": "BLACKROCK PRIVATE CREDIT FUND",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 225363,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "3cfd5b3afdeb5f3f5fd9ec16013612dc5782022812d4d9e4aa3b4244e8ffdbd2",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000895421-26-000196",
+    "group": "external:0000895421",
+    "tag": "EmployeeBenefitPlanScheduleOfAssetHeldForInvestmentTableTextBlock",
+    "issuer_name": "MORGAN STANLEY",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 33223,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "policy_excluded",
+    "detail": "employee_plan_holdings_not_corporate_financing",
+    "text_sha256": "45a53ad75994e0ca5d621d6aa333b2b80fa3bb830974c6243843065e265db7ad",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-055912",
+    "group": "external:0001911066",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NUVEEN CHURCHILL PRIVATE CAPITAL INCOME FUND",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 651222,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "e1fb9c2b051bd9e9221e85dac702f4d9028c8c683665c916327740eecd0fd47c",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-043510",
+    "group": "external:0000012927",
+    "tag": "EmployeeBenefitPlanScheduleOfAssetHeldForInvestmentTableTextBlock",
+    "issuer_name": "BOEING CO",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 260313,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "policy_excluded",
+    "detail": "employee_plan_holdings_not_corporate_financing",
+    "text_sha256": "8c0c1a0a9ddb6ca36355f5c546f37600e27c459175106e68fe7b15cb9514216a",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001193125-26-352136",
+    "group": "external:0001982701",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "AB PRIVATE LENDING FUND",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 372210,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "be911d3c18e1695f9e3b57a8119fcce17ea4fb251c7509799945963307858cbb",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000313616-26-000153",
+    "group": "external:0000313616",
+    "tag": "EmployeeBenefitPlanScheduleOfAssetHeldForInvestmentTableTextBlock",
+    "issuer_name": "DANAHER CORP /DE/",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 19385,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "policy_excluded",
+    "detail": "employee_plan_holdings_not_corporate_financing",
+    "text_sha256": "9cd1c29aa374ac759230d266c54ae825e9fa84722e39f158ed93516df6623a83",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001213900-26-052176",
+    "group": "external:0001377936",
+    "tag": "RiskFactorsTableTextBlock",
+    "issuer_name": "SARATOGA INVESTMENT CORP.",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 430617,
+    "subjects": [
+      "anthropic",
+      "openai"
+    ],
+    "reason": "policy_excluded",
+    "detail": "outside_financial_note_selection",
+    "text_sha256": "879abad5ef7acfa75eb88d5a1551a0399dbeaa49b62ef77abe9bc1d3a199c015",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001213900-26-052176",
+    "group": "external:0001377936",
+    "tag": "RiskTextBlock",
+    "issuer_name": "SARATOGA INVESTMENT CORP.",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 430625,
+    "subjects": [
+      "anthropic",
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "054492d454943cf5f56f303229f6fe1a3e9a30c6767f82b04f541d36c8d73236",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-25-020943",
+    "group": "external:0001509470",
+    "tag": "InvestmentsInAndAdvancesToAffiliatesScheduleOfInvestmentsTextBlock",
+    "issuer_name": "SURO CAPITAL CORP.",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 502189,
+    "subjects": [
+      "coreweave",
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "4bc469c198e20f399eaa885ca542bf77bc9fcd010a6e88da83207a622125c380",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-26-009641",
+    "group": "external:0001509470",
+    "tag": "InvestmentsInAndAdvancesToAffiliatesScheduleOfInvestmentsTextBlock",
+    "issuer_name": "SURO CAPITAL CORP.",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 530601,
+    "subjects": [
+      "coreweave",
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "2a0b69cb089d3faa8e23fa93d9794a116de3b6d6c10db78fa2c53066a43966c3",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-26-021430",
+    "group": "external:0001509470",
+    "tag": "InvestmentsInAndAdvancesToAffiliatesScheduleOfInvestmentsTextBlock",
+    "issuer_name": "SURO CAPITAL CORP.",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 572128,
+    "subjects": [
+      "coreweave",
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "3b1cbade91b813dc24bc787680c55293f1bc7bafce61e5bf22d5b4bb722bd818",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-26-036285",
+    "group": "external:0001509470",
+    "tag": "InvestmentsInAndAdvancesToAffiliatesScheduleOfInvestmentsTextBlock",
+    "issuer_name": "NEOSTELLAR CAPITAL CORP.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 532395,
+    "subjects": [
+      "coreweave",
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "841431ef4ea794bfa1a5c2f98584dbb2fbbd387701b41b0e15150fd7162d4832",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000071691-25-000126",
+    "group": "external:0000071691",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEW YORK TIMES CO",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 11675,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "be9805cb9282c519fd4f3fa87c6e3c2ba38a7934f5f61774aec981f2de5ef47d",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000071691-25-000126",
+    "group": "external:0000071691",
+    "tag": "OtherIncomeAndOtherExpenseDisclosureTextBlock",
+    "issuer_name": "NEW YORK TIMES CO",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 11719,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "b4773a9411548bf21c300ce1fc6dace68f00fbe1a9a8470568e4131dbaceae81",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000071691-26-000011",
+    "group": "external:0000071691",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEW YORK TIMES CO",
+    "source_archive": "2026_02_notes.zip",
+    "source_row": 30211,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "c917feb6ee012663dda25966425c2a58920be32d2b621924eb014c44f6768f48",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000071691-26-000025",
+    "group": "external:0000071691",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEW YORK TIMES CO",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 13497,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "1b4a30f2e10d87e4d85e0829011e4b2d8a9fb3462d8eb5fbc780b81db421e56b",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000071691-26-000034",
+    "group": "external:0000071691",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEW YORK TIMES CO",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 10710,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "49ed3cd6b1d1f60c9734b5e6cedf5f9771c15905a8a15975114a57b1fe6cc425",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000107140-25-000198",
+    "group": "external:0000107140",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "JOHN WILEY & SONS, INC.",
+    "source_archive": "2025_12_notes.zip",
+    "source_row": 5617,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "39ebe55820336798f8649f973c73df3efe5ab8397eb82070a14377f4d5e96b88",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0000107140-26-000012",
+    "group": "external:0000107140",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "JOHN WILEY & SONS, INC.",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 10897,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "3173bc43a3b9843ca6e931f8371a23cce962c0c48b38ac807cd6d8478739bbad",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001083301-26-000166",
+    "group": "external:0001083301",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "TERAWULF INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 71509,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "dfae31e57bd7c147c2b25fc7a4663a6ce24368cece14e81357d245de24944a34",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001083301-26-000166",
+    "group": "external:0001083301",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "TERAWULF INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 71560,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "a329ac2f6a517bad2617aac1ba35e51d5fbac40dbf3f1c23253b62699c375f93",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001104659-25-101509",
+    "group": "external:0002091176",
+    "tag": "SpacRegisteredOfferingProspectusSummaryIdentifyAndEvaluatePotentialBusinessCombinationCandidatesMannerTextBlock",
+    "issuer_name": "IDEA ACQUISITION CORP.",
+    "source_archive": "2025_10_notes.zip",
+    "source_row": 74173,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "policy_excluded",
+    "detail": "outside_financial_note_selection",
+    "text_sha256": "7ca9b23c68301887f5a2a8b0b4091816f530842e88e227bb843fe8145555e2d8",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001104659-26-001416",
+    "group": "external:0002091176",
+    "tag": "SpacRegisteredOfferingProspectusSummaryIdentifyAndEvaluatePotentialBusinessCombinationCandidatesMannerTextBlock",
+    "issuer_name": "IDEA ACQUISITION CORP.",
+    "source_archive": "2026_01_notes.zip",
+    "source_row": 28133,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "policy_excluded",
+    "detail": "outside_financial_note_selection",
+    "text_sha256": "7ca9b23c68301887f5a2a8b0b4091816f530842e88e227bb843fe8145555e2d8",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001104659-26-088997",
+    "group": "external:0000844150",
+    "tag": "DisclosureOfLitigationAndOtherRegulatoryMattersTextBlock",
+    "issuer_name": "NATWEST GROUP PLC",
+    "source_archive": "2026_07_notes.zip",
+    "source_row": 80330,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "policy_excluded",
+    "detail": "foreign_group_extension_not_opened",
+    "text_sha256": "a1ffaa33ff0f0dad1e57aab7ffb5d08fcceb66ecb73ebae6b08b96d796aca0ef",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001108524-26-000190",
+    "group": "external:0001108524",
+    "tag": "FinancialInstrumentsDisclosureTextBlock",
+    "issuer_name": "SALESFORCE, INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 147907,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "ea554b75de338eee449a79e85323d058a926c7d3f9c936a917d26a6653d0aad9",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001108524-26-000190",
+    "group": "external:0001108524",
+    "tag": "OrganizationConsolidationBasisOfPresentationBusinessDescriptionAndAccountingPoliciesTextBlock",
+    "issuer_name": "SALESFORCE, INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 147927,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "37594dd4f5ffaf003374c5e154c166bef73e07c6d0e038ad9d6a78ddeeb46f7b",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-25-000069",
+    "group": "external:0001144879",
+    "tag": "LesseeFinanceLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2025_10_notes.zip",
+    "source_row": 95836,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "db95b6f626faf139c63f0d0417e82178fd51a6b8485ffc7bbd013f8e64941764",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-25-000069",
+    "group": "external:0001144879",
+    "tag": "LesseeOperatingLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2025_10_notes.zip",
+    "source_row": 95840,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "db95b6f626faf139c63f0d0417e82178fd51a6b8485ffc7bbd013f8e64941764",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-25-000069",
+    "group": "external:0001144879",
+    "tag": "StockholdersEquityNoteDisclosureTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2025_10_notes.zip",
+    "source_row": 95894,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "7547c405e3b8366429d1371bbf1f9733d82040057b5d97af569230cff70a8e54",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000006",
+    "group": "external:0001144879",
+    "tag": "LesseeFinanceLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_01_notes.zip",
+    "source_row": 49984,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "4de50023dc8c195df8a8cfc7c401f5d1403d6876348356c76a941aa202e1b39a",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000006",
+    "group": "external:0001144879",
+    "tag": "LesseeOperatingLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_01_notes.zip",
+    "source_row": 49986,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "4de50023dc8c195df8a8cfc7c401f5d1403d6876348356c76a941aa202e1b39a",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000006",
+    "group": "external:0001144879",
+    "tag": "StockholdersEquityNoteDisclosureTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_01_notes.zip",
+    "source_row": 50051,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "445ad52767b87e63ac34a196883bf595bad48f0a0310d87887cdc676e91a14b7",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000030",
+    "group": "external:0001144879",
+    "tag": "LesseeFinanceLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_04_notes.zip",
+    "source_row": 135164,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "88a18a41ef13ae52484b0a1bb2fa034bf219867d78928a1264afd94d9f0642c6",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000030",
+    "group": "external:0001144879",
+    "tag": "LesseeOperatingLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_04_notes.zip",
+    "source_row": 135166,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "88a18a41ef13ae52484b0a1bb2fa034bf219867d78928a1264afd94d9f0642c6",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000030",
+    "group": "external:0001144879",
+    "tag": "StockholdersEquityNoteDisclosureTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_04_notes.zip",
+    "source_row": 135228,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "1ee5488924f669af6c06853de6a0d188082d36ff1a7ed756d7562292dfeeff07",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000030",
+    "group": "external:0001144879",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_04_notes.zip",
+    "source_row": 135229,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "f5f3f8bf31daab9bf2e21b855b4852856f01a664d06cb99d8274c46cde477f47",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000048",
+    "group": "external:0001144879",
+    "tag": "LesseeFinanceLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_07_notes.zip",
+    "source_row": 89276,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "b5952d0889f5d384170f7f0ea66233d15c69cfa4b7d88097d1704911c72e5c9e",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000048",
+    "group": "external:0001144879",
+    "tag": "LesseeOperatingLeasesTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_07_notes.zip",
+    "source_row": 89279,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "b5952d0889f5d384170f7f0ea66233d15c69cfa4b7d88097d1704911c72e5c9e",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001144879-26-000048",
+    "group": "external:0001144879",
+    "tag": "StockholdersEquityNoteDisclosureTextBlock",
+    "issuer_name": "APPLIED DIGITAL CORP.",
+    "source_archive": "2026_07_notes.zip",
+    "source_row": 89353,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "132eafb1e4c7a03bf947e5eec77b3e4e919647c6c27ebf246f21581b6bfe75bf",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001213900-25-110045",
+    "group": "external:0001648960",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "MYSEUM, INC.",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 406615,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "a142d4be83f6ea1f858528f56ad37f0a81f08091af8c6e26dc8a7b158964d99e",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001213900-26-036485",
+    "group": "external:0001648960",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "MYSEUM, INC.",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 441084,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "080ee42a0ef3b927eb63a365fd426b6c9e90f18206d517b1eca20adaaced48a0",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001213900-26-036485",
+    "group": "external:0001648960",
+    "tag": "SignificantAccountingPoliciesTextBlock",
+    "issuer_name": "MYSEUM, INC.",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 441133,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "f3a90b54873e2b8c1efb11e18b8e5d727d34c696af2a0e653b2043128da75cdd",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001493152-26-021430",
+    "group": "external:0001509470",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "SURO CAPITAL CORP.",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 572167,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "78f063596567609d05e151fb6f302cb72304de22078fc875e28a48604968d9fb",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001527469-26-000056",
+    "group": "external:0001527469",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "ATHENE HOLDING LTD.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 592563,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "f90d072ff81075a01dc61d4adfe6af0aedba3ed06bd71c165111d4a2cf79babb",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001564708-25-000573",
+    "group": "external:0001564708",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEWS CORP",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 569309,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "cee3ac44bf40230f8647c38b2677281dd299c3822008ec2721305e3d5a275107",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001564708-26-000029",
+    "group": "external:0001564708",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEWS CORP",
+    "source_archive": "2026_02_notes.zip",
+    "source_row": 523735,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "8cef8ef499580fd6d231d714411c575a0170c0b75011445b73d5458063aba83c",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001564708-26-000103",
+    "group": "external:0001564708",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEWS CORP",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 643495,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "eb5b83eaaa69880eced5a541d2deab3a426b79f3cef4d93f3e552cc58167e4ff",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001564708-26-000175",
+    "group": "external:0001564708",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "NEWS CORP",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 601303,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "7c6290847992f029eb042633ad707a006976608d5879e05c3cef27d53bf484e6",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001585521-26-000071",
+    "group": "external:0001585521",
+    "tag": "InvestmentsInDebtAndMarketableEquitySecuritiesAndCertainTradingAssetsDisclosureTextBlock",
+    "issuer_name": "ZOOM COMMUNICATIONS, INC.",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 649784,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "921d921c75bc0bca5b3b0fb188d8c25a05679677ccd1477202051dda20d01a73",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001585521-26-000121",
+    "group": "external:0001585521",
+    "tag": "InvestmentsInDebtAndMarketableEquitySecuritiesAndCertainTradingAssetsDisclosureTextBlock",
+    "issuer_name": "ZOOM COMMUNICATIONS, INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 606678,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "4bff1da7a6b1306d053ba85646866ce411d86f06a965b623de837b9f62862e5c",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-25-046272",
+    "group": "external:0001839341",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2025_10_notes.zip",
+    "source_row": 253281,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "2702ccf0f9221bf3103408f38bdb6e09d85745d62a8889d85c9e63e670cf1eac",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-25-056158",
+    "group": "external:0001859392",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "GALAXY DIGITAL INC.",
+    "source_archive": "2025_12_notes.zip",
+    "source_row": 173298,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "83af3921080052726fa61d4efe04054f3fd132fed5bf4702957549ba06cea160",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-013286",
+    "group": "external:0001839341",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 607165,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "9ac994541d96937ffc46572ecf088f58b1c44f03b4c01ace03d078b82b6ed958",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-013294",
+    "group": "external:0001839341",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 607280,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "bea360c851517474d38d79821cb0184437ce59ebf358128a37f074544a2b8cf6",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-013294",
+    "group": "external:0001839341",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 607325,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "8b33e09807c8bdbf0f6826c86480d58ce28585644238eeca61e17079e3ba478f",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-013301",
+    "group": "external:0001839341",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 607400,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "2702ccf0f9221bf3103408f38bdb6e09d85745d62a8889d85c9e63e670cf1eac",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-013305",
+    "group": "external:0001839341",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_03_notes.zip",
+    "source_row": 607566,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "ec35d1196d42c7acf5fb51fc1639d5377d5e17ca49ba345a3a6e05e9d1dd7a5e",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-031396",
+    "group": "external:0001839341",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_05_notes.zip",
+    "source_row": 673233,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "a56ec30f429f3cc26207a4d69cd265f2f5230948f926a6b7df57f569e35f378f",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-045111",
+    "group": "external:0000107140",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "JOHN WILEY & SONS, INC.",
+    "source_archive": "2026_06_notes.zip",
+    "source_row": 264766,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "a81dd8d1f807bd46dd5ddc542d3dd6c663ea5a702982990d7e828b188fa259f7",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-051516",
+    "group": "external:0002131040",
+    "tag": "InvestmentObjectivesAndPracticesTextBlock",
+    "issuer_name": "ROBINHOOD VENTURES FUND II",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 613719,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "policy_excluded",
+    "detail": "outside_financial_note_selection",
+    "text_sha256": "2a777b3a93bddff7a143dd185e73b007f8b2f4b7e35deca0df64a65482039767",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-051818",
+    "group": "external:0001462056",
+    "tag": "DisclosureOfCompensationRelatedCostsShareBasedPaymentsTextBlock",
+    "issuer_name": "BACKBLAZE, INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 614298,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "cd5d0e0bd8cc8ca46e0cef8fdc11a45b0728d5406e669eb6b691ac42fa781a15",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-051818",
+    "group": "external:0001462056",
+    "tag": "RevenueFromContractWithCustomerTextBlock",
+    "issuer_name": "BACKBLAZE, INC.",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 614365,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "27bc97d64fbd69e578aed659746bf2022caca06864fd1cb71be0239c684c32af",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-056830",
+    "group": "external:0002131040",
+    "tag": "InvestmentObjectivesAndPracticesTextBlock",
+    "issuer_name": "ROBINHOOD VENTURES FUND II",
+    "source_archive": "2026_08_notes.zip",
+    "source_row": 659519,
+    "subjects": [
+      "openai"
+    ],
+    "reason": "policy_excluded",
+    "detail": "outside_financial_note_selection",
+    "text_sha256": "2a777b3a93bddff7a143dd185e73b007f8b2f4b7e35deca0df64a65482039767",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001628280-26-060632",
+    "group": "external:0000107140",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "JOHN WILEY & SONS, INC.",
+    "source_archive": "2026_09_notes.zip",
+    "source_row": 165867,
+    "subjects": [
+      "anthropic"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "bb6ec1cfe718602573958c30f24bd95986cdb200e28c18c689f85ca6ff33edd4",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001839341-26-000014",
+    "group": "external:0001839341",
+    "tag": "OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "issuer_name": "CORE SCIENTIFIC, INC./TX",
+    "source_archive": "2026_07_notes.zip",
+    "source_row": 289672,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "b2137fcde9b9f1fba0d19b7e51e1db26bf6f26c288be901121c8e02ef32d5f71",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001859392-25-000070",
+    "group": "external:0001859392",
+    "tag": "SubsequentEventsTextBlock",
+    "issuer_name": "GALAXY DIGITAL INC.",
+    "source_archive": "2025_10_notes.zip",
+    "source_row": 289893,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "not_processed",
+    "detail": "candidate_or_historical_note_not_read_in_this_tranche",
+    "text_sha256": "83af3921080052726fa61d4efe04054f3fd132fed5bf4702957549ba06cea160",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001944366-25-000126",
+    "group": "external:0001944366",
+    "tag": "CommitmentsAndContingenciesDisclosureTextBlock",
+    "issuer_name": "BLUE OWL REAL ESTATE NET LEASE TRUST",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 700612,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "5bdb8fb5e82e659ff2a1351e38af50d4ab03df0d4bb71b4bbbb98ad3067caf6c",
+    "candidate_is_financing_proof": false
+  },
+  {
+    "accession": "0001944366-25-000126",
+    "group": "external:0001944366",
+    "tag": "EquityMethodInvestmentsDisclosureTextBlock",
+    "issuer_name": "BLUE OWL REAL ESTATE NET LEASE TRUST",
+    "source_archive": "2025_11_notes.zip",
+    "source_row": 700657,
+    "subjects": [
+      "coreweave"
+    ],
+    "reason": "original_note_verified",
+    "detail": null,
+    "text_sha256": "8552e3300a7f3ea9aab6f5daca670319a34ae0729d6f8c3de76791f94f95c536",
+    "candidate_is_financing_proof": false
+  }
+]
