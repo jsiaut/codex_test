@@ -1,0 +1,191 @@
+[
+  {
+    "content_key": "96070be0dd0fbc4d7032fb00f0a5beb69d156240a7666e66d2a3b997b44ce490",
+    "group": "external:0001083301",
+    "accession": "0001083301-26-000166",
+    "label": "Organization, Consolidation and Presentation of Financial Statements Disclosure [Text Block]",
+    "concept": "us-gaap:OrganizationConsolidationAndPresentationOfFinancialStatementsDisclosureTextBlock",
+    "chars": 7472,
+    "candidates": 22
+  },
+  {
+    "content_key": "b756995bee131c391e1c629c00c93149a697885c9e8296d9c9bf9776f77464c5",
+    "group": "external:0001083301",
+    "accession": "0001083301-26-000166",
+    "label": "Related Party Transactions Disclosure [Text Block]",
+    "concept": "us-gaap:RelatedPartyTransactionsDisclosureTextBlock",
+    "chars": 5507,
+    "candidates": 25
+  },
+  {
+    "content_key": "95234894ed1efbd530201bb7cede503b35b9342608cb9f56f49322500f6ddd2e",
+    "group": "external:0001083301",
+    "accession": "0001083301-26-000166",
+    "label": "Subsequent Events [Text Block]",
+    "concept": "us-gaap:SubsequentEventsTextBlock",
+    "chars": 944,
+    "candidates": 5
+  },
+  {
+    "content_key": "4f7dc74fa88a37f48de195e9b05a5eec68663ed97ad577be4da0fa500e550d93",
+    "group": "external:0001108524",
+    "accession": "0001108524-26-000190",
+    "label": "Organization, Consolidation, Basis of Presentation, Business Description and Accounting Policies [Text Block]",
+    "concept": "us-gaap:OrganizationConsolidationBasisOfPresentationBusinessDescriptionAndAccountingPoliciesTextBlock",
+    "chars": 40866,
+    "candidates": 25
+  },
+  {
+    "content_key": "b7ad99b47cb87a5248eb3975ff37cd1bdfc0def85de41359be2e7f2b07aa90a0",
+    "group": "external:0001108524",
+    "accession": "0001108524-26-000190",
+    "label": "Financial Instruments Disclosure [Text Block]",
+    "concept": "us-gaap:FinancialInstrumentsDisclosureTextBlock",
+    "chars": 5894,
+    "candidates": 134
+  },
+  {
+    "content_key": "783eee3f3afea773e4b1b8b576b8870b362ee10d042dd24c4ca59e0816cf9506",
+    "group": "external:0001144879",
+    "accession": "0001144879-26-000048",
+    "label": "Equity [Text Block]",
+    "concept": "us-gaap:StockholdersEquityNoteDisclosureTextBlock",
+    "chars": 6725,
+    "candidates": 52
+  },
+  {
+    "content_key": "48ca5ceddfd31a2311ddff6efab2bb15048eac4255c27b569acb13ad4bfdb5f1",
+    "group": "external:0001144879",
+    "accession": "0001144879-26-000048",
+    "label": "Lessee, Finance Leases [Text Block]",
+    "concept": "us-gaap:LesseeFinanceLeasesTextBlock",
+    "chars": 7951,
+    "candidates": 82
+  },
+  {
+    "content_key": "48ca5ceddfd31a2311ddff6efab2bb15048eac4255c27b569acb13ad4bfdb5f1",
+    "group": "external:0001144879",
+    "accession": "0001144879-26-000048",
+    "label": "Lessee, Operating Leases [Text Block]",
+    "concept": "us-gaap:LesseeOperatingLeasesTextBlock",
+    "chars": 7951,
+    "candidates": 82
+  },
+  {
+    "content_key": "1dcadfc0d843231297c34841e17d7ced09a77dfed7868d3f9f5ea5f16418bdab",
+    "group": "external:0001892492",
+    "accession": "0001493152-26-036637",
+    "label": "OTHER INVESTMENTS",
+    "concept": "ORBS:OtherInvetmentsDisclosureTextBlock",
+    "chars": 4033,
+    "candidates": 17
+  },
+  {
+    "content_key": "0f9b6a35499ebe22235bde33fa2022ddfb1dab52d32ac15209d63507f3d9fbaf",
+    "group": "external:0001892492",
+    "accession": "0001493152-26-036637",
+    "label": "SCHEDULE OF OTHER INVESTMENTS",
+    "concept": "ORBS:ScheduleOfOtherInvetmentsTableTextBlock",
+    "chars": 565,
+    "candidates": 6
+  },
+  {
+    "content_key": "074012c62719fae000d4f68a1cdda670188108e4b57b138dcf1d11ae1e4c3906",
+    "group": "external:0001585521",
+    "accession": "0001585521-26-000121",
+    "label": "Investment in Debt and Equity Securities and Other Trading Assets [Text Block]",
+    "concept": "us-gaap:InvestmentsInDebtAndMarketableEquitySecuritiesAndCertainTradingAssetsDisclosureTextBlock",
+    "chars": 5745,
+    "candidates": 77
+  },
+  {
+    "content_key": "46d207b28370bd2f4aea2230175963dc04f1647b6a7eefe5683725a254a874fb",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-056357",
+    "label": "Revenue from Contract with Customer [Text Block]",
+    "concept": "us-gaap:RevenueFromContractWithCustomerTextBlock",
+    "chars": 6279,
+    "candidates": 49
+  },
+  {
+    "content_key": "ecf531a66a7b4454f3b827f18e35bac630c82c8fdb766212dabe93acef05c28f",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-056357",
+    "label": "Other Income and Other Expense Disclosure [Text Block]",
+    "concept": "us-gaap:OtherIncomeAndOtherExpenseDisclosureTextBlock",
+    "chars": 1072,
+    "candidates": 22
+  },
+  {
+    "content_key": "33b56ab66ad29f58972c234a86ef9e6257526e6b4525b20f9ace77eb73fb158d",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-056357",
+    "label": "Schedule of Other Nonoperating Income (Expense) [Table Text Block]",
+    "concept": "us-gaap:ScheduleOfOtherNonoperatingIncomeExpenseTableTextBlock",
+    "chars": 1045,
+    "candidates": 22
+  },
+  {
+    "content_key": "abe162186e9c11601c716c50a10ca86de2aa0034d627b08220a012c0446bbacc",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-056357",
+    "label": "Debt Disclosure [Text Block]",
+    "concept": "us-gaap:DebtDisclosureTextBlock",
+    "chars": 5162,
+    "candidates": 17
+  },
+  {
+    "content_key": "7c03a55bd999c5c64e201f4f2cc93c3e1fb03ab5d1da9adfffc38c0a59f466af",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-056357",
+    "label": "Equity [Text Block]",
+    "concept": "us-gaap:StockholdersEquityNoteDisclosureTextBlock",
+    "chars": 14031,
+    "candidates": 40
+  },
+  {
+    "content_key": "7a4a4f238ce3494595d82f079c07c246092cb067722894722605dae9c14fa792",
+    "group": "external:0002021728",
+    "accession": "0001628280-26-056357",
+    "label": "Subsequent Events [Text Block]",
+    "concept": "us-gaap:SubsequentEventsTextBlock",
+    "chars": 1532,
+    "candidates": 4
+  },
+  {
+    "content_key": "3407c1609083c85474f212be4290845b9742deb836ff6407a252293b8611e060",
+    "group": "external:0001858681",
+    "accession": "0001858681-26-000040",
+    "label": "Commitments and Contingencies Disclosure [Text Block]",
+    "concept": "us-gaap:CommitmentsAndContingenciesDisclosureTextBlock",
+    "chars": 19415,
+    "candidates": 54
+  },
+  {
+    "content_key": "9ef31b315bbd73d4f5208a438f99efe4d3096e671f280dcb368231b1748419cd",
+    "group": "external:0001944366",
+    "accession": "0001944366-25-000126",
+    "label": "Equity Method Investments and Joint Ventures Disclosure [Text Block]",
+    "concept": "us-gaap:EquityMethodInvestmentsDisclosureTextBlock",
+    "chars": 13609,
+    "candidates": 157
+  },
+  {
+    "content_key": "6a4e9a9d997807a4f0748f148f9d20ba3f613b63325f739e95f5997a3ca1f98a",
+    "group": "external:0001944366",
+    "accession": "0001944366-25-000126",
+    "label": "Equity Method Investments [Table Text Block]",
+    "concept": "us-gaap:EquityMethodInvestmentsTextBlock",
+    "chars": 3654,
+    "candidates": 81
+  },
+  {
+    "content_key": "76bdaac072b00de1b5b0524034ec25da10bd20c230589d89e133491a3c60b9ff",
+    "group": "external:0001944366",
+    "accession": "0001944366-25-000126",
+    "label": "Commitments and Contingencies Disclosure [Text Block]",
+    "concept": "us-gaap:CommitmentsAndContingenciesDisclosureTextBlock",
+    "chars": 4011,
+    "candidates": 13
+  }
+]
