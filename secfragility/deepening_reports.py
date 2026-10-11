@@ -19,6 +19,7 @@ def render(db,root,as_of,delivery):
       (group_id LIKE 'external:%' OR (group_id='CRWV' AND measure='liq_principal_due_to_cash' AND status='bounded'))
       ORDER BY group_id,measure,period_end,breakdown_key""")
     csv_write(root/'deepening_measures.csv',selected)
+    csv_write(root/'form_d_series.csv',[r for r in selected if r['measure']=='form_d_offering_amount'])
     actual=rows(db,"""SELECT measure,group_id,period_start,period_end,value,status,nd_reason,breakdown_key
       FROM measures WHERE view='revised' AND measure IN
       ('customer_working_capital_loan_received','customer_working_capital_loan_noncash_repayment',
@@ -46,9 +47,22 @@ def render(db,root,as_of,delivery):
     for measure,value in [('cfo',679000000),('capex_cash',6422000000),('fcf_basic',-5743000000)]:
         r=rows(db,"SELECT value,status FROM measures WHERE group_id='CRWV' AND view='revised' AND period_start='2026-04-01' AND period_end='2026-06-30' AND measure=?",[measure])
         assert len(r)==1 and r[0]['status']=='computed' and r[0]['value']==Decimal(value), measure
+    bounds=rows(db,"SELECT term,value_lower,value_upper,denominator,status FROM measures WHERE group_id='CRWV' AND view='revised' AND measure='liq_principal_due_to_cash' AND period_end='2026-06-30' AND status='bounded'")
+    expected_bounds={'horizon_12m':('0.798877','1.918357'),'horizon_24m':('1.918356','2.717777')}
+    assert len(bounds)==2
+    for r in bounds:
+        lo,hi=expected_bounds[r['term']]
+        assert (r['value_lower'],r['value_upper'],r['denominator'])==(Decimal(lo),Decimal(hi),Decimal(5524000000))
+    verification=json.loads((root/'work/delivery_verification.json').read_text())
+    assert sum(r['n'] for r in verification['accounting_mismatches'])==26
     numeric_table='| Déposant / CIK | Mesure | Période | Montant publié |\n| --- | --- | --- | ---: |\n'
     for r in actual:numeric_table+=f"| {r['group_id'].split(':')[-1]} | {r['measure']} | {r['period_start']} → {r['period_end']} | {amount(r['value'])} |\n"
     positions=rows(db,'SELECT * FROM targeted_lender_positions ORDER BY group_id,period_end,position_label,accession')
+    filings=json.loads((root/'work/deepening_filings.json').read_text())
+    for r in positions:
+        filing=filings[r['accession']]
+        r['filing_url']=filing['resources'][filing['metadata']['primaryDocument']]['url']
+    csv_write(root/'lender_positions.csv',positions)
     latest={}
     for r in positions:latest[r['group_id']]=max(latest.get(r['group_id'],r['period_end']),r['period_end'])
     metadata=json.loads((root/'work/deepening_issuer_metadata.json').read_text())
@@ -119,7 +133,7 @@ Le revenu OpenAI reconnu au premier semestre est de **74,4 M$**, net de **3,3 M$
 
 La recherche a balayé **21 archives BDC** et **12 archives mensuelles de Notes Data Sets**, d’octobre 2025 à septembre 2026. Elle a conservé **95 candidats textuels**, qui servent à trouver les sources et ne valent pas preuves financières. Les dépôts originaux ont été récupérés pour 13 prêteurs nommés et 8 autres déposants ciblés, soit **34 dépôts périodiques**. Le corpus contient **168 Form D / D-A uniques de 118 CIK**, dont 152 formulaires classés « Pooled Investment Fund » : ce sont des dépôts, pas 168 financements des laboratoires.
 
-Un Form D publie des montants cumulatifs d’offres et de titres vendus qui peuvent inclure des contreparties non monétaires et des engagements futurs obligatoires. Les amendements sont rapprochés par CIK et date de première vente ; sans date, le rapprochement reste non établi. Aucun de ces montants n’est attribué automatiquement à OpenAI ou Anthropic. Les archives anciennes non collectées, les candidats non lus et les parties non résolues restent visibles dans les exclusions.
+Un Form D publie des montants cumulatifs d’offres et de titres vendus qui peuvent inclure des contreparties non monétaires et des engagements futurs obligatoires. Les amendements sont rapprochés par CIK et date de première vente ; sans date, le rapprochement reste non établi. form_d_series.csv conserve le dernier dépôt connu à chaque fin de trimestre : les montants sont cumulatifs, pas des flux trimestriels de cash. Une modification publiée ensuite ne remplace pas une ancienne valeur historique. Aucun de ces montants n’est attribué automatiquement à OpenAI ou Anthropic. Les archives anciennes non collectées, les candidats non lus et les parties non résolues restent visibles dans les exclusions.
 
 Les sources sont reliées aux citations dans deepening_evidence.csv ; les chiffres et leurs périodes dans deepening_measures.csv, lender_positions.csv et form_d_disclosures.csv. Les observations sont conservées et le code reconstruit les huit tables hors ligne. Les critères des annexes E et F restent inchangés. Les commits intermédiaires et la livraison finale sont sauvegardés sur https://github.com/jsiaut/codex_test.
 '''
@@ -133,7 +147,7 @@ La vue historique respecte désormais la date officielle de publication lorsqu�
 
 ## 2. CoreWeave et ses prêteurs
 
-Au **30 juin 2026**, CoreWeave dispose de **5,524 Md$ de trésorerie non restreinte**. Faute d’échéances mensuelles, le principal exigible est encadré : **4,413 à 10,597 Md$ sur 12 mois**, **10,597 à 15,013 Md$ sur 24 mois**. Les rapports principal / trésorerie sont respectivement **0,799–1,918** et **1,918–2,718**. Ces bornes excluent intérêts, baux et autres obligations de financement.
+Au **30 juin 2026**, CoreWeave dispose de **5,524 Md$ de trésorerie non restreinte**. Faute d’échéances mensuelles, le principal exigible est encadré : **4,413 à 10,597 Md$ sur 12 mois**, **10,597 à 15,013 Md$ sur 24 mois**. Les rapports principal / trésorerie sont respectivement **0,798877–1,918357** et **1,918356–2,717777**. Ces bornes excluent intérêts, baux et autres obligations de financement.
 
 Au deuxième trimestre, le CFO est de **679 M$**, le capex payé de **6,422 Md$**, soit un FCF de base de **−5,743 Md$**. Les dépôts originaux documentent **{len(positions)} positions auprès de {len(latest)} prêteurs**, comparatifs et republications compris. Ces lignes ne doivent pas être additionnées comme des crédits distincts. La part PIK et le statut non-accrual par position restent à lire.
 
@@ -155,17 +169,29 @@ Le warrant AMD–Meta porte sur **160 millions d’actions au maximum**, à **0,
 
 La tranche comprend **34 dépôts périodiques originaux** et **168 Form D / D-A uniques de 118 CIK**. Les Form D décrivent des offres cumulatives, parfois des fonds : leurs montants peuvent inclure du non-monétaire et des engagements futurs obligatoires. Aucun montant n’est attribué automatiquement à un laboratoire.
 
-Le rapport approfondissements.md contient les sources, les périodes, les positions des prêteurs et les limites de couverture. Les quatre CSV donnent les citations et le lignage des montants. Les huit tables sont reconstructibles hors ligne. Les critères E/F restent inchangés. Travail effectué seul ; aucun audit indépendant revendiqué. Sauvegarde : https://github.com/jsiaut/codex_test.
+Le rapport approfondissements.md contient les sources, les périodes, les positions des prêteurs et les limites de couverture. Les CSV donnent les citations et le lignage ; form_d_series.csv conserve les valeurs cumulatives connues à chaque fin de trimestre. Les huit tables sont reconstructibles hors ligne. Les critères E/F restent inchangés. Travail effectué seul ; aucun audit indépendant revendiqué. Sauvegarde : https://github.com/jsiaut/codex_test.
 '''
     (root/'user_brief_deepening.md').write_text(concise)
     full=brief+'\n## Positions de prêteurs à leur dernière date vérifiée\n\n'+lender_table+'\n## Mesures ciblées publiées\n\n'+numeric_table
     full+='\nLes tableaux conservent la base propre à chaque montant. « Dernière date vérifiée » ne garantit pas que la position subsiste au 9 octobre 2026.\n'
+    full+='\n## Pièces SEC directement consultées\n\n'
+    for group in sorted({r['group_id'] for r in evidence if r['group_id'].startswith('external:')}):
+        for f in filings.values():
+            if f['group']!=group:continue
+            m=f['metadata'];url=f['resources'][m['primaryDocument']]['url']
+            name=metadata[m['cik']]['metadata']['name']
+            full+=f"- [{name} — {m['form']}, {m['accessionNumber']}]({url})\n"
+    for url,r in json.loads((root/'work/deepening_contract_sources.json').read_text()).items():
+        full+=f"- [{r['group']} — {r['header']['type']}, {r['metadata']['accessionNumber']}]({url})\n"
+    full+='- [AMD–Meta — warrant du 23 février 2026](https://www.sec.gov/Archives/edgar/data/2488/000000248826000045/a41commonstockwarrantagree.htm)\n'
+    full+='- [Form D officiel — instructions de l’Item 13](https://www.sec.gov/files/formd.pdf)\n'
+    full+='\nLes liens de chaque position de prêteur figurent aussi dans lender_positions.csv. Les citations exactes et leurs repères sont conservés dans deepening_evidence.csv.\n'
     (root/'approfondissements.md').write_text(full)
     # The detailed synthesis stays generated from the main eleven-group model.
-    with (root/'synthesis.md').open('a') as f:f.write('\n## Approfondissements autorisés\n\nVoir approfondissements.md et les quatre fichiers CSV de cette tranche pour les prêteurs, contrats et découvertes. Les montants externes sont conservés séparément des agrégats des onze groupes.\n')
+    with (root/'synthesis.md').open('a') as f:f.write('\n## Approfondissements autorisés\n\nVoir approfondissements.md et les fichiers CSV de cette tranche pour les prêteurs, contrats et découvertes. Les montants externes sont conservés séparément des agrégats des onze groupes.\n')
     (root/'README.md').write_text('''# SEC_Project_2
 
-Les quatre approfondissements autorisés sont livrés : lire [user_brief_deepening.md](user_brief_deepening.md), puis [approfondissements.md](approfondissements.md). Les citations sont dans deepening_evidence.csv ; les quantités dans deepening_measures.csv, lender_positions.csv et form_d_disclosures.csv. Les huit tables sont dans tables/ et les contrôles dans audit/.
+Les quatre approfondissements autorisés sont livrés : lire [user_brief_deepening.md](user_brief_deepening.md), puis [approfondissements.md](approfondissements.md). Les citations sont dans deepening_evidence.csv ; les quantités dans deepening_measures.csv, lender_positions.csv et form_d_disclosures.csv. form_d_series.csv contient les dernières déclarations cumulatives connues à chaque fin de trimestre. Les huit tables sont dans tables/ et les contrôles dans audit/.
 
 Les onze groupes principaux, l’arrêt des sources du 9 octobre 2026 et les critères E/F restent inchangés. Les prêteurs et autres déposants ciblés sont des sources externes distinctes. Les résultats du premier passage et des notes complémentaires sont conservés dans leurs fichiers et l’historique Git. Aucun score ou total global d’exposition n’est produit. Travail effectué sans sous-agent ; aucun audit indépendant revendiqué.
 

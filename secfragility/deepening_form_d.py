@@ -96,13 +96,19 @@ def offering_key(cik,first_sale,accession,field):
     return digest([cik,first_sale if first_sale else 'unresolved:'+accession,field])
 
 
-def measures(db,root,as_of):
-    """Latest disclosure per issuer/first sale, not the sum of D and D/A."""
-    db.execute('''CREATE OR REPLACE TEMP TABLE form_d_latest AS
+def make_snapshot(db,cutoff):
+    """Cumulative offering disclosure known at this instant, including publication date."""
+    db.execute('''CREATE OR REPLACE TEMP TABLE form_d_snapshot AS
       SELECT *,row_number() OVER(PARTITION BY entity_id,semantic_key ORDER BY knowledge_date DESC,
         acceptance_datetime DESC,accession DESC) AS offering_version
       FROM facts WHERE canonical_concept LIKE 'secFormD:%' AND knowledge_date<=?::DATE
-        AND acceptance_datetime<=?::TIMESTAMPTZ''',[as_of[:10],as_of])
+        AND acceptance_datetime<=?::TIMESTAMPTZ''',[cutoff[:10],cutoff])
+
+
+def measures(db,root,as_of):
+    """Latest disclosure per issuer/first sale, not the sum of D and D/A."""
+    make_snapshot(db,as_of)
+    db.execute('CREATE OR REPLACE TEMP TABLE form_d_latest AS SELECT * FROM form_d_snapshot')
     for view in ('as_known','revised'):
         db.execute(f'''INSERT INTO measures
           (measure,group_id,entity_id,period_start,period_end,view,as_of,information_cutoff,breakdown_key,
@@ -121,6 +127,29 @@ def measures(db,root,as_of):
       FROM form_d_latest a JOIN form_d_latest b ON a.entity_id=b.entity_id AND a.semantic_key=b.semantic_key
       WHERE a.offering_version=1 AND b.offering_version>1
         AND json_extract_string(a.dimensions,'$.first_sale') IS NOT NULL''',[as_of])
+    # Historical quarter-end values are cumulative disclosures, never quarterly
+    # cash flows. A later amendment cannot be projected into an earlier quarter.
+    from datetime import datetime,timezone
+    from calendar import monthrange
+    first=db.execute('SELECT min(knowledge_date) FROM form_d_latest').fetchone()[0]
+    if first is None:return
+    now=datetime.fromisoformat(as_of)
+    for year in range(first.year,now.year+1):
+        for month in (3,6,9,12):
+            end=f'{year:04d}-{month:02d}-{monthrange(year,month)[1]:02d}'
+            cutoff=end+'T23:59:59.999999+00:00'
+            if end<str(first) or datetime.fromisoformat(cutoff)>now:continue
+            make_snapshot(db,cutoff)
+            for view in ('as_known','revised'):
+                db.execute(f'''INSERT INTO measures
+                  (measure,group_id,entity_id,period_start,period_end,view,as_of,information_cutoff,breakdown_key,
+                   value,unit,status,nd_reason,coverage_state,knowledge_date,lineage,evidence_profile,tier,source_perspective,accounting_framework)
+                  SELECT 'form_d_offering_amount',group_id,entity_id,'none',?,'{view}',?::TIMESTAMPTZ,
+                    ?::TIMESTAMPTZ,dimensions||'|'||accession||'|quarter_end_cumulative',value,unit,
+                    CASE WHEN value IS NULL THEN 'not_determinable' ELSE 'computed' END,
+                    CASE WHEN value IS NULL THEN 'indefinite_or_missing_offering_amount' END,coverage_state,knowledge_date,
+                    to_json([fact_id]),to_json([tier]),2,source_perspective,accounting_framework
+                  FROM form_d_snapshot WHERE offering_version=1''',[end,as_of,cutoff])
 
 
 if __name__=='__main__':collect(Path('.').resolve())

@@ -1,0 +1,35 @@
+{
+  "source_as_of": "2026-10-09T10:24:21.129672+00:00",
+  "deepening_scope": {
+    "authorized_at": "2026-10-11T07:02:08.187755+00:00",
+    "user_instruction": "Ok on continue sur ces 4 points",
+    "baseline_commit": "8447583af02b80647beab7b81e8f3ac97b61bcea",
+    "source_as_of": "2026-10-09T10:24:21.129672+00:00",
+    "components": [
+      "series_consolidation",
+      "coreweave_liquidity_and_public_lenders",
+      "targeted_contracts_nvda_crwv_amd_meta",
+      "private_counterparties_and_vehicles"
+    ],
+    "selection_rule": "targeted_named_counterparties_first_then_latest_filed_period_and_accession",
+    "criteria_changed": false,
+    "subagents_used": false
+  },
+  "newly_read_unique_blocks": 23,
+  "new_observations": 59,
+  "original_periodic_filings": 34,
+  "lender_positions": 47,
+  "lenders_with_qualifying_loan_positions": 11,
+  "form_d_original_filings": 168,
+  "form_d_issuer_ciks": 118,
+  "form_d_industry_counts": {
+    "Other Technology": 1,
+    "Investing": 1,
+    "Other Banking and Financial Services": 9,
+    "Pooled Investment Fund": 152,
+    "Other": 5
+  },
+  "form_d_amounts_are_cumulative_and_may_include_noncash_and_mandatory_future_commitments": true,
+  "previous_financial_mismatch_counts_not_reclassified_to_pass": true,
+  "independent_audit_performed": false
+}

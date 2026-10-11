@@ -4,11 +4,11 @@
     "documents": 7288,
     "facts": 766617,
     "observations": 17088,
-    "entities": 528,
+    "entities": 646,
     "links": 827,
-    "measures": 265627,
+    "measures": 269635,
     "controls": 155140,
-    "exclusions": 16160
+    "exclusions": 16308
   },
   "rank1_by_status": {
     "not_determinable": 181093,
@@ -35,8 +35,8 @@
     "source_not_known_at_information_cutoff": 1
   },
   "controls_by_status": {
-    "ok": 152376,
-    "not_testable": 2738,
+    "ok": 152328,
+    "not_testable": 2786,
     "mismatch": 26
   },
   "controls_by_id": {
@@ -55,8 +55,8 @@
       "ok": 34
     },
     "c4_restatement_detection": {
-      "ok": 143353,
-      "not_testable": 13
+      "ok": 143305,
+      "not_testable": 61
     },
     "c5_bilateral": {
       "not_testable": 796
@@ -115,11 +115,12 @@
     "financial_parties_only": 214,
     "invalid_aggregate": 1,
     "net_proceeds_993_5_vs_independent_offer_price_992_35_unresolved": 1,
-    "not_processed": 13689,
+    "not_collected": 67,
+    "not_processed": 13761,
     "not_public": 11,
     "parse_failed": 1,
     "pending_entity": 443,
-    "policy_excluded": 1104,
+    "policy_excluded": 1113,
     "primary_cash_and_exact_event_date_not_established": 1,
     "relation_without_admissible_amount": 384,
     "same_issue_literal_million_vs_billion_unresolved": 1,
@@ -129,16 +130,16 @@
   "reading": {
     "as_of": "2026-10-09T10:24:21.129672+00:00",
     "active_unique_keys": 3575,
-    "completed_unique_keys": 3572,
-    "remaining_unique_keys": 3,
-    "accepted_observations": 17085,
+    "completed_unique_keys": 3575,
+    "remaining_unique_keys": 0,
+    "accepted_observations": 17088,
     "completed_occurrences_by_class": {
       "item404": 166,
       "related_parties": 31,
       "going_concern": 220,
       "controls": 219,
       "8k_item": 457,
-      "exhibit": 242,
+      "exhibit": 245,
       "investments_note": 618,
       "lease_note": 185,
       "concentration_narrative": 839,
@@ -149,7 +150,7 @@
       "schema": 60,
       "semantic": 47
     },
-    "updated_at": "2026-10-11T07:53:12.785163+00:00",
+    "updated_at": "2026-10-11T08:13:48.285687+00:00",
     "read_packet_logging_started_2026_10_09": true,
     "independent_audit_performed": false
   },
@@ -189,7 +190,7 @@
     "anonymous_observations": 1513,
     "sales_channels": {},
     "redacted_exclusions": 0,
-    "not_processed_exclusions": 13689,
+    "not_processed_exclusions": 13761,
     "parse_failed_exclusions": 1,
     "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"
   },
@@ -201,5 +202,40 @@
     "lease_note"
   ],
   "extension_source_cutoff_unchanged": true,
-  "elapsed_wall_seconds_since_first_sec_request": "164108.991239"
+  "elapsed_wall_seconds_since_first_sec_request": "165649.687647",
+  "deepening_results": {
+    "source_as_of": "2026-10-09T10:24:21.129672+00:00",
+    "deepening_scope": {
+      "authorized_at": "2026-10-11T07:02:08.187755+00:00",
+      "user_instruction": "Ok on continue sur ces 4 points",
+      "baseline_commit": "8447583af02b80647beab7b81e8f3ac97b61bcea",
+      "source_as_of": "2026-10-09T10:24:21.129672+00:00",
+      "components": [
+        "series_consolidation",
+        "coreweave_liquidity_and_public_lenders",
+        "targeted_contracts_nvda_crwv_amd_meta",
+        "private_counterparties_and_vehicles"
+      ],
+      "selection_rule": "targeted_named_counterparties_first_then_latest_filed_period_and_accession",
+      "criteria_changed": false,
+      "subagents_used": false
+    },
+    "newly_read_unique_blocks": 23,
+    "new_observations": 59,
+    "original_periodic_filings": 34,
+    "lender_positions": 47,
+    "lenders_with_qualifying_loan_positions": 11,
+    "form_d_original_filings": 168,
+    "form_d_issuer_ciks": 118,
+    "form_d_industry_counts": {
+      "Other Technology": 1,
+      "Investing": 1,
+      "Other Banking and Financial Services": 9,
+      "Pooled Investment Fund": 152,
+      "Other": 5
+    },
+    "form_d_amounts_are_cumulative_and_may_include_noncash_and_mandatory_future_commitments": true,
+    "previous_financial_mismatch_counts_not_reclassified_to_pass": true,
+    "independent_audit_performed": false
+  }
 }

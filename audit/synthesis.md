@@ -1,6 +1,6 @@
 # Fragilité financière et relations documentées
 
-Situation des sources arrêtée au 2026-10-09T10:24:21.129672+00:00. Périmètre : extension des cinq familles de notes autorisée ; découverte non ouverte.
+Situation des sources arrêtée au 2026-10-09T10:24:21.129672+00:00. Périmètre : notes complémentaires, prêteurs publics, contrats ciblés et découverte bornée autorisés.
 
 Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `d9e886e92fe46c2bd3f2f497103dce895be8edd2` ; commit courant de config.yaml : `6b3f78c351e241d3fe5e1f9b8520f2b67f1d7643`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
 
@@ -22,7 +22,7 @@ Aucun arrêt durable d’accès SEC ni échec comptable généralisé. Les éche
 | c1_balance_components | 1610 | 1 | 93 | 0 |
 | c2_cash_flow_components | 1554 | 2 | 28 | 0 |
 | c3_cash_reconciliation | 34 | 0 | 350 | 0 |
-| c4_restatement_detection | 143353 | 0 | 13 | 0 |
+| c4_restatement_detection | 143305 | 0 | 61 | 0 |
 | c5_bilateral | 0 | 0 | 796 | 0 |
 | c6_income_articulation | 242 | 0 | 0 | 0 |
 | c7_cash_continuity | 289 | 1 | 26 | 0 |
@@ -148,9 +148,9 @@ Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; l
 
 | liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
-
 | lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.782798 | ratio | partial / short_term_debt_and_other_components_not_established | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-407; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-937 |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
 
 | lev_debt_and_leases_to_operating_income_plus_da | leases / original | 0.649871 | ratio | computed / — | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-767; 0001018724-26-000026 / id:f-768; 0001018724-26-000026 / id:f-774; 0001018724-26-000026 / id:f-775 |
 
@@ -186,9 +186,9 @@ Dernière période de revenu exploitable : 2026-08-02. Présentation revised ; l
 
 | fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| receivables_collection_period | none / original | 72.017962 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32; 0001730168-26-000080 / id:f-507 |
-
 | receivables_collection_period | none / receivables_only | 37.728820 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32 |
+
+| receivables_collection_period | none / original | 72.017962 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32; 0001730168-26-000080 / id:f-507 |
 
 | rpo_total | none / original | 179200000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000080 / id:f-514 |
 
@@ -582,7 +582,7 @@ Les plafonds et garanties publiés rendent certaines relations visibles sans pro
 | --- | ---: |
 | complete_public_attribution_not_established | 692 |
 
-Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1513, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 13689, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
+Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1513, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 13761, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
 
 Les critères E sont confrontés aux paires et aux exercices dans measures.parquet, même pour les cellules vides. Les chemins de l’extension restent non déterminables, motif not_processed ; ils ne sont pas comptés comme inexistants.
 

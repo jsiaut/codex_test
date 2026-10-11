@@ -127,21 +127,22 @@ Couverture nommée, anonyme et résiduelle par fournisseur, au dernier point fis
 
 Paires à financement de montant documenté : 2. Arêtes de montant : 13. Les couvertures nommée, anonyme et résiduelle restent au niveau du fournisseur dans les séries.
 
-Blocs uniques traités : 3572 ; observations acceptées : 17085. Tentatives rejetées : {"schema": 60, "semantic": 47}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 245, "investments_note": 618, "lease_note": 185, "concentration_narrative": 839, "debt_note": 315, "commitments_note": 309} ; items 8-K : {"non renseigné": 457}.
+Blocs uniques traités : 3575 ; observations acceptées : 17088. Tentatives rejetées : {"schema": 60, "semantic": 47}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 245, "investments_note": 618, "lease_note": 185, "concentration_narrative": 839, "debt_note": 315, "commitments_note": 309} ; items 8-K : {"non renseigné": 457}.
 
-Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 7630, "bytes_received": 5313231810}. Durée calendaire depuis la première requête SEC : 164108.991239 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
+Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 7630, "bytes_received": 5313231810}. Durée calendaire depuis la première requête SEC : 165649.687647 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
 
 ## Exclusions
 
 | Motif d’exclusion | Lignes |
 | --- | ---: |
-| not_processed | 13689 |
-| policy_excluded | 1104 |
+| not_processed | 13761 |
+| policy_excluded | 1113 |
 | pending_entity | 443 |
 | relation_without_admissible_amount | 384 |
 | financial_parties_only | 214 |
 | direction_not_established | 175 |
 | validation_failed | 107 |
+| not_collected | 67 |
 | conflicting_tagged_reference | 13 |
 | not_public | 11 |
 | attribution_interpretation | 9 |
@@ -170,7 +171,7 @@ Cette extension utilise le même arrêt des sources que le premier passage ; ses
 | c1_balance_components | 1610 | 1 | 93 | 0 |
 | c2_cash_flow_components | 1554 | 2 | 28 | 0 |
 | c3_cash_reconciliation | 34 | 0 | 350 | 0 |
-| c4_restatement_detection | 143353 | 0 | 13 | 0 |
+| c4_restatement_detection | 143305 | 0 | 61 | 0 |
 | c5_bilateral | 0 | 0 | 796 | 0 |
 | c6_income_articulation | 242 | 0 | 0 | 0 |
 | c7_cash_continuity | 289 | 1 | 26 | 0 |
@@ -187,4 +188,4 @@ Registre complet : {"na01": 62, "na02": 16, "na03": 0, "na04": 0, "na05": 0, "na
 
 Les chiffres indicatifs de l’annexe D ne sont jamais importés. Les divergences de source, notamment montant nominal, coupon, prix net, date juridique et périmètre combiné, restent dans les exclusions ou les observations. Les séries annuelles de SpaceX qui échouent aux contrôles restent exclues. Les bases de liquidité incomplètes portent partial ou ND. Le dossier n’a pas reçu d’audit indépendant.
 
-Les cinq familles de notes autorisées sont traitées ; la découverte, les prêteurs et les autres extensions ne sont pas ouverts. Le dépôt, les observations et la sauvegarde du cache permettent une reprise sans nouvelle lecture des blocs terminés.
+Les cinq familles de notes et les quatre approfondissements autorisés sont traités dans une tranche bornée ; voir approfondissements.md pour les sources, résultats et limites. Les nouveaux groupes ne sont pas ajoutés à l’univers principal des onze groupes. Le dépôt, les observations et la sauvegarde du cache permettent une reprise sans nouvelle lecture des blocs terminés.

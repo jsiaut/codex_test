@@ -417,7 +417,7 @@ def package(root,as_of):
     extension=bool(opened(root))
     deepening=(root/'work/deepening_authorization.json').exists()
     names=['synthesis.md','delta.md','delivery_summary.json'] + (['user_brief_deepening.md','approfondissements.md',
-        'deepening_evidence.csv','deepening_measures.csv','lender_positions.csv','form_d_disclosures.csv'] if deepening else
+        'deepening_evidence.csv','deepening_measures.csv','lender_positions.csv','form_d_disclosures.csv','form_d_series.csv'] if deepening else
         ['user_brief_extension.md','notes_complementaires.md'] if extension else ['user_brief_2.md'])
     for name in names:
         shutil.copy2(root/name,output/name)

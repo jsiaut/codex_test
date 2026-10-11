@@ -1,6 +1,6 @@
 # Second point de contrôle
 
-Le premier passage est livré. La file contient 3572 blocs uniques traités et aucune lecture restante. Le dépôt conserve les observations, les huit tables et le cache sauvegardé ; les rendus sont générés depuis les tables.
+Le premier passage est livré. La file contient 3575 blocs uniques traités et aucune lecture restante. Le dépôt conserve les observations, les huit tables et le cache sauvegardé ; les rendus sont générés depuis les tables.
 
 Les comptes permettent de publier des séries de revenu, de trésorerie et d’investissement, ainsi que certains composants des engagements. Les conditions des contrats ne donnent souvent pas les versements effectifs ou le revenu par client. Les questions de dépendance restent indéterminées pour les paires examinées. Ce résultat tient d’abord au périmètre limité et aux montants qui ne peuvent pas être attribués ; il ne démontre aucune des deux lectures.
 

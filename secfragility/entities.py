@@ -49,6 +49,24 @@ def assemble(db,root,as_of):
                 alias=dict(row,alias_key=digest(old),alias=old['name'],alias_start=old.get('from','')[:10] or None,
                            alias_end=old.get('to','')[:10] or None,resolution_rule='same_CIK_formerNames')
                 records.append(alias);index[normalize(old['name'])].append(row)
+    # Form D issuers are identified by their own original issuer CIK. Their fund
+    # name never confirms ownership of, or membership in, the underlying lab.
+    form_d=root/'work/deepening_form_d_filings.json'
+    if form_d.exists():
+        periodic_ciks={f['metadata']['cik'] for f in json.loads((root/'work/deepening_filings.json').read_text()).values()}
+        latest={}
+        for item in json.loads(form_d.read_text()).values():
+            cik=item['source']['ciks'][0]
+            if cik not in latest or (item['source']['file_date'],item['acceptance_datetime'])>(latest[cik]['source']['file_date'],latest[cik]['acceptance_datetime']):latest[cik]=item
+        for cik,item in sorted(latest.items()):
+            if cik in periodic_ciks or any(r.get('cik')==cik for r in records):continue
+            fields=item['fields'];name=fields['issuer_name'];g='external:'+cik
+            row=dict(entity_id='cik:'+cik,membership_id='standalone',legal_name=name,normalized_name=normalize(name),
+                cik=cik,jurisdiction=fields['jurisdiction'],entity_status='confirmed',group_id=g,economic_group_id=g,
+                consolidation_treatment='undetermined',knowledge_date=item['source']['file_date'],
+                resolution_rule='original_Form_D_primaryIssuer_CIK',evidence_document_id=digest([item['url']]),
+                evidence_locator='/edgarSubmission/primaryIssuer',source_perspective='reporting_entity',as_of=as_of)
+            records.append(row);index[normalize(name)].append(row)
     # Public lenders retain their own CIK identity and never become the borrower
     # or their manager merely because an investment names the same brand.
     external=root/'work/deepening_issuer_metadata.json'
