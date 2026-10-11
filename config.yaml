@@ -3,6 +3,27 @@ scope:
 - text
 - lender
 - discovery
+- foreign
+expansion_decision:
+  user_instruction: "Ok on ajoute Core Scientific, Applied Digital, Athene et WarehouseCo Intermediate Holdings — WHCO, via Apollo, TeraWulf, Backblaze, Galaxy Digital — projet Helios, Blue Owl Real Estate Net Lease Trust — véhicules CTP02/CTP03, Great Elm Capital et MSD Investment Corp., IREN, Nebius et Cipher Mining"
+  baseline_commit: b6770eeb07191b4012cf60f28d881a172455a1f8
+  source_cutoff: '2026-10-09T10:24:21.129672+00:00'
+  identity_rule: official_SEC_CIK_then_documented_control;_managed_funds_and_JVs_remain_distinct
+  stable_group_ids: existing_external_CIK_identifiers_preserved
+  structured_window: fiscal_year_2021_through_source_cutoff
+  first_text_tranche: latest_annual_and_all_later_periodic_filings;_earlier_notes_remain_not_processed
+  text_selection: whole_financial_notes_for_opened_families_and_revenue_related_parties_subsequent_events;_no_keyword_eligibility_filter
+  contracts: named_material_financing_customer_lease_and_guarantee_exhibits_in_selected_filings
+  additional_issuers:
+    '0001527469':
+      name: Athene Holding Ltd.
+      control_group_to_verify: 'external:0001858681'
+  vehicles_without_CIK:
+  - WarehouseCo Intermediate Holdings LP
+  - CoreWeave Compute Acquisition Co. VIII, LLC
+  - Project Spider JV LLC / CTP02
+  - Project Spider JV III LLC / CTP03
+  - Helios project entities
 deepening_components:
 - series_consolidation
 - coreweave_liquidity_and_public_lenders
@@ -48,6 +69,18 @@ groups:
   AMD: 0000002488
   AVGO: 0001730168
   MRVL: 0001835632
+  'external:0001839341': '0001839341' # Core Scientific
+  'external:0001144879': '0001144879' # Applied Digital
+  'external:0001858681': '0001858681' # Apollo; Athene control is source-verified separately
+  'external:0001083301': '0001083301' # TeraWulf
+  'external:0001462056': '0001462056' # Backblaze
+  'external:0001859392': '0001859392' # Galaxy Digital / Helios
+  'external:0001944366': '0001944366' # Blue Owl Real Estate Net Lease Trust
+  'external:0001675033': '0001675033' # Great Elm Capital
+  'external:0001849894': '0001849894' # MSD Investment
+  'external:0001878848': '0001878848' # IREN, foreign history and domestic filings
+  'external:0001513845': '0001513845' # Nebius, foreign filings
+  'external:0001819989': '0001819989' # Cipher Mining, CIK hint to verify
 predecessors:
   AVGO:
     Broadcom Limited: 0001649338
