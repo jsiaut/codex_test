@@ -1,6 +1,23 @@
 user_agent: SEC_Project_2 quavas-s@hotmail.fr
 scope:
 - text
+- lender
+- discovery
+deepening_components:
+- series_consolidation
+- coreweave_liquidity_and_public_lenders
+- targeted_contracts_nvda_crwv_amd_meta
+- private_counterparties_and_vehicles
+deepening_decision:
+  user_instruction: "Ok on continue sur ces 4 points"
+  baseline_commit: 8447583af02b80647beab7b81e8f3ac97b61bcea
+  source_cutoff: '2026-10-09T10:24:21.129672+00:00'
+  selection_rule: targeted_named_counterparties_first_then_latest_filed_period_and_accession
+  contract_pairs:
+  - [NVDA, CRWV]
+  - [AMD, META]
+  discovery_subjects: [OpenAI, Anthropic, CoreWeave]
+  foreign_and_new_groups: not_opened
 text_components:
 - investments_note
 - debt_note
