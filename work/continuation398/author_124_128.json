@@ -1,0 +1,77 @@
+[
+  {
+    "index": 124,
+    "classification": "material",
+    "summary": "Décembre 2025 : face dette 3,2055 Md$, dont convertibles 1,4725 Md$, contre net long terme 2,711648 Md$ et courant 37,793 M$. L’échéancier publié totalise seulement 1,733 Md$ de secured notes ; il ne couvre pas les convertibles et son zéro thereafter ne signifie pas absence de principal convertible 2031. Conversion 2031 bifurquée puis reclassifiée equity octobre : perte 450,4 M$ non cash, cost basis du host distinct face. Coinbase 25 M$ sous credit review et Two Prime 100 M$ non tirés, pas cash disponible ferme automatiquement.",
+    "rows": [
+      {
+        "quote": "Total principal of long-term borrowings | | | | | | $ | 1,733,000",
+        "model_quantity": "debt_maturity_schedule_excludes_convertible_principal",
+        "stage": "recognized",
+        "issuer_treatment": "Décembre 2025 : face dette 3,2055 Md$, dont convertibles 1,4725 Md$, contre net long terme 2,711648 Md$ et courant 37,793 M$. L’échéancier publié totalise seulement 1,733 Md$ de secured notes ; il ne couvre pas les convertibles et son zéro thereafter ne signifie pas absence de principal convertible 2031. Conversion 2031 bifurquée puis reclassifiée equity octobre : perte 450,4 M$ non cash, cost basis du host distinct face. Coinbase 25 M$ sous credit review et Two Prime 100 M$ non tirés, pas cash disponible ferme automatiquement.",
+        "measurement_basis": "Dec2025_schedule_1_733bn_secured_only_vs_3_2055bn_total_face;convertibles_not_zero",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 125,
+    "classification": "material",
+    "summary": "Exercice 2025 : seul segment opérationnel minage, revenu 223,942 M$, perte segment 306,052 M$ avant ajustements centraux 115,511 M$. HPC attendu quand baux commencent, donc revenus de minage et gains bitcoin ne prouvent pas revenus HPC actuels. Perte pretax 825,557 M$ comprend noncash warrants/convertibles ; cash needs à examiner séparément.",
+    "rows": [
+      {
+        "quote": "the Company expects to have an additional segment related to construction of data centers for HPC tenants when leases for those data centers commence operations.",
+        "model_quantity": "hpc_segment_not_yet_operational",
+        "stage": "recognized",
+        "issuer_treatment": "Exercice 2025 : seul segment opérationnel minage, revenu 223,942 M$, perte segment 306,052 M$ avant ajustements centraux 115,511 M$. HPC attendu quand baux commencent, donc revenus de minage et gains bitcoin ne prouvent pas revenus HPC actuels. Perte pretax 825,557 M$ comprend noncash warrants/convertibles ; cash needs à examiner séparément.",
+        "measurement_basis": "FY2025_only_bitcoin_segment;future_HPC_at_lease_commencement"
+      }
+    ]
+  },
+  {
+    "index": 126,
+    "classification": "material",
+    "summary": "Annuel 2025 : recettes bitcoin/mining pool (Foundry nommé, 157 M$/70 % total) distinct HPC. Bitcoin vendu sous sept jours CFop, au-delà CFinvesting ; distributions BTC des JV non cash à réception. Cash construction restreint Barber Lake et reserveservice dette distinct libre. Miners held for sale cessent amortissement sans améliorer cash ; durée miners3ans, infrastructures10–20. Policy conversion 2031 décrit bifurcation initiale mais note dette précise reclassification octobre, ne pas maintenir liability dérivée active sur seule policy. Colchis53 % VIE consolidé, NCI rachetable47 % hors permanent equity.",
+    "rows": [
+      {
+        "quote": "the Company earned revenue of $157.0 million from pool operator Foundry USA Pool",
+        "model_quantity": "named_mining_pool_revenue_not_hpc",
+        "stage": "recognized",
+        "issuer_treatment": "Annuel 2025 : recettes bitcoin/mining pool (Foundry nommé, 157 M$/70 % total) distinct HPC. Bitcoin vendu sous sept jours CFop, au-delà CFinvesting ; distributions BTC des JV non cash à réception. Cash construction restreint Barber Lake et reserveservice dette distinct libre. Miners held for sale cessent amortissement sans améliorer cash ; durée miners3ans, infrastructures10–20. Policy conversion 2031 décrit bifurcation initiale mais note dette précise reclassification octobre, ne pas maintenir liability dérivée active sur seule policy. Colchis53 % VIE consolidé, NCI rachetable47 % hors permanent equity.",
+        "counterparty": "Foundry USA Pool",
+        "counterparty_evidence": "named",
+        "measurement_basis": "FY2025_157m_70percent_bitcoin_revenue;not_AI_customer"
+      }
+    ]
+  },
+  {
+    "index": 127,
+    "classification": "material",
+    "summary": "Décembre 2025 : commitments construction 713,5 M$, majorité Barber Lake ; coûts projet déclarés financés par restricted cash courant. Déclaration de financement n’efface pas engagement ni risque dépassement ; cash restreint ne devient pas libre. Indemnifications maximum inconnu, pas zéro ; pas litige matériel déclaré à date.",
+    "rows": [
+      {
+        "quote": "Construction costs associated with the project are fully funded with Restricted cash, current.",
+        "model_quantity": "construction_commitment_designated_cash_funding",
+        "stage": "recognized",
+        "issuer_treatment": "Décembre 2025 : commitments construction 713,5 M$, majorité Barber Lake ; coûts projet déclarés financés par restricted cash courant. Déclaration de financement n’efface pas engagement ni risque dépassement ; cash restreint ne devient pas libre. Indemnifications maximum inconnu, pas zéro ; pas litige matériel déclaré à date.",
+        "measurement_basis": "Dec2025_BarberLake_funded_restricted_cash;not_no_commitments_or_free_cash"
+      }
+    ]
+  },
+  {
+    "index": 128,
+    "classification": "material",
+    "summary": "Mars 2026 : paiement en titres Canaan de la vente JV/miners soumis lock-up jusqu’au23août, donc pas cash immédiatement disponible malgré classement actif courant. Actif support Google544,5 M$ stable, distinct passif FV warrant et revenu. Construction accrued95,473 M$/interest65,601 M$, unearned7,447 M$ ; stock différé n’établit pas HPC revenu commencé.",
+    "rows": [
+      {
+        "quote": "The lock-up expires on August 23, 2026.",
+        "model_quantity": "non_cash_disposal_stock_consideration_locked",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : paiement en titres Canaan de la vente JV/miners soumis lock-up jusqu’au23août, donc pas cash immédiatement disponible malgré classement actif courant. Actif support Google544,5 M$ stable, distinct passif FV warrant et revenu. Construction accrued95,473 M$/interest65,601 M$, unearned7,447 M$ ; stock différé n’établit pas HPC revenu commencé.",
+        "counterparty": "Canaan",
+        "counterparty_evidence": "named",
+        "measurement_basis": "March2026_current_asset_stock_lockup;not_available_cash"
+      }
+    ]
+  }
+]
