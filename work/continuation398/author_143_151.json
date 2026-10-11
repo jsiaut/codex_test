@@ -1,0 +1,133 @@
+[
+  {
+    "index": 143,
+    "classification": "material",
+    "summary": "Juin 2026 : un seul segment minage, revenu T2 24,837 M$ et S1 59,675 M$ ; construction HPC ne génère pas encore revenu de loyer. Perte opérationnelle S1 193,105 M$ avant produits/charges financement et FV, distinct cashflow. Charges D&A minage38,379 M$ et pertesbitcoin/PPA ne représentent pas capex HPC courant.",
+    "rows": [
+      {
+        "quote": "one operating segment, Bitcoin Mining",
+        "model_quantity": "bitcoin_segment_revenue_not_hpc",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : un seul segment minage, revenu T2 24,837 M$ et S1 59,675 M$ ; construction HPC ne génère pas encore revenu de loyer. Perte opérationnelle S1 193,105 M$ avant produits/charges financement et FV, distinct cashflow. Charges D&A minage38,379 M$ et pertesbitcoin/PPA ne représentent pas capex HPC courant.",
+        "measurement_basis": "H1_2026_59_675m_bitcoin;future_HPC_lease_commencement"
+      }
+    ]
+  },
+  {
+    "index": 144,
+    "classification": "material",
+    "summary": "Juin 2026 : passif warrantGoogle632,06 M$, variation S1+106,9 M$ noncash, pas coûtcash de support ni montant garanti. Dette dans FVtable5,54135 Md$ inclut partiecourante, contrairement ancienneprésentationcomparative excluant courant ; reste distinct face6,0155 Md$ etFV7,841348 Md$. Fondsrestreints moneyfunds3,725219 Md$ horscashlibre. StockCanaan15,43 M$ baisseFV, pas encaissementcession.",
+    "rows": [
+      {
+        "quote": "Change in fair value | | | 106,900",
+        "model_quantity": "credit_support_warrant_fair_value_change_non_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : passif warrantGoogle632,06 M$, variation S1+106,9 M$ noncash, pas coûtcash de support ni montant garanti. Dette dans FVtable5,54135 Md$ inclut partiecourante, contrairement ancienneprésentationcomparative excluant courant ; reste distinct face6,0155 Md$ etFV7,841348 Md$. Fondsrestreints moneyfunds3,725219 Md$ horscashlibre. StockCanaan15,43 M$ baisseFV, pas encaissementcession.",
+        "measurement_basis": "H1_2026_106_9m_FV_loss;not_cash_support_payment",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 145,
+    "classification": "material",
+    "summary": "Juin 2026 : utilitydeposits27,02 M$ au totalOncor/AEP, retourconditionnel capacité/délai ; ventilation entrecontreparties inconnue. Ne pas attribuer27,02 M$ entièrementàchaqueutilité ni classertrésorerielibre.",
+    "rows": [
+      {
+        "quote": "Oncor Electric Delivery Company LLC (“Oncor”) and American Electric Power (“AEP”)",
+        "model_quantity": "utility_deposit_multiple_counterparty_allocation_unknown",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : utilitydeposits27,02 M$ au totalOncor/AEP, retourconditionnel capacité/délai ; ventilation entrecontreparties inconnue. Ne pas attribuer27,02 M$ entièrementàchaqueutilité ni classertrésorerielibre.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "June2026_27_02m_aggregate_Oncor_AEP;no_split;conditional_return"
+      }
+    ]
+  },
+  {
+    "index": 146,
+    "classification": "context",
+    "summary": "Juin 2026 : aucunereceivablepartieliée vs0,3 M$décembre ; paspreuveremboursementcash ni absencehistoriquerelation. JVcédées à analyserdansnotedédiée, pas zéro dansmatrice historique.",
+    "rows": [
+      {
+        "quote": "The Company had no related party receivables as of June 30, 2026",
+        "model_quantity": "related_party_receivable_stock_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : aucunereceivablepartieliée vs0,3 M$décembre ; paspreuveremboursementcash ni absencehistoriquerelation. JVcédées à analyserdansnotedédiée, pas zéro dansmatrice historique."
+      }
+    ]
+  },
+  {
+    "index": 147,
+    "classification": "material",
+    "summary": "Juin 2026 : cashlibre831,8 M$ distinctworkingcapital2,753 Md$ etfondsprojetsrestreints. CFO S1 négatif152 M$, ventesBTC123,4 M$ etcapexcash964,3 M$ ; ne pas substituercashBTC aux loyersHPC. Sixsitespotentiels pas contratsclients. Prévision12moismanagement dépendégalementfinancementprojet/ATM futurs, à comparerauxconditionsfacility.",
+    "rows": [
+      {
+        "quote": "Approximately $152.0 million of cash was used in operating activities during the six months ended June 30, 2026.",
+        "model_quantity": "operating_cash_outflow_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : cashlibre831,8 M$ distinctworkingcapital2,753 Md$ etfondsprojetsrestreints. CFO S1 négatif152 M$, ventesBTC123,4 M$ etcapexcash964,3 M$ ; ne pas substituercashBTC aux loyersHPC. Sixsitespotentiels pas contratsclients. Prévision12moismanagement dépendégalementfinancementprojet/ATM futurs, à comparerauxconditionsfacility.",
+        "measurement_basis": "H1_2026_negative_CFO;BTC_sales_classification_distinct;not_HPC_cash_generation"
+      }
+    ]
+  },
+  {
+    "index": 148,
+    "classification": "material",
+    "summary": "Juin 2026 : AR HPCpourchangeorders facturés mais nonencaissés, distinct revenu de bail noncommencé. Cash restreint courant affecté chantier spécifique, pas corporate cash. Intérêts/coûts d’émission amortis ne sont pas cash payé au même montant. EPS diluted égale basic sous perte malgré204,702946 millions d’équivalents exclus comme antidilutifs : aucune conclusion absence de dilution potentielle.",
+    "rows": [
+      {
+        "quote": "amounts due related to change orders requested from tenants for its HPC data centers.",
+        "model_quantity": "customer_construction_change_order_receivable",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : AR HPCpourchangeorders facturés mais nonencaissés, distinct revenu de bail noncommencé. Cash restreint courant affecté chantier spécifique, pas corporate cash. Intérêts/coûts d’émission amortis ne sont pas cash payé au même montant. EPS diluted égale basic sous perte malgré204,702946 millions d’équivalents exclus comme antidilutifs : aucune conclusion absence de dilution potentielle.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "June2026_invoiced_unreceived_change_orders;not_commenced_rent_or_cash"
+      }
+    ]
+  },
+  {
+    "index": 149,
+    "classification": "material",
+    "summary": "Juin 2026 : WindHQ cédé en février pour29,4 M$ actionsCanaan, ligne proceeds rollforward noncash ; contributions4,374 M$ etBTCdistribution2,772 M$ distincts. Colchis76 % aprèsapportsS1, consolidéavecNCI rachetable24 %, pasinvestequitymethod restant29,4 M$.",
+    "rows": [
+      {
+        "quote": "in exchange for $29.4 million of Canaan common stock.",
+        "model_quantity": "joint_venture_disposal_non_cash_consideration",
+        "stage": "settled",
+        "issuer_treatment": "Juin 2026 : WindHQ cédé en février pour29,4 M$ actionsCanaan, ligne proceeds rollforward noncash ; contributions4,374 M$ etBTCdistribution2,772 M$ distincts. Colchis76 % aprèsapportsS1, consolidéavecNCI rachetable24 %, pasinvestequitymethod restant29,4 M$.",
+        "counterparty": "Canaan",
+        "counterparty_evidence": "named",
+        "measurement_basis": "Feb2026_sale_in_stock;not_H1_cash_disposal_proceeds"
+      }
+    ]
+  },
+  {
+    "index": 150,
+    "classification": "material",
+    "summary": "Juin 2026 : stockCanaan reçucontreJV/miners reste souslockup jusqu’août, prepaidothercurrent34,5 M$ ne signifie pas35 M$cashlibre. ActifsupportGoogle544,5 M$ coûtinitialstable, nonrevenu. Accrualconstruction254,2 M$, interest64,852 M$ etcontingent16,433 M$ danscourant356,746 M$, noncapexcash à doubler.",
+    "rows": [
+      {
+        "quote": "The lock-up expires on August 23, 2026.",
+        "model_quantity": "non_cash_disposal_stock_consideration_locked",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : stockCanaan reçucontreJV/miners reste souslockup jusqu’août, prepaidothercurrent34,5 M$ ne signifie pas35 M$cashlibre. ActifsupportGoogle544,5 M$ coûtinitialstable, nonrevenu. Accrualconstruction254,2 M$, interest64,852 M$ etcontingent16,433 M$ danscourant356,746 M$, noncapexcash à doubler.",
+        "counterparty": "Canaan",
+        "counterparty_evidence": "named",
+        "measurement_basis": "June2026_lockup_stock;not_cash_sale_proceeds"
+      }
+    ]
+  },
+  {
+    "index": 151,
+    "classification": "context",
+    "summary": "S1 2026 : rémunération en actions de 57,574 M$. Tous les anciens PSU 2021 sont acquis après atteinte d’une capitalisation de 10 Md$. Les PSU dirigeants 2026 restent non acquis, avec 43 M$ de charges futures non reconnues. Les objectifs de livraison HPC et de loyers des plans salariés ne prouvent pas leur réalisation commerciale. Charges non reconnues : 50,5 M$ pour RSU de service, 2 M$ pour PSU 2025 et 3,6 M$ pour PSU prestataires ; pas obligation cash équivalente démontrée.",
+    "rows": [
+      {
+        "quote": "all of the 2021 Performance-Based RSUs have vested",
+        "model_quantity": "employee_market_condition_awards_vested_scope",
+        "stage": "recognized",
+        "issuer_treatment": "S1 2026 : rémunération en actions de 57,574 M$. Tous les anciens PSU 2021 sont acquis après atteinte d’une capitalisation de 10 Md$. Les PSU dirigeants 2026 restent non acquis, avec 43 M$ de charges futures non reconnues. Les objectifs de livraison HPC et de loyers des plans salariés ne prouvent pas leur réalisation commerciale. Charges non reconnues : 50,5 M$ pour RSU de service, 2 M$ pour PSU 2025 et 3,6 M$ pour PSU prestataires ; pas obligation cash équivalente démontrée."
+      }
+    ]
+  }
+]
