@@ -147,10 +147,10 @@
       "commitments_note": 309
     },
     "validation_rejected_attempts_by_phase": {
-      "schema": 60,
-      "semantic": 47
+      "semantic": 47,
+      "schema": 60
     },
-    "updated_at": "2026-10-11T08:13:48.285687+00:00",
+    "updated_at": "2026-10-11T08:28:24.487442+00:00",
     "read_packet_logging_started_2026_10_09": true,
     "independent_audit_performed": false
   },
@@ -202,7 +202,7 @@
     "lease_note"
   ],
   "extension_source_cutoff_unchanged": true,
-  "elapsed_wall_seconds_since_first_sec_request": "165649.687647",
+  "elapsed_wall_seconds_since_first_sec_request": "167026.907055",
   "deepening_results": {
     "source_as_of": "2026-10-09T10:24:21.129672+00:00",
     "deepening_scope": {

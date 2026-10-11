@@ -186,9 +186,9 @@ Dernière période de revenu exploitable : 2026-08-02. Présentation revised ; l
 
 | fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| receivables_collection_period | none / receivables_only | 37.728820 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32 |
-
 | receivables_collection_period | none / original | 72.017962 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32; 0001730168-26-000080 / id:f-507 |
+
+| receivables_collection_period | none / receivables_only | 37.728820 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32 |
 
 | rpo_total | none / original | 179200000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000080 / id:f-514 |
 

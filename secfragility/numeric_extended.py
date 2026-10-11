@@ -28,7 +28,8 @@ def run(db,as_of):
           sum(CASE WHEN term IN ('receivables','inventories') THEN value ELSE -value END),unit,currency,
           CASE WHEN count(DISTINCT term)=4 THEN 'computed' ELSE 'partial' END,
           CASE WHEN count(DISTINCT term)<4 THEN 'missing_working_capital_terms' END,'observed',max(knowledge_date),
-          to_json(list(evidence_profile)),to_json(flatten(list(from_json(lineage,'["VARCHAR"]')))),'reporting_entity',accounting_framework
+          to_json(list(evidence_profile ORDER BY term,lineage)),
+          to_json(flatten(list(from_json(lineage,'["VARCHAR"]') ORDER BY term,lineage))),'reporting_entity',accounting_framework
           FROM measures WHERE measure='working_capital' AND view='{view}' AND term IN ('receivables','inventories','payables','contract_liabilities') GROUP BY ALL''')
         db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,value,unit,currency,status,
           coverage_state,knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework)

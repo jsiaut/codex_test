@@ -155,7 +155,8 @@ def liquidity_and_leases(db,as_of):
           coverage_state,knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework)
          WITH lease AS (SELECT group_id,quarter_start,quarter_end,snapshot_at,unit,accounting_framework,reporting_scope,
            sum(value) AS value,count(DISTINCT model_quantity) AS terms,max(knowledge_date) AS knowledge_date,
-           list(fact_id) AS lineage,list(tier) AS tiers FROM {source}
+           list(fact_id ORDER BY model_quantity,fact_id) AS lineage,
+           list(tier ORDER BY model_quantity,fact_id) AS tiers FROM {source}
           WHERE period_end=quarter_end AND model_quantity IN ('operating_lease_liability_current','operating_lease_liability_noncurrent',
            'finance_lease_liability_current','finance_lease_liability_noncurrent') GROUP BY ALL)
          SELECT 'lev_debt_and_leases_to_operating_income_plus_da',lease.group_id,lease.quarter_start,lease.quarter_end,'{view}',lease.snapshot_at,

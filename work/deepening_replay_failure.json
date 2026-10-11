@@ -1,0 +1,80 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "verified_at": "2026-10-11T08:32:51.242238+00:00",
+  "method": "Offline full-cache reconstruction; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.",
+  "input_manifest_unchanged": true,
+  "changed_inputs": [],
+  "tables": {
+    "documents": {
+      "rows": 7288,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "2bb9692c53b6fe6d4ea7d75c6d26909a04138c8eed2ff1a59c1fbf01622b2246",
+      "replay_sha256": "2bb9692c53b6fe6d4ea7d75c6d26909a04138c8eed2ff1a59c1fbf01622b2246"
+    },
+    "facts": {
+      "rows": 766617,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "5d9c76c368344d85652b600efb7b43b3c52ccedb5c99e4dfd9065b10576fa4c3",
+      "replay_sha256": "5d9c76c368344d85652b600efb7b43b3c52ccedb5c99e4dfd9065b10576fa4c3"
+    },
+    "observations": {
+      "rows": 17088,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "98f85b8d3271905cd5da1810a2ffb9f0623f47e3e8fb7526507d7e83c860e30c",
+      "replay_sha256": "98f85b8d3271905cd5da1810a2ffb9f0623f47e3e8fb7526507d7e83c860e30c"
+    },
+    "entities": {
+      "rows": 646,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "3d1cda4ad1fe20769435710f4b3f110f3fc304a5d7f5673f3f85a1755c7a5cf9",
+      "replay_sha256": "3d1cda4ad1fe20769435710f4b3f110f3fc304a5d7f5673f3f85a1755c7a5cf9"
+    },
+    "links": {
+      "rows": 827,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "1667c3dbc5ed7447b8dccae88246c358a4d80ccfcbc40bbaa8c74547ca73c18d",
+      "replay_sha256": "1667c3dbc5ed7447b8dccae88246c358a4d80ccfcbc40bbaa8c74547ca73c18d"
+    },
+    "measures": {
+      "rows": 269635,
+      "original_only": 1,
+      "replay_only": 1,
+      "identical": false,
+      "original_sha256": "611dcbee5946e15a70b21390cc18552964173dfc4895e22d7e68cc8e4be64c90",
+      "replay_sha256": "026380af953dcfb0ce9ad719a1d99b707cc8c7dcb0c105ee6dac845d7a24350a"
+    },
+    "controls": {
+      "rows": 155140,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "27a990703554a9dcdb9adbea3b0d05594439ba6bed9e26a10cd11030f60139f5",
+      "replay_sha256": "36886d31e9ee40172969e32840b1416f836ed43dbf06f667ebfdfbda52887841"
+    },
+    "exclusions": {
+      "rows": 16308,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "c272961795e8d42d50afaa25ad0bfd4b266a8c4739448b8e71e78a219885223b",
+      "replay_sha256": "c272961795e8d42d50afaa25ad0bfd4b266a8c4739448b8e71e78a219885223b"
+    }
+  },
+  "all_tables_identical": false,
+  "independent_audit_performed": false,
+  "cause": "Unordered lease-component list aggregation changed only one evidence_profile; values, statuses, source IDs and every other table matched.",
+  "resolution": "Order paired source-ID and tier lists by model quantity and fact ID; order working-capital profiles by term and lineage; rebuild and compare anew.",
+  "resolved": false,
+  "additional_finding": "Stock note anchors keyed only by group and end date could choose MRVL acquisition-context start instead of its numbered fiscal quarter; corrected and regression tested.",
+  "post_fix_financial_values_and_statuses_unchanged": true
+}

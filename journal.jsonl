@@ -8063,3 +8063,4 @@
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-11T07:53:12.785163+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 3572, "remaining_unique_keys": 3, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-11T08:13:48.285687+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 3575, "remaining_unique_keys": 0, "final_delivery": false}
 {"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-11T08:28:24.487442+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 3575, "remaining_unique_keys": 0, "final_delivery": false}
+{"as_of": "2026-10-09T10:24:21.129672+00:00", "timestamp": "2026-10-11T08:48:35.595413+00:00", "event": "intermediate_checkpoint", "completed_unique_keys": 3575, "remaining_unique_keys": 0, "final_delivery": false}

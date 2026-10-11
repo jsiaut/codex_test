@@ -154,14 +154,32 @@ def metric(quantity):
     return None
 
 
+def note_anchor_map(universe,cutoff_rows):
+    """A dated stock uses the published fiscal quarter, not an acquisition context."""
+    numbered={(q['group_id'],q['period_start'],q['period_end']) for q in universe['quarters']
+              if q.get('quarter_number') is not None}
+    candidates=defaultdict(list)
+    for group,start,end,cutoff in cutoff_rows:
+        candidates[(group,str(end))].append((str(start),str(cutoff)))
+    result={}
+    for (group,end),choices in candidates.items():
+        official=sorted({(start,cutoff) for start,cutoff in choices if (group,start,end) in numbered})
+        available=official or sorted(set(choices))
+        starts={start for start,cutoff in available}
+        # Multiple unnumbered context starts do not establish one fiscal quarter.
+        start=next(iter(starts)) if len(starts)==1 else 'none'
+        result[(group,end)]=(start,min(cutoff for _,cutoff in available))
+    return result
+
+
 def components(db, root, as_of):
     """Publish all monetary note components and mapped metrics, without sums."""
     if not opened(root):
         return
     result = []
     selections = rows(db, 'SELECT * FROM usable_observations WHERE amount IS NOT NULL')
-    cutoffs = {(g, str(e)): (str(s),str(t)) for g, s, e, t in
-               db.execute('SELECT * FROM quarter_cutoffs').fetchall()}
+    cutoffs = note_anchor_map(json.loads((root/'work/expected_universe.json').read_text()),
+                              db.execute('SELECT * FROM quarter_cutoffs').fetchall())
     quantities = defaultdict(int)
     for o in selections:
         end = str(o.get('period_end') or o.get('event_date') or '')

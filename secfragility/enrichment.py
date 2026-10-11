@@ -27,7 +27,8 @@ def run(db,as_of):
            status,nd_reason,coverage_state,knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework)
          WITH debt AS (SELECT group_id,quarter_start,quarter_end,snapshot_at,unit,accounting_framework,reporting_scope,
            sum(value) AS value,count(DISTINCT model_quantity) AS terms,max(knowledge_date) AS knowledge_date,
-           list(fact_id) AS lineage,list(tier) AS tiers FROM {s} WHERE period_end=quarter_end
+           list(fact_id ORDER BY model_quantity,fact_id) AS lineage,
+           list(tier ORDER BY model_quantity,fact_id) AS tiers FROM {s} WHERE period_end=quarter_end
            AND model_quantity IN ('debt_carrying_current','debt_carrying_noncurrent') GROUP BY ALL)
           SELECT 'lev_debt_and_leases_to_operating_income_plus_da',d.group_id,d.quarter_start,d.quarter_end,'{view}',d.snapshot_at,
            'debt','long_term_carrying_only',exact_ratio6(d.value,op.value+da.value),'ratio',d.value,op.value+da.value,

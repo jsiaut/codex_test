@@ -10,6 +10,8 @@ def environment(tmp_path):
     (tmp_path/'work').mkdir()
     (tmp_path/'schema.sql').write_text((source/'schema.sql').read_text())
     (tmp_path/'work/extension_authorization.json').write_text(json.dumps({'components':['lease_note']}))
+    (tmp_path/'work/expected_universe.json').write_text(json.dumps({'quarters':[
+        {'group_id':'S','period_start':'2026-01-01','period_end':'2026-03-31','quarter_number':1}]}))
     db=create(tmp_path)
     db.execute('CREATE TEMP TABLE quarter_cutoffs (group_id VARCHAR, period_start DATE, period_end DATE, cutoff TIMESTAMPTZ)')
     db.execute("INSERT INTO quarter_cutoffs VALUES ('S','2026-01-01','2026-03-31','2026-04-30T12:00:00Z')")
