@@ -1,0 +1,96 @@
+[
+  {
+    "index": 332,
+    "classification": "context_only",
+    "summary": "JuinHTM17,454 M$coût/net vs17,435FV,19klatentnoncash, toutes≤1an. MMF14,051 déjàcashéquivalentNAV ; pasplacementIAprimaireidentifié.",
+    "rows": [
+      {
+        "quote": "Within one year",
+        "model_quantity": "june_short_marketables_cost_fv_cash_equivalent_overlap",
+        "stage": "recognized",
+        "issuer_treatment": "JuinHTM17,454 M$coût/net vs17,435FV,19klatentnoncash, toutes≤1an. MMF14,051 déjàcashéquivalentNAV ; pasplacementIAprimaireidentifié."
+      }
+    ]
+  },
+  {
+    "index": 333,
+    "classification": "material",
+    "summary": "Programmeachat10 M$ terminé1août2026 ; disponibilité6,6 M$àjuin n’est pasprogrammeencoreactifaprèsaoût ni dépense. Financementréeloptions/ESPP mentionné, sansCWcash.",
+    "rows": [
+      {
+        "quote": "on which date the plan terminated",
+        "model_quantity": "buyback_program_terminated_august_not_current_capacity",
+        "stage": "recognized",
+        "issuer_treatment": "Programmeachat10 M$ terminé1août2026 ; disponibilité6,6 M$àjuin n’est pasprogrammeencoreactifaprèsaoût ni dépense. Financementréeloptions/ESPP mentionné, sansCWcash."
+      }
+    ]
+  },
+  {
+    "index": 334,
+    "classification": "material",
+    "summary": "Juin servicesnoncancelables1,5reste2026+3,6/2,2/1 jusqu’à2029=8,3 M$, nouveauxstocknepasajouter5,1mars. Indemnitésinestimablesnonprovisionnées restentcontingentes.",
+    "rows": [
+      {
+        "quote": "not possible to reasonably estimate the maximum potential amount",
+        "model_quantity": "june_nonlease_8_3m_commitment_stock_and_unquantified_indemnities",
+        "stage": "recognized",
+        "issuer_treatment": "Juin servicesnoncancelables1,5reste2026+3,6/2,2/1 jusqu’à2029=8,3 M$, nouveauxstocknepasajouter5,1mars. Indemnitésinestimablesnonprovisionnées restentcontingentes.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 335,
+    "classification": "context_only",
+    "summary": "H1 revenu81,379 M$ inclT242,713/T138,666 ; pertes11,236 inclT25,089, segmentunique nonisoléIA. AdjustedexclutDA7,783/AM5,702/SBC15,471/restruct3,512 ; SBCrestruct0,6 ailleurs donc pasdoubler. Pas revenucommittedstorage avantT3 selonpolicy.",
+    "rows": [
+      {
+        "quote": "one operating and reportable segment",
+        "model_quantity": "halfyear_segment_single_scope_no_ai_cash_inference",
+        "stage": "recognized",
+        "issuer_treatment": "H1 revenu81,379 M$ inclT242,713/T138,666 ; pertes11,236 inclT25,089, segmentunique nonisoléIA. AdjustedexclutDA7,783/AM5,702/SBC15,471/restruct3,512 ; SBCrestruct0,6 ailleurs donc pasdoubler. Pas revenucommittedstorage avantT3 selonpolicy."
+      }
+    ]
+  },
+  {
+    "index": 336,
+    "classification": "material",
+    "summary": "Juin NOrevenucommittedcapacity/managedstorage H1, commencementrevenuattenduT3 uniquementcapacitédisponible/déployée. Actionsaccordéesclient réduisenttransactionprice selonmêmerythmerevenu ; ASU2025-04 adoptéanticipationjan2026, pas cashprimaire. Duréeéquipement6ans réduitDAH11,7 M$(inclT20,8), noncash. DeuxclientsAR27%anonymes nepeuventêtrenommésCW, fournisseurcash14%idem.",
+    "rows": [
+      {
+        "quote": "Therefore, no related revenue was recognized during the three and six months ended June 30, 2026.",
+        "model_quantity": "committed_capacity_revenue_zero_predeployment_customer_equity_contrarevenue",
+        "stage": "recognized",
+        "issuer_treatment": "Juin NOrevenucommittedcapacity/managedstorage H1, commencementrevenuattenduT3 uniquementcapacitédisponible/déployée. Actionsaccordéesclient réduisenttransactionprice selonmêmerythmerevenu ; ASU2025-04 adoptéanticipationjan2026, pas cashprimaire. Duréeéquipement6ans réduitDAH11,7 M$(inclT20,8), noncash. DeuxclientsAR27%anonymes nepeuventêtrenommésCW, fournisseurcash14%idem.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 337,
+    "classification": "context_only",
+    "summary": "JuinFV31,486 M$ dontMMF14,051 déjàcash+HTM17,435 ; NAVhorshiérarchie, aucunL3récurentidentifié. AucuneimpairmentnonrécurrentematérielleH1, sanspreuveabsencefuturrisqueIA.",
+    "rows": [
+      {
+        "quote": "There were no material assets or liabilities that were measured at fair value on a non-recurring basis",
+        "model_quantity": "june_generic_liquidity_investments_not_ai_or_new_impairment",
+        "stage": "recognized",
+        "issuer_treatment": "JuinFV31,486 M$ dontMMF14,051 déjàcash+HTM17,435 ; NAVhorshiérarchie, aucunL3récurentidentifié. AucuneimpairmentnonrécurrentematérielleH1, sanspreuveabsencefuturrisqueIA."
+      }
+    ]
+  },
+  {
+    "index": 338,
+    "classification": "material",
+    "summary": "Juin financebaux46,713 M$bilan vs55,723brut ; operating35,724 vs44,191+services11,767 horsbilan. CashH1intérêts2,292/rent3,747 distinct19,108equipment/13,082ROUnoncash. NouveaujuinDC3,8 M$noncommencéT3 etexpansionjuillet1,5 M$T4 horsjuin/table, total5,3 futur sans mélangerdates. Ancien17,5 M$expansion prévuT2 nonrépété ; ne pasconclureannulationniadditionautomaticauxstocksjuin sansrapprochement.",
+    "rows": [
+      {
+        "quote": "not included in the lease obligations presented in the table above",
+        "model_quantity": "june_july_uncommenced_5_3m_and_operating_nonlease_off_balance",
+        "stage": "recognized",
+        "issuer_treatment": "Juin financebaux46,713 M$bilan vs55,723brut ; operating35,724 vs44,191+services11,767 horsbilan. CashH1intérêts2,292/rent3,747 distinct19,108equipment/13,082ROUnoncash. NouveaujuinDC3,8 M$noncommencéT3 etexpansionjuillet1,5 M$T4 horsjuin/table, total5,3 futur sans mélangerdates. Ancien17,5 M$expansion prévuT2 nonrépété ; ne pasconclureannulationniadditionautomaticauxstocksjuin sansrapprochement.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
