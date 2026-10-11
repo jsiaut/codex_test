@@ -1,0 +1,95 @@
+[
+  {
+    "index": 377,
+    "classification": "material",
+    "summary": "MSD : ASC946, filiales de financement consolidées mais investissements opérationnels non consolidés ; soldes intercompagnies éliminés. Cash restreint comprend collatéral de dérivés et escrow de préfinancement. PIK accru capitalise le principal, généralement payable à maturité ; régime RIC impose sa distribution sans encaissement préalable. Non-accrual généralement à 90 jours ou doute de recouvrement, avec exceptions liées au collatéral ; ne pas supposer 0 PIK ou absence de risque si la position reste accrual. FV déterminée par conseiller, revue indépendante au moins annuelle pour les positions matérielles illiquides, pas garantie de prix réalisable en vente forcée.",
+    "rows": [
+      {
+        "quote": "this non-cash source of income must be paid out to shareholders in the form of dividends",
+        "model_quantity": "msd_pik_distribution_without_cash",
+        "stage": "recognized",
+        "issuer_treatment": "MSD : ASC946, filiales de financement consolidées mais investissements opérationnels non consolidés ; soldes intercompagnies éliminés. Cash restreint comprend collatéral de dérivés et escrow de préfinancement. PIK accru capitalise le principal, généralement payable à maturité ; régime RIC impose sa distribution sans encaissement préalable. Non-accrual généralement à 90 jours ou doute de recouvrement, avec exceptions liées au collatéral ; ne pas supposer 0 PIK ou absence de risque si la position reste accrual. FV déterminée par conseiller, revue indépendante au moins annuelle pour les positions matérielles illiquides, pas garantie de prix réalisable en vente forcée.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 378,
+    "classification": "material",
+    "summary": "MSD : frais de gestion avant cotation 0,75 % sur actifs bruts hors cash, y compris actifs financés par dette mais hors capital non appelé ; 1,25 % seulement après cotation. Incentive sur revenu 15 %, hurdle trimestriel 1,5 %/catch-up 1,765 % ; accrual capital gains non réalisés sans paiement immédiat. Frais FY gestion 40,220 M$, incentive revenu 47,218 M$, reprise capital gains −0,972 M$. Acquisition initiale secondaire affiliée et autorisation de co-investissements ne prouvent pas des investissements IA primaires nouveaux.",
+    "rows": [
+      {
+        "quote": "gross assets means the Company’s total assets determined on a consolidated basis",
+        "model_quantity": "msd_related_fees_on_leveraged_gross_assets",
+        "stage": "recognized",
+        "issuer_treatment": "MSD : frais de gestion avant cotation 0,75 % sur actifs bruts hors cash, y compris actifs financés par dette mais hors capital non appelé ; 1,25 % seulement après cotation. Incentive sur revenu 15 %, hurdle trimestriel 1,5 %/catch-up 1,765 % ; accrual capital gains non réalisés sans paiement immédiat. Frais FY gestion 40,220 M$, incentive revenu 47,218 M$, reprise capital gains −0,972 M$. Acquisition initiale secondaire affiliée et autorisation de co-investissements ne prouvent pas des investissements IA primaires nouveaux."
+      }
+    ]
+  },
+  {
+    "index": 379,
+    "classification": "material",
+    "summary": "MSD : dette nominale 3,251 Md$, valeur bilan 3,208605 Md$, capacité engagée 3,905 Md$ et inutilisée 654 M$ distinctes. SPV I 474 M$/2030, SPV II 727 M$/2030, CLO tiers 390 M$/2035, revolver 160 M$/2029 ; dates anciennes de 2026/2028 remplacées par extensions. Subscription Facility terminée décembre 2024, repo 52 M$ de 2024 non courant à fin 2025. CLO ~600 M$ inclut Class C 36 M$ et preferred 163,6 M$ détenus par MSD et éliminés : ne pas les ajouter aux 390 M$ de dette externe. Intérêts FY 201,095 M$ incluent accretion/amortissement, distincts de cash payé.",
+    "rows": [
+      {
+        "quote": "Both the Class C Notes and Preferred Shares are eliminated in consolidation.",
+        "model_quantity": "msd_debt_maturities_and_internal_clo_elimination",
+        "stage": "recognized",
+        "issuer_treatment": "MSD : dette nominale 3,251 Md$, valeur bilan 3,208605 Md$, capacité engagée 3,905 Md$ et inutilisée 654 M$ distinctes. SPV I 474 M$/2030, SPV II 727 M$/2030, CLO tiers 390 M$/2035, revolver 160 M$/2029 ; dates anciennes de 2026/2028 remplacées par extensions. Subscription Facility terminée décembre 2024, repo 52 M$ de 2024 non courant à fin 2025. CLO ~600 M$ inclut Class C 36 M$ et preferred 163,6 M$ détenus par MSD et éliminés : ne pas les ajouter aux 390 M$ de dette externe. Intérêts FY 201,095 M$ incluent accretion/amortissement, distincts de cash payé."
+      }
+    ]
+  },
+  {
+    "index": 380,
+    "classification": "context",
+    "summary": "MSD : investissements post-2025 en prêts Kite UK, True Talent, CargoTuff et Tequilas Premium, montants non fournis ; pas d’attribution IA par défaut. Distribution 0,57/action déclarée 9 mars, payable 27 mars, événement postérieur au bilan, pas preuve dans cette note du paiement effectué. Évaluation des événements jusqu’au 25 mars uniquement.",
+    "rows": [
+      {
+        "quote": "The distributions will be payable on March 27, 2026",
+        "model_quantity": "msd_post_year_end_distribution_declared",
+        "stage": "recognized",
+        "issuer_treatment": "MSD : investissements post-2025 en prêts Kite UK, True Talent, CargoTuff et Tequilas Premium, montants non fournis ; pas d’attribution IA par défaut. Distribution 0,57/action déclarée 9 mars, payable 27 mars, événement postérieur au bilan, pas preuve dans cette note du paiement effectué. Évaluation des événements jusqu’au 25 mars uniquement."
+      }
+    ]
+  },
+  {
+    "index": 381,
+    "classification": "material",
+    "summary": "MSD T1 : conventions et base de frais inchangées après réorganisation ; gestion 12,495 M$, incentive revenu 13,734 M$, reprise capital gains −2,995 M$, administration 0,875 M$. Le coût sur actifs bruts inclut le levier ; reprise de frais liée à valorisation ne prouve pas encaissement. Autorisation de co-investissement soumise aux conditions et surveillance du conseil, non preuve de cash primaire IA.",
+    "rows": [
+      {
+        "quote": "capital gains incentive fee",
+        "model_quantity": "msd_q1_related_fees_and_reversals",
+        "stage": "recognized",
+        "issuer_treatment": "MSD T1 : conventions et base de frais inchangées après réorganisation ; gestion 12,495 M$, incentive revenu 13,734 M$, reprise capital gains −2,995 M$, administration 0,875 M$. Le coût sur actifs bruts inclut le levier ; reprise de frais liée à valorisation ne prouve pas encaissement. Autorisation de co-investissement soumise aux conditions et surveillance du conseil, non preuve de cash primaire IA."
+      }
+    ]
+  },
+  {
+    "index": 382,
+    "classification": "context",
+    "summary": "MSD : après mars, prêt senior Anvil Bidco sans montant indiqué ; pas de lien IA nommé. L’affirmation d’absence d’autres événements déclarables est limitée à la période examinée jusqu’au 13 mai 2026.",
+    "rows": [
+      {
+        "quote": "the Company invested in the senior secured loan of Anvil Bidco.",
+        "model_quantity": "msd_q1_subsequent_anvil_loan",
+        "stage": "recognized",
+        "issuer_treatment": "MSD : après mars, prêt senior Anvil Bidco sans montant indiqué ; pas de lien IA nommé. L’affirmation d’absence d’autres événements déclarables est limitée à la période examinée jusqu’au 13 mai 2026."
+      }
+    ]
+  },
+  {
+    "index": 383,
+    "classification": "material",
+    "summary": "MSD mars : portefeuille et cash FV 6,951490 Md$, L3 6,209999 Md$/89,33 % contre 86,56 % décembre ; achats L3 820,057 M$ incluent PIK, transferts de hiérarchie liés aux fournisseurs de prix et non à des flux cash. Dépréciation non réalisée L3 −30,134 M$. Table des inputs étiquette « Subordinated debt » à 13,940 M$ alors que hiérarchie total sub debt 0,350 M$ et equity 15,836 M$ : conserver incohérence de libellé, ne pas corriger arbitrairement. Dette sélectionnée nominale 1,25 Md$/FV 1,255414 Md$, hors autres dettes.",
+    "rows": [
+      {
+        "quote": "Since these prices are non-binding, they may not be indicative of fair value.",
+        "model_quantity": "msd_q1_level3_and_source_label_inconsistency",
+        "stage": "recognized",
+        "issuer_treatment": "MSD mars : portefeuille et cash FV 6,951490 Md$, L3 6,209999 Md$/89,33 % contre 86,56 % décembre ; achats L3 820,057 M$ incluent PIK, transferts de hiérarchie liés aux fournisseurs de prix et non à des flux cash. Dépréciation non réalisée L3 −30,134 M$. Table des inputs étiquette « Subordinated debt » à 13,940 M$ alors que hiérarchie total sub debt 0,350 M$ et equity 15,836 M$ : conserver incohérence de libellé, ne pas corriger arbitrairement. Dette sélectionnée nominale 1,25 Md$/FV 1,255414 Md$, hors autres dettes.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
