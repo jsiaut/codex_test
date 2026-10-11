@@ -46,7 +46,7 @@ def load(db,root,as_of):
     recovered=json.loads(recovered_bounds.read_text()) if recovered_bounds.exists() else []
     recovered_accessions={r['accession'] for r in recovered
         if any(q['accession']==r['accession'] and q['content_key'] in valid_keys for q in queue)}
-    for filename in ['work/block_exclusions.json','work/section_exclusions.json','work/extension_exclusions.json','work/deepening_scope_exclusions.json']:
+    for filename in ['work/block_exclusions.json','work/section_exclusions.json','work/extension_exclusions.json','work/deepening_scope_exclusions.json','work/expansion/scope_exclusions.json']:
         p=root/filename
         if p.exists():
             for rank,r in enumerate(json.loads(p.read_text())):
@@ -74,7 +74,9 @@ def load(db,root,as_of):
     from .extension_assembly import interpretations, opened
     interpretations(db,root,as_of)
     db.execute('''CREATE VIEW usable_observations AS SELECT o.* FROM interpreted_observations o
-      WHERE NOT abstained AND tier IN ('A','B','C','D') AND filing_status='filed'
+      WHERE NOT abstained AND tier IN ('A','B','C','D') AND (filing_status='filed'
+        OR (filing_status='furnished' AND EXISTS (SELECT 1 FROM documents d
+         WHERE d.document_id=o.document_id AND d.incorporated_by_reference)))
        AND EXISTS (SELECT 1 FROM documents d WHERE d.document_id=o.document_id
         AND d.acceptance_datetime IS NOT NULL AND d.acceptance_datetime<=o.as_of)
        AND NOT EXISTS (SELECT 1 FROM excluded_observations q WHERE q.observation_id=o.observation_id)

@@ -36,6 +36,9 @@ def capture(root):
         'deepening_reading_queue.json','deepening_contract_queue.json','deepening_series_diagnostic.json',
         'deepening_candidate_dispositions.json'])
     names.update(['config.yaml','schema.sql','queries.sql','requirements.txt'])
+    if (root/'work/expansion').exists():
+        names.update(str(p.relative_to(root)) for p in (root/'work/expansion').glob('*.json'))
+        names.update(str(p.relative_to(root)) for p in (root/'work/expansion').glob('author*.py'))
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 

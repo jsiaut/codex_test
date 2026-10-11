@@ -1,0 +1,15 @@
+[
+  {
+    "accession": "0001104659-26-094844",
+    "proof_path": "work/deepening_data/0001104659-26-094844/nbis-20260812x6k.htm",
+    "proof_url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812x6k.htm",
+    "proof_sha256": "3fba210b8d58cb865746d29945dcf9bb66db08bf23df4f77ca894e4e8d94da5c",
+    "quote": "This Report on Form 6-K is hereby incorporated by reference into the Company’s Registration Statements on Form F-3ASR (File No. 333-286932) and Form S-8 (File No. 333-286934), including any prospectuses forming a part of such Registration Statements, to the extent not superseded by documents or reports subsequently filed or furnished.",
+    "qualified_urls": [
+      "https://www.sec.gov/Archives/edgar/data/1513845/000110465926094844/nbis-20260812xex99d2.htm"
+    ],
+    "financial_assurance": "unknown",
+    "evidence_tier": "C",
+    "filing_status": "furnished"
+  }
+]

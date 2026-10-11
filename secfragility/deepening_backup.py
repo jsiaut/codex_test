@@ -7,6 +7,14 @@ import zstandard
 
 def source_paths(root):
     paths={r['path'] for r in json.loads((root/'work/queue.json').read_text())}
+    expansion=root/'work/expansion/queue.json'
+    if expansion.exists():paths.update(r['path'] for r in json.loads(expansion.read_text()))
+    collection=json.loads((root/'work/collection.json').read_text())
+    as_of=json.loads((root/'work/run.json').read_text())['as_of']
+    version=as_of.replace(':','-').replace('+','_')
+    for source in collection['companyfacts'].values():
+        paths.add(source['path'])
+        paths.add(str(Path('cache/api')/hashlib.sha256(source['url'].encode()).hexdigest()/(version+'.bin.zst')))
     for f in json.loads((root/'work/deepening_filings.json').read_text()).values():
         paths.update(r['path'] for r in f['resources'].values())
         d=f['discovery']

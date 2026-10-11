@@ -35,6 +35,8 @@ def run(root,reconstruct=False,resume=False):
     if (root/'work/deepening_authorization.json').exists():
         from .deepening_assembly import load_sources
         load_sources(db,root,as_of)
+    from .expansion_assembly import qualify_documents
+    qualify_documents(db,root)
     collection=json.loads((root/'work/collection.json').read_text())
     from .mapping import refresh
     refresh(db,root,collection)

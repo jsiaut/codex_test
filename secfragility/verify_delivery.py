@@ -47,7 +47,9 @@ def run(db,root,as_of):
         reason=None
         if any(not source(k) for k in keys):reason='unresolved_numeric_lineage'
         elif not keys:reason='missing_numeric_lineage'
-        elif any(t.get('tier') in ('E','F') or t.get('filing_status')!='filed' for t in terms):reason='inadmissible_numeric_evidence'
+        elif any(t.get('tier') in ('E','F') or (t.get('filing_status')!='filed' and not
+            (t.get('filing_status')=='furnished' and docs.get(t.get('document_id'),{}).get('incorporated_by_reference')))
+            for t in terms):reason='inadmissible_numeric_evidence'
         elif any(t['source_id'] in blocked or t['source_id'] in ineligible or t.get('abstained') for t in terms):reason='quarantined_numeric_dependency'
         elif m['view']=='as_known' and (not m['information_cutoff'] or any(
             t.get('knowledge_date') and str(t['knowledge_date'])>str(m['information_cutoff'])[:10] for t in terms)):

@@ -156,6 +156,8 @@ def assemble(db,root,as_of):
         records.append(row);index[norm].append(row)
         if not confirmed:exclusion(db,as_of,'pending_entity','entity',eid,entity_id=eid,counterparty_id=eid,
             detail='Name retained without alias, jurisdiction or consolidation guess.',coverage_state='unknown')
+    from .expansion_assembly import reported_control
+    reported_control(records,index,observations)
     for row in records:insert(db,'entities',row)
     mrvl=next((o for o in observations if o.get('model_quantity')=='new_parent_subsidiary_structure_actual'),None)
     if mrvl:
