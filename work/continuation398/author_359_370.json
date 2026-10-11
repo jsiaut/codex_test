@@ -1,0 +1,165 @@
+[
+  {
+    "index": 359,
+    "classification": "context_only",
+    "summary": "Segmentunique performance variationnetassetsavecFVnoncash, pascashprofitCW isolé.",
+    "rows": [
+      {
+        "quote": "Net increase (decrease) in net assets resulting from operations",
+        "model_quantity": "march_single_bdc_segment_not_ai_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Segmentunique performance variationnetassetsavecFVnoncash, pascashprofitCW isolé."
+      }
+    ]
+  },
+  {
+    "index": 360,
+    "classification": "material",
+    "summary": "Mars GECCO20 M$remboursés31mars+0,4rachatsT1, remainder18,628 M$juin26 encoreouvertmars etnotice27mai. Coverage161,8% vsmin150, dettes174,028 M$. Retirer20déjàsettleddelamaturitéfuture sanssupposer18,628 déjàpaidmars.",
+    "rows": [
+      {
+        "quote": "we redeemed $20.0 million",
+        "model_quantity": "gecco_march_redemption_actual_remaining_maturity",
+        "stage": "recognized",
+        "issuer_treatment": "Mars GECCO20 M$remboursés31mars+0,4rachatsT1, remainder18,628 M$juin26 encoreouvertmars etnotice27mai. Coverage161,8% vsmin150, dettes174,028 M$. Retirer20déjàsettleddelamaturitéfuture sanssupposer18,628 déjàpaidmars."
+      }
+    ]
+  },
+  {
+    "index": 361,
+    "classification": "material",
+    "summary": "Mars GESF37,790/CLOJV37,590 M$=75,380, controlledActnonconsolidésportfolios. PasgrossadditionsT1, pertesFV4,507 etincome812+div2,546 nonadditionauxactifsfund. GESF/CLO résumésprofitneprouventpascashCWII/IV.",
+    "rows": [
+      {
+        "quote": "unconsolidated controlled portfolio companies",
+        "model_quantity": "controlled_portfolio_nav_no_new_contribution",
+        "stage": "recognized",
+        "issuer_treatment": "Mars GESF37,790/CLOJV37,590 M$=75,380, controlledActnonconsolidésportfolios. PasgrossadditionsT1, pertesFV4,507 etincome812+div2,546 nonadditionauxactifsfund. GESF/CLO résumésprofitneprouventpascashCWII/IV.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 362,
+    "classification": "material",
+    "summary": "Mars0revolvercap50 M$subjectborrowingbase ; spring31mai2026 liéeGECCO18,628 encoreouvert. Intérêts4,256 M$incl3,787borrowing+428amort+41extcost, annualweighted8,9 pasPIK. Notes174,028principal/FV174,036 mêmesdettes360 nonàdoubler.",
+    "rows": [
+      {
+        "quote": "there were no borrowings outstanding under the revolving line",
+        "model_quantity": "march_undrawn_revolver_springing_and_interest_cash_split",
+        "stage": "recognized",
+        "issuer_treatment": "Mars0revolvercap50 M$subjectborrowingbase ; spring31mai2026 liéeGECCO18,628 encoreouvert. Intérêts4,256 M$incl3,787borrowing+428amort+41extcost, annualweighted8,9 pasPIK. Notes174,028principal/FV174,036 mêmesdettes360 nonàdoubler."
+      }
+    ]
+  },
+  {
+    "index": 363,
+    "classification": "material",
+    "summary": "Mars unfunded1,304 M$Activ8HealthDDTL nommé santé pasCW. CFOpositifconclusionliquiditésuffisante diffDecnégatif ; revolvingcapnoncash. Intrepidlitigestatussansmontantloss pasabsencecontingence.",
+    "rows": [
+      {
+        "quote": "Activ8 Health, LLC",
+        "model_quantity": "named_health_unfunded_not_coreweave",
+        "stage": "recognized",
+        "issuer_treatment": "Mars unfunded1,304 M$Activ8HealthDDTL nommé santé pasCW. CFOpositifconclusionliquiditésuffisante diffDecnégatif ; revolvingcapnoncash. Intrepidlitigestatussansmontantloss pasabsencecontingence."
+      }
+    ]
+  },
+  {
+    "index": 364,
+    "classification": "material",
+    "summary": "Juin FV272,252 M$inclL3170,706/NAV43,960 ; NAVtroisvehiculesannualwithdrawlimit. L3purchasesH144,562 inclPIK/noncash/T116,914, pasallnewprimarycash. EquityL3loss5,572 générique pasattributionCW. Transparencetransfers6,474netscope note differs quarterlynumbersnonaddstocks.",
+    "rows": [
+      {
+        "quote": "capitalized PIK income",
+        "model_quantity": "halfyear_level3_purchases_not_primary_cash_and_nav_illiquid",
+        "stage": "recognized",
+        "issuer_treatment": "Juin FV272,252 M$inclL3170,706/NAV43,960 ; NAVtroisvehiculesannualwithdrawlimit. L3purchasesH144,562 inclPIK/noncash/T116,914, pasallnewprimarycash. EquityL3loss5,572 générique pasattributionCW. Transparencetransfers6,474netscope note differs quarterlynumbersnonaddstocks.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 365,
+    "classification": "material",
+    "summary": "GECCOremaining18,6 M$rembourséintégral27mai ; pluséchéancejuin2026 ouverte. Notesjun155,4 M$(56,5+41,4+57,5), coverage166,4%min150. GECCI6,5 M$redemptionnotice20juillet pour19août postjuin, paspaidprouvéaujuin.",
+    "rows": [
+      {
+        "quote": "we redeemed the remaining $18.6 million",
+        "model_quantity": "gecco_fully_retired_may_no_2026_remaining_notes",
+        "stage": "recognized",
+        "issuer_treatment": "GECCOremaining18,6 M$rembourséintégral27mai ; pluséchéancejuin2026 ouverte. Notesjun155,4 M$(56,5+41,4+57,5), coverage166,4%min150. GECCI6,5 M$redemptionnotice20juillet pour19août postjuin, paspaidprouvéaujuin."
+      }
+    ]
+  },
+  {
+    "index": 366,
+    "classification": "material",
+    "summary": "H1NAV7,95/action vs8,07Dec etnetassets110,418, NII0,68>distribution0,55 MAISwaiver3,711 M$noncashinclus, pascouverturecashdémontrée. Realized0,40/unrealized-0,67. Ratiosannualisés14,95%NII nepaslireH1rendementcoupon.",
+    "rows": [
+      {
+        "quote": "The calculation excludes the impact of the incentive fee waivers.",
+        "model_quantity": "halfyear_nii_dividend_coverage_requires_non_cash_waiver_adjustment",
+        "stage": "recognized",
+        "issuer_treatment": "H1NAV7,95/action vs8,07Dec etnetassets110,418, NII0,68>distribution0,55 MAISwaiver3,711 M$noncashinclus, pascouverturecashdémontrée. Realized0,40/unrealized-0,67. Ratiosannualisés14,95%NII nepaslireH1rendementcoupon.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 367,
+    "classification": "material",
+    "summary": "H1feeswaivercumul3,711 M$=stock2,267+H1accrual1,444, inclT12,810 ; T2incrément901kcalculé pas3,711nouveauenplusT1. Aucunrecapture/fee payable0juin, amélioreNII/NAVnoncash. Basefees2,087 H1/payable1,015/admin807/payable387k distincts. CashfeePIKdifféréjusqu’encaissementmitigant.",
+    "rows": [
+      {
+        "quote": "resulting in $3,711 of accrued and unpaid incentive fees.",
+        "model_quantity": "cumulative_3_711m_fee_waiver_not_cash_income_or_additive",
+        "stage": "recognized",
+        "issuer_treatment": "H1feeswaivercumul3,711 M$=stock2,267+H1accrual1,444, inclT12,810 ; T2incrément901kcalculé pas3,711nouveauenplusT1. Aucunrecapture/fee payable0juin, amélioreNII/NAVnoncash. Basefees2,087 H1/payable1,015/admin807/payable387k distincts. CashfeePIKdifféréjusqu’encaissementmitigant.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 368,
+    "classification": "material",
+    "summary": "RachatsH1108418×4,98$~539922$calculé inclT1106123actions ; plafond10 M$pasactual. ATMcumul13 M$net toujoursunchangé depuisDec, doncpascollecteH113 M$.",
+    "rows": [
+      {
+        "quote": "As of June 30, 2026, the Company has sold 1,163,753 shares",
+        "model_quantity": "halfyear_atm_cumulative_no_new_13m_cash",
+        "stage": "recognized",
+        "issuer_treatment": "RachatsH1108418×4,98$~539922$calculé inclT1106123actions ; plafond10 M$pasactual. ATMcumul13 M$net toujoursunchangé depuisDec, doncpascollecteH113 M$.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 369,
+    "classification": "material",
+    "summary": "T3dividend0,25$cashprévu30sept ne prouvepaspaiementjuin. GECCI6,5 M$noticeaoût pasremboursementcompleteddansnote, garderpostperiodsigned.",
+    "rows": [
+      {
+        "quote": "on August 19, 2026.",
+        "model_quantity": "post_june_gecci_redemption_notice_not_actual_settlement",
+        "stage": "recognized",
+        "issuer_treatment": "T3dividend0,25$cashprévu30sept ne prouvepaspaiementjuin. GECCI6,5 M$noticeaoût pasremboursementcompleteddansnote, garderpostperiodsigned.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 370,
+    "classification": "material",
+    "summary": "Juin revolver11 M$réeltiré, cap50/90conditionnel ; amend8juin échéance8juin2029 MAISspring31mars2029si8,5%notesnonrefinancées. Ancientspringmai2026 remplacé aprèsGECCOtotalrepay27mai. Totalnotes155,4+revolver11=166,4 M$principal pasFVcovenant166,4%confusion. IntérêtsH18,124inclborrowing7,261+808amort+55ext, T23,868déjàinclus. Covnetassets80/150%/bank300subsiste, coverage166,4actual.",
+    "rows": [
+      {
+        "quote": "March 31, 2029 if the Company’s 8.50% notes due 2029",
+        "model_quantity": "june_revolver_11m_drawn_new_2029_springing_gecco_retired",
+        "stage": "recognized",
+        "issuer_treatment": "Juin revolver11 M$réeltiré, cap50/90conditionnel ; amend8juin échéance8juin2029 MAISspring31mars2029si8,5%notesnonrefinancées. Ancientspringmai2026 remplacé aprèsGECCOtotalrepay27mai. Totalnotes155,4+revolver11=166,4 M$principal pasFVcovenant166,4%confusion. IntérêtsH18,124inclborrowing7,261+808amort+55ext, T23,868déjàinclus. Covnetassets80/150%/bank300subsiste, coverage166,4actual.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
