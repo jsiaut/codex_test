@@ -165,15 +165,16 @@ Les écarts sont conservés avec leurs deux termes, leur précision et leur expl
     health=['revenue_total','revenue_growth','capex_to_cfo','fcf_basic','fcf_after_counterparty_financing','receivables_collection_period',
             'rpo_total','liq_principal_due_to_cash','lev_debt_and_leases_to_operating_income_plus_da','lease_not_commenced_bridge']
     for g in sorted(inv['groups']):
-        gr=[m for m in measures if m['group_id']==g and m['view']=='as_known' and m['counterparty_id']=='none' and m['period_end']!='none']
+        gr=[m for m in measures if m['group_id']==g and m['view']=='revised' and m['counterparty_id']=='none' and m['period_end']!='none']
         latest=max((m['period_end'] for m in gr if m['measure']=='revenue_total' and m['status']=='computed'),default=max((m['period_end'] for m in gr),default='non établi'))
-        lines=[f'### {g}',f'Dernière période de revenu exploitable : {latest}. Les séries complètes sont dans series.csv ; les périodes fiscales et dates de publicité y sont distinctes.',
+        lines=[f'### {g}',f'Dernière période de revenu exploitable : {latest}. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.',
              '| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |','| --- | --- | ---: | --- | --- | --- |']
         for metric in health:
             items=[m for m in gr if m['measure']==metric and m['period_end']==latest]
             if not items:lines.append(f'| {metric} | — | ND | — | missing_admissible_terms | — |')
             for m in items:
-                lines.append(f"| {metric} | {m['term']} / {m['variant']} | {fnum(m['value'])} | {m['unit'] or '—'} | {m['status']} / {m['nd_reason'] or '—'} | {refs(m) or '—'} |")
+                display_value=(fnum(m['value_lower'])+' à '+fnum(m['value_upper'])) if m['status']=='bounded' else fnum(m['value'])
+                lines.append(f"| {metric} | {m['term']} / {m['variant']} | {display_value} | {m['unit'] or '—'} | {m['status']} / {m['nd_reason'] or m['bound_basis'] or '—'} | {refs(m) or '—'} |")
         lines.append('La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.')
         if g=='SPCX':lines.append('La présentation combinée de l’émetteur reste distincte du périmètre historique. Les tableaux annuels non balisés dont les contrôles n’ont pas abouti sont exclus ; aucune série annuelle de flux n’en est reconstruite. La série legacy_only hors ventilation sectorielle reste non déterminable.')
         group_sections.append('\n\n'.join(lines))

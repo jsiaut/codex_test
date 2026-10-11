@@ -1,0 +1,17 @@
+[
+  {
+    "group_id": "CRWV",
+    "period_end": "2026-06-30",
+    "accession": "0001769628-26-000366",
+    "block_path": "work/blocks/f62fdd82ced05993f5bf6714cc298c4017ae823f48860aff5454a39fa9e29d38.json",
+    "source_quote": "As of June 30, 2026, the future principal payments for the Company's total debt were as follows (in millions):\nYears Ending December 31, | | | | | | Amount | |\nRemaining portion of 2026 | | | | | | $ | 4,413 |\n2027 | | | | | | 6,184 | |\n2028 | | | | | | 4,416 | |\n2029 | | | | | | 2,421 | |\n2030 | | | | | | 3,221 | |\nThereafter | | | | | | 14,896 | |\nTotal | | | | | | $ | 35,551 |",
+    "completeness": "published_table_explicitly_covers_total_debt",
+    "excludes": "interest_and_lease_payments_and_non_debt_financing_obligations",
+    "concepts": {
+      "cash": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "remainder": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalRemainderOfFiscalYear",
+      "next_year": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+      "year_two": "us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo"
+    }
+  }
+]

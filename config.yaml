@@ -17,6 +17,8 @@ deepening_decision:
   - [NVDA, CRWV]
   - [AMD, META]
   discovery_subjects: [OpenAI, Anthropic, CoreWeave]
+  discovery_tranche: 'filing months 2025-10 through 2026-09; earlier periods remain search_incomplete'
+  discovery_candidate_order: [mention_class, tagged_named_amount_descending, number_of_subjects_descending, accession]
   foreign_and_new_groups: not_opened
 text_components:
 - investments_note

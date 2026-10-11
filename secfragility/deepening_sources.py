@@ -95,7 +95,7 @@ def notes(root):
                     if r['filed'].replace('-', '') <= sec.as_of[:10].replace('-', '')
                     and r['cik'].zfill(10) not in known}
                 note_reports = {(r['adsh'], r['report']) for r in records(z, 'ren.tsv')
-                    if r['adsh'] in submissions and r['menucat'] == 'Notes'}
+                    if r['adsh'] in submissions and r['menucat'] in ('N', 'Notes')}
                 note_keys = {(r['adsh'], r['tag'], r['version']) for r in records(z, 'pre.tsv')
                     if (r['adsh'], r['report']) in note_reports}
                 for rank, row in enumerate(records(z, 'txt.tsv')):

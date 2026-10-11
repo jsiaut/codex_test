@@ -1,0 +1,50 @@
+[
+  {
+    "group_id": "CRWV",
+    "period_end": "2026-06-30",
+    "view": "as_known",
+    "term": "horizon_12m",
+    "value_lower": "0.798877",
+    "value_upper": "1.918357",
+    "denominator": "5524000000.000000",
+    "status": "bounded",
+    "bound_basis": "annual_debt_buckets_bound_rolling_horizon_no_monthly_timing;principal_only;published_rounded_amounts",
+    "lineage": "[\"622fd46af8ba5ea8a834246eaedc517de54fcb6505bc8f4d7de30ad62fbcc8d2\",\"81cb0a3b1bedea8f18a5928eac5a81d10177b2e5a756310fe5cc0f1a79a23fb9\",\"fc6a73ad283bcd39f4279f2886b0350239aca5e3adefea842065a8c210d064a6\"]"
+  },
+  {
+    "group_id": "CRWV",
+    "period_end": "2026-06-30",
+    "view": "as_known",
+    "term": "horizon_24m",
+    "value_lower": "1.918356",
+    "value_upper": "2.717777",
+    "denominator": "5524000000.000000",
+    "status": "bounded",
+    "bound_basis": "annual_debt_buckets_bound_rolling_horizon_no_monthly_timing;principal_only;published_rounded_amounts",
+    "lineage": "[\"622fd46af8ba5ea8a834246eaedc517de54fcb6505bc8f4d7de30ad62fbcc8d2\",\"81cb0a3b1bedea8f18a5928eac5a81d10177b2e5a756310fe5cc0f1a79a23fb9\",\"fc6a73ad283bcd39f4279f2886b0350239aca5e3adefea842065a8c210d064a6\",\"04a1b9729440c4c4fbf45c79404753278a4d33c382fe878f14a7045225078bf2\"]"
+  },
+  {
+    "group_id": "CRWV",
+    "period_end": "2026-06-30",
+    "view": "revised",
+    "term": "horizon_12m",
+    "value_lower": "0.798877",
+    "value_upper": "1.918357",
+    "denominator": "5524000000.000000",
+    "status": "bounded",
+    "bound_basis": "annual_debt_buckets_bound_rolling_horizon_no_monthly_timing;principal_only;published_rounded_amounts",
+    "lineage": "[\"622fd46af8ba5ea8a834246eaedc517de54fcb6505bc8f4d7de30ad62fbcc8d2\",\"81cb0a3b1bedea8f18a5928eac5a81d10177b2e5a756310fe5cc0f1a79a23fb9\",\"fc6a73ad283bcd39f4279f2886b0350239aca5e3adefea842065a8c210d064a6\"]"
+  },
+  {
+    "group_id": "CRWV",
+    "period_end": "2026-06-30",
+    "view": "revised",
+    "term": "horizon_24m",
+    "value_lower": "1.918356",
+    "value_upper": "2.717777",
+    "denominator": "5524000000.000000",
+    "status": "bounded",
+    "bound_basis": "annual_debt_buckets_bound_rolling_horizon_no_monthly_timing;principal_only;published_rounded_amounts",
+    "lineage": "[\"622fd46af8ba5ea8a834246eaedc517de54fcb6505bc8f4d7de30ad62fbcc8d2\",\"81cb0a3b1bedea8f18a5928eac5a81d10177b2e5a756310fe5cc0f1a79a23fb9\",\"fc6a73ad283bcd39f4279f2886b0350239aca5e3adefea842065a8c210d064a6\",\"04a1b9729440c4c4fbf45c79404753278a4d33c382fe878f14a7045225078bf2\"]"
+  }
+]
