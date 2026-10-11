@@ -1,0 +1,325 @@
+{
+  "url": "https://www.sec.gov/data-research/sec-markets-data/financial-statement-notes-data-sets",
+  "links": [
+    [
+      "The Financial Statement and Notes Data",
+      "/files/aqfsn_1.pdf"
+    ],
+    [
+      "2026 09",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_09_notes.zip"
+    ],
+    [
+      "2026 08",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_08_notes.zip"
+    ],
+    [
+      "2026 07",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_07_notes.zip"
+    ],
+    [
+      "2026 06",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_06_notes.zip"
+    ],
+    [
+      "2026 05",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_05_notes.zip"
+    ],
+    [
+      "2026 04",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_04_notes.zip"
+    ],
+    [
+      "2026 03",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_03_notes.zip"
+    ],
+    [
+      "2026 02",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_02_notes.zip"
+    ],
+    [
+      "2026 01",
+      "/files/dera/data/financial-statement-notes-data-sets/2026_01_notes.zip"
+    ],
+    [
+      "2025 12",
+      "/files/dera/data/financial-statement-notes-data-sets/2025_12_notes.zip"
+    ],
+    [
+      "2025 11",
+      "/files/dera/data/financial-statement-notes-data-sets/2025_11_notes.zip"
+    ],
+    [
+      "2025 10",
+      "/files/dera/data/financial-statement-notes-data-sets/2025_10_notes.zip"
+    ],
+    [
+      "2025 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2025q3_notes.zip"
+    ],
+    [
+      "2025 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2025q2_notes.zip"
+    ],
+    [
+      "2025 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2025q1_notes.zip"
+    ],
+    [
+      "2024 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2024q4_notes.zip"
+    ],
+    [
+      "2024 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2024q3_notes.zip"
+    ],
+    [
+      "2024 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2024q2_notes.zip"
+    ],
+    [
+      "2024 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2024q1_notes.zip"
+    ],
+    [
+      "2023 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2023q4_notes.zip"
+    ],
+    [
+      "2023 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2023q3_notes.zip"
+    ],
+    [
+      "2023 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2023q2_notes.zip"
+    ],
+    [
+      "2023 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2023q1_notes.zip"
+    ],
+    [
+      "2022 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2022q4_notes.zip"
+    ],
+    [
+      "2022 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2022q3_notes.zip"
+    ],
+    [
+      "2022 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2022q2_notes.zip"
+    ],
+    [
+      "2022 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2022q1_notes.zip"
+    ],
+    [
+      "2021 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2021q4_notes.zip"
+    ],
+    [
+      "2021 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2021q3_notes.zip"
+    ],
+    [
+      "2021 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2021q2_notes.zip"
+    ],
+    [
+      "2021 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2021q1_notes.zip"
+    ],
+    [
+      "2020 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2020q4_notes.zip"
+    ],
+    [
+      "2020 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2020q3_notes.zip"
+    ],
+    [
+      "2020 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2020q2_notes.zip"
+    ],
+    [
+      "2020 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2020q1_notes.zip"
+    ],
+    [
+      "2019 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2019q4_notes.zip"
+    ],
+    [
+      "2019 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2019q3_notes.zip"
+    ],
+    [
+      "2019 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2019q2_notes.zip"
+    ],
+    [
+      "2019 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2019q1_notes.zip"
+    ],
+    [
+      "2018 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2018q4_notes.zip"
+    ],
+    [
+      "2018 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2018q3_notes.zip"
+    ],
+    [
+      "2018 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2018q2_notes.zip"
+    ],
+    [
+      "2018 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2018q1_notes.zip"
+    ],
+    [
+      "2017 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2017q4_notes.zip"
+    ],
+    [
+      "2017 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2017q3_notes.zip"
+    ],
+    [
+      "2017 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2017q2_notes.zip"
+    ],
+    [
+      "2017 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2017q1_notes.zip"
+    ],
+    [
+      "2016 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2016q4_notes.zip"
+    ],
+    [
+      "2016 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2016q3_notes.zip"
+    ],
+    [
+      "2016 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2016q2_notes.zip"
+    ],
+    [
+      "2016 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2016q1_notes.zip"
+    ],
+    [
+      "2015 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2015q4_notes.zip"
+    ],
+    [
+      "2015 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2015q3_notes.zip"
+    ],
+    [
+      "2015 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2015q2_notes.zip"
+    ],
+    [
+      "2015 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2015q1_notes.zip"
+    ],
+    [
+      "2014 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2014q4_notes.zip"
+    ],
+    [
+      "2014 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2014q3_notes.zip"
+    ],
+    [
+      "2014 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2014q2_notes.zip"
+    ],
+    [
+      "2014 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2014q1_notes.zip"
+    ],
+    [
+      "2013 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2013q4_notes.zip"
+    ],
+    [
+      "2013 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2013q3_notes.zip"
+    ],
+    [
+      "2013 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2013q2_notes.zip"
+    ],
+    [
+      "2013 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2013q1_notes.zip"
+    ],
+    [
+      "2012 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2012q4_notes.zip"
+    ],
+    [
+      "2012 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2012q3_notes.zip"
+    ],
+    [
+      "2012 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2012q2_notes.zip"
+    ],
+    [
+      "2012 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2012q1_notes.zip"
+    ],
+    [
+      "2011 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2011q4_notes.zip"
+    ],
+    [
+      "2011 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2011q3_notes.zip"
+    ],
+    [
+      "2011 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2011q2_notes.zip"
+    ],
+    [
+      "2011 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2011q1_notes.zip"
+    ],
+    [
+      "2010 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2010q4_notes.zip"
+    ],
+    [
+      "2010 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2010q3_notes_0.zip"
+    ],
+    [
+      "2010 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2010q2_notes_0.zip"
+    ],
+    [
+      "2010 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2010q1_notes_1.zip"
+    ],
+    [
+      "2009 Q4",
+      "/files/dera/data/financial-statement-notes-data-sets/2009q4_notes.zip"
+    ],
+    [
+      "2009 Q3",
+      "/files/dera/data/financial-statement-notes-data-sets/2009q3_notes.zip"
+    ],
+    [
+      "2009 Q2",
+      "/files/dera/data/financial-statement-notes-data-sets/2009q2_notes.zip"
+    ],
+    [
+      "2009 Q1",
+      "/files/dera/data/financial-statement-notes-data-sets/2009q1_notes.zip"
+    ]
+  ]
+}

@@ -28,7 +28,8 @@ def prepare(db,root:Path,as_of:str):
     # with its period end. This is a publication snapshot, separately from the
     # annual-deadline cutoffs required for Annex E.
     db.execute('''CREATE TEMP TABLE quarter_cutoffs AS SELECT q.group_id,q.start_date,q.end_date,
-      min(d.acceptance_datetime) AS public_at FROM fiscal_quarters q JOIN documents d ON d.group_id=q.group_id
+      min(greatest(d.acceptance_datetime,f.knowledge_date::TIMESTAMPTZ)) AS public_at
+      FROM fiscal_quarters q JOIN documents d ON d.group_id=q.group_id
       JOIN periodic_occurrences f ON f.document_id=d.document_id AND f.period_end=q.end_date
       WHERE d.form IN ('10-K','10-KT','10-Q','10-QT') AND f.period_start IS NOT NULL GROUP BY ALL''')
     db.execute('''CREATE TEMP TABLE quarter_candidates AS
@@ -53,7 +54,7 @@ def prepare(db,root:Path,as_of:str):
        CASE WHEN b.accession=a.accession THEN 0 ELSE 1 END,b.acceptance_datetime DESC,b.accession DESC,
        b.document_rank DESC,b.numeric_precision DESC,b.occurrence_rank DESC,b.fact_id)=1''')
     for view in ['as_known','revised']:
-        cutoff='AND a.acceptance_datetime<=k.public_at' if view=='as_known' else ''
+        cutoff='AND a.acceptance_datetime<=k.public_at AND a.knowledge_date<=k.public_at::DATE' if view=='as_known' else ''
         snapshot='k.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
         db.execute(f'''CREATE TEMP TABLE quarter_quantities_{view} AS SELECT a.*,{snapshot} AS snapshot_at FROM quarter_candidates a
           JOIN anchor_order ao USING(model_quantity,canonical_concept)
