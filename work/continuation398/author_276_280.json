@@ -1,0 +1,72 @@
+[
+  {
+    "index": 276,
+    "classification": "material",
+    "summary": "Fin2025 : investissements Apollo362,286 Md$ dontretirement356,06 etassetmanagement6,226 ; Athene déjà inclus, donc interdiction addition group+filiale. AFS218,644 au groupe contre219,041 Athene et funds26,145 vs26,327 périmètres/éliminations à conserver, sans forcer égalité. Performance allocations3,554 Md$ inclutJV314 etBridge320, distributions1,07 distinctrevenu ; réalisations etclawback séparés. AFS/repo/mortgage/concentrations ne deviennent pas intégralement IA.",
+    "rows": [
+      {
+        "quote": "The timing of the payment of performance allocations due to the general partner or investment manager varies",
+        "model_quantity": "group_investments_eliminations_and_performance_fee_cash_timing",
+        "stage": "recognized",
+        "issuer_treatment": "Fin2025 : investissements Apollo362,286 Md$ dontretirement356,06 etassetmanagement6,226 ; Athene déjà inclus, donc interdiction addition group+filiale. AFS218,644 au groupe contre219,041 Athene et funds26,145 vs26,327 périmètres/éliminations à conserver, sans forcer égalité. Performance allocations3,554 Md$ inclutJV314 etBridge320, distributions1,07 distinctrevenu ; réalisations etclawback séparés. AFS/repo/mortgage/concentrations ne deviennent pas intégralement IA.",
+        "measurement_basis": "Dec2025_group_investment362_286bn_includes_Athene;performance3_554bn_stock",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 277,
+    "classification": "material",
+    "summary": "FY2025 : rachats marché773 M$ distinctcashnetsettlementtax583 M$ et dividendescommon1,143 Md$. Programme4 Md$ autoriséfévrier2026 non obligation/payé. Warrants exercéscashlessavril2025 ne procurentpas produitcash. Mandatory preferred1,4 Md$ conversionautomatique attenduejuillet2026, pas remboursementcashprincipal; dividendes cumulatifscash/titres selontermes. AOCI estvalorisation noncash.",
+    "rows": [
+      {
+        "quote": "settled on a “cashless net exercise basis.”",
+        "model_quantity": "cashless_warrants_and_equity_authorization_not_cash_funding",
+        "stage": "recognized",
+        "issuer_treatment": "FY2025 : rachats marché773 M$ distinctcashnetsettlementtax583 M$ et dividendescommon1,143 Md$. Programme4 Md$ autoriséfévrier2026 non obligation/payé. Warrants exercéscashlessavril2025 ne procurentpas produitcash. Mandatory preferred1,4 Md$ conversionautomatique attenduejuillet2026, pas remboursementcashprincipal; dividendes cumulatifscash/titres selontermes. AOCI estvalorisation noncash.",
+        "measurement_basis": "FY2025_buyback773m;taxsettlement583m;mandatory_pref_conversion_not_cash_principal"
+      }
+    ]
+  },
+  {
+    "index": 278,
+    "classification": "material",
+    "summary": "Fin2025 : dettegroupe13,364 Md$ bilan contre13,35 principal, inclutAthene7,848bilan/7,775principal etAM5,516/5,575. SeulAM500 M$ échéance2026 ; Bridge notes375 rembourséesseptembre etBridgefacilityterminéedécembre ne sontpas encours courant. RevolversAM1,25/Athene1,25/liquidité2,6 non tirés ; engagements conditionnelsnoncash. Intérêts618 M$ incluent amortissement, non tauxPIK. Athene reportsubordinated5ans autorisé nonexercicedémontré.",
+    "rows": [
+      {
+        "quote": "AGM repaid in full $375 million of aggregate principal amount of the Bridge notes",
+        "model_quantity": "bridge_acquisition_debt_repaid_and_group_debt_includes_athene",
+        "stage": "settled",
+        "issuer_treatment": "Fin2025 : dettegroupe13,364 Md$ bilan contre13,35 principal, inclutAthene7,848bilan/7,775principal etAM5,516/5,575. SeulAM500 M$ échéance2026 ; Bridge notes375 rembourséesseptembre etBridgefacilityterminéedécembre ne sontpas encours courant. RevolversAM1,25/Athene1,25/liquidité2,6 non tirés ; engagements conditionnelsnoncash. Intérêts618 M$ incluent amortissement, non tauxPIK. Athene reportsubordinated5ans autorisé nonexercicedémontré.",
+        "measurement_basis": "Dec2025_principal13_350bn;Bridge375m_repaid;2026_AM_maturity500m"
+      }
+    ]
+  },
+  {
+    "index": 279,
+    "classification": "context",
+    "summary": "FY2025 : compensationequity789 M$, coûtRSUnonreconnu650 M$ sur1,9ans etRSA88 M$ sur1,7ans. Performancemetrics/fundrevenues serventvesting salariés, pas signaturesclientsIA. Certainsawardsànombrevariable classésliabilitéremeasured : pas supposition toutnoncash/settlement fixe. Lesvaleursd’octroi ne sontpas investissementsprimaire danschaîneIA.",
+    "rows": [
+      {
+        "quote": "the performance-based compensation is classified as a liability",
+        "model_quantity": "variable_share_compensation_liability_not_ai_contract_signal",
+        "stage": "recognized",
+        "issuer_treatment": "FY2025 : compensationequity789 M$, coûtRSUnonreconnu650 M$ sur1,9ans etRSA88 M$ sur1,7ans. Performancemetrics/fundrevenues serventvesting salariés, pas signaturesclientsIA. Certainsawardsànombrevariable classésliabilitéremeasured : pas supposition toutnoncash/settlement fixe. Lesvaleursd’octroi ne sontpas investissementsprimaire danschaîneIA.",
+        "measurement_basis": "FY2025_SBC789m;unrecognized650m_RSU88m_RSA"
+      }
+    ]
+  },
+  {
+    "index": 280,
+    "classification": "context",
+    "summary": "Février2026 : dividendescommon0,51$/titre etmandatorypreferred0,8438 déclarés pourpaiementsfévrier/avril ; stade déclaration, pas preuveencaissementni toutcashannuelpayé. Aucun nouveaucapitalIA oudetteprojetdanscebloc.",
+    "rows": [
+      {
+        "quote": "declared and set aside for payment a cash dividend",
+        "model_quantity": "subsequent_dividend_declared_not_payment_evidence",
+        "stage": "signed",
+        "issuer_treatment": "Février2026 : dividendescommon0,51$/titre etmandatorypreferred0,8438 déclarés pourpaiementsfévrier/avril ; stade déclaration, pas preuveencaissementni toutcashannuelpayé. Aucun nouveaucapitalIA oudetteprojetdanscebloc."
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "index": 282,
+    "classification": "material",
+    "summary": "Apollo conserve en consolidation la comptabilité spécialisée à la juste valeur des fonds : un portefeuille de fonds ne devient donc pas automatiquement une filiale opérationnelle consolidée. Contrôle VIE exige pouvoir et intérêt variable significatif. Performance allocations sous equity method, hors ASC606 ; incentive fees différées tant que risque de reprise. Profit sharing peut être payé en nature après réalisation ; clawback hypothétique distinct d’une dette cash exigible. Repo demeure financement ; fonds retenus légalement chez cédant. Offsets de commissions différés et parfois remboursables : éviter double comptage des revenus et encaissements. Les 99 M$ de revenu issu du stock différé initial ne sont pas du cash neuf.",
+    "rows": [
+      {
+        "quote": "The Company has retained this specialized accounting for investment companies in consolidation.",
+        "model_quantity": "investment_company_fair_value_retained_in_consolidation",
+        "stage": "recognized",
+        "issuer_treatment": "Apollo conserve en consolidation la comptabilité spécialisée à la juste valeur des fonds : un portefeuille de fonds ne devient donc pas automatiquement une filiale opérationnelle consolidée. Contrôle VIE exige pouvoir et intérêt variable significatif. Performance allocations sous equity method, hors ASC606 ; incentive fees différées tant que risque de reprise. Profit sharing peut être payé en nature après réalisation ; clawback hypothétique distinct d’une dette cash exigible. Repo demeure financement ; fonds retenus légalement chez cédant. Offsets de commissions différés et parfois remboursables : éviter double comptage des revenus et encaissements. Les 99 M$ de revenu issu du stock différé initial ne sont pas du cash neuf.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 283,
+    "classification": "material",
+    "summary": "Engagements AM non financés 553 M$, distincts des 35,2 Md$ Athene déjà inclus dans les totaux VIE/affiliés et appelables à tout moment. Reprise théorique de 6 Md$ de performance allocations si tous fonds sans valeur, sans exigibilité cash actuelle. Capital Markets Partnership : 2,5 Md$ de capacité revolving contre 1,4 Md$ d’opérations financées ; aucun apport parent à date, non-recours sous réserve comfort letter. Bridge : prêts garantis par clauses contingentes de 758 M$ de nominal, sans perte maximale quantifiée. Garantie Atlas 2,5 Md$ avec non-probabilité estimée, non absence de garantie. Stone Tower 72 M$ FV contingent ; Griffin déjà réglé/expiré en 2024. Litiges 1,9 Md$ et paiements TRA contestés 570 M$ ne constituent pas des provisions nouvelles de mêmes montants.",
+    "rows": [
+      {
+        "quote": "Apollo Capital Markets Partnership",
+        "model_quantity": "capital_markets_vie_capacity_drawn_parent_funding_distinguished",
+        "stage": "recognized",
+        "issuer_treatment": "Engagements AM non financés 553 M$, distincts des 35,2 Md$ Athene déjà inclus dans les totaux VIE/affiliés et appelables à tout moment. Reprise théorique de 6 Md$ de performance allocations si tous fonds sans valeur, sans exigibilité cash actuelle. Capital Markets Partnership : 2,5 Md$ de capacité revolving contre 1,4 Md$ d’opérations financées ; aucun apport parent à date, non-recours sous réserve comfort letter. Bridge : prêts garantis par clauses contingentes de 758 M$ de nominal, sans perte maximale quantifiée. Garantie Atlas 2,5 Md$ avec non-probabilité estimée, non absence de garantie. Stone Tower 72 M$ FV contingent ; Griffin déjà réglé/expiré en 2024. Litiges 1,9 Md$ et paiements TRA contestés 570 M$ ne constituent pas des provisions nouvelles de mêmes montants.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
