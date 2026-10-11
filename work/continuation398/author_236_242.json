@@ -1,0 +1,105 @@
+[
+  {
+    "index": 236,
+    "classification": "material",
+    "summary": "Mars 2026 : dette principale 2,632709 Md$, dont 309,643 M$ échéances restantes en 2026 ; revolver tiré 180 M$ sur 2,61 Md$ de capacité. Les repos CMBS renouvelables tous les un à trois mois peuvent déclencher appels de marge : leur maturité moyenne juillet 2027 ne supprime pas le risque de renouvellement. Financements gagés 817,17 M$, covenant compliant déclaré à date sans démonstration de marge disponible.",
+    "rows": [
+      {
+        "quote": "each borrowing having initial terms of one to three months.",
+        "model_quantity": "secured_repo_short_term_rollover_and_margin_calls",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : dette principale 2,632709 Md$, dont 309,643 M$ échéances restantes en 2026 ; revolver tiré 180 M$ sur 2,61 Md$ de capacité. Les repos CMBS renouvelables tous les un à trois mois peuvent déclencher appels de marge : leur maturité moyenne juillet 2027 ne supprime pas le risque de renouvellement. Financements gagés 817,17 M$, covenant compliant déclaré à date sans démonstration de marge disponible.",
+        "measurement_basis": "March2026_principal2_632709bn;revolver_draw180m;repo817_170m"
+      }
+    ]
+  },
+  {
+    "index": 237,
+    "classification": "material",
+    "summary": "Mars 2026 : loyers opérating futurs à recevoir 4,403139 Md$, hors contrats dont commencement dépend d’événements futurs. Financing leases 11,511092 Md$ bruts donnent 591,781 M$ nets après intérêts différés et CECL ; encaissement trimestriel 10,835 M$ distinct des intérêts reconnus 14,567 M$. Master leases DST 940,874 M$ de paiements futurs sont des sorties, à rapprocher de leur obligation financière plutôt qu’à cumuler sans contrôle.",
+    "rows": [
+      {
+        "quote": "Cash received from the sales-type leasing agreements was $10,835",
+        "model_quantity": "financing_lease_cash_receipts_distinct_from_interest_income",
+        "stage": "drawn_or_paid",
+        "issuer_treatment": "Mars 2026 : loyers opérating futurs à recevoir 4,403139 Md$, hors contrats dont commencement dépend d’événements futurs. Financing leases 11,511092 Md$ bruts donnent 591,781 M$ nets après intérêts différés et CECL ; encaissement trimestriel 10,835 M$ distinct des intérêts reconnus 14,567 M$. Master leases DST 940,874 M$ de paiements futurs sont des sorties, à rapprocher de leur obligation financière plutôt qu’à cumuler sans contrôle.",
+        "measurement_basis": "Q1_2026_cash10_835m;net_receivable591_781m;DST_outflows940_874m"
+      }
+    ]
+  },
+  {
+    "index": 238,
+    "classification": "material",
+    "summary": "Mars 2026 : huit JV datacenter non consolidées, seize biens, participations 3–84,7 %, valeur 1,139238 Md$. Une participation de 84,7 % ne prouve donc pas consolidation. Revenu FVO 42,248 M$ est un résultat de valorisation/participation, pas encaissement de loyers. STORE seul significatif dans cette note ; l’absence de CTP02/CTP03 nommés ne démontre ni cession ni réattribution à CoreWeave.",
+    "rows": [
+      {
+        "quote": "Net lease data centers",
+        "model_quantity": "unconsolidated_data_center_majority_ownership_not_control",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : huit JV datacenter non consolidées, seize biens, participations 3–84,7 %, valeur 1,139238 Md$. Une participation de 84,7 % ne prouve donc pas consolidation. Revenu FVO 42,248 M$ est un résultat de valorisation/participation, pas encaissement de loyers. STORE seul significatif dans cette note ; l’absence de CTP02/CTP03 nommés ne démontre ni cession ni réattribution à CoreWeave.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "March2026_8JV16properties_FV1_139238bn;ownership3_to84_7percent",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 239,
+    "classification": "context",
+    "summary": "Mars 2026 : crédit immobilier FV 1,95597 Md$, dont 49 % non notés ; exclut CMBS HTM 287,61 M$ et prêts build-to-suit 6,838 M$. Deux CMBS HTM apportés en JV non consolidée : diminution du portefeuille direct ne signifie pas remboursement du risque économique. Maturités pleinement prolongées et actifs gagés ; aucune ventilation IA certaine dans cette note.",
+    "rows": [
+      {
+        "quote": "contributed two of its CMBS investments classified as held-to-maturity into an unconsolidated joint venture.",
+        "model_quantity": "credit_assets_transferred_to_jv_not_cash_repayment",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : crédit immobilier FV 1,95597 Md$, dont 49 % non notés ; exclut CMBS HTM 287,61 M$ et prêts build-to-suit 6,838 M$. Deux CMBS HTM apportés en JV non consolidée : diminution du portefeuille direct ne signifie pas remboursement du risque économique. Maturités pleinement prolongées et actifs gagés ; aucune ventilation IA certaine dans cette note.",
+        "measurement_basis": "March2026_FV1_955970bn;HTM287_610m;BTS6_838m",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 240,
+    "classification": "context",
+    "summary": "T1 2026 : un seul segment. Revenu 96,925 M$ et bénéfice segment 169,656 M$ incorporent revenu des JV et effets comptables ; intérêts segment 35,303 M$ excluent amortissement des frais de financement. Le bénéfice n’est pas un revenu IA identifié ni un cash-flow disponible pour couvrir les engagements de construction.",
+    "rows": [
+      {
+        "quote": "Interest expense excludes non-cash items such as amortization expense",
+        "model_quantity": "segment_interest_expense_measurement_scope",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2026 : un seul segment. Revenu 96,925 M$ et bénéfice segment 169,656 M$ incorporent revenu des JV et effets comptables ; intérêts segment 35,303 M$ excluent amortissement des frais de financement. Le bénéfice n’est pas un revenu IA identifié ni un cash-flow disponible pour couvrir les engagements de construction.",
+        "measurement_basis": "Q1_2026_single_segment;not_AI_revenue_or_cashflow"
+      }
+    ]
+  },
+  {
+    "index": 241,
+    "classification": "material",
+    "summary": "T1 2026 : DST net reçu 211,065 M$, plafond programme 3 Md$ non levé ; cash master lease 9,394 M$, actifs et dettes conservés pour failed sale-leaseback. Rachats ordinaires 108,906 M$, plafond 5 % trimestriel suspendable ; exception pour conseiller et special partners pouvant exiger cash. NCI rachetables 156,992 M$ à mars, aucun rachat OP cash du trimestre : pas conclusion d’absence d’obligation future.",
+    "rows": [
+      {
+        "quote": "the Company is responsible for ongoing property management and for making fixed payments to the DSTs regardless of whether the DST Properties’ cash flows are sufficient",
+        "model_quantity": "dst_fixed_master_lease_obligation_and_redeemable_equity",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2026 : DST net reçu 211,065 M$, plafond programme 3 Md$ non levé ; cash master lease 9,394 M$, actifs et dettes conservés pour failed sale-leaseback. Rachats ordinaires 108,906 M$, plafond 5 % trimestriel suspendable ; exception pour conseiller et special partners pouvant exiger cash. NCI rachetables 156,992 M$ à mars, aucun rachat OP cash du trimestre : pas conclusion d’absence d’obligation future.",
+        "measurement_basis": "Q1_2026_DST_net_cash211_065m;redeemable_NCI156_992m;ordinary_repurchase108_906m",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 242,
+    "classification": "material",
+    "summary": "Mars 2026 : NLT OP VIE consolidée, Quantum/MACOOH001 VOE consolidées ; les autres JV peuvent être non consolidées malgré forte propriété. FVO JV niveau 3 de 4,238148 Md$, revenu 204,808 M$ distinct de distributions reçues 127,799 M$. DST obligation 562,587 M$ en FV ; promote/puts et modèle à cap rate 6,9 % rendent les montants sensibles au jugement. CECL nulle sur prêts build-to-suit ne prouve pas absence de risque.",
+    "rows": [
+      {
+        "quote": "actual returns realized may differ from the carrying value of these investments.",
+        "model_quantity": "unconsolidated_jv_fair_value_income_not_cash_distribution",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : NLT OP VIE consolidée, Quantum/MACOOH001 VOE consolidées ; les autres JV peuvent être non consolidées malgré forte propriété. FVO JV niveau 3 de 4,238148 Md$, revenu 204,808 M$ distinct de distributions reçues 127,799 M$. DST obligation 562,587 M$ en FV ; promote/puts et modèle à cap rate 6,9 % rendent les montants sensibles au jugement. CECL nulle sur prêts build-to-suit ne prouve pas absence de risque.",
+        "measurement_basis": "March2026_Level3_JV4_238148bn;income204_808m;distributions127_799m",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
