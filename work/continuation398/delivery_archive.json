@@ -1,0 +1,20 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "archive": "SEC_Project_2_398_blocs.zip",
+  "sha256": "35d26748ab6f550cd73c130f467871b209ad6b81594266c7f0a6359341dac9ee",
+  "bytes": 900125377,
+  "repository": "https://github.com/jsiaut/codex_test",
+  "independent_audit_performed": false,
+  "verified_at": "2026-10-11T14:44:33.595797+00:00",
+  "archive_entries": 13805,
+  "crc_all_entries_passed": true,
+  "requested_blocks": 398,
+  "completed_blocks": 398,
+  "remaining_blocks": 0,
+  "all_nominated_notes_read": 465,
+  "tests_passed": 105,
+  "full_offline_replay_identical": true,
+  "subagents_used": false,
+  "prior_archive_preserved": true,
+  "scope": "Completed frozen continuation of 398 natural notes; archive digest stored outside the archive."
+}

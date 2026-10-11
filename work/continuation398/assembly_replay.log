@@ -1,0 +1,12 @@
+{"documents": 9773, "facts": 1050190, "observations": 0, "entities": 0, "links": 0, "measures": 0, "controls": 0, "exclusions": 0}
+{"stage": "observations", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 0, "links": 0, "measures": 4418, "controls": 0, "exclusions": 15631}}
+{"stage": "entities", "count": 689}
+{"stage": "amount_links", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 471, "measures": 4418, "controls": 0, "exclusions": 16661}}
+{"stage": "graph", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 4418, "controls": 0, "exclusions": 16661}}
+{"stage": "controls", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 4418, "controls": 297828, "exclusions": 16661}}
+{"stage": "quarters", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 7101, "controls": 297828, "exclusions": 16661}}
+{"stage": "stocks", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 11706, "controls": 297828, "exclusions": 16729}}
+{"stage": "ttm", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 12260, "controls": 297828, "exclusions": 16729}}
+{"stage": "pairs", "counts": {"documents": 10741, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 373201, "controls": 298632, "exclusions": 16729}}
+{"stage": "coverage", "counts": {"documents": 10741, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 553715, "controls": 298632, "exclusions": 16745}}
+{"stage": "numeric", "counts": {"documents": 10741, "facts": 1278718, "observations": 17637, "entities": 689, "links": 909, "measures": 552039, "controls": 298632, "exclusions": 16746}}

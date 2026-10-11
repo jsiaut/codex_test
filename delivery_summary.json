@@ -156,10 +156,10 @@
       "section": 1
     },
     "validation_rejected_attempts_by_phase": {
-      "schema": 60,
-      "semantic": 48
+      "semantic": 48,
+      "schema": 60
     },
-    "updated_at": "2026-10-11T14:09:02.944093+00:00",
+    "updated_at": "2026-10-11T14:22:29.820451+00:00",
     "read_packet_logging_started_2026_10_09": true,
     "independent_audit_performed": false
   },
@@ -211,7 +211,7 @@
     "lease_note"
   ],
   "extension_source_cutoff_unchanged": true,
-  "elapsed_wall_seconds_since_first_sec_request": "187024.080965",
+  "elapsed_wall_seconds_since_first_sec_request": "187905.427058",
   "deepening_results": {
     "source_as_of": "2026-10-09T10:24:21.129672+00:00",
     "deepening_scope": {
@@ -817,5 +817,59 @@
     },
     "accounting_mismatch_rows": 215,
     "localized_invalid_aggregates": 1
+  },
+  "completed_continuation_validation": {
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "verified_at": "2026-10-11T14:38:47.606618+00:00",
+    "requested_blocks": 398,
+    "read_blocks": 398,
+    "deferred_blocks": 0,
+    "all_nominated_notes_read": 465,
+    "accepted_continuation_observations": 409,
+    "all_reviews_present_in_eight_tables": true,
+    "full_text_parts_verified": true,
+    "sole_executor": true,
+    "subagents_used": false,
+    "tests_passed": 105,
+    "delivery_checks": {
+      "eight_tables": true,
+      "no_value_for_ND": true,
+      "ND_reason": true,
+      "amount_edge_admissible": true,
+      "no_pending_amount_edges": true,
+      "no_guarantee_only_financed": true,
+      "control_reasons": true,
+      "not_supported_search_incomplete": true,
+      "no_nonfinancial_F6": true,
+      "expected_cells_present": true,
+      "no_future_numeric_as_known": true,
+      "no_generalized_accounting_failure": true,
+      "criteria_frozen": true
+    },
+    "full_offline_replay_all_eight_tables_identical": true,
+    "reproduction_inputs_unchanged": true,
+    "criteria_manifest_unchanged": true,
+    "table_counts": {
+      "documents": 10741,
+      "facts": 1278718,
+      "observations": 17637,
+      "entities": 689,
+      "links": 909,
+      "measures": 552039,
+      "controls": 298632,
+      "exclusions": 16746
+    },
+    "frozen_source_snapshot_verified_files": 9123,
+    "accounting_mismatch_rows": 215,
+    "localized_invalid_aggregates": 1,
+    "historical_notes_complete": false,
+    "complete_contract_review": false,
+    "independent_audit_performed": false,
+    "finished_at": "2026-10-11T14:40:07.810160+00:00",
+    "source_commit": "17c7a72c916f752d60b0f9ac40617620d84911df",
+    "repository": "https://github.com/jsiaut/codex_test",
+    "archive": "SEC_Project_2_398_blocs.zip",
+    "final_delivery": true,
+    "requested_scope_completed": true
   }
 }

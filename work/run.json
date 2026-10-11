@@ -1,10 +1,14 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "phase": "phase3",
-  "status": "validated_ready_for_final_commit",
+  "phase": "continuation398_completed",
+  "status": "completed",
   "extension_started_at": "2026-10-10T06:35:26.868344+00:00",
   "baseline_commit": "e05c077c7b6faba84537c546a77b67270ef040e5",
   "completed_at": "2026-10-11T11:41:17.464136+00:00",
-  "delivery_stage": "remaining_398_notes",
-  "continuation_started_at": "2026-10-11T12:35:06.951522+00:00"
+  "delivery_stage": "completed_398_notes",
+  "continuation_started_at": "2026-10-11T12:35:06.951522+00:00",
+  "final_delivery": true,
+  "completed_requested_notes": 398,
+  "remaining_requested_notes": 0,
+  "finished_at": "2026-10-11T14:40:07.810160+00:00"
 }

@@ -9,3 +9,5 @@ Les huit tables sont dans tables/, les critères et contrôles dans audit/, les 
 ## Reproduction
 
 Installer requirements.txt. Restaurer les sauvegardes LFS de sources avec leurs manifestes SHA-256, sans écraser les observations et décisions plus récentes. python -m secfragility.phase3 --reconstruct reconstruit depuis le cache, sans requête SEC ni appel de modèle. python -m pytest -q exécute les tests. work/idempotency_verification.json compare les huit tables avec une référence créée après intégration des 398 blocs, toutes colonnes et provenance incluses.
+
+La validation de cette continuation est dans work/continuation398/validation.json. work/expansion/validation.json conserve la première tranche datée, avec son ancien périmètre de lecture.
