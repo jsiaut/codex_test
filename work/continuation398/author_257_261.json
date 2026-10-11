@@ -1,0 +1,75 @@
+[
+  {
+    "index": 257,
+    "classification": "context",
+    "summary": "Athene US GAAP et filiale directe AGM. Fonds NAV peuvent être en retard jusqu’à trois mois ; revenus d’investissement courus incluent amortissement/accrétion, pas exclusivement cash. Related party signifie principalement influence Apollo et ne suffit pas à prouver contrôle individuel. Réassurance cédée ne libère pas l’assureur primaire sauf assumption ; fonds withheld légalement détenus par cedant, pas trésorerie libre. Réduction FV ou changement OCI n’est pas flux de remboursement.",
+    "rows": [
+      {
+        "quote": "which can be on a lag of up to three months",
+        "model_quantity": "investment_fund_nav_reporting_lag_and_accrual_basis",
+        "stage": "recognized",
+        "issuer_treatment": "Athene US GAAP et filiale directe AGM. Fonds NAV peuvent être en retard jusqu’à trois mois ; revenus d’investissement courus incluent amortissement/accrétion, pas exclusivement cash. Related party signifie principalement influence Apollo et ne suffit pas à prouver contrôle individuel. Réassurance cédée ne libère pas l’assureur primaire sauf assumption ; fonds withheld légalement détenus par cedant, pas trésorerie libre. Réduction FV ou changement OCI n’est pas flux de remboursement.",
+        "measurement_basis": "FY2025_USGAAP;NAV_lag_up_to3months;reinsurance_not_discharge",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 258,
+    "classification": "material",
+    "summary": "FY2025 : dividendes ordinaires Apollo 752 M$ effectivement payés ; préférentiels 161 M$ déclarés, non-cumulatifs et exigibles seulement après déclaration. Série C rachetée intégralement juin2025 600 M$, pas dette actuelle. Reverse split 1:1000 ne change pas contrôle AGM. AOCI perte2,641 Md$ n’est ni montant de cash perdu ni contribution fraîche nécessaire à WHCO.",
+    "rows": [
+      {
+        "quote": "we redeemed in whole our 6.375% Fixed-Rate Reset Perpetual Non-Cumulative Preferred Stock, Series C",
+        "model_quantity": "preferred_redemption_completed_and_dividend_cash_scope",
+        "stage": "settled",
+        "issuer_treatment": "FY2025 : dividendes ordinaires Apollo 752 M$ effectivement payés ; préférentiels 161 M$ déclarés, non-cumulatifs et exigibles seulement après déclaration. Série C rachetée intégralement juin2025 600 M$, pas dette actuelle. Reverse split 1:1000 ne change pas contrôle AGM. AOCI perte2,641 Md$ n’est ni montant de cash perdu ni contribution fraîche nécessaire à WHCO.",
+        "measurement_basis": "June2025_seriesC600m_redeemed;FYcommon_dividend752m_paid"
+      }
+    ]
+  },
+  {
+    "index": 259,
+    "classification": "material",
+    "summary": "Fin 2025 : principal dette7,775 Md$ vs bilan7,848 ; intérêts longs362 M$. Revolvers1,25 et liquidité2,6 Md$ non tirés, extensions1,75/3,1 conditionnelles ; liquidité échéance juin2026 à vérifier source plus récente. Covenants debt/capital35 %, networth14,8 Md$ et AARe23,2. Subordinated notes autorisent report intérêts cinq ans, sans preuve exercice effectif ni taux PIK courant ; coupons et accrual ne suffisent pas à classer PIK.",
+    "rows": [
+      {
+        "quote": "We may defer interest payments on the subordinated notes for up to five consecutive years.",
+        "model_quantity": "subordinated_interest_deferral_option_not_actual_pik",
+        "stage": "recognized",
+        "issuer_treatment": "Fin 2025 : principal dette7,775 Md$ vs bilan7,848 ; intérêts longs362 M$. Revolvers1,25 et liquidité2,6 Md$ non tirés, extensions1,75/3,1 conditionnelles ; liquidité échéance juin2026 à vérifier source plus récente. Covenants debt/capital35 %, networth14,8 Md$ et AARe23,2. Subordinated notes autorisent report intérêts cinq ans, sans preuve exercice effectif ni taux PIK courant ; coupons et accrual ne suffisent pas à classer PIK.",
+        "measurement_basis": "Dec2025_principal7_775bn;cash_interest_coupon_vs_deferral_right",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 260,
+    "classification": "material",
+    "summary": "Fin2025 : AFS219,041 Md$ inclut affiliates26,444 ; provisions758 M$ et pertes FV12,317 Md$ distinctes. Repos6,043 Md$ dont2,796 exigibles moins30j, netting907 M$ à distinguer du brut. Nonconsolidated maximum loss151,286 Md$ contre carrying135,174 : périmètre inclut fonds sous VIE consolidées, pas doublon indépendant. Concentrations single issuer >10% equity, non inventaire IA ; pas attribution implicite WHCO aux noms intermédiaires. Distributions fonds sans calendrier contractuel.",
+    "rows": [
+      {
+        "quote": "Our investment funds do not specify timing of distributions on the funds’ underlying assets.",
+        "model_quantity": "fund_liquidity_unscheduled_and_nonconsolidated_max_exposure",
+        "stage": "recognized",
+        "issuer_treatment": "Fin2025 : AFS219,041 Md$ inclut affiliates26,444 ; provisions758 M$ et pertes FV12,317 Md$ distinctes. Repos6,043 Md$ dont2,796 exigibles moins30j, netting907 M$ à distinguer du brut. Nonconsolidated maximum loss151,286 Md$ contre carrying135,174 : périmètre inclut fonds sous VIE consolidées, pas doublon indépendant. Concentrations single issuer >10% equity, non inventaire IA ; pas attribution implicite WHCO aux noms intermédiaires. Distributions fonds sans calendrier contractuel.",
+        "measurement_basis": "Dec2025_nonconsol_carry135_174bn_max151_286bn;repo6_043bn",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 261,
+    "classification": "context",
+    "summary": "Mars2026 : AOCI négatif3,12 Md$ après2,641 Md$ décembre. Pertes AFS, compensations réserves et NCI/taxes agrégées ; ne pas transformer variation479 M$ en sortie cash ou impayé IA. Reclassification vers résultat est comptable, aucune nouvelle position primaire identifiée.",
+    "rows": [
+      {
+        "quote": "Balance at March 31, 2026",
+        "model_quantity": "accumulated_oci_not_cash_loss",
+        "stage": "recognized",
+        "issuer_treatment": "Mars2026 : AOCI négatif3,12 Md$ après2,641 Md$ décembre. Pertes AFS, compensations réserves et NCI/taxes agrégées ; ne pas transformer variation479 M$ en sortie cash ou impayé IA. Reclassification vers résultat est comptable, aucune nouvelle position primaire identifiée.",
+        "measurement_basis": "March2026_AOCI_negative3_120bn;not_cash_outflow"
+      }
+    ]
+  }
+]
