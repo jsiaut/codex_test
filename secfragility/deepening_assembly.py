@@ -8,6 +8,7 @@ from .database import insert
 from .xbrl import parse_instance, digest
 from .text import parse_html, local_tag
 from .document_order import fact_order
+from .evidence import periodic_assurance, filing_status
 
 
 def lender_positions(db, root, as_of):
@@ -91,7 +92,8 @@ def load_sources(db, root, as_of):
     load_form_d(db,root,as_of)
     for accession,filing in sorted(json.loads(registry.read_text()).items()):
         meta=filing['metadata'];resources=filing['resources'];group=filing['group']
-        assurance='audited' if meta['form'] in ('10-K','10-K/A') else 'reviewed' if meta['form'] in ('10-Q','10-Q/A') else 'unknown'
+        assurance=periodic_assurance(meta['form'])
+        status=filing_status(meta['form'])
         physical={h['filename']:h['document_rank'] for h in filing['discovery']['headers']}
         inline={}
         for name,res in resources.items():
@@ -101,9 +103,9 @@ def load_sources(db, root, as_of):
             if not db.execute('SELECT count(*) FROM documents WHERE document_id=?',[did]).fetchone()[0]:
                 insert(db,'documents',dict(document_id=did,group_id=group,entity_id='cik:'+meta['cik'],cik=meta['cik'],
                     accession=accession,document_rank=physical.get(name,-2),document_rank_source='SGML_DOCUMENT_order',
-                    url=res['url'],cache_path=res['path'],sha256=res['sha256'],form=meta['form'],filing_status='filed',
+                    url=res['url'],cache_path=res['path'],sha256=res['sha256'],form=meta['form'],filing_status=status,
                     assurance_level=assurance,location='financial_statements_and_notes',document_kind='financial_source',
-                    tier='A' if assurance=='audited' else 'B' if assurance=='reviewed' else 'C',
+                    tier='E' if status=='furnished' else 'A' if assurance=='audited' else 'B' if assurance=='reviewed' else 'C',
                     acceptance_datetime=meta['acceptanceDateTime'],filing_date=meta['filingDate'],knowledge_date=meta['filingDate'],
                     byte_count=len(raw),parse_status='observed',as_of=as_of))
             if name not in physical or b'ix:nonfraction' not in raw.lower():continue
@@ -121,6 +123,7 @@ def load_sources(db, root, as_of):
                 rank,rule,did=fact_order(name,f,source)
                 f.update(document_rank=rank,document_rank_source=rule,source_document_id=did)
                 if rank==-2:f['coverage_state']='unknown'
+                if status=='furnished':f.update(filing_status='furnished',tier='E',coverage_state='not_processed')
             existing={x[0] for x in db.execute('SELECT fact_id FROM facts WHERE accession=?',[accession]).fetchall()}
             facts=[f for f in facts if f['fact_id'] not in existing]
             bulk_insert(db,'facts',facts,root,'deepening_facts')

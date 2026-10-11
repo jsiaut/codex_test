@@ -11,7 +11,7 @@ def refine(root: Path):
     collection=json.loads((root/'work/collection.json').read_text())
     derived={}
     for accession,f in collection['filings'].items():
-        if f['metadata']['form'] not in ('10-K','10-KT','10-Q','10-QT'):continue
+        if f['metadata']['form'] not in ('10-K','10-KT','10-Q','10-QT','20-F','40-F'):continue
         disc=json.loads((root/f['discovery_path']).read_text()) if f.get('discovery_path') else {}
         for name in disc.get('instances',[]):
             if name not in f['resources']:continue
@@ -24,7 +24,7 @@ def refine(root: Path):
         end_set=set()
         for issuer in g.get('issuers',{}).values():
             for r in issuer['filings']:
-                if r['form'] not in ('10-K','10-KT','10-Q','10-QT'):continue
+                if r['form'] not in ('10-K','10-KT','10-Q','10-QT','20-F','40-F'):continue
                 end=derived.get(r['accessionNumber'],r.get('reportDate'))
                 if end and end<=inv['as_of'][:10]:end_set.add(end)
                 if r['accessionNumber'] in derived and r.get('reportDate')!=end:

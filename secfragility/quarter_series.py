@@ -12,7 +12,7 @@ def prepare(db,root:Path,as_of:str):
     if rows:db.executemany('INSERT INTO fiscal_quarters VALUES (?,?,?,?,?)',rows)
     db.execute('''CREATE TEMP TABLE periodic_occurrences AS
       SELECT f.* FROM eligible_instance_occurrences f JOIN documents d USING(document_id)
-       WHERE d.form IN ('10-K','10-K/A','10-KT','10-Q','10-Q/A','10-QT') AND f.dimensions='{}'
+       WHERE d.form IN ('10-K','10-K/A','10-KT','10-Q','10-Q/A','10-QT','20-F','20-F/A','40-F','40-F/A') AND f.dimensions='{}'
         AND f.coverage_state IN ('observed','explicit_zero') AND f.value IS NOT NULL
         AND f.model_quantity IS NOT NULL''')
     db.execute('''CREATE TEMP TABLE filing_recast_differences AS
@@ -31,7 +31,7 @@ def prepare(db,root:Path,as_of:str):
       min(greatest(d.acceptance_datetime,f.knowledge_date::TIMESTAMPTZ)) AS public_at
       FROM fiscal_quarters q JOIN documents d ON d.group_id=q.group_id
       JOIN periodic_occurrences f ON f.document_id=d.document_id AND f.period_end=q.end_date
-      WHERE d.form IN ('10-K','10-KT','10-Q','10-QT') AND f.period_start IS NOT NULL GROUP BY ALL''')
+      WHERE d.form IN ('10-K','10-KT','10-Q','10-QT','20-F','40-F') AND f.period_start IS NOT NULL GROUP BY ALL''')
     db.execute('''CREATE TEMP TABLE quarter_candidates AS
       SELECT q.group_id,q.start_date AS period_start,q.end_date AS period_end,a.model_quantity,
        a.unit,a.currency,a.accounting_framework,a.reporting_scope,a.accession,a.acceptance_datetime,a.knowledge_date,

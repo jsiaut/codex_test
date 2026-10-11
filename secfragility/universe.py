@@ -18,7 +18,7 @@ def build(root:Path):
     context_quarters={};context_years={}
     ns={'x':'http://www.xbrl.org/2003/instance'}
     for accession,filing in collection['filings'].items():
-        if filing['metadata']['form'] not in ('10-K','10-K/A','10-KT','10-Q','10-Q/A','10-QT'):continue
+        if filing['metadata']['form'] not in ('10-K','10-K/A','10-KT','10-Q','10-Q/A','10-QT','20-F','20-F/A','40-F','40-F/A'):continue
         discovery=json.loads((root/filing['discovery_path']).read_text()) if filing.get('discovery_path') else {}
         for name in discovery.get('instances',[]):
             if name not in filing['resources']:continue
@@ -33,7 +33,7 @@ def build(root:Path):
                 if 340<=days<=385:context_years.setdefault(filing['group'],{})[(start,end)]=accession
     for group,g in inv['groups'].items():
         annual_ends=sorted({r['reportDate'] for issuer in g['issuers'].values() for r in issuer['filings']
-          if r['form'] in ('10-K','10-KT') and r.get('reportDate')})
+          if r['form'] in ('10-K','10-KT','20-F','40-F') and r.get('reportDate')})
         actual_years={period:acc for period,acc in context_years.get(group,{}).items()
             if period[1]<=run['as_of'][:10] and (period[1] in annual_ends or
                 (group in ('CRWV','SPCX') and period[1][5:]=='12-31'))}
