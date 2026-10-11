@@ -1,0 +1,117 @@
+[
+  {
+    "index": 20,
+    "classification": "material",
+    "summary": "CVR année 1 éteint janvier 2025 ; années 2/3 restent conditionnelles aux dates janvier 2026/2027 et réglables en titres au choix. Exercices warrants T1 2025 : cash limité, tranche 2 sans encaissement significatif. Les justes valeurs CVR ne sont ni plafonds contractuels ni dette cash certaine.",
+    "rows": [
+      {
+        "quote": "As of March 31, 2025, the estimated fair value of the Year 2 Contingent Payment Obligation was approximately $5.5 million.",
+        "model_quantity": "contingent_value_right_fair_value_not_payment_cap",
+        "stage": "recognized",
+        "issuer_treatment": "CVR année 1 éteint janvier 2025 ; années 2/3 restent conditionnelles aux dates janvier 2026/2027 et réglables en titres au choix. Exercices warrants T1 2025 : cash limité, tranche 2 sans encaissement significatif. Les justes valeurs CVR ne sont ni plafonds contractuels ni dette cash certaine."
+      }
+    ]
+  },
+  {
+    "index": 21,
+    "classification": "material",
+    "summary": "T1 2025 : CoreWeave explicitement nommé dans les accords de colocation, fournisseur Core ; dépendance à un seul client HPC décrite. Ce nom prouve une relation commerciale, sans permettre à lui seul d’attribuer tous les pourcentages anonymisés ou les avances client. Minage encore majoritaire.",
+    "rows": [
+      {
+        "quote": "Beginning on March 6, 2024, we announced a series of new contractual agreements with CoreWeave, Inc., a third-party provider of high-performance computing (“HPC”) operations for customers using specialized graphics processing units (“GPUs”).",
+        "model_quantity": "named_HPC_customer_relationship",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2025 : CoreWeave explicitement nommé dans les accords de colocation, fournisseur Core ; dépendance à un seul client HPC décrite. Ce nom prouve une relation commerciale, sans permettre à lui seul d’attribuer tous les pourcentages anonymisés ou les avances client. Minage encore majoritaire.",
+        "counterparty": "CoreWeave, Inc.",
+        "counterparty_evidence": "named",
+        "family": "commercial",
+        "link_type": "capacity_lease",
+        "payer": "CoreWeave, Inc.",
+        "receiver": "external:0001839341"
+      }
+    ]
+  },
+  {
+    "index": 22,
+    "classification": "context",
+    "summary": "H1 2025 : plafond du plan salarié augmenté à 48 millions de titres ; nouvelles PSU avec objectifs MW et clients, plus rémunération de marché. Vesting accéléré d’anciens administrateurs : rémunération non monétaire, aucun financement ou warrant commercial attribué à un client.",
+    "rows": [
+      {
+        "quote": "Performance conditions include aggregate energized MW growth and colocation customer acquisition targets.",
+        "model_quantity": "employee_compensation_performance_conditions",
+        "stage": "recognized",
+        "issuer_treatment": "H1 2025 : plafond du plan salarié augmenté à 48 millions de titres ; nouvelles PSU avec objectifs MW et clients, plus rémunération de marché. Vesting accéléré d’anciens administrateurs : rémunération non monétaire, aucun financement ou warrant commercial attribué à un client."
+      }
+    ]
+  },
+  {
+    "index": 23,
+    "classification": "material",
+    "summary": "H1 2025 : loyers futurs reçus sur baux non commencés 9,83 Md hors échéancier commencé 269,782 M. Évolution depuis T1 non assimilée à annulation sans pont. Le tableau preneur détaille cash de principal/intérêts et obligations actualisées distincts des entrées bailleur ; ne pas compter deux côtés dans les sorties.",
+    "rows": [
+      {
+        "quote": "Operating lease payments expected to be received excludes $9.83 billion in total future noncancellable minimum lease payments for operating leases that have not yet commenced at June 30, 2025, which have initial lease terms of 12 years from commencement.",
+        "model_quantity": "lessor_uncommenced_future_rent_inflows",
+        "stage": "recognized",
+        "issuer_treatment": "H1 2025 : loyers futurs reçus sur baux non commencés 9,83 Md hors échéancier commencé 269,782 M. Évolution depuis T1 non assimilée à annulation sans pont. Le tableau preneur détaille cash de principal/intérêts et obligations actualisées distincts des entrées bailleur ; ne pas compter deux côtés dans les sorties.",
+        "measurement_basis": "June2025_inflows;not_current_revenue_or_lessee_obligations"
+      }
+    ]
+  },
+  {
+    "index": 24,
+    "classification": "material",
+    "summary": "H1 2025 : activité de colocation CoreWeave, transition depuis le minage et risque de non-performance du client unique ; aucune preuve ici de financements additionnels ou de cash reçu de ce client.",
+    "rows": [
+      {
+        "quote": "Beginning on March 6, 2024, we announced a series of new contractual agreements with CoreWeave, Inc. (“CoreWeave”), a third-party provider of high-performance computing (“HPC”) operations for customers using specialized graphics processing units (“GPUs”).",
+        "model_quantity": "named_HPC_customer_relationship",
+        "stage": "recognized",
+        "issuer_treatment": "H1 2025 : activité de colocation CoreWeave, transition depuis le minage et risque de non-performance du client unique ; aucune preuve ici de financements additionnels ou de cash reçu de ce client.",
+        "counterparty": "CoreWeave, Inc.",
+        "counterparty_evidence": "named"
+      }
+    ]
+  },
+  {
+    "index": 25,
+    "classification": "material",
+    "summary": "H1 2025 : warrants de réorganisation, pas warrants clients ; exercices tranche 1 génèrent seulement 0,6 M sur semestre, tranche 2 encaissements insignifiants. Les millions de titres exerçables ne valent pas une capacité de financement cash correspondante.",
+    "rows": [
+      {
+        "quote": "During the three and six months ended June 30, 2025, 2.5 million and 5.9 million Tranche 2 Warrants were exercised, respectively, which resulted in immaterial cash receipts.",
+        "model_quantity": "reorganization_warrant_exercises_cash_scope",
+        "stage": "recognized",
+        "issuer_treatment": "H1 2025 : warrants de réorganisation, pas warrants clients ; exercices tranche 1 génèrent seulement 0,6 M sur semestre, tranche 2 encaissements insignifiants. Les millions de titres exerçables ne valent pas une capacité de financement cash correspondante."
+      }
+    ]
+  },
+  {
+    "index": 26,
+    "classification": "material",
+    "summary": "H1 2025 : hausse warrants 289,4 M au semestre, 923,7 M au T2, distincte de baisse CVR ; variations non monétaires. Le tableau juste valeur appelle carrying amount les montants bruts 460/625 M alors que note dette déduit les décotes : conserver cette différence de présentation, ne pas remplacer le coût amorti net par cette ligne.",
+    "rows": [
+      {
+        "quote": "The fair value is disclosed for informational purposes only in accordance with ASC 825-10, Financial Instruments, and is determined using trading activity in over-the-counter markets.",
+        "model_quantity": "debt_fair_value_informational_scope",
+        "stage": "recognized",
+        "issuer_treatment": "H1 2025 : hausse warrants 289,4 M au semestre, 923,7 M au T2, distincte de baisse CVR ; variations non monétaires. Le tableau juste valeur appelle carrying amount les montants bruts 460/625 M alors que note dette déduit les décotes : conserver cette différence de présentation, ne pas remplacer le coût amorti net par cette ligne.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 27,
+    "classification": "material",
+    "summary": "H1 2025 restaté : revenu colocation 19,133 M incluant énergie pass-through 6,05 M, marge brute 1,597 M, sans imputation des charges centrales. Client J représente 100 % du segment mais reste anonyme ; le pool bitcoin explique l’essentiel de la concentration consolidée. Perte avant impôt inclut charges warrants/CVR, distinctes des marges opérationnelles.",
+    "rows": [
+      {
+        "quote": "The Company excludes certain operating expenses and other expenses from the allocations to operating segments.",
+        "model_quantity": "HPC_segment_profit_scope",
+        "stage": "recognized",
+        "issuer_treatment": "H1 2025 restaté : revenu colocation 19,133 M incluant énergie pass-through 6,05 M, marge brute 1,597 M, sans imputation des charges centrales. Client J représente 100 % du segment mais reste anonyme ; le pool bitcoin explique l’essentiel de la concentration consolidée. Perte avant impôt inclut charges warrants/CVR, distinctes des marges opérationnelles.",
+        "measurement_basis": "June2025_gross_profit_before_corporate_costs;not_consolidated_profit_or_cash_flow"
+      }
+    ]
+  }
+]
