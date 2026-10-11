@@ -1,0 +1,130 @@
+[
+  {
+    "index": 36,
+    "classification": "material",
+    "summary": "9M 2025 : exercices de warrants tranche 1 apportent 1,7 M, tranche 2 cash insignifiant ; instruments issus de la réorganisation et non octroyés au client HPC. Dilution et juste valeur ne valent pas recette de trésorerie.",
+    "rows": [
+      {
+        "quote": "During the three and nine months ended September 30, 2025, 4.0 million and 10.0 million Tranche 2 Warrants were exercised, respectively, which resulted in immaterial cash receipts.",
+        "model_quantity": "reorganization_warrant_exercises_cash_scope",
+        "stage": "recognized",
+        "issuer_treatment": "9M 2025 : exercices de warrants tranche 1 apportent 1,7 M, tranche 2 cash insignifiant ; instruments issus de la réorganisation et non octroyés au client HPC. Dilution et juste valeur ne valent pas recette de trésorerie."
+      }
+    ]
+  },
+  {
+    "index": 37,
+    "classification": "material",
+    "summary": "Septembre 2025 : obligations finance leases désormais zéro, operating leases 102,222 M actualisés vs 139,922 M paiements bruts. Côté bailleur, 9,55 Md de loyers non commencés exclus du tableau 519,46 M commencé. Entrées et sorties à conserver séparées, pas de revenu courant égal au carnet locatif.",
+    "rows": [
+      {
+        "quote": "Operating lease payments expected to be received excludes $9.55 billion in total future noncancellable minimum lease payments for operating leases that have not yet commenced at September 30, 2025, which have initial lease terms of 12 years from commencement.",
+        "model_quantity": "lessor_uncommenced_future_rent_inflows",
+        "stage": "recognized",
+        "issuer_treatment": "Septembre 2025 : obligations finance leases désormais zéro, operating leases 102,222 M actualisés vs 139,922 M paiements bruts. Côté bailleur, 9,55 Md de loyers non commencés exclus du tableau 519,46 M commencé. Entrées et sorties à conserver séparées, pas de revenu courant égal au carnet locatif.",
+        "measurement_basis": "September2025;inflows_not_outflows"
+      }
+    ]
+  },
+  {
+    "index": 38,
+    "classification": "material",
+    "summary": "9M 2025 : charge de juste valeur warrants 365 M contre baisse CVR 1,7 M ; effets non monétaires. Crypto à juste valeur et fonds monétaires séparés des valeurs de marché des dettes. Table carrying amount des convertibles reprend face brute : ne pas écraser les décotes explicites de la note dette.",
+    "rows": [
+      {
+        "quote": "The Convertible Notes are recorded at amortized cost in the condensed consolidated balance sheets.",
+        "model_quantity": "debt_amortized_cost_vs_fair_value",
+        "stage": "recognized",
+        "issuer_treatment": "9M 2025 : charge de juste valeur warrants 365 M contre baisse CVR 1,7 M ; effets non monétaires. Crypto à juste valeur et fonds monétaires séparés des valeurs de marché des dettes. Table carrying amount des convertibles reprend face brute : ne pas écraser les décotes explicites de la note dette.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 39,
+    "classification": "material",
+    "summary": "T3/9M 2025 : colocation 14,951/34,084 M de revenu et marges brutes 3,885/5,482 M avant charges centrales ; seul client J anonyme. Revenus bitcoin dominent la concentration consolidée. Pont résultat comporte effets warrants/CVR, crypto et règlement juridique ; ne pas attribuer ceux-ci à la marge HPC.",
+    "rows": [
+      {
+        "quote": "The Company excludes certain operating expenses and other expenses from the allocations to operating segments.",
+        "model_quantity": "HPC_segment_profit_scope",
+        "stage": "recognized",
+        "issuer_treatment": "T3/9M 2025 : colocation 14,951/34,084 M de revenu et marges brutes 3,885/5,482 M avant charges centrales ; seul client J anonyme. Revenus bitcoin dominent la concentration consolidée. Pont résultat comporte effets warrants/CVR, crypto et règlement juridique ; ne pas attribuer ceux-ci à la marge HPC.",
+        "measurement_basis": "September2025_segment_gross_profit_before_corporate_costs"
+      }
+    ]
+  },
+  {
+    "index": 40,
+    "classification": "material",
+    "summary": "9M 2025 : le roll-forward documente réellement 328,663 M de financement client colocation REÇU, distinct du stock différé final 341,581 M et du montant total deux activités 331,15 M. Ces avances financent les dépenses de sites ASC 842 ; pas de revenu reconnu égal au cash. RPO ASC 606 absent sur contrats >1 an ne signifie pas absence de carnet de loyers HPC.",
+    "rows": [
+      {
+        "quote": "Additional customer funding received | | | | | | 328,663 | | | | | | 2,487 | | | | | | 331,150 | |",
+        "model_quantity": "customer_construction_funding_cash_received",
+        "stage": "recognized",
+        "issuer_treatment": "9M 2025 : le roll-forward documente réellement 328,663 M de financement client colocation REÇU, distinct du stock différé final 341,581 M et du montant total deux activités 331,15 M. Ces avances financent les dépenses de sites ASC 842 ; pas de revenu reconnu égal au cash. RPO ASC 606 absent sur contrats >1 an ne signifie pas absence de carnet de loyers HPC.",
+        "candidate_index": 40,
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "9M2025_colocation_customer_funding_received;not_total_deferred_stock;customer_identity_not_proven_here"
+      }
+    ]
+  },
+  {
+    "index": 41,
+    "classification": "material",
+    "summary": "Septembre 2025 : créance financement client 343,085 M adossée aux payables 123,1 M et accruals 220 M, collecte avant paiement fournisseurs. Revenu différé non courant 260,348 M financé par prépaiements colocation : stock distinct des financements reçus 9M et de la créance non encaissée.",
+    "rows": [
+      {
+        "quote": "Noncurrent deferred revenue represents prepaid base license fees from our Colocation customer.",
+        "model_quantity": "customer_advance_noncurrent_stock",
+        "stage": "recognized",
+        "issuer_treatment": "Septembre 2025 : créance financement client 343,085 M adossée aux payables 123,1 M et accruals 220 M, collecte avant paiement fournisseurs. Revenu différé non courant 260,348 M financé par prépaiements colocation : stock distinct des financements reçus 9M et de la créance non encaissée.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "September2025_stock;not_current_free_cash"
+      }
+    ]
+  },
+  {
+    "index": 42,
+    "classification": "context",
+    "summary": "Rémunérations 9M 2025 : PSU/RSU/MSU avec objectifs performance et cours ; compensation capitalisée PPE distincte de charges résultat et accélération d’administrateurs. Les objectifs d’acquisition clients ne sont pas des commandes signées.",
+    "rows": [
+      {
+        "quote": "2 Represents the amounts of stock-based compensation capitalized to property, plant, and equipment.",
+        "model_quantity": "employee_share_compensation_capitalization",
+        "stage": "recognized",
+        "issuer_treatment": "Rémunérations 9M 2025 : PSU/RSU/MSU avec objectifs performance et cours ; compensation capitalisée PPE distincte de charges résultat et accélération d’administrateurs. Les objectifs d’acquisition clients ne sont pas des commandes signées."
+      }
+    ]
+  },
+  {
+    "index": 43,
+    "classification": "material",
+    "summary": "Annuel 2025 : colocation 65,424 M incluant 15,914 M d’énergie pass-through, marge brute 19,745 M avant coûts startup, conseillers et frais centraux. J anonyme 100 % du segment ; F est client minage devenu actionnaire, pas attribution automatique à CoreWeave. Aucune mesure d’actifs par segment.",
+    "rows": [
+      {
+        "quote": "On the Effective Date, Customer F became a minority shareholder of the Company.",
+        "model_quantity": "anonymous_customer_equity_relationship",
+        "stage": "recognized",
+        "issuer_treatment": "Annuel 2025 : colocation 65,424 M incluant 15,914 M d’énergie pass-through, marge brute 19,745 M avant coûts startup, conseillers et frais centraux. J anonyme 100 % du segment ; F est client minage devenu actionnaire, pas attribution automatique à CoreWeave. Aucune mesure d’actifs par segment.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "FY2025_mining_customer_F;not_HPC_customer_J"
+      }
+    ]
+  },
+  {
+    "index": 44,
+    "classification": "material",
+    "summary": "Annuel 2025 confirme sortie janvier 2024, extinction/conversion des dettes de sortie 2024 ; les 80/150/260 M historiques ne s’ajoutent pas à dette 2025. Gain réorganisation 111,439 M de 2024 lié aux créances satisfaites, coûts conseils post-sortie en charges 2025.",
+    "rows": [
+      {
+        "quote": "The New Secured Convertible Notes were mandatorily converted as of July 10, 2024, and are no longer outstanding.",
+        "model_quantity": "historical_reorganization_debt_converted",
+        "stage": "recognized",
+        "issuer_treatment": "Annuel 2025 confirme sortie janvier 2024, extinction/conversion des dettes de sortie 2024 ; les 80/150/260 M historiques ne s’ajoutent pas à dette 2025. Gain réorganisation 111,439 M de 2024 lié aux créances satisfaites, coûts conseils post-sortie en charges 2025.",
+        "measurement_basis": "2024_conversion_confirmed_in_FY2025_note"
+      }
+    ]
+  }
+]
