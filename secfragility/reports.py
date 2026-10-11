@@ -325,7 +325,8 @@ Le travail est régulièrement commité et poussé. L’exécution finale porte 
             deepening_render(db,root,as_of,data)
             if (root/'work/expansion/authorization.json').exists():
                 from .expansion_reports import render as expansion_render
-                expansion_render(db,root,as_of)
+                data['expansion_results']=expansion_render(db,root,as_of)
+                (root/'delivery_summary.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,default=str)+'\n')
             for name in ('audit/domain_rules.md','synthesis.md','delta.md','README.md'):
                 p=root/name
                 if p.exists():
@@ -333,6 +334,9 @@ Le travail est régulièrement commité et poussé. L’exécution finale porte 
                         'La découverte ciblée est ouverte ; la tranche initiale de Notes Data Sets couvre les dépôts d’octobre 2025 à septembre 2026. Les périodes plus anciennes et les candidats non lus restent explicitement hors couverture.')
                     text=text.replace('Les cinq familles de notes autorisées sont traitées ; la découverte, les prêteurs et les autres extensions ne sont pas ouverts.',
                         'Les cinq familles de notes et les quatre approfondissements autorisés sont traités dans une tranche bornée ; voir approfondissements.md pour les sources, résultats et limites. Les nouveaux groupes ne sont pas ajoutés à l’univers principal des onze groupes.')
+                    if (root/'work/expansion/authorization.json').exists():
+                        text=text.replace('Les nouveaux groupes ne sont pas ajoutés à l’univers principal des onze groupes.',
+                            'Douze groupes sont maintenant ajoutés aux onze groupes initiaux. Leur première lecture, ses sources et ses notes non traitées figurent dans entites_ajoutees.md et expansion_note_coverage.csv.')
                     p.write_text(text)
         else:extension_render(db,root,as_of,data)
     return data

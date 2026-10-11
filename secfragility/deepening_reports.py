@@ -9,6 +9,10 @@ from .reports import csv_write
 def amount(value):return 'ND' if value is None else format(Decimal(value)/Decimal(1_000_000),',.3f').replace(',',' ').replace('.',',')+' M$'
 
 def render(db,root,as_of,delivery):
+    scope_text=('Les quatre approfondissements décrivent les onze groupes initiaux et leurs contreparties. '
+        'Les douze nouveaux groupes font l’objet de la première analyse distincte dans entites_ajoutees.md.'
+        if (root/'work/expansion/authorization.json').exists() else
+        'Les onze groupes du modèle principal restent distincts des déposants supplémentaires examinés pour les prêts, investissements et véhicules.')
     notes=json.loads((root/'work/deepening_reading_queue.json').read_text())
     contracts=json.loads((root/'work/deepening_contract_queue.json').read_text())
     keys={r['content_key'] for r in notes+contracts}
@@ -88,7 +92,7 @@ def render(db,root,as_of,delivery):
     (root/'delivery_summary.json').write_text(json.dumps(delivery,ensure_ascii=False,indent=2,default=str)+'\n')
     brief=f'''# Bilan des quatre approfondissements
 
-Sources arrêtées au **9 octobre 2026**, comme dans la livraison précédente. Le travail est effectué par un seul agent, sans audit indépendant. Les onze groupes du modèle principal restent distincts des déposants supplémentaires examinés pour les prêts, investissements et véhicules.
+Sources arrêtées au **9 octobre 2026**, comme dans la livraison précédente. Le travail est effectué par un seul agent, sans audit indépendant. {scope_text}
 
 **La découverte la plus précise est le montage Cerebras–OpenAI : un prêt client, des prestations qui peuvent rembourser ce prêt, et des warrants liés au contrat commercial.** Les pièces établissent ces mécanismes ; elles ne démontrent pas une demande artificielle ni une fragilité attribuable à tout le secteur.
 
@@ -187,8 +191,7 @@ Le rapport approfondissements.md contient les sources, les périodes, les positi
     full+='- [Form D officiel — instructions de l’Item 13](https://www.sec.gov/files/formd.pdf)\n'
     full+='\nLes liens de chaque position de prêteur figurent aussi dans lender_positions.csv. Les citations exactes et leurs repères sont conservés dans deepening_evidence.csv.\n'
     (root/'approfondissements.md').write_text(full)
-    # The detailed synthesis stays generated from the main eleven-group model.
-    with (root/'synthesis.md').open('a') as f:f.write('\n## Approfondissements autorisés\n\nVoir approfondissements.md et les fichiers CSV de cette tranche pour les prêteurs, contrats et découvertes. Les montants externes sont conservés séparément des agrégats des onze groupes.\n')
+    with (root/'synthesis.md').open('a') as f:f.write('\n## Approfondissements autorisés\n\nVoir approfondissements.md et les fichiers CSV de cette tranche pour les prêteurs, contrats et découvertes. Les montants des contreparties et véhicules gardent leurs bases propres et ne sont pas ajoutés aux agrégats des groupes.\n')
     (root/'README.md').write_text('''# SEC_Project_2
 
 Les quatre approfondissements autorisés sont livrés : lire [user_brief_deepening.md](user_brief_deepening.md), puis [approfondissements.md](approfondissements.md). Les citations sont dans deepening_evidence.csv ; les quantités dans deepening_measures.csv, lender_positions.csv et form_d_disclosures.csv. form_d_series.csv contient les dernières déclarations cumulatives connues à chaque fin de trimestre. Les huit tables sont dans tables/ et les contrôles dans audit/.

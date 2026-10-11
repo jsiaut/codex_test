@@ -149,6 +149,9 @@ def lease_controls(db,as_of: str):
 
 
 def eps_controls(db,as_of: str,relative_tolerance: str):
+    tolerance=f'''CASE WHEN direct.value IS NOT NULL THEN p_income.half_unit+
+      abs(shares.value)*p_eps.half_unit+abs(eps.value)*p_shares.half_unit+p_eps.half_unit*p_shares.half_unit
+      ELSE abs(income.value)*{relative_tolerance}::DECIMAL(38,6) END'''
     db.execute(f'''INSERT INTO controls
       (control,group_id,period_start,period_end,view,as_of,breakdown_key,status,lhs,rhs,residual,
        tolerance,tolerance_basis,explanation_code,evidence)
@@ -159,31 +162,32 @@ def eps_controls(db,as_of: str,relative_tolerance: str):
          AND classes.dimensions LIKE '%:StatementClassOfStockAxis%' GROUP BY classes.group_id HAVING count(DISTINCT classes.value)>1)
          OR eps.value*shares.value IS NULL OR income.value IS NULL OR (direct.value IS NOT NULL AND
          (p_income.half_unit IS NULL OR p_eps.half_unit IS NULL OR p_shares.half_unit IS NULL)) THEN 'not_testable'
-        WHEN abs(income.value-eps.value*shares.value)<=
-          CASE WHEN direct.value IS NOT NULL THEN p_income.half_unit+
-           abs(shares.value)*p_eps.half_unit+abs(eps.value)*p_shares.half_unit+p_eps.half_unit*p_shares.half_unit
-           ELSE abs(income.value)*{relative_tolerance}::DECIMAL(38,6) END THEN 'ok' ELSE 'mismatch' END,
+        WHEN abs(income.value-eps.value*shares.value)<={tolerance} THEN 'ok' ELSE 'mismatch' END,
        eps.value*shares.value,income.value,eps.value*shares.value-income.value,
-       CASE WHEN direct.value IS NOT NULL THEN p_income.half_unit+
-        abs(shares.value)*p_eps.half_unit+abs(eps.value)*p_shares.half_unit+p_eps.half_unit*p_shares.half_unit
-        ELSE abs(income.value)*{relative_tolerance}::DECIMAL(38,6) END,
+       {tolerance},
        'instance',CASE WHEN EXISTS (SELECT 1 FROM selected_as_known classes WHERE classes.group_id=eps.group_id
          AND classes.canonical_concept=eps.canonical_concept AND classes.period_start=eps.period_start AND classes.period_end=eps.period_end
          AND classes.dimensions LIKE '%:StatementClassOfStockAxis%' GROUP BY classes.group_id HAVING count(DISTINCT classes.value)>1)
          THEN 'multiple_share_classes_with_different_eps'
         WHEN eps.value*shares.value IS NULL OR income.value IS NULL THEN 'missing_eps_terms'
         WHEN direct.value IS NOT NULL AND (p_income.half_unit IS NULL OR p_eps.half_unit IS NULL OR p_shares.half_unit IS NULL) THEN 'precision_missing'
-        WHEN abs(income.value-eps.value*shares.value)>abs(income.value)*{relative_tolerance}::DECIMAL(38,6)
+        WHEN abs(income.value-eps.value*shares.value)>{tolerance}
          THEN 'eps_scale_residual' WHEN direct.value IS NULL THEN 'net_income_proxy_relative_tolerance' END,
        to_json([eps.fact_id,shares.fact_id,income.fact_id])
       FROM quantities_as_known eps
       LEFT JOIN quantities_as_known shares ON shares.group_id=eps.group_id AND shares.model_quantity='diluted_shares_weighted'
        AND shares.period_start=eps.period_start AND shares.period_end=eps.period_end
+       AND shares.accounting_framework=eps.accounting_framework AND shares.reporting_scope=eps.reporting_scope
+       AND shares.unit='http://www.xbrl.org/2003/instance:shares'
       LEFT JOIN quantities_as_known direct ON direct.group_id=eps.group_id AND direct.model_quantity='net_income_to_common_diluted'
        AND direct.period_start=eps.period_start AND direct.period_end=eps.period_end
+       AND direct.accounting_framework=eps.accounting_framework AND direct.reporting_scope=eps.reporting_scope
+       AND direct.unit=split_part(eps.unit,'/http',1)
       LEFT JOIN quantities_as_known income ON income.group_id=eps.group_id AND
        income.model_quantity=CASE WHEN direct.value IS NOT NULL THEN 'net_income_to_common_diluted' ELSE 'net_income' END
        AND income.period_start=eps.period_start AND income.period_end=eps.period_end
+       AND income.accounting_framework=eps.accounting_framework AND income.reporting_scope=eps.reporting_scope
+       AND income.unit=split_part(eps.unit,'/http',1)
       LEFT JOIN precision_units p_eps ON p_eps.decimals=eps.decimals
       LEFT JOIN precision_units p_shares ON p_shares.decimals=shares.decimals
       LEFT JOIN precision_units p_income ON p_income.decimals=income.decimals
