@@ -5,15 +5,19 @@ from .database import sql_literal
 def stocks(db,as_of:str):
     for view in ['as_known','revised']:
         timestamp='q.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
-        db.execute(f'''CREATE TEMP TABLE snapshot_stocks_{view} AS SELECT f.*,q.start_date AS quarter_start,q.end_date AS quarter_end,
+        db.execute(f'''CREATE TEMP TABLE snapshot_basis_candidates_{view} AS SELECT f.*,q.start_date AS quarter_start,q.end_date AS quarter_end,
           {timestamp} AS snapshot_at FROM eligible_instance_occurrences f
           JOIN quarter_cutoffs q ON q.group_id=f.group_id AND f.period_start IS NULL
            AND (f.period_end=q.end_date OR f.period_end=q.start_date-INTERVAL 1 DAY)
           JOIN anchor_order ao USING(model_quantity,canonical_concept)
           WHERE f.dimensions='{{}}' AND f.value IS NOT NULL AND f.coverage_state IN ('observed','explicit_zero')
            AND f.acceptance_datetime<={timestamp}
+           AND f.knowledge_date<=({timestamp})::DATE
           QUALIFY row_number() OVER (PARTITION BY f.group_id,q.start_date,q.end_date,f.model_quantity,f.period_end,f.unit,
             f.accounting_framework,f.reporting_scope ORDER BY ao.priority,f.acceptance_datetime DESC,f.accession DESC,f.document_rank DESC,f.numeric_precision DESC,f.occurrence_rank DESC,f.fact_id)=1''')
+        from .scalar_basis import select
+        select(db,f'snapshot_basis_candidates_{view}',f'snapshot_stocks_{view}',as_of,
+            ('group_id','model_quantity','quarter_start','quarter_end','period_end'))
         db.execute(f'''INSERT INTO measures (measure,group_id,period_start,period_end,view,as_of,value,unit,currency,status,coverage_state,
           knowledge_date,evidence_profile,lineage,source_perspective,accounting_framework,constant_perimeter)
          SELECT 'rpo_total',group_id,quarter_start,quarter_end,'{view}',snapshot_at,value,unit,currency,'computed','observed',

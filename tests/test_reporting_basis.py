@@ -7,7 +7,7 @@ from secfragility.quarter_series import prepare,measures
 from tests.test_identity_and_guards import fact,instance
 
 
-def fixture(root,simultaneous=False):
+def fixture(root,simultaneous=False,with_stocks=False):
     src=Path(__file__).resolve().parents[1];(root/'work').mkdir()
     for name in ['schema.sql','queries.sql','config.yaml']:(root/name).write_text((src/name).read_text())
     (root/'work/expected_universe.json').write_text(json.dumps({'quarters':[dict(group_id='S',
@@ -21,6 +21,12 @@ def fixture(root,simultaneous=False):
         insert(db,'facts',dict(fact(instance()),fact_id=doc,semantic_key=doc,document_id=doc,accession=doc,
             currency=currency,unit='http://www.xbrl.org/2003/iso4217:'+currency,value=Decimal(value),
             model_quantity='revenue_total',acceptance_datetime=accepted,knowledge_date=date))
+        if with_stocks:
+            insert(db,'facts',dict(fact(instance()),fact_id=doc+'-stock',semantic_key=doc+'-stock',document_id=doc,
+                accession=doc,currency=currency,unit='http://www.xbrl.org/2003/iso4217:'+currency,
+                value=Decimal(value),period_start=None,model_quantity='equity_including_nci',
+                canonical_concept='us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest',
+                acceptance_datetime=accepted,knowledge_date=date))
     prepare_views(db,root,'2026-10-09T00:00:00Z');prepare(db,root,'2026-10-09T00:00:00Z')
     return db
 
@@ -41,3 +47,19 @@ def test_simultaneous_alternative_bases_abstain_and_keep_original_facts(tmp_path
     assert db.execute('SELECT count(*) FROM quarter_quantities_revised').fetchone()[0]==0
     assert db.execute("SELECT count(*) FROM exclusions WHERE reason='conflicting_reporting_bases'").fetchone()[0]>0
     assert db.execute('SELECT count(*) FROM facts').fetchone()[0]==2
+
+
+def test_equity_snapshots_keep_dated_currency_without_duplicate_scalar_keys(tmp_path):
+    from secfragility.tier1_numeric import stocks
+    from secfragility.numeric_extended import run
+    db=fixture(tmp_path,with_stocks=True);stocks(db,'2026-10-09T00:00:00Z');run(db,'2026-10-09T00:00:00Z')
+    assert db.execute("SELECT currency FROM measures WHERE measure='eq_equity_and_accumulated_deficit' AND view='as_known'").fetchall()==[('RUB',)]
+    assert db.execute("SELECT currency FROM measures WHERE measure='eq_equity_and_accumulated_deficit' AND view='revised'").fetchall()==[('USD',)]
+    assert db.execute('SELECT count(*) FROM facts').fetchone()[0]==4
+
+
+def test_simultaneous_equity_bases_are_not_arbitrarily_selected(tmp_path):
+    from secfragility.tier1_numeric import stocks
+    db=fixture(tmp_path,simultaneous=True,with_stocks=True);stocks(db,'2026-10-09T00:00:00Z')
+    assert db.execute('SELECT count(*) FROM snapshot_stocks_revised').fetchone()[0]==0
+    assert db.execute('SELECT count(*) FROM facts').fetchone()[0]==4
