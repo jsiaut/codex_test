@@ -1,9 +1,10 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "phase": "phase3",
-  "status": "delivered",
+  "phase": "continuation398_reading",
+  "status": "in_progress",
   "extension_started_at": "2026-10-10T06:35:26.868344+00:00",
   "baseline_commit": "e05c077c7b6faba84537c546a77b67270ef040e5",
   "completed_at": "2026-10-11T11:41:17.464136+00:00",
-  "delivery_stage": "added_issuer_groups_first_review"
+  "delivery_stage": "remaining_398_notes",
+  "continuation_started_at": "2026-10-11T12:35:06.951522+00:00"
 }
