@@ -4,6 +4,111 @@ from pathlib import Path
 import json
 from .database import bulk_insert, sql_literal
 from .assembly import rows
+from .database import insert
+from .xbrl import parse_instance, digest
+from .text import parse_html, local_tag
+from .document_order import fact_order
+
+
+def lender_positions(db, root, as_of):
+    """FV/cost is measured on each reported loan position, outside group totals."""
+    import re
+    from lxml import etree
+    from .reports import csv_write
+    def label(dimensions):
+        pieces=[]
+        for axis,member in json.loads(dimensions).items():
+            if member.startswith('<'):
+                node=etree.fromstring(member.encode(),etree.XMLParser(resolve_entities=False,no_network=True))
+                pieces.append(' '.join(node.itertext()))
+            else:pieces.append(member)
+        return ' | '.join(pieces)
+    db.create_function('investment_position_label',label,['VARCHAR'],'VARCHAR')
+    db.execute('''CREATE OR REPLACE TEMP TABLE targeted_lender_positions AS
+      SELECT cost.group_id,cost.entity_id,cost.accession,cost.period_end,cost.unit,cost.currency,
+        cost.dimensions,investment_position_label(cost.dimensions) AS position_label,
+        cost.value AS cost,fv.value AS fair_value,cost.accounting_framework,cost.tier,
+        greatest(cost.knowledge_date,fv.knowledge_date) AS knowledge_date,
+        to_json([cost.fact_id,fv.fact_id]) AS lineage,
+        CASE WHEN cost.value>0 THEN exact_ratio6(fv.value,cost.value) END AS fv_to_cost
+      FROM eligible_instance_occurrences cost JOIN eligible_instance_occurrences fv
+        ON cost.accession=fv.accession AND cost.dimensions=fv.dimensions AND cost.period_end=fv.period_end
+        AND cost.unit=fv.unit AND cost.reporting_scope=fv.reporting_scope
+        AND cost.accounting_framework=fv.accounting_framework
+      WHERE cost.canonical_concept='us-gaap:InvestmentOwnedAtCost'
+        AND fv.canonical_concept='us-gaap:InvestmentOwnedAtFairValue'
+        AND cost.value IS NOT NULL AND fv.value IS NOT NULL AND cost.group_id LIKE 'external:%'
+        AND cost.dimensions ILIKE '%coreweave%'
+        AND regexp_matches(investment_position_label(cost.dimensions),'(?i)loan|debt|lien')
+        AND NOT regexp_matches(investment_position_label(cost.dimensions),'(?i)unfunded|uncommitted')''')
+    for view in ('as_known','revised'):
+        db.execute(f'''INSERT INTO measures
+          (measure,group_id,entity_id,period_start,period_end,view,as_of,information_cutoff,breakdown_key,
+           value,numerator,denominator,unit,status,nd_reason,coverage_state,knowledge_date,lineage,
+           evidence_profile,tier,source_perspective,accounting_framework)
+          SELECT 'bdc_fv_to_cost',group_id,entity_id,'none',period_end::VARCHAR,'{view}',?::TIMESTAMPTZ,
+            ?::TIMESTAMPTZ,accession||'|'||dimensions,fv_to_cost,fair_value,cost,'ratio',
+            CASE WHEN cost<=0 THEN 'not_determinable' ELSE 'computed' END,
+            CASE WHEN cost<=0 THEN 'non_positive_cost' END,'observed',knowledge_date,lineage,to_json([tier]),
+            2,'reporting_entity',accounting_framework FROM targeted_lender_positions WHERE knowledge_date<=?::DATE''',
+            [as_of,as_of,as_of[:10]])
+        for metric,reason in [('bdc_pik_share','position_pik_income_and_total_interest_income_not_established'),
+                              ('bdc_non_accrual_share','position_non_accrual_classification_not_established')]:
+            db.execute(f'''INSERT INTO measures
+              (measure,group_id,entity_id,period_start,period_end,view,as_of,information_cutoff,breakdown_key,
+               unit,status,nd_reason,coverage_state,knowledge_date,lineage,evidence_profile,tier,
+               source_perspective,accounting_framework)
+              SELECT '{metric}',group_id,entity_id,'none',period_end::VARCHAR,'{view}',?::TIMESTAMPTZ,
+                ?::TIMESTAMPTZ,accession||'|'||dimensions,'ratio','not_determinable','{reason}',
+                'not_disclosed',knowledge_date,lineage,to_json([tier]),2,'reporting_entity',accounting_framework
+                FROM targeted_lender_positions WHERE knowledge_date<=?::DATE''',[as_of,as_of,as_of[:10]])
+    positions=rows(db,'SELECT * FROM targeted_lender_positions ORDER BY group_id,period_end,position_label')
+    csv_write(root/'lender_positions.csv',positions)
+    (root/'work/deepening_lender_summary.json').write_text(json.dumps(dict(positions=len(positions),
+        lenders=len({r['group_id'] for r in positions}),costs_and_fair_values_are_positions_not_facility_sizes=True,
+        pii_or_model_api_calls=False,earlier_missing_data_not_zero=True),indent=2)+'\n')
+
+
+def load_sources(db, root, as_of):
+    """Add original filings, never financial amounts read from an SEC dataset scan."""
+    registry=root/'work/deepening_filings.json'
+    if not registry.exists():return
+    import hashlib
+    for accession,filing in sorted(json.loads(registry.read_text()).items()):
+        meta=filing['metadata'];resources=filing['resources'];group=filing['group']
+        assurance='audited' if meta['form'] in ('10-K','10-K/A') else 'reviewed' if meta['form'] in ('10-Q','10-Q/A') else 'unknown'
+        physical={h['filename']:h['document_rank'] for h in filing['discovery']['headers']}
+        inline={}
+        for name,res in resources.items():
+            raw=(root/res['path']).read_bytes()
+            if hashlib.sha256(raw).hexdigest()!=res['sha256']:raise ValueError('Official filing bytes changed')
+            did=digest([res['url']])
+            if not db.execute('SELECT count(*) FROM documents WHERE document_id=?',[did]).fetchone()[0]:
+                insert(db,'documents',dict(document_id=did,group_id=group,entity_id='cik:'+meta['cik'],cik=meta['cik'],
+                    accession=accession,document_rank=physical.get(name,-2),document_rank_source='SGML_DOCUMENT_order',
+                    url=res['url'],cache_path=res['path'],sha256=res['sha256'],form=meta['form'],filing_status='filed',
+                    assurance_level=assurance,location='financial_statements_and_notes',document_kind='financial_source',
+                    tier='A' if assurance=='audited' else 'B' if assurance=='reviewed' else 'C',
+                    acceptance_datetime=meta['acceptanceDateTime'],filing_date=meta['filingDate'],knowledge_date=meta['filingDate'],
+                    byte_count=len(raw),parse_status='observed',as_of=as_of))
+            if name not in physical or b'ix:nonfraction' not in raw.lower():continue
+            for node in parse_html(raw).iter():
+                if local_tag(node) not in ('ix:nonfraction','ix:fraction') or not node.get('id'):continue
+                inline.setdefault(node.get('id'),set()).add((physical[name],did,node.get('name')))
+        source=dict(physical=physical,inline=inline)
+        for name,res in resources.items():
+            if name not in filing['discovery']['instances']:continue
+            facts=parse_instance((root/res['path']).read_bytes(),entity_id='cik:'+meta['cik'],
+                reporting_identity='reporter:'+group,group_id=group,document_id=digest([res['url']]),accession=accession,
+                acceptance_datetime=meta['acceptanceDateTime'],knowledge_date=meta['filingDate'],assurance_level=assurance,
+                as_of=as_of)
+            for f in facts:
+                rank,rule,did=fact_order(name,f,source)
+                f.update(document_rank=rank,document_rank_source=rule,source_document_id=did)
+                if rank==-2:f['coverage_state']='unknown'
+            existing={x[0] for x in db.execute('SELECT fact_id FROM facts WHERE accession=?',[accession]).fetchall()}
+            facts=[f for f in facts if f['fact_id'] not in existing]
+            bulk_insert(db,'facts',facts,root,'deepening_facts')
 
 
 def horizon_bounds(db, root, as_of):

@@ -32,6 +32,9 @@ def run(root,reconstruct=False,resume=False):
             where=" WHERE document_kind IS DISTINCT FROM 'submission_metadata'" if t=='documents' else ''
             db.execute(f"INSERT INTO {t} BY NAME SELECT * FROM read_parquet('tables/{t}.parquet'){where}")
     db.execute('BEGIN TRANSACTION')
+    if (root/'work/deepening_authorization.json').exists():
+        from .deepening_assembly import load_sources
+        load_sources(db,root,as_of)
     collection=json.loads((root/'work/collection.json').read_text())
     from .mapping import refresh
     refresh(db,root,collection)
@@ -89,8 +92,9 @@ def finish(db,root,as_of,state):
     from .enrichment import run as enrichment
     enrichment(db,as_of)
     if (root/'work/deepening_authorization.json').exists():
-        from .deepening_assembly import horizon_bounds
+        from .deepening_assembly import horizon_bounds,lender_positions
         horizon_bounds(db,root,as_of)
+        lender_positions(db,root,as_of)
     for g,data in json.loads((root/'work/inventory.json').read_text())['groups'].items():
         db.execute("DELETE FROM measures WHERE group_id=? AND period_end!='none' AND period_end<?",[g,data['analysis_start']])
     from .universe import DEPENDENCIES

@@ -49,6 +49,28 @@ def assemble(db,root,as_of):
                 alias=dict(row,alias_key=digest(old),alias=old['name'],alias_start=old.get('from','')[:10] or None,
                            alias_end=old.get('to','')[:10] or None,resolution_rule='same_CIK_formerNames')
                 records.append(alias);index[normalize(old['name'])].append(row)
+    # Public lenders retain their own CIK identity and never become the borrower
+    # or their manager merely because an investment names the same brand.
+    external=root/'work/deepening_issuer_metadata.json'
+    if external.exists():
+        filings=json.loads((root/'work/deepening_filings.json').read_text())
+        for cik,item in sorted(json.loads(external.read_text()).items()):
+            if any(r.get('cik')==cik for r in records):continue
+            proof_filings=[f for f in filings.values() if f['metadata']['cik']==cik]
+            if not proof_filings:continue
+            meta=item['metadata'];eid='cik:'+cik;g='external:'+cik;name=meta['name']
+            f=sorted(proof_filings,key=lambda x:x['metadata']['filingDate'])[-1]
+            resource=f['resources'][f['metadata']['primaryDocument']]
+            row=dict(entity_id=eid,membership_id='standalone',legal_name=name,normalized_name=normalize(name),
+                cik=cik,jurisdiction=meta.get('stateOfIncorporation'),entity_status='confirmed',group_id=g,economic_group_id=g,
+                consolidation_treatment='parent',knowledge_date=f['metadata']['filingDate'],
+                resolution_rule='same_CIK_submissions_and_original_periodic_filing',evidence_document_id=digest([resource['url']]),
+                evidence_locator='SEC submissions CIK and original filing cover',source_perspective='reporting_entity',as_of=as_of)
+            records.append(row);index[normalize(name)].append(row);issuer_by_group[g]=row
+            for old in meta.get('formerNames',[]):
+                records.append(dict(row,alias_key=digest(old),alias=old['name'],alias_start=old.get('from','')[:10] or None,
+                    alias_end=old.get('to','')[:10] or None,resolution_rule='same_CIK_formerNames'))
+                index[normalize(old['name'])].append(row)
     # The completed redomiciliation also preserves the predecessor as a subsidiary.
     for row in list(records):
         if row.get('alias_key') or row['group_id'] not in dates or not row.get('membership_end'):continue

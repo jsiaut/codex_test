@@ -6,6 +6,7 @@ import argparse, csv, hashlib, io, json, re, zipfile
 import yaml
 from .network import SecClient, SessionLock, atomic_json
 from .text import normalize_html
+from .archives import discover, read_xbrl_archive
 
 csv.field_size_limit(8_000_000)
 SUBJECTS = re.compile(r'\b(?:CoreWeave|OpenAI|Anthropic)\b', re.I)
@@ -41,6 +42,92 @@ def fetch(root, sec, url):
           bytes=len(raw), retrieved_at=datetime.now(timezone.utc).isoformat(), source_as_of=sec.as_of))
     atomic_json(manifest, saved)
     return path
+
+
+def collect_filing(root, sec, metadata, group=None):
+    """Preserve official bytes and physical SGML ordering for offline replay."""
+    registry = root / 'work/deepening_filings.json'
+    saved = json.loads(registry.read_text()) if registry.exists() else {}
+    accession = metadata['accessionNumber']
+    if accession in saved: return saved[accession]
+    cik = str(metadata['cik']).zfill(10)
+    d = discover(sec, cik, accession)
+    files = read_xbrl_archive(sec, d)
+    files[metadata['primaryDocument']] = sec.get(d['base'] + metadata['primaryDocument'])
+    for name in d['instances'] + [n for n in (d.get('filing_summary'), d.get('metalinks')) if n]:
+        if name not in files: files[name] = sec.get(d['base'] + name)
+    directory = root / 'work/deepening_data' / accession; directory.mkdir(exist_ok=True)
+    resources = {}
+    for name, raw in files.items():
+        if Path(name).name != name: raise ValueError('Unsafe remote resource path')
+        path = directory / name; path.write_bytes(raw)
+        resources[name] = dict(path=str(path.relative_to(root)),url=d['base']+name,
+            sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw),
+            document_rank=next((h['document_rank'] for h in d['headers'] if h['filename']==name),-2))
+    saved[accession] = dict(metadata=dict(metadata,cik=cik),group=group or 'external:'+cik,
+        resources=resources,discovery=d,status='collected',retrieved_at=datetime.now(timezone.utc).isoformat())
+    atomic_json(registry,saved)
+    sec.lock.touch()
+    return saved[accession]
+
+
+def submissions(root, sec, cik):
+    cik=str(cik).zfill(10)
+    url='https://data.sec.gov/submissions/CIK'+cik+'.json'
+    path=fetch(root,sec,url)
+    meta=json.loads(path.read_text())
+    registry=root/'work/deepening_issuer_metadata.json'
+    saved=json.loads(registry.read_text()) if registry.exists() else {}
+    saved[cik]=dict(source_url=url,source_path=str(path.relative_to(root)),metadata=meta)
+    atomic_json(registry,saved)
+    recent=meta['filings']['recent']
+    filings=[dict((k,v[i]) for k,v in recent.items())|dict(cik=cik)
+        for i in range(len(recent['accessionNumber']))]
+    return meta,filings
+
+
+def lenders(root):
+    sec=client(root)
+    try:
+        nominated=json.loads((root/'work/deepening_bdc_candidates.json').read_text())
+        extra=json.loads((root/'work/deepening_discovery_candidates.json').read_text())
+        ciks={str(r['cik']).zfill(10) for r in nominated}
+        ciks|={r['submission']['cik'].zfill(10) for r in extra if 'coreweave' in r['subjects']
+            and re.search(r'fund|BDC|capital|investment',r['submission']['name'],re.I)
+            and r['submission']['form'] in ('10-K','10-Q')}
+        for cik in sorted(ciks):
+            meta,filings=submissions(root,sec,cik)
+            periodic=sorted((f for f in filings if f['form'] in ('10-K','10-Q')
+                and f['filingDate']<=sec.as_of[:10]),key=lambda f:(f['filingDate'],f['accessionNumber']),reverse=True)
+            for f in periodic[:2]:
+                x=collect_filing(root,sec,f)
+                print(json.dumps(dict(cik=cik,name=meta['name'],accession=f['accessionNumber'],form=f['form'],files=len(x['resources']))),flush=True)
+    finally:sec.close()
+
+
+def form_d(root):
+    from urllib.parse import urlencode
+    sec=client(root);all_hits=[];coverage=[]
+    try:
+        for subject,form in ((s,f) for s in ('OpenAI','Anthropic') for f in ('D','D/A')):
+            offset=0
+            while True:
+                query=dict(q='"'+subject+'"',forms=form,dateRange='custom',
+                    startdt='2021-01-01',enddt=sec.as_of[:10],**{'from':offset,'size':100})
+                url='https://efts.sec.gov/LATEST/search-index?'+urlencode(query)
+                path=fetch(root,sec,url);data=json.loads(path.read_text());hits=data.get('hits',{})
+                total=hits.get('total',0);total=total.get('value',0) if isinstance(total,dict) else total
+                rows=hits.get('hits',[])
+                coverage.append(dict(subject=subject,form=form,offset=offset,total=total,returned=len(rows),url=url))
+                all_hits.extend(dict(subject=subject,**hit) for hit in rows)
+                atomic_json(root/'work/deepening_form_d_hits.json',all_hits)
+                atomic_json(root/'work/deepening_form_d_searches.json',coverage)
+                print(json.dumps(coverage[-1]),flush=True)
+                if total>=10000:raise ValueError('Saturated query must be split before interpreting coverage')
+                offset+=len(rows)
+                if not rows or offset>=total:break
+    finally:sec.close()
+    return all_hits
 
 
 def bdc(root):
@@ -101,6 +188,7 @@ def notes(root):
                 for rank, row in enumerate(records(z, 'txt.tsv')):
                     scanned += 1
                     if (row['adsh'], row['tag'], row['version']) not in note_keys: continue
+                    if re.search(r'RiskFactor|ProspectusSummary|InvestmentObjectivesAndPractices', row['tag'], re.I): continue
                     if not SUBJECTS.search(row['value']): continue
                     text = normalize_html(row['value'].encode())
                     subjects = sorted(set(m.group(0).lower() for m in SUBJECTS.finditer(text)))
