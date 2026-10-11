@@ -1,0 +1,7 @@
+{
+  "verified_at": "2026-10-11T14:13:12.757265+00:00",
+  "frozen_snapshot": "backup/sec-project-2-deepening-20261011T102208Z.tar.zst.json",
+  "verified_files": 9123,
+  "changed_files": [],
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00"
+}

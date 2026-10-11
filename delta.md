@@ -11,7 +11,7 @@ Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage li
 | bounded | 4 |
 | computed | 69184 |
 | not_determinable | 390720 |
-| partial | 5504 |
+| partial | 5505 |
 
 | Motif | Cellules |
 | --- | ---: |
@@ -22,7 +22,7 @@ Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage li
 | missing_admissible_terms | 21405 |
 | historical_filer_category_or_fiscal_dates_unestablished | 15774 |
 | explicit_dated_event_not_established | 4927 |
-| individual_source_component_not_an_additive_total | 4075 |
+| individual_source_component_not_an_additive_total | 4076 |
 | named_anonymous_overlap_and_complete_attribution_not_established | 2484 |
 | dated_explicit_control_or_going_concern_state_not_established | 1546 |
 | complete_contract_terms_not_established | 1041 |
@@ -163,17 +163,17 @@ Couverture nommée, anonyme et résiduelle par fournisseur, au dernier point fis
 
 Paires à financement de montant documenté : 2. Arêtes de montant : 13. Les couvertures nommée, anonyme et résiduelle restent au niveau du fournisseur dans les séries.
 
-Blocs uniques traités : 3636 ; observations acceptées : 17228. Tentatives rejetées : {"schema": 60, "semantic": 48}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 245, "investments_note": 637, "lease_note": 191, "concentration_narrative": 850, "debt_note": 328, "commitments_note": 320, "section": 1} ; items 8-K : {"non renseigné": 457}.
+Blocs uniques traités : 4034 ; observations acceptées : 17637. Tentatives rejetées : {"schema": 60, "semantic": 48}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 245, "investments_note": 867, "lease_note": 210, "concentration_narrative": 937, "debt_note": 369, "commitments_note": 346, "section": 1} ; items 8-K : {"non renseigné": 457}.
 
-Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 9251, "bytes_received": 7461730535}. Durée calendaire depuis la première requête SEC : 177167.990057 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
+Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 9251, "bytes_received": 7461730535}. Durée calendaire depuis la première requête SEC : 187024.080965 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
 
 ## Exclusions
 
 | Motif d’exclusion | Lignes |
 | --- | ---: |
-| not_processed | 14164 |
+| not_processed | 13761 |
 | policy_excluded | 1113 |
-| pending_entity | 449 |
+| pending_entity | 471 |
 | relation_without_admissible_amount | 384 |
 | superseded_reporting_basis | 244 |
 | financial_parties_only | 214 |

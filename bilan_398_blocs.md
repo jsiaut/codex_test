@@ -1,0 +1,180 @@
+# Analyse des 398 blocs complémentaires
+
+**398 blocs sur 398 ont été lus et analysés par l’assistant unique, sans sous-agent. Aucun bloc de ce lot ne reste non traité.** Les 67 blocs de la première tranche et les 398 de cette continuation portent la couverture de l’inventaire des entités ajoutées à **465 notes uniques sur 465**. Le périmètre conserve 23 groupes principaux ; Athene est étudiée séparément au sein d’Apollo.
+
+Les sources restent arrêtées au **9 octobre 2026, 10:24:21 UTC**. Les événements postérieurs aux bilans sont pris en compte lorsqu’ils ont été publiés avant cet arrêt, sans les réinjecter dans les soldes de clôture. « 0 restant » porte sur ce lot figé : cela ne signifie pas que toutes les notes historiques depuis 2021 ou tous les contrats ont été lus intégralement.
+
+La lecture renforce quatre axes : recours parentaux et conditions de livraison ; distinction entre cash libre, avances et cash restreint ; consolidation et transferts entre véhicules ; qualité du revenu et risque de refinancement chez les prêteurs. Les stocks, flux, plafonds, garanties et valeurs comptables restent distincts. Aucun total d’exposition de la chaîne ni score global n’est calculé.
+
+## Ce qui change le plus l’analyse
+
+- **Les échéances doivent être actualisées.** Les bridges Core Scientific, Applied Digital et TeraWulf ont été remboursés ou refinancés. Great Elm a remboursé ses notes 2026 en mai et renouvelé son revolver en juin. MSD a prolongé son revolver en juillet. Ces dettes historiques ne restent pas toutes à traiter comme un mur de maturités courant.
+- **La vente d’un véhicule ne suffit pas à démontrer la fin du recours.** TeraWulf a vendu sa participation Abernathy en juillet contre une contrepartie échelonnée ; la libération de tout soutien parental n’est pas établie. Chez Great Elm, une cession à GESF peut remplacer une exposition directe par une exposition indirecte conservée.
+- **Les besoins avant livraison restent importants.** IREN publie 13,611 Md$ d’engagements à douze mois. Nebius utilise notamment des avances clients pour financer ses investissements. Les capacités de crédit et loyers futurs ne sont pas du cash disponible aujourd’hui.
+- **Le revenu comptable ne mesure pas seul le cash.** PIK et amortissement de décotes chez les BDC, renonciations à frais chez Great Elm, allongements de vie des serveurs et variations de juste valeur des warrants demandent des lectures séparées. Les notes ne permettent pas d’attribuer tous ces effets à l’IA.
+
+## Résultats par entité
+
+### Core Scientific — 73 blocs
+
+La dette bridge de 1 Md$ de mars a été remboursée le 6 mai grâce aux notes de 3,3 Md$. Le risque courant doit donc être analysé sur le financement qui la remplace et sa garantie d’achèvement parentale non plafonnée. Le droit de remboursement anticipé de 625 M$ en décembre 2027 sur les convertibles est distinct de leur maturité finale : sa réalisation n’est pas automatique.
+
+Les engagements de construction et d’achat sont d’environ 1 Md$ en juin, dont 264 M$ refacturables au client, contre 1,47 Md$/434 M$ en mars. Il s’agit de stocks à deux dates, à ne pas additionner. Les loyers futurs de 6,088 Md$ et les 3,1 Md$ de baux non commencés ne constituent ni revenu déjà reconnu ni trésorerie déjà reçue. Les remboursements de construction et crédits futurs de revenus nécessitent un suivi séparé du loyer économique.
+
+Au premier semestre, les revenus de colocation sont de 214,208 M$, comprenant 56,2 M$ variables. Les avances et remboursements client sont des flux distincts du revenu. La créance client de construction de juin de 383,758 M$ doit être encaissée avant les paiements fournisseurs correspondants, d’environ 302,2 M$ de charges à payer et 81,6 M$ de dettes fournisseurs ; elle n’est pas du cash déjà reçu. Les concentrations anonymes publiées ne sont pas systématiquement renommées CoreWeave sans preuve nominative.
+
+Les warrants génèrent une perte non cash de 1,078 Md$ au semestre et un passif de 1,812 Md$ en juin ; ce n’est pas un paiement immédiat équivalent. Les dettes éteintes lors de la réorganisation ne restent pas dans l’exposition courante. Les écarts de présentation entre notes et segments sont conservés. Le signal prioritaire reste l’enchaînement livraison, remboursement de construction, commencement des baux et recours parental.
+
+Sources : [Bloc 1](https://www.sec.gov/Archives/edgar/data/1839341/000162828026013232/core-20241231.htm) · [Bloc 73](https://www.sec.gov/Archives/edgar/data/1839341/000183934126000014/core-20260630.htm)
+
+### Applied Digital — 23 blocs
+
+Les 1,825 Md$ Macquarie ont été financés en quatre tranches. Les actions préférentielles accumulent des dividendes PIK à 12,75 % jusqu’en octobre 2035 avant passage au cash ; 62,7 M$ sont courus sur l’exercice. La qualification bankruptcy-remote n’élimine pas les recours : le mécanisme parental de rendement minimum de 1,8× ou 2× dépend de conditions et doit être distingué du nominal investi.
+
+Le bridge de 300 M$ a été refinancé le 16 juin par les notes de 1,59 Md$. Les 2,15 Md$ en escrow avant le 18 juin ne sont pas du cash libre à fin mai. Le financement Delta Forge de juin de 5,2 Md$ et son client non nommé restent distincts des opérations explicitement CoreWeave. Le revolver plafonné à 430 M$, ses tirages, lettres de crédit et accordion conditionnel ne sont pas des ressources identiques.
+
+La garantie Base Electron a été terminée le 29 mai après un paiement effectif de 37 M$ : le prêt, son plafond et la garantie historique ne doivent pas tous rester comme dettes ou soutiens courants. Les 15 M$ Corintis comprennent une composante primaire et une cession secondaire ; une participation de 4 % ne démontre pas un contrôle. Chronoscale reste consolidée avec une participation de 97 %.
+
+En août, la trésorerie libre est de 2,950 Md$ et le cash restreint de 728,034 M$. Les revenus de fitout et les loyers sont séparés, notamment pour éviter d’interpréter des remboursements de coûts comme marge locative ou cash immédiatement disponible. Les warrants exercés sans cash n’apportent pas de liquidité primaire. Le signal prioritaire est le coût jusqu’à livraison, puis le démarrage des loyers et de l’amortissement, avec les droits économiques des préférentielles.
+
+Sources : [Bloc 74](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm) · [Bloc 96](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000059/apld-20260831.htm)
+
+### IREN — 11 blocs
+
+Les engagements hardware et infrastructure de 13,810 Md$ comprennent 13,611 Md$ à douze mois. Les avances de loyers effectivement reçues de 1,623 Md$ sont distinctes de ces achats futurs et du revenu reconnu. Le financement GPU Microsoft plafonné à 3,645 Md$ n’est pas intégralement tiré : 938 M$ sont financés en juin, le solde dépendant des conditions de livraison et d’acceptation.
+
+La structure Hardware 3 est annoncée sans recours, mais les mécanismes parentaux de remplacement et de couverture avant acceptation doivent être conservés ; la garantie liée au service Microsoft demeure distincte. Le financement annoncé en août jusqu’à 2,4 Md$ est postérieur au bilan de juin. Il ne faut ni le réinjecter dans ce bilan ni l’assimiler à un tirage réalisé en totalité.
+
+À juin, cash libre 5,896 Md$ et restreint 1,724 Md$ sont séparés. Les droits NVIDIA portant sur 30 millions d’actions à 70 $ ont une juste valeur de 793,4 M$, conditionnelle à des achats GPU ; ils ne prouvent pas 2,1 Md$ de cash encaissé. Le plafond ATM de 6 Md$ est distinct des 2,492 Md$ effectivement levés bruts.
+
+Les prépaid forwards sont des opérations d’equity et leur valeur dérivée nulle ne signifie pas une terminaison avec gain cash. Les gains non réalisés et la variation OCI de swaps ne sont pas des fonds disponibles. Le revenu annuel IA de 128,795 M$ reste distinct des 578,212 M$ du mining. L’analyse privilégie le décalage entre commandes, paiement fournisseurs, acceptation client et mise à disposition des financements.
+
+Sources : [Bloc 97](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm) · [Bloc 107](https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm)
+
+### Nebius — 6 blocs
+
+Les états de juin donnent 4,504 Md$ de cash-flow opérationnel, comprenant une variation de revenus différés de 4,395 Md$, face à 8,130 Md$ d’achats de PPE et incorporels. Cash et équivalents 8,042 Md$, cash restreint 1,056 Md$. Ces chiffres proviennent d’un 6-K incorporé par référence, de niveau C avec assurance inconnue ; ils ne deviennent pas artificiellement une série XBRL balisée ni un TTM.
+
+Le contrat Microsoft de 17,393 Md$ et son mécanisme conditionnel d’avance restent distincts du contrat Meta 2026 de 12 Md$ ferme et de l’achat de capacité résiduelle allant jusqu’à 15 Md$ optionnel. Les 27 Md$ ne sont pas présentés comme un engagement ferme unique. Les loyers non commencés de 12,054 Md$ en juin remplacent le stock de 9,760 Md$ de décembre dans l’état courant ; on ne les additionne pas. L’allongement des serveurs de quatre à cinq ans réduit la dépréciation S1 de 86,1 M$ sans économie de cash correspondante.
+
+Toloka est déconsolidée malgré 81 % d’intérêt économique, puisque les droits de vote sont de 49 %. Les actions ordinaires et préférentielles suivent des traitements distincts. Pour ClickHouse, 50 M$ de warrants préfinancés achetés en mai 2025, 597,4 M$ de gain non cash et 737,1 M$ de valeur comptable décrivent respectivement un flux, un résultat et un stock ; pas trois apports de capital additionnables.
+
+Les concentrations de clients anonymes ne sont pas renommées Microsoft ou Meta sans preuve. Les comparatifs historiques Yandex en roubles, les activités cédées et les nouvelles présentations Nebius en dollars restent distingués. Les notes divergent sur le règlement de certaines convertibles en actions ou au choix cash/actions : le doute est conservé jusqu’à examen des contrats.
+
+Sources : [Bloc 108](https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm) · [Bloc 111](https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm) · [Bloc 113](https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm)
+
+### Cipher Mining, devenu Cipher Digital — 39 blocs
+
+Le changement de nom de février 2026 conserve le CIK. Aucun des trois baux HPC n’a commencé à générer du revenu en juin ; les revenus annuels de 223,942 M$ et S1 de 59,675 M$ concernent le mining. Les engagements de construction de 2,169 Md$ sont un stock à juin, pas un paiement effectué ni un montant à ajouter au stock de mars.
+
+Le soutien Google aux obligations Fluidstack est rémunéré par warrants : actif initial non cash 544,45 M$, passif de warrants 632,06 M$ en juin et perte S1 106,9 M$. Le plancher de valeur de 430 M$ peut imposer actions supplémentaires ou cash en cas d’insuffisance ; ce n’est pas un paiement forfaitaire déjà reçu. Le revolver de 200 M$ est limité à 50 M$ avant livraison et comporte des seuils de liquidité et mécanismes de cure ; les plafonds conditionnels ne sont pas du cash libre.
+
+Les tableaux de dette à périmètres différents ne sont pas additionnés : la table annuelle de secured debt n’inclut pas toutes les convertibles. Le coupon nul des convertibles 2031 n’est pas du PIK ; leur taux effectif comprend le traitement comptable et les coûts. Les dérivés transférés en equity et pertes de juste valeur sont non cash. Le comparatif Coinbase divergent est conservé sans inventer un remboursement.
+
+La participation WindHQ dans trois JVs a été vendue en février contre des actions Canaan, et non contre du cash. La valeur de ces actions baisse jusqu’à 15,43 M$ en juin et leur lock-up est distinct du règlement de la cession. Au S1, CFO −152 M$ et capex ~964,3 M$ illustrent les besoins de financement ; les ventes de bitcoin en investing cash-flow ne sont pas des loyers HPC. Le signal prioritaire est la livraison, le soutien Google et les contraintes de liquidité avant les premiers loyers.
+
+Sources : [Bloc 114](https://www.sec.gov/Archives/edgar/data/1819989/000181998926000009/cifr-20251231.htm) · [Bloc 152](https://www.sec.gov/Archives/edgar/data/1819989/000181998926000041/cifr-20260630.htm)
+
+### TeraWulf — 30 blocs
+
+La dette de 5,725 Md$ en nominal comprend 3,2 Md$ secured et trois séries convertibles. Les notes secured à 7,75 % comportent une garantie parentale d’achèvement non plafonnée, lockbox Fluidstack et sûretés spécifiques. Le bridge de capacité 500 M$, tiré à hauteur de 100 M$ en mars, a été remboursé et terminé le 16 avril grâce à l’equity ; il ne demeure pas une dette courante. Les classements current des convertibles et droits de règlement cash/actions ne prouvent pas un remboursement automatiquement exigible cette année.
+
+Les 90 M$ Core42 ont été reçus en 2025 ; les soldes de revenu différé 81,5 M$ en décembre et 70,7 M$ en mars ne sont pas de nouveaux encaissements. Tous les baux Core42 étaient commencés en mars. Fluidstack ne l’était pas alors ; une partie commence en juin, le reste étant prévu ensuite. Le soutien Google s’active au commencement de chaque bail, ce qui laisse le risque avant livraison à analyser séparément.
+
+Les warrants Google passent d’un passif de 844,698 M$ en décembre à 1,817 Md$ en juin, avec perte non cash de 972 M$ au S1. Leur valeur comptable ne constitue pas le plafond de la garantie. Cash libre ~2,619 Md$ et restreint 409,417 M$ en juin, avec capex non payé de 530,594 M$. Les loyers, remboursements de puissance et charges de segment ne fournissent pas seuls une marge après coûts corporatifs et intérêts.
+
+Abernathy, détenue à 50,1 %, n’était pas consolidée faute de pouvoir, tout en portant un soutien parental pour besoins de capital. Toute la participation a été cédée le 6 juillet contre environ 530 M$ échelonnés : 250 M$ sous quatorze jours, 150 M$ fin décembre et ~130 M$ en avril 2027. La participation actuelle disparaît, mais le prix n’est pas entièrement encaissé et aucune libération intégrale de garantie n’est démontrée. Les incertitudes de source sur certaines valeurs NCI sont conservées.
+
+Sources : [Bloc 153](https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm) · [Bloc 182](https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm)
+
+### Galaxy Digital — Helios — 39 blocs
+
+Le revenu consolidé annuel de 60,406 Md$ est presque entièrement lié aux activités crypto et trading ; il ne mesure pas l’économie IA. Le revenu Data Center 2025 de 8,433 M$ et T1 de 3,050 M$ provient alors d’intérêts, sans revenu locatif. Les 133 MW de Helios I livrés à CoreWeave en juin introduisent une autre phase ; les revenus locatifs ASC842 et les services/puissance ASC606 restent séparés.
+
+Helios I : prêt plafonné à 1,4 Md$, tirage nominal 878 M$ décembre, 1,070 Md$ mars et 1,268 Md$ juin. Maturité août 2028, critères de coût et couverture après stabilisation, cross-defaults. Helios II : émission post-juin de 3,507 Md$ en juillet à 9,875 %, garantie parentale d’achèvement non plafonnée. Cette émission ne modifie pas rétroactivement le bilan juin. Les engagements de construction juin de 1,489 Md$ ne sont pas tous déjà payés.
+
+Une avance de loyer de 150 M$ et les revenus différés ASC606 sont distincts ; absence de nom dans une note ne justifie pas l’attribution automatique. La dette de trading, les promissory notes LUNA, le TRA conditionnel et les contreparties crypto ne deviennent pas des risques IA par voisinage. Le cash libre de 895,744 M$ en juin ne doit pas être remplacé par une somme de valeurs d’actifs et de collatéraux.
+
+Les émissions equity mêlant titres primaires et secondaires n’apportent à l’émetteur que la composante primaire. Un solde intercompagnies éliminé n’est pas un remboursement cash externe. Les régimes fiscaux des véhicules et avantages d’impôt peuvent expliquer un bénéfice net sans rentabilité avant impôt de Helios ; l’analyse privilégie le coût de construction, les dates de commencement et les garanties d’achèvement.
+
+Sources : [Bloc 183](https://www.sec.gov/Archives/edgar/data/1859392/000185939226000016/glxy-20251231.htm) · [Bloc 221](https://www.sec.gov/Archives/edgar/data/1859392/000185939226000091/glxy-20260630.htm)
+
+### Blue Owl Real Estate Net Lease Trust — CTP02/CTP03 — 30 blocs
+
+Les JVs de data centers restent non consolidées même lorsque le pourcentage économique atteint 84,7 % : pourcentage détenu et pouvoir ne sont pas interchangeables. Les véhicules CTP02/CTP03 historiquement identifiés ne peuvent pas être réputés cédés parce que leur nom disparaît d’un tableau agrégé. Les engagements build-to-suit de 1,728 Md$ jusqu’en 2029 ne sont pas entièrement attribuables à CoreWeave ou à ces deux véhicules.
+
+La FV des participations JV atteint 4,401 Md$ en juin ; les distributions S1 de 201,715 M$ incluent le T1, tandis que variations de juste valeur et revenus ne sont pas du cash additionnel. Les loyers opérationnels futurs de 4,440 Md$ sont des encaissements étalés. Les finance leases de 11,500 Md$ bruts ont un investissement net de 597,642 M$ : une grande partie du brut relève d’intérêts différés, pas d’un prêt cash disponible.
+
+Les DST conservant le traitement failed sale-leaseback maintiennent les actifs et le financement au bilan. Les paiements fixes dus au master lease peuvent subsister même si le locataire ne paie pas. Passif FV de 714,785 M$ et paiements futurs de 1,335 Md$ ne sont pas additionnés comme deux financements. Les JVs non consolidées, dettes repo à refinancement court et appels de marge demandent un suivi spécifique.
+
+La dette nominale juin est de 2,328 Md$, dont 300,146 M$ échéant en 2026. Le revolver non tiré en juin ne doit pas rester présenté ainsi après l’acquisition SILA du 1er juillet financée par crédit : coût effectif 2,453 Md$, 141 actifs de santé, remplaçant l’engagement antérieur. Les demandes de rachats ordinaires sont suspendables dans les limites du programme, mais certains droits du conseiller et de special OP units ont des exceptions. Rachats de parts, échanges non cash et frais du conseiller restent distincts.
+
+Sources : [Bloc 222](https://www.sec.gov/Archives/edgar/data/1944366/000194436626000020/osnl-20251231.htm) · [Bloc 251](https://www.sec.gov/Archives/edgar/data/1944366/000194436626000066/osnl-20260630.htm)
+
+### Athene — 25 blocs
+
+Apollo détient toutes les actions ordinaires d’Athene ; les investissements et dettes de cette filiale ne s’ajoutent pas aux mêmes soldes consolidés Apollo. ACRA est consolidée avec 37 % d’intérêt économique mais 100 % des votes, les autres intérêts apparaissant en NCI. Certaines variations NCI découlent de résultats ou de changements de périmètre, sans levée cash correspondante.
+
+WHCO porte l’obligation d’achat de l’opération de 35 Md$. Athene garantit 15 % de l’obligation restant en cours, dont le solde exact n’est pas établi ici. Le remboursement conditionnel par un tiers de 35 % des paiements effectifs ne justifie pas un calcul 35 Md$ × 15 % × 65 %. Une valeur de passif nulle parce qu’un paiement n’est pas probable n’annule pas l’engagement. Les garanties Atlas et engagements de fonds restent distincts.
+
+La clôture PIC au T1 remplace les anciens engagements conditionnels Athora : le solde publié est de 136 M$ puis 134 M$ en juin, non l’ancien plafond de 2,7 Md$. L’achat ARI du 24 avril de 8,7 Md$, intérêts courus inclus, remplace le projet d’environ 9 Md$. Les financements FHLB, FABN, FABR et actifs affectés ne sont pas tous de la trésorerie libre. Les prêts à Apollo de 279 M$ en juin sont des flux intragroupe, sans preuve de versement primaire IA.
+
+À juin, principal de dette 7,775 Md$/bilan 7,832 Md$. Les facilités renouvelées de 1,75 Md$ et 2,6 Md$ sont non tirées et soumises à covenants ; l’émission d’août de 1 Md$ est postérieure au bilan. L’option de différer des coupons subordinated n’est pas un PIK réellement exercé. Les pertes AOCI et charges fiscales T1 ne prouvent pas un défaut IA. Les 409,585 Md$ de FV d’actifs financiers, largement illiquides ou affectés, ne sont pas du cash distribuable.
+
+Sources : [Bloc 252](https://www.sec.gov/Archives/edgar/data/1527469/000152746926000013/ahl-20251231.htm) · [Bloc 276](https://www.sec.gov/Archives/edgar/data/1527469/000152746926000056/ahl-20260630.htm)
+
+### Apollo — articulation avec Athene et WHCO — 35 blocs
+
+Les investissements consolidés Apollo de 383,467 Md$ en juin comprennent 377,142 Md$ du segment retraite et 6,325 Md$ d’asset management. Les montants Athene sont déjà inclus selon le périmètre du groupe. Un fonds géré ou une participation à juste valeur ne suffit pas à consolider une société opérationnelle comme WHCO ; il faut établir le pouvoir et l’exposition économique. Les actifs ring-fenced des VIE ne couvrent pas nécessairement les autres dettes du groupe.
+
+Les soldes de performance allocations, leurs variations et distributions sont distincts : S1 +475 M$ de FV et 799 M$ de distributions sur un stock final de 3,230 Md$. Les distributions peuvent être en nature ; des fees sont différés tant que les conditions de reconnaissance ne sont pas remplies. Les fees Athene de 785 M$ au S1 sont intercompagnies et éliminés, pas un revenu externe supplémentaire à ajouter au groupe.
+
+Les engagements de fonds Athene publiés à 35,2 puis 36,1 Md$ peuvent être appelés à tout moment et incluent certaines expositions VIE ; ils ne sont pas une promesse de délai de cinq ans. Le Capital Markets Partnership a financé ses investissements avec des crédits et asset-based facilities sans capital parent effectivement apporté, tout en conservant une lettre de confort conditionnelle. La warehouse facility non nommée de 133 M$ en juin n’est pas automatiquement WHCO.
+
+Les notes Apollo de 500 M$ ont été intégralement remboursées le 27 mai ; les 750 M$ à 5,7 %/2036 émises en mars sont distinctes. Les préférentielles mandatory convertible de 1,4 Md$ ont effectivement été converties le 31 juillet : conversion du principal en actions, pas remboursement cash du nominal. TRA de 768 M$ et clawbacks hypothétiques ne sont pas une sortie immédiate équivalente. Les rachats d’actions, impôts de règlement des rémunérations et dividendes demandent une lecture de cash séparée des résultats de segments.
+
+Sources : [Bloc 277](https://www.sec.gov/Archives/edgar/data/1858681/000185868126000013/apo-20251231.htm) · [Bloc 311](https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm)
+
+### Backblaze — 28 blocs
+
+Le contrat CoreWeave de 335,1 M$ est réduit par ~21,7 M$ de FV de warrants dans le prix de transaction et les revenus futurs. Aucun revenu de capacité dédiée ou managed storage correspondant n’est reconnu au S1 juin ; démarrage prévu au T3 lorsque le service est disponible. Le contrat B2 utilisant l’infrastructure CoreWeave représente un flux de sens inverse, à conserver séparément. L’adoption anticipée ASU2025-04 en janvier distingue son traitement de celui des autres émetteurs.
+
+Le comparatif RPO de décembre est retraité de 66,2 à 70,2 M$ parce que la présentation inclut désormais certains contrats de moins d’un an : les 4 M$ supplémentaires ne sont pas une nouvelle commande. Les concentrations d’AR de deux clients anonymes passent de 38 % à 33 % puis 27 % ; cela ne les identifie pas automatiquement comme CoreWeave. L’allongement de vie des équipements à six ans réduit la dépréciation de 5,2 M$ en 2025 et 1,7 M$ au S1, sans économie cash équivalente.
+
+Le revolver Citizens de 20 M$ est non tiré aux dates publiées décembre/mars et sa maturité a été prolongée à juin 2028 en avril. Le minimum de liquidité de 10 M$ est une contrainte covenant, distincte d’un classement comptable de cash restreint. Les finance leases de 46,713 M$ au bilan juin sont distincts des 55,723 M$ bruts futurs ; les operating leases de 35,724 M$ sont distincts des 44,191 M$ bruts et des 11,767 M$ non-lease hors bilan.
+
+Les nouveaux équipements et droits d’usage obtenus par leases peuvent être non cash. Les engagements anciens de 17,5 M$ annoncés avant juin ne sont pas ajoutés automatiquement aux stocks de juin faute de rapprochement de commencement. Les nouvelles locations de 3,8 M$ et l’extension de juillet de 1,5 M$ restent postérieures ou non commencées. Les engagements d’achat non-lease sont de 8,3 M$ en juin. Le programme de buyback est terminé le 1er août ; son ancien plafond résiduel n’est plus une capacité actuelle.
+
+Sources : [Bloc 312](https://www.sec.gov/Archives/edgar/data/1462056/000162828026016395/blze-20251231.htm) · [Bloc 339](https://www.sec.gov/Archives/edgar/data/1462056/000162828026051818/blze-20260630.htm)
+
+### Great Elm Capital — 32 blocs
+
+Des prêts CoreWeave II ont été acquis auprès de GESF : achats secondaires affiliés, pas preuve de cash primaire nouveau à CoreWeave. Le prêt CoreWeave IV vendu à GESF retire une ligne directe sans nécessairement sortir le risque du périmètre économique de Great Elm, qui conserve 87,5 % de GESF. GESF et CLO JV peuvent être contrôlés au sens réglementaire tout en restant non consolidés sous ASC946 ; leurs actifs bruts ne s’ajoutent pas aux participations évaluées à juste valeur.
+
+La couverture des actifs passe de 158,1 % décembre à 161,8 % mars puis 166,4 % juin, contre minimum 150 %. Toutes les notes GECCO 2026 restantes ont été remboursées le 27 mai ; les notes GECCM et GECCZ étaient déjà éteintes. À juin, dette nominale de notes 155,4 M$ plus 11 M$ réellement tirés sur revolver, total 166,4 M$ distinct du ratio de couverture de 166,4 %.
+
+Le revolver de capacité 50 M$ a été renouvelé le 8 juin jusqu’en 2029 ; la clause de maturité avancée porte désormais sur le refinancement de GECCI en 2029, et non sur les anciennes notes 2026. L’accordion à 90 M$ dépend du prêteur. L’annonce de juillet d’un remboursement partiel GECCI n’est pas assimilée à sa réalisation sans pièce probante.
+
+La renonciation à incentive fees de 3,711 M$ au S1 inclut les 2,810 M$ du T1 et améliore le NII sans revenu cash nouveau. Les frais liés au PIK sont différés jusqu’à encaissement selon les modalités décrites, mais le régime RIC peut imposer distributions avant collecte. NII S1 de 0,68/action contre distributions 0,55 ne prouve donc pas seul la couverture cash. Les positions CoreWeave examinées ne portent pas les marqueurs PIK ou non-accrual à juin ; la part de PIK du fonds n’est pas déterminée par cette seule absence.
+
+Sources : [Bloc 340](https://www.sec.gov/Archives/edgar/data/1675033/000119312526085697/gecc-20251231.htm) · [Bloc 371](https://www.sec.gov/Archives/edgar/data/1675033/000119312526335023/gecc-20260630.htm)
+
+### MSD Investment Corp. — 27 blocs
+
+L’engagement non tiré CoreWeave IV de 10,168 M$ fin 2025 expire le 31 mars 2026 et n’apparaît plus dans le tableau courant de mars. Cette disparition ne prouve ni remboursement des prêts financés ni paiement du montant non tiré. La position CoreWeave DDTL de juin documentée dans la première tranche reste distincte : coût 26,669 M$/FV 26,950 M$, sans marqueur PIK ni non-accrual sur cette ligne.
+
+Les engagements investisseurs ne sont pas du cash déjà reçu. MSD a effectivement appelé 225 M$ le 26 juin, portant le cumul à 3,175 Md$ ; 386,5 M$ restent non appelés. Les distributions S1 de 157,933 M$ incluent 28,093 M$ de DRP, qui ne constitue pas une levée primaire à ajouter indépendamment. NAV/action 23,71 décembre→23,58 mars→23,48 juin ; hausse des actifs nets à juin avec apport de capital malgré baisse de NAV/action.
+
+La couverture 200,8 % décembre→189,5 % mars→200,8 % juin reste au-dessus du minimum 150 %. Dette nominale juin 3,494 Md$/bilan 3,432 Md$ ; revolver tiré 580 M$ mars puis 100 M$ juin, nouvelles notes 300 M$ émises en juin. Le 30 juillet, capacité du revolver portée à 920 M$, accordion conditionnel 1,38 Md$ et maturité prolongée à juillet 2031 ; ces capacités ne sont pas du cash tiré. Class C et preferred CLO détenus par MSD sont éliminés en consolidation.
+
+Les politiques PIK confirment que le revenu peut être à distribuer pour RIC avant encaissement. L3 représente 86,16 % du portefeuille avec cash à juin ; achats L3 incluent PIK. Les incohérences de libellés et de transferts entre tableaux/footnotes sont conservées. La décision de rester BDC privée indéfiniment ne crée pas une sortie obligatoire fin 2026. Le signal prioritaire est le levier et la qualité cash du revenu, en séparant les prêts CoreWeave du portefeuille global.
+
+Sources : [Bloc 374](https://www.sec.gov/Archives/edgar/data/1849894/000119312526124538/ck0001849894-20251231.htm) · [Bloc 390](https://www.sec.gov/Archives/edgar/data/1849894/000119312526222241/ck0001849894-20260331.htm) · [Bloc 395](https://www.sec.gov/Archives/edgar/data/1849894/000119312526352436/ck0001849894-20260630.htm) · [Bloc 397](https://www.sec.gov/Archives/edgar/data/1849894/000119312526352436/ck0001849894-20260630.htm)
+
+## Traçabilité et validation
+
+Le fichier [revue_398_blocs.csv](revue_398_blocs.csv) donne une ligne par bloc : accession, URL originale, emplacement en octets, citations exactes, observations acceptées et conclusion. Les notes apparaissant dans plusieurs contextes sont dédupliquées par contenu. Le registre original work/continuation398/reviews.jsonl reste immuable ; deux corrections éditoriales sont appliquées séparément, sans modifier les preuves originales.
+
+Les 13 contrôles de livraison passent. Les rapprochements conservent 215 lignes avec écart et 1 agrégat local bloqué, disponibles dans audit/controls.csv et work/delivery_verification.json. Les incohérences de source relevées dans les lectures sont conservées dans le registre ; elles ne sont pas toutes transformées en rapprochements numériques. La reproduction hors ligne compare les huit tables, toutes leurs colonnes et les listes de provenance comme multiensembles ; son résultat est dans work/idempotency_verification.json. Une validation technique n’est pas une opinion d’audit indépendante sur les comptes.
+
+Les tableaux standard restent dans tables/, les observations dans work/observations/, les critères figés dans audit/. L’archive SEC_Project_2_398_blocs.zip contient les résultats, le code, les observations et les manifestes nécessaires ; les sauvegardes LFS des sources historiques restent dans le dépôt [GitHub](https://github.com/jsiaut/codex_test). L’archive de la première tranche est conservée sous son nom distinct.

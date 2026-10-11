@@ -1,13 +1,14 @@
-# Ajout des entités — point d'étape
+# Les 398 blocs restants sont traités
 
-Le périmètre passe de **11 à 23 groupes principaux**. Athene est documentée séparément au sein d'Apollo ; WHCO, CTP02/CTP03 et les véhicules Helios gardent leurs propres identités et bases d'exposition.
+**398/398 terminés, 0 restant, sans sous-agent.** Avec la première tranche, les 465 notes uniques de l’inventaire des entités ajoutées sont maintenant couvertes. Les critères et l’arrêt des sources du 9 octobre 2026 restent inchangés.
 
-Trois constats dominent :
+Les principaux apports sont :
 
-- **Le risque avant livraison remonte vers les sociétés mères.** Core Scientific et Galaxy publient des garanties d'achèvement non plafonnées. Chez IREN, la structure de financement annoncée sans recours conserve des garanties spécifiques en cas de terminaison et d'échec du replacement.
-- **La trésorerie dépend du calendrier des clients et des financeurs.** IREN publie 13,611 Md$ d'engagements à douze mois, tandis que certaines ressources dépendent de conditions. Chez Nebius, 4,395 Md$ de variation des revenus différés contribuent aux 4,504 Md$ de trésorerie opérationnelle S1.
-- **Les warrants ont des effets différents selon l'opération.** Ceux de Backblaze réduiront ses revenus ; ceux de TeraWulf et Cipher rémunèrent un soutien de crédit. Les prêts CoreWeave examinés chez Great Elm et MSD ne sont pas marqués non-accrual en juin.
+- L’actualisation des dettes refinancées ou remboursées, des échéances et des lignes de crédit.
+- La distinction entre exposition directe, transfert affilié, participation à un véhicule et garantie parentale.
+- La séparation des avances clients, du cash restreint, des engagements non tirés et des revenus non cash.
+- La mise en évidence du PIK, des renonciations à frais et des changements de valorisation, sans attribution automatique à l’IA.
 
-Voir [entites_ajoutees.md](entites_ajoutees.md) pour les douze fiches, les sources et les limites. Cette première analyse couvre 67 blocs naturels lus ; 398 autres blocs collectés restent explicitement non traités. L'historique structuré est collecté depuis 2021. Les critères et l'arrêt des sources du 9 octobre restent inchangés.
+Lire [bilan_398_blocs.md](bilan_398_blocs.md) pour les 13 fiches, les sources et les implications. [revue_398_blocs.csv](revue_398_blocs.csv) contient les 398 conclusions individuelles et leurs citations. Les tableaux et contrôles sont dans SEC_Project_2_398_blocs.zip.
 
-Sauvegardes régulières sur [GitHub](https://github.com/jsiaut/codex_test). Travail effectué seul, sans audit indépendant.
+Cette clôture concerne le lot demandé. La lecture de toutes les notes historiques et de tous les contrats n’est pas déclarée exhaustive. Les inconnues et écarts restent signalés ; aucun audit indépendant n’est revendiqué.

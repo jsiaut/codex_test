@@ -1167,7 +1167,7 @@ Les plafonds et garanties publiés rendent certaines relations visibles sans pro
 | --- | ---: |
 | complete_public_attribution_not_established | 956 |
 
-Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1523, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 14164, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
+Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1571, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 13761, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
 
 Les critères E sont confrontés aux paires et aux exercices dans measures.parquet, même pour les cellules vides. Les chemins de l’extension restent non déterminables, motif not_processed ; ils ne sont pas comptés comme inexistants.
 

@@ -30,13 +30,13 @@
       "n": 1
     },
     {
-      "control": "c1_balance_components",
-      "group_id": "external:0001859392",
+      "control": "c2_cash_flow_components",
+      "group_id": "external:0001878848",
       "n": 1
     },
     {
-      "control": "c2_cash_flow_components",
-      "group_id": "external:0001878848",
+      "control": "c1_balance_components",
+      "group_id": "external:0001859392",
       "n": 1
     },
     {
@@ -71,11 +71,6 @@
     },
     {
       "control": "c15_tax_rate",
-      "group_id": "external:0001144879",
-      "n": 2
-    },
-    {
-      "control": "c15_tax_rate",
       "group_id": "external:0001839341",
       "n": 6
     },
@@ -83,6 +78,11 @@
       "control": "c15_tax_rate",
       "group_id": "external:0001083301",
       "n": 8
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "external:0001144879",
+      "n": 2
     },
     {
       "control": "c1_balance_components",
@@ -106,6 +106,81 @@
     },
     {
       "control": "c2_cash_flow_components",
+      "group_id": "external:0001858681",
+      "n": 15
+    },
+    {
+      "control": "c2_cash_flow_components",
+      "group_id": "external:0001819989",
+      "n": 1
+    },
+    {
+      "control": "c9_lease_liability",
+      "group_id": "external:0001144879",
+      "n": 4
+    },
+    {
+      "control": "c9_lease_liability",
+      "group_id": "external:0001839341",
+      "n": 4
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "external:0001819989",
+      "n": 5
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "external:0001944366",
+      "n": 3
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "external:0001513845",
+      "n": 1
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "external:0001858681",
+      "n": 34
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "MRVL",
+      "n": 4
+    },
+    {
+      "control": "c7_cash_continuity",
+      "group_id": "external:0001513845",
+      "n": 4
+    },
+    {
+      "control": "c7_cash_continuity",
+      "group_id": "CRWV",
+      "n": 1
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "CRWV",
+      "n": 5
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "MRVL",
+      "n": 3
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "external:0001819989",
+      "n": 7
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "NVDA",
+      "n": 1
+    },
+    {
+      "control": "c2_cash_flow_components",
       "group_id": "AMD",
       "n": 2
     },
@@ -126,88 +201,13 @@
     },
     {
       "control": "c15_tax_rate",
-      "group_id": "ORCL",
-      "n": 4
-    },
-    {
-      "control": "c15_tax_rate",
       "group_id": "external:0001859392",
       "n": 8
     },
     {
-      "control": "c2_cash_flow_components",
-      "group_id": "external:0001858681",
-      "n": 15
-    },
-    {
-      "control": "c2_cash_flow_components",
-      "group_id": "external:0001819989",
-      "n": 1
-    },
-    {
-      "control": "c9_lease_liability",
-      "group_id": "external:0001839341",
-      "n": 4
-    },
-    {
-      "control": "c9_lease_liability",
-      "group_id": "external:0001144879",
-      "n": 4
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "external:0001819989",
-      "n": 5
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "external:0001513845",
-      "n": 1
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "MRVL",
-      "n": 4
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "external:0001858681",
-      "n": 34
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "external:0001944366",
-      "n": 3
-    },
-    {
-      "control": "c7_cash_continuity",
-      "group_id": "external:0001513845",
-      "n": 4
-    },
-    {
-      "control": "c7_cash_continuity",
-      "group_id": "CRWV",
-      "n": 1
-    },
-    {
       "control": "c15_tax_rate",
-      "group_id": "CRWV",
-      "n": 5
-    },
-    {
-      "control": "c15_tax_rate",
-      "group_id": "MRVL",
-      "n": 3
-    },
-    {
-      "control": "c15_tax_rate",
-      "group_id": "NVDA",
-      "n": 1
-    },
-    {
-      "control": "c15_tax_rate",
-      "group_id": "external:0001819989",
-      "n": 7
+      "group_id": "ORCL",
+      "n": 4
     }
   ],
   "missing_expected_cells": 0,

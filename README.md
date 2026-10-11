@@ -1,13 +1,11 @@
 # SEC_Project_2
 
-Le périmètre principal comprend 23 groupes, dont 12 ajoutés dans cette livraison. Lire [user_brief_expansion.md](user_brief_expansion.md), puis [entites_ajoutees.md](entites_ajoutees.md). Les résultats antérieurs restent dans l'historique Git et dans leurs archives distinctes.
+Les 398 blocs complémentaires sont tous traités, sans sous-agent. L’inventaire des entités ajoutées couvre désormais 465 notes uniques lues sur 465 ; 23 groupes principaux sont suivis. Sources arrêtées au 9 octobre 2026, 10:24:21 UTC, critères inchangés.
 
-Les sources sont arrêtées au 9 octobre 2026, 10:24:21 UTC. La première tranche des entités ajoutées comprend 67 blocs naturels lus et 398 autres blocs explicitement non traités ; l'inventaire et les originaux sont conservés. La lecture des notes et contrats n'est pas exhaustive. Athene est rattachée économiquement à Apollo par une preuve de contrôle ; les fonds gérés, les JVs et les véhicules de projet gardent leurs identités distinctes. Aucun score global ni total d'exposition n'est calculé. Aucun audit indépendant n'est revendiqué.
+Lire [user_brief_398.md](user_brief_398.md), puis [bilan_398_blocs.md](bilan_398_blocs.md). Les conclusions individuelles et les citations figurent dans revue_398_blocs.csv. Les notes historiques et les contrats au-delà de ce lot ne sont pas déclarés entièrement lus. Aucun total d’exposition, score global ou audit indépendant n’est revendiqué.
 
-Les huit tables sont dans tables/. Les observations sont dans work/observations/, les critères et contrôles dans audit/, et la couverture détaillée dans expansion_note_coverage.csv. Les fichiers expansion_evidence.csv, expansion_entities.csv, expansion_financial_metrics.csv et expansion_lender_classification.csv donnent les citations, identités, mesures et classifications. Les ND conservent leurs raisons.
+Les huit tables sont dans tables/, les critères et contrôles dans audit/, les observations dans work/observations/. L’archive de cette livraison est SEC_Project_2_398_blocs.zip ; les archives antérieures sont distinctes.
 
 ## Reproduction
 
-Installer requirements.txt et restaurer les sauvegardes de sources LFS avec leurs manifestes SHA-256, sans écraser les observations plus récentes. Les sauvegardes complémentaires contiennent aussi les nouveaux originaux et les notes différées. Depuis la racine, python -m secfragility.phase3 --reconstruct reconstruit depuis le cache, les observations et les décisions versionnées, sans requête SEC ni appel de modèle. python -m pytest -q exécute les tests. Le résultat de la comparaison des huit tables après reconstruction complète figure dans work/idempotency_verification.json.
-
-Les commits intermédiaires enregistrent le travail ; le commit final et ses contrôles établissent la livraison. Les captures d'API sont figées et ne sont pas supposées récupérables à l'identique ultérieurement. L'archive de cette tranche porte le nom SEC_Project_2_entites_ajoutees.zip.
+Installer requirements.txt. Restaurer les sauvegardes LFS de sources avec leurs manifestes SHA-256, sans écraser les observations et décisions plus récentes. python -m secfragility.phase3 --reconstruct reconstruit depuis le cache, sans requête SEC ni appel de modèle. python -m pytest -q exécute les tests. work/idempotency_verification.json compare les huit tables avec une référence créée après intégration des 398 blocs, toutes colonnes et provenance incluses.
