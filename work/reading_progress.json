@@ -19,10 +19,10 @@
     "section": 1
   },
   "validation_rejected_attempts_by_phase": {
-    "semantic": 48,
-    "schema": 60
+    "schema": 60,
+    "semantic": 48
   },
-  "updated_at": "2026-10-11T13:29:41.362688+00:00",
+  "updated_at": "2026-10-11T13:29:43.994574+00:00",
   "read_packet_logging_started_2026_10_09": true,
   "independent_audit_performed": false
 }
