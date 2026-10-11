@@ -1,0 +1,140 @@
+[
+  {
+    "index": 349,
+    "classification": "material",
+    "summary": "GECC basefee1,5% actifsinclleverage, FY4,987 M$/payable1,183. Incentive20% aprèshurdle7%/catchup8,75 inclPIK/OID revenuaccrual MAISpaiementfeePIKdifféréparsecurityjusqu’àcash reçu, mitigant liquidité. Totalreturntest reporteautresfees : stock2,267 M$Decmais0immédiatementexigible. Reset2022retire163,2 M$historicaloss calculfees pasrecouvrementcash. Waiver2022 4,9nonrecapturehistorique.",
+    "rows": [
+      {
+        "quote": "becomes payable only if, as, when and to the extent cash is received",
+        "model_quantity": "incentive_pik_fees_deferred_until_cash_received",
+        "stage": "recognized",
+        "issuer_treatment": "GECC basefee1,5% actifsinclleverage, FY4,987 M$/payable1,183. Incentive20% aprèshurdle7%/catchup8,75 inclPIK/OID revenuaccrual MAISpaiementfeePIKdifféréparsecurityjusqu’àcash reçu, mitigant liquidité. Totalreturntest reporteautresfees : stock2,267 M$Decmais0immédiatementexigible. Reset2022retire163,2 M$historicaloss calculfees pasrecouvrementcash. Waiver2022 4,9nonrecapturehistorique.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 350,
+    "classification": "material",
+    "summary": "PostFYdistributionT10,30$cashprévue ; févrierwaiverstock2,3 M$fees augmenteNII nonencaissement. GECCO20 M$redemptionnotice27février pour31mars intentionexécuter pasencorepaidauDec.",
+    "rows": [
+      {
+        "quote": "expects to recognize the reversal",
+        "model_quantity": "incentive_fee_waiver_non_cash_and_planned_note_redemption",
+        "stage": "recognized",
+        "issuer_treatment": "PostFYdistributionT10,30$cashprévue ; févrierwaiverstock2,3 M$fees augmenteNII nonencaissement. GECCO20 M$redemptionnotice27février pour31mars intentionexécuter pasencorepaidauDec.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 351,
+    "classification": "context_only",
+    "summary": "GECCBDCexternallymanagednondiversified, GECMfilialeGEG. RelationgestionpaspreuvepartenaireclientIA ouconsoloperatinginvestments.",
+    "rows": [
+      {
+        "quote": "externally managed, non-diversified",
+        "model_quantity": "bdc_organization_manager_parent_scope",
+        "stage": "recognized",
+        "issuer_treatment": "GECCBDCexternallymanagednondiversified, GECMfilialeGEG. RelationgestionpaspreuvepartenaireclientIA ouconsoloperatinginvestments."
+      }
+    ]
+  },
+  {
+    "index": 352,
+    "classification": "material",
+    "summary": "Mars NAV7,74 vs8,07Déc, netassets107,477 M$ ; NII0,36/distrib0,30 inclreversalfees àisoler pourcouverturecash, perteslatent0,60. RatioNII11,77annualisé pascashquarter11,77.",
+    "rows": [
+      {
+        "quote": "Annualized for periods less than one year.",
+        "model_quantity": "march_nav_income_waiver_adjustment_and_annualized_ratios",
+        "stage": "recognized",
+        "issuer_treatment": "Mars NAV7,74 vs8,07Déc, netassets107,477 M$ ; NII0,36/distrib0,30 inclreversalfees àisoler pourcouverturecash, perteslatent0,60. RatioNII11,77annualisé pascashquarter11,77.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 353,
+    "classification": "material",
+    "summary": "T2distributionréduite0,25$cashprévue30juin ; avrilnoticeGECCO18,6 M$pour27mai rembourserremainder. Waiverfeesétenduejusqu’à30juin, réduitdettefee sanscashinvestisseur.",
+    "rows": [
+      {
+        "quote": "redeem $18.6 million",
+        "model_quantity": "remaining_gecco_redemption_notice_and_fee_waiver_extension",
+        "stage": "recognized",
+        "issuer_treatment": "T2distributionréduite0,25$cashprévue30juin ; avrilnoticeGECCO18,6 M$pour27mai rembourserremainder. Waiverfeesétenduejusqu’à30juin, réduitdettefee sanscashinvestisseur.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 354,
+    "classification": "material",
+    "summary": "Mars ASC946/PIK reporting inchangés : accrualnoncash etCLOeffectiveyieldpasdistributions. RIC90%ICTIinclPIK peutforcerdistributions avantréceptioncash, maisfeePIKreportéejusqu’àcash note3. DDTLnegcost/negFV possiblesfeesunfundedpasperte/principalnégatif. ValuationGECM/tierssubjective, petitespositionssansvaluationexterne.",
+    "rows": [
+      {
+        "quote": "including PIK interest",
+        "model_quantity": "march_pik_tax_distribution_and_deferred_draw_accounting",
+        "stage": "recognized",
+        "issuer_treatment": "Mars ASC946/PIK reporting inchangés : accrualnoncash etCLOeffectiveyieldpasdistributions. RIC90%ICTIinclPIK peutforcerdistributions avantréceptioncash, maisfeePIKreportéejusqu’àcash note3. DDTLnegcost/negFV possiblesfeesunfundedpasperte/principalnégatif. ValuationGECM/tierssubjective, petitespositionssansvaluationexterne.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 355,
+    "classification": "context_only",
+    "summary": "Mandate originationETsecondaire, CLOwarehouse ; nopreuvenouveaufinancementCWsurmandategénéral.",
+    "rows": [
+      {
+        "quote": "directly with issuers and in the secondary markets",
+        "model_quantity": "march_investment_mandate_no_primary_cash_proof",
+        "stage": "recognized",
+        "issuer_treatment": "Mandate originationETsecondaire, CLOwarehouse ; nopreuvenouveaufinancementCWsurmandategénéral."
+      }
+    ]
+  },
+  {
+    "index": 356,
+    "classification": "material",
+    "summary": "MarsFV276,763 M$dontL3164,787/NAV43,857horsL3, versusDec331,071 ; L3purchases16,914inclPIK/exchange, noncashintégral. Teninvest21,937L2→L3pricingmoinsvisible nonpreuveuniquedéfaut. DeuxNAVretraits≤annuelrestrictifs nonliquiditéinstantanée.",
+    "rows": [
+      {
+        "quote": "capitalized PIK income",
+        "model_quantity": "march_level3_transparency_and_nav_redemption_restrictions",
+        "stage": "recognized",
+        "issuer_treatment": "MarsFV276,763 M$dontL3164,787/NAV43,857horsL3, versusDec331,071 ; L3purchases16,914inclPIK/exchange, noncashintégral. Teninvest21,937L2→L3pricingmoinsvisible nonpreuveuniquedéfaut. DeuxNAVretraits≤annuelrestrictifs nonliquiditéinstantanée.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 357,
+    "classification": "material",
+    "summary": "T1rachat106123actions×4,98$~528492$calculé, distinct10 M$plafond. ATM cumul13 M$net inchangéDec→mars doncpasnewcash13 M$T1. PoorRichard14,3 M$placement2025 pasT1collecte.",
+    "rows": [
+      {
+        "quote": "As of March 31, 2026, the Company has sold 1,163,753 shares",
+        "model_quantity": "cumulative_atm_unchanged_not_new_quarter_funding",
+        "stage": "recognized",
+        "issuer_treatment": "T1rachat106123actions×4,98$~528492$calculé, distinct10 M$plafond. ATM cumul13 M$net inchangéDec→mars doncpasnewcash13 M$T1. PoorRichard14,3 M$placement2025 pasT1collecte.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 358,
+    "classification": "material",
+    "summary": "Marswaiverfees2,810 M$=2,267ancien+543kquarter, NONRECAPTURE ; stockpayable0. ReversalboostNII/NAVnoncash, n’estpasPIKrecouvrementouCoreWeavedistribution. Basefee1,072/admin420kpayables cashfutures distincts. AvrilwaiverT2àsuivrejuin. PIKincentivefee demeure cashonlyreceivedrule.",
+    "rows": [
+      {
+        "quote": "The incentive fee waiver is not subject to recapture.",
+        "model_quantity": "2_810m_fee_waiver_non_cash_nii_nav_support",
+        "stage": "recognized",
+        "issuer_treatment": "Marswaiverfees2,810 M$=2,267ancien+543kquarter, NONRECAPTURE ; stockpayable0. ReversalboostNII/NAVnoncash, n’estpasPIKrecouvrementouCoreWeavedistribution. Basefee1,072/admin420kpayables cashfutures distincts. AvrilwaiverT2àsuivrejuin. PIKincentivefee demeure cashonlyreceivedrule.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
