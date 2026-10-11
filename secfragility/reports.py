@@ -339,6 +339,10 @@ Le travail est régulièrement commité et poussé. L’exécution finale porte 
                             'Douze groupes sont maintenant ajoutés aux onze groupes initiaux. Leur première lecture, ses sources et ses notes non traitées figurent dans entites_ajoutees.md et expansion_note_coverage.csv.')
                     p.write_text(text)
         else:extension_render(db,root,as_of,data)
+    if (root/'work/continuation398/scope.json').exists():
+        from .continuation_reports import render as continuation_render
+        data['continuation398_results']=continuation_render(db,root,as_of)
+        (root/'delivery_summary.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,default=str)+'\n')
     return data
 
 
@@ -424,17 +428,19 @@ def package(root,as_of):
     extension=bool(opened(root))
     deepening=(root/'work/deepening_authorization.json').exists()
     expansion=(root/'work/expansion/authorization.json').exists()
+    continuation=(root/'work/continuation398/scope.json').exists()
     names=['synthesis.md','delta.md','delivery_summary.json'] + (['user_brief_deepening.md','approfondissements.md',
         'deepening_evidence.csv','deepening_measures.csv','lender_positions.csv','form_d_disclosures.csv','form_d_series.csv'] if deepening else
         ['user_brief_extension.md','notes_complementaires.md'] if extension else ['user_brief_2.md'])
     if expansion:names=['user_brief_expansion.md','entites_ajoutees.md','expansion_summary.json',
         'expansion_evidence.csv','expansion_note_coverage.csv','expansion_entities.csv',
         'expansion_financial_metrics.csv','expansion_lender_classification.csv','delivery_summary.json']
+    if continuation:names+=['user_brief_398.md','bilan_398_blocs.md','revue_398_blocs.csv','continuation398_summary.json']
     for name in names:
         shutil.copy2(root/name,output/name)
     replay=root/'work/idempotency_verification.json'
     if replay.exists():shutil.copy2(replay,output/replay.name)
-    target=output/('SEC_Project_2_entites_ajoutees.zip' if expansion else 'SEC_Project_2_approfondissements.zip' if deepening else 'SEC_Project_2_notes_complementaires.zip' if extension else 'SEC_Project_2_premier_passage.zip')
+    target=output/('SEC_Project_2_398_blocs.zip' if continuation else 'SEC_Project_2_entites_ajoutees.zip' if expansion else 'SEC_Project_2_approfondissements.zip' if deepening else 'SEC_Project_2_notes_complementaires.zip' if extension else 'SEC_Project_2_premier_passage.zip')
     targeted_paths=set()
     if deepening:
         from .deepening_backup import source_paths
@@ -451,8 +457,10 @@ def package(root,as_of):
             include=include or parts[0]=='work' and len(parts)==2 and path.name.startswith('extension_') and path.suffix=='.json'
             include=include or deepening and ((parts[0]=='work' and len(parts)==2 and path.name.startswith('deepening_') and path.suffix in ('.json','.py')) or str(rel) in targeted_paths)
             include=include or expansion and parts[:2]==('work','expansion') and path.suffix in ('.json','.py','.jsonl')
+            include=include or continuation and parts[:2]==('work','continuation398') and path.suffix in ('.json','.py','.jsonl')
             if include:z.write(path,rel)
-    manifest=dict(as_of=as_of,archive=target.name,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size,
+    with target.open('rb') as stream: archive_sha=hashlib.file_digest(stream,'sha256').hexdigest()
+    manifest=dict(as_of=as_of,archive=target.name,sha256=archive_sha,bytes=target.stat().st_size,
        repository='https://github.com/jsiaut/codex_test',independent_audit_performed=False)
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     return manifest

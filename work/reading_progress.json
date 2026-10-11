@@ -11,18 +11,18 @@
     "controls": 219,
     "8k_item": 457,
     "exhibit": 245,
-    "investments_note": 864,
+    "investments_note": 867,
     "lease_note": 210,
-    "concentration_narrative": 936,
+    "concentration_narrative": 937,
     "debt_note": 369,
-    "commitments_note": 345,
+    "commitments_note": 346,
     "section": 1
   },
   "validation_rejected_attempts_by_phase": {
     "schema": 60,
     "semantic": 48
   },
-  "updated_at": "2026-10-11T14:01:47.804862+00:00",
+  "updated_at": "2026-10-11T14:09:02.944093+00:00",
   "read_packet_logging_started_2026_10_09": true,
   "independent_audit_performed": false
 }

@@ -38,7 +38,12 @@ def capture(root):
     names.update(['config.yaml','schema.sql','queries.sql','requirements.txt'])
     if (root/'work/expansion').exists():
         names.update(str(p.relative_to(root)) for p in (root/'work/expansion').glob('*.json'))
+        names.update(str(p.relative_to(root)) for p in (root/'work/expansion').glob('*.jsonl'))
         names.update(str(p.relative_to(root)) for p in (root/'work/expansion').glob('author*.py'))
+    if (root/'work/continuation398').exists():
+        names.update(str(p.relative_to(root)) for p in (root/'work/continuation398').glob('*')
+                     if p.suffix in ('.json','.jsonl','.py') and p.name not in
+                     ('validation.json','delivery_archive.json','prior_verification.json'))
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 

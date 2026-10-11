@@ -64,6 +64,7 @@ def stage_scope(root,selected_prefixes):
         nominated_unique_keys=len(keys),active_unique_keys=len(active),deferred_unique_keys=len(keys-active),
         active_keys=sorted(active),deferred_keys=sorted(keys-active),
         historical_notes_complete=False,all_nominated_notes_read=not deferred,
-        rule='First review of construction commitments, project financing, guarantees, customer support and lender positions; all other nominated notes remain explicitly not_processed.'))
+        rule=('All nominated natural notes have been individually reviewed; historical notes and complete contracts beyond this frozen inventory are not declared reviewed.' if not deferred else
+              'First review of construction commitments, project financing, guarantees, customer support and lender positions; all other nominated notes remain explicitly not_processed.')))
     atomic_json(root/'work/queue.json',untouched+[r for r in nominated if r['content_key'] in active])
     return dict(active=len(active),deferred=len(keys-active))
