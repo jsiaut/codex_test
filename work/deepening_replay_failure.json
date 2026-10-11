@@ -74,7 +74,9 @@
   "independent_audit_performed": false,
   "cause": "Unordered lease-component list aggregation changed only one evidence_profile; values, statuses, source IDs and every other table matched.",
   "resolution": "Order paired source-ID and tier lists by model quantity and fact ID; order working-capital profiles by term and lineage; rebuild and compare anew.",
-  "resolved": false,
+  "resolved": true,
   "additional_finding": "Stock note anchors keyed only by group and end date could choose MRVL acquisition-context start instead of its numbered fiscal quarter; corrected and regression tested.",
-  "post_fix_financial_values_and_statuses_unchanged": true
+  "post_fix_financial_values_and_statuses_unchanged": true,
+  "resolved_at": "2026-10-11T08:54:37.411905+00:00",
+  "final_comparison_all_tables_identical": true
 }

@@ -4,6 +4,9 @@
   "accounting_mismatches_preserved": 26,
   "supplemental_source_files_verified": 4483,
   "source_hash_mismatches": 0,
-  "offline_replay_comparison": "pending",
-  "independent_audit_performed": false
+  "offline_replay_comparison": "passed_all_eight_tables",
+  "independent_audit_performed": false,
+  "input_manifest_unchanged": true,
+  "verified_at": "2026-10-11T08:54:37.411905+00:00",
+  "financial_values_and_statuses_unchanged_by_provenance_fix": true
 }

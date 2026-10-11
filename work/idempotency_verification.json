@@ -1,6 +1,6 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "verified_at": "2026-10-11T08:32:51.242238+00:00",
+  "verified_at": "2026-10-11T08:54:37.411905+00:00",
   "method": "Offline full-cache reconstruction; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.",
   "input_manifest_unchanged": true,
   "changed_inputs": [],
@@ -47,19 +47,19 @@
     },
     "measures": {
       "rows": 269635,
-      "original_only": 1,
-      "replay_only": 1,
-      "identical": false,
-      "original_sha256": "611dcbee5946e15a70b21390cc18552964173dfc4895e22d7e68cc8e4be64c90",
-      "replay_sha256": "026380af953dcfb0ce9ad719a1d99b707cc8c7dcb0c105ee6dac845d7a24350a"
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "4bbbf13af512825d1dd6473cf38e944914f7e72489ce81a3a2d3deab78f6ac2b",
+      "replay_sha256": "f4acdaac399c26de8427b3076675eae6c6f24bd147be5f7881488bb7d7311d48"
     },
     "controls": {
       "rows": 155140,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "27a990703554a9dcdb9adbea3b0d05594439ba6bed9e26a10cd11030f60139f5",
-      "replay_sha256": "36886d31e9ee40172969e32840b1416f836ed43dbf06f667ebfdfbda52887841"
+      "original_sha256": "9aeba2306cccda2a0d250f9382a8876a663478b6d0269318c15c3715b4825345",
+      "replay_sha256": "cb4b0cb08ce4c523bce55e36b4776a46783e68bfd31c9e9b3b4a80e5e64a7f9f"
     },
     "exclusions": {
       "rows": 16308,
@@ -70,6 +70,6 @@
       "replay_sha256": "c272961795e8d42d50afaa25ad0bfd4b266a8c4739448b8e71e78a219885223b"
     }
   },
-  "all_tables_identical": false,
+  "all_tables_identical": true,
   "independent_audit_performed": false
 }

@@ -107,3 +107,9 @@ Les tableaux conservent la base propre à chaque montant. « Dernière date vér
 - [Form D officiel — instructions de l’Item 13](https://www.sec.gov/files/formd.pdf)
 
 Les liens de chaque position de prêteur figurent aussi dans lender_positions.csv. Les citations exactes et leurs repères sont conservés dans deepening_evidence.csv.
+
+## Vérification de livraison
+
+93 tests passent. Les 13 invariants de livraison sont satisfaits. La reconstruction intégrale hors ligne reproduit les huit tables : aucun écart dans la comparaison bidirectionnelle de toutes les colonnes, avec les listes de sources comparées comme des multiensembles. Les fichiers d’entrée sont inchangés. Les 26 divergences comptables localisées restent publiées.
+
+Le premier échec portait sur l’ordre des niveaux de preuve d’un ratio META ; un rattachement variable des stocks MRVL à deux débuts de période a ensuite été corrigé. Les corrections, tests et premier échec sont conservés dans decisions.md et work/deepening_replay_failure.json. Les valeurs et statuts financiers de la référence initiale restent identiques. Aucun audit indépendant n’est revendiqué.

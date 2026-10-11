@@ -147,10 +147,10 @@
       "commitments_note": 309
     },
     "validation_rejected_attempts_by_phase": {
-      "semantic": 47,
-      "schema": 60
+      "schema": 60,
+      "semantic": 47
     },
-    "updated_at": "2026-10-11T08:28:24.487442+00:00",
+    "updated_at": "2026-10-11T08:48:35.595413+00:00",
     "read_packet_logging_started_2026_10_09": true,
     "independent_audit_performed": false
   },
@@ -202,7 +202,7 @@
     "lease_note"
   ],
   "extension_source_cutoff_unchanged": true,
-  "elapsed_wall_seconds_since_first_sec_request": "167026.907055",
+  "elapsed_wall_seconds_since_first_sec_request": "167445.791977",
   "deepening_results": {
     "source_as_of": "2026-10-09T10:24:21.129672+00:00",
     "deepening_scope": {
@@ -237,5 +237,17 @@
     "form_d_amounts_are_cumulative_and_may_include_noncash_and_mandatory_future_commitments": true,
     "previous_financial_mismatch_counts_not_reclassified_to_pass": true,
     "independent_audit_performed": false
+  },
+  "deepening_validation": {
+    "tests_passed": 93,
+    "delivery_invariants_passed": 13,
+    "accounting_mismatches_preserved": 26,
+    "supplemental_source_files_verified": 4483,
+    "source_hash_mismatches": 0,
+    "offline_replay_comparison": "passed_all_eight_tables",
+    "independent_audit_performed": false,
+    "input_manifest_unchanged": true,
+    "verified_at": "2026-10-11T08:54:37.411905+00:00",
+    "financial_values_and_statuses_unchanged_by_provenance_fix": true
   }
 }

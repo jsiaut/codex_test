@@ -148,9 +148,9 @@ Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; l
 
 | liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.782798 | ratio | partial / short_term_debt_and_other_components_not_established | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-407; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-937 |
-
 | lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.782798 | ratio | partial / short_term_debt_and_other_components_not_established | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-407; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-937 |
 
 | lev_debt_and_leases_to_operating_income_plus_da | leases / original | 0.649871 | ratio | computed / — | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-767; 0001018724-26-000026 / id:f-768; 0001018724-26-000026 / id:f-774; 0001018724-26-000026 / id:f-775 |
 

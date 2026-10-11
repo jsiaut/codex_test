@@ -25,31 +25,6 @@
   ],
   "accounting_mismatches": [
     {
-      "control": "c2_cash_flow_components",
-      "group_id": "AMD",
-      "n": 2
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "AMD",
-      "n": 4
-    },
-    {
-      "control": "c14_eps_scale",
-      "group_id": "MSFT",
-      "n": 1
-    },
-    {
-      "control": "c15_tax_rate",
-      "group_id": "ORCL",
-      "n": 4
-    },
-    {
-      "control": "c1_balance_components",
-      "group_id": "AMD",
-      "n": 1
-    },
-    {
       "control": "c14_eps_scale",
       "group_id": "MRVL",
       "n": 4
@@ -61,17 +36,42 @@
     },
     {
       "control": "c15_tax_rate",
-      "group_id": "MRVL",
-      "n": 3
-    },
-    {
-      "control": "c15_tax_rate",
       "group_id": "CRWV",
       "n": 5
     },
     {
       "control": "c15_tax_rate",
+      "group_id": "MRVL",
+      "n": 3
+    },
+    {
+      "control": "c15_tax_rate",
       "group_id": "NVDA",
+      "n": 1
+    },
+    {
+      "control": "c2_cash_flow_components",
+      "group_id": "AMD",
+      "n": 2
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "MSFT",
+      "n": 1
+    },
+    {
+      "control": "c14_eps_scale",
+      "group_id": "AMD",
+      "n": 4
+    },
+    {
+      "control": "c15_tax_rate",
+      "group_id": "ORCL",
+      "n": 4
+    },
+    {
+      "control": "c1_balance_components",
+      "group_id": "AMD",
       "n": 1
     }
   ],

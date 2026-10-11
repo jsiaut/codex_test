@@ -11,3 +11,5 @@ Installer requirements.txt. Restaurer le cache initial depuis la sauvegarde LFS,
 `python -m secfragility.reproduce capture`, puis la reconstruction et `python -m secfragility.reproduce compare` vérifient l’égalité intégrale des huit tables, décimales et provenance comprises. Ne pas capturer une nouvelle référence pour masquer une divergence.
 
 Les sauvegardes intermédiaires et la livraison finale sont poussées sur https://github.com/jsiaut/codex_test. Les répertoires de sources ignorés par Git sont conservés dans les sauvegardes LFS avec leur SHA-256.
+
+Validation de la livraison : 93 tests, 13 invariants satisfaits et égalité intégrale des huit tables après reconstruction hors ligne. Voir work/deepening_validation.json et work/idempotency_verification.json.

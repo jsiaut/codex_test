@@ -31,3 +31,5 @@ Le warrant AMD–Meta porte sur **160 millions d’actions au maximum**, à **0,
 La tranche comprend **34 dépôts périodiques originaux** et **168 Form D / D-A uniques de 118 CIK**. Les Form D décrivent des offres cumulatives, parfois des fonds : leurs montants peuvent inclure du non-monétaire et des engagements futurs obligatoires. Aucun montant n’est attribué automatiquement à un laboratoire.
 
 Le rapport approfondissements.md contient les sources, les périodes, les positions des prêteurs et les limites de couverture. Les CSV donnent les citations et le lignage ; form_d_series.csv conserve les valeurs cumulatives connues à chaque fin de trimestre. Les huit tables sont reconstructibles hors ligne. Les critères E/F restent inchangés. Travail effectué seul ; aucun audit indépendant revendiqué. Sauvegarde : https://github.com/jsiaut/codex_test.
+
+Vérification finale : **93 tests passent ; les huit tables sont identiques après reconstruction hors ligne**. Les entrées sont inchangées et les 26 divergences comptables restent visibles.
