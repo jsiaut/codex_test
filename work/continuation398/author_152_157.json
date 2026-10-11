@@ -1,0 +1,100 @@
+[
+  {
+    "index": 152,
+    "classification": "material",
+    "summary": "Les billets convertibles de 2022 et janvier 2023 ont été convertis, intérêts inclus, en mars 2023. Ils ne constituent pas une dette encore exigible en 2025 ni une charge PIK actuelle. Les échéances contractuelles initiales ne doivent pas survivre à cette extinction.",
+    "rows": [
+      {
+        "quote": "In March 2023, the Convertible Promissory Notes and accrued but unpaid interest were converted into 8,628,024 shares of Common Stock.",
+        "model_quantity": "historical_convertible_notes_extinguished",
+        "stage": "settled",
+        "issuer_treatment": "Les billets convertibles de 2022 et janvier 2023 ont été convertis, intérêts inclus, en mars 2023. Ils ne constituent pas une dette encore exigible en 2025 ni une charge PIK actuelle. Les échéances contractuelles initiales ne doivent pas survivre à cette extinction."
+      }
+    ]
+  },
+  {
+    "index": 153,
+    "classification": "material",
+    "summary": "Exercice 2025 : aucun encaissement ATM ; capacité de 200 M$ facultative. Les rachats réalisés représentent 33,3 M$, distincts de l’autorisation de 200 M$. Les exercices de warrants rapportent 0,4 M$, à distinguer des échanges sans cash et des placements historiques. Les nouvelles actions autorisées ne sont pas un financement reçu.",
+    "rows": [
+      {
+        "quote": "The Company is not obligated to sell any shares under the ATM Program.",
+        "model_quantity": "uncommitted_equity_capacity_not_received_cash",
+        "stage": "available",
+        "issuer_treatment": "Exercice 2025 : aucun encaissement ATM ; capacité de 200 M$ facultative. Les rachats réalisés représentent 33,3 M$, distincts de l’autorisation de 200 M$. Les exercices de warrants rapportent 0,4 M$, à distinguer des échanges sans cash et des placements historiques. Les nouvelles actions autorisées ne sont pas un financement reçu.",
+        "measurement_basis": "FY2025_zero_ATM;actual_buybacks_33_3m;capacity_200m"
+      }
+    ]
+  },
+  {
+    "index": 154,
+    "classification": "material",
+    "summary": "Fin 2025 : dette nominale de 5,725 Md$, dont 3,2 Md$ de notes garanties avec sûretés et compte client bloqué. La société mère finance les insuffisances d’achèvement HPC. Les convertibles 2030 sont devenus convertibles et sont classés courants, sans échéance obligatoire de 500 M$ en 2026. Leur règlement prévoit du cash ou cash/actions. La dette LGSA est éteinte depuis juillet 2024 ; accrétion, dérivé reclassé en capitaux propres et capped calls restent distincts des coupons cash.",
+    "rows": [
+      {
+        "quote": "The Company has provided customary completion guarantees with respect to the HPC buildout at the Lake Mariner Data Campus under which it will fund Wulf Compute as necessary to ensure the timely completion of the HPC data center buildings.",
+        "model_quantity": "parent_completion_funding_guarantee",
+        "stage": "signed",
+        "issuer_treatment": "Fin 2025 : dette nominale de 5,725 Md$, dont 3,2 Md$ de notes garanties avec sûretés et compte client bloqué. La société mère finance les insuffisances d’achèvement HPC. Les convertibles 2030 sont devenus convertibles et sont classés courants, sans échéance obligatoire de 500 M$ en 2026. Leur règlement prévoit du cash ou cash/actions. La dette LGSA est éteinte depuis juillet 2024 ; accrétion, dérivé reclassé en capitaux propres et capped calls restent distincts des coupons cash.",
+        "measurement_basis": "FY2025_parent_completion_obligation_no_quantified_cap;face_debt_vs_net_and_cash_coupons",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 155,
+    "classification": "material",
+    "summary": "Fin 2025 : Core42 a effectivement versé 90 M$ de loyers prépayés, dont le solde différé de 81,5 M$ ne constitue pas un deuxième flux. Les baux Fluidstack n’ont pas commencé ; le soutien Google prend effet au commencement et prévoit des options en cas de défaut. L’actif de soutien de 515,5 M$ est non cash. Cayuga est largement prépayé en actions : 95 M$ de titres et 3 M$ cash, avec option d’achat et obligation environnementale conditionnelle. Les loyers futurs à recevoir sont distincts des obligations du locataire TeraWulf.",
+    "rows": [
+      {
+        "quote": "During the year ended December 31, 2025, the Company received the $90.0 million of Prepaid Rent from the customer",
+        "model_quantity": "customer_prepaid_rent_received",
+        "stage": "drawn_or_paid",
+        "issuer_treatment": "Fin 2025 : Core42 a effectivement versé 90 M$ de loyers prépayés, dont le solde différé de 81,5 M$ ne constitue pas un deuxième flux. Les baux Fluidstack n’ont pas commencé ; le soutien Google prend effet au commencement et prévoit des options en cas de défaut. L’actif de soutien de 515,5 M$ est non cash. Cayuga est largement prépayé en actions : 95 M$ de titres et 3 M$ cash, avec option d’achat et obligation environnementale conditionnelle. Les loyers futurs à recevoir sont distincts des obligations du locataire TeraWulf.",
+        "counterparty": "Core42",
+        "counterparty_evidence": "named",
+        "candidate_index": 98,
+        "measurement_basis": "FY2025_actual_cash_received_90m;not_deferred_stock_or_future_rent",
+        "judgment_sensitive": true
+      },
+      {
+        "quote": "The Google Backstop under each Google Recognition Agreement becomes effective as of the commencement date under the corresponding Fluidstack HPC Lease.",
+        "model_quantity": "customer_credit_support_commencement_condition",
+        "stage": "signed",
+        "issuer_treatment": "Fin 2025 : Core42 a effectivement versé 90 M$ de loyers prépayés, dont le solde différé de 81,5 M$ ne constitue pas un deuxième flux. Les baux Fluidstack n’ont pas commencé ; le soutien Google prend effet au commencement et prévoit des options en cas de défaut. L’actif de soutien de 515,5 M$ est non cash. Cayuga est largement prépayé en actions : 95 M$ de titres et 3 M$ cash, avec option d’achat et obligation environnementale conditionnelle. Les loyers futurs à recevoir sont distincts des obligations du locataire TeraWulf.",
+        "counterparty": "Google",
+        "counterparty_evidence": "named",
+        "measurement_basis": "no_Fluidstack_commencement_Dec2025;backstop_effective_only_on_commencement",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 156,
+    "classification": "context",
+    "summary": "En 2025, rémunération en actions de 50,9 M$ ; coûts non reconnus de 61,4 M$ pour salariés/administrateurs et 1 M$ pour autres prestataires. Ce ne sont pas des paiements cash équivalents. Les objectifs de cours déterminent l’acquisition des PSU et ne prouvent pas un contrat commercial ; aucune PSU non acquise à fin 2025.",
+    "rows": [
+      {
+        "quote": "As of December 31, 2025 there were no unvested PSUs outstanding.",
+        "model_quantity": "stock_price_incentives_not_customer_commitments",
+        "stage": "recognized",
+        "issuer_treatment": "En 2025, rémunération en actions de 50,9 M$ ; coûts non reconnus de 61,4 M$ pour salariés/administrateurs et 1 M$ pour autres prestataires. Ce ne sont pas des paiements cash équivalents. Les objectifs de cours déterminent l’acquisition des PSU et ne prouvent pas un contrat commercial ; aucune PSU non acquise à fin 2025."
+      }
+    ]
+  },
+  {
+    "index": 157,
+    "classification": "material",
+    "summary": "Beowulf E&D, partie liée par un dirigeant, est acquise le 21 mai 2025 : le contrat de services externe est résilié et aucun montant réciproque ne subsiste à fin 2025. Les 15,3 M$ payés durant l’exercice et 5,7 M$ capitalisés concernent la période antérieure à l’acquisition. Le dernier bonus minage est réglé en actions pour 2,4 M$, sans assimiler ce règlement à un engagement HPC externe persistant.",
+    "rows": [
+      {
+        "quote": "On May 21, 2025, the Company acquired Beowulf E&D which terminated the Services Agreement between the Company and Beowulf E&D.",
+        "model_quantity": "related_party_service_contract_terminated_by_acquisition",
+        "stage": "terminated",
+        "issuer_treatment": "Beowulf E&D, partie liée par un dirigeant, est acquise le 21 mai 2025 : le contrat de services externe est résilié et aucun montant réciproque ne subsiste à fin 2025. Les 15,3 M$ payés durant l’exercice et 5,7 M$ capitalisés concernent la période antérieure à l’acquisition. Le dernier bonus minage est réglé en actions pour 2,4 M$, sans assimiler ce règlement à un engagement HPC externe persistant.",
+        "counterparty": "Beowulf E&D",
+        "counterparty_evidence": "named"
+      }
+    ]
+  }
+]

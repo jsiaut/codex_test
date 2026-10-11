@@ -1,0 +1,103 @@
+[
+  {
+    "index": 158,
+    "classification": "material",
+    "summary": "En 2025, revenu HPC de 16,9 M$ sous ASC 842, comprenant énergie et fit-out refacturés ; coûts de revenu hors amortissements. Un seul client HPC déclaré, sans nom attaché au ratio. Cash libre de 3,266389 Md$ et cash restreint de 456,386 M$ séparés. Les ventes bitcoin deviennent flux d’investissement après juillet 2024. Abernathy est une VIE non consolidée ; les warrants Google constituent un passif de juste valeur, sans paiement cash identique.",
+    "rows": [
+      {
+        "quote": "Variable lease payments are presented on a gross basis and are included in HPC lease revenue in the consolidated statements of operations.",
+        "model_quantity": "hpc_revenue_gross_variable_power_and_fitout",
+        "stage": "recognized",
+        "issuer_treatment": "En 2025, revenu HPC de 16,9 M$ sous ASC 842, comprenant énergie et fit-out refacturés ; coûts de revenu hors amortissements. Un seul client HPC déclaré, sans nom attaché au ratio. Cash libre de 3,266389 Md$ et cash restreint de 456,386 M$ séparés. Les ventes bitcoin deviennent flux d’investissement après juillet 2024. Abernathy est une VIE non consolidée ; les warrants Google constituent un passif de juste valeur, sans paiement cash identique.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "FY2025_ASC842_16_899m;gross_power;cost_excludes_depreciation"
+      }
+    ]
+  },
+  {
+    "index": 159,
+    "classification": "material",
+    "summary": "Fin 2025 : 18 MW IT HPC effectivement énergisés contre 245 MW minage ; les ambitions cloud ne prouvent pas un service cloud déjà vendu. Beowulf E&D est acquis à 100 %, pour une contrepartie totale en juste valeur de 54,6 M$ incluant actions et compléments conditionnels, distincte du cash initial de 3 M$. Nautilus est cédé depuis octobre 2024.",
+    "rows": [
+      {
+        "quote": "had energized 18 critical IT MW of HPC leasing capacity",
+        "model_quantity": "hpc_energized_capacity_not_pipeline",
+        "stage": "delivered",
+        "issuer_treatment": "Fin 2025 : 18 MW IT HPC effectivement énergisés contre 245 MW minage ; les ambitions cloud ne prouvent pas un service cloud déjà vendu. Beowulf E&D est acquis à 100 %, pour une contrepartie totale en juste valeur de 54,6 M$ incluant actions et compléments conditionnels, distincte du cash initial de 3 M$. Nautilus est cédé depuis octobre 2024."
+      }
+    ]
+  },
+  {
+    "index": 160,
+    "classification": "material",
+    "summary": "Abernathy : 450 M$ cash versés pour 50,1 %, sans consolidation car absence de pouvoir déterminant. TeraWulf doit couvrir les apports supplémentaires que Fluidstack choisit de ne pas faire ; option de rachat Fluidstack après mise en service. Les 1,3 Md$ de notes JV restent une dette de la JV. Nautilus cédé en 2024 pour 102,1 M$ comprend seulement 86,1 M$ cash, plus bitcoin et équipements ; clause de partage d’une revente future conditionnelle.",
+    "rows": [
+      {
+        "quote": "with the TeraWulf Member being required to contribute any shortfall that the Fluidstack Member elects not to contribute",
+        "model_quantity": "joint_venture_partner_capital_shortfall_obligation",
+        "stage": "signed",
+        "issuer_treatment": "Abernathy : 450 M$ cash versés pour 50,1 %, sans consolidation car absence de pouvoir déterminant. TeraWulf doit couvrir les apports supplémentaires que Fluidstack choisit de ne pas faire ; option de rachat Fluidstack après mise en service. Les 1,3 Md$ de notes JV restent une dette de la JV. Nautilus cédé en 2024 pour 102,1 M$ comprend seulement 86,1 M$ cash, plus bitcoin et équipements ; clause de partage d’une revente future conditionnelle.",
+        "counterparty": "Fluidstack",
+        "counterparty_evidence": "named",
+        "measurement_basis": "Abernathy_50_1percent_equity_method;mandatory_shortfall_funding;no_quantified_cap",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 161,
+    "classification": "context",
+    "summary": "Aucun litige matériel déclaré à fin 2025. Cette note de litiges ne constitue pas un inventaire nul des engagements de construction, des garanties ou des apports JV, décrits ailleurs.",
+    "rows": [
+      {
+        "quote": "The Company is not a party to any material legal proceedings",
+        "model_quantity": "no_material_litigation_disclosed_not_zero_commitments",
+        "stage": "recognized",
+        "issuer_treatment": "Aucun litige matériel déclaré à fin 2025. Cette note de litiges ne constitue pas un inventaire nul des engagements de construction, des garanties ou des apports JV, décrits ailleurs."
+      }
+    ]
+  },
+  {
+    "index": 162,
+    "classification": "material",
+    "summary": "Hawesville acquis le 2 février 2026 ; minoritaire vendeur à 6,8 % avec droit de remboursement après début des opérations et, initialement, sans obligation d’apport. Morgantown est signé mais reste soumis aux consentements et autorisations : acquisition prévue, pas clôture établie dans ce dépôt. Aucun nouveau client HPC nommé par ces acquisitions.",
+    "rows": [
+      {
+        "quote": "The closing of the Morgantown acquisition is subject to certain third-party consents and customary regulatory approvals",
+        "model_quantity": "subsequent_site_acquisition_closing_conditions",
+        "stage": "signed",
+        "issuer_treatment": "Hawesville acquis le 2 février 2026 ; minoritaire vendeur à 6,8 % avec droit de remboursement après début des opérations et, initialement, sans obligation d’apport. Morgantown est signé mais reste soumis aux consentements et autorisations : acquisition prévue, pas clôture établie dans ce dépôt. Aucun nouveau client HPC nommé par ces acquisitions."
+      }
+    ]
+  },
+  {
+    "index": 163,
+    "classification": "material",
+    "summary": "Exercice 2025 : HPC 16,899 M$ de revenu et 7,082 M$ de profit segment, minage 151,556 M$. Le profit segment HPC exclut notamment amortissements et frais centraux ; il ne mesure ni résultat net ni cash disponible pour la dette. La perte de 429,793 M$ sur warrants/dérivés est distincte du paiement cash des coupons.",
+    "rows": [
+      {
+        "quote": "Cost of revenue (exclusive of depreciation)",
+        "model_quantity": "segment_profit_excludes_depreciation_and_financing",
+        "stage": "recognized",
+        "issuer_treatment": "Exercice 2025 : HPC 16,899 M$ de revenu et 7,082 M$ de profit segment, minage 151,556 M$. Le profit segment HPC exclut notamment amortissements et frais centraux ; il ne mesure ni résultat net ni cash disponible pour la dette. La perte de 429,793 M$ sur warrants/dérivés est distincte du paiement cash des coupons.",
+        "measurement_basis": "FY2025_HPC_16_899m_revenue_7_082m_segment_profit;not_cash_margin"
+      }
+    ]
+  },
+  {
+    "index": 164,
+    "classification": "material",
+    "summary": "Fin 2025 : passif warrants Google de 844,698 M$ et perte annuelle de réévaluation de 329,2 M$, non cash et distincts de l’actif initial de soutien de 515,5 M$. Valorisation niveau 3 sensible à la volatilité ; juste valeur des notes ne correspond pas à leur principal ni au montant de soutien Google.",
+    "rows": [
+      {
+        "quote": "The Company recognized a loss of $329.2 million during the year ended December 31, 2025",
+        "model_quantity": "google_warrant_remeasurement_non_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Fin 2025 : passif warrants Google de 844,698 M$ et perte annuelle de réévaluation de 329,2 M$, non cash et distincts de l’actif initial de soutien de 515,5 M$. Valorisation niveau 3 sensible à la volatilité ; juste valeur des notes ne correspond pas à leur principal ni au montant de soutien Google.",
+        "counterparty": "Google",
+        "counterparty_evidence": "named",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
