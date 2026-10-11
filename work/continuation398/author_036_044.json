@@ -119,7 +119,7 @@
     "summary": "Annuel 2025 confirme sortie janvier 2024, extinction/conversion des dettes de sortie 2024 ; les 80/150/260 M historiques ne s’ajoutent pas à dette 2025. Gain réorganisation 111,439 M de 2024 lié aux créances satisfaites, coûts conseils post-sortie en charges 2025.",
     "rows": [
       {
-        "quote": "The New Secured Convertible Notes were mandatorily converted as of July 10, 2024, and are no longer outstanding.",
+        "quote": "Notes were mandatorily converted as of July 10, 2024, and are no longer outstanding.",
         "model_quantity": "historical_reorganization_debt_converted",
         "stage": "recognized",
         "issuer_treatment": "Annuel 2025 confirme sortie janvier 2024, extinction/conversion des dettes de sortie 2024 ; les 80/150/260 M historiques ne s’ajoutent pas à dette 2025. Gain réorganisation 111,439 M de 2024 lié aux créances satisfaites, coûts conseils post-sortie en charges 2025.",

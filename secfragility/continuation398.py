@@ -19,11 +19,15 @@ def display(root,start,count=1,part=None):
 def save(root,path):
     authored=json.loads(path.read_text());out=[]
     ledger=root/'work/continuation398/reviews.jsonl'
-    existing={json.loads(x)['content_key'] for x in ledger.read_text().splitlines()} if ledger.exists() else set()
+    records=[json.loads(x) for x in ledger.read_text().splitlines()] if ledger.exists() else []
+    prior={x['content_key']:x for x in records};existing=set(prior)
     rows=manifest(root)
     for a in authored:
         row=rows[a['index']];key=row['content_key']
-        if key in existing:raise ValueError('Review already saved')
+        if key in existing:
+            if prior[key]['summary']!=a['summary'] or prior[key]['classification']!=a['classification']:
+                raise ValueError('An immutable completed review cannot be replaced')
+            continue
         if not a['summary'] or not a['rows']:raise ValueError('An authored assessment and quoted observation are required')
         result=submit(root,key,a['rows'])
         if result.get('reused'):raise ValueError('Frozen remaining block was already passed without this review')

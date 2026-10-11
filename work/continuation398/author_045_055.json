@@ -1,0 +1,158 @@
+[
+  {
+    "index": 45,
+    "classification": "material",
+    "summary": "Annuel 2025 : CoreWeave explicitement nommé premier client colocation et concentration à un seul client. Croissance future attendue lorsque capacité devient facturable, pas preuve que toute capacité signée est déjà livrée. Minage encore majoritaire.",
+    "rows": [
+      {
+        "quote": "single customer; see Note 15 — Segment Reporting.",
+        "model_quantity": "HPC_customer_concentration_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Annuel 2025 : CoreWeave explicitement nommé premier client colocation et concentration à un seul client. Croissance future attendue lorsque capacité devient facturable, pas preuve que toute capacité signée est déjà livrée. Minage encore majoritaire.",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 46,
+    "classification": "material",
+    "summary": "Warrants réorganisation 2025 : exercices produisent 6,8 M et 0,1 M de cash, séparés des effets de valorisation ; CVR année 1 éteint, années 2/3 au choix cash/actions et conditionnels. Les warrants à 0,01 USD peuvent être exercés sans cash.",
+    "rows": [
+      {
+        "quote": "The Tranche 2 Warrants may be exercised on a cashless basis.",
+        "model_quantity": "reorganization_warrant_cashless_exercise_terms",
+        "stage": "recognized",
+        "issuer_treatment": "Warrants réorganisation 2025 : exercices produisent 6,8 M et 0,1 M de cash, séparés des effets de valorisation ; CVR année 1 éteint, années 2/3 au choix cash/actions et conditionnels. Les warrants à 0,01 USD peuvent être exercés sans cash."
+      }
+    ]
+  },
+  {
+    "index": 47,
+    "classification": "material",
+    "summary": "Baux annuels 2025 : futur loyer bailleur commencé 1,770783 Md et non commencé 8,17 Md, recettes contractuelles séparées du revenu 65,424 M. Côté preneur, operating lease 101,353 M et nouveau finance lease 0,844 M actualisés : ces petits financements non monétaires ne prouvent pas des encaissements.",
+    "rows": [
+      {
+        "quote": "excludes $8.17 billion in total future noncancellable minimum lease payments",
+        "model_quantity": "lessor_uncommenced_future_rent_inflows",
+        "stage": "recognized",
+        "issuer_treatment": "Baux annuels 2025 : futur loyer bailleur commencé 1,770783 Md et non commencé 8,17 Md, recettes contractuelles séparées du revenu 65,424 M. Côté preneur, operating lease 101,353 M et nouveau finance lease 0,844 M actualisés : ces petits financements non monétaires ne prouvent pas des encaissements.",
+        "measurement_basis": "FY2025;not_cash_or_recognized_revenue;exclude_from_outflows"
+      }
+    ]
+  },
+  {
+    "index": 48,
+    "classification": "material",
+    "summary": "Émetteur déclare aucune transaction parties liées 2024/2025, contrairement aux revenus historiques minage 2023 anonymes. Ce zéro explicite porte sur cette note et ces années, sans valoir absence universelle de relations de financement clients.",
+    "rows": [
+      {
+        "quote": "There were no related party transactions during the years ended December 31, 2025 and 2024.",
+        "model_quantity": "related_party_transactions_explicit_absence",
+        "stage": "recognized",
+        "issuer_treatment": "Émetteur déclare aucune transaction parties liées 2024/2025, contrairement aux revenus historiques minage 2023 anonymes. Ce zéro explicite porte sur cette note et ces années, sans valoir absence universelle de relations de financement clients.",
+        "event_present": false
+      }
+    ]
+  },
+  {
+    "index": 49,
+    "classification": "context",
+    "summary": "Capital annuel 2025 : réserve de créances de la sortie 2024 et titres anciens annulés, plan salarial et grants PSU/RSU/MSU. Charges de rémunération et capitalisation PPE distinctes de financement par client. Les titres autorisés ne sont pas des proceeds levés.",
+    "rows": [
+      {
+        "quote": "2 Represents the amounts of stock-based compensation capitalized to property, plant, and equipment.",
+        "model_quantity": "employee_share_compensation_capitalization",
+        "stage": "recognized",
+        "issuer_treatment": "Capital annuel 2025 : réserve de créances de la sortie 2024 et titres anciens annulés, plan salarial et grants PSU/RSU/MSU. Charges de rémunération et capitalisation PPE distinctes de financement par client. Les titres autorisés ne sont pas des proceeds levés."
+      }
+    ]
+  },
+  {
+    "index": 50,
+    "classification": "material",
+    "summary": "Dette annuelle 2025 : 1,085 Md face vs 1,060325 Md net ; plus de prêts anciens courants. Le porteur des 625 M de convertibles 2031 garde son put décembre 2027, bien que le tableau maturités n’affiche aucun principal en 2027. Le put crée une échéance potentielle, pas remboursement cash automatique.",
+    "rows": [
+      {
+        "quote": "or on December 15, 2027.",
+        "model_quantity": "convertible_holder_put_earlier_than_stated_maturity",
+        "stage": "recognized",
+        "issuer_treatment": "Dette annuelle 2025 : 1,085 Md face vs 1,060325 Md net ; plus de prêts anciens courants. Le porteur des 625 M de convertibles 2031 garde son put décembre 2027, bien que le tableau maturités n’affiche aucun principal en 2027. Le put crée une échéance potentielle, pas remboursement cash automatique.",
+        "measurement_basis": "FY2025_2031_series;holder_put_Dec2027_not_shown_in_stated_maturities"
+      }
+    ]
+  },
+  {
+    "index": 51,
+    "classification": "material",
+    "summary": "Fin 2025 : financement construction à recevoir du client 337,158 M, adossé aux accruals 290,6 M et payables 46,6 M ; collecte avant paiement des fournisseurs. Effet net apparaît dans BFR/CFO, donc ne pas reclasser aveuglément tout CFO en marge économique. Encaissements puis paiements rapides ne sont pas du cash durablement libre.",
+    "rows": [
+      {
+        "quote": "The Company collects these amounts from the customer prior to payment to vendors.",
+        "model_quantity": "customer_construction_funding_cash_order",
+        "stage": "recognized",
+        "issuer_treatment": "Fin 2025 : financement construction à recevoir du client 337,158 M, adossé aux accruals 290,6 M et payables 46,6 M ; collecte avant paiement des fournisseurs. Effet net apparaît dans BFR/CFO, donc ne pas reclasser aveuglément tout CFO en marge économique. Encaissements puis paiements rapides ne sont pas du cash durablement libre.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "FY2025_matched_receivable_and_payables;working_capital_cash_movements"
+      }
+    ]
+  },
+  {
+    "index": 52,
+    "classification": "material",
+    "summary": "Post-clôture avant février 2026 : vente bitcoin 175,9 M et dépôt cash 80 M en escrow restreint pour achat capacité électrique à partir de 2028. Le dépôt réduit cash disponible ; obligation électrique ferme mais termes/termination à conserver, pas achat GPU ni encaissement client.",
+    "rows": [
+      {
+        "quote": "restricted, interest-bearing escrow account, subject to contractual terms, including termination provisions.",
+        "model_quantity": "power_supply_restricted_cash_deposit",
+        "stage": "recognized",
+        "issuer_treatment": "Post-clôture avant février 2026 : vente bitcoin 175,9 M et dépôt cash 80 M en escrow restreint pour achat capacité électrique à partir de 2028. Le dépôt réduit cash disponible ; obligation électrique ferme mais termes/termination à conserver, pas achat GPU ni encaissement client.",
+        "is_ring_fenced": true,
+        "measurement_basis": "January2026_post_FY2025_cash_deposit;not_FY2025_unrestricted_cash"
+      }
+    ]
+  },
+  {
+    "index": 53,
+    "classification": "material",
+    "summary": "Fin 2025 : capex engagé 989,8 M dont 716,8 M remboursables et 30,1 M avances futures ; 418,1 M nouveaux engagements post-clôture dont 107,4 M pass-through. Ne pas cumuler stocks successifs. Ihle réglé au T4 2025 par paiement d’indemnisation, donc provision T3 ne reste pas arbitrairement active ; procès brevets étendu au HPC.",
+    "rows": [
+      {
+        "quote": "with the Company’s payment in satisfaction of its existing indemnification",
+        "model_quantity": "historical_legal_indemnification_payment",
+        "stage": "recognized",
+        "issuer_treatment": "Fin 2025 : capex engagé 989,8 M dont 716,8 M remboursables et 30,1 M avances futures ; 418,1 M nouveaux engagements post-clôture dont 107,4 M pass-through. Ne pas cumuler stocks successifs. Ihle réglé au T4 2025 par paiement d’indemnisation, donc provision T3 ne reste pas arbitrairement active ; procès brevets étendu au HPC.",
+        "measurement_basis": "Ihle_settled_Q4_2025;not_current_unpaid_15m_accrual"
+      }
+    ]
+  },
+  {
+    "index": 54,
+    "classification": "material",
+    "summary": "Annuel 2025 : tableau confirme 554,85 M de financement colocation REÇU, distinct du total deux activités 556,803 M et du stock différé 553,878 M. Ligne base license fee earned not yet due signale divergence revenu/cash ; RPO >1 an absent concerne ASC 606, pas loyers ASC 842. Bitcoin non vendu sur exercice, variations FV non cash, conditions de collecte et coût amorti préservés.",
+    "rows": [
+      {
+        "quote": "Additional customer funding received | | 554,850 | | 1,953 | | 556,803",
+        "model_quantity": "customer_construction_funding_cash_received",
+        "stage": "recognized",
+        "issuer_treatment": "Annuel 2025 : tableau confirme 554,85 M de financement colocation REÇU, distinct du total deux activités 556,803 M et du stock différé 553,878 M. Ligne base license fee earned not yet due signale divergence revenu/cash ; RPO >1 an absent concerne ASC 606, pas loyers ASC 842. Bitcoin non vendu sur exercice, variations FV non cash, conditions de collecte et coût amorti préservés.",
+        "candidate_index": 50,
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "FY2025_received_colocation_funding;not_total_or_deferred_stock"
+      }
+    ]
+  },
+  {
+    "index": 55,
+    "classification": "material",
+    "summary": "Annuel 2025 : charge warrants 34 M, baisse CVR 0,9 M ; passifs niveau 1. Valeurs de marché convertibles seulement informatives, ne pas substituer les face amounts de ce tableau aux valeurs nettes de dette. Aucune preuve qu’une baisse du passif warrants soit un flux de cash.",
+    "rows": [
+      {
+        "quote": "The fair value is disclosed\nfor informational purposes only",
+        "model_quantity": "debt_fair_value_informational_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Annuel 2025 : charge warrants 34 M, baisse CVR 0,9 M ; passifs niveau 1. Valeurs de marché convertibles seulement informatives, ne pas substituer les face amounts de ce tableau aux valeurs nettes de dette. Aucune preuve qu’une baisse du passif warrants soit un flux de cash.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
