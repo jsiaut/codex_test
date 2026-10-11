@@ -1,0 +1,58 @@
+[
+  {
+    "index": 192,
+    "classification": "context",
+    "summary": "Exercice 2025 : charge equity de 55,75 M$ hors DSU administrateurs, 56,605 M$ en périmètre élargi. Les unités Non-Treasury prévoient un règlement cash et passif résiduel de 1 M$ ; les SAR sont convertis du cash vers actions en août. Valeur intrinsèque des options exercées de 201,6 M$ n’est pas le cash reçu par Galaxy. Devises CAD/USD changent à la réorganisation, à conserver pour comparer.",
+    "rows": [
+      {
+        "quote": "grants are settled solely in cash",
+        "model_quantity": "cash_settled_employee_awards_distinct_from_equity_awards",
+        "stage": "recognized",
+        "issuer_treatment": "Exercice 2025 : charge equity de 55,75 M$ hors DSU administrateurs, 56,605 M$ en périmètre élargi. Les unités Non-Treasury prévoient un règlement cash et passif résiduel de 1 M$ ; les SAR sont convertis du cash vers actions en août. Valeur intrinsèque des options exercées de 201,6 M$ n’est pas le cash reçu par Galaxy. Devises CAD/USD changent à la réorganisation, à conserver pour comparer.",
+        "measurement_basis": "NonTreasury_cash_settlement;not_all_SBC_non_cash;CAD_USD_post_reorganization"
+      }
+    ]
+  },
+  {
+    "index": 193,
+    "classification": "context",
+    "summary": "Fin 2025 : TRA de 150,4 M$ dont 72,3 M$ envers parties liées, paiements futurs dépendant d’événements et économies fiscales. Distributions fiscales de 49,3 M$ réellement payées, pas un investissement IA. Billet GDHI/GDH LP éliminé à la consolidation après réorganisation, sans preuve de remboursement cash. Candy cesse d’être partie liée après acquisition et départ du dirigeant ; sponsoring des fonds ne suffit pas au contrôle.",
+    "rows": [
+      {
+        "quote": "The Promissory Note is eliminated in consolidation subsequent to the Reorganization Transactions.",
+        "model_quantity": "related_party_note_consolidation_elimination_not_cash_repayment",
+        "stage": "recognized",
+        "issuer_treatment": "Fin 2025 : TRA de 150,4 M$ dont 72,3 M$ envers parties liées, paiements futurs dépendant d’événements et économies fiscales. Distributions fiscales de 49,3 M$ réellement payées, pas un investissement IA. Billet GDHI/GDH LP éliminé à la consolidation après réorganisation, sans preuve de remboursement cash. Candy cesse d’être partie liée après acquisition et départ du dirigeant ; sponsoring des fonds ne suffit pas au contrôle.",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 194,
+    "classification": "context",
+    "summary": "La politique confirme ventes de crypto généralement brutes, stablecoins financiers en net, échanges crypto/crypto non cash et actifs clients/collatéraux assortis d’obligations de restitution. Certains emprunts crypto sont rappelables à vue ; NAV de fonds fermés ne constitue pas cash immédiatement disponible. GDI consolide GDH LP comme seul GP malgré minoritaires économiques. Infrastructure datacenter amortie sur 15–25 ans ; D&A classé en frais généraux et plafonds de taux en OCI ne réduisent pas le principal de dette.",
+    "rows": [
+      {
+        "quote": "The Company predominantly acts as a principal in sales and purchases of digital intangible assets",
+        "model_quantity": "crypto_gross_revenue_non_cash_exchanges_not_hpc_cash_generation",
+        "stage": "recognized",
+        "issuer_treatment": "La politique confirme ventes de crypto généralement brutes, stablecoins financiers en net, échanges crypto/crypto non cash et actifs clients/collatéraux assortis d’obligations de restitution. Certains emprunts crypto sont rappelables à vue ; NAV de fonds fermés ne constitue pas cash immédiatement disponible. GDI consolide GDH LP comme seul GP malgré minoritaires économiques. Infrastructure datacenter amortie sur 15–25 ans ; D&A classé en frais généraux et plafonds de taux en OCI ne réduisent pas le principal de dette.",
+        "measurement_basis": "FY2025_USGAAP_consolidation_GDHLP;crypto_gross_vs_net;restricted_collateral"
+      }
+    ]
+  },
+  {
+    "index": 195,
+    "classification": "context",
+    "summary": "Fin 2025 : dettes construction/minage 84,901 M$ non ventilées, distinctes des engagements de construction Helios de 529,8 M$ ; ne pas attribuer le total mixte à Helios seul. Dépôts d’achat 34,168 M$ et prépayés 43,721 M$ ne sont pas du cash libre. Disparition du billet de 96,933 M$ résulte de l’élimination en consolidation, pas d’un remboursement démontré.",
+    "rows": [
+      {
+        "quote": "the Promissory Note between GDH LP and GDI was eliminated in consolidation",
+        "model_quantity": "intercompany_note_eliminated_not_cash_repaid",
+        "stage": "recognized",
+        "issuer_treatment": "Fin 2025 : dettes construction/minage 84,901 M$ non ventilées, distinctes des engagements de construction Helios de 529,8 M$ ; ne pas attribuer le total mixte à Helios seul. Dépôts d’achat 34,168 M$ et prépayés 43,721 M$ ne sont pas du cash libre. Disparition du billet de 96,933 M$ résulte de l’élimination en consolidation, pas d’un remboursement démontré.",
+        "measurement_basis": "Dec2025_mixed_construction_mining_AP84_901m;no_Helios_allocation"
+      }
+    ]
+  }
+]

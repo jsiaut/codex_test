@@ -1,0 +1,167 @@
+[
+  {
+    "index": 201,
+    "classification": "material",
+    "summary": "Mars 2026 : engagements de construction Helios 706,5 M$ contre 529,8 M$ à décembre, stocks non additifs. Engagements VIE non financés 48,8 M$ et crédit trading 80 M$ dont 60 M$ financés distincts de l’IA. Solde LUNA 120 M$ non actualisé payable 2027–2028, provision 112,6 M$ ; ne pas maintenir le paiement 2026 au solde courant. Indemnités/safeguarding sans plafond estimable ne valent pas zéro.",
+    "rows": [
+      {
+        "quote": "outstanding commitment for the construction of improvements at its Helios facility totaling $706.5 million",
+        "model_quantity": "helios_construction_remaining_commitment",
+        "stage": "signed",
+        "issuer_treatment": "Mars 2026 : engagements de construction Helios 706,5 M$ contre 529,8 M$ à décembre, stocks non additifs. Engagements VIE non financés 48,8 M$ et crédit trading 80 M$ dont 60 M$ financés distincts de l’IA. Solde LUNA 120 M$ non actualisé payable 2027–2028, provision 112,6 M$ ; ne pas maintenir le paiement 2026 au solde courant. Indemnités/safeguarding sans plafond estimable ne valent pas zéro.",
+        "measurement_basis": "March2026_706_5m_stock;not_plus_Dec2025_529_8m"
+      }
+    ]
+  },
+  {
+    "index": 202,
+    "classification": "context",
+    "summary": "Mars 2026 : cash 910,691 M$, notes à valeur comptable 3,058426 Md$ contre juste valeur 2,909471 Md$, Helios prêt 1,069633 Md$. Investissements FV excluent NAV 236,1 M$ et méthode alternative 146 M$ ; ne pas traiter ces fonds comme cash libre. Transfers de niveau 3 et baisses de valeur ne prouvent pas des ventes encaissées.",
+    "rows": [
+      {
+        "quote": "This table excludes non-financial assets and liabilities.",
+        "model_quantity": "financial_fair_value_table_scope_not_liquidity_inventory",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : cash 910,691 M$, notes à valeur comptable 3,058426 Md$ contre juste valeur 2,909471 Md$, Helios prêt 1,069633 Md$. Investissements FV excluent NAV 236,1 M$ et méthode alternative 146 M$ ; ne pas traiter ces fonds comme cash libre. Transfers de niveau 3 et baisses de valeur ne prouvent pas des ventes encaissées.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 203,
+    "classification": "material",
+    "summary": "T1 2026 : Data Centers actifs 2,103624 Md$ et passifs 1,330343 Md$, revenus 3,05 M$ d’intérêts seulement, perte nette 1,547 M$. Dette et coûts corporate ne sont pas tous alloués au segment ; segment développe encore Helios. Revenu trading global 10,041444 Md$ ne mesure pas revenu HPC ni rentabilité économique du datacenter.",
+    "rows": [
+      {
+        "quote": "Data Centers segment comprises the Helios infrastructure assets.",
+        "model_quantity": "helios_segment_pre_lease_revenue_scope",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2026 : Data Centers actifs 2,103624 Md$ et passifs 1,330343 Md$, revenus 3,05 M$ d’intérêts seulement, perte nette 1,547 M$. Dette et coûts corporate ne sont pas tous alloués au segment ; segment développe encore Helios. Revenu trading global 10,041444 Md$ ne mesure pas revenu HPC ni rentabilité économique du datacenter.",
+        "measurement_basis": "Q1_2026_DataCenters3_05m_interest_only;not_trading_revenue"
+      }
+    ]
+  },
+  {
+    "index": 204,
+    "classification": "context",
+    "summary": "Mars 2026 : TRA au passif de 149,4 M$ dont 71,4 M$ envers parties liées ; dépend d’économies fiscales et de futurs échanges, pas versement effectué. Aucun cash de distribution fiscale au T1. Billet historique avancé à 109 M$ en mars 2025 ensuite éliminé en consolidation, sans preuve de remboursement. Relations GalaxyOne et fonds non assimilées à financement IA.",
+    "rows": [
+      {
+        "quote": "The amounts payable, as well as the timing of any payments, under the TRA are dependent upon significant future events and assumptions",
+        "model_quantity": "tax_receivable_agreement_conditional_payment_timing",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : TRA au passif de 149,4 M$ dont 71,4 M$ envers parties liées ; dépend d’économies fiscales et de futurs échanges, pas versement effectué. Aucun cash de distribution fiscale au T1. Billet historique avancé à 109 M$ en mars 2025 ensuite éliminé en consolidation, sans preuve de remboursement. Relations GalaxyOne et fonds non assimilées à financement IA.",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 205,
+    "classification": "material",
+    "summary": "T1 2026 : zéro revenu de contrat client Data Centers, intérêts 3,05 M$. Le différé ASC 606 de 47,571 M$ diminue de 4,75 M$ par reconnaissance sans ajout, distinct des loyers ASC 842. Aucun nom ne permet de l’attribuer à CoreWeave ; volume de vente crypto et blockchain rewards sont séparés de l’IA.",
+    "rows": [
+      {
+        "quote": "Revenues from contracts with customers",
+        "model_quantity": "customer_contract_revenue_excludes_future_hpc_leases",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2026 : zéro revenu de contrat client Data Centers, intérêts 3,05 M$. Le différé ASC 606 de 47,571 M$ diminue de 4,75 M$ par reconnaissance sans ajout, distinct des loyers ASC 842. Aucun nom ne permet de l’attribuer à CoreWeave ; volume de vente crypto et blockchain rewards sont séparés de l’IA.",
+        "measurement_basis": "Q1_2026_DataCenters_zero_customer_revenue;ASC606_liabilities47_571m_not_named_CW",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 206,
+    "classification": "material",
+    "summary": "Mars 2026 : tirage Helios I 1,069633 Md$ sur facility 1,4 Md$, échéance 2028 et covenants DSCR/LTC inchangés. Échéances notes totales 3,217133 Md$ incluent 445 M$ en 2026, distinctes des prêts trading 84,542 M$ et des emprunts crypto. Charge exchangeables de 17,6 M$ dont 7,5 M$ coupons ; aucune conversion au T1, pas de PIK déduit de la différence.",
+    "rows": [
+      {
+        "quote": "no Exchangeable Notes were exchanged.",
+        "model_quantity": "exchangeable_debt_cash_coupon_vs_effective_interest",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : tirage Helios I 1,069633 Md$ sur facility 1,4 Md$, échéance 2028 et covenants DSCR/LTC inchangés. Échéances notes totales 3,217133 Md$ incluent 445 M$ en 2026, distinctes des prêts trading 84,542 M$ et des emprunts crypto. Charge exchangeables de 17,6 M$ dont 7,5 M$ coupons ; aucune conversion au T1, pas de PIK déduit de la différence.",
+        "measurement_basis": "Q1_2026_no_conversion;Helios1_069633bn_drawn;notes_maturity3_217133bn"
+      }
+    ]
+  },
+  {
+    "index": 207,
+    "classification": "material",
+    "summary": "Mars 2026 : 32 % du revenu sur deux plateformes de trading, 44 % des prêts sur trois contreparties anonymes. Actifs crypto détenus par tiers 56 %, exposition opérationnelle et crédit malgré collatéral supérieur à 100 %. Emprunts rappelables à vue ; ratios de clientèle trading ne sont pas des concentrations HPC. Helios garde ses risques de construction et de crédit locataire.",
+    "rows": [
+      {
+        "quote": "The loans are callable on demand by the counterparties",
+        "model_quantity": "callable_trading_funding_distinct_from_hpc_project_debt",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : 32 % du revenu sur deux plateformes de trading, 44 % des prêts sur trois contreparties anonymes. Actifs crypto détenus par tiers 56 %, exposition opérationnelle et crédit malgré collatéral supérieur à 100 %. Emprunts rappelables à vue ; ratios de clientèle trading ne sont pas des concentrations HPC. Helios garde ses risques de construction et de crédit locataire.",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 208,
+    "classification": "context",
+    "summary": "T1 2026 : aucun échange LP/B en actions A et aucun paiement de distribution fiscale. Possibilité d’échange 1:1 en actions ou cash reste contractuelle, pas obligation cash actuellement exercée. Participation économique passe par LP malgré absence de droits économiques propres aux actions B ; éviter double comptage actions B et unités LP.",
+    "rows": [
+      {
+        "quote": "no Class B common stock was cancelled in connection with exchanges of LP Units",
+        "model_quantity": "paired_lp_units_equity_scope_no_current_exchange",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2026 : aucun échange LP/B en actions A et aucun paiement de distribution fiscale. Possibilité d’échange 1:1 en actions ou cash reste contractuelle, pas obligation cash actuellement exercée. Participation économique passe par LP malgré absence de droits économiques propres aux actions B ; éviter double comptage actions B et unités LP."
+      }
+    ]
+  },
+  {
+    "index": 209,
+    "classification": "context",
+    "summary": "Mars 2026 : FV option sur 513,954 M$ d’investissements sous influence significative et 921,017 M$ d’actifs numériques financiers. Perte non réalisée de 84,3 M$ distincte des 2,076 M$ de gains réalisés ; ni contrôle des participations ni cash perdu à hauteur de la réévaluation.",
+    "rows": [
+      {
+        "quote": "Net Change in Unrealized Gains / (Losses)",
+        "model_quantity": "fair_value_option_unrealized_result_not_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : FV option sur 513,954 M$ d’investissements sous influence significative et 921,017 M$ d’actifs numériques financiers. Perte non réalisée de 84,3 M$ distincte des 2,076 M$ de gains réalisés ; ni contrôle des participations ni cash perdu à hauteur de la réévaluation."
+      }
+    ]
+  },
+  {
+    "index": 210,
+    "classification": "context",
+    "summary": "Mars 2026 : prêts crypto nets 670,139 M$, emprunts 1,497312 Md$ dont 1,441951 Md$ courants, collatéral reçu à restituer 781,868 M$. Collatéral posté 159,246 M$ et DeFi non libre. Aucun impayé déclaré ne garantit recouvrement ; baisse du stock par rapport à décembre ne prouve pas un flux cash identique ni une dette IA remboursée.",
+    "rows": [
+      {
+        "quote": "no digital asset loans receivable were past due.",
+        "model_quantity": "crypto_credit_stock_no_past_due_not_no_risk",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : prêts crypto nets 670,139 M$, emprunts 1,497312 Md$ dont 1,441951 Md$ courants, collatéral reçu à restituer 781,868 M$. Collatéral posté 159,246 M$ et DeFi non libre. Aucun impayé déclaré ne garantit recouvrement ; baisse du stock par rapport à décembre ne prouve pas un flux cash identique ni une dette IA remboursée.",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 211,
+    "classification": "context",
+    "summary": "Bloc limité au titre « Subsequent Events », sans contenu substantiel. Aucune conclusion sur absence d’événements ultérieurs et aucun montant ou lien économique nouveau ne peuvent être établis à partir de ce bloc.",
+    "rows": [
+      {
+        "quote": "SUBSEQUENT EVENTS",
+        "model_quantity": "empty_note_heading_no_incremental_evidence",
+        "stage": "recognized",
+        "issuer_treatment": "Bloc limité au titre « Subsequent Events », sans contenu substantiel. Aucune conclusion sur absence d’événements ultérieurs et aucun montant ou lien économique nouveau ne peuvent être établis à partir de ce bloc."
+      }
+    ]
+  },
+  {
+    "index": 212,
+    "classification": "context",
+    "summary": "Le dépôt de mars ne signale pas de changement matériel de politique comptable et renvoie au 10-K 2025. Ce renvoi ne confère pas un audit aux données intermédiaires ; appliquer le cadre déjà lu sans inventer de nouvelle politique HPC ni de nouveau montant.",
+    "rows": [
+      {
+        "quote": "There have been no material changes",
+        "model_quantity": "accounting_policy_annual_cross_reference_interim_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Le dépôt de mars ne signale pas de changement matériel de politique comptable et renvoie au 10-K 2025. Ce renvoi ne confère pas un audit aux données intermédiaires ; appliquer le cadre déjà lu sans inventer de nouvelle politique HPC ni de nouveau montant."
+      }
+    ]
+  }
+]

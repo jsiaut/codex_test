@@ -1,0 +1,72 @@
+[
+  {
+    "index": 196,
+    "classification": "material",
+    "summary": "Exercice 2025 : segment Data Centers correspondant à Helios, actifs 1,863911 Md$ et passifs 1,098739 Md$. Revenus 8,433 M$ d’intérêts, perte nette segment 1,098 M$, sans loyer HPC reconnu. Charges d’intérêt des notes corporate allouées au Treasury, donc rentabilité segment ne couvre pas tout financement du groupe ; comparatifs segments 2023–2024 recast présentés non audités.",
+    "rows": [
+      {
+        "quote": "Our Data Centers segment develops, and will in the future operate, HPC infrastructure",
+        "model_quantity": "data_center_segment_pre_operating_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Exercice 2025 : segment Data Centers correspondant à Helios, actifs 1,863911 Md$ et passifs 1,098739 Md$. Revenus 8,433 M$ d’intérêts, perte nette segment 1,098 M$, sans loyer HPC reconnu. Charges d’intérêt des notes corporate allouées au Treasury, donc rentabilité segment ne couvre pas tout financement du groupe ; comparatifs segments 2023–2024 recast présentés non audités.",
+        "measurement_basis": "FY2025_DataCenters_interest_only;corporate_note_interest_Treasury;segment_assets_not_cash"
+      }
+    ]
+  },
+  {
+    "index": 197,
+    "classification": "context",
+    "summary": "Fin 2025 : prêts crypto nets 1,078929 Md$, emprunts crypto 2,417268 Md$ dont 2,361161 Md$ courants. Collatéral reçu 1,333059 Md$ entraîne restitution ; collatéral posté 185,78 M$ plus actifs conservés en DeFi, pas une réserve libre. Aucun impayé déclaré ne prouve une absence de risque futur. Activité de trading et lending non attribuée à l’IA.",
+    "rows": [
+      {
+        "quote": "Collateral payable associated with digital asset loans receivable",
+        "model_quantity": "crypto_collateral_restitution_and_borrowing_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Fin 2025 : prêts crypto nets 1,078929 Md$, emprunts crypto 2,417268 Md$ dont 2,361161 Md$ courants. Collatéral reçu 1,333059 Md$ entraîne restitution ; collatéral posté 185,78 M$ plus actifs conservés en DeFi, pas une réserve libre. Aucun impayé déclaré ne prouve une absence de risque futur. Activité de trading et lending non attribuée à l’IA.",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 198,
+    "classification": "material",
+    "summary": "En 2025, levée de juin : 477,8 M$ net reçus par Galaxy, ventes secondaires sans produit pour la société. Placement stratégique d’octobre 460 M$ inclut actions de dirigeants ; seul produit primaire à compter comme financement issuer. Reclassification de passifs de rémunération 8 M$ et 9,3 M$ en equity sans encaissement. Parts LP/B échangées 1:1 ne constituent pas une nouvelle levée cash.",
+    "rows": [
+      {
+        "quote": "The Company did not receive any proceeds from the sale of Class A common stock by the selling stockholders.",
+        "model_quantity": "primary_equity_proceeds_exclude_secondary_sales",
+        "stage": "drawn_or_paid",
+        "issuer_treatment": "En 2025, levée de juin : 477,8 M$ net reçus par Galaxy, ventes secondaires sans produit pour la société. Placement stratégique d’octobre 460 M$ inclut actions de dirigeants ; seul produit primaire à compter comme financement issuer. Reclassification de passifs de rémunération 8 M$ et 9,3 M$ en equity sans encaissement. Parts LP/B échangées 1:1 ne constituent pas une nouvelle levée cash.",
+        "measurement_basis": "June2025_primary_net477_8m;October460m_mixed_primary_secondary"
+      }
+    ]
+  },
+  {
+    "index": 199,
+    "classification": "context",
+    "summary": "T1 2026 : gains réalisés 26,1 M$ et pertes non réalisées 238,6 M$ sur investissements. Valeur alternative 145,994 M$, dépréciations et revalorisations distinctes des flux cash. Variation trimestrielle d’actif ou perte non réalisée ne peut pas être attribuée à Helios sans preuve.",
+    "rows": [
+      {
+        "quote": "Net unrealized gains / (losses) related to investments were $(238.6) million",
+        "model_quantity": "investment_unrealized_loss_not_project_cashflow",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2026 : gains réalisés 26,1 M$ et pertes non réalisées 238,6 M$ sur investissements. Valeur alternative 145,994 M$, dépréciations et revalorisations distinctes des flux cash. Variation trimestrielle d’actif ou perte non réalisée ne peut pas être attribuée à Helios sans preuve."
+      }
+    ]
+  },
+  {
+    "index": 200,
+    "classification": "context",
+    "summary": "Mars 2026 : VIE non consolidées, exposition maximale 408,861 M$ composée de juste valeur 360,039 M$ et 48,822 M$ d’apports non financés. Sans garanties de performance autres que capitaux propres engagés ; la variation depuis décembre est un stock, pas un remboursement cash démontré. Aucune attribution de l’ensemble aux datacenters.",
+    "rows": [
+      {
+        "quote": "other than its own capital commitments.",
+        "model_quantity": "unconsolidated_vie_max_exposure_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Mars 2026 : VIE non consolidées, exposition maximale 408,861 M$ composée de juste valeur 360,039 M$ et 48,822 M$ d’apports non financés. Sans garanties de performance autres que capitaux propres engagés ; la variation depuis décembre est un stock, pas un remboursement cash démontré. Aucune attribution de l’ensemble aux datacenters.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "March2026_408_861m_max_exposure;not_plus_Dec_stock"
+      }
+    ]
+  }
+]
