@@ -1,0 +1,105 @@
+[
+  {
+    "index": 269,
+    "classification": "material",
+    "summary": "Juin2026 : AFS230,055 Md$ dont related33,292, pertes FV13,153 Md$ distinctes CECL704 M$. Mortgage103,581 Md$ FV et commercial48,291 incluent portefeuille ARI acheté, pas tout IA. Repos3,244 dont1,269 échéance≤1an ; netting907 régléT1. Nonconsolidated maximumloss148,133 Md$ contre139,121carrying, inclut engagements et fonds sous VIE. AP Grange call réalisé T2 et gain673 M$ remplace simple attente, sans identifier AI ni assimiler gain à total remboursement.",
+    "rows": [
+      {
+        "quote": "AP Grange called the ABS debt outstanding and, as a result, we recognized a gain of $673 million.",
+        "model_quantity": "investment_called_and_gain_recognized_not_ai_cash_total",
+        "stage": "recognized",
+        "issuer_treatment": "Juin2026 : AFS230,055 Md$ dont related33,292, pertes FV13,153 Md$ distinctes CECL704 M$. Mortgage103,581 Md$ FV et commercial48,291 incluent portefeuille ARI acheté, pas tout IA. Repos3,244 dont1,269 échéance≤1an ; netting907 régléT1. Nonconsolidated maximumloss148,133 Md$ contre139,121carrying, inclut engagements et fonds sous VIE. AP Grange call réalisé T2 et gain673 M$ remplace simple attente, sans identifier AI ni assimiler gain à total remboursement.",
+        "measurement_basis": "Q2_2026_Grange_call_gain673m;June_nonconsol_max148_133bn",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 270,
+    "classification": "material",
+    "summary": "Juin2026 : nouveau revolver1,75 Md$ non tiré échéance2031 remplace ancien1,25/2028 ; accordion2,5 conditionnelle. Covenant debt/capital40% remplace35%, networth22,1 Md$. Liquidité2,6 Md$ non tirée renouveléejuin2027 et AAReNW26,2 ; ne pas conserver ancien statut expiré. Août émission1 Md$6,15%2036 post-juin distincte principal7,775/bilan7,832 de juin. Subordinated report5ans autorisé pas PIK exercé.",
+    "rows": [
+      {
+        "quote": "which replaced our previous credit agreement dated June 30, 2023.",
+        "model_quantity": "credit_facility_refinanced_and_covenants_updated",
+        "stage": "available",
+        "issuer_treatment": "Juin2026 : nouveau revolver1,75 Md$ non tiré échéance2031 remplace ancien1,25/2028 ; accordion2,5 conditionnelle. Covenant debt/capital40% remplace35%, networth22,1 Md$. Liquidité2,6 Md$ non tirée renouveléejuin2027 et AAReNW26,2 ; ne pas conserver ancien statut expiré. Août émission1 Md$6,15%2036 post-juin distincte principal7,775/bilan7,832 de juin. Subordinated report5ans autorisé pas PIK exercé.",
+        "measurement_basis": "June2026_credit1_75bn_undrawn_2031;liquidity2_6bn_2027;August1bn_postbalance"
+      }
+    ]
+  },
+  {
+    "index": 271,
+    "classification": "context",
+    "summary": "Juin2026 : VIE liées consolidées lorsque Athene most closely associated et groupe répond au primary beneficiary ; pas contrôle automatique de toutes structures gérées Apollo. S1 gainsVIE1,066 Md$ dontfonds1,099 avec T2 inclus659 M$. Limite de soutien au capital engagé ne signifie aucun engagement, ni effacement garantie WHCO connue ailleurs.",
+    "rows": [
+      {
+        "quote": "we are the entity most closely associated with the VIEs",
+        "model_quantity": "vie_most_closely_associated_control_test",
+        "stage": "recognized",
+        "issuer_treatment": "Juin2026 : VIE liées consolidées lorsque Athene most closely associated et groupe répond au primary beneficiary ; pas contrôle automatique de toutes structures gérées Apollo. S1 gainsVIE1,066 Md$ dontfonds1,099 avec T2 inclus659 M$. Limite de soutien au capital engagé ne signifie aucun engagement, ni effacement garantie WHCO connue ailleurs.",
+        "measurement_basis": "H1_2026_VIE_gain1_066bn;not_plus_Q2_659m"
+      }
+    ]
+  },
+  {
+    "index": 272,
+    "classification": "context",
+    "summary": "Juin2026 : AOCI perte3,213 Md$ contre3,12mars/2,641décembre. Flux OCI/reclassifications/taxes/NCI ne sont pas sorties cash IA ; tableaux T2 et S1 aboutissent au même stock de clôture, ne pas les additionner.",
+    "rows": [
+      {
+        "quote": "Balance at June 30, 2026",
+        "model_quantity": "accumulated_oci_stock_not_additive_quarter_and_halfyear",
+        "stage": "recognized",
+        "issuer_treatment": "Juin2026 : AOCI perte3,213 Md$ contre3,12mars/2,641décembre. Flux OCI/reclassifications/taxes/NCI ne sont pas sorties cash IA ; tableaux T2 et S1 aboutissent au même stock de clôture, ne pas les additionner.",
+        "measurement_basis": "June2026_AOCI_negative3_213bn"
+      }
+    ]
+  },
+  {
+    "index": 273,
+    "classification": "context",
+    "summary": "S1 2026 : segmentretirementrevenu12,82 Md$, pré-tax2,095, taxes1,89, résultat205 M$. T2revenu9,152/résultat1,687 déjà inclus compensent perteT1 ; ne pas annualiser ou cumuler. Interest/financing294 M$ exclut NCI et inclut preferred, marge non IA et non cash coverage WHCO.",
+    "rows": [
+      {
+        "quote": "primarily include the impact of fair value accounting for market risk benefits",
+        "model_quantity": "retirement_segment_fair_value_and_tax_scope",
+        "stage": "recognized",
+        "issuer_treatment": "S1 2026 : segmentretirementrevenu12,82 Md$, pré-tax2,095, taxes1,89, résultat205 M$. T2revenu9,152/résultat1,687 déjà inclus compensent perteT1 ; ne pas annualiser ou cumuler. Interest/financing294 M$ exclut NCI et inclut preferred, marge non IA et non cash coverage WHCO.",
+        "measurement_basis": "H1_2026_net205m;Q2_1_687bn_included;not_AI_cash_margin"
+      }
+    ]
+  },
+  {
+    "index": 274,
+    "classification": "material",
+    "summary": "Juin2026 : FV récurrent409,585 Md$, level3 162,77 incluantotherassets169 M$ horsrollforward162,601 ; NAV26,486 séparée. Mortgage FV103,581 vsprincipal105,204. Commercial nonaccrual1,027principal/FV695 M$ ; résidentiel dégradé1,912principal/FV1,728 etnonaccrual1,655, ne pas attribuer ces créances à IA. DetteFV7,273 vsbilan7,832 pas nouvelle capacitécash. DCF unobservable discount jusqu’à35% sensible au jugement.",
+    "rows": [
+      {
+        "quote": "Transfers in and out of Level 3 are primarily based on changes in the availability of pricing sources",
+        "model_quantity": "level3_transfers_not_cash_changes_and_mortgage_credit_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Juin2026 : FV récurrent409,585 Md$, level3 162,77 incluantotherassets169 M$ horsrollforward162,601 ; NAV26,486 séparée. Mortgage FV103,581 vsprincipal105,204. Commercial nonaccrual1,027principal/FV695 M$ ; résidentiel dégradé1,912principal/FV1,728 etnonaccrual1,655, ne pas attribuer ces créances à IA. DetteFV7,273 vsbilan7,832 pas nouvelle capacitécash. DCF unobservable discount jusqu’à35% sensible au jugement.",
+        "measurement_basis": "June2026_Level3_162_770bn;NAV26_486bn;mortgageFV103_581bn",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 275,
+    "classification": "material",
+    "summary": "Juin2026 : achat ARI réalisé24avril8,7 Md$ incluant accruedinterest remplace ancien portefeuille~9 Md$ commitments, sansaddition. AtheneprêtàAGM279 M$/500cap,sensinverse0. FeesApolloS1 785 M$ horsfeesfondssous-jacents ; relatedtitresAtlas4,801 Md$ distinctconcentrationsingleissuer1,974. ACRA37%economy100%votesconsolidée ; apportsADIP271distributions301 M$ ne sontpas tous nouveaux apportsprimaire IA.",
+    "rows": [
+      {
+        "quote": "we completed the purchase of a commercial mortgage loan portfolio, including accrued interest, for $8.7 billion from ARI.",
+        "model_quantity": "ari_portfolio_purchase_actual_price_and_group_funding",
+        "stage": "settled",
+        "issuer_treatment": "Juin2026 : achat ARI réalisé24avril8,7 Md$ incluant accruedinterest remplace ancien portefeuille~9 Md$ commitments, sansaddition. AtheneprêtàAGM279 M$/500cap,sensinverse0. FeesApolloS1 785 M$ horsfeesfondssous-jacents ; relatedtitresAtlas4,801 Md$ distinctconcentrationsingleissuer1,974. ACRA37%economy100%votesconsolidée ; apportsADIP271distributions301 M$ ne sontpas tous nouveaux apportsprimaire IA.",
+        "counterparty": "ARI",
+        "counterparty_evidence": "named",
+        "measurement_basis": "April24_2026_actualprice8_7bn_includes_interest;not_plus9bn_commitments",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "index": 262,
+    "classification": "material",
+    "summary": "Mars2026 : Athora acquisition UK désormais réalisée, stock investissements3,15 Md$ incluant conversion préf en common, pas totalité cash nouveau. Engagement Athora restant136 M$ remplace2,711 Md$ décembre. Achat ARI9 Md$ clos24avril, post-mars ; prix99,7% commitments pas principal/net cash sans ajustement. Prêt à AGM280 M$ tiré sur500, sens inverse0. Atlas titres6,146 Md$ plus engagement1,343, pas tous IA ni consolidation automatique.",
+    "rows": [
+      {
+        "quote": "The transaction closed on April 24, 2026.",
+        "model_quantity": "related_party_transaction_closed_after_quarter_end",
+        "stage": "settled",
+        "issuer_treatment": "Mars2026 : Athora acquisition UK désormais réalisée, stock investissements3,15 Md$ incluant conversion préf en common, pas totalité cash nouveau. Engagement Athora restant136 M$ remplace2,711 Md$ décembre. Achat ARI9 Md$ clos24avril, post-mars ; prix99,7% commitments pas principal/net cash sans ajustement. Prêt à AGM280 M$ tiré sur500, sens inverse0. Atlas titres6,146 Md$ plus engagement1,343, pas tous IA ni consolidation automatique.",
+        "counterparty": "ARI",
+        "counterparty_evidence": "named",
+        "measurement_basis": "April24_2026_ARI_closed;March_Athora_investment3_150bn_and_remaining136m",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 263,
+    "classification": "material",
+    "summary": "Mars2026 : AFS219,791 Md$ avec affiliates29,415, provision744 M$ distincte pertes FV13,915 Md$. Repos3,244 Md$ contre6,043 décembre, netting907 M$ effectivement réglé net au T1 : éviter gross/net mélange. Maximum nonconsolidated loss149,15 Md$ contre carrying138,768, engagements déjà inclus. AP Grange call au T2 annoncé gain673 M$, pas gaincash entier ni preuve de crédit IA. Fonds sans calendrier distributions.",
+    "rows": [
+      {
+        "quote": "the agreements were net settled during the three months ended March 31, 2026.",
+        "model_quantity": "repurchase_netting_settlement_and_loss_exposure_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Mars2026 : AFS219,791 Md$ avec affiliates29,415, provision744 M$ distincte pertes FV13,915 Md$. Repos3,244 Md$ contre6,043 décembre, netting907 M$ effectivement réglé net au T1 : éviter gross/net mélange. Maximum nonconsolidated loss149,15 Md$ contre carrying138,768, engagements déjà inclus. AP Grange call au T2 annoncé gain673 M$, pas gaincash entier ni preuve de crédit IA. Fonds sans calendrier distributions.",
+        "measurement_basis": "March2026_repo3_244bn;nonconsol_max149_150bn;not_AI_total",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 264,
+    "classification": "material",
+    "summary": "Mars2026 : engagements36,1 Md$ inclusive affiliates/VIE, appel possible à tout moment malgré horizon cinqans ; actifs restreints111,646 Md$. FHLB28,2/FABN34,5/securedothers27,6 dont FABR21,5 : sous-totaux non additifs. Atlas deferred2,5 Md$ et cascade garantie intégrale demeurent sans provision car paiement non probable, ce qui ne supprime pas engagement contractuel ni ne renseigne WHCO.",
+    "rows": [
+      {
+        "quote": "these commitments could become due any time upon counterparty request.",
+        "model_quantity": "investment_commitments_callable_without_cashflow_timing_assurance",
+        "stage": "signed",
+        "issuer_treatment": "Mars2026 : engagements36,1 Md$ inclusive affiliates/VIE, appel possible à tout moment malgré horizon cinqans ; actifs restreints111,646 Md$. FHLB28,2/FABN34,5/securedothers27,6 dont FABR21,5 : sous-totaux non additifs. Atlas deferred2,5 Md$ et cascade garantie intégrale demeurent sans provision car paiement non probable, ce qui ne supprime pas engagement contractuel ni ne renseigne WHCO.",
+        "measurement_basis": "March2026_total_commitments36_1bn_inclusive;restricted111_646bn"
+      }
+    ]
+  },
+  {
+    "index": 265,
+    "classification": "context",
+    "summary": "T1 2026 : segment retraite revenu3,668 Md$, pré-tax191 M$ mais tax1,673 Md$ conduit perte1,482 Md$. Ne pas interpréter seule perte nette comme défaut crédit IA ; coûts segment excluent parts NCI et résultat comporte FV. Même agrégat ne mesure pas cash remboursable ni capacité des fonds à investir WHCO.",
+    "rows": [
+      {
+        "quote": "Income tax expense",
+        "model_quantity": "retirement_segment_tax_driven_net_loss_scope",
+        "stage": "recognized",
+        "issuer_treatment": "T1 2026 : segment retraite revenu3,668 Md$, pré-tax191 M$ mais tax1,673 Md$ conduit perte1,482 Md$. Ne pas interpréter seule perte nette comme défaut crédit IA ; coûts segment excluent parts NCI et résultat comporte FV. Même agrégat ne mesure pas cash remboursable ni capacité des fonds à investir WHCO.",
+        "measurement_basis": "Q1_2026_pretax191m_tax1_673bn_netloss1_482bn"
+      }
+    ]
+  },
+  {
+    "index": 266,
+    "classification": "context",
+    "summary": "Mars2026 : consolidations VIE Apollo par groupe related-party primary beneficiary. Aucun arrangement au-delà capital engagé selon cette note, mais engagements et garanties séparées subsistent ; VIE gains407 M$ incluent443 M$ fonds et pertes trading45 M$. Ni nouvelles levées primaires ni cash IA démontré par ce résultat.",
+    "rows": [
+      {
+        "quote": "Since the criteria for the primary beneficiary are satisfied by our related party group",
+        "model_quantity": "vie_primary_beneficiary_related_party_group",
+        "stage": "recognized",
+        "issuer_treatment": "Mars2026 : consolidations VIE Apollo par groupe related-party primary beneficiary. Aucun arrangement au-delà capital engagé selon cette note, mais engagements et garanties séparées subsistent ; VIE gains407 M$ incluent443 M$ fonds et pertes trading45 M$. Ni nouvelles levées primaires ni cash IA démontré par ce résultat.",
+        "measurement_basis": "Q1_2026_VIE_gain407m;committed_support_not_zero"
+      }
+    ]
+  },
+  {
+    "index": 267,
+    "classification": "material",
+    "summary": "Mars2026 : FV récurrent385,272 Md$, level3 155,261 dont autres assets183 M$ exclus rollforward155,078 ; NAV25,361 Md$ hors hiérarchie. Mortgage96,665 Md$ FV vs97,844principal ; commercial nonaccrual537 M$ FV/860principal, résidentiel882/965. Dette bilan7,84 Md$ vsFV7,172 n’est pas baisse de dette exigible. Mortgage pertes FV751 M$ et DCF sensibilité ne sont pas pertes cash IA attribuables.",
+    "rows": [
+      {
+        "quote": "These valuations use critical assumptions not readily available to market participants.",
+        "model_quantity": "athene_level3_estimation_and_nonaccrual_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Mars2026 : FV récurrent385,272 Md$, level3 155,261 dont autres assets183 M$ exclus rollforward155,078 ; NAV25,361 Md$ hors hiérarchie. Mortgage96,665 Md$ FV vs97,844principal ; commercial nonaccrual537 M$ FV/860principal, résidentiel882/965. Dette bilan7,84 Md$ vsFV7,172 n’est pas baisse de dette exigible. Mortgage pertes FV751 M$ et DCF sensibilité ne sont pas pertes cash IA attribuables.",
+        "measurement_basis": "March2026_Level3_155_261bn;NAV25_361bn;debt_FV_not_principal",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 268,
+    "classification": "context",
+    "summary": "Mars2026 : interim USGAAP non audité, comptes intercompagnies éliminés, ACRA et VIE inclus avec NCI. Résultats trimestriels non annualisables mécaniquement. Normes annoncées hedge/creditloss/VIE futures ne constituent pas modification déjà appliquée ; dates d’efficacité ASU2025-08 diffèrent de note annuelle, conserver source sans présumer adoption ou effet sur risque IA.",
+    "rows": [
+      {
+        "quote": "Interim operating results are not necessarily indicative of the results expected for the entire year.",
+        "model_quantity": "interim_accounting_basis_and_future_standard_not_adoption",
+        "stage": "recognized",
+        "issuer_treatment": "Mars2026 : interim USGAAP non audité, comptes intercompagnies éliminés, ACRA et VIE inclus avec NCI. Résultats trimestriels non annualisables mécaniquement. Normes annoncées hedge/creditloss/VIE futures ne constituent pas modification déjà appliquée ; dates d’efficacité ASU2025-08 diffèrent de note annuelle, conserver source sans présumer adoption ou effet sur risque IA.",
+        "measurement_basis": "March2026_unaudited_interim_USGAAP;ASU_dates_source_specific",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
