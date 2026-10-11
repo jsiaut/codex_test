@@ -1,0 +1,117 @@
+[
+  {
+    "index": 4,
+    "classification": "material",
+    "summary": "Politiques 2024 : HPC sous ASC 842 avec composantes non locatives regroupées, revenu fixe linéaire et énergie variable brute. Les RPO 8,4 M concernent seulement le minage hébergé, pas les contrats HPC. Avances client et stocks de revenu différé ne sont pas les mêmes objets que revenu ou encaissement annuel. Crypto à la juste valeur depuis janvier 2024 ; CVR/warrants passifs réévalués en résultat.",
+    "rows": [
+      {
+        "quote": "The lease components are the predominant components in our current licensing arrangements and the single combined component in these arrangements are accounted for under the operating lease guidance of ASC Topic 842.",
+        "model_quantity": "HPC_lease_accounting_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Politiques 2024 : HPC sous ASC 842 avec composantes non locatives regroupées, revenu fixe linéaire et énergie variable brute. Les RPO 8,4 M concernent seulement le minage hébergé, pas les contrats HPC. Avances client et stocks de revenu différé ne sont pas les mêmes objets que revenu ou encaissement annuel. Crypto à la juste valeur depuis janvier 2024 ; CVR/warrants passifs réévalués en résultat."
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "classification": "material",
+    "summary": "Aucune transaction de services hébergés avec ces parties liées en 2024, contre revenus historiques 2022/2023. Parties non nommées : ne pas créer de contrepartie IA ; absence 2024 limitée aux transactions décrites.",
+    "rows": [
+      {
+        "quote": "There were no such transactions during the year ended December 31, 2024.",
+        "model_quantity": "related_party_hosting_transactions_absence",
+        "stage": "recognized",
+        "issuer_treatment": "Aucune transaction de services hébergés avec ces parties liées en 2024, contre revenus historiques 2022/2023. Parties non nommées : ne pas créer de contrepartie IA ; absence 2024 limitée aux transactions décrites.",
+        "counterparty_evidence": "anonymous",
+        "event_present": false
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "classification": "context",
+    "summary": "Tableau 2024 des charges à payer : capex, intérêts, rémunérations et autres dettes ; reclassement des comparatifs. Pas de contrepartie nommée ni nouvelle garantie extraite, ne pas additionner ces composantes aux totaux de bilan.",
+    "rows": [
+      {
+        "quote": "1 Certain prior year amounts have been reclassified for consistency with the current year presentation.",
+        "model_quantity": "accrued_liability_reporting_basis",
+        "stage": "recognized",
+        "issuer_treatment": "Tableau 2024 des charges à payer : capex, intérêts, rémunérations et autres dettes ; reclassement des comparatifs. Pas de contrepartie nommée ni nouvelle garantie extraite, ne pas additionner ces composantes aux totaux de bilan.",
+        "basis_break": true,
+        "recast_cause": "presentation_reclassification"
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "classification": "material",
+    "summary": "CVR historiques de réorganisation : obligation année 1 éteinte le 23 janvier 2025 ; GUC CVR éteints juillet 2024. Années 2/3 plafonnées et réglables en cash/actions au choix ; warrants anciens annulés, nouveaux exerçables parfois sans cash. Une variation de valeur des passifs ne prouve aucun décaissement.",
+    "rows": [
+      {
+        "quote": "On January 23, 2025, the first testing date, the fair market value of the Corresponding New Common Stock was in excess of $260,000,000 and the Year 1 Contingent Payment Obligation was extinguished.",
+        "model_quantity": "historical_contingent_value_right_termination",
+        "stage": "recognized",
+        "issuer_treatment": "CVR historiques de réorganisation : obligation année 1 éteinte le 23 janvier 2025 ; GUC CVR éteints juillet 2024. Années 2/3 plafonnées et réglables en cash/actions au choix ; warrants anciens annulés, nouveaux exerçables parfois sans cash. Une variation de valeur des passifs ne prouve aucun décaissement.",
+        "event_date": "2025-01-23"
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "classification": "material",
+    "summary": "Nouveau segment HPC au T2 2024, à distinguer des revenus bitcoin. Client J anonyme représente 100 % du revenu HPC 2024 ; F, client minage, devient actionnaire minoritaire à la sortie de faillite : aucune attribution à CoreWeave. Marge segment avant charges centrales et effets de juste valeur, sans bilan segmenté.",
+    "rows": [
+      {
+        "quote": "1 On the Effective Date, Customer F became a minority shareholder of the Company.",
+        "model_quantity": "anonymous_customer_equity_relationship",
+        "stage": "recognized",
+        "issuer_treatment": "Nouveau segment HPC au T2 2024, à distinguer des revenus bitcoin. Client J anonyme représente 100 % du revenu HPC 2024 ; F, client minage, devient actionnaire minoritaire à la sortie de faillite : aucune attribution à CoreWeave. Marge segment avant charges centrales et effets de juste valeur, sans bilan segmenté.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "mining_customer_F;not_HPC_customer_J;no_named_edge"
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "classification": "material",
+    "summary": "Juste valeur 2024 : hausse du passif warrants et baisse des CVR passent en résultat sans démontrer de flux de trésorerie ; passifs fin 2024 de niveau 1. Les valeurs de marché des obligations convertibles diffèrent de leurs principaux/valeurs comptables et ne sont pas des besoins de remboursement.",
+    "rows": [
+      {
+        "quote": "The CVRs, GUC CVRs and Warrants are recognized as derivative liabilities in accordance with ASC 815 and are initially and subsequently measured at fair value with changes in fair value reflected in Net loss.",
+        "model_quantity": "derivative_fair_value_income_effect_policy",
+        "stage": "recognized",
+        "issuer_treatment": "Juste valeur 2024 : hausse du passif warrants et baisse des CVR passent en résultat sans démontrer de flux de trésorerie ; passifs fin 2024 de niveau 1. Les valeurs de marché des obligations convertibles diffèrent de leurs principaux/valeurs comptables et ne sont pas des besoins de remboursement.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "classification": "material",
+    "summary": "Structure historique : transition HPC à partir de mars 2024, dépendance à un seul client HPC anonyme, majorité du revenu 2024 encore minage. Sortie de Chapter 11 janvier 2024 sans fresh-start accounting ; ne pas considérer cela comme une faillite actuelle 2026.",
+    "rows": [
+      {
+        "quote": "The Company was not required to apply fresh start accounting based on the provisions of Accounting Standards Codification (“ASC”) 852, Reorganizations, since the entity’s reorganization value immediately before the date of confirmation was more than the total of all its post-petition liabilities and allowed claims.",
+        "model_quantity": "bankruptcy_reporting_basis_no_fresh_start",
+        "stage": "recognized",
+        "issuer_treatment": "Structure historique : transition HPC à partir de mars 2024, dépendance à un seul client HPC anonyme, majorité du revenu 2024 encore minage. Sortie de Chapter 11 janvier 2024 sans fresh-start accounting ; ne pas considérer cela comme une faillite actuelle 2026.",
+        "basis_break": true,
+        "recast_cause": "unknown"
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "classification": "material",
+    "summary": "Baux 2024 : nouveaux Austin, Aubix et Denton, maturités locatives actualisées distinctes des paiements bruts. Extinction non monétaire 50,7 M de dettes locatives à la sortie de faillite ; paiements de cure inclus dans les flux annuels. Les loyers futurs à recevoir du bailleur sont des entrées, pas des obligations de sortie.",
+    "rows": [
+      {
+        "quote": "Supplemental disclosure of noncash investing and financing activities in the Company’s Consolidated Statements of Cash Flows includes a decrease in lease liability due to lease satisfactions on the Effective Date of $50.7 million presented in Extinguishment of accounts payable, accrued expenses, finance lease liability, and notes payable upon emergence for the year ended December 31, 2024.",
+        "model_quantity": "historical_noncash_lease_liability_extinguishment",
+        "stage": "recognized",
+        "issuer_treatment": "Baux 2024 : nouveaux Austin, Aubix et Denton, maturités locatives actualisées distinctes des paiements bruts. Extinction non monétaire 50,7 M de dettes locatives à la sortie de faillite ; paiements de cure inclus dans les flux annuels. Les loyers futurs à recevoir du bailleur sont des entrées, pas des obligations de sortie.",
+        "measurement_basis": "FY2024;not_cash_debt_repayment"
+      }
+    ]
+  }
+]
