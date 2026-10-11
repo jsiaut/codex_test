@@ -1,6 +1,6 @@
 # Règles du domaine appliquées
 
-Seuls les documents SEC déposés alimentent les mesures. Une pièce furnished, une correspondance ou un projet n’est pas une preuve de montant : Reg S-T ; instructions des formulaires 8-K et S-1. Les attributs formulaire, item, emplacement, assurance et niveau de preuve restent distincts.
+Les mesures utilisent des documents SEC déposés ou une pièce furnished dont l'incorporation par référence est expressément prouvée dans le dépôt d'origine. Cette exception conserve le statut furnished et ne présume aucune revue d'auditeur ; une annexe non incorporée, une correspondance ou un projet ne suffit pas à établir un montant. Références : Reg S-T et instructions des formulaires. Les attributs formulaire, item, emplacement, assurance et niveau de preuve restent distincts.
 
 Les dates et dimensions définissent les faits ; fy et fp ne définissent pas une période. L’instance est déjà à l’échelle ; decimals donne une précision. Une absence n’est jamais un zéro. Les comparaisons et contrôles n’emploient que les précisions publiées. Aucun change ni mélange de cadres comptables. Les comparatifs retirés ou retraités ne sont pas soustraits à une base incompatible.
 

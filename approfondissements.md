@@ -1,6 +1,6 @@
 # Bilan des quatre approfondissements
 
-Sources arrêtées au **9 octobre 2026**, comme dans la livraison précédente. Le travail est effectué par un seul agent, sans audit indépendant. Les onze groupes du modèle principal restent distincts des déposants supplémentaires examinés pour les prêts, investissements et véhicules.
+Sources arrêtées au **9 octobre 2026**, comme dans la livraison précédente. Le travail est effectué par un seul agent, sans audit indépendant. Les quatre approfondissements décrivent les onze groupes initiaux et leurs contreparties. Les douze nouveaux groupes font l’objet de la première analyse distincte dans entites_ajoutees.md.
 
 **La découverte la plus précise est le montage Cerebras–OpenAI : un prêt client, des prestations qui peuvent rembourser ce prêt, et des warrants liés au contrat commercial.** Les pièces établissent ces mécanismes ; elles ne démontrent pas une demande artificielle ni une fragilité attribuable à tout le secteur.
 
@@ -21,7 +21,7 @@ Au **30 juin 2026**, CoreWeave publie **5,524 Md$ de trésorerie non restreinte*
 
 Ces fourchettes utilisent uniquement les échéances annuelles publiées ; elles excluent les intérêts, baux et autres obligations de financement. Elles ne mesurent pas une probabilité de défaut. Au deuxième trimestre 2026, le flux de trésorerie opérationnel est de 679 M$, le capex payé de 6,422 Md$ et le FCF de base de −5,743 Md$.
 
-Les dépôts originaux permettent de suivre **47 positions de prêts, comparatifs et republications compris, auprès de 11 prêteurs**. Le fichier lender_positions.csv conserve coût, juste valeur, date, devise, instrument et lignage. Une position à la juste valeur ne mesure ni la taille du crédit syndiqué ni la perte probable. La part des intérêts PIK et le statut non-accrual par position restent non déterminés dans cette tranche ; leur lecture spécifique n’est pas terminée.
+Les dépôts originaux permettent de suivre **87 positions de prêts, comparatifs et republications compris, auprès de 11 prêteurs**. Le fichier lender_positions.csv conserve coût, juste valeur, date, devise, instrument et lignage. Une position à la juste valeur ne mesure ni la taille du crédit syndiqué ni la perte probable. La part des intérêts PIK et le statut non-accrual par position restent non déterminés dans cette tranche ; leur lecture spécifique n’est pas terminée.
 
 ## 3. NVIDIA–CoreWeave et AMD–Meta
 
@@ -91,13 +91,87 @@ Les tableaux conservent la base propre à chaque montant. « Dernière date vér
 
 ## Pièces SEC directement consultées
 
+- [TERAWULF INC. — 10-Q, 0001083301-22-000023](https://www.sec.gov/Archives/edgar/data/1083301/000108330122000023/wulf-20220630x10q.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-22-000048](https://www.sec.gov/Archives/edgar/data/1083301/000108330122000048/wulf-20220930x10q.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-23-000054](https://www.sec.gov/Archives/edgar/data/1083301/000108330123000054/wulf-20230930.htm)
+- [TERAWULF INC. — 10-Q/A, 0001083301-23-000060](https://www.sec.gov/Archives/edgar/data/1083301/000108330123000060/wulf-20230930.htm)
+- [TERAWULF INC. — 10-K, 0001083301-24-000072](https://www.sec.gov/Archives/edgar/data/1083301/000108330124000072/wulf-20231231.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-24-000103](https://www.sec.gov/Archives/edgar/data/1083301/000108330124000103/wulf-20240331.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-24-000124](https://www.sec.gov/Archives/edgar/data/1083301/000108330124000124/wulf-20240630.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-24-000147](https://www.sec.gov/Archives/edgar/data/1083301/000108330124000147/wulf-20240930.htm)
+- [TERAWULF INC. — 10-K, 0001083301-25-000018](https://www.sec.gov/Archives/edgar/data/1083301/000108330125000018/wulf-20241231.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-25-000038](https://www.sec.gov/Archives/edgar/data/1083301/000108330125000038/wulf-20250331.htm)
+- [TERAWULF INC. — 10-K/A, 0001083301-25-000052](https://www.sec.gov/Archives/edgar/data/1083301/000108330125000052/terawulf-form10xkxafy2024p.htm)
+- [TERAWULF INC. — 10-Q/A, 0001083301-25-000053](https://www.sec.gov/Archives/edgar/data/1083301/000108330125000053/terawulf-form10xqxaq12025p.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-25-000061](https://www.sec.gov/Archives/edgar/data/1083301/000108330125000061/wulf-20250630.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-25-000099](https://www.sec.gov/Archives/edgar/data/1083301/000108330125000099/wulf-20250930.htm)
+- [TERAWULF INC. — 10-K, 0001083301-26-000031](https://www.sec.gov/Archives/edgar/data/1083301/000108330126000031/wulf-20251231.htm)
+- [TERAWULF INC. — 10-Q, 0001083301-26-000092](https://www.sec.gov/Archives/edgar/data/1083301/000108330126000092/wulf-20260331.htm)
 - [TERAWULF INC. — 10-Q, 0001083301-26-000166](https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm)
+- [TERAWULF INC. — 10-K, 0001104659-22-041168](https://www.sec.gov/Archives/edgar/data/1083301/000110465922041168/wulf-20211231x10k.htm)
+- [TERAWULF INC. — 10-K/A, 0001140361-23-023223](https://www.sec.gov/Archives/edgar/data/1083301/000114036123023223/brhc20052547_10ka.htm)
+- [TERAWULF INC. — 10-Q, 0001437749-21-011912](https://www.sec.gov/Archives/edgar/data/1083301/000143774921011912/ikon20210331_10q.htm)
+- [TERAWULF INC. — 10-Q, 0001437749-21-019685](https://www.sec.gov/Archives/edgar/data/1083301/000143774921019685/ikon20210630_10q.htm)
+- [TERAWULF INC. — 10-Q, 0001437749-21-026741](https://www.sec.gov/Archives/edgar/data/1083301/000143774921026741/ikon20210930_10q.htm)
+- [TERAWULF INC. — 10-Q, 0001558370-22-008985](https://www.sec.gov/Archives/edgar/data/1083301/000155837022008985/wulf-20220331x10q.htm)
+- [TERAWULF INC. — 10-K, 0001558370-23-005301](https://www.sec.gov/Archives/edgar/data/1083301/000155837023005301/wulf-20221231x10k.htm)
+- [TERAWULF INC. — 10-Q, 0001558370-23-009915](https://www.sec.gov/Archives/edgar/data/1083301/000155837023009915/wulf-20230331x10q.htm)
+- [TERAWULF INC. — 10-Q, 0001558370-23-014682](https://www.sec.gov/Archives/edgar/data/1083301/000155837023014682/wulf-20230630x10q.htm)
 - [Salesforce, Inc. — 10-Q, 0001108524-26-000190](https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm)
+- [Applied Digital Corp. — 10-K/A, 0001144879-22-000043](https://www.sec.gov/Archives/edgar/data/1144879/000114487922000043/apld-20220531.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-22-000052](https://www.sec.gov/Archives/edgar/data/1144879/000114487922000052/apld-20220831.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-23-000028](https://www.sec.gov/Archives/edgar/data/1144879/000114487923000028/apld-20221130.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-23-000101](https://www.sec.gov/Archives/edgar/data/1144879/000114487923000101/apld-20230228.htm)
+- [Applied Digital Corp. — 10-K, 0001144879-23-000176](https://www.sec.gov/Archives/edgar/data/1144879/000114487923000176/apld-20230531.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-24-000010](https://www.sec.gov/Archives/edgar/data/1144879/000114487924000010/apld-20231130.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-24-000078](https://www.sec.gov/Archives/edgar/data/1144879/000114487924000078/apld-20240229.htm)
+- [Applied Digital Corp. — 10-K, 0001144879-24-000216](https://www.sec.gov/Archives/edgar/data/1144879/000114487924000216/apld-20240531.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-24-000253](https://www.sec.gov/Archives/edgar/data/1144879/000114487924000253/apld-20240831.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-25-000006](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000006/apld-20241130.htm)
+- [Applied Digital Corp. — 10-K, 0001144879-25-000021](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000021/apld-20250531.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-25-000069](https://www.sec.gov/Archives/edgar/data/1144879/000114487925000069/apld-20250831.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-26-000006](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000006/apld-20251130.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-26-000030](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000030/apld-20260228.htm)
 - [Applied Digital Corp. — 10-K, 0001144879-26-000048](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/apld-20260531.htm)
+- [Applied Digital Corp. — 10-Q, 0001144879-26-000059](https://www.sec.gov/Archives/edgar/data/1144879/000114487926000059/apld-20260831.htm)
+- [Applied Digital Corp. — 10-Q, 0001628280-22-014389](https://www.sec.gov/Archives/edgar/data/1144879/000162828022014389/apld-20220228.htm)
+- [Applied Digital Corp. — 10-K, 0001628280-22-023816](https://www.sec.gov/Archives/edgar/data/1144879/000162828022023816/apld-20220531.htm)
+- [Applied Digital Corp. — 10-Q, 0001628280-25-017684](https://www.sec.gov/Archives/edgar/data/1144879/000162828025017684/apld-20250228.htm)
+- [Applied Digital Corp. — 10-Q, 0001898844-23-000006](https://www.sec.gov/Archives/edgar/data/1144879/000189884423000006/apld-20230831.htm)
+- [Applied Digital Corp. — 10-K/A, 0001898844-23-000012](https://www.sec.gov/Archives/edgar/data/1144879/000189884423000012/apld-20230531.htm)
 - [Zoom Communications, Inc. — 10-Q, 0001585521-26-000121](https://www.sec.gov/Archives/edgar/data/1585521/000158552126000121/zm-20260731.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-22-000029](https://www.sec.gov/Archives/edgar/data/1858681/000185868122000029/apo-20220331.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-22-000045](https://www.sec.gov/Archives/edgar/data/1858681/000185868122000045/apo-20220630.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-22-000053](https://www.sec.gov/Archives/edgar/data/1858681/000185868122000053/apo-20220930.htm)
+- [Apollo Global Management, Inc. — 10-K, 0001858681-23-000007](https://www.sec.gov/Archives/edgar/data/1858681/000185868123000007/apo-20221231.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-23-000017](https://www.sec.gov/Archives/edgar/data/1858681/000185868123000017/apo-20230331.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-23-000026](https://www.sec.gov/Archives/edgar/data/1858681/000185868123000026/apo-20230630.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-23-000042](https://www.sec.gov/Archives/edgar/data/1858681/000185868123000042/apo-20230930.htm)
+- [Apollo Global Management, Inc. — 10-K, 0001858681-24-000031](https://www.sec.gov/Archives/edgar/data/1858681/000185868124000031/apo-20231231.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-24-000048](https://www.sec.gov/Archives/edgar/data/1858681/000185868124000048/apo-20240331.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-24-000096](https://www.sec.gov/Archives/edgar/data/1858681/000185868124000096/apo-20240630.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-24-000120](https://www.sec.gov/Archives/edgar/data/1858681/000185868124000120/apo-20240930.htm)
+- [Apollo Global Management, Inc. — 10-K, 0001858681-25-000034](https://www.sec.gov/Archives/edgar/data/1858681/000185868125000034/apo-20241231.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-25-000049](https://www.sec.gov/Archives/edgar/data/1858681/000185868125000049/apo-20250331.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-25-000117](https://www.sec.gov/Archives/edgar/data/1858681/000185868125000117/apo-20250630.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-25-000139](https://www.sec.gov/Archives/edgar/data/1858681/000185868125000139/apo-20250930.htm)
+- [Apollo Global Management, Inc. — 10-K, 0001858681-26-000013](https://www.sec.gov/Archives/edgar/data/1858681/000185868126000013/apo-20251231.htm)
+- [Apollo Global Management, Inc. — 10-Q, 0001858681-26-000026](https://www.sec.gov/Archives/edgar/data/1858681/000185868126000026/apo-20260331.htm)
 - [Apollo Global Management, Inc. — 10-Q, 0001858681-26-000040](https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm)
 - [Eightco Holdings Inc. — 10-Q, 0001493152-26-036637](https://www.sec.gov/Archives/edgar/data/1892492/000149315226036637/form10-q.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-23-000023](https://www.sec.gov/Archives/edgar/data/1944366/000194436623000023/osnl-20230630.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-23-000056](https://www.sec.gov/Archives/edgar/data/1944366/000194436623000056/osnl-20230930.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-K, 0001944366-24-000031](https://www.sec.gov/Archives/edgar/data/1944366/000194436624000031/osnl-20231231.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-24-000053](https://www.sec.gov/Archives/edgar/data/1944366/000194436624000053/osnl-20240331.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-24-000076](https://www.sec.gov/Archives/edgar/data/1944366/000194436624000076/osnl-20240630.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-24-000098](https://www.sec.gov/Archives/edgar/data/1944366/000194436624000098/osnl-20240930.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-K, 0001944366-25-000041](https://www.sec.gov/Archives/edgar/data/1944366/000194436625000041/osnl-20241231.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-25-000066](https://www.sec.gov/Archives/edgar/data/1944366/000194436625000066/osnl-20250331.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-25-000100](https://www.sec.gov/Archives/edgar/data/1944366/000194436625000100/osnl-20250630.htm)
 - [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-25-000126](https://www.sec.gov/Archives/edgar/data/1944366/000194436625000126/osnl-20250930.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-K, 0001944366-26-000020](https://www.sec.gov/Archives/edgar/data/1944366/000194436626000020/osnl-20251231.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-26-000034](https://www.sec.gov/Archives/edgar/data/1944366/000194436626000034/osnl-20260331.htm)
+- [Blue Owl Real Estate Net Lease Trust — 10-Q, 0001944366-26-000066](https://www.sec.gov/Archives/edgar/data/1944366/000194436626000066/osnl-20260630.htm)
 - [Cerebras Systems Inc. — 10-Q, 0001628280-26-056357](https://www.sec.gov/Archives/edgar/data/2021728/000162828026056357/cbrs-20260630.htm)
 - [CRWV — EX-10.31, 0001140361-25-036118](https://www.sec.gov/Archives/edgar/data/1769628/000114036125036118/ny20053122x6_ex10-31.htm)
 - [external:0002021728 — EX-10.11, 0001628280-26-025762](https://www.sec.gov/Archives/edgar/data/2021728/000162828026025762/exhibit1011-sx1.htm)
@@ -107,9 +181,3 @@ Les tableaux conservent la base propre à chaque montant. « Dernière date vér
 - [Form D officiel — instructions de l’Item 13](https://www.sec.gov/files/formd.pdf)
 
 Les liens de chaque position de prêteur figurent aussi dans lender_positions.csv. Les citations exactes et leurs repères sont conservés dans deepening_evidence.csv.
-
-## Vérification de livraison
-
-93 tests passent. Les 13 invariants de livraison sont satisfaits. La reconstruction intégrale hors ligne reproduit les huit tables : aucun écart dans la comparaison bidirectionnelle de toutes les colonnes, avec les listes de sources comparées comme des multiensembles. Les fichiers d’entrée sont inchangés. Les 26 divergences comptables localisées restent publiées.
-
-Le premier échec portait sur l’ordre des niveaux de preuve d’un ratio META ; un rattachement variable des stocks MRVL à deux débuts de période a ensuite été corrigé. Les corrections, tests et premier échec sont conservés dans decisions.md et work/deepening_replay_failure.json. Les valeurs et statuts financiers de la référence initiale restent identiques. Aucun audit indépendant n’est revendiqué.

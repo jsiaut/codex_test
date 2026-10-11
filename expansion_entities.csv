@@ -1,0 +1,14 @@
+cik,consolidation_treatment,economic_group_id,group_id,historical_notes_state,latest_annual_accession,main_group,name,notes_inventory_filings,periodic_sources_collected
+0001083301,parent,external:0001083301,external:0001083301,not_processed,0001083301-26-000031,True,TERAWULF INC.,3,26
+0001144879,parent,external:0001144879,external:0001144879,not_processed,0001144879-26-000048,True,Applied Digital Corp.,2,21
+0001462056,parent,external:0001462056,external:0001462056,not_processed,0001628280-26-016395,True,"Backblaze, Inc.",3,21
+0001513845,parent,external:0001513845,external:0001513845,not_processed,0001104659-26-052948,True,Nebius Group N.V.,2,6
+0001527469,consolidated_subsidiary,external:0001858681,external:0001527469,not_processed,0001527469-26-000013,False,Athene Holding Ltd.,3,22
+0001675033,parent,external:0001675033,external:0001675033,not_processed,0001193125-26-085697,True,Great Elm Capital Corp.,3,23
+0001819989,parent,external:0001819989,external:0001819989,not_processed,0001819989-26-000009,True,Cipher Digital Inc.,3,25
+0001839341,parent,external:0001839341,external:0001839341,not_processed,0001628280-26-013305,True,"Core Scientific, Inc./tx",8,28
+0001849894,parent,external:0001849894,external:0001849894,not_processed,0001193125-26-124538,True,MSD Investment Corp.,3,18
+0001858681,parent,external:0001858681,external:0001858681,not_processed,0001858681-26-000013,True,"Apollo Global Management, Inc.",3,18
+0001859392,parent,external:0001859392,external:0001859392,not_processed,0001859392-26-000016,True,Galaxy Digital Inc.,3,6
+0001878848,parent,external:0001878848,external:0001878848,not_processed,0001878848-26-000052,True,IREN Ltd,1,9
+0001944366,parent,external:0001944366,external:0001944366,not_processed,0001944366-26-000020,True,Blue Owl Real Estate Net Lease Trust,3,13

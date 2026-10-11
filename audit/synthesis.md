@@ -2,7 +2,7 @@
 
 Situation des sources arrêtée au 2026-10-09T10:24:21.129672+00:00. Périmètre : notes complémentaires, prêteurs publics, contrats ciblés et découverte bornée autorisés.
 
-Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `d9e886e92fe46c2bd3f2f497103dce895be8edd2` ; commit courant de config.yaml : `6b3f78c351e241d3fe5e1f9b8520f2b67f1d7643`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
+Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `d9e886e92fe46c2bd3f2f497103dce895be8edd2` ; commit courant de config.yaml : `7c94cdeb4fa86176b0a088e17f95a8a477c06945`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
 
 Les pièces déposées ne permettent pas de discriminer entre les deux lectures. La part indéterminée des issues de paire E1 et E2 au point de tête vaut 1 ; le périmètre borné et les numérateurs non attribuables en sont les premières limites. Cette proportion porte sur les paires publiées dans le registre, sans pondérer les montants. Les échéances non établies restent explicitement indéterminées. La sensibilité revised et les autres points de grille sont publiés dans les tables.
 
@@ -12,22 +12,22 @@ Aucun arrêt durable d’accès SEC ni échec comptable généralisé. Les éche
 
 | Contrôle | ok | mismatch | not_testable | tautological |
 | --- | ---: | ---: | ---: | ---: |
-| c10_maturity_sums | 419 | 0 | 24 | 0 |
-| c11_segments | 316 | 0 | 87 | 0 |
-| c12_revenue_disaggregation | 735 | 0 | 649 | 0 |
-| c13_rpo | 221 | 0 | 0 | 0 |
-| c14_eps_scale | 402 | 9 | 108 | 0 |
-| c15_tax_rate | 154 | 13 | 130 | 0 |
-| c16_concentration | 2878 | 0 | 8 | 0 |
-| c1_balance_components | 1610 | 1 | 93 | 0 |
-| c2_cash_flow_components | 1554 | 2 | 28 | 0 |
-| c3_cash_reconciliation | 34 | 0 | 350 | 0 |
-| c4_restatement_detection | 143305 | 0 | 61 | 0 |
+| c10_maturity_sums | 618 | 0 | 34 | 0 |
+| c11_segments | 358 | 0 | 152 | 0 |
+| c12_revenue_disaggregation | 847 | 0 | 840 | 0 |
+| c13_rpo | 240 | 0 | 0 | 0 |
+| c14_eps_scale | 615 | 66 | 154 | 0 |
+| c15_tax_rate | 279 | 62 | 165 | 0 |
+| c16_concentration | 4095 | 0 | 8 | 0 |
+| c1_balance_components | 2302 | 50 | 256 | 6 |
+| c2_cash_flow_components | 2114 | 19 | 159 | 6 |
+| c3_cash_reconciliation | 54 | 1 | 569 | 0 |
+| c4_restatement_detection | 281926 | 0 | 81 | 0 |
 | c5_bilateral | 0 | 0 | 796 | 0 |
-| c6_income_articulation | 242 | 0 | 0 | 0 |
-| c7_cash_continuity | 289 | 1 | 26 | 0 |
-| c8_debt_rollforward | 0 | 0 | 258 | 0 |
-| c9_lease_liability | 169 | 0 | 168 | 0 |
+| c6_income_articulation | 364 | 0 | 0 | 0 |
+| c7_cash_continuity | 462 | 8 | 41 | 0 |
+| c8_debt_rollforward | 0 | 0 | 347 | 0 |
+| c9_lease_liability | 299 | 9 | 230 | 0 |
 
 Les écarts sont conservés avec leurs deux termes, leur précision et leur explication. Un contrôle non testable ne devient pas un succès.
 
@@ -71,6 +71,67 @@ Les écarts sont conservés avec leurs deux termes, leur précision et leur expl
 | ORCL | 2026-02-28 | F1 | 2026-03-11 | 0001193125-25-200095 / id:F_09ef0b4b-3eaa-4f20-9f9f-72bb5414a514; 0001193125-25-200095 / id:F_c7ea67e4-4662-438e-9c0d-3c941b8b7cce; 0001193125-25-315925 / id:F_14bf7e1c-67e4-4116-808e-a43e59764405; 0001193125-25-315925 / id:F_d8f17dc4-4aaa-4810-a066-7854af542813; 0001193125-26-101045 / id:F_5a3d4971-c81e-4883-a5c6-5b467c5fa113; 0001193125-26-101045 / id:F_e991ec1c-69a6-470e-bedb-9b2cd24f36d7 |
 | ORCL | 2026-05-31 | F1 | 2026-06-22 | 0001193125-25-315925 / id:F_14bf7e1c-67e4-4116-808e-a43e59764405; 0001193125-25-315925 / id:F_d8f17dc4-4aaa-4810-a066-7854af542813; 0001193125-26-101045 / id:F_5a3d4971-c81e-4883-a5c6-5b467c5fa113; 0001193125-26-101045 / id:F_e991ec1c-69a6-470e-bedb-9b2cd24f36d7; 0001193125-26-277521 / id:F_cb073321-3d77-4861-8d30-be6b36c0451e; 0001193125-26-277521 / id:F_ea4be9ee-f076-44be-9d35-14b1681ecadc |
 | ORCL | 2026-08-31 | F1 | 2026-09-11 | 0001193125-26-101045 / id:F_5a3d4971-c81e-4883-a5c6-5b467c5fa113; 0001193125-26-101045 / id:F_e991ec1c-69a6-470e-bedb-9b2cd24f36d7; 0001193125-26-277521 / id:F_cb073321-3d77-4861-8d30-be6b36c0451e; 0001193125-26-277521 / id:F_ea4be9ee-f076-44be-9d35-14b1681ecadc; 0001193125-26-389274 / id:F_20139350-41b2-4695-a0cd-cc401a11f57e; 0001193125-26-389274 / id:F_6b02eddf-d360-4c8a-bcc1-e8b94789e26d |
+| external:0001083301 | 2022-06-30 | F1 | 2022-08-15 | 0001083301-22-000023 / id:Tc_F3SbfluiXkSVhdnvcmMd9A_34_3; 0001083301-22-000023 / id:Tc_TWSCVkSJqkCtmUgDrb3_WQ_27_3; 0001558370-22-008985 / id:Tc_uXUZjjReL06aCGr5vbtckQ_32_3; 0001558370-22-008985 / id:Tc_z20soSvIYEGvvxHgxRzmNQ_26_3 |
+| external:0001083301 | 2022-09-30 | F1 | 2022-11-14 | 0001083301-22-000023 / id:Tc_F3SbfluiXkSVhdnvcmMd9A_34_3; 0001083301-22-000023 / id:Tc_TWSCVkSJqkCtmUgDrb3_WQ_27_3; 0001083301-22-000048 / id:Tc_F2pyUai870uBAjfXc4xUkg_39_3; 0001083301-22-000048 / id:Tc_wk_x5grLIU2sEctHupR-SQ_32_3; 0001558370-22-008985 / id:Tc_uXUZjjReL06aCGr5vbtckQ_32_3; 0001558370-22-008985 / id:Tc_z20soSvIYEGvvxHgxRzmNQ_26_3 |
+| external:0001083301 | 2022-12-31 | F1 | 2023-03-31 | 0001083301-22-000023 / id:Tc_F3SbfluiXkSVhdnvcmMd9A_34_3; 0001083301-22-000023 / id:Tc_TWSCVkSJqkCtmUgDrb3_WQ_27_3; 0001083301-22-000048 / id:Tc_F2pyUai870uBAjfXc4xUkg_39_3; 0001083301-22-000048 / id:Tc_wk_x5grLIU2sEctHupR-SQ_32_3; 0001558370-23-005301 / id:Tc_VZnoctCzuky-6YsWoucorw_43_8; 0001558370-23-005301 / id:Tc_dpib-vRX-k6Fg0P4e4fgmw_41_3; 0001558370-23-005301 / id:Tc_eK_y9jEXOEC0ovJkv8GJJQ_33_3 |
+| external:0001083301 | 2023-03-31 | F1 | 2023-05-15 | 0001083301-22-000048 / id:Tc_F2pyUai870uBAjfXc4xUkg_39_3; 0001558370-23-005301 / id:Tc_VZnoctCzuky-6YsWoucorw_43_8; 0001558370-23-005301 / id:Tc_dpib-vRX-k6Fg0P4e4fgmw_41_3; 0001558370-23-005301 / id:Tc_eK_y9jEXOEC0ovJkv8GJJQ_33_3; 0001558370-23-009915 / id:Tc_H4ROJjJ-OkKHP3qHWvYkcg_36_3; 0001558370-23-009915 / id:Tc_wKB0CzCpHUqgFkLIha0O2g_30_3 |
+| external:0001083301 | 2023-06-30 | F1 | 2023-08-14 | 0001558370-23-009915 / id:Tc_H4ROJjJ-OkKHP3qHWvYkcg_36_3; 0001558370-23-009915 / id:Tc_wKB0CzCpHUqgFkLIha0O2g_30_3; 0001558370-23-014682 / id:Tc_eC5Z5rJNrEyE_9BsbZgpLg_31_3; 0001558370-23-014682 / id:Tc_xdIahHekPkyWC6TyVa_a-w_37_3 |
+| external:0001083301 | 2023-09-30 | F1 | 2023-11-13 | 0001083301-23-000054 / id:f-434; 0001083301-23-000054 / id:f-442; 0001558370-23-009915 / id:Tc_H4ROJjJ-OkKHP3qHWvYkcg_36_3; 0001558370-23-009915 / id:Tc_wKB0CzCpHUqgFkLIha0O2g_30_3; 0001558370-23-014682 / id:Tc_eC5Z5rJNrEyE_9BsbZgpLg_31_3; 0001558370-23-014682 / id:Tc_xdIahHekPkyWC6TyVa_a-w_37_3 |
+| external:0001083301 | 2023-12-31 | F1 | 2024-03-20 | 0001083301-23-000054 / id:f-434; 0001083301-23-000054 / id:f-442; 0001083301-23-000060 / id:f-435; 0001083301-23-000060 / id:f-443; 0001083301-24-000072 / id:f-322; 0001083301-24-000072 / id:f-330; 0001558370-23-014682 / id:Tc_eC5Z5rJNrEyE_9BsbZgpLg_31_3; 0001558370-23-014682 / id:Tc_xdIahHekPkyWC6TyVa_a-w_37_3 |
+| external:0001083301 | 2024-03-31 | F1 | 2024-05-13 | 0001083301-23-000060 / id:f-435; 0001083301-23-000060 / id:f-443; 0001083301-24-000072 / id:f-322; 0001083301-24-000072 / id:f-330; 0001083301-24-000103 / id:f-299; 0001083301-24-000103 / id:f-303 |
+| external:0001083301 | 2024-06-30 | F1 | 2024-08-13 | 0001083301-24-000103 / id:f-299; 0001083301-24-000103 / id:f-303; 0001083301-24-000124 / id:f-445; 0001083301-24-000124 / id:f-449 |
+| external:0001083301 | 2024-09-30 | F1 | 2024-11-12 | 0001083301-24-000103 / id:f-299; 0001083301-24-000103 / id:f-303; 0001083301-24-000124 / id:f-445; 0001083301-24-000124 / id:f-449; 0001083301-24-000147 / id:f-448; 0001083301-24-000147 / id:f-452 |
+| external:0001083301 | 2024-12-31 | F1 | 2025-03-03 | 0001083301-24-000124 / id:f-445; 0001083301-24-000124 / id:f-449; 0001083301-24-000147 / id:f-448; 0001083301-24-000147 / id:f-452; 0001083301-25-000018 / id:f-454; 0001083301-25-000018 / id:f-469 |
+| external:0001083301 | 2025-03-31 | F1 | 2025-05-09 | 0001083301-24-000147 / id:f-448; 0001083301-24-000147 / id:f-452; 0001083301-25-000018 / id:f-454; 0001083301-25-000018 / id:f-469; 0001083301-25-000038 / id:f-260; 0001083301-25-000038 / id:f-262 |
+| external:0001083301 | 2025-06-30 | F1 | 2025-08-08 | 0001083301-25-000038 / id:f-260; 0001083301-25-000038 / id:f-262; 0001083301-25-000061 / id:f-415; 0001083301-25-000061 / id:f-417 |
+| external:0001083301 | 2025-09-30 | F1 | 2025-11-10 | 0001083301-25-000038 / id:f-260; 0001083301-25-000038 / id:f-262; 0001083301-25-000061 / id:f-415; 0001083301-25-000061 / id:f-417; 0001083301-25-000099 / id:f-474; 0001083301-25-000099 / id:f-476 |
+| external:0001083301 | 2025-12-31 | F1 | 2026-02-27 | 0001083301-25-000061 / id:f-415; 0001083301-25-000061 / id:f-417; 0001083301-25-000099 / id:f-474; 0001083301-25-000099 / id:f-476; 0001083301-26-000031 / id:f-518; 0001083301-26-000031 / id:f-527 |
+| external:0001083301 | 2026-03-31 | F1 | 2026-05-08 | 0001083301-25-000099 / id:f-474; 0001083301-25-000099 / id:f-476; 0001083301-26-000031 / id:f-518; 0001083301-26-000031 / id:f-527; 0001083301-26-000092 / id:f-316; 0001083301-26-000092 / id:f-318 |
+| external:0001083301 | 2026-03-31 | F8 | 2026-05-08 | 0001083301-25-000099 / id:f-150; 0001083301-25-000099 / id:f-151; 0001083301-26-000031 / id:f-177; 0001083301-26-000031 / id:f-178; 0001083301-26-000092 / id:f-152; 0001083301-26-000092 / id:f-153 |
+| external:0001083301 | 2026-06-30 | F1 | 2026-08-05 | 0001083301-26-000092 / id:f-316; 0001083301-26-000092 / id:f-318; 0001083301-26-000166 / id:f-486; 0001083301-26-000166 / id:f-488 |
+| external:0001144879 | 2022-11-30 | F1 | 2023-01-10 | 0001144879-22-000052 / id:id3VybDovL2RvY3MudjEvZG9jOmUwMzRhN2NjZDEwNzQ0MjJiZmViMDRkNjllNmRlYmE2L3NlYzplMDM0YTdjY2QxMDc0NDIyYmZlYjA0ZDY5ZTZkZWJhNl8yNS9mcmFnOjBjN2JmMDg1ZmE2MDRmNjFiYTA2ODY1YjQ3OWExM2Q0L3RhYmxlOjRiOTc5ZDc2NzRkNzQxMTA5ZTJkNWMwMjQzOTM4YWJmL3RhYmxlcmFuZ2U6NGI5NzlkNzY3NGQ3NDExMDllMmQ1YzAyNDM5MzhhYmZfMjItMS0xLTEtMzcyMjY_1d36761f-34f7-4668-bf10-98769d024cb9; 0001144879-22-000052 / id:id3VybDovL2RvY3MudjEvZG9jOmUwMzRhN2NjZDEwNzQ0MjJiZmViMDRkNjllNmRlYmE2L3NlYzplMDM0YTdjY2QxMDc0NDIyYmZlYjA0ZDY5ZTZkZWJhNl8yNS9mcmFnOjBjN2JmMDg1ZmE2MDRmNjFiYTA2ODY1YjQ3OWExM2Q0L3RhYmxlOjRiOTc5ZDc2NzRkNzQxMTA5ZTJkNWMwMjQzOTM4YWJmL3RhYmxlcmFuZ2U6NGI5NzlkNzY3NGQ3NDExMDllMmQ1YzAyNDM5MzhhYmZfMjUtMS0xLTEtMzcyMjY_c428dd0e-95b8-4b17-8813-1c0933d889d8; 0001144879-23-000028 / id:id3VybDovL2RvY3MudjEvZG9jOmQ0NTcyYTM4ODZmYzRlNDFhMjFkZjFjM2E5OWE2NTJjL3NlYzpkNDU3MmEzODg2ZmM0ZTQxYTIxZGYxYzNhOTlhNjUyY18zMS9mcmFnOjI0NDZmZjlhYjBlYTQzN2U5ZmM0MzM5ZTgyN2Y3MDRhL3RhYmxlOjM3ODZmYTQwZjFkMTQxZGY5MWUxZjdmMmUyZDgxYTA3L3RhYmxlcmFuZ2U6Mzc4NmZhNDBmMWQxNDFkZjkxZTFmN2YyZTJkODFhMDdfMjYtMS0xLTEtNjA4MzM_baee0ad1-5c41-415e-84f6-e459510d8427; 0001144879-23-000028 / id:id3VybDovL2RvY3MudjEvZG9jOmQ0NTcyYTM4ODZmYzRlNDFhMjFkZjFjM2E5OWE2NTJjL3NlYzpkNDU3MmEzODg2ZmM0ZTQxYTIxZGYxYzNhOTlhNjUyY18zMS9mcmFnOjI0NDZmZjlhYjBlYTQzN2U5ZmM0MzM5ZTgyN2Y3MDRhL3RhYmxlOjM3ODZmYTQwZjFkMTQxZGY5MWUxZjdmMmUyZDgxYTA3L3RhYmxlcmFuZ2U6Mzc4NmZhNDBmMWQxNDFkZjkxZTFmN2YyZTJkODFhMDdfMjgtMS0xLTEtNjA4MzM_7c4b7346-aa2f-4c07-a547-425804513b79 |
+| external:0001144879 | 2025-05-31 | F8 | 2025-07-30 | 0001144879-25-000021 / id:f-178; 0001144879-25-000021 / id:f-179; 0001628280-25-017684 / id:f-141; 0001628280-25-017684 / id:f-142; 0001628280-25-017684 / id:f-143; 0001628280-25-017684 / id:f-144 |
+| external:0001462056 | 2022-06-30 | F1 | 2022-08-12 | 0001462056-22-000006 / id:id3VybDovL2RvY3MudjEvZG9jOjhlZjhhOTc0OThmOTQ2Y2U4ZWUxN2E3M2NiYmY1MzM4L3NlYzo4ZWY4YTk3NDk4Zjk0NmNlOGVlMTdhNzNjYmJmNTMzOF8yNS9mcmFnOmU0ODE2OTFlNTA3YjRhNDZhZWJiNGRiNjJlOGU1MTdmL3RhYmxlOjYyZjhhMmEyMzlhMzQ1MTk4YzYzOTY5NTAzNWEzYTZiL3RhYmxlcmFuZ2U6NjJmOGEyYTIzOWEzNDUxOThjNjM5Njk1MDM1YTNhNmJfMjItMS0xLTEtNDE2MDQ_d58143f0-2608-47d7-b5b1-c0098032ab61; 0001462056-22-000006 / id:id3VybDovL2RvY3MudjEvZG9jOjhlZjhhOTc0OThmOTQ2Y2U4ZWUxN2E3M2NiYmY1MzM4L3NlYzo4ZWY4YTk3NDk4Zjk0NmNlOGVlMTdhNzNjYmJmNTMzOF8yNS9mcmFnOmU0ODE2OTFlNTA3YjRhNDZhZWJiNGRiNjJlOGU1MTdmL3RhYmxlOjYyZjhhMmEyMzlhMzQ1MTk4YzYzOTY5NTAzNWEzYTZiL3RhYmxlcmFuZ2U6NjJmOGEyYTIzOWEzNDUxOThjNjM5Njk1MDM1YTNhNmJfMjctMS0xLTEtNDE2MDQ_c3e9fc5e-3d8a-4509-a5cd-efc23ebe906c; 0001628280-22-013608 / id:id3VybDovL2RvY3MudjEvZG9jOmM2NWFlYjIzNDYxMDQzNjU5MzYzNDg2ODRhODU0MzZiL3NlYzpjNjVhZWIyMzQ2MTA0MzY1OTM2MzQ4Njg0YTg1NDM2Yl8yNS9mcmFnOmYyYjA0YjZkY2NjOTQ2NDA5MzZlMTM5MGY0Y2M3YjBiL3RhYmxlOmNmNDhiMTI1MmRiYjRkYzU4Zjc0ZWZhMTM5N2IxMzU2L3RhYmxlcmFuZ2U6Y2Y0OGIxMjUyZGJiNGRjNThmNzRlZmExMzk3YjEzNTZfMjAtNS0xLTEtMjM1NTI_e0f87e12-bd64-49aa-bcdb-bf2a7f7d51c3; 0001628280-22-013608 / id:id3VybDovL2RvY3MudjEvZG9jOmM2NWFlYjIzNDYxMDQzNjU5MzYzNDg2ODRhODU0MzZiL3NlYzpjNjVhZWIyMzQ2MTA0MzY1OTM2MzQ4Njg0YTg1NDM2Yl8yNS9mcmFnOmYyYjA0YjZkY2NjOTQ2NDA5MzZlMTM5MGY0Y2M3YjBiL3RhYmxlOmNmNDhiMTI1MmRiYjRkYzU4Zjc0ZWZhMTM5N2IxMzU2L3RhYmxlcmFuZ2U6Y2Y0OGIxMjUyZGJiNGRjNThmNzRlZmExMzk3YjEzNTZfMjMtNS0xLTEtMjM1NTI_b7cf1343-09db-43fe-80b9-5106ac952662 |
+| external:0001462056 | 2022-09-30 | F1 | 2022-11-10 | 0001462056-22-000006 / id:id3VybDovL2RvY3MudjEvZG9jOjhlZjhhOTc0OThmOTQ2Y2U4ZWUxN2E3M2NiYmY1MzM4L3NlYzo4ZWY4YTk3NDk4Zjk0NmNlOGVlMTdhNzNjYmJmNTMzOF8yNS9mcmFnOmU0ODE2OTFlNTA3YjRhNDZhZWJiNGRiNjJlOGU1MTdmL3RhYmxlOjYyZjhhMmEyMzlhMzQ1MTk4YzYzOTY5NTAzNWEzYTZiL3RhYmxlcmFuZ2U6NjJmOGEyYTIzOWEzNDUxOThjNjM5Njk1MDM1YTNhNmJfMjItMS0xLTEtNDE2MDQ_d58143f0-2608-47d7-b5b1-c0098032ab61; 0001462056-22-000006 / id:id3VybDovL2RvY3MudjEvZG9jOjhlZjhhOTc0OThmOTQ2Y2U4ZWUxN2E3M2NiYmY1MzM4L3NlYzo4ZWY4YTk3NDk4Zjk0NmNlOGVlMTdhNzNjYmJmNTMzOF8yNS9mcmFnOmU0ODE2OTFlNTA3YjRhNDZhZWJiNGRiNjJlOGU1MTdmL3RhYmxlOjYyZjhhMmEyMzlhMzQ1MTk4YzYzOTY5NTAzNWEzYTZiL3RhYmxlcmFuZ2U6NjJmOGEyYTIzOWEzNDUxOThjNjM5Njk1MDM1YTNhNmJfMjctMS0xLTEtNDE2MDQ_c3e9fc5e-3d8a-4509-a5cd-efc23ebe906c; 0001462056-22-000031 / id:id3VybDovL2RvY3MudjEvZG9jOjE4NmJmMmQ2OWMyOTRhYjA4OTExYTRiM2JiY2E0NjBhL3NlYzoxODZiZjJkNjljMjk0YWIwODkxMWE0YjNiYmNhNDYwYV8yNS9mcmFnOmQ1OTFlN2QxN2NlMTRhNmRiNTYyOTA0Mzk3YzdiMGQ4L3RhYmxlOjU2MTU1OGZhNWE4NjQzMmFhM2E1YzdjMmM4NzdkNDM5L3RhYmxlcmFuZ2U6NTYxNTU4ZmE1YTg2NDMyYWEzYTVjN2MyYzg3N2Q0MzlfMjMtMS0xLTEtNTcxNTk_76e82737-2d15-4960-ac84-b1bc9d5cc9af; 0001462056-22-000031 / id:id3VybDovL2RvY3MudjEvZG9jOjE4NmJmMmQ2OWMyOTRhYjA4OTExYTRiM2JiY2E0NjBhL3NlYzoxODZiZjJkNjljMjk0YWIwODkxMWE0YjNiYmNhNDYwYV8yNS9mcmFnOmQ1OTFlN2QxN2NlMTRhNmRiNTYyOTA0Mzk3YzdiMGQ4L3RhYmxlOjU2MTU1OGZhNWE4NjQzMmFhM2E1YzdjMmM4NzdkNDM5L3RhYmxlcmFuZ2U6NTYxNTU4ZmE1YTg2NDMyYWEzYTVjN2MyYzg3N2Q0MzlfMjgtMS0xLTEtNTcxNTk_c0169992-27e2-47c0-bbe5-9399201a028f; 0001628280-22-013608 / id:id3VybDovL2RvY3MudjEvZG9jOmM2NWFlYjIzNDYxMDQzNjU5MzYzNDg2ODRhODU0MzZiL3NlYzpjNjVhZWIyMzQ2MTA0MzY1OTM2MzQ4Njg0YTg1NDM2Yl8yNS9mcmFnOmYyYjA0YjZkY2NjOTQ2NDA5MzZlMTM5MGY0Y2M3YjBiL3RhYmxlOmNmNDhiMTI1MmRiYjRkYzU4Zjc0ZWZhMTM5N2IxMzU2L3RhYmxlcmFuZ2U6Y2Y0OGIxMjUyZGJiNGRjNThmNzRlZmExMzk3YjEzNTZfMjAtNS0xLTEtMjM1NTI_e0f87e12-bd64-49aa-bcdb-bf2a7f7d51c3; 0001628280-22-013608 / id:id3VybDovL2RvY3MudjEvZG9jOmM2NWFlYjIzNDYxMDQzNjU5MzYzNDg2ODRhODU0MzZiL3NlYzpjNjVhZWIyMzQ2MTA0MzY1OTM2MzQ4Njg0YTg1NDM2Yl8yNS9mcmFnOmYyYjA0YjZkY2NjOTQ2NDA5MzZlMTM5MGY0Y2M3YjBiL3RhYmxlOmNmNDhiMTI1MmRiYjRkYzU4Zjc0ZWZhMTM5N2IxMzU2L3RhYmxlcmFuZ2U6Y2Y0OGIxMjUyZGJiNGRjNThmNzRlZmExMzk3YjEzNTZfMjMtNS0xLTEtMjM1NTI_b7cf1343-09db-43fe-80b9-5106ac952662 |
+| external:0001462056 | 2022-12-31 | F1 | 2023-03-31 | 0001462056-22-000006 / id:id3VybDovL2RvY3MudjEvZG9jOjhlZjhhOTc0OThmOTQ2Y2U4ZWUxN2E3M2NiYmY1MzM4L3NlYzo4ZWY4YTk3NDk4Zjk0NmNlOGVlMTdhNzNjYmJmNTMzOF8yNS9mcmFnOmU0ODE2OTFlNTA3YjRhNDZhZWJiNGRiNjJlOGU1MTdmL3RhYmxlOjYyZjhhMmEyMzlhMzQ1MTk4YzYzOTY5NTAzNWEzYTZiL3RhYmxlcmFuZ2U6NjJmOGEyYTIzOWEzNDUxOThjNjM5Njk1MDM1YTNhNmJfMjItMS0xLTEtNDE2MDQ_d58143f0-2608-47d7-b5b1-c0098032ab61; 0001462056-22-000006 / id:id3VybDovL2RvY3MudjEvZG9jOjhlZjhhOTc0OThmOTQ2Y2U4ZWUxN2E3M2NiYmY1MzM4L3NlYzo4ZWY4YTk3NDk4Zjk0NmNlOGVlMTdhNzNjYmJmNTMzOF8yNS9mcmFnOmU0ODE2OTFlNTA3YjRhNDZhZWJiNGRiNjJlOGU1MTdmL3RhYmxlOjYyZjhhMmEyMzlhMzQ1MTk4YzYzOTY5NTAzNWEzYTZiL3RhYmxlcmFuZ2U6NjJmOGEyYTIzOWEzNDUxOThjNjM5Njk1MDM1YTNhNmJfMjctMS0xLTEtNDE2MDQ_c3e9fc5e-3d8a-4509-a5cd-efc23ebe906c; 0001462056-22-000031 / id:id3VybDovL2RvY3MudjEvZG9jOjE4NmJmMmQ2OWMyOTRhYjA4OTExYTRiM2JiY2E0NjBhL3NlYzoxODZiZjJkNjljMjk0YWIwODkxMWE0YjNiYmNhNDYwYV8yNS9mcmFnOmQ1OTFlN2QxN2NlMTRhNmRiNTYyOTA0Mzk3YzdiMGQ4L3RhYmxlOjU2MTU1OGZhNWE4NjQzMmFhM2E1YzdjMmM4NzdkNDM5L3RhYmxlcmFuZ2U6NTYxNTU4ZmE1YTg2NDMyYWEzYTVjN2MyYzg3N2Q0MzlfMjMtMS0xLTEtNTcxNTk_76e82737-2d15-4960-ac84-b1bc9d5cc9af; 0001462056-22-000031 / id:id3VybDovL2RvY3MudjEvZG9jOjE4NmJmMmQ2OWMyOTRhYjA4OTExYTRiM2JiY2E0NjBhL3NlYzoxODZiZjJkNjljMjk0YWIwODkxMWE0YjNiYmNhNDYwYV8yNS9mcmFnOmQ1OTFlN2QxN2NlMTRhNmRiNTYyOTA0Mzk3YzdiMGQ4L3RhYmxlOjU2MTU1OGZhNWE4NjQzMmFhM2E1YzdjMmM4NzdkNDM5L3RhYmxlcmFuZ2U6NTYxNTU4ZmE1YTg2NDMyYWEzYTVjN2MyYzg3N2Q0MzlfMjgtMS0xLTEtNTcxNTk_c0169992-27e2-47c0-bbe5-9399201a028f; 0001462056-23-000119 / id:f-237; 0001462056-23-000119 / id:f-243 |
+| external:0001462056 | 2023-03-31 | F1 | 2023-05-12 | 0001462056-22-000031 / id:id3VybDovL2RvY3MudjEvZG9jOjE4NmJmMmQ2OWMyOTRhYjA4OTExYTRiM2JiY2E0NjBhL3NlYzoxODZiZjJkNjljMjk0YWIwODkxMWE0YjNiYmNhNDYwYV8yNS9mcmFnOmQ1OTFlN2QxN2NlMTRhNmRiNTYyOTA0Mzk3YzdiMGQ4L3RhYmxlOjU2MTU1OGZhNWE4NjQzMmFhM2E1YzdjMmM4NzdkNDM5L3RhYmxlcmFuZ2U6NTYxNTU4ZmE1YTg2NDMyYWEzYTVjN2MyYzg3N2Q0MzlfMjMtMS0xLTEtNTcxNTk_76e82737-2d15-4960-ac84-b1bc9d5cc9af; 0001462056-22-000031 / id:id3VybDovL2RvY3MudjEvZG9jOjE4NmJmMmQ2OWMyOTRhYjA4OTExYTRiM2JiY2E0NjBhL3NlYzoxODZiZjJkNjljMjk0YWIwODkxMWE0YjNiYmNhNDYwYV8yNS9mcmFnOmQ1OTFlN2QxN2NlMTRhNmRiNTYyOTA0Mzk3YzdiMGQ4L3RhYmxlOjU2MTU1OGZhNWE4NjQzMmFhM2E1YzdjMmM4NzdkNDM5L3RhYmxlcmFuZ2U6NTYxNTU4ZmE1YTg2NDMyYWEzYTVjN2MyYzg3N2Q0MzlfMjgtMS0xLTEtNTcxNTk_c0169992-27e2-47c0-bbe5-9399201a028f; 0001462056-23-000119 / id:f-237; 0001462056-23-000119 / id:f-243; 0001462056-23-000142 / id:id3VybDovL2RvY3MudjEvZG9jOjEzYmIzN2IyOWUxMTRjYzA5OWEyMzVmNTBmZDBlY2I1L3NlYzoxM2JiMzdiMjllMTE0Y2MwOTlhMjM1ZjUwZmQwZWNiNV8yNS9mcmFnOmQxZTJmM2ZhMjc5ZjQxYzJiNGYxNmJiZGExZDI0ZWU1L3RhYmxlOmI3NDE5OWQ3NjM3MjQ1YjFiYzUwOTdhZmEzY2MzNjViL3RhYmxlcmFuZ2U6Yjc0MTk5ZDc2MzcyNDViMWJjNTA5N2FmYTNjYzM2NWJfMjMtMS0xLTEtODc2Mzk_39e2b0fc-9e29-4067-9817-6e489681c84d; 0001462056-23-000142 / id:id3VybDovL2RvY3MudjEvZG9jOjEzYmIzN2IyOWUxMTRjYzA5OWEyMzVmNTBmZDBlY2I1L3NlYzoxM2JiMzdiMjllMTE0Y2MwOTlhMjM1ZjUwZmQwZWNiNV8yNS9mcmFnOmQxZTJmM2ZhMjc5ZjQxYzJiNGYxNmJiZGExZDI0ZWU1L3RhYmxlOmI3NDE5OWQ3NjM3MjQ1YjFiYzUwOTdhZmEzY2MzNjViL3RhYmxlcmFuZ2U6Yjc0MTk5ZDc2MzcyNDViMWJjNTA5N2FmYTNjYzM2NWJfMjgtMS0xLTEtODc2Mzk_5aaae549-68eb-4184-be5a-a0260fbc56ca |
+| external:0001462056 | 2023-06-30 | F1 | 2023-08-14 | 0001462056-23-000142 / id:id3VybDovL2RvY3MudjEvZG9jOjEzYmIzN2IyOWUxMTRjYzA5OWEyMzVmNTBmZDBlY2I1L3NlYzoxM2JiMzdiMjllMTE0Y2MwOTlhMjM1ZjUwZmQwZWNiNV8yNS9mcmFnOmQxZTJmM2ZhMjc5ZjQxYzJiNGYxNmJiZGExZDI0ZWU1L3RhYmxlOmI3NDE5OWQ3NjM3MjQ1YjFiYzUwOTdhZmEzY2MzNjViL3RhYmxlcmFuZ2U6Yjc0MTk5ZDc2MzcyNDViMWJjNTA5N2FmYTNjYzM2NWJfMjMtMS0xLTEtODc2Mzk_39e2b0fc-9e29-4067-9817-6e489681c84d; 0001462056-23-000142 / id:id3VybDovL2RvY3MudjEvZG9jOjEzYmIzN2IyOWUxMTRjYzA5OWEyMzVmNTBmZDBlY2I1L3NlYzoxM2JiMzdiMjllMTE0Y2MwOTlhMjM1ZjUwZmQwZWNiNV8yNS9mcmFnOmQxZTJmM2ZhMjc5ZjQxYzJiNGYxNmJiZGExZDI0ZWU1L3RhYmxlOmI3NDE5OWQ3NjM3MjQ1YjFiYzUwOTdhZmEzY2MzNjViL3RhYmxlcmFuZ2U6Yjc0MTk5ZDc2MzcyNDViMWJjNTA5N2FmYTNjYzM2NWJfMjgtMS0xLTEtODc2Mzk_5aaae549-68eb-4184-be5a-a0260fbc56ca; 0001462056-23-000190 / id:f-292; 0001462056-23-000190 / id:f-300 |
+| external:0001462056 | 2023-09-30 | F1 | 2023-11-14 | 0001462056-23-000142 / id:id3VybDovL2RvY3MudjEvZG9jOjEzYmIzN2IyOWUxMTRjYzA5OWEyMzVmNTBmZDBlY2I1L3NlYzoxM2JiMzdiMjllMTE0Y2MwOTlhMjM1ZjUwZmQwZWNiNV8yNS9mcmFnOmQxZTJmM2ZhMjc5ZjQxYzJiNGYxNmJiZGExZDI0ZWU1L3RhYmxlOmI3NDE5OWQ3NjM3MjQ1YjFiYzUwOTdhZmEzY2MzNjViL3RhYmxlcmFuZ2U6Yjc0MTk5ZDc2MzcyNDViMWJjNTA5N2FmYTNjYzM2NWJfMjMtMS0xLTEtODc2Mzk_39e2b0fc-9e29-4067-9817-6e489681c84d; 0001462056-23-000142 / id:id3VybDovL2RvY3MudjEvZG9jOjEzYmIzN2IyOWUxMTRjYzA5OWEyMzVmNTBmZDBlY2I1L3NlYzoxM2JiMzdiMjllMTE0Y2MwOTlhMjM1ZjUwZmQwZWNiNV8yNS9mcmFnOmQxZTJmM2ZhMjc5ZjQxYzJiNGYxNmJiZGExZDI0ZWU1L3RhYmxlOmI3NDE5OWQ3NjM3MjQ1YjFiYzUwOTdhZmEzY2MzNjViL3RhYmxlcmFuZ2U6Yjc0MTk5ZDc2MzcyNDViMWJjNTA5N2FmYTNjYzM2NWJfMjgtMS0xLTEtODc2Mzk_5aaae549-68eb-4184-be5a-a0260fbc56ca; 0001462056-23-000190 / id:f-292; 0001462056-23-000190 / id:f-300; 0001462056-23-000207 / id:f-293; 0001462056-23-000207 / id:f-301 |
+| external:0001819989 | 2022-06-30 | F1 | 2022-08-09 | 0000950170-22-008756 / id:F_d15ed974-55d1-470f-b0f4-94e2321cbc9c; 0000950170-22-008756 / id:F_f67c5068-dc71-440d-844d-32e1ab634ea1; 0000950170-22-015789 / id:F_9cf3f2f8-af61-495c-b36e-d3fcc1e07b77; 0000950170-22-015789 / id:F_eb2463d3-08a5-4a67-9886-9edfc73eacf2 |
+| external:0001819989 | 2022-09-30 | F1 | 2022-11-14 | 0000950170-22-008756 / id:F_d15ed974-55d1-470f-b0f4-94e2321cbc9c; 0000950170-22-008756 / id:F_f67c5068-dc71-440d-844d-32e1ab634ea1; 0000950170-22-015789 / id:F_9cf3f2f8-af61-495c-b36e-d3fcc1e07b77; 0000950170-22-015789 / id:F_eb2463d3-08a5-4a67-9886-9edfc73eacf2; 0000950170-22-024761 / id:F_4ceff902-2bfa-4773-8616-3ef757fa3f86; 0000950170-22-024761 / id:F_d4aa80c2-ce11-4047-b138-b098cfe693a4 |
+| external:0001819989 | 2022-12-31 | F1 | 2023-03-14 | 0000950170-22-015789 / id:F_9cf3f2f8-af61-495c-b36e-d3fcc1e07b77; 0000950170-22-015789 / id:F_eb2463d3-08a5-4a67-9886-9edfc73eacf2; 0000950170-22-024761 / id:F_4ceff902-2bfa-4773-8616-3ef757fa3f86; 0000950170-22-024761 / id:F_d4aa80c2-ce11-4047-b138-b098cfe693a4; 0000950170-23-007793 / id:F_174b148c-4605-4745-989f-d94d12604c19; 0000950170-23-007793 / id:F_6a1c9a93-2a94-482f-8c93-59685fdb0a1a |
+| external:0001819989 | 2023-03-31 | F1 | 2023-05-09 | 0000950170-22-024761 / id:F_4ceff902-2bfa-4773-8616-3ef757fa3f86; 0000950170-22-024761 / id:F_d4aa80c2-ce11-4047-b138-b098cfe693a4; 0000950170-23-007793 / id:F_174b148c-4605-4745-989f-d94d12604c19; 0000950170-23-007793 / id:F_6a1c9a93-2a94-482f-8c93-59685fdb0a1a; 0000950170-23-019186 / id:F_2caf1167-ff05-42dd-846c-34d382515549; 0000950170-23-019186 / id:F_e249c8ab-41ca-4dd7-b594-fe59678fedc6 |
+| external:0001819989 | 2024-03-31 | F1 | 2024-05-07 | 0000950170-23-060724 / id:F_917eda09-0641-47f0-ad3d-96a4311355b4; 0000950170-23-060724 / id:F_ca295fdc-0ce5-4fce-8531-e25c9ac40bb2; 0000950170-24-025442 / id:F_2d7b07d4-d8a1-4887-9e69-957a3943358f; 0000950170-24-025442 / id:F_8c32ac75-9e68-4c18-ba93-51d73a8e19fc; 0000950170-24-054002 / id:F_3cab3225-5a8c-4fd4-b885-3d32dc453f50; 0000950170-24-054002 / id:F_d9d389d9-6058-4233-9f13-09487eb75c15 |
+| external:0001819989 | 2024-06-30 | F1 | 2024-08-13 | 0000950170-24-054002 / id:F_3cab3225-5a8c-4fd4-b885-3d32dc453f50; 0000950170-24-054002 / id:F_d9d389d9-6058-4233-9f13-09487eb75c15; 0000950170-24-095795 / id:F_b5166ee9-aadb-4976-adde-2ad314aa9641; 0000950170-24-095795 / id:F_d1762f50-30c6-4f4d-b17e-066983fa1ce8 |
+| external:0001819989 | 2024-09-30 | F1 | 2024-10-31 | 0000950170-24-054002 / id:F_3cab3225-5a8c-4fd4-b885-3d32dc453f50; 0000950170-24-054002 / id:F_d9d389d9-6058-4233-9f13-09487eb75c15; 0000950170-24-095795 / id:F_b5166ee9-aadb-4976-adde-2ad314aa9641; 0000950170-24-095795 / id:F_d1762f50-30c6-4f4d-b17e-066983fa1ce8; 0001819989-24-000028 / id:f-392; 0001819989-24-000028 / id:f-398 |
+| external:0001819989 | 2024-09-30 | F8 | 2024-10-31 | 0000950170-24-095795 / id:F_08824856-dbb1-4436-abc0-ad961e70f2d6; 0000950170-24-095795 / id:F_bfb77086-28d7-4baa-a339-e9ae58555e07; 0001819989-24-000028 / id:f-127; 0001819989-24-000028 / id:f-128 |
+| external:0001819989 | 2024-12-31 | F1 | 2025-02-25 | 0000950170-24-095795 / id:F_b5166ee9-aadb-4976-adde-2ad314aa9641; 0000950170-24-095795 / id:F_d1762f50-30c6-4f4d-b17e-066983fa1ce8; 0001819989-24-000028 / id:f-392; 0001819989-24-000028 / id:f-398; 0001819989-25-000005 / id:f-345; 0001819989-25-000005 / id:f-351 |
+| external:0001819989 | 2025-03-31 | F1 | 2025-05-06 | 0001819989-24-000028 / id:f-392; 0001819989-24-000028 / id:f-398; 0001819989-25-000005 / id:f-345; 0001819989-25-000005 / id:f-351; 0001819989-25-000037 / id:f-290; 0001819989-25-000037 / id:f-296 |
+| external:0001819989 | 2025-06-30 | F1 | 2025-08-07 | 0001819989-25-000037 / id:f-290; 0001819989-25-000037 / id:f-296; 0001819989-25-000081 / id:f-404; 0001819989-25-000081 / id:f-410 |
+| external:0001819989 | 2025-09-30 | F1 | 2025-11-03 | 0001819989-25-000037 / id:f-290; 0001819989-25-000037 / id:f-296; 0001819989-25-000081 / id:f-404; 0001819989-25-000081 / id:f-410; 0001819989-25-000112 / id:f-414; 0001819989-25-000112 / id:f-420 |
+| external:0001819989 | 2025-12-31 | F1 | 2026-02-24 | 0001819989-25-000081 / id:f-404; 0001819989-25-000081 / id:f-410; 0001819989-25-000112 / id:f-414; 0001819989-25-000112 / id:f-420; 0001819989-26-000009 / id:f-428; 0001819989-26-000009 / id:f-440 |
+| external:0001819989 | 2026-03-31 | F1 | 2026-05-05 | 0001819989-25-000112 / id:f-414; 0001819989-25-000112 / id:f-420; 0001819989-26-000009 / id:f-428; 0001819989-26-000009 / id:f-440; 0001819989-26-000028 / id:f-282; 0001819989-26-000028 / id:f-288 |
+| external:0001819989 | 2026-03-31 | F8 | 2026-05-05 | 0001819989-25-000112 / id:f-134; 0001819989-25-000112 / id:f-135; 0001819989-26-000009 / id:f-171; 0001819989-26-000009 / id:f-172; 0001819989-26-000028 / id:f-127; 0001819989-26-000028 / id:f-128 |
+| external:0001819989 | 2026-06-30 | F1 | 2026-08-04 | 0001819989-26-000028 / id:f-282; 0001819989-26-000028 / id:f-288; 0001819989-26-000041 / id:f-408; 0001819989-26-000041 / id:f-414 |
+| external:0001839341 | 2022-12-31 | F1 | 2023-04-04 | 0001628280-22-030600 / id:id3VybDovL2RvY3MudjEvZG9jOjM4N2VmMzYxOGNkZDQzMTZhYTFhOWFiMjQ2NmJjNTJmL3NlYzozODdlZjM2MThjZGQ0MzE2YWExYTlhYjI0NjZiYzUyZl8yOC9mcmFnOmZlMGIyZWFjMzNjYTQwMWFhYmNjODM3ZjhkYTg5MzQ1L3RhYmxlOjU0YzI3NTdiOTUxNTQwNTViODAwOWJkMWZkODU2YzkwL3RhYmxlcmFuZ2U6NTRjMjc1N2I5NTE1NDA1NWI4MDA5YmQxZmQ4NTZjOTBfMzMtMS0xLTEtMTU5NzY4_7659a0e4-484f-493e-9b6c-789382eeca7b; 0001628280-22-030600 / id:id3VybDovL2RvY3MudjEvZG9jOjM4N2VmMzYxOGNkZDQzMTZhYTFhOWFiMjQ2NmJjNTJmL3NlYzozODdlZjM2MThjZGQ0MzE2YWExYTlhYjI0NjZiYzUyZl8yOC9mcmFnOmZlMGIyZWFjMzNjYTQwMWFhYmNjODM3ZjhkYTg5MzQ1L3RhYmxlOjU0YzI3NTdiOTUxNTQwNTViODAwOWJkMWZkODU2YzkwL3RhYmxlcmFuZ2U6NTRjMjc1N2I5NTE1NDA1NWI4MDA5YmQxZmQ4NTZjOTBfMzUtMS0xLTEtMTU5NzY4_afca8ace-7790-4967-9551-18d7240ba054; 0001628280-22-030600 / id:id3VybDovL2RvY3MudjEvZG9jOjM4N2VmMzYxOGNkZDQzMTZhYTFhOWFiMjQ2NmJjNTJmL3NlYzozODdlZjM2MThjZGQ0MzE2YWExYTlhYjI0NjZiYzUyZl8zNy9mcmFnOjY5MjU3OGFhNDBmOTQ0Zjg4YTAzZmE5NGRkZjM5Y2ZjL3RleHRyZWdpb246NjkyNTc4YWE0MGY5NDRmODhhMDNmYTk0ZGRmMzljZmNfMjE5OTAyMzI4NzIyNQ_2fe2574e-02a5-43a9-8f7b-afe67c5ad8ad; 0001628280-22-030600 / id:id3VybDovL2RvY3MudjEvZG9jOjM4N2VmMzYxOGNkZDQzMTZhYTFhOWFiMjQ2NmJjNTJmL3NlYzozODdlZjM2MThjZGQ0MzE2YWExYTlhYjI0NjZiYzUyZl8zNy9mcmFnOjY5MjU3OGFhNDBmOTQ0Zjg4YTAzZmE5NGRkZjM5Y2ZjL3RleHRyZWdpb246NjkyNTc4YWE0MGY5NDRmODhhMDNmYTk0ZGRmMzljZmNfMjE5OTAyMzMxOTU2MQ_42e62d59-e41e-444c-ab36-38b897e7f166; 0001628280-23-010454 / id:f-482; 0001628280-23-010454 / id:f-485 |
+| external:0001839341 | 2024-06-30 | F1 | 2024-08-07 | 0001628280-24-021848 / id:f-296; 0001628280-24-021848 / id:f-298; 0001628280-24-035714 / id:f-423; 0001628280-24-035714 / id:f-425 |
+| external:0001839341 | 2024-09-30 | F1 | 2024-11-06 | 0001628280-24-021848 / id:f-296; 0001628280-24-021848 / id:f-298; 0001628280-24-035714 / id:f-423; 0001628280-24-035714 / id:f-425; 0001628280-24-045811 / id:f-422; 0001628280-24-045811 / id:f-424 |
+| external:0001839341 | 2024-09-30 | F8 | 2024-11-06 | 0001628280-24-035714 / id:f-1318; 0001628280-24-035714 / id:f-1319; 0001628280-24-045811 / id:f-1416; 0001628280-24-045811 / id:f-1417 |
+| external:0001839341 | 2024-12-31 | F1 | 2025-02-27 | 0001628280-24-035714 / id:f-423; 0001628280-24-035714 / id:f-425; 0001628280-24-045811 / id:f-422; 0001628280-24-045811 / id:f-424; 0001628280-25-008302 / id:f-531; 0001628280-25-008302 / id:f-534 |
+| external:0001839341 | 2025-03-31 | F1 | 2025-05-07 | 0001628280-24-045811 / id:f-422; 0001628280-24-045811 / id:f-424; 0001628280-25-008302 / id:f-531; 0001628280-25-008302 / id:f-534; 0001628280-25-023242 / id:f-285; 0001628280-25-023242 / id:f-287 |
+| external:0001839341 | 2025-06-30 | F1 | 2025-08-08 | 0001628280-25-023242 / id:f-285; 0001628280-25-023242 / id:f-287; 0001628280-25-039284 / id:f-385; 0001628280-25-039284 / id:f-387 |
+| external:0001839341 | 2025-09-30 | F1 | 2025-10-24 | 0001628280-25-023242 / id:f-285; 0001628280-25-023242 / id:f-287; 0001628280-25-039284 / id:f-385; 0001628280-25-039284 / id:f-387; 0001628280-25-046272 / id:f-389; 0001628280-25-046272 / id:f-391 |
+| external:0001839341 | 2025-12-31 | F1 | 2026-03-02 | 0001628280-25-039284 / id:f-385; 0001628280-25-039284 / id:f-387; 0001628280-25-046272 / id:f-389; 0001628280-25-046272 / id:f-391; 0001628280-26-013301 / id:f-582; 0001628280-26-013301 / id:f-585; 0001628280-26-013305 / id:f-412; 0001628280-26-013305 / id:f-415 |
+| external:0001839341 | 2026-03-31 | F1 | 2026-05-06 | 0001628280-26-013301 / id:f-582; 0001628280-26-013301 / id:f-585; 0001628280-26-013305 / id:f-412; 0001628280-26-013305 / id:f-415; 0001628280-26-031396 / id:f-247; 0001628280-26-031396 / id:f-249 |
+| external:0001839341 | 2026-06-30 | F1 | 2026-07-28 | 0001628280-26-031396 / id:f-247; 0001628280-26-031396 / id:f-249; 0001839341-26-000014 / id:f-350; 0001839341-26-000014 / id:f-352 |
+| external:0001858681 | 2023-09-30 | F8 | 2023-11-07 | 0001858681-23-000026 / id:f-183; 0001858681-23-000026 / id:f-184; 0001858681-23-000042 / id:f-196; 0001858681-23-000042 / id:f-197 |
+| external:0001858681 | 2024-06-30 | F8 | 2024-08-08 | 0001858681-24-000048 / id:f-169; 0001858681-24-000048 / id:f-170; 0001858681-24-000096 / id:f-193; 0001858681-24-000096 / id:f-194 |
+| external:0001858681 | 2024-12-31 | F8 | 2025-02-24 | 0001858681-24-000120 / id:f-193; 0001858681-24-000120 / id:f-194; 0001858681-24-000120 / id:f-195; 0001858681-24-000120 / id:f-196; 0001858681-25-000034 / id:f-205; 0001858681-25-000034 / id:f-206 |
+| external:0001858681 | 2026-03-31 | F8 | 2026-05-07 | 0001858681-25-000139 / id:f-201; 0001858681-25-000139 / id:f-202; 0001858681-26-000013 / id:f-210; 0001858681-26-000013 / id:f-211; 0001858681-26-000026 / id:f-173; 0001858681-26-000026 / id:f-174 |
+| external:0001859392 | 2025-03-31 | F6 | 2025-05-13 | 0001859392-25-000005 / id:f-903 |
+| external:0001859392 | 2026-03-31 | F6 | 2026-05-08 | 0001859392-26-000054 / id:f-831 |
+| external:0001878848 | 2025-12-31 | F1 | 2026-02-05 | 0001878848-25-000081 / id:f-279; 0001878848-25-000081 / id:f-281; 0001878848-26-000015 / id:f-405; 0001878848-26-000015 / id:f-407 |
+| external:0001878848 | 2026-03-31 | F1 | 2026-05-08 | 0001878848-25-000081 / id:f-279; 0001878848-25-000081 / id:f-281; 0001878848-26-000015 / id:f-405; 0001878848-26-000015 / id:f-407; 0001878848-26-000026 / id:f-440; 0001878848-26-000026 / id:f-442 |
 
 ## Fragilité par groupe
 
@@ -148,8 +209,6 @@ Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; l
 
 | liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
 
-| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
-
 | lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.782798 | ratio | partial / short_term_debt_and_other_components_not_established | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-407; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-937 |
 
 | lev_debt_and_leases_to_operating_income_plus_da | leases / original | 0.649871 | ratio | computed / — | 0001018724-25-000123 / id:f-245; 0001018724-25-000123 / id:f-247; 0001018724-25-000123 / id:f-43; 0001018724-25-000123 / id:f-45; 0001018724-26-000004 / id:f-176; 0001018724-26-000004 / id:f-65; 0001018724-26-000014 / id:f-191; 0001018724-26-000014 / id:f-63; 0001018724-26-000026 / id:f-269; 0001018724-26-000026 / id:f-67; 0001018724-26-000026 / id:f-767; 0001018724-26-000026 / id:f-768; 0001018724-26-000026 / id:f-774; 0001018724-26-000026 / id:f-775 |
@@ -186,9 +245,9 @@ Dernière période de revenu exploitable : 2026-08-02. Présentation revised ; l
 
 | fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| receivables_collection_period | none / original | 72.017962 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32; 0001730168-26-000080 / id:f-507 |
-
 | receivables_collection_period | none / receivables_only | 37.728820 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32 |
+
+| receivables_collection_period | none / original | 72.017962 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32; 0001730168-26-000080 / id:f-507 |
 
 | rpo_total | none / original | 179200000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000080 / id:f-514 |
 
@@ -462,8 +521,6 @@ Dernière période de revenu exploitable : 2026-07-26. Présentation revised ; l
 
 | lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | 0.165781 | ratio | partial / short_term_debt_and_other_components_not_established | 0001045810-25-000209 / id:f-312; 0001045810-25-000230 / id:f-320; 0001045810-25-000230 / id:f-54; 0001045810-25-000230 / id:f-56; 0001045810-26-000021 / id:f-305; 0001045810-26-000021 / id:f-90; 0001045810-26-000052 / id:f-208; 0001045810-26-000052 / id:f-42; 0001045810-26-000075 / id:f-148; 0001045810-26-000075 / id:f-304; 0001045810-26-000075 / id:f-54; 0001045810-26-000075 / id:f-815 |
 
-| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
-
 | lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
 
 | lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
@@ -568,11 +625,539 @@ La matrice conserve séparément les bases, échéances et composants ; aucune s
 
 La présentation combinée de l’émetteur reste distincte du périmètre historique. Les tableaux annuels non balisés dont les contrôles n’ont pas abouti sont exclus ; aucune série annuelle de flux n’en est reconstruite. La série legacy_only hors ventilation sectorielle reste non déterminable.
 
+### external:0001083301
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 44767000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001083301-26-000166 / id:f-156 |
+
+| revenue_growth | ttm / original | 0.146497 | ratio | computed / — | 0001083301-25-000099 / id:f-148; 0001083301-25-000099 / id:f-149; 0001083301-25-000099 / id:f-150; 0001083301-25-000099 / id:f-151; 0001083301-26-000031 / id:f-177; 0001083301-26-000031 / id:f-178; 0001083301-26-000092 / id:f-152; 0001083301-26-000092 / id:f-153; 0001083301-26-000166 / id:f-156; 0001083301-26-000166 / id:f-157 |
+
+| revenue_growth | yoy / original | -0.060228 | ratio | computed / — | 0001083301-26-000166 / id:f-156; 0001083301-26-000166 / id:f-157 |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | -6.258257 | ratio | computed / — | 0001083301-26-000092 / id:f-316; 0001083301-26-000092 / id:f-318; 0001083301-26-000166 / id:f-486; 0001083301-26-000166 / id:f-488 |
+
+| fcf_basic | none / original | -992269000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001083301-26-000092 / id:f-316; 0001083301-26-000092 / id:f-318; 0001083301-26-000166 / id:f-486; 0001083301-26-000166 / id:f-488 |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / receivables_only | 19.113923 | days | computed / — | 0001083301-26-000092 / id:f-34; 0001083301-26-000166 / id:f-156; 0001083301-26-000166 / id:f-34 |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001144879
+
+Dernière période de revenu exploitable : 2026-08-31. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 341875000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001144879-26-000059 / id:f-153 |
+
+| revenue_growth | ttm / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | yoy / original | 3.224121 | ratio | computed / — | 0001144879-26-000059 / id:f-153; 0001144879-26-000059 / id:f-154 |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_basic | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / receivables_only | 22.930235 | days | computed / — | 0001144879-26-000059 / id:f-153; 0001144879-26-000059 / id:f-35; 0001144879-26-000059 / id:f-36 |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | -0.537645 | ratio | computed / — | 0001144879-26-000006 / id:f-1588; 0001144879-26-000006 / id:f-171; 0001144879-26-000030 / id:f-1578; 0001144879-26-000030 / id:f-1580; 0001144879-26-000030 / id:f-167; 0001144879-26-000030 / id:f-169; 0001144879-26-000048 / id:f-2000; 0001144879-26-000048 / id:f-206; 0001144879-26-000059 / id:f-1239; 0001144879-26-000059 / id:f-165; 0001144879-26-000059 / id:f-57; 0001144879-26-000059 / id:f-59; 0001144879-26-000059 / id:f-77; 0001144879-26-000059 / id:f-79 |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001462056
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 42713000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001628280-26-051818 / id:f-115 |
+
+| revenue_growth | ttm / original | 0.138521 | ratio | computed / — | 0001628280-25-049877 / id:f-117; 0001628280-25-049877 / id:f-118; 0001628280-25-049877 / id:f-119; 0001628280-25-049877 / id:f-120; 0001628280-26-016395 / id:f-141; 0001628280-26-016395 / id:f-142; 0001628280-26-029797 / id:f-115; 0001628280-26-029797 / id:f-116; 0001628280-26-051818 / id:f-115; 0001628280-26-051818 / id:f-116 |
+
+| revenue_growth | yoy / original | 0.176732 | ratio | computed / — | 0001628280-26-051818 / id:f-115; 0001628280-26-051818 / id:f-116 |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | 0.076916 | ratio | computed / — | 0001628280-26-029797 / id:f-230; 0001628280-26-029797 / id:f-238; 0001628280-26-051818 / id:f-329; 0001628280-26-051818 / id:f-337 |
+
+| fcf_basic | none / original | 9625000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001628280-26-029797 / id:f-230; 0001628280-26-029797 / id:f-238; 0001628280-26-051818 / id:f-329; 0001628280-26-051818 / id:f-337 |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / receivables_only | 10.148632 | days | computed / — | 0001628280-26-029797 / id:f-35; 0001628280-26-051818 / id:f-115; 0001628280-26-051818 / id:f-35 |
+
+| rpo_total | none / original | 396000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001628280-26-051818 / id:f-486 |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001513845
+
+Dernière période de revenu exploitable : 2025-12-31. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | ttm / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | yoy / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_basic | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| rpo_total | none / original | 21333000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001104659-26-052948 / id:Narr_ihYlBUN_e0WaC0-4QPB9xg |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001675033
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | ttm / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | yoy / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_basic | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001819989
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 24837000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001819989-26-000041 / id:f-129 |
+
+| revenue_growth | ttm / original | 0.202985 | ratio | computed / — | 0001819989-25-000112 / id:f-132; 0001819989-25-000112 / id:f-133; 0001819989-25-000112 / id:f-134; 0001819989-25-000112 / id:f-135; 0001819989-26-000009 / id:f-171; 0001819989-26-000009 / id:f-172; 0001819989-26-000028 / id:f-127; 0001819989-26-000028 / id:f-128; 0001819989-26-000041 / id:f-129; 0001819989-26-000041 / id:f-130 |
+
+| revenue_growth | yoy / original | -0.429886 | ratio | computed / — | 0001819989-26-000041 / id:f-129; 0001819989-26-000041 / id:f-130 |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | -1.684628 | ratio | computed / — | 0001819989-26-000028 / id:f-282; 0001819989-26-000028 / id:f-288; 0001819989-26-000041 / id:f-408; 0001819989-26-000041 / id:f-414 |
+
+| fcf_basic | none / original | -653809000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001819989-26-000028 / id:f-282; 0001819989-26-000028 / id:f-288; 0001819989-26-000041 / id:f-408; 0001819989-26-000041 / id:f-414 |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001839341
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 164201000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001839341-26-000014 / id:f-1069 |
+
+| revenue_growth | ttm / original | 0.263693 | ratio | computed / — | 0001628280-26-013301 / id:f-1267; 0001628280-26-013301 / id:f-1268; 0001628280-26-013301 / id:f-1269; 0001628280-26-013301 / id:f-1270; 0001628280-26-013305 / id:f-142; 0001628280-26-013305 / id:f-143; 0001628280-26-031396 / id:f-926; 0001628280-26-031396 / id:f-927; 0001839341-26-000014 / id:f-1069; 0001839341-26-000014 / id:f-1070 |
+
+| revenue_growth | yoy / original | 1.088327 | ratio | computed / — | 0001839341-26-000014 / id:f-1069; 0001839341-26-000014 / id:f-1070 |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | -29.850909 | ratio | computed / — | 0001628280-26-031396 / id:f-247; 0001628280-26-031396 / id:f-249; 0001839341-26-000014 / id:f-350; 0001839341-26-000014 / id:f-352 |
+
+| fcf_basic | none / original | -583946000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001628280-26-031396 / id:f-247; 0001628280-26-031396 / id:f-249; 0001839341-26-000014 / id:f-350; 0001839341-26-000014 / id:f-352 |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | 3100000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001839341-26-000014 / id:f-639 |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | 5800000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001628280-26-031396 / id:f-539 |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001849894
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | ttm / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | yoy / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_basic | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001858681
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 11153000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001858681-26-000040 / id:f-199 |
+
+| revenue_growth | ttm / original | 0.412346 | ratio | computed / — | 0001858681-25-000139 / id:f-199; 0001858681-25-000139 / id:f-200; 0001858681-25-000139 / id:f-201; 0001858681-25-000139 / id:f-202; 0001858681-26-000013 / id:f-210; 0001858681-26-000013 / id:f-211; 0001858681-26-000026 / id:f-173; 0001858681-26-000026 / id:f-174; 0001858681-26-000040 / id:f-199; 0001858681-26-000040 / id:f-200 |
+
+| revenue_growth | yoy / original | 0.636777 | ratio | computed / — | 0001858681-26-000040 / id:f-199; 0001858681-26-000040 / id:f-200 |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_basic | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001859392
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 8557336000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001859392-26-000091 / id:f-31 |
+
+| revenue_growth | ttm / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | yoy / original | -0.012032 | ratio | computed / — | 0001859392-26-000091 / id:f-31; 0001859392-26-000091 / id:f-32 |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_basic | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / receivables_only | 1.008357 | days | computed / — | 0001859392-26-000054 / id:f-106; 0001859392-26-000091 / id:f-169; 0001859392-26-000091 / id:f-31 |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001878848
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | 137225000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001878848-26-000026 / id:f-134; 0001878848-26-000052 / id:f-168 |
+
+| revenue_growth | ttm / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | yoy / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | 0.733728 | ratio | computed / — | 0001878848-26-000026 / id:f-440; 0001878848-26-000026 / id:f-442; 0001878848-26-000052 / id:f-431; 0001878848-26-000052 / id:f-434 |
+
+| fcf_basic | none / original | 482243000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001878848-26-000026 / id:f-440; 0001878848-26-000026 / id:f-442; 0001878848-26-000052 / id:f-431; 0001878848-26-000052 / id:f-434 |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / receivables_only | 29.890905 | days | computed / — | 0001878848-26-000026 / id:f-134; 0001878848-26-000026 / id:f-31; 0001878848-26-000052 / id:f-168; 0001878848-26-000052 / id:f-62 |
+
+| rpo_total | none / original | 5100000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001878848-26-000052 / id:f-724 |
+
+| liq_principal_due_to_cash | horizon_12m / cash_only_long_term_principal | 0.030084 | ratio | partial / short_term_principal_not_included | 0001878848-26-000052 / id:f-1327; 0001878848-26-000052 / id:f-58 |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / long_term_carrying_only | -12.071741 | ratio | partial / short_term_debt_and_other_components_not_established | 0001878848-25-000081 / id:f-145; 0001878848-25-000081 / id:f-239; 0001878848-26-000015 / id:f-152; 0001878848-26-000015 / id:f-176; 0001878848-26-000026 / id:f-152; 0001878848-26-000026 / id:f-176; 0001878848-26-000026 / id:f-178; 0001878848-26-000026 / id:f-400; 0001878848-26-000052 / id:f-104; 0001878848-26-000052 / id:f-118; 0001878848-26-000052 / id:f-201; 0001878848-26-000052 / id:f-359 |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | -0.392032 | ratio | computed / — | 0001878848-25-000081 / id:f-145; 0001878848-25-000081 / id:f-239; 0001878848-26-000015 / id:f-152; 0001878848-26-000015 / id:f-176; 0001878848-26-000026 / id:f-152; 0001878848-26-000026 / id:f-176; 0001878848-26-000026 / id:f-178; 0001878848-26-000026 / id:f-400; 0001878848-26-000052 / id:f-100; 0001878848-26-000052 / id:f-102; 0001878848-26-000052 / id:f-114; 0001878848-26-000052 / id:f-116; 0001878848-26-000052 / id:f-201; 0001878848-26-000052 / id:f-359 |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
+### external:0001944366
+
+Dernière période de revenu exploitable : 2026-06-30. Présentation revised ; la vue historique as_known et ses dates de disponibilité restent dans series.csv.
+
+| Mesure | Terme / variante | Valeur | Unité | Statut / motif | Source |
+
+| --- | --- | ---: | --- | --- | --- |
+
+| revenue_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | ttm / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| revenue_growth | yoy / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | with / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| capex_to_cfo | without / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_basic | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| receivables_collection_period | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| rpo_total | none / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_12m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| liq_principal_due_to_cash | horizon_24m / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | debt / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lev_debt_and_leases_to_operating_income_plus_da | leases / original | ND | — | not_determinable / missing_admissible_terms | — |
+
+| lease_not_commenced_bridge | additions / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | closing / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | commenced / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+| lease_not_commenced_bridge | opening / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
+
+La matrice conserve séparément les bases, échéances et composants ; aucune somme unique. Les additions et ponts non établis restent manquants. La qualité du résultat, les changements de durée et les gains ou pertes d’investissement gardent leur pièce et leur rupture de base dans les tables. Les engagements non lus ne sont pas tenus pour nuls.
+
 ## Circularité par paire
 
 | Issue de paire | Nombre |
 | --- | ---: |
-| indeterminate | 692 |
+| indeterminate | 956 |
 
 Les cellules de documented_revenue_dependency, documented_backlog_dependency, consideration_to_customer et noncash_revenue_from_investees gardent leur contrepartie et leur motif. Un numérateur vide reste ND. La couverture du numérateur et celle du dénominateur sont séparées ; named_edge_coverage ne répartit pas artificiellement le revenu entre parts nommée, anonyme et résiduelle quand leur chevauchement n’est pas résolu.
 
@@ -580,9 +1165,9 @@ Les plafonds et garanties publiés rendent certaines relations visibles sans pro
 
 | Motif principal E7 | Issues de paire |
 | --- | ---: |
-| complete_public_attribution_not_established | 692 |
+| complete_public_attribution_not_established | 956 |
 
-Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1513, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 13761, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
+Les conditions de couverture enregistrées, non exclusives et distinctes des issues de paire, sont : {"anonymous_observations": 1523, "sales_channels": {}, "redacted_exclusions": 0, "not_processed_exclusions": 14164, "parse_failed_exclusions": 1, "non_filer": "not_determinable: annual-reporting status not established for each external legal identity"}. Les comptes de zéro portent sur les exclusions classées, jamais sur l’absence universelle d’une difficulté. Une concentration anonyme ne suffit pas à identifier juridiquement son client ; les non-déposants ne sont pas dénombrés par supposition.
 
 Les critères E sont confrontés aux paires et aux exercices dans measures.parquet, même pour les cellules vides. Les chemins de l’extension restent non déterminables, motif not_processed ; ils ne sont pas comptés comme inexistants.
 

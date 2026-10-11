@@ -169,6 +169,174 @@
   },
   {
     "group_id": "NVDA",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
+    "counterparty_id": "external:0001944366",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "NVDA",
     "counterparty_id": "legal:0f6bb6688494bca2bcd34bdba41651c08df9109aac7f16fec0d5d12125381056",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -457,6 +625,174 @@
   {
     "group_id": "GOOGL",
     "counterparty_id": "SPCX",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "GOOGL",
+    "counterparty_id": "external:0001944366",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "complete_public_attribution_not_established"
@@ -939,6 +1275,174 @@
   },
   {
     "group_id": "AMZN",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
+    "counterparty_id": "external:0001944366",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMZN",
     "counterparty_id": "legal:055eab7f9d3da93cf99ac803b31d65d1de32dcc012c939118799abf04ee45717",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -1387,6 +1891,174 @@
   },
   {
     "group_id": "META",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
+    "counterparty_id": "external:0001944366",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "META",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -1639,6 +2311,174 @@
   },
   {
     "group_id": "MSFT",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
+    "counterparty_id": "external:0001944366",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MSFT",
     "counterparty_id": "legal:25713471c593e6de387583cd1c5fa166c229964d8d74c9081f9e533b06e396c5",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -1885,6 +2725,174 @@
   {
     "group_id": "ORCL",
     "counterparty_id": "SPCX",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "ORCL",
+    "counterparty_id": "external:0001944366",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "complete_public_attribution_not_established"
@@ -2591,6 +3599,174 @@
   },
   {
     "group_id": "CRWV",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
+    "counterparty_id": "external:0001944366",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "CRWV",
     "counterparty_id": "legal:3ed8b6cfef4faac1791e272860579c3ce3f935d7cd9515da57489c04b40be9ca",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -3151,6 +4327,174 @@
   },
   {
     "group_id": "SPCX",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
+    "counterparty_id": "external:0001944366",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "SPCX",
     "counterparty_id": "legal:0604a13285e46c582e11106d0499014db41b9c987f073cbb3b06d10cf218100f",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -3543,6 +4887,174 @@
   },
   {
     "group_id": "AMD",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
+    "counterparty_id": "external:0001944366",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AMD",
     "counterparty_id": "legal:150e4e8987965b695ca563f1ce6e7527c6f159f54abb359c2fb33959db70c7da",
     "statement": "E1",
     "outcome": "indeterminate",
@@ -3887,6 +5399,174 @@
   {
     "group_id": "AVGO",
     "counterparty_id": "SPCX",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "AVGO",
+    "counterparty_id": "external:0001944366",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "complete_public_attribution_not_established"
@@ -4559,6 +6239,174 @@
   {
     "group_id": "MRVL",
     "counterparty_id": "SPCX",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001083301",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001083301",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001144879",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001144879",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001462056",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001462056",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001513845",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001513845",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001675033",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001675033",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001819989",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001819989",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001839341",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001839341",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001849894",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001849894",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001858681",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001858681",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001859392",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001859392",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001878848",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001878848",
+    "statement": "E2",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001944366",
+    "statement": "E1",
+    "outcome": "indeterminate",
+    "reason": "complete_public_attribution_not_established"
+  },
+  {
+    "group_id": "MRVL",
+    "counterparty_id": "external:0001944366",
     "statement": "E2",
     "outcome": "indeterminate",
     "reason": "complete_public_attribution_not_established"

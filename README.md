@@ -1,15 +1,13 @@
 # SEC_Project_2
 
-Les quatre approfondissements autorisés sont livrés : lire [user_brief_deepening.md](user_brief_deepening.md), puis [approfondissements.md](approfondissements.md). Les citations sont dans deepening_evidence.csv ; les quantités dans deepening_measures.csv, lender_positions.csv et form_d_disclosures.csv. form_d_series.csv contient les dernières déclarations cumulatives connues à chaque fin de trimestre. Les huit tables sont dans tables/ et les contrôles dans audit/.
+Le périmètre principal comprend 23 groupes, dont 12 ajoutés dans cette livraison. Lire [user_brief_expansion.md](user_brief_expansion.md), puis [entites_ajoutees.md](entites_ajoutees.md). Les résultats antérieurs restent dans l'historique Git et dans leurs archives distinctes.
 
-Les onze groupes principaux, l’arrêt des sources du 9 octobre 2026 et les critères E/F restent inchangés. Les prêteurs et autres déposants ciblés sont des sources externes distinctes. Les résultats du premier passage et des notes complémentaires sont conservés dans leurs fichiers et l’historique Git. Aucun score ou total global d’exposition n’est produit. Travail effectué sans sous-agent ; aucun audit indépendant revendiqué.
+Les sources sont arrêtées au 9 octobre 2026, 10:24:21 UTC. La première tranche des entités ajoutées comprend 67 blocs naturels lus et 398 autres blocs explicitement non traités ; l'inventaire et les originaux sont conservés. La lecture des notes et contrats n'est pas exhaustive. Athene est rattachée économiquement à Apollo par une preuve de contrôle ; les fonds gérés, les JVs et les véhicules de projet gardent leurs identités distinctes. Aucun score global ni total d'exposition n'est calculé. Aucun audit indépendant n'est revendiqué.
 
-## Reproduire
+Les huit tables sont dans tables/. Les observations sont dans work/observations/, les critères et contrôles dans audit/, et la couverture détaillée dans expansion_note_coverage.csv. Les fichiers expansion_evidence.csv, expansion_entities.csv, expansion_financial_metrics.csv et expansion_lender_classification.csv donnent les citations, identités, mesures et classifications. Les ND conservent leurs raisons.
 
-Installer requirements.txt. Restaurer le cache initial depuis la sauvegarde LFS, puis les sources supplémentaires depuis la sauvegarde sec-project-2-deepening, sans écraser les observations récentes ni restaurer un ancien verrou. L’archive SEC_Project_2_approfondissements.zip contient aussi les sources supplémentaires, les blocs lus et les exports. Depuis la racine, `python -m secfragility.phase3 --reconstruct` reconstruit les faits et les huit tables hors ligne. Aucun appel de modèle ni nouvelle requête SEC n’est nécessaire. Les décisions, observations et sources originales sont nécessaires à cette reproduction.
+## Reproduction
 
-`python -m secfragility.reproduce capture`, puis la reconstruction et `python -m secfragility.reproduce compare` vérifient l’égalité intégrale des huit tables, décimales et provenance comprises. Ne pas capturer une nouvelle référence pour masquer une divergence.
+Installer requirements.txt et restaurer les sauvegardes de sources LFS avec leurs manifestes SHA-256, sans écraser les observations plus récentes. Les sauvegardes complémentaires contiennent aussi les nouveaux originaux et les notes différées. Depuis la racine, python -m secfragility.phase3 --reconstruct reconstruit depuis le cache, les observations et les décisions versionnées, sans requête SEC ni appel de modèle. python -m pytest -q exécute les tests. Le résultat de la comparaison des huit tables après reconstruction complète figure dans work/idempotency_verification.json.
 
-Les sauvegardes intermédiaires et la livraison finale sont poussées sur https://github.com/jsiaut/codex_test. Les répertoires de sources ignorés par Git sont conservés dans les sauvegardes LFS avec leur SHA-256.
-
-Validation de la livraison : 93 tests, 13 invariants satisfaits et égalité intégrale des huit tables après reconstruction hors ligne. Voir work/deepening_validation.json et work/idempotency_verification.json.
+Les commits intermédiaires enregistrent le travail ; le commit final et ses contrôles établissent la livraison. Les captures d'API sont figées et ne sont pas supposées récupérables à l'identique ultérieurement. L'archive de cette tranche porte le nom SEC_Project_2_entites_ajoutees.zip.

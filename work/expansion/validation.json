@@ -1,0 +1,41 @@
+{
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "verified_at": "2026-10-11T11:41:17.464136+00:00",
+  "tests_passed": 105,
+  "delivery_checks": {
+    "eight_tables": true,
+    "no_value_for_ND": true,
+    "ND_reason": true,
+    "amount_edge_admissible": true,
+    "no_pending_amount_edges": true,
+    "no_guarantee_only_financed": true,
+    "control_reasons": true,
+    "not_supported_search_incomplete": true,
+    "no_nonfinancial_F6": true,
+    "expected_cells_present": true,
+    "no_future_numeric_as_known": true,
+    "no_generalized_accounting_failure": true,
+    "criteria_frozen": true
+  },
+  "full_offline_replay_all_eight_tables_identical": true,
+  "reproduction_inputs_unchanged": true,
+  "table_counts": {
+    "documents": 10741,
+    "facts": 1278718,
+    "observations": 17228,
+    "entities": 667,
+    "links": 908,
+    "measures": 552038,
+    "controls": 298632,
+    "exclusions": 17127
+  },
+  "main_groups": 23,
+  "added_main_groups": 12,
+  "read_blocks": 67,
+  "deferred_blocks": 398,
+  "accepted_expansion_observations": 152,
+  "accounting_mismatch_rows": 215,
+  "localized_invalid_aggregates": 1,
+  "all_notes_exhaustively_reviewed": false,
+  "independent_audit_performed": false
+}

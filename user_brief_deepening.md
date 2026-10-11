@@ -4,13 +4,13 @@ Sources arrêtées au **9 octobre 2026**. La découverte principale est le monta
 
 ## 1. Séries et dates
 
-La vue historique respecte désormais la date officielle de publication lorsqu’elle suit la réception du dépôt par la SEC. Les dernières périodes AMD et Broadcom sont rétablies. La synthèse utilise les données révisées et conserve la vue historique. Les contrôles de publication passent ; les **26 divergences comptables localisées** restent visibles et ne sont pas corrigées par hypothèse.
+La vue historique respecte désormais la date officielle de publication lorsqu’elle suit la réception du dépôt par la SEC. Les dernières périodes AMD et Broadcom sont rétablies. La synthèse utilise les données révisées et conserve la vue historique. Les contrôles de publication passent ; les **215 lignes de contrôle présentant un écart** restent visibles et ne sont pas corrigées par hypothèse.
 
 ## 2. CoreWeave et ses prêteurs
 
 Au **30 juin 2026**, CoreWeave dispose de **5,524 Md$ de trésorerie non restreinte**. Faute d’échéances mensuelles, le principal exigible est encadré : **4,413 à 10,597 Md$ sur 12 mois**, **10,597 à 15,013 Md$ sur 24 mois**. Les rapports principal / trésorerie sont respectivement **0,798877–1,918357** et **1,918356–2,717777**. Ces bornes excluent intérêts, baux et autres obligations de financement.
 
-Au deuxième trimestre, le CFO est de **679 M$**, le capex payé de **6,422 Md$**, soit un FCF de base de **−5,743 Md$**. Les dépôts originaux documentent **47 positions auprès de 11 prêteurs**, comparatifs et republications compris. Ces lignes ne doivent pas être additionnées comme des crédits distincts. La part PIK et le statut non-accrual par position restent à lire.
+Au deuxième trimestre, le CFO est de **679 M$**, le capex payé de **6,422 Md$**, soit un FCF de base de **−5,743 Md$**. Les dépôts originaux documentent **87 positions auprès de 11 prêteurs**, comparatifs et republications compris. Ces lignes ne doivent pas être additionnées comme des crédits distincts. La part PIK et le statut non-accrual par position restent à lire.
 
 ## 3. NVIDIA–CoreWeave et AMD–Meta
 
@@ -31,5 +31,3 @@ Le warrant AMD–Meta porte sur **160 millions d’actions au maximum**, à **0,
 La tranche comprend **34 dépôts périodiques originaux** et **168 Form D / D-A uniques de 118 CIK**. Les Form D décrivent des offres cumulatives, parfois des fonds : leurs montants peuvent inclure du non-monétaire et des engagements futurs obligatoires. Aucun montant n’est attribué automatiquement à un laboratoire.
 
 Le rapport approfondissements.md contient les sources, les périodes, les positions des prêteurs et les limites de couverture. Les CSV donnent les citations et le lignage ; form_d_series.csv conserve les valeurs cumulatives connues à chaque fin de trimestre. Les huit tables sont reconstructibles hors ligne. Les critères E/F restent inchangés. Travail effectué seul ; aucun audit indépendant revendiqué. Sauvegarde : https://github.com/jsiaut/codex_test.
-
-Vérification finale : **93 tests passent ; les huit tables sont identiques après reconstruction hors ligne**. Les entrées sont inchangées et les 26 divergences comptables restent visibles.

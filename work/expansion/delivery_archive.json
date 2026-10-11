@@ -1,0 +1,9 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "archive": "SEC_Project_2_entites_ajoutees.zip",
+  "sha256": "63a4f542386f8e69f87a62fbf4f3e135a2118bf562fc6c626f22782fafbbea0e",
+  "bytes": 898861901,
+  "repository": "https://github.com/jsiaut/codex_test",
+  "independent_audit_performed": false,
+  "scope": "First review of added issuer groups; companion manifest stored outside the archive."
+}

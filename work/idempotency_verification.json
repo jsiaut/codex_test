@@ -1,73 +1,73 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "verified_at": "2026-10-11T08:54:37.411905+00:00",
+  "verified_at": "2026-10-11T11:38:48.499586+00:00",
   "method": "Offline full-cache reconstruction; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.",
   "input_manifest_unchanged": true,
   "changed_inputs": [],
   "tables": {
     "documents": {
-      "rows": 7288,
+      "rows": 10741,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "2bb9692c53b6fe6d4ea7d75c6d26909a04138c8eed2ff1a59c1fbf01622b2246",
-      "replay_sha256": "2bb9692c53b6fe6d4ea7d75c6d26909a04138c8eed2ff1a59c1fbf01622b2246"
+      "original_sha256": "7950ae01a8884efec34f5b887e4f55dd69fecbcde6ee2e7abb7286dd54aaaccd",
+      "replay_sha256": "7950ae01a8884efec34f5b887e4f55dd69fecbcde6ee2e7abb7286dd54aaaccd"
     },
     "facts": {
-      "rows": 766617,
+      "rows": 1278718,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "5d9c76c368344d85652b600efb7b43b3c52ccedb5c99e4dfd9065b10576fa4c3",
-      "replay_sha256": "5d9c76c368344d85652b600efb7b43b3c52ccedb5c99e4dfd9065b10576fa4c3"
+      "original_sha256": "edba0550b5f789bb506050156e55bf53cf1a917749576a5be9a7032a4125b801",
+      "replay_sha256": "edba0550b5f789bb506050156e55bf53cf1a917749576a5be9a7032a4125b801"
     },
     "observations": {
-      "rows": 17088,
+      "rows": 17228,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "98f85b8d3271905cd5da1810a2ffb9f0623f47e3e8fb7526507d7e83c860e30c",
-      "replay_sha256": "98f85b8d3271905cd5da1810a2ffb9f0623f47e3e8fb7526507d7e83c860e30c"
+      "original_sha256": "b5ffe6b4a40605b6ce2d760339d126692c92daaeb4919af31abb259f4bf834f3",
+      "replay_sha256": "b5ffe6b4a40605b6ce2d760339d126692c92daaeb4919af31abb259f4bf834f3"
     },
     "entities": {
-      "rows": 646,
+      "rows": 667,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "3d1cda4ad1fe20769435710f4b3f110f3fc304a5d7f5673f3f85a1755c7a5cf9",
-      "replay_sha256": "3d1cda4ad1fe20769435710f4b3f110f3fc304a5d7f5673f3f85a1755c7a5cf9"
+      "original_sha256": "69880728df8c68f075052922ff3f62b10bbf4e893aa418ae20bbd1ebd352bd17",
+      "replay_sha256": "69880728df8c68f075052922ff3f62b10bbf4e893aa418ae20bbd1ebd352bd17"
     },
     "links": {
-      "rows": 827,
+      "rows": 908,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "1667c3dbc5ed7447b8dccae88246c358a4d80ccfcbc40bbaa8c74547ca73c18d",
-      "replay_sha256": "1667c3dbc5ed7447b8dccae88246c358a4d80ccfcbc40bbaa8c74547ca73c18d"
+      "original_sha256": "94badff6c34c108cce4441c55d374f37c70ee1003c2aa9b873f41a002ce13d86",
+      "replay_sha256": "94badff6c34c108cce4441c55d374f37c70ee1003c2aa9b873f41a002ce13d86"
     },
     "measures": {
-      "rows": 269635,
+      "rows": 552038,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "4bbbf13af512825d1dd6473cf38e944914f7e72489ce81a3a2d3deab78f6ac2b",
-      "replay_sha256": "f4acdaac399c26de8427b3076675eae6c6f24bd147be5f7881488bb7d7311d48"
+      "original_sha256": "7acda76a62398c693ad7333d12d5182fda8a74358a5c492019ac54d857bc38b5",
+      "replay_sha256": "9c54cb8aa8c62bb10437c2007916fb81a7235d37f21b9a7d25769b87a2e9a720"
     },
     "controls": {
-      "rows": 155140,
+      "rows": 298632,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "9aeba2306cccda2a0d250f9382a8876a663478b6d0269318c15c3715b4825345",
-      "replay_sha256": "cb4b0cb08ce4c523bce55e36b4776a46783e68bfd31c9e9b3b4a80e5e64a7f9f"
+      "original_sha256": "47da8cb054bfecb7bf7d558a5dd1e618219808d2191fe3d63902ad3c73044614",
+      "replay_sha256": "2362bd4a076a788d5d91adbfb909ae257d354254190e5e72f8d5fcb335d075bc"
     },
     "exclusions": {
-      "rows": 16308,
+      "rows": 17127,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "c272961795e8d42d50afaa25ad0bfd4b266a8c4739448b8e71e78a219885223b",
-      "replay_sha256": "c272961795e8d42d50afaa25ad0bfd4b266a8c4739448b8e71e78a219885223b"
+      "original_sha256": "6c6a1835b9de0378a16501c613192cc444a0b9bbd32c7cf6ba7926af401d4669",
+      "replay_sha256": "6c6a1835b9de0378a16501c613192cc444a0b9bbd32c7cf6ba7926af401d4669"
     }
   },
   "all_tables_identical": true,

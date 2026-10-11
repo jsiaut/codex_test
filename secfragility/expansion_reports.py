@@ -48,11 +48,13 @@ def render(db,root,as_of):
             historical_notes_state='not_processed',latest_annual_accession=item['latest_annual']['accessionNumber']))
     csv_write(root/'expansion_entities.csv',registry)
     groups=[s['group'] for s in issuers.values() if s['group']!='external:0001527469']
+    reported_periods={s['group']:max(f['reportDate'] for f in s['text_filings'] if f.get('reportDate'))
+        for s in issuers.values() if s['group'] in groups}
     metrics=rows(db,"""SELECT * FROM measures WHERE group_id IN (SELECT unnest(?)) AND view='revised'
         AND measure IN ('revenue_total','cfo','capex_cash','fcf_basic','fcf_after_finance_leases',
         'finance_lease_principal_payments','liq_principal_due_to_cash','liq_cash_to_12m_outflows')
-        QUALIFY period_end=max(period_end) OVER(PARTITION BY group_id,measure)
         ORDER BY group_id,measure,period_start,breakdown_key""",[groups])
+    metrics=[r for r in metrics if r['period_end']==reported_periods[r['group_id']]]
     csv_write(root/'expansion_financial_metrics.csv',metrics)
     lender=[r for r in evidence if r.get('model_quantity') in ('lender_position_non_accrual_status','lender_position_PIK_terms','lender_non_accrual_schedule_legend','lender_PIK_schedule_legend')]
     csv_write(root/'expansion_lender_classification.csv',lender)
@@ -65,6 +67,7 @@ def render(db,root,as_of):
         periodic_sources=sum(len(s['periodic_filings']) for s in issuers.values()),
         supplemental_6k_sources=sum(len(s['supplemental_6k']) for s in issuers.values()),
         reading=scope,accepted_expansion_observations=len(evidence),
+        financial_metric_periods=reported_periods,
         delivery_checks=verification['checks'],accounting_mismatch_rows=mismatches,
         localized_invalid_aggregates=blocked,
         all_notes_exhaustively_reviewed=False,complete_contract_review=False,
@@ -101,7 +104,7 @@ Les anciens comptes Yandex en roubles et les comparatifs Nebius publiés en doll
 
 Couverture : **{manifest['periodic_sources']} dépôts périodiques collectés** depuis les exercices clos en 2021, plus **{manifest['supplemental_6k_sources']} dépôts 6-K Nebius**. L'inventaire courant contient **{scope['nominated_unique_keys']} blocs uniques** : **{scope['active_unique_keys']} lus**, y compris les preuves déjà lues, et **{scope['deferred_unique_keys']} explicitement non traités**. Les notes historiques et les contrats complets restants ne sont pas déclarés lus. Le tableau expansion_note_coverage.csv conserve cette distinction par source et par bloc.
 
-Les identités sont dans expansion_entities.csv ; les citations et leurs octets sources dans expansion_evidence.csv ; les mesures standard de dernière période dans expansion_financial_metrics.csv ; les classifications de prêteurs dans expansion_lender_classification.csv. Les valeurs ND gardent leurs raisons. Les données et conclusions de la tranche précédente restent accessibles dans l'historique Git et ses archives.
+Les identités sont dans expansion_entities.csv ; les citations et leurs octets sources dans expansion_evidence.csv ; les mesures standard à la clôture du dernier dépôt périodique dans expansion_financial_metrics.csv ; les classifications de prêteurs dans expansion_lender_classification.csv. Ce fichier exclut les cellules globales « none » et les clôtures attendues sans dépôt publié. Les ND gardent leurs raisons. Le 6-K Nebius de juin reste traité séparément dans les citations, sans fabrication de séries balisées. Les données et conclusions de la tranche précédente restent accessibles dans l'historique Git et ses archives.
 
 Les **{len(verification['checks'])} vérifications de livraison** passent et les cellules attendues sont présentes. Les rapprochements conservent **{mismatches} lignes de contrôle présentant un écart**, ainsi que **{blocked} agrégat local bloqué**. Ces alertes de précision ou de comparabilité restent dans audit/controls.csv et work/delivery_verification.json ; elles ne constituent pas une opinion d'audit sur les comptes des déposants. Les contrôles de livraison ne signifient pas que tous les rapprochements comptables aboutissent.
 '''
