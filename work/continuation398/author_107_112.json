@@ -1,0 +1,102 @@
+[
+  {
+    "index": 107,
+    "classification": "material",
+    "summary": "Annuel 2025 en USD/USGAAP : périmètre Yandex Russie >95 % sorti en2024, Toloka sorti contrôle mai2025 et comparatifs recast, pas croissance organique depuis anciens comptesRU. Serveurs4ans année2025, extension5ans envisagée janvier2026 prospective. ClientsA/B anonymes25/15 % revenu ; D83 %AR597 M nonidentifié, distinct ratiosrev. Microsoft17,3929 Md estimés sous conditions disponibilité et upfront6,9581 Md contractuel, non cash tous reçu ; servicesASC606 pas leases. Meta initial2,8807 Md2025 distinct nouvelaccord2026 ; credits/termination par tranche.",
+    "rows": [
+      {
+        "quote": "provides Microsoft with rights to receive service credits or to terminate individual tranches",
+        "model_quantity": "customer_contract_tranche_termination_and_credits",
+        "stage": "signed",
+        "issuer_treatment": "Annuel 2025 en USD/USGAAP : périmètre Yandex Russie >95 % sorti en2024, Toloka sorti contrôle mai2025 et comparatifs recast, pas croissance organique depuis anciens comptesRU. Serveurs4ans année2025, extension5ans envisagée janvier2026 prospective. ClientsA/B anonymes25/15 % revenu ; D83 %AR597 M nonidentifié, distinct ratiosrev. Microsoft17,3929 Md estimés sous conditions disponibilité et upfront6,9581 Md contractuel, non cash tous reçu ; servicesASC606 pas leases. Meta initial2,8807 Md2025 distinct nouvelaccord2026 ; credits/termination par tranche.",
+        "counterparty": "Microsoft",
+        "counterparty_evidence": "named",
+        "measurement_basis": "2025_contract_up_to_17_3929bn;conditional_delivery;not_current_unconditional_cash"
+      }
+    ]
+  },
+  {
+    "index": 108,
+    "classification": "material",
+    "summary": "Déc2025 : leasepassif commencé845,4 M actualisé et1,1115 Md paiements nonactualisés distincts9,7596 Md noncommencés ; avance271 M déjàversée, pas nouvelle échéance à doubler. Optionsprolongation exclues nonreasonablycertain ; clauses sortie sous1an certainscontrats n’annulent pas toute dette. Comparaisonjuin2026 stock1,625 Md/uncommencés12,0541 Md requiert pont dates, pas somme.",
+    "rows": [
+      {
+        "quote": "The aggregate amount of estimated future undiscounted lease payments associated with such leases is $9,759.6",
+        "model_quantity": "lessee_uncommenced_lease_commitments",
+        "stage": "signed",
+        "issuer_treatment": "Déc2025 : leasepassif commencé845,4 M actualisé et1,1115 Md paiements nonactualisés distincts9,7596 Md noncommencés ; avance271 M déjàversée, pas nouvelle échéance à doubler. Optionsprolongation exclues nonreasonablycertain ; clauses sortie sous1an certainscontrats n’annulent pas toute dette. Comparaisonjuin2026 stock1,625 Md/uncommencés12,0541 Md requiert pont dates, pas somme.",
+        "measurement_basis": "Dec2025_noncommenced_outflows;271m_already_prepaid;distinct_recognized_leases"
+      }
+    ]
+  },
+  {
+    "index": 109,
+    "classification": "context",
+    "summary": "Annuel2025 : SBC83,4 M incl opérationsdiscontinuées0,2 M ; retained83,2 M. Options dirigeant6 M exercice100$ marketcondition et accélération expense septembre, pas cash reçu à grant. Exercice options cash8,4 M depuistreasury ; RSUcashbonus modifications2023/2024 ne sont pas SBCcash2025 (nil liability), à distinguer119? aucune quantitéinventée. Avride filiale etplanpropre, pasinvest client.",
+    "rows": [
+      {
+        "quote": "For the year ended December 31, 2025, the Group received proceeds in amount of $8.4 from exercise of share options.",
+        "model_quantity": "employee_option_cash_exercise_proceeds",
+        "stage": "drawn_or_paid",
+        "issuer_treatment": "Annuel2025 : SBC83,4 M incl opérationsdiscontinuées0,2 M ; retained83,2 M. Options dirigeant6 M exercice100$ marketcondition et accélération expense septembre, pas cash reçu à grant. Exercice options cash8,4 M depuistreasury ; RSUcashbonus modifications2023/2024 ne sont pas SBCcash2025 (nil liability), à distinguer119? aucune quantitéinventée. Avride filiale etplanpropre, pasinvest client.",
+        "measurement_basis": "FY2025_8_4m_option_receipts;not_total_SBC_cash"
+      }
+    ]
+  },
+  {
+    "index": 110,
+    "classification": "material",
+    "summary": "Déc2025 : Toloka81 % économique mais49 % votes, deconsolidé ; common4,7 M equitymethod après pertes/amortissement vs prefs97 M séparéesASC321. ClickHouse6? aucunpourcentageinventé, influence perdue2022 ; préfundedwarrants50 M effectivementachetés mai2025, revaluation597,4 M noncash sur financement menétiers etstock737,1 M. Ne pas confondre investissement50 M, gain597,4 etstock737,1 ni contrôle via valeur.",
+    "rows": [
+      {
+        "quote": "The Group holds 81% of the economic interest and 49% of the voting interest in Toloka",
+        "model_quantity": "economic_majority_without_voting_control",
+        "stage": "recognized",
+        "issuer_treatment": "Déc2025 : Toloka81 % économique mais49 % votes, deconsolidé ; common4,7 M equitymethod après pertes/amortissement vs prefs97 M séparéesASC321. ClickHouse6? aucunpourcentageinventé, influence perdue2022 ; préfundedwarrants50 M effectivementachetés mai2025, revaluation597,4 M noncash sur financement menétiers etstock737,1 M. Ne pas confondre investissement50 M, gain597,4 etstock737,1 ni contrôle via valeur.",
+        "counterparty": "Toloka",
+        "counterparty_evidence": "named",
+        "measurement_basis": "Dec2025_81percent_economic_49percent_voting;unconsolidated"
+      },
+      {
+        "quote": "the Group purchased pre-funded warrants for Series C convertible preferred stock for aggregate consideration of $50.0",
+        "model_quantity": "private_investment_cash_purchase",
+        "stage": "drawn_or_paid",
+        "issuer_treatment": "Déc2025 : Toloka81 % économique mais49 % votes, deconsolidé ; common4,7 M equitymethod après pertes/amortissement vs prefs97 M séparéesASC321. ClickHouse6? aucunpourcentageinventé, influence perdue2022 ; préfundedwarrants50 M effectivementachetés mai2025, revaluation597,4 M noncash sur financement menétiers etstock737,1 M. Ne pas confondre investissement50 M, gain597,4 etstock737,1 ni contrôle via valeur.",
+        "counterparty": "ClickHouse",
+        "counterparty_evidence": "named",
+        "measurement_basis": "May2025_actual_50m_purchase;distinct_597_4m_non_cash_gain_and_737_1m_stock"
+      }
+    ]
+  },
+  {
+    "index": 111,
+    "classification": "material",
+    "summary": "Déc2025 : Toloka130,6 M remeasurement nonrecurring niveau3 dont33,6 Mcommon/97 Mprefs, pas cashentrée. ClickHouse737,1 M backsolve OPM sur prixSeriesC, volatilité65 % etliquidité3ans ; illiquide malgréobservablepricing. SAFE/TrancheRightAvride niveau3 perteFV2,7 M, pas financementsclient reçus. Moneyfunds1,7709 Md sousensembledutotalcash, pas addition àcash.",
+    "rows": [
+      {
+        "quote": "The Group used a back-solve valuation approach to estimate the fair value of its investment in ClickHouse.",
+        "model_quantity": "private_investment_level3_valuation_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Déc2025 : Toloka130,6 M remeasurement nonrecurring niveau3 dont33,6 Mcommon/97 Mprefs, pas cashentrée. ClickHouse737,1 M backsolve OPM sur prixSeriesC, volatilité65 % etliquidité3ans ; illiquide malgréobservablepricing. SAFE/TrancheRightAvride niveau3 perteFV2,7 M, pas financementsclient reçus. Moneyfunds1,7709 Md sousensembledutotalcash, pas addition àcash.",
+        "counterparty": "ClickHouse",
+        "counterparty_evidence": "named",
+        "judgment_sensitive": true,
+        "measurement_basis": "Dec2025_private_value;not_cash_or_public_liquidity"
+      }
+    ]
+  },
+  {
+    "index": 112,
+    "classification": "material",
+    "summary": "Déc2025 : followon12,432432 Mtitresgross1,15 Md/net1,1262 Md émis depuis treasury, pas somme1 Md+1,15 Md. Annulation40 M treasury ne constitue pasrachatcash courant. Outstanding253,016971 M distinctissuedfullypaid324,187735 M (incltechnicalC) ettreasury69,023973 M, pas toute baseEPS.",
+    "rows": [
+      {
+        "quote": "The Class A shares were delivered out of treasury shares of the Company.",
+        "model_quantity": "treasury_share_sale_actual_equity_financing",
+        "stage": "recognized",
+        "issuer_treatment": "Déc2025 : followon12,432432 Mtitresgross1,15 Md/net1,1262 Md émis depuis treasury, pas somme1 Md+1,15 Md. Annulation40 M treasury ne constitue pasrachatcash courant. Outstanding253,016971 M distinctissuedfullypaid324,187735 M (incltechnicalC) ettreasury69,023973 M, pas toute baseEPS.",
+        "measurement_basis": "FY2025_follow_on_total_1_15bn_gross;not_double_counted_base_offering"
+      }
+    ]
+  }
+]
