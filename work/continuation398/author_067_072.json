@@ -1,0 +1,88 @@
+[
+  {
+    "index": 67,
+    "classification": "material",
+    "summary": "Juin 2026 : hausse de juste valeur des warrants 1,078386 Md sur S1, principalement passif courant 1,811587 Md ; effet résultat sans décaissement équivalent. Dette 3,3 Md et convertibles 460/625 M présentées dans tableau FV en montants bruts, distincts des valeurs nettes de coûts d’émission. Aucun impairment minage supplémentaire T2, equipment held for sale 13,79 M niveau 2.",
+    "rows": [
+      {
+        "quote": "Fair value of Warrants | | | 1,046,551",
+        "model_quantity": "warrant_fair_value_change_non_cash_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : hausse de juste valeur des warrants 1,078386 Md sur S1, principalement passif courant 1,811587 Md ; effet résultat sans décaissement équivalent. Dette 3,3 Md et convertibles 460/625 M présentées dans tableau FV en montants bruts, distincts des valeurs nettes de coûts d’émission. Aucun impairment minage supplémentaire T2, equipment held for sale 13,79 M niveau 2.",
+        "judgment_sensitive": true,
+        "measurement_basis": "Q2_2026_FV_change;not_operating_cash_or_debt_principal"
+      }
+    ]
+  },
+  {
+    "index": 68,
+    "classification": "material",
+    "summary": "Juin 2026 : loyers bailleur commencés 6,087667 Md et non commencés 3,1 Md sont encaissements futurs, pas dettes. Revenu location S1 214,208 M inclut variable 56,2 M. Côté preneur dettes operating actualisées 108,499 M contre paiements 144,467 M ; finance 876 k distinct. Ne pas additionner flux bailleur et passifs preneur.",
+    "rows": [
+      {
+        "quote": "exclude $3.1 billion in total future noncancellable operating lease payments expected to be received",
+        "model_quantity": "lessor_uncommenced_future_rent_inflows",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : loyers bailleur commencés 6,087667 Md et non commencés 3,1 Md sont encaissements futurs, pas dettes. Revenu location S1 214,208 M inclut variable 56,2 M. Côté preneur dettes operating actualisées 108,499 M contre paiements 144,467 M ; finance 876 k distinct. Ne pas additionner flux bailleur et passifs preneur.",
+        "measurement_basis": "June2026_noncommenced_inflows;not_outflows;distinct_commenced_rents"
+      }
+    ]
+  },
+  {
+    "index": 69,
+    "classification": "context",
+    "summary": "Juin 2026 : CoreWeave nommé comme premier contrat de colocation en 2024 ; colocation désormais majorité du revenu, un seul client dans ce segment. Cette organisation seule ne quantifie pas l’exposition contractuelle ni une nouvelle entrée de cash.",
+    "rows": [
+      {
+        "quote": "in 2024, the Company announced its first high-density colocation contract with CoreWeave, Inc.",
+        "model_quantity": "named_first_colocation_customer_relationship",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : CoreWeave nommé comme premier contrat de colocation en 2024 ; colocation désormais majorité du revenu, un seul client dans ce segment. Cette organisation seule ne quantifie pas l’exposition contractuelle ni une nouvelle entrée de cash.",
+        "counterparty": "CoreWeave, Inc.",
+        "counterparty_evidence": "named"
+      }
+    ]
+  },
+  {
+    "index": 70,
+    "classification": "material",
+    "summary": "Juin 2026 : warrants de réorganisation, cash reçu tranche 1 1,2 M et tranche 2 insignifiant. Ce financement marginal est distinct de la hausse non cash de juste valeur des passifs warrants ; pas warrants clients.",
+    "rows": [
+      {
+        "quote": "which resulted in cash receipts of $1.2 million.",
+        "model_quantity": "reorganization_warrant_cash_receipts_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : warrants de réorganisation, cash reçu tranche 1 1,2 M et tranche 2 insignifiant. Ce financement marginal est distinct de la hausse non cash de juste valeur des passifs warrants ; pas warrants clients.",
+        "measurement_basis": "H1_2026_exercises;not_customer_financing"
+      }
+    ]
+  },
+  {
+    "index": 71,
+    "classification": "material",
+    "summary": "Juin 2026 : créance client construction 383,758 M, à encaisser avant paiement fournisseurs ; obligations correspondantes env.302,2 M accrual et 81,6 M AP. CECL sans provision ne supprime pas concentration/risque de calendrier. Créance non encaissée, pas cash reçu ni revenu colocation.",
+    "rows": [
+      {
+        "quote": "The Company collects these amounts from the customer prior to payment to vendors.",
+        "model_quantity": "customer_construction_funding_receivable_timing",
+        "stage": "recognized",
+        "issuer_treatment": "Juin 2026 : créance client construction 383,758 M, à encaisser avant paiement fournisseurs ; obligations correspondantes env.302,2 M accrual et 81,6 M AP. CECL sans provision ne supprime pas concentration/risque de calendrier. Créance non encaissée, pas cash reçu ni revenu colocation.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "June2026_receivable;matched_vendor_obligations;not_cash_receipt"
+      }
+    ]
+  },
+  {
+    "index": 72,
+    "classification": "context",
+    "summary": "S1 2026 : PSU dirigeants liés RTSR, MW énergisés et acquisition de nouveaux clients, plafond 250 % pour CEO. Objectifs de rémunération ne prouvent pas nouveaux clients signés. Coût non reconnu 162,718 M et capitalisation PPE 1,145 M, distincts engagements cash et titres clients.",
+    "rows": [
+      {
+        "quote": "including RTSR, energized megawatt growth, and new customer acquisition",
+        "model_quantity": "employee_performance_compensation_scope",
+        "stage": "recognized",
+        "issuer_treatment": "S1 2026 : PSU dirigeants liés RTSR, MW énergisés et acquisition de nouveaux clients, plafond 250 % pour CEO. Objectifs de rémunération ne prouvent pas nouveaux clients signés. Coût non reconnu 162,718 M et capitalisation PPE 1,145 M, distincts engagements cash et titres clients."
+      }
+    ]
+  }
+]
