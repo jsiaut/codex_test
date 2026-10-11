@@ -1,0 +1,168 @@
+[
+  {
+    "index": 85,
+    "classification": "material",
+    "summary": "Mai 2026 : dette face5,30668 Md incl450 Mconvertibles dont net276 M, bridge300 M long terme pour intention/capacitérefinancer malgré échéanceavril2027. SMBC375 M et prêts MEC/DevCo remboursés, anciens intérêtsPIK non courants. Obligations2,35 Md9,25 % et2,15 Md6,75 % garanties completion parent couvrant insuffisancefonds ; bridge fullrecourse parent. Escrow2,15 Md libéréseulement18juin, pas liquidité libremai. Revolver350 M+accordion200 M autorisés, lettres65 M ne sont pas cash tiré. Intérêt69,09 M intitulé total incl netting interestincome55,743 M, pas coût brut/cash.",
+    "rows": [
+      {
+        "quote": "the Company provided a full recourse parent guarantee",
+        "model_quantity": "project_bridge_full_parent_recourse",
+        "stage": "signed",
+        "issuer_treatment": "Mai 2026 : dette face5,30668 Md incl450 Mconvertibles dont net276 M, bridge300 M long terme pour intention/capacitérefinancer malgré échéanceavril2027. SMBC375 M et prêts MEC/DevCo remboursés, anciens intérêtsPIK non courants. Obligations2,35 Md9,25 % et2,15 Md6,75 % garanties completion parent couvrant insuffisancefonds ; bridge fullrecourse parent. Escrow2,15 Md libéréseulement18juin, pas liquidité libremai. Revolver350 M+accordion200 M autorisés, lettres65 M ne sont pas cash tiré. Intérêt69,09 M intitulé total incl netting interestincome55,743 M, pas coût brut/cash.",
+        "measurement_basis": "May2026_300m_bridge;June_refinanced;not_isolated_nonrecourse"
+      },
+      {
+        "quote": "Each Draw is fully committed, but any Additional Loans or Rollover Loans made by MEC under the DevCo Promissory Note would be on an uncommitted, discretionary basis",
+        "model_quantity": "project_development_additional_funding_discretionary",
+        "stage": "terminated",
+        "issuer_treatment": "Mai 2026 : dette face5,30668 Md incl450 Mconvertibles dont net276 M, bridge300 M long terme pour intention/capacitérefinancer malgré échéanceavril2027. SMBC375 M et prêts MEC/DevCo remboursés, anciens intérêtsPIK non courants. Obligations2,35 Md9,25 % et2,15 Md6,75 % garanties completion parent couvrant insuffisancefonds ; bridge fullrecourse parent. Escrow2,15 Md libéréseulement18juin, pas liquidité libremai. Revolver350 M+accordion200 M autorisés, lettres65 M ne sont pas cash tiré. Intérêt69,09 M intitulé total incl netting interestincome55,743 M, pas coût brut/cash.",
+        "measurement_basis": "DevCo_initial_vs_discretionary_loans;all_repaid_May29_2026"
+      }
+    ]
+  },
+  {
+    "index": 86,
+    "classification": "material",
+    "summary": "Annuel2026 : HPC locationASC842 et tenantfitout coût+markup distinguent runrate récurrent/refacturations chantier ; avancefacturée et revenu droitunbilled pas nécessairement cashreçu. Cloudretournécontinuing, ChronoScale97 % consolidé, Eksoexosquelette discontinué. Cash1,591988 Md libre vs2,561442 Md restreint total4,15343 Md. FVdérivés noncash, transactionscash financementsCFfinancing. Remeasurement59,7 M cloudheldforsale distinct impairment déclaré0 ; ASU2026PIKdiv encore nonadopté.",
+    "rows": [
+      {
+        "quote": "Changes in the fair value of derivative instruments are noncash",
+        "model_quantity": "derivative_fair_value_changes_non_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Annuel2026 : HPC locationASC842 et tenantfitout coût+markup distinguent runrate récurrent/refacturations chantier ; avancefacturée et revenu droitunbilled pas nécessairement cashreçu. Cloudretournécontinuing, ChronoScale97 % consolidé, Eksoexosquelette discontinué. Cash1,591988 Md libre vs2,561442 Md restreint total4,15343 Md. FVdérivés noncash, transactionscash financementsCFfinancing. Remeasurement59,7 M cloudheldforsale distinct impairment déclaré0 ; ASU2026PIKdiv encore nonadopté.",
+        "measurement_basis": "FY2026_cash_flow_classification;HPC_ASC842_and_fitout_not_all_recurring_rent"
+      }
+    ]
+  },
+  {
+    "index": 87,
+    "classification": "material",
+    "summary": "Août2026 : dépôts matériel/utilité560,523 M et actifsconstruction170,978 M à distinguer cashrestreint414,649 M noncourant. Créancepartieliée59,334 M incl59,2 Mnote avec intérêt et0,1 M coûtsdifférés, principal58,5 Mpubliéailleurs. B&W FVwarrant34,7 M/common7,8 M chutés sanscessiondéduite. Nouveauxinvestissementsprivés8,2 M anonymes, Corintis10 Mmaintenu. Constructionaccrual563,897 M/retainer154,749 M, pas cashcapex.",
+    "rows": [
+      {
+        "quote": "During the quarter ended August 31, 2026, the Company invested in three private companies for a total of $8.2 million",
+        "model_quantity": "anonymous_private_equity_investments",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : dépôts matériel/utilité560,523 M et actifsconstruction170,978 M à distinguer cashrestreint414,649 M noncourant. Créancepartieliée59,334 M incl59,2 Mnote avec intérêt et0,1 M coûtsdifférés, principal58,5 Mpubliéailleurs. B&W FVwarrant34,7 M/common7,8 M chutés sanscessiondéduite. Nouveauxinvestissementsprivés8,2 M anonymes, Corintis10 Mmaintenu. Constructionaccrual563,897 M/retainer154,749 M, pas cashcapex.",
+        "counterparty_evidence": "anonymous",
+        "measurement_basis": "Q1_FY2027_8_2m_private_investments;no_named_edges"
+      }
+    ]
+  },
+  {
+    "index": 88,
+    "classification": "material",
+    "summary": "Août2026 : BaseElectron prêt principal58,5 M demand contre plafond100 M, intérêt0,7 M trimestre. Absenceprovision/chargeCECL ne vaut pas garantie recouvrement ; equity10 % coût2 M distinct contrôle. Créance totale tableau59,334 M incl intérêts/coûts, ne pas forcer au principal.",
+    "rows": [
+      {
+        "quote": "the principal balance of the Demand Grid Promissory Note was $58.5 million",
+        "model_quantity": "related_party_loan_principal_outstanding",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : BaseElectron prêt principal58,5 M demand contre plafond100 M, intérêt0,7 M trimestre. Absenceprovision/chargeCECL ne vaut pas garantie recouvrement ; equity10 % coût2 M distinct contrôle. Créance totale tableau59,334 M incl intérêts/coûts, ne pas forcer au principal.",
+        "counterparty": "Base Electron",
+        "counterparty_evidence": "named",
+        "measurement_basis": "August2026_58_5m_principal;distinct_interest_accruals_and_100m_limit"
+      }
+    ]
+  },
+  {
+    "index": 89,
+    "classification": "material",
+    "summary": "Août2026 : ChronoScale a réalisé ventesGPU ponctuelles, hardware revenu brut pointintime etsupport netagent ; ne pas traiter croissance total comme location/service récurrent. Cashlibre2,949909 Md vsrestreint728,034 M, totalCF3,677943 Md diffèrelibre. Eksoexosquelette vendu30sept postclôture ; pascessionCloudni finconsolidationChronoScale.",
+    "rows": [
+      {
+        "quote": "During the three months ended August 31, 2026, the Company also completed certain one-time resale arrangements involving AI infrastructure, or GPU-related, hardware",
+        "model_quantity": "nonrecurring_gpu_hardware_resale_revenue_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : ChronoScale a réalisé ventesGPU ponctuelles, hardware revenu brut pointintime etsupport netagent ; ne pas traiter croissance total comme location/service récurrent. Cashlibre2,949909 Md vsrestreint728,034 M, totalCF3,677943 Md diffèrelibre. Eksoexosquelette vendu30sept postclôture ; pascessionCloudni finconsolidationChronoScale.",
+        "measurement_basis": "Q1_FY2027_one_time_resales;not_recurring_colocation_runrate"
+      }
+    ]
+  },
+  {
+    "index": 90,
+    "classification": "material",
+    "summary": "Août2026 : HPC262,638 M revenus dont services183,518 M (fitout) etrent79,12 M, profit33,431 M exclintérêts,FV et coûtscentraux/ChronoScale109,137 M. Chargesintérêts77,383 M séparéesproduits35,821 M ; pertetotal166,115 M incluant49,511 Mdérivés et11,352 MinvestFV. Performance segment positive ne démontreFClibre ou couverturedette.",
+    "rows": [
+      {
+        "quote": "The Company does not allocate interest expense, interest income, loss on change in fair value of derivatives",
+        "model_quantity": "segment_profit_excludes_financing_and_fair_value",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : HPC262,638 M revenus dont services183,518 M (fitout) etrent79,12 M, profit33,431 M exclintérêts,FV et coûtscentraux/ChronoScale109,137 M. Chargesintérêts77,383 M séparéesproduits35,821 M ; pertetotal166,115 M incluant49,511 Mdérivés et11,352 MinvestFV. Performance segment positive ne démontreFClibre ou couverturedette.",
+        "measurement_basis": "Q1_FY2027_HPC_profit_before_financing_and_unallocated_costs"
+      }
+    ]
+  },
+  {
+    "index": 91,
+    "classification": "context",
+    "summary": "Août2026 : FV niveau3 TopCo2dérivé169,837 M etB&Wwarrants34,727 M ; commonB&W7,846 M niveau1. Troisprivateinvests au coût hors FVrecurring ; absenceimpairment déclaré pas liquidationcashni absence risque.",
+    "rows": [
+      {
+        "quote": "Equity investments | | | Level 1",
+        "model_quantity": "fair_value_equity_vs_level3_derivatives_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : FV niveau3 TopCo2dérivé169,837 M etB&Wwarrants34,727 M ; commonB&W7,846 M niveau1. Troisprivateinvests au coût hors FVrecurring ; absenceimpairment déclaré pas liquidationcashni absence risque.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 92,
+    "classification": "material",
+    "summary": "Août2026 : 21,455832 Mtitres warrantsCW nonexercés issus baux2025, cashlesspossible donc pascashinvestmentàattribution. WarrantsMEC survivent prêtterminé, ne prouvent pasprêt encoreoutstanding. Total28,091029 Mtitres stabletrimestre, aucun exercice.",
+    "rows": [
+      {
+        "quote": "The CoreWeave Warrants are exercisable upon issuance, upon payment of the applicable exercise price in cash or through cashless exercise",
+        "model_quantity": "customer_warrants_no_automatic_cash_receipt",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : 21,455832 Mtitres warrantsCW nonexercés issus baux2025, cashlesspossible donc pascashinvestmentàattribution. WarrantsMEC survivent prêtterminé, ne prouvent pasprêt encoreoutstanding. Total28,091029 Mtitres stabletrimestre, aucun exercice.",
+        "counterparty": "CoreWeave",
+        "counterparty_evidence": "named",
+        "measurement_basis": "August2026_unexercised_customer_warrants;distinct_debt_and_investment_cash"
+      }
+    ]
+  },
+  {
+    "index": 93,
+    "classification": "context",
+    "summary": "Août2026 : SBC69,164 M dont2,665 MCIPcapitalisé ; PSU6,91125 Mtitres vested etcoûtnonreconnu90,8 M. Objectifs marché/salaires ne sont pas financementclientsni cashcapex ; rémunération influencemarge/CIP séparément.",
+    "rows": [
+      {
+        "quote": "Capitalized to Construction in progress in the unaudited condensed consolidated balance sheets.",
+        "model_quantity": "employee_share_compensation_construction_capitalization",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : SBC69,164 M dont2,665 MCIPcapitalisé ; PSU6,91125 Mtitres vested etcoûtnonreconnu90,8 M. Objectifs marché/salaires ne sont pas financementclientsni cashcapex ; rémunération influencemarge/CIP séparément."
+      }
+    ]
+  },
+  {
+    "index": 94,
+    "classification": "material",
+    "summary": "Août2026 : gain FV prefs6,6 M contreperteFV warrantsB&W56,1 M ; ces effets net49,5 M n’impliquentni pertecash équivalente ni nouveaufinancement. Maturitéassumée2032 etputtrigger deminimis paramètrevalorisation, pas conclusion absencecontraintecontractuelle.",
+    "rows": [
+      {
+        "quote": "the Company recorded a loss of $56.1 million",
+        "model_quantity": "supplier_warrant_fair_value_loss_non_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : gain FV prefs6,6 M contreperteFV warrantsB&W56,1 M ; ces effets net49,5 M n’impliquentni pertecash équivalente ni nouveaufinancement. Maturitéassumée2032 etputtrigger deminimis paramètrevalorisation, pas conclusion absencecontraintecontractuelle.",
+        "counterparty": "B&W",
+        "counterparty_evidence": "named",
+        "measurement_basis": "Q1_FY2027_BW_warrant_FV_loss;not_cash_outflow"
+      }
+    ]
+  },
+  {
+    "index": 95,
+    "classification": "context",
+    "summary": "Août2026 : ChronoScale explicitementcontrôlé etconsolidé VOE ; deuxsegments opérationnels ne supprimentpasfiliale. Balancecomparative annuelle dérivéeaudité, trimestreunaudited ; ne pasattribuerassuranceauditauQparcomparative.",
+    "rows": [
+      {
+        "quote": "The Company consolidates the results of ChronoScale Holdings Corporation",
+        "model_quantity": "consolidated_cloud_subsidiary_control",
+        "stage": "recognized",
+        "issuer_treatment": "Août2026 : ChronoScale explicitementcontrôlé etconsolidé VOE ; deuxsegments opérationnels ne supprimentpasfiliale. Balancecomparative annuelle dérivéeaudité, trimestreunaudited ; ne pasattribuerassuranceauditauQparcomparative."
+      }
+    ]
+  }
+]
