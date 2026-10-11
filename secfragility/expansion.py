@@ -130,7 +130,7 @@ def notes(root):
             for b in bs:
                 if not financial_roles.intersection(b.get('note_roles',[])):continue
                 fs=families(b.get('label','')+' '+b.get('concept',''))
-                if re.search(r'related.?part|stockholders.?equity|organization|subsequent',b.get('label','')+' '+b.get('concept',''),re.I):
+                if re.search(r'related.?part|\bequity\b|warrant|stockholders.?equity|share.?based|stock.?based|organization|subsequent',b.get('label','')+' '+b.get('concept',''),re.I):
                     fs=fs or ['investments_note']
                 report_inventory.append(dict(cik=cik,accession=accession,label=b.get('label'),concept=b.get('concept'),families=fs))
                 if not fs:continue
