@@ -56,13 +56,15 @@ def prepare(db,root:Path,as_of:str):
     for view in ['as_known','revised']:
         cutoff='AND a.acceptance_datetime<=k.public_at AND a.knowledge_date<=k.public_at::DATE' if view=='as_known' else ''
         snapshot='k.public_at' if view=='as_known' else sql_literal(as_of)+'::TIMESTAMPTZ'
-        db.execute(f'''CREATE TEMP TABLE quarter_quantities_{view} AS SELECT a.*,{snapshot} AS snapshot_at FROM quarter_candidates a
+        db.execute(f'''CREATE TEMP TABLE quarter_basis_candidates_{view} AS SELECT a.*,{snapshot} AS snapshot_at FROM quarter_candidates a
           JOIN anchor_order ao USING(model_quantity,canonical_concept)
           LEFT JOIN quarter_cutoffs k ON k.group_id=a.group_id AND k.start_date=a.period_start AND k.end_date=a.period_end
           WHERE a.acceptance_datetime<={sql_literal(as_of)}::TIMESTAMPTZ AND a.value IS NOT NULL {cutoff}
           QUALIFY row_number() OVER (PARTITION BY a.group_id,a.model_quantity,a.period_start,a.period_end,a.unit,a.accounting_framework,a.reporting_scope
            ORDER BY CASE WHEN calculation_basis='direct_quarter' THEN 0 ELSE 1 END,ao.priority,
             a.acceptance_datetime DESC,a.accession DESC,a.document_rank DESC,a.numeric_precision DESC,a.occurrence_rank DESC,a.fact_id)=1''')
+        from .scalar_basis import select
+        select(db,f'quarter_basis_candidates_{view}',f'quarter_quantities_{view}',as_of)
 
 
 def measures(db,as_of):

@@ -4,6 +4,7 @@ import pytest
 from secfragility.evidence import periodic_assurance,filing_status,tier
 from secfragility.expansion_assembly import reported_control,qualifies_source,stage_scope
 from secfragility.entities import normalize
+from secfragility.expansion_reading import submit
 
 def test_foreign_report_is_not_automatically_audited_or_filed():
     assert periodic_assurance('20-F')=='audited'
@@ -49,3 +50,20 @@ def test_deferred_scope_never_creates_read_markers(tmp_path):
     excluded=json.loads((work/'expansion/scope_exclusions.json').read_text())
     assert excluded[0]['reason']=='not_processed'
     assert {r['content_key'] for r in json.loads((work/'queue.json').read_text())}=={'old','selected'}
+
+def test_mistyped_citation_cannot_create_partial_pass(tmp_path):
+    import shutil
+    shutil.copy2(Path(__file__).resolve().parents[1]/'schema.sql',tmp_path/'schema.sql')
+    work=tmp_path/'work';(work/'expansion').mkdir(parents=True);(work/'blocks').mkdir()
+    raw=b'<p>A complete natural note.</p>';(work/'source.htm').write_bytes(raw)
+    block=dict(content_key='key',group='g',entity_id='cik:c',document_id='doc',accession='a',
+        knowledge_date='2026-08-01',as_of='2026-10-09T00:00:00+00:00',assurance_level='reviewed',
+        location='financial_statements_and_notes',block_class='debt_note',form='10-Q',
+        source_path='work/source.htm',raw_byte_start=0,raw_byte_end=len(raw),
+        text='A complete natural note.',candidates=[])
+    (work/'blocks/key.json').write_text(json.dumps(block));queue=[dict(content_key='key',path='work/blocks/key.json')]
+    for file in ['queue.json','expansion/queue.json']:(work/file).write_text(json.dumps(queue))
+    (work/'expansion/read_packets.jsonl').write_text(json.dumps(dict(content_key='key',part=0))+'\n')
+    with pytest.raises(ValueError):submit(tmp_path,'key',[
+        dict(quote='A complete natural note.',model_quantity='review'),dict(quote='A mistyped citation.',model_quantity='review')])
+    assert not (work/'observations/key.jsonl').exists()

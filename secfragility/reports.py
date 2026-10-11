@@ -102,7 +102,7 @@ def render(db,root,as_of,source,verification):
     # Domain rules contain only normative rules, no production reasoning.
     (audit/'domain_rules.md').write_text('''# Règles du domaine appliquées
 
-Seuls les documents SEC déposés alimentent les mesures. Une pièce furnished, une correspondance ou un projet n’est pas une preuve de montant : Reg S-T ; instructions des formulaires 8-K et S-1. Les attributs formulaire, item, emplacement, assurance et niveau de preuve restent distincts.
+Les mesures utilisent des documents SEC déposés ou une pièce furnished dont l'incorporation par référence est expressément prouvée dans le dépôt d'origine. Cette exception conserve le statut furnished et ne présume aucune revue d'auditeur ; une annexe non incorporée, une correspondance ou un projet ne suffit pas à établir un montant. Références : Reg S-T et instructions des formulaires. Les attributs formulaire, item, emplacement, assurance et niveau de preuve restent distincts.
 
 Les dates et dimensions définissent les faits ; fy et fp ne définissent pas une période. L’instance est déjà à l’échelle ; decimals donne une précision. Une absence n’est jamais un zéro. Les comparaisons et contrôles n’emploient que les précisions publiées. Aucun change ni mélange de cadres comptables. Les comparatifs retirés ou retraités ne sont pas soustraits à une base incompatible.
 
@@ -323,6 +323,9 @@ Le travail est régulièrement commité et poussé. L’exécution finale porte 
         if deepening:
             from .deepening_reports import render as deepening_render
             deepening_render(db,root,as_of,data)
+            if (root/'work/expansion/authorization.json').exists():
+                from .expansion_reports import render as expansion_render
+                expansion_render(db,root,as_of)
             for name in ('audit/domain_rules.md','synthesis.md','delta.md','README.md'):
                 p=root/name
                 if p.exists():
@@ -416,14 +419,18 @@ def package(root,as_of):
     from .extension_assembly import opened
     extension=bool(opened(root))
     deepening=(root/'work/deepening_authorization.json').exists()
+    expansion=(root/'work/expansion/authorization.json').exists()
     names=['synthesis.md','delta.md','delivery_summary.json'] + (['user_brief_deepening.md','approfondissements.md',
         'deepening_evidence.csv','deepening_measures.csv','lender_positions.csv','form_d_disclosures.csv','form_d_series.csv'] if deepening else
         ['user_brief_extension.md','notes_complementaires.md'] if extension else ['user_brief_2.md'])
+    if expansion:names=['user_brief_expansion.md','entites_ajoutees.md','expansion_summary.json',
+        'expansion_evidence.csv','expansion_note_coverage.csv','expansion_entities.csv',
+        'expansion_financial_metrics.csv','expansion_lender_classification.csv','delivery_summary.json']
     for name in names:
         shutil.copy2(root/name,output/name)
     replay=root/'work/idempotency_verification.json'
     if replay.exists():shutil.copy2(replay,output/replay.name)
-    target=output/('SEC_Project_2_approfondissements.zip' if deepening else 'SEC_Project_2_notes_complementaires.zip' if extension else 'SEC_Project_2_premier_passage.zip')
+    target=output/('SEC_Project_2_entites_ajoutees.zip' if expansion else 'SEC_Project_2_approfondissements.zip' if deepening else 'SEC_Project_2_notes_complementaires.zip' if extension else 'SEC_Project_2_premier_passage.zip')
     targeted_paths=set()
     if deepening:
         from .deepening_backup import source_paths
@@ -439,6 +446,7 @@ def package(root,as_of):
             include=include or str(rel) in ['work/expected_universe.json','work/annual_cutoffs.json','work/reading_progress.json','work/delivery_verification.json','work/pair_registry.json','work/annex_e_pair_outcomes.json','work/nonadditive_counts.json','backup/sec-project-2-20261009T150746Z.tar.zst.json','backup/sec-project-2-20261009T150746Z.tar.zst.sha256','work/observation_quarantines.json','work/fact_semantic_quarantines.json','work/exhibit_body_policy_overrides.json','work/parent_membership_evidence.json','work/entity_decisions.json','work/queue.json','work/run.json','work/inventory.json','work/collection.json','work/spcx_annual_validation.json','work/deprecations.json','work/concept_mappings.json']
             include=include or parts[0]=='work' and len(parts)==2 and path.name.startswith('extension_') and path.suffix=='.json'
             include=include or deepening and ((parts[0]=='work' and len(parts)==2 and path.name.startswith('deepening_') and path.suffix in ('.json','.py')) or str(rel) in targeted_paths)
+            include=include or expansion and parts[:2]==('work','expansion') and path.suffix in ('.json','.py','.jsonl')
             if include:z.write(path,rel)
     manifest=dict(as_of=as_of,archive=target.name,sha256=hashlib.sha256(target.read_bytes()).hexdigest(),bytes=target.stat().st_size,
        repository='https://github.com/jsiaut/codex_test',independent_audit_performed=False)
