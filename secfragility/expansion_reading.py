@@ -37,6 +37,9 @@ def submit(root,prefix,authored):
             f=b['candidates'][idx]
             item.update(tagged_fact_id=f['fact_id'],amount=str(f['value']),unit=f['unit'],currency=f['currency'],
                 period_start=f.get('period_start'),period_end=f['period_end'],amount_origin='tagged_reference')
+        if b.get('filing_status')=='furnished':
+            item.update(filing_status='furnished',tier='C' if b.get('incorporated_by_reference') else 'E',
+                assurance_level='unknown')
         out.append(item)
     # Validate the entire authored batch before making an immutable pass.
     # A mistyped citation must not leave a partially accepted reading record.
