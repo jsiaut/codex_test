@@ -5,8 +5,8 @@ ROOT=Path(__file__).resolve().parents[2]
 
 AUTHORED={
  'cfb175d9d48b':[
-  dict(candidate_index=2,quote='Within next twelve months',model_quantity='construction_commitment_12m',stage='signed',block='contractual_outflows',category_id='construction_commitment',measurement_basis='AI_hardware_and_infrastructure_purchase_commitments;not_debt_principal'),
-  dict(candidate_index=6,quote='Total',model_quantity='construction_commitment',stage='signed',block='contractual_outflows',category_id='construction_commitment',measurement_basis='AI_hardware_and_infrastructure_purchase_commitments'),
+  dict(candidate_index=2,quote='Amounts payable within 12 months of balance date:',model_quantity='construction_commitment_12m',stage='signed',block='contractual_outflows',category_id='construction_commitment',measurement_basis='AI_hardware_and_infrastructure_purchase_commitments;not_debt_principal'),
+  dict(candidate_index=6,quote='Total commitments',model_quantity='construction_commitment',stage='signed',block='contractual_outflows',category_id='construction_commitment',measurement_basis='AI_hardware_and_infrastructure_purchase_commitments'),
  ],
  'e7ceb2128e71':[
   dict(quote='The proceeds of the GPU Financing are used to finance a portion of the acquisition cost of GPUs and related infrastructure deployed by the Financing SPV in support of the Group’s agreement with Microsoft Corporation (“Microsoft”) announced in November 2025 (the “Microsoft Agreement”).',model_quantity='project_financing_customer_dependency',stage='signed',counterparty='Microsoft Corporation',counterparty_evidence='named',vehicle_level=True),
@@ -29,17 +29,17 @@ AUTHORED={
   dict(quote='Borrowings under the MFSA and issuances of Notes will be made in stages and mature 30 months after the relevant funding date.',model_quantity='subsequent_GPU_financing_draw_conditions',stage='signed',event_date='2026-08-25',measurement_basis='up_to_2.4bn_agreement;not_June30_drawn_debt'),
  ],
  'd5dbe328cfb2':[
-  dict(quote='Following the completion of the Divestment, the Group continues to have no exposure to the risks and uncertainties associated with the operations of the Divested Businesses.',model_quantity='historical_reporting_scope_break',stage='recognized',basis_break=True,recast_cause='disposed_operation'),
+  dict(quote='Following the completion of the Divestment, the Group continues to have no exposure to the risks and uncertainties associated with the operations of the Divested Businesses.',model_quantity='historical_reporting_scope_break',stage='recognized',basis_break=True,recast_cause='discontinued_operations'),
  ],
  'eb0ee8277258':[
   dict(quote='Upon conversion, the Notes are settled entirely in shares.',model_quantity='convertible_debt_settlement_terms',stage='signed',measurement_basis='share_settlement_on_conversion;not_automatic_cash_maturity_acceleration'),
   dict(quote='The June 2025 Notes and September 2025 Notes are carried at amortized cost, with an unamortized balance of $4,103.2 million as of December 31, 2025.',model_quantity='convertible_debt_carrying_amount',stage='recognized',measurement_basis='amortized_cost;distinct_from_4836.8m_accreted_maturity_principal'),
  ],
  'b76ee8bf20ff':[
-  dict(quote='Toloka operating segment previously reported was reclassified into the results of discontinued operations.',model_quantity='segment_reporting_scope_break',stage='recognized',basis_break=True,recast_cause='disposed_operation'),
+  dict(quote='Toloka operating segment previously reported was reclassified into the results of discontinued operations.',model_quantity='segment_reporting_scope_break',stage='recognized',basis_break=True,recast_cause='discontinued_operations'),
  ],
  '80a0b7b849bb':[
-  dict(quote='On March 11, 2026, the Group entered into a securities purchase agreement with NVIDIA Corporation (“NVIDIA”), pursuant to which the Group agreed to sell, in a private placement, a pre-funded warrant (the “Warrant”) to purchase an aggregate of 21,065,396 Class A shares, par value €0.01 per share (the “Warrant Shares”), for aggregate gross proceeds of approximately $2.0 billion.',model_quantity='strategic_equity_financing',stage='signed',counterparty='NVIDIA Corporation',counterparty_evidence='named',event_date='2026-03-11',family='financing',link_type='equity_investment',payer='NVIDIA Corporation',receiver='external:0001513845'),
+  dict(quote='On March 11, 2026, the Group entered into a securities purchase agreement with NVIDIA Corporation (“NVIDIA”), pursuant to which the Group agreed to sell, in a private placement, a pre-funded warrant (the “Warrant”) to purchase an aggregate of 21,065,396 Class A shares, par value €0.01 per share (the “Warrant Shares”), for aggregate gross proceeds of approximately $2.0 billion.',model_quantity='strategic_equity_financing',stage='signed',counterparty='NVIDIA Corporation',counterparty_evidence='named',event_date='2026-03-11',family='financing',link_type='equity_primary',payer='NVIDIA Corporation',receiver='external:0001513845'),
   dict(quote='Under the five-year agreement, the Group will provide approximately $12 billion of dedicated compute capacity across multiple locations, based on large-scale deployments of the NVIDIA Vera Rubin platform, with delivery expected to commence in early 2027.',model_quantity='dedicated_compute_contract',stage='signed',counterparty='Meta',counterparty_evidence='named',event_date='2026-03-16',measurement_basis='dedicated_capacity_contract;not_recognized_revenue_or_cash'),
   dict(quote='The Group currently intends to sell such capacity to third-party customers of its AI cloud business, with any remaining capacity to be purchased by Meta.',model_quantity='residual_compute_capacity_purchase_backstop',stage='signed',counterparty='Meta',counterparty_evidence='named',measurement_basis='up_to_15bn_residual_capacity;not_27bn_unconditional_dedicated_compute'),
   dict(quote='The option to purchase an additional $337.5 aggregate principal amount of the 2031 Notes was exercised, increasing the total aggregate principal amount of the Notes to approximately $4.34 billion.',model_quantity='subsequent_convertible_financing',stage='signed',event_date='2026-03-20',measurement_basis='post_Dec31_financing;excluded_from_Dec31_balance'),
@@ -67,7 +67,7 @@ AUTHORED={
   dict(quote='The Company recorded an asset of $544.5 million in Other noncurrent assets on the condensed consolidated balance sheets at the initial fair value of the Google Warrants at issuance to represent the value of Google agreeing to make the lease payments from Fluidstack in the event of Fluidstack not fulfilling its obligations under the lease.',model_quantity='credit_support_warrant_accounting',stage='recognized',measurement_basis='noncash_deferred_credit_support_asset;not_cash_financing'),
  ],
  '7c942204e003':[
-  dict(quote='During the six months ended June 30, 2026, the Company received proceeds of $129.2 million, net of issuance costs, from the sale of 5,496,993 shares of common stock, with an average net selling price of $23.50 per share.',model_quantity='equity_ATM_cash_proceeds',stage='cash_received'),
+  dict(quote='During the six months ended June 30, 2026, the Company received proceeds of $129.2 million, net of issuance costs, from the sale of 5,496,993 shares of common stock, with an average net selling price of $23.50 per share.',model_quantity='equity_ATM_cash_proceeds',stage='drawn_or_paid'),
  ],
  'ac57d7781bee':[
   dict(quote='On July 24, 2026, the Company amended the HPC lease at the Black Pearl Facility, which accelerated delivery of the first capacity to early August.',model_quantity='subsequent_customer_lease_delivery_change',stage='signed',event_date='2026-07-24'),
