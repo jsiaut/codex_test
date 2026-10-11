@@ -1,0 +1,57 @@
+[
+  {
+    "index": 288,
+    "classification": "material",
+    "summary": "Mars investissements Apollo 364,104 Md$ dont AM 6,294 et retraite 357,810, Athene inclus après éliminations. Performance allocations 3,073 Md$ contre 3,554 : +186 M$ FV et -667 M$ distributions, sans assimiler valeur et cash. AFS 219,474 Md$, CECL 744 M$ distinct des pertes latentes 13,912 Md$. Repo 3,244 Md$ ; 907 M$ net de reverse repo effectivement réglés T1. Fonds 28,953 Md$ sans calendrier de distribution. AP Grange 5,662 Md$ appelé T2, gain attendu 673 M$ ensuite à vérifier. Concentrations par émetteur ne couvrent pas tous affiliés. Hypothèques FV 96,665 Md$ incluent VIE, pas attribution IA automatique.",
+    "rows": [
+      {
+        "quote": "The investment funds do not specify timing of distributions on the funds’ underlying assets.",
+        "model_quantity": "march_group_investments_non_cash_fair_value_and_repo_settlement",
+        "stage": "recognized",
+        "issuer_treatment": "Mars investissements Apollo 364,104 Md$ dont AM 6,294 et retraite 357,810, Athene inclus après éliminations. Performance allocations 3,073 Md$ contre 3,554 : +186 M$ FV et -667 M$ distributions, sans assimiler valeur et cash. AFS 219,474 Md$, CECL 744 M$ distinct des pertes latentes 13,912 Md$. Repo 3,244 Md$ ; 907 M$ net de reverse repo effectivement réglés T1. Fonds 28,953 Md$ sans calendrier de distribution. AP Grange 5,662 Md$ appelé T2, gain attendu 673 M$ ensuite à vérifier. Concentrations par émetteur ne couvrent pas tous affiliés. Hypothèques FV 96,665 Md$ incluent VIE, pas attribution IA automatique.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 289,
+    "classification": "material",
+    "summary": "Mars VIE AM : 3,301 Md$ investissements et 2,257 Md$ subscription lines, maturité moyenne 0,19 an ; 69 M$ cash escrow liés à cession indisponibles jusqu’à libération attendue sur 15 mois. AM VIE non consolidées exposition maximale 392 M$. Retraite tableau non-consolidé 138,752/149,082 Md$ inclut engagements et fonds situés dans VIE consolidées, donc non additif au groupe ni à Athene.",
+    "rows": [
+      {
+        "quote": "restricted cash held in escrow related to the sale of an investment",
+        "model_quantity": "march_vie_short_subscription_maturity_escrow_and_max_loss_scope",
+        "stage": "recognized",
+        "issuer_treatment": "Mars VIE AM : 3,301 Md$ investissements et 2,257 Md$ subscription lines, maturité moyenne 0,19 an ; 69 M$ cash escrow liés à cession indisponibles jusqu’à libération attendue sur 15 mois. AM VIE non consolidées exposition maximale 392 M$. Retraite tableau non-consolidé 138,752/149,082 Md$ inclut engagements et fonds situés dans VIE consolidées, donc non additif au groupe ni à Athene.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 290,
+    "classification": "context_only",
+    "summary": "Confirmation du périmètre Apollo/Athene et acquisition Bridge en actions le 2 septembre 2025 ; pas transaction primaire cash IA démontrée dans cette note.",
+    "rows": [
+      {
+        "quote": "in an all-stock transaction",
+        "model_quantity": "organization_bridge_stock_consolidation",
+        "stage": "recognized",
+        "issuer_treatment": "Confirmation du périmètre Apollo/Athene et acquisition Bridge en actions le 2 septembre 2025 ; pas transaction primaire cash IA démontrée dans cette note."
+      }
+    ]
+  },
+  {
+    "index": 291,
+    "classification": "material",
+    "summary": "Mars engagements AM 542 M$ et Athene 36,1 Md$ déjà inclusifs VIE/affiliés et appelables immédiatement. Capital Markets Partnership 2,1 Md$ financés par revolving/autres financements, aucun capital apporté par parent ; plafond 2,5 Md$ distinct, comfort letter subsiste. Underwriting AGS 42 M$ contingent au 31 mars expiré le 9 avril sans financement. Reprise performance allocations théorique 5,6 Md$ non paiement exigible. Bridge nominal prêts sous garanties contingentes 691 M$ non perte maximale ; Atlas garantie 2,5 Md$ subsiste sans provision. Restrictions Athene 111,646 Md$ déjà vues. Harbinger recours refusé 21 avril ; autres litiges/impôts non quantifiables ≠ zéro.",
+    "rows": [
+      {
+        "quote": "The commitments expired on April 9, 2026 with no funding on the part of Apollo.",
+        "model_quantity": "underwriting_expired_unfunded_and_parent_vie_no_capital",
+        "stage": "recognized",
+        "issuer_treatment": "Mars engagements AM 542 M$ et Athene 36,1 Md$ déjà inclusifs VIE/affiliés et appelables immédiatement. Capital Markets Partnership 2,1 Md$ financés par revolving/autres financements, aucun capital apporté par parent ; plafond 2,5 Md$ distinct, comfort letter subsiste. Underwriting AGS 42 M$ contingent au 31 mars expiré le 9 avril sans financement. Reprise performance allocations théorique 5,6 Md$ non paiement exigible. Bridge nominal prêts sous garanties contingentes 691 M$ non perte maximale ; Atlas garantie 2,5 Md$ subsiste sans provision. Restrictions Athene 111,646 Md$ déjà vues. Harbinger recours refusé 21 avril ; autres litiges/impôts non quantifiables ≠ zéro.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]

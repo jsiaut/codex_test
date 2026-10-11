@@ -1,0 +1,71 @@
+[
+  {
+    "index": 296,
+    "classification": "material",
+    "summary": "Mars FV actifs groupe394,491 Md$, L3 158,485 et NAV26,190 distincts. AM cash3,569+VIE851 M$ inclut escrow69 M$ note6 ; pas tout disponible parent. Retraite384,939 inclut Athene après éliminations. AM hierarchy exclut allocations240 M$, rollforwardL3 exclut créance affiliée15 ; retraite rollforward154,761 exclut MRBassets183. Pertes FVO983 M$ non toutes cash, hypothèques dégradées commerciales860/FV537 M$ et résidentielles965/FV882 non attribuées IA. Consultants externes procédures limitées demandées management, pas audit indépendant.",
+    "rows": [
+      {
+        "quote": "which consist of certain limited procedures that management identifies and requests them to perform.",
+        "model_quantity": "march_level3_scope_unobservable_valuation_and_non_cash_losses",
+        "stage": "recognized",
+        "issuer_treatment": "Mars FV actifs groupe394,491 Md$, L3 158,485 et NAV26,190 distincts. AM cash3,569+VIE851 M$ inclut escrow69 M$ note6 ; pas tout disponible parent. Retraite384,939 inclut Athene après éliminations. AM hierarchy exclut allocations240 M$, rollforwardL3 exclut créance affiliée15 ; retraite rollforward154,761 exclut MRBassets183. Pertes FVO983 M$ non toutes cash, hypothèques dégradées commerciales860/FV537 M$ et résidentielles965/FV882 non attribuées IA. Consultants externes procédures limitées demandées management, pas audit indépendant.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 297,
+    "classification": "material",
+    "summary": "Mars dette bilan14,220 Md$ : AM6,380 dont nouveau warehouse nonrecours120 M$ anonyme, retraite7,840 déjà Athene. Nouveau750 M$ 5,7%2036 émis30mars ; échéance500 M$27mai demeure au31mars. Plafonds AGM1,25/AHL1,25/liquidité2,6 Md$ tous non tirés, pas cash collecté ; covenants AHL35%/14,8 et AARe23,2 changés juin. Subordonnées peuvent différer jusqu’à5 ans sans preuve PIK actuel. Intérêts179 M$ incluant amortissement coûts, pas coupons cash homogènes.",
+    "rows": [
+      {
+        "quote": "Represents the nonrecourse warehouse facility of a consolidated entity.",
+        "model_quantity": "new_120m_warehouse_unnamed_not_whco_and_750m_notes",
+        "stage": "recognized",
+        "issuer_treatment": "Mars dette bilan14,220 Md$ : AM6,380 dont nouveau warehouse nonrecours120 M$ anonyme, retraite7,840 déjà Athene. Nouveau750 M$ 5,7%2036 émis30mars ; échéance500 M$27mai demeure au31mars. Plafonds AGM1,25/AHL1,25/liquidité2,6 Md$ tous non tirés, pas cash collecté ; covenants AHL35%/14,8 et AARe23,2 changés juin. Subordonnées peuvent différer jusqu’à5 ans sans preuve PIK actuel. Intérêts179 M$ incluant amortissement coûts, pas coupons cash homogènes.",
+        "counterparty_evidence": "anonymous"
+      }
+    ]
+  },
+  {
+    "index": 298,
+    "classification": "material",
+    "summary": "T1 Segment Income1,522 Md$ hors financement HoldCo45 M$ et effets noncash ; SRE719 M$, FRE728, PII75 non liquidité. Management fees952 M$ incluent399 intragroupe à éliminer. Revenus segments5,462 vs GAAP5,059 ; actifs451,487→467,530 après ajustements. Comparatif2025 total segment4,454 dans tableau et4,455 rapprochement : préserver écart1 M$, sans correction arbitraire.",
+    "rows": [
+      {
+        "quote": "We use Segment Income as a measure of operating performance, not as a measure of liquidity.",
+        "model_quantity": "march_segments_non_cash_intercompany_and_reported_reconciliation_gap",
+        "stage": "recognized",
+        "issuer_treatment": "T1 Segment Income1,522 Md$ hors financement HoldCo45 M$ et effets noncash ; SRE719 M$, FRE728, PII75 non liquidité. Management fees952 M$ incluent399 intragroupe à éliminer. Revenus segments5,462 vs GAAP5,059 ; actifs451,487→467,530 après ajustements. Comparatif2025 total segment4,454 dans tableau et4,455 rapprochement : préserver écart1 M$, sans correction arbitraire.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 299,
+    "classification": "material",
+    "summary": "Dividendes déclarés6mai : commun0,5625$ prévu29mai et préférentiel0,8438$ prévu31juillet. Déclaration post-mars n’est pas encaissement/décaissement déjà constaté au31mars.",
+    "rows": [
+      {
+        "quote": "which will be paid on July 31, 2026",
+        "model_quantity": "post_march_dividend_declaration_future_payment",
+        "stage": "signed",
+        "issuer_treatment": "Dividendes déclarés6mai : commun0,5625$ prévu29mai et préférentiel0,8438$ prévu31juillet. Déclaration post-mars n’est pas encaissement/décaissement déjà constaté au31mars."
+      }
+    ]
+  },
+  {
+    "index": 300,
+    "classification": "material",
+    "summary": "H1 revenus85 M$ issus du stock différé initial, incluent T179 M$, ne pas additionner ni assimiler à cash H1. Intragroupe éliminé, intermédiaire non audité. ASU expense disaggregation date annuelle/interim modifiée vs T1 ; ASU warrants2025-04/07 encore non adoptées.",
+    "rows": [
+      {
+        "quote": "There was $85 million of revenue recognized",
+        "model_quantity": "halfyear_opening_deferred_revenue_includes_first_quarter",
+        "stage": "recognized",
+        "issuer_treatment": "H1 revenus85 M$ issus du stock différé initial, incluent T179 M$, ne pas additionner ni assimiler à cash H1. Intragroupe éliminé, intermédiaire non audité. ASU expense disaggregation date annuelle/interim modifiée vs T1 ; ASU warrants2025-04/07 encore non adoptées.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+import json
+from pathlib import Path
+A=[]
+def add(i,s,q,m,stage='recognized',**kw):
+ A.append(dict(index=i,classification='material',summary=s,rows=[dict(quote=q,model_quantity=m,stage=stage,issuer_treatment=s,**kw)]))
+add(296,'Mars FV actifs groupe394,491 Md$, L3 158,485 et NAV26,190 distincts. AM cash3,569+VIE851 M$ inclut escrow69 M$ note6 ; pas tout disponible parent. Retraite384,939 inclut Athene après éliminations. AM hierarchy exclut allocations240 M$, rollforwardL3 exclut créance affiliée15 ; retraite rollforward154,761 exclut MRBassets183. Pertes FVO983 M$ non toutes cash, hypothèques dégradées commerciales860/FV537 M$ et résidentielles965/FV882 non attribuées IA. Consultants externes procédures limitées demandées management, pas audit indépendant.','which consist of certain limited procedures that management identifies and requests them to perform.','march_level3_scope_unobservable_valuation_and_non_cash_losses',judgment_sensitive=True)
+add(297,'Mars dette bilan14,220 Md$ : AM6,380 dont nouveau warehouse nonrecours120 M$ anonyme, retraite7,840 déjà Athene. Nouveau750 M$ 5,7%2036 émis30mars ; échéance500 M$27mai demeure au31mars. Plafonds AGM1,25/AHL1,25/liquidité2,6 Md$ tous non tirés, pas cash collecté ; covenants AHL35%/14,8 et AARe23,2 changés juin. Subordonnées peuvent différer jusqu’à5 ans sans preuve PIK actuel. Intérêts179 M$ incluant amortissement coûts, pas coupons cash homogènes.','Represents the nonrecourse warehouse facility of a consolidated entity.','new_120m_warehouse_unnamed_not_whco_and_750m_notes',counterparty_evidence='anonymous')
+add(298,'T1 Segment Income1,522 Md$ hors financement HoldCo45 M$ et effets noncash ; SRE719 M$, FRE728, PII75 non liquidité. Management fees952 M$ incluent399 intragroupe à éliminer. Revenus segments5,462 vs GAAP5,059 ; actifs451,487→467,530 après ajustements. Comparatif2025 total segment4,454 dans tableau et4,455 rapprochement : préserver écart1 M$, sans correction arbitraire.','We use Segment Income as a measure of operating performance, not as a measure of liquidity.','march_segments_non_cash_intercompany_and_reported_reconciliation_gap',judgment_sensitive=True)
+add(299,'Dividendes déclarés6mai : commun0,5625$ prévu29mai et préférentiel0,8438$ prévu31juillet. Déclaration post-mars n’est pas encaissement/décaissement déjà constaté au31mars.','which will be paid on July 31, 2026','post_march_dividend_declaration_future_payment','signed')
+add(300,'H1 revenus85 M$ issus du stock différé initial, incluent T179 M$, ne pas additionner ni assimiler à cash H1. Intragroupe éliminé, intermédiaire non audité. ASU expense disaggregation date annuelle/interim modifiée vs T1 ; ASU warrants2025-04/07 encore non adoptées.','There was $85 million of revenue recognized','halfyear_opening_deferred_revenue_includes_first_quarter',judgment_sensitive=True)
+Path(__file__).with_suffix('.json').write_text(json.dumps(A,ensure_ascii=False,indent=2)+'\n')
+M=json.loads(Path('work/continuation398/scope.json').read_text())['rows']
+for a in A:
+ t=json.loads(Path(M[a['index']]['path']).read_text())['text']
+ for r in a['rows']:assert r['quote'] in t,(a['index'],r['quote'])
