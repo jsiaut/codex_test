@@ -1,0 +1,138 @@
+[
+  {
+    "index": 322,
+    "classification": "material",
+    "summary": "Mars revolving20 M$ non tiré/LC0, mincash10 M$/levier2,75 subsistent. Amendement30avril reporte échéance4juin2027→2028, resetextensionconditionnelle, rachatsautorisés15 M$/acquisitionscash20 M$ sansdécaissementinféré. EBITDAcovenant distinctadjusted.",
+    "rows": [
+      {
+        "quote": "extends the maturity date from June 4, 2027 to June 4, 2028",
+        "model_quantity": "revolver_post_march_extension_2028_undrawn",
+        "stage": "recognized",
+        "issuer_treatment": "Mars revolving20 M$ non tiré/LC0, mincash10 M$/levier2,75 subsistent. Amendement30avril reporte échéance4juin2027→2028, resetextensionconditionnelle, rachatsautorisés15 M$/acquisitionscash20 M$ sansdécaissementinféré. EBITDAcovenant distinctadjusted.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 323,
+    "classification": "material",
+    "summary": "SBC T16,901 M$+0,9capitalisé noncash ; bonus2025 RSU4,1grantdate vs2,6FVsettlement noncash, basesdifférentes. Bonus2026 cashexécutifs/offshoreEXCLUduSBC, donc SBC ne couvrepas toutbonus. RSU33,3/PSU0,4/ESPP2 M$unrecognized sansnouveaucontratclient.",
+    "rows": [
+      {
+        "quote": "The expense for cash-based bonus is excluded from stock-based compensation expense.",
+        "model_quantity": "employee_bonus_cash_excluded_from_sbc_not_customer_funding",
+        "stage": "recognized",
+        "issuer_treatment": "SBC T16,901 M$+0,9capitalisé noncash ; bonus2025 RSU4,1grantdate vs2,6FVsettlement noncash, basesdifférentes. Bonus2026 cashexécutifs/offshoreEXCLUduSBC, donc SBC ne couvrepas toutbonus. RSU33,3/PSU0,4/ESPP2 M$unrecognized sansnouveaucontratclient."
+      }
+    ]
+  },
+  {
+    "index": 324,
+    "classification": "context_only",
+    "summary": "Segment unique T1revenu38,666 M$/perte6,147 ; adjustedcostexclutDA,SBC,restructuring. SBCsegment6,712 vsnote6,901 car189krestructinclus ailleurs, pasincohérencecash. Pas segmentAIisolé.",
+    "rows": [
+      {
+        "quote": "$0.2 million of stock-based compensation expense",
+        "model_quantity": "single_segment_firstquarter_adjustments_not_ai_cash_margin",
+        "stage": "recognized",
+        "issuer_treatment": "Segment unique T1revenu38,666 M$/perte6,147 ; adjustedcostexclutDA,SBC,restructuring. SBCsegment6,712 vsnote6,901 car189krestructinclus ailleurs, pasincohérencecash. Pas segmentAIisolé."
+      }
+    ]
+  },
+  {
+    "index": 325,
+    "classification": "material",
+    "summary": "Mars revenuB222,428/Backup16,238 M$, unbilledAR4 M$ nonencaissement. Deferred36,312 inclusRPO76,5. ComparatifDec2025 RPOretraité70,2 vs66,2 ancien : +4 M$ uniquement ajoutcontrats≤1an dèsjanvier, pascroissancebusiness. Openingrev12,321 nonnouveaucash.",
+    "rows": [
+      {
+        "quote": "resulting in an increase of $4.0 million from amounts previously disclosed.",
+        "model_quantity": "rpo_comparative_recast_short_contracts_not_new_sales",
+        "stage": "recognized",
+        "issuer_treatment": "Mars revenuB222,428/Backup16,238 M$, unbilledAR4 M$ nonencaissement. Deferred36,312 inclusRPO76,5. ComparatifDec2025 RPOretraité70,2 vs66,2 ancien : +4 M$ uniquement ajoutcontrats≤1an dèsjanvier, pascroissancebusiness. Openingrev12,321 nonnouveaucash.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 326,
+    "classification": "material",
+    "summary": "Mars2clientanonymes33%AR vs38Dec,4vendors54%AP/2vendors23%cash sansidentificationCW. Extensiondurée6ans réduitDA0,9 M$T1 et2,8attendurestant2026, noncash. ASU2025-05 adoptéjanvierpracticalexpedientCECL sansimpactmatériel ; aucuneprovisionnominale ne prouvepasrisque0.",
+    "rows": [
+      {
+        "quote": "Accounts receivable concentration",
+        "model_quantity": "anonymous_march_concentration_and_estimate_non_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Mars2clientanonymes33%AR vs38Dec,4vendors54%AP/2vendors23%cash sansidentificationCW. Extensiondurée6ans réduitDA0,9 M$T1 et2,8attendurestant2026, noncash. ASU2025-05 adoptéjanvierpracticalexpedientCECL sansimpactmatériel ; aucuneprovisionnominale ne prouvepasrisque0.",
+        "counterparty_evidence": "anonymous",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 327,
+    "classification": "material",
+    "summary": "RachatsT10,8 M$189229actions effectifs ; plafond10 M$/7,2restant distinct. Ne pasprendreautorisation dette15 M$ aprèsavril pour programmeactionsdéjàaugmenté sansnote.",
+    "rows": [
+      {
+        "quote": "for $0.8 million",
+        "model_quantity": "firstquarter_actual_buybacks_not_authorization",
+        "stage": "recognized",
+        "issuer_treatment": "RachatsT10,8 M$189229actions effectifs ; plafond10 M$/7,2restant distinct. Ne pasprendreautorisation dette15 M$ aprèsavril pour programmeactionsdéjàaugmenté sansnote."
+      }
+    ]
+  },
+  {
+    "index": 328,
+    "classification": "material",
+    "summary": "Servicesnoncancelablesmars1,9reste2026+2,3/0,8/0,1 jusqu’à2029=5,1 M$, distinctbaux. Indemnitésmaximuminestimable/noactualmatériel≠absenceengagement.",
+    "rows": [
+      {
+        "quote": "not possible to reasonably estimate the maximum potential amount",
+        "model_quantity": "march_nonlease_commitments_and_unquantified_indemnification",
+        "stage": "recognized",
+        "issuer_treatment": "Servicesnoncancelablesmars1,9reste2026+2,3/0,8/0,1 jusqu’à2029=5,1 M$, distinctbaux. Indemnitésmaximuminestimable/noactualmatériel≠absenceengagement.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 329,
+    "classification": "material",
+    "summary": "Mars financelease38,808 M$bilan vs46,851brut dont14,782reste2026 ; operating23,546 vs28,204 etservices13,369. Cashintérêts1,111/rent2,227 distinctequipement6,907noncash. Extensionnouveauespace17,5 M$encorenoncommencéeT2prévu, sansdoubleravecstockbauxquandcommencé.",
+    "rows": [
+      {
+        "quote": "The expansion is expected to commence in the second quarter of 2026",
+        "model_quantity": "march_uncommenced_space_and_lease_gross_net_cash_split",
+        "stage": "recognized",
+        "issuer_treatment": "Mars financelease38,808 M$bilan vs46,851brut dont14,782reste2026 ; operating23,546 vs28,204 etservices13,369. Cashintérêts1,111/rent2,227 distinctequipement6,907noncash. Extensionnouveauespace17,5 M$encorenoncommencéeT2prévu, sansdoubleravecstockbauxquandcommencé.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 330,
+    "classification": "context_only",
+    "summary": "Mars HTMcoût19,209/net19,207/FV19,198 M$≤1an, latentes11k etallowance2k séparées. MMF12,057 déjàcashéquivalents ; titres non investissementprimaireIA identifiable.",
+    "rows": [
+      {
+        "quote": "Within one year",
+        "model_quantity": "march_short_treasury_securities_cost_fv_not_ai",
+        "stage": "recognized",
+        "issuer_treatment": "Mars HTMcoût19,209/net19,207/FV19,198 M$≤1an, latentes11k etallowance2k séparées. MMF12,057 déjàcashéquivalents ; titres non investissementprimaireIA identifiable."
+      }
+    ]
+  },
+  {
+    "index": 331,
+    "classification": "context_only",
+    "summary": "MarsFV31,255 M$ inclut MMF12,057 plusHTM19,198 ; NAVhorsL3, neréadditionnerau cashbilan. Non-recurringheadquartersancienneimpairmentpasnouvellevalorisationdégradéeAI.",
+    "rows": [
+      {
+        "quote": "Redemption is permitted daily without written notice.",
+        "model_quantity": "march_money_market_nav_already_in_cash_equivalents",
+        "stage": "recognized",
+        "issuer_treatment": "MarsFV31,255 M$ inclut MMF12,057 plusHTM19,198 ; NAVhorsL3, neréadditionnerau cashbilan. Non-recurringheadquartersancienneimpairmentpasnouvellevalorisationdégradéeAI."
+      }
+    ]
+  }
+]

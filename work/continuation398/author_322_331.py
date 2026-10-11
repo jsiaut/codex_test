@@ -1,0 +1,20 @@
+import json
+from pathlib import Path
+A=[]
+def add(i,s,q,m,c='material',**kw):
+ A.append(dict(index=i,classification=c,summary=s,rows=[dict(quote=q,model_quantity=m,stage='recognized',issuer_treatment=s,**kw)]))
+add(322,'Mars revolving20 M$ non tiré/LC0, mincash10 M$/levier2,75 subsistent. Amendement30avril reporte échéance4juin2027→2028, resetextensionconditionnelle, rachatsautorisés15 M$/acquisitionscash20 M$ sansdécaissementinféré. EBITDAcovenant distinctadjusted.','extends the maturity date from June 4, 2027 to June 4, 2028','revolver_post_march_extension_2028_undrawn',judgment_sensitive=True)
+add(323,'SBC T16,901 M$+0,9capitalisé noncash ; bonus2025 RSU4,1grantdate vs2,6FVsettlement noncash, basesdifférentes. Bonus2026 cashexécutifs/offshoreEXCLUduSBC, donc SBC ne couvrepas toutbonus. RSU33,3/PSU0,4/ESPP2 M$unrecognized sansnouveaucontratclient.','The expense for cash-based bonus is excluded from stock-based compensation expense.','employee_bonus_cash_excluded_from_sbc_not_customer_funding')
+add(324,'Segment unique T1revenu38,666 M$/perte6,147 ; adjustedcostexclutDA,SBC,restructuring. SBCsegment6,712 vsnote6,901 car189krestructinclus ailleurs, pasincohérencecash. Pas segmentAIisolé.','$0.2 million of stock-based compensation expense','single_segment_firstquarter_adjustments_not_ai_cash_margin','context_only')
+add(325,'Mars revenuB222,428/Backup16,238 M$, unbilledAR4 M$ nonencaissement. Deferred36,312 inclusRPO76,5. ComparatifDec2025 RPOretraité70,2 vs66,2 ancien : +4 M$ uniquement ajoutcontrats≤1an dèsjanvier, pascroissancebusiness. Openingrev12,321 nonnouveaucash.','resulting in an increase of $4.0 million from amounts previously disclosed.','rpo_comparative_recast_short_contracts_not_new_sales',judgment_sensitive=True)
+add(326,'Mars2clientanonymes33%AR vs38Dec,4vendors54%AP/2vendors23%cash sansidentificationCW. Extensiondurée6ans réduitDA0,9 M$T1 et2,8attendurestant2026, noncash. ASU2025-05 adoptéjanvierpracticalexpedientCECL sansimpactmatériel ; aucuneprovisionnominale ne prouvepasrisque0.','Accounts receivable concentration','anonymous_march_concentration_and_estimate_non_cash',counterparty_evidence='anonymous',judgment_sensitive=True)
+add(327,'RachatsT10,8 M$189229actions effectifs ; plafond10 M$/7,2restant distinct. Ne pasprendreautorisation dette15 M$ aprèsavril pour programmeactionsdéjàaugmenté sansnote.','for $0.8 million','firstquarter_actual_buybacks_not_authorization')
+add(328,'Servicesnoncancelablesmars1,9reste2026+2,3/0,8/0,1 jusqu’à2029=5,1 M$, distinctbaux. Indemnitésmaximuminestimable/noactualmatériel≠absenceengagement.','not possible to reasonably estimate the maximum potential amount','march_nonlease_commitments_and_unquantified_indemnification',judgment_sensitive=True)
+add(329,'Mars financelease38,808 M$bilan vs46,851brut dont14,782reste2026 ; operating23,546 vs28,204 etservices13,369. Cashintérêts1,111/rent2,227 distinctequipement6,907noncash. Extensionnouveauespace17,5 M$encorenoncommencéeT2prévu, sansdoubleravecstockbauxquandcommencé.','The expansion is expected to commence in the second quarter of 2026','march_uncommenced_space_and_lease_gross_net_cash_split',judgment_sensitive=True)
+add(330,'Mars HTMcoût19,209/net19,207/FV19,198 M$≤1an, latentes11k etallowance2k séparées. MMF12,057 déjàcashéquivalents ; titres non investissementprimaireIA identifiable.','Within one year','march_short_treasury_securities_cost_fv_not_ai','context_only')
+add(331,'MarsFV31,255 M$ inclut MMF12,057 plusHTM19,198 ; NAVhorsL3, neréadditionnerau cashbilan. Non-recurringheadquartersancienneimpairmentpasnouvellevalorisationdégradéeAI.','Redemption is permitted daily without written notice.','march_money_market_nav_already_in_cash_equivalents','context_only')
+Path(__file__).with_suffix('.json').write_text(json.dumps(A,ensure_ascii=False,indent=2)+'\n')
+M=json.loads(Path('work/continuation398/scope.json').read_text())['rows']
+for a in A:
+ t=json.loads(Path(M[a['index']]['path']).read_text())['text']
+ for r in a['rows']:assert r['quote'] in t,(a['index'],r['quote'])
