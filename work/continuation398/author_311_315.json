@@ -1,0 +1,72 @@
+[
+  {
+    "index": 311,
+    "classification": "material",
+    "summary": "FY2025 Backblaze : équipement durée3–5→6ans dèsavril réduit amortissement5,2 M$, hausse résultat noncash. Deux clients anonymes38% AR, aucunclient>10%revenu ; ne pas les nommer CoreWeave. B2 usage facturé arrière, backup prépayé ; paiements aux clients réduisent revenu, gross principal propre prestations. Actifs/obligations colocation excluent composantes services variables ; pas zéro engagement horsbilan. Cash rest0 mais covenant bancaire peut limiter mobilité. EU Data Act résiliation≤2mois/refund prépayé réduit terme enforceable UE sans attribuer contrat CW.",
+    "rows": [
+      {
+        "quote": "No customer accounted for more than 10%",
+        "model_quantity": "annual_customer_concentration_anonymous_and_useful_life_non_cash",
+        "stage": "recognized",
+        "issuer_treatment": "FY2025 Backblaze : équipement durée3–5→6ans dèsavril réduit amortissement5,2 M$, hausse résultat noncash. Deux clients anonymes38% AR, aucunclient>10%revenu ; ne pas les nommer CoreWeave. B2 usage facturé arrière, backup prépayé ; paiements aux clients réduisent revenu, gross principal propre prestations. Actifs/obligations colocation excluent composantes services variables ; pas zéro engagement horsbilan. Cash rest0 mais covenant bancaire peut limiter mobilité. EU Data Act résiliation≤2mois/refund prépayé réduit terme enforceable UE sans attribuer contrat CW.",
+        "counterparty_evidence": "anonymous",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 312,
+    "classification": "material",
+    "summary": "Fin2025 finance baux36,165 M$ bilan vs43,082 nonactualisés (18,473 en2026), operating25,419 vs30,499 et nonlease14,062, non additif brut+net. Cash intérêts3,734/rent5,636 ; équipements24,864 et ROU12,674 acquis noncash. Failed saleleaseback2023 4,5 M$ financements conserve actifs, aucunnouveau2024/25. Extension espace17,5 M$ non commencé prévuT22026 exclu table ; séparer engagement futur sans ajouter aprèscommencement. Services colocation nonbilan14,062 distincts charge totale14,618.",
+    "rows": [
+      {
+        "quote": "which has not yet commenced and, accordingly, is not included",
+        "model_quantity": "uncommenced_17_5m_lease_off_balance_and_finance_cash_split",
+        "stage": "recognized",
+        "issuer_treatment": "Fin2025 finance baux36,165 M$ bilan vs43,082 nonactualisés (18,473 en2026), operating25,419 vs30,499 et nonlease14,062, non additif brut+net. Cash intérêts3,734/rent5,636 ; équipements24,864 et ROU12,674 acquis noncash. Failed saleleaseback2023 4,5 M$ financements conserve actifs, aucunnouveau2024/25. Extension espace17,5 M$ non commencé prévuT22026 exclu table ; séparer engagement futur sans ajouter aprèscommencement. Services colocation nonbilan14,062 distincts charge totale14,618.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 313,
+    "classification": "material",
+    "summary": "Citizens revolving20 M$ cap non tiré fin2025, matur4juin2027 extension conditionnelle ; sûreté quasi-tous actifs/garanties filiales. Cash minimum10 M$ chezlender demeure comptable cash mais contrainte financière, leviermax2,75 et EBITDAcovenant différent adjusted. Rachats≤10 M$ autorisés août pas décaissement inféré. AncienRCA terminé10déc2024 entièrement remboursé, assurancefinancement2024 payée : retirer dette courante.",
+    "rows": [
+      {
+        "quote": "a minimum liquidity of $10.0 million held on deposit with the Lender",
+        "model_quantity": "undrawn_20m_revolver_10m_cash_covenant_not_restricted_classification",
+        "stage": "recognized",
+        "issuer_treatment": "Citizens revolving20 M$ cap non tiré fin2025, matur4juin2027 extension conditionnelle ; sûreté quasi-tous actifs/garanties filiales. Cash minimum10 M$ chezlender demeure comptable cash mais contrainte financière, leviermax2,75 et EBITDAcovenant différent adjusted. Rachats≤10 M$ autorisés août pas décaissement inféré. AncienRCA terminé10déc2024 entièrement remboursé, assurancefinancement2024 payée : retirer dette courante.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 314,
+    "classification": "material",
+    "summary": "Services achats noncancelables2,5/2,2/0,8 M$2026–28 soit5,5 M$, distinct baux et contrat client. MeaningfulWorks lié familleCEO200k payé2024 servicesachevés, pas contrat IA futur. Indemnités maximum non estimable, absenceprovision ≠ exposition zéro ; aucunclaimmatérielattendu selon société.",
+    "rows": [
+      {
+        "quote": "it is not possible to reasonably estimate the maximum potential amount",
+        "model_quantity": "nonlease_service_commitments_and_unquantified_indemnities",
+        "stage": "recognized",
+        "issuer_treatment": "Services achats noncancelables2,5/2,2/0,8 M$2026–28 soit5,5 M$, distinct baux et contrat client. MeaningfulWorks lié familleCEO200k payé2024 servicesachevés, pas contrat IA futur. Indemnités maximum non estimable, absenceprovision ≠ exposition zéro ; aucunclaimmatérielattendu selon société.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 315,
+    "classification": "context_only",
+    "summary": "Passifs courants accrual9,406 M$ dontcompensation5,436/VAT1,225 ; stock comptable fin2025 pas décaissement ou dette PIK IA démontré.",
+    "rows": [
+      {
+        "quote": "Accrued compensation",
+        "model_quantity": "accrued_operating_liabilities_not_ai_financing",
+        "stage": "recognized",
+        "issuer_treatment": "Passifs courants accrual9,406 M$ dontcompensation5,436/VAT1,225 ; stock comptable fin2025 pas décaissement ou dette PIK IA démontré."
+      }
+    ]
+  }
+]
