@@ -1,0 +1,140 @@
+[
+  {
+    "index": 339,
+    "classification": "material",
+    "summary": "Fin2025 GECCnotesprincipal194,383 M$ : GECCO38,983 échéancejuin2026 aprèsrachat18,5 M$ décembre ; GECCI56,5/GECCH41,4/GECCG57,5. GECCM totalementremboursé2024/GECCZ40 M$sept2025 éteints. Coverage158,1% procheminimum150 ; coupons trimestriels cash sansoptionholderputanticipé.",
+    "rows": [
+      {
+        "quote": "our asset coverage ratio was approximately 158.1%",
+        "model_quantity": "annual_note_maturities_retired_series_and_thin_coverage",
+        "stage": "recognized",
+        "issuer_treatment": "Fin2025 GECCnotesprincipal194,383 M$ : GECCO38,983 échéancejuin2026 aprèsrachat18,5 M$ décembre ; GECCI56,5/GECCH41,4/GECCG57,5. GECCM totalementremboursé2024/GECCZ40 M$sept2025 éteints. Coverage158,1% procheminimum150 ; coupons trimestriels cash sansoptionholderputanticipé."
+      }
+    ]
+  },
+  {
+    "index": 340,
+    "classification": "material",
+    "summary": "CWII achats2024par2 M$/2025par2,4 M$ auprèsfilialeGESF sont transfertssecondaires, pasnouveauxapportsemprunteur. CWIVcommit5 M$/funded2,5 M$venduàGESF2025 : baisseexpositiondirecte maisresteindirectviaGESF87,5%, pascessionexterneprouvée. GESF/CLOJV71,25% contrôlésInvestmentCompanyAct maisnonconsolidésportfolio ; valeurs38,462/41,425 M$ déjàinvestGECC, ne pasajouteractifs96,463/58,233. GrossadditionscomprendPIK/exchanges, pasallcash.",
+    "rows": [
+      {
+        "quote": "from a wholly-owned subsidiary of GESF.",
+        "model_quantity": "coreweave_secondary_affiliate_transfers_not_primary_funding",
+        "stage": "recognized",
+        "issuer_treatment": "CWII achats2024par2 M$/2025par2,4 M$ auprèsfilialeGESF sont transfertssecondaires, pasnouveauxapportsemprunteur. CWIVcommit5 M$/funded2,5 M$venduàGESF2025 : baisseexpositiondirecte maisresteindirectviaGESF87,5%, pascessionexterneprouvée. GESF/CLOJV71,25% contrôlésInvestmentCompanyAct maisnonconsolidésportfolio ; valeurs38,462/41,425 M$ déjàinvestGECC, ne pasajouteractifs96,463/58,233. GrossadditionscomprendPIK/exchanges, pasallcash.",
+        "counterparty": "CoreWeave",
+        "counterparty_evidence": "named",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 341,
+    "classification": "material",
+    "summary": "FYplacementPoorRichard14,3 M$net/0,7coûts réel etATM13 M$net contre100 M$cap ; affiliationsGEG aux véhicules25%pascontrôleautomatique. Placements2024 historiques noncash2025 ; pasdéduireexactprimaryCoreWeave decollectefongible.",
+    "rows": [
+      {
+        "quote": "aggregate net proceeds of $13.0 million",
+        "model_quantity": "actual_primary_issuer_equity_vs_atm_capacity",
+        "stage": "recognized",
+        "issuer_treatment": "FYplacementPoorRichard14,3 M$net/0,7coûts réel etATM13 M$net contre100 M$cap ; affiliationsGEG aux véhicules25%pascontrôleautomatique. Placements2024 historiques noncash2025 ; pasdéduireexactprimaryCoreWeave decollectefongible."
+      }
+    ]
+  },
+  {
+    "index": 342,
+    "classification": "context_only",
+    "summary": "Segmentunique variationnetassetsinclutFVnoncash, pasmesurecashincomeAI ; performanceCODMneventilepasCW.",
+    "rows": [
+      {
+        "quote": "Net increase (decrease) in net assets resulting from operations",
+        "model_quantity": "single_bdc_segment_nav_measure_not_cash",
+        "stage": "recognized",
+        "issuer_treatment": "Segmentunique variationnetassetsinclutFVnoncash, pasmesurecashincomeAI ; performanceCODMneventilepasCW."
+      }
+    ]
+  },
+  {
+    "index": 343,
+    "classification": "context_only",
+    "summary": "BDC peutoriginerETachetersecondaire, CLOetwarehouse ; mandate seulneprouvepasapportIAprimaire/controlenommé.",
+    "rows": [
+      {
+        "quote": "directly with issuers and in the secondary markets",
+        "model_quantity": "primary_and_secondary_mandate_not_transaction_proof",
+        "stage": "recognized",
+        "issuer_treatment": "BDC peutoriginerETachetersecondaire, CLOetwarehouse ; mandate seulneprouvepasapportIAprimaire/controlenommé."
+      }
+    ]
+  },
+  {
+    "index": 344,
+    "classification": "material",
+    "summary": "Revolver50 M$capdepuisaoût,0drawDec, accordion90 discrétionCNB ; springmatur31mai2026 siGECCO nonrefinancé avant, sinon5mai2027. Covenantsnetassets80 M$/coverage150%/bank300%; réelcoverage158,1 minthin. GECCO38,983 M$jun26 encoreouvertDec ; GECCM/Zremboursés. IntérêtsFY18,405=15,626borrowing+1,757amort+1,022extcost, doncpas18,405cashcoupon.",
+    "rows": [
+      {
+        "quote": "May 31, 2026 if the Company’s 5.875% notes due 2026 have not been refinanced",
+        "model_quantity": "springing_revolver_maturity_and_cash_interest_cost_split",
+        "stage": "recognized",
+        "issuer_treatment": "Revolver50 M$capdepuisaoût,0drawDec, accordion90 discrétionCNB ; springmatur31mai2026 siGECCO nonrefinancé avant, sinon5mai2027. Covenantsnetassets80 M$/coverage150%/bank300%; réelcoverage158,1 minthin. GECCO38,983 M$jun26 encoreouvertDec ; GECCM/Zremboursés. IntérêtsFY18,405=15,626borrowing+1,757amort+1,022extcost, doncpas18,405cashcoupon.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 345,
+    "classification": "material",
+    "summary": "NAVaction11,79→8,07 FY, revenuNII1,40 vsdistribdéclarées1,48, -3,52unrealized et-0,45realized. Netassets112,946 M$ ; rendementNAV-21,03%pasdefaultCWidentifié. Ratioexpenses24,18%incldettepasrendementprêt.",
+    "rows": [
+      {
+        "quote": "Distributions declared from net investment income",
+        "model_quantity": "nav_decline_distribution_nii_gap_not_named_ai_default",
+        "stage": "recognized",
+        "issuer_treatment": "NAVaction11,79→8,07 FY, revenuNII1,40 vsdistribdéclarées1,48, -3,52unrealized et-0,45realized. Netassets112,946 M$ ; rendementNAV-21,03%pasdefaultCWidentifié. Ratioexpenses24,18%incldettepasrendementprêt.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 346,
+    "classification": "material",
+    "summary": "Aucununfundedportfolio commitmentDec selonnotenarrow ; sociétéreconnaîtnegativeCFO/netassetsdecline maisjugecapacitépayerordinaire. LitigeIntrepidprétrial pasprovisionquantifiéeniAI. Ne pasétendrezéroengagementàtoutgarantie/externe.",
+    "rows": [
+      {
+        "quote": "the Company had no unfunded commitments",
+        "model_quantity": "annual_no_unfunded_portfolio_not_all_contingencies_zero",
+        "stage": "recognized",
+        "issuer_treatment": "Aucununfundedportfolio commitmentDec selonnotenarrow ; sociétéreconnaîtnegativeCFO/netassetsdecline maisjugecapacitépayerordinaire. LitigeIntrepidprétrial pasprovisionquantifiéeniAI. Ne pasétendrezéroengagementàtoutgarantie/externe.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 347,
+    "classification": "material",
+    "summary": "InvestFV331,071 M$dontL3153,055 etNAV52,188 horsL3 ; troisNAVvéhiculesretraits≤annuelrestrictif sansdurationfixe. L3purchases77,026 inclPIK/refi/corporateactions pascashprimaireIA. Changementspricingtransparencytransfertsnonvente. PertesunrealizedL3held17,288 M$différentesrollforward8,374carcessions/reversals ; aucuneattributionCWgénérique.",
+    "rows": [
+      {
+        "quote": "capitalized PIK income, and securities received in corporate actions",
+        "model_quantity": "level3_purchases_include_non_cash_nav_illiquid",
+        "stage": "recognized",
+        "issuer_treatment": "InvestFV331,071 M$dontL3153,055 etNAV52,188 horsL3 ; troisNAVvéhiculesretraits≤annuelrestrictif sansdurationfixe. L3purchases77,026 inclPIK/refi/corporateactions pascashprimaireIA. Changementspricingtransparencytransfertsnonvente. PertesunrealizedL3held17,288 M$différentesrollforward8,374carcessions/reversals ; aucuneattributionCWgénérique.",
+        "judgment_sensitive": true
+      }
+    ]
+  },
+  {
+    "index": 348,
+    "classification": "material",
+    "summary": "ASC946investmentcompany portfolioFVnonconsol. PIK reconnu séparé seulementsolelyinkind ouélectiontoggle/payreceived ; accretionOID/upfrontfees etCLOeffectiveyield noncashdiffdistribution. TotalportfolioPIKshare nonchiffréici ≠ zéroCWabsencefootnotePIK. RICdistribution90%ICTIinclPIKpeutcréerbesoincash avantcouponcash. DDTLunfundedpeutcoût/FVnégatifs≠cashremboursé. GECMvaluationdesignee/tierssaufsmall<5%aggregate/<1%each, jugementnonindépendantaudit.",
+    "rows": [
+      {
+        "quote": "including PIK interest",
+        "model_quantity": "ric_distribution_cash_pressure_and_pik_reporting_rule",
+        "stage": "recognized",
+        "issuer_treatment": "ASC946investmentcompany portfolioFVnonconsol. PIK reconnu séparé seulementsolelyinkind ouélectiontoggle/payreceived ; accretionOID/upfrontfees etCLOeffectiveyield noncashdiffdistribution. TotalportfolioPIKshare nonchiffréici ≠ zéroCWabsencefootnotePIK. RICdistribution90%ICTIinclPIKpeutcréerbesoincash avantcouponcash. DDTLunfundedpeutcoût/FVnégatifs≠cashremboursé. GECMvaluationdesignee/tierssaufsmall<5%aggregate/<1%each, jugementnonindépendantaudit.",
+        "judgment_sensitive": true
+      }
+    ]
+  }
+]
