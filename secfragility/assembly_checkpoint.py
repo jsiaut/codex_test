@@ -14,7 +14,17 @@ INPUTS=['config.yaml','schema.sql','queries.sql','work/run.json','work/observati
 def inputs(root):
     files=[root/x for x in INPUTS if x!='work/run.json' and (root/x).exists()]
     files+=list((root/'work/observations').glob('*.jsonl'))
-    return {str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)}
+    files+=list((root/'secfragility').glob('*.py'))
+    files+=[root/n for n in ('requirements.txt','work/inventory.json','work/collection.json',
+            'work/deepening_authorization.json','work/deepening_filings.json','work/deepening_contract_sources.json') if (root/n).exists()]
+    from importlib.metadata import version,PackageNotFoundError
+    import sys
+    result={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(set(files))}
+    result['@python']='.'.join(map(str,sys.version_info[:3]))
+    for name in ('duckdb','lxml','numpy','pandas','pytz','PyYAML','zstandard'):
+        try:result['@dependency/'+name]=version(name)
+        except PackageNotFoundError:result['@dependency/'+name]='absent'
+    return result
 
 
 def save(db,root,as_of):

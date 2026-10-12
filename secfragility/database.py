@@ -78,6 +78,30 @@ CONTROL_IDS = ['c1_balance_components','c2_cash_flow_components','c3_cash_reconc
 CONTROL_IDS.append('targeted_commitment_reconciliation')
 TABLES = ('documents','facts','observations','entities','links','measures','controls','exclusions')
 
+def connect(path=None):
+    """Every calculation and validation uses one explicit publication convention."""
+    db=duckdb.connect(str(path) if path else ':memory:')
+    db.execute("SET TimeZone='UTC'")
+    return db
+
+def load_queries(db,root):
+    import re
+    source=(root/'queries.sql').read_text()
+    core,marker,extension=source.partition('-- SoftBank official-source extension:')
+    db.execute(core)
+    if marker:
+        for statement in extension.split(';'):
+            paths=re.findall(r"read_parquet\('([^']+)'\)",statement)
+            if any(not (root/p).is_file() for p in paths):continue
+            for p in paths:statement=statement.replace("read_parquet('"+p+"')","read_parquet("+sql_literal(str((root/p).resolve()))+")")
+            if statement.strip():db.execute(statement)
+
+def comparison_fields(db,table,bag):
+    columns=[r[1] for r in db.execute(f"PRAGMA table_info('{table}')").fetchall()]
+    return ','.join((bag+'("'+c+'") AS "'+c+'"') if c in ('lineage','evidence') else
+        'CASE WHEN unit=\'ratio\' THEN NULL ELSE currency END AS currency' if table=='measures' and c=='currency'
+        else '"'+c+'"' for c in columns)
+
 
 def sql_literal(s: str) -> str:
     return "'" + s.replace("'", "''") + "'"
@@ -86,7 +110,7 @@ def sql_literal(s: str) -> str:
 def create(root: Path, path=None):
     from decimal import Decimal, InvalidOperation
     from functools import lru_cache
-    db = duckdb.connect(str(path) if path else ':memory:')
+    db = connect(path)
     db.execute('SET threads=4')
     db.execute("SET memory_limit='8GB'")
     spill=root/'work/duckdb_spill';spill.mkdir(parents=True,exist_ok=True)
@@ -166,19 +190,10 @@ def bulk_insert(db,table,rows,root,tag):
     db.execute(f'INSERT INTO {table} BY NAME SELECT * FROM read_json({sql_literal(str(path))},format=\'newline_delimited\',columns={specification})')
 
 
-def export(db, destination: Path):
-    from tempfile import TemporaryDirectory
-    destination.mkdir(parents=True, exist_ok=True)
-    # Git checkpoints can run while cached facts are being reconstructed.
-    # Keep the prior exports until every new file has finished writing.
-    with TemporaryDirectory(prefix='.export-', dir=destination) as staging:
-        for table in TABLES:
-            info = db.execute(f"PRAGMA table_info('{table}')").fetchall()
-            keys = [r[1] for r in info if r[5]]
-            target = Path(staging) / (table + '.parquet')
-            db.execute(f'COPY (SELECT * FROM {table} ORDER BY {",".join(keys)}) TO {sql_literal(str(target))} (FORMAT PARQUET)')
-        for table in TABLES:
-            (Path(staging) / (table + '.parquet')).replace(destination / (table + '.parquet'))
+def export(db, destination: Path, *, unchanged=None, validator=None):
+    from .publication import deferred,write
+    if deferred(destination):return
+    return write(db,destination,TABLES,sql_literal,unchanged=unchanged,validator=validator)
 
 
 def table_counts(db) -> dict:

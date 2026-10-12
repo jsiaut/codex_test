@@ -3,6 +3,62 @@ import json,hashlib
 from .assembly import rows,exclusion
 from .database import TABLES
 
+def normalize_dimensions(db):
+    """Ratios are dimensionless; currencies remain on their underlying facts."""
+    count=db.execute("SELECT count(*) FROM measures WHERE unit='ratio' AND currency IS NOT NULL").fetchone()[0]
+    db.execute("UPDATE measures SET currency=NULL WHERE unit='ratio'")
+    return count
+
+def final(db,as_of):
+    """Read-only invariants on the completed eight-table result, all extensions."""
+    from .database import sql_literal
+    queries={
+      'no_value_for_ND':"SELECT count(*) FROM measures WHERE status IN ('not_determinable','blocked_overlap','not_applicable') AND value IS NOT NULL",
+      'ND_reason':"SELECT count(*) FROM measures WHERE status='not_determinable' AND nd_reason IS NULL",
+      'amount_edge_admissible':"SELECT count(*) FROM links WHERE edge_kind='amount' AND (tier NOT IN ('A','B','C','D') OR counterparty_evidence NOT IN ('named','derivable') OR amount IS NULL OR period_end IS NULL)",
+      'no_pending_amount_edges':"SELECT count(*) FROM links l WHERE edge_kind='amount' AND (NOT EXISTS (SELECT 1 FROM entities e WHERE e.entity_id=l.from_entity_id AND e.entity_status='confirmed') OR NOT EXISTS (SELECT 1 FROM entities e WHERE e.entity_id=l.to_entity_id AND e.entity_status='confirmed'))",
+      'no_signed_financing_amount_edge':"SELECT count(*) FROM links WHERE edge_kind='amount' AND family='financing' AND stage NOT IN ('drawn_or_paid','recognized')",
+      'dimensionless_ratios':"SELECT count(*) FROM measures WHERE unit='ratio' AND currency IS NOT NULL",
+      'control_reasons':"SELECT count(*) FROM controls WHERE status IN ('mismatch','not_testable') AND explanation_code IS NULL",
+      'fact_documents_resolve':"SELECT count(*) FROM facts f WHERE NOT EXISTS (SELECT 1 FROM documents d WHERE d.document_id=f.document_id)",
+      'observation_documents_resolve':"SELECT count(*) FROM observations o WHERE NOT EXISTS (SELECT 1 FROM documents d WHERE d.document_id=o.document_id)",
+      'tagged_references_resolve':"SELECT count(*) FROM observations o WHERE tagged_fact_id IS NOT NULL AND NOT EXISTS (SELECT 1 FROM facts f WHERE f.fact_id=o.tagged_fact_id)",
+      'link_observations_resolve':"SELECT count(*) FROM links l WHERE observation_id IS NOT NULL AND NOT EXISTS (SELECT 1 FROM observations o WHERE o.observation_id=l.observation_id)",
+      'no_numeric_nil':"SELECT count(*) FROM facts WHERE is_nil AND value IS NOT NULL",
+      'no_abstention_amount':"SELECT count(*) FROM observations WHERE abstained AND amount IS NOT NULL",
+      'ordered_bounds':"SELECT count(*) FROM measures WHERE (value_lower IS NULL)!=(value_upper IS NULL) OR value_lower>value_upper",
+      'no_future_facts':f"SELECT count(*) FROM facts WHERE acceptance_datetime>{sql_literal(as_of)}::TIMESTAMPTZ OR knowledge_date>{sql_literal(as_of)}::TIMESTAMPTZ::DATE",
+      'no_future_observations':f"SELECT count(*) FROM observations WHERE knowledge_date>{sql_literal(as_of)}::TIMESTAMPTZ::DATE",
+      'historical_numeric_cutoffs':"SELECT count(*) FROM measures WHERE view='as_known' AND value IS NOT NULL AND (information_cutoff IS NULL OR knowledge_date>information_cutoff::DATE)",
+    }
+    violations={name:db.execute(query).fetchone()[0] for name,query in queries.items()}
+    db.execute('''CREATE OR REPLACE TEMP VIEW final_numeric_sources AS
+      SELECT fact_id id,tier,filing_status,knowledge_date FROM facts UNION ALL
+      SELECT observation_id,tier,filing_status,knowledge_date FROM observations UNION ALL
+      SELECT document_id,tier,filing_status,knowledge_date FROM documents UNION ALL
+      SELECT link_id,tier,filing_status,knowledge_date FROM links''')
+    # Published regulated Japanese statements have their own authorized variant;
+    # they do not become filed SEC evidence or feed the legacy EDGAR calculation.
+    violations['numeric_lineage_resolves']=db.execute('''SELECT count(*) FROM measures m,json_each(m.lineage) j
+       WHERE (m.value IS NOT NULL OR m.value_lower IS NOT NULL OR m.numerator IS NOT NULL OR m.denominator IS NOT NULL)
+        AND NOT EXISTS (SELECT 1 FROM final_numeric_sources s WHERE s.id=json_extract_string(j.value,'$'))''').fetchone()[0]
+    violations['numeric_evidence_qualified']=db.execute('''SELECT count(*) FROM measures m,json_each(m.lineage) j
+      JOIN final_numeric_sources s ON s.id=json_extract_string(j.value,'$')
+      WHERE (m.value IS NOT NULL OR m.value_lower IS NOT NULL OR m.numerator IS NOT NULL OR m.denominator IS NOT NULL)
+       AND (s.tier IN ('E','F') OR (s.filing_status NOT IN ('filed','furnished')
+        AND NOT (m.variant='extended_official_JP_sources' AND s.filing_status IN ('published_regulated','issuer_disclosure'))))''').fetchone()[0]
+    result=dict(as_of=as_of,checks={k:v==0 for k,v in violations.items()},violations=violations,
+                stage='after_all_extensions',read_only=True,independent_audit_performed=False)
+    if any(violations.values()):raise RuntimeError('Final delivery invariant failed: '+str({k:v for k,v in violations.items() if v}))
+    return result
+
+def snapshot(directory,as_of):
+    from .database import connect,sql_literal
+    db=connect()
+    for t in TABLES:db.execute('CREATE VIEW '+t+' AS SELECT * FROM read_parquet('+sql_literal(str(directory/(t+'.parquet')))+')')
+    try:return final(db,as_of)
+    finally:db.close()
+
 
 def run(db,root,as_of):
     # Enrichment rows use their snapshot timestamp as as_of. Keep it as the

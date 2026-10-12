@@ -1,0 +1,316 @@
+{
+  "archive": "work/audit_20261012/submission_metadata.tar.zst",
+  "sha256": "4aa1c60c2a94a466cf1c2ce8c3241a17245e50d880e3cf45f1c0dc2d3a047623",
+  "entries": [
+    {
+      "document_id": "078067b1e308bee70492eb002e49452827240ee2617306c5f9558ec12b8bbbdf",
+      "url": "https://data.sec.gov/submissions/CIK0000002488.json",
+      "cache_path": "cache/api/af9e651efd9b6b189e76d0a8fe985ea25056e274404f75e81e02380dc0dce1ec/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "9789d97cfb1b41fb58cc5fcebd13cfced084409dc3bbcfb6ca1382304f092493",
+      "compressed_sha256": "4c50c017c7777920315908267b47ad25ac978260637381e8a57abe9de76c25f9"
+    },
+    {
+      "document_id": "0c1f8d584fb7daf35250fc585caf81f10fec1207bc9c20c6b32312e09e0efc88",
+      "url": "https://data.sec.gov/submissions/CIK0001326801-submissions-002.json",
+      "cache_path": "cache/api/bb5ad479d56e5f63ede50b05ae11e0c62a520be811ca50610703637576676e74/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "159ce1808e1f504d67e080411afa744f4c7a7491d75588df7356effda5e1951e",
+      "compressed_sha256": "817cf5837c0c7c4bd6b2136cf72e22f654f9c20eee5885bc611a07c7bb94aac5"
+    },
+    {
+      "document_id": "18c8ef3685eac29d043783fb52d3ca832b16b7c55299536681dcf5d3fe3518dd",
+      "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "cache_path": "cache/api/ef055d13b1b76eeab2f59bd00af5b3a5939b20962125452d1323a564cb8fcd04/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "2484a2a3b5677d892a1b25af573ce4eda7b6f449f5eda41bac6b3f106dc3139c",
+      "compressed_sha256": "34c18ac92f6770b7ffaf92e6e3ee5c37c88e7786f57cd2caf874256d2e8d3943"
+    },
+    {
+      "document_id": "22e50f3d18dcc808496674959959df01156da3ac176820c7750a982332fd509d",
+      "url": "https://data.sec.gov/submissions/CIK0000002488-submissions-002.json",
+      "cache_path": "cache/api/c29f65cad8af4ee788baa545b6f9c2e199da6ddfe24528ea8b8ceded12a518a1/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "c0387910f8a6f4af6af5ce95a49df80c1b624e8963d1080d894c1b109469d4e0",
+      "compressed_sha256": "6310fba7d060c4d1ebc1c6239e9fc0ca865798f9f2e960ebbc27b02136f937cd"
+    },
+    {
+      "document_id": "25dea1ee99545b95ae0ca4ee9107abb575b22fb5b10008a2cef2dc4981ce81a5",
+      "url": "https://data.sec.gov/submissions/CIK0001859392.json",
+      "cache_path": "cache/api/3c94bf22c817398ec7d7285009ad7dd4992c8faa48cc3fefdba5a78ffab34eeb/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "db13fbc772bf313aa833779f171fc0f4443c757918730d092b79d31b7c2c262c",
+      "compressed_sha256": "3821575b0b9991abe4979bed22addd773f5478526bbe3966f3bde0d5d8bba555"
+    },
+    {
+      "document_id": "355815225d00a4e2efda6812baa909e9315c779fe5aeb93de27d521b930321e3",
+      "url": "https://data.sec.gov/submissions/CIK0001018724-submissions-002.json",
+      "cache_path": "cache/api/f4bbedc012c887b7c4ca30c8bb0c0ebb1b56ce18ab26caa6fd548ac736b3c4b3/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "2826573f41f877bbea71600dcf5c357f9e3b0114651dd949a200842f75b626c1",
+      "compressed_sha256": "38da352a12ad9683080418e9c67e8f374cc3894aea507ca08d5fdff912f55683"
+    },
+    {
+      "document_id": "35e623f4b5de8999a40e006e250fd38fec7a49ee9dd0895eb803fce97b750b41",
+      "url": "https://data.sec.gov/submissions/CIK0001769628-submissions-001.json",
+      "cache_path": "cache/api/42976f6025c1aed8287c228321db6dda89cf3b05bc2892356dffd59cf30905be/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "80fe7f7a4132e87369a6ad1551f9e5f74a629ab4cfaf7cfc0745e5034eb14767",
+      "compressed_sha256": "e4a12006c70f3f263d4e7442c9469840442b17dd5e71c86027ba8fa8d7eb0f73"
+    },
+    {
+      "document_id": "3709730426f9c8df901b99df181c8987004138e3df6a49cc179dffa53379f899",
+      "url": "https://data.sec.gov/submissions/CIK0001819989.json",
+      "cache_path": "cache/api/a41c44f8d4f910bc66e35ca25351dc948252d9fd676cae13b81f45c2f6a233aa/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "4058191bb9d574b90cf4628691acdf3e93fbd8f30d802004d4e5e4981887d05a",
+      "compressed_sha256": "ec4e73513acfc3c55a9f98c2643454ec598aa833ecf6a6870b58a4d1bf7bbab3"
+    },
+    {
+      "document_id": "3c40d4a86297f731e46ab94f4360ec38b9410094bc6a276dd49df70b35225331",
+      "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+      "cache_path": "cache/api/da4d38e808e27bafd4a95fcd7a3c8830a6252df50ce1b7f3ae0eef9729ca4bcf/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "9434407b197d6322de4bece8ad3b69459c8d6ddf3a68526b4b22b02e8175d33c",
+      "compressed_sha256": "540ae66a7a8e2b2c2ecf450c62f29e9e69f9ad906193441740f3a3756eb5374b"
+    },
+    {
+      "document_id": "3d4909a427b49499193a6951b28281e67e51090efc649cadbdfd6dd967731942",
+      "url": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "cache_path": "cache/api/d19f55a5af75132c07e3974cdebaa0fe45c6d60de6257346bf55cee95005665f/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+      "compressed_sha256": "ca00040cab155a6b84260596a91905dbde6c06aa82db90c83ae283d512fd2463"
+    },
+    {
+      "document_id": "3e5e4d9aafac9a82b39daa181d0af9fa09b1c62316bbef86eda8ef0fb06f97ab",
+      "url": "https://data.sec.gov/submissions/CIK0001058057.json",
+      "cache_path": "cache/api/1ffabfa50db389f47ec63bf3f50cc8540281535e44bd8836bb3d377e9b67be67/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "05bf265c30cf91b971f1d3a0cd62eebfc93388b8a231e998df95d89a9cd29f53",
+      "compressed_sha256": "b55ff4aff6a54f2d7b396ee093213b6123aee17f40df57376c51317392fe91ab"
+    },
+    {
+      "document_id": "3e8368828705f5f869ef97869983af5556e4760724df8359d0d45b99eb6b6fe6",
+      "url": "https://data.sec.gov/submissions/CIK0001375365-submissions-001.json",
+      "cache_path": "cache/api/a0b7533b5272df635a34866418a0b6dd6c4763eee952df6e6df3ac7a6d141034/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "ec2845b1ca3264508d2d3b2a30d1563bc48f7c3228305fb71a7a9fb474015263",
+      "compressed_sha256": "616d7710e3d8b232b10e2f8d181f53084ac0d8f6071a251b884c69cd57d273c2"
+    },
+    {
+      "document_id": "41a29ac0887ceffcac75bed8f5de17465ef746c7c5f1ffa591dbd514493f9ba4",
+      "url": "https://data.sec.gov/submissions/CIK0001045810.json",
+      "cache_path": "cache/api/67b767aac259adf10f9cb865ec2a59350bc70cba9eb9766ac28714fc877013fc/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "0b3ce6a0cd78c43d69b19b7efb9effcd79d0c6bd4c43606aac84d0f872cc9c73",
+      "compressed_sha256": "99ebba6d5661f1c6b4f89e2929f7d2e4e6f2d40109ffac84399f6dc489e5d6f3"
+    },
+    {
+      "document_id": "45efaa3f21d6602775d150e37967354e54ff2197a1de245639d0564712d1a45f",
+      "url": "https://data.sec.gov/submissions/CIK0001018724-submissions-001.json",
+      "cache_path": "cache/api/c585be80759be87db86623a0c048b168ba89b7159204f359eb861c8a36cbd7da/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "4d75fbd7d19d9955dcb0b19ebbd0cf1de8a1aff0cc0436a2cc1d0c5333c3a12a",
+      "compressed_sha256": "d6d8a89a05af70ea24a709e4f6bd50f5000de9c64fd1b9748ecc4d26acc7fe31"
+    },
+    {
+      "document_id": "51798f14f7c7fc1808228dee0ae6a15300a1dbe1d7a4aa3e0807648eaf63a54e",
+      "url": "https://data.sec.gov/submissions/CIK0001441634.json",
+      "cache_path": "cache/api/ee16f08b160b46bfe77b2258eb548d8753d9c43ecfb52f32db2ed4efa370f698/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "59341b3e9a173da0e93550bd8054725c89bf3996743b2c26d9e202037253884e",
+      "compressed_sha256": "43903b7d51431e62ec07866f7a4998847e5f31535775c9861403aec2639e445b"
+    },
+    {
+      "document_id": "542c3a8aeeba0ccea4033d26d8883ef6364f193ff0f5f1c466752a2ab49d65f7",
+      "url": "https://data.sec.gov/submissions/CIK0001878848.json",
+      "cache_path": "cache/api/e05165f11147223c0ce00e0d102f9ee863a6cceef6ea8d4f8ba3fed379941572/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "084ccb2e12daf8ed95f63037d6576d95b4b85b51c7cae2f27de0f1c4455cf322",
+      "compressed_sha256": "4a0b62fdde59a26f61a5bc65645e0d153fd63397442dc51ade93b1d0da121ef9"
+    },
+    {
+      "document_id": "596eb59f66cf68b84d25a38f2ff3ccf2eef6fc0d2764ee7dc6e455776dd7caea",
+      "url": "https://data.sec.gov/submissions/CIK0001083301-submissions-001.json",
+      "cache_path": "cache/api/9e46132ade3f7bf6eac86b1108ac2986af8e972402489dcf7f3c93ceedfe09a1/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "40e465739592737e580af8f290307df6a950e817783a422d2e0f262d1f387410",
+      "compressed_sha256": "12190758172be9e245839cefa90ee7b8ae0ac81ca7f04afba43fc5453ee5fe78"
+    },
+    {
+      "document_id": "5987da191952a4ccb605f018d0e7240082094bc98440ae0bb91a28b3eff61684",
+      "url": "https://data.sec.gov/submissions/CIK0001839341.json",
+      "cache_path": "cache/api/d37eaf88e6c8616e96ee5f7469fe7bfc7e8e06eafc0c96a7e45898029ec2cd5b/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "51f598838c17c5d63f5137ad1564cfbb200a488bf10dfa908a5f108cda1731a0",
+      "compressed_sha256": "e05709fac9179d949f6a7c1bd9c46d8d2a6a21b906b14297cd1c562bc1282d2e"
+    },
+    {
+      "document_id": "616bfd61272a1235c9f785c88ff78e96153536efb5df891a16b5673c859a4924",
+      "url": "https://data.sec.gov/submissions/CIK0001649338.json",
+      "cache_path": "cache/api/b8dd2553b99d8a01dee9639d6ac27caa8b383d6ccbc6e5eb71e225e64c66ab82/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "70fbb0b04602fa46842f80dd706f880ba23d5b8922284560912109a079571bb1",
+      "compressed_sha256": "96c06df3ba9d75b2628b58dd65e649a9922cd627bc908744741bb15648ee48e6"
+    },
+    {
+      "document_id": "6657f28fae5b54fc9edfec5277317a47088aeb6cbafd05eeb84f8d08cbf537b2",
+      "url": "https://data.sec.gov/submissions/CIK0000002488-submissions-001.json",
+      "cache_path": "cache/api/b6e92c3cf0d9134f7476cddc210a5f6831b0fc72e496e484643e89f2ef84f002/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "932d4367728ed290688674ab3631758eaac5b4351da36d56aefcf7df73389147",
+      "compressed_sha256": "4227deebcb0c087fa0b9879aee693d435b003e7ad051718c404071c457be3669"
+    },
+    {
+      "document_id": "66b23d4390fb560bdd9f1761dbd2589b10eb7698d51b3be7c9692e0c287ed9a1",
+      "url": "https://data.sec.gov/submissions/CIK0001835632.json",
+      "cache_path": "cache/api/31ad88afdc18a8fe2fa04c1b5bccc362ea73297018e1356b08027d1187ad8500/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "567dde7dff06a9aa64016448ad13ea382e5a4f94b9fe570d4ec4e6592c3b11b1",
+      "compressed_sha256": "311f483ff7cbedd1543e4a3ad83001e68cf6b5b81ae29b4c3faa6a7453f6c3c5"
+    },
+    {
+      "document_id": "6fdf19c9dd7562a8e7d773f28a4cc5934228d7cacef9f0b3966d4b2cc2c60489",
+      "url": "https://data.sec.gov/submissions/CIK0001144879.json",
+      "cache_path": "cache/api/921737a9b377409a7c8f73cd7671d3d0626989823799cdbc678d0000c18ba74f/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "69f32210abab5c696f6d066f043a100e3cba95a9733f2a00aca0126378b21ba6",
+      "compressed_sha256": "008ca9d2ab6b7edb7ebea3424880cc28cc326e7f3d312c7b038736e2d200ab04"
+    },
+    {
+      "document_id": "7767040e6729c0933570af8cb802c67877b41cfb6d7e5bacfddbd12cc272cb7c",
+      "url": "https://data.sec.gov/submissions/CIK0001730168.json",
+      "cache_path": "cache/api/a0bd7325c93f825da05d6d672037f524c097bd0860da1bede2461e85fc2e94de/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "b3bb8094e6809c7b3c7d2d7f419363b213bfa5071b40adb2bc2534317637f061",
+      "compressed_sha256": "5d0d395d8e42b866fb8db95a7045fd6746e7d3bfca4cf447f9178ad75b72f524"
+    },
+    {
+      "document_id": "81963ca40f912e931f0e9fcd4f9ab01d58980b92086f188b19e593c56b939730",
+      "url": "https://data.sec.gov/submissions/CIK0001375365.json",
+      "cache_path": "cache/api/bb4c7c885ebb3eda847558f02a13bd5cf2a844adabe0f3f6569084d42e922f2e/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "57efda7d4d37f544e9862fd65081b13d35bb566bdd1c1264f43e593535d8ec92",
+      "compressed_sha256": "fbdbf64f969037d3d6b4d0a1cb6574b27e143f1341a329b4a6e980156100ab51"
+    },
+    {
+      "document_id": "8372a3fcf96f220614b752735ddd4ca5f2c769fd3441903fd442e122ab1d2306",
+      "url": "https://data.sec.gov/submissions/CIK0000789019-submissions-002.json",
+      "cache_path": "cache/api/2d364a5310cfd45d17096fac6f6b519be34d983a1e06ceb3734d0b253c2550b3/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "80701da48a681872db8f52f243fee7c984b32c990fce78d499bb3f4cde0813cb",
+      "compressed_sha256": "f7ae78f58d79df22c3536553b82cb339c78612980881825955c1212fa5ef767a"
+    },
+    {
+      "document_id": "88f08d8aed6848177447699fce5fdfb93549aa04772a375416ae7b6e2d4bb42e",
+      "url": "https://data.sec.gov/submissions/CIK0001944366.json",
+      "cache_path": "cache/api/8a97026c2fd3cc0faf2d4569b94fad235a6baca6ba759abf30031230751e1d1f/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "c021614a256b26f20a5b653f4a6336961bd57ae57d730013c9e9cfd89ca44a8d",
+      "compressed_sha256": "5bfc153f4905093908feca55a82cef27d50bf90c2cbb97d6e5afa8d13c666ade"
+    },
+    {
+      "document_id": "8a294ad3f89c4a79a494cfe421be4363319b2ee9221ced859592f978b91b7e8a",
+      "url": "https://data.sec.gov/submissions/CIK0001341439.json",
+      "cache_path": "cache/api/122fc0bdc9b6f152476a524c81a2732a27ae3f21d4d500e77b7206281fdb94b7/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "bed0ec89b0d273799517d3e332b3a4ba3612168f0e4e9b963759b507f857adec",
+      "compressed_sha256": "bdd08a735cc0fb85bfdcac704429494ee94d85128d3f5ab7c3bb996b065e6c26"
+    },
+    {
+      "document_id": "8b42a0b25eadbff9bc66ea3d6fad6957c1a31519872ca27dba1c959db292522b",
+      "url": "https://data.sec.gov/submissions/CIK0001326801-submissions-001.json",
+      "cache_path": "cache/api/e132d14d5955f32ee4da2bee939c50da894cdf354f0e59db3a7033f570a25b01/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "dd36bbcd2c768b8888bcda970f2791b03b09811250ff26984a4c37532e1b9ca3",
+      "compressed_sha256": "ae76aff0ea60045f9b18542d6b1e188139365a2ebd3a85b3305b096ff82c8750"
+    },
+    {
+      "document_id": "8c7e7bc970b4c5833bf2e64fa3e7e5d92b07402c0a3ada3b8a9056559977394b",
+      "url": "https://data.sec.gov/submissions/CIK0001675033.json",
+      "cache_path": "cache/api/e1b737fad9187f07bdec2bd357cb3c244ae7eb940e3d3607d2ac601a7434ca32/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "bcf2365a8f385d6eeab4940ae4d37955f4622d8b9ceb7dc43368bd6f059d523e",
+      "compressed_sha256": "a7e396a63d0b2fb8e8d02eb54e1811060fd41d845ecf4418e7a2344c5bdb1bf8"
+    },
+    {
+      "document_id": "8cfd4caab9bc605f74b450ba2c51ad489531f03656c49723d01072fdb9633c65",
+      "url": "https://data.sec.gov/submissions/CIK0001571996-submissions-001.json",
+      "cache_path": "cache/api/da916986f82d028356db2dbd2129d8435b61021759d02bafd36af7aa1c72c10a/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "e5b3011afc8d41961ffe5e0b50237f47b694cddd649ffdd5ff18a4c94e97de43",
+      "compressed_sha256": "bb77186e61a25b6ed04b4fd584a53a0e29020e71409004831fb7d39e0b391a54"
+    },
+    {
+      "document_id": "a121a191e5fa86543b8ead5f5343ef844be0f2478aeffdacc3912fd119537179",
+      "url": "https://data.sec.gov/submissions/CIK0001652044-submissions-001.json",
+      "cache_path": "cache/api/df25bb874650dcee4564ec746fdfd8eeea29b70f43fbace1d2ea80262fd8ea74/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "53c87eb0bbd80844df1f194a457e23cf560822d18de24da12cf3de0563165709",
+      "compressed_sha256": "51628feaebaf5a20beae4b2e694526bc0df78397a215ed8709ff6f2b100b176c"
+    },
+    {
+      "document_id": "a22ed53839f8f4c55de2df47633af1b5c43821a6bc39107641e2aa7920ea722b",
+      "url": "https://data.sec.gov/submissions/CIK0001462056.json",
+      "cache_path": "cache/api/8b3a16c287ff0991eaa641ac943728c9203e5fb67f887a62196595252e341546/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "7da71d6d5bb24df31f9466b1aa8bad56e74deabc910f304b6737888e0e68b3c3",
+      "compressed_sha256": "6a7c0bf56268b8dd3887a04bcd6e52d74d02cf4401c7596ae015d74e35e08b6d"
+    },
+    {
+      "document_id": "a9122f279d9dd9c97e3fe41577ee3be2bc77a58c1adb2c602951f9fabfac824f",
+      "url": "https://data.sec.gov/submissions/CIK0001858681.json",
+      "cache_path": "cache/api/8a454c984b2b14f1bf20cd8e2edfeb48e520f10666f1713ef181c58ce19ac8a0/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "858c273b90b8fa4a8d5592bd97ee4ec9d335f7bd08a5d49a03959c500c4c0dae",
+      "compressed_sha256": "18ded449ae8c5cf3fd0bed7895753a5d8f88e65aeba261c59ee5611333b42899"
+    },
+    {
+      "document_id": "bc7dda6c0671c6a5e014d529c0221488ceacfe60e8b36d1345e6f6517b28a3f7",
+      "url": "https://data.sec.gov/submissions/CIK0001341439-submissions-001.json",
+      "cache_path": "cache/api/2aec9796ad5d9c55c67b60734d1a6a43cfca6ff6d618a520ed72d08657e954af/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "73288c48255e5545311b61be33707a19125db3ed2ca89a0e0d7a733eea0c6ea8",
+      "compressed_sha256": "2cdba894809441731a9d5e206305a206063db943350ad58972b8fc7348536179"
+    },
+    {
+      "document_id": "c08e7fd7fd0cd43b4f2388c724f6c26862b88c0f4b182eb6e6cdd85bd6b7947d",
+      "url": "https://data.sec.gov/submissions/CIK0001083301.json",
+      "cache_path": "cache/api/bba9598ba5501b615ad788d11ccd8a06421c97d1677d1ccd10914134660b9006/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "3eabefb95c336b589fc70821ceafd0c8e954000b1ce99ff28ab2aa97794a7d39",
+      "compressed_sha256": "be19bb503c09e61c20c5cd8a644f4c33dfb64467b5f9cb1c83d762ae0df892e8"
+    },
+    {
+      "document_id": "d0bedbe4c2f39c8ca0ab13132744f0a7ebc36cd2f719d6ce806fbb0f5fecef31",
+      "url": "https://data.sec.gov/submissions/CIK0001513845.json",
+      "cache_path": "cache/api/a3c3654dc552e7033936e7eb998e9988142fc4c273865dc5292e0e822686f1ea/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "882e3d16637df013b43f7c59fd0ae643b7d2e517b45f209d7c80af90922198e5",
+      "compressed_sha256": "1dbd743ca37a78e1e66cf0f8fd301790fe33223c6a0012d962264b178f363c22"
+    },
+    {
+      "document_id": "d85246d66af796177cbab9609f0e927c93805bcc3ea812901c1d8b3d0bc6c77d",
+      "url": "https://data.sec.gov/submissions/CIK0001571996.json",
+      "cache_path": "cache/api/86b63356032031c7db2f65727dda462ae4014ac2d5811daa03905b17f0f3795b/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "96f2de217327f040027dc64540bf0412b3aad0b9183181abc990c3f8ccad7354",
+      "compressed_sha256": "2d21a83bcc6659c3b5b89127d779f745026e3a351348a4efc3c9eed3a74e8f9b"
+    },
+    {
+      "document_id": "db5892ac435bb7b485c92870b2de5906ecad0784eeae1a317689c908c8410053",
+      "url": "https://data.sec.gov/submissions/CIK0001769628.json",
+      "cache_path": "cache/api/a1ae1ee1f9832d31e6330ce3708227986675c6418b90795ff2e1f1c9ab28bd0d/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "7c975ef50c05ec49d880f995e6cf047d0140d43cecee92f81f20e37ce1ebd755",
+      "compressed_sha256": "4c1a7f3c9bcdbcf6f26c7b3082336fa7b36ea9272ace7b7c9bd07952617f599f"
+    },
+    {
+      "document_id": "dc083e2bb65652b06b88be787819b8085feddabb5f98d63362d9e1fa76907593",
+      "url": "https://data.sec.gov/submissions/CIK0001849894.json",
+      "cache_path": "cache/api/75d3b00d72303ac3bf7bec7031cee4db05f40404b4293ff766c88287a72f92a6/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "5df507b8e99710fd38260d57388d783409bf5fbaa46ac05575727e080b2b9cf6",
+      "compressed_sha256": "de057b0b792ca0b8dbba5aca9d755e956e1b57f86e9d9edf95aef54af7b0fca3"
+    },
+    {
+      "document_id": "dd78ed09a9394ab8e3a695eabe5eb5a71fa6c8c4224de337a1f571a8c8ab3e17",
+      "url": "https://data.sec.gov/submissions/CIK0000789019-submissions-001.json",
+      "cache_path": "cache/api/9c1a033910137681117e39598b54ea3ab96b3528b971b41a7c50acf4b3cd81e9/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "de768837e66425317895fba9214f56fd17b72b676804d1d5ea48827c5e24afba",
+      "compressed_sha256": "31a91bc179752ef922deb4b972ea2590d7d08bdef7457e9ef762706d573063ec"
+    },
+    {
+      "document_id": "dfb40b7e631fee226d1c980c5f733f070d2343d8125ffe30788c783607bee782",
+      "url": "https://data.sec.gov/submissions/CIK0001181412.json",
+      "cache_path": "cache/api/973b8bf760b9cc23e5ca8fd325f21e408664cf24b7eae9cb5cd44c0c9c77fca6/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "ef2c65a19fef518540e84be3814a75245bc6b584f91d1b26fc492de40fea4778",
+      "compressed_sha256": "d2a89b3697452381914c50e742826f7eba11a6e9a47202456298f403d4fc93a2"
+    },
+    {
+      "document_id": "e72bf69fc1f772b0497137deafc81d66f08ccb90334e964d0d392992cd0f39be",
+      "url": "https://data.sec.gov/submissions/CIK0001045810-submissions-001.json",
+      "cache_path": "cache/api/af2307c8a2e08cf79dafa051bc4e51be4963842950fc7a832e2be8dd7c5551cc/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "cba408e22be614c3ca4911fb3ff88e08d669dfc5381579f458283035d584051f",
+      "compressed_sha256": "b5599c1c019810ea93c4b48f16627122e5e43743eddcb9ff3076b8a777f78c4a"
+    },
+    {
+      "document_id": "f1ca0e3b72ab74313b4f4ff288847014719e82537e19e1e660c9510ee5812cfc",
+      "url": "https://data.sec.gov/submissions/CIK0001058057-submissions-001.json",
+      "cache_path": "cache/api/f8465c032449fa67e413e6eb998618062c16b76ddd3c5de127a81f60dea77903/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "0e5af258b7d6c7153d1899cf81e3e7f2e12acab76bed421a22331970347f0c2b",
+      "compressed_sha256": "eeab23f869c623fd24bbc7b32a06d67256a1c303863e4165a33b642881003d51"
+    },
+    {
+      "document_id": "f1fb214fe1b33be2f36081043af013fc7e61fc704a8181e23b14149dd74a9cf6",
+      "url": "https://data.sec.gov/submissions/CIK0001326801.json",
+      "cache_path": "cache/api/d8deed0f49b443df157aa66e7831eb4fdb4a21750853ff1ff6bc6eecf8b15bbb/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "raw_sha256": "ffa346d3218c358a538c06c856bc758642c4065e8a0fd0d4477aee6a71d905a9",
+      "compressed_sha256": "4206fc94a67b47f070de3ef4b8e24d82e59b3be1e4b6ab87b39f28bdd69ff2ba"
+    }
+  ],
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "fresh_downloads": 0
+}

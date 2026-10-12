@@ -8,3 +8,4 @@ work/softbank/sources/* filter=lfs diff=lfs merge=lfs -text
 work/dell/*.tar.zst filter=lfs diff=lfs merge=lfs -text
 work/smci/*.tar.zst filter=lfs diff=lfs merge=lfs -text
 work/priorities/*.tar.zst filter=lfs diff=lfs merge=lfs -text
+work/audit_20261012/*.tar.zst filter=lfs diff=lfs merge=lfs -text

@@ -261,7 +261,8 @@ def verify(db,root,asof):
     db.create_function('smci_source_bag',bag,['VARCHAR'],'VARCHAR')
     for t in TABLES:
         columns=[r[1] for r in db.execute(f"PRAGMA table_info('{t}')").fetchall()]
-        fields=','.join('smci_source_bag("'+c+'") AS "'+c+'"' if c in ('lineage','evidence') else '"'+c+'"' for c in columns)
+        from .database import comparison_fields
+        fields=comparison_fields(db,t,'smci_source_bag')
         missing=db.execute(f"SELECT count(*) FROM (SELECT {fields} FROM read_parquet('{base}/baseline/{t}.parquet') EXCEPT ALL SELECT {fields} FROM {t})").fetchone()[0]
         preservation[t]=missing
     checks['all_previous_25_group_rows_preserved']=all(x==0 for x in preservation.values())

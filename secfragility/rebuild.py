@@ -199,7 +199,8 @@ def rebuild(root: Path):
         write_jsonl(scratch/'annual_html.jsonl',annual_rows(root,collection,as_of,mappings))
         load_jsonl(db,'facts',scratch/'annual_html.jsonl')
     (root/'work/concept_mappings.json').write_text(json.dumps(mappings,ensure_ascii=False,indent=2))
-    export(db,root/'tables')
+    # A raw parse is not a complete, validated delivery.
+    export(db,root/'work/rebuild_tables')
     print(json.dumps(table_counts(db)))
     return db
 

@@ -143,6 +143,7 @@ class SecClient:
                 self.sleep(wait)
             start = self.clock()
             self.state['last_request'] = start
+            self.lock.touch()
             atomic_json(self.state_path, self.state)
             try:
                 response = self.client.get(url)

@@ -1,3 +1,4 @@
+from .database import connect
 from pathlib import Path
 from decimal import Decimal
 import json,re
@@ -7,7 +8,7 @@ from .text import parse_html,normalize_space,render
 
 
 def validate(root:Path):
-    s=json.loads((root/'work/spcx_annual_candidates.json').read_text());d=duckdb.connect()
+    s=json.loads((root/'work/spcx_annual_candidates.json').read_text());d=connect()
     d.execute('CREATE TABLE native (kind VARCHAR,rank INTEGER,label VARCHAR,year VARCHAR,value DECIMAL(38,6))')
     records=[(r['kind'],i,r['label_key'],y,v) for i,r in enumerate(s['native_rows']) for y,v in r['display_values'].items()]
     d.executemany('INSERT INTO native VALUES (?,?,?,?,?)',records)

@@ -28,7 +28,7 @@ def prepare(db,root:Path,as_of:str):
     # with its period end. This is a publication snapshot, separately from the
     # annual-deadline cutoffs required for Annex E.
     db.execute('''CREATE TEMP TABLE quarter_cutoffs AS SELECT q.group_id,q.start_date,q.end_date,
-      min(greatest(d.acceptance_datetime,f.knowledge_date::TIMESTAMPTZ)) AS public_at
+      min(greatest(d.acceptance_datetime,timezone('UTC',f.knowledge_date::TIMESTAMP))) AS public_at
       FROM fiscal_quarters q JOIN documents d ON d.group_id=q.group_id
       JOIN periodic_occurrences f ON f.document_id=d.document_id AND f.period_end=q.end_date
       WHERE d.form IN ('10-K','10-KT','10-Q','10-QT','20-F','40-F') AND f.period_start IS NOT NULL GROUP BY ALL''')

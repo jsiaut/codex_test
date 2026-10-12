@@ -6,7 +6,8 @@ from .database import sql_literal
 
 
 def prepare_views(db,root: Path,as_of: str):
-    db.execute((root/'queries.sql').read_text())
+    from .database import load_queries
+    load_queries(db,root)
     db.execute(f'''CREATE TEMP TABLE selected_as_known AS SELECT * FROM eligible_facts
         WHERE knowledge_date<=CAST({sql_literal(as_of)} AS TIMESTAMPTZ)::DATE
         QUALIFY row_number() OVER (PARTITION BY semantic_key ORDER BY acceptance_datetime DESC,

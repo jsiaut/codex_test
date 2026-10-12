@@ -16,7 +16,8 @@ def run(db,root:Path,as_of):
                 'https://data.sec.gov/submissions/'+p for p in issuer['pagination']['read']]
             for url in urls:
                 cache=root/'cache/api'/hashlib.sha256(url.encode()).hexdigest()/(version+'.bin.zst')
-                raw=zstandard.ZstdDecompressor().decompress(cache.read_bytes())
+                from .source_registry import metadata
+                raw=metadata(root,str(cache.relative_to(root)))
                 data=json.loads(raw);series=data.get('filings',{}).get('recent',data)
                 doc=digest([url,as_of]);documents.setdefault(group,[]).append(doc)
                 insert(db,'documents',{'document_id':doc,'group_id':group,'entity_id':'cik:'+cik,'cik':cik,

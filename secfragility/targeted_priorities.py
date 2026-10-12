@@ -1,3 +1,4 @@
+from .database import connect
 """Small evidence overlay on the immutable 26-group snapshot.
 
 No global ratios or frozen E/F conclusions are recomputed by a lender-side
@@ -109,12 +110,17 @@ def author_record(root, db, source, quantity, quote, finding, inline=None, **ext
     elif row.get('amount') is not None:
         row.update(amount_origin='narrative_only',unit='USD',currency='USD')
     block=dict(content_key=row['content_key'],text=text,candidates=[fact] if fact else [])
+    if quantity=='vernon_investment_identity_resolved':
+        a=text.index('Sublicense, dated June 14, 2024, by and between Super Micro Computer, Inc. and Lambda, Inc.')
+        z=text.index('on June 21, 2024)',a)+len('on June 21, 2024)')
+        block['attribution_evidence']=dict(method='explicit_cross_reference',quantity=quantity,
+            amount_quote=quote,binding_quote=text[a:z])
     validate_semantics(row,block,raw)
     if row.get('currency')=='USD':row['unit']='USD'
     return row
 
 def validate_evidence(root, observations):
-    db=duckdb.connect()
+    db=connect()
     for s in sources(root):
         if sha(root/s['path'])!=s['sha256']:raise ValueError('Original SHA changed: '+s['url'])
         if s.get('acceptance_datetime') and datetime.fromisoformat(s['acceptance_datetime'].replace('Z','+00:00'))>datetime.fromisoformat(scope(root)['source_cutoff']):raise ValueError('Source after cutoff')
@@ -128,7 +134,11 @@ def validate_evidence(root, observations):
             if Decimal(native['amount'])!=Decimal(o['amount']):raise ValueError('Native scale changed')
         elif o.get('amount'):
             # Validate actual narrative scale and raw-byte citation again.
-            validate_semantics(o,dict(content_key=o['content_key'],text=text,candidates=[]),raw)
+            check=dict(content_key=o['content_key'],text=text,candidates=[])
+            if o['model_quantity']=='vernon_investment_identity_resolved':
+                binding=next(x['quote'] for x in observations if x['model_quantity']=='vernon_current_cross_reference')
+                check['attribution_evidence']=dict(method='explicit_cross_reference',quantity=o['model_quantity'],amount_quote=o['quote'],binding_quote=binding)
+            validate_semantics(o,check,raw)
     db.close()
 
 def entity(db,name,o,root):
@@ -138,9 +148,15 @@ def entity(db,name,o,root):
     matches=[r for r in db.execute('SELECT entity_id,legal_name FROM entities').fetchall()
              if re.sub(r'[^a-z0-9]','',r[1].casefold())==normalized]
     if len(set(r[0] for r in matches))>1: raise ValueError('Ambiguous entity')
-    if matches:return matches[0][0]
-    eid='legal:'+digest([name.casefold()])
-    insert(db,'entities',dict(entity_id=eid,membership_id=digest(['targeted_entity',eid]),legal_name=name,
+    eid=matches[0][0] if matches else 'legal:'+digest([name.casefold()])
+    if matches and db.execute("SELECT count(*) FROM entities WHERE entity_id=? AND entity_status='confirmed' AND knowledge_date<=?",[eid,o['knowledge_date']]).fetchone()[0]:return eid
+    if matches:
+        # A named SOI borrower confirms the identity, not its ownership group.
+        if o.get('counterparty_evidence')!='named' or name not in o['quote']:
+            raise ValueError('Pending entity requires its own named and dated proof')
+        membership=digest(['targeted_identity_confirmation',eid,o['document_id']])
+    else:membership=digest(['targeted_entity',eid])
+    insert(db,'entities',dict(entity_id=eid,membership_id=membership,legal_name=name,
         normalized_name=name.casefold(),entity_status='confirmed',consolidation_treatment='undetermined',
         knowledge_date=o['knowledge_date'],legal_date=o.get('event_date'),resolution_rule='exact_named_contract_party_or_SOI_borrower;no_control_inference',
         evidence_document_id=o['document_id'],evidence_locator=o['locator'],source_perspective=o['source_perspective'],as_of=scope(root)['source_cutoff']))
@@ -164,6 +180,9 @@ def apply(root,target_db=None):
         if sha(b/'baseline'/(table+'.parquet'))!=s['sha256']:raise ValueError('26-group baseline changed')
     obs=json.loads((b/'authored_observations.json').read_text());validate_evidence(root,obs)
     db=target_db or create(root)
+    if target_db is None:
+        db.execute('DROP TABLE facts')
+        db.execute('CREATE VIEW facts AS SELECT * FROM read_parquet(?)',[str(b/'baseline/facts.parquet')])
     def bag(v):
         return json.dumps(sorted(json.loads(v),key=lambda x:json.dumps(x,sort_keys=True)),separators=(',',':'))
     db.create_function('priority_source_bag',bag,['VARCHAR'],'VARCHAR')
@@ -172,8 +191,8 @@ def apply(root,target_db=None):
     for table in TABLES:
         file=b/'baseline'/(table+'.parquet')
         if target_db:
-            columns=[r[1] for r in db.execute(f"PRAGMA table_info('{table}')").fetchall()]
-            fields=','.join('priority_source_bag("'+c+'") AS "'+c+'"' if c in ('lineage','evidence') else '"'+c+'"' for c in columns)
+            from .database import comparison_fields
+            fields=comparison_fields(db,table,'priority_source_bag')
             diffs=db.execute(f'SELECT count(*) FROM ((SELECT {fields} FROM {table} EXCEPT ALL SELECT {fields} FROM read_parquet(?)) UNION ALL (SELECT {fields} FROM read_parquet(?) EXCEPT ALL SELECT {fields} FROM {table}))',[str(file),str(file)]).fetchone()[0]
             if diffs:raise ValueError('Reconstructed baseline differs: '+table)
         elif table!='facts':db.execute(f'INSERT INTO {table} BY NAME SELECT * FROM read_parquet(?)',[str(file)])
@@ -247,17 +266,24 @@ def apply(root,target_db=None):
         insert(db,'exclusions',dict(exclusion_id=digest(['targeted_gap',reason]),group_id=group,element_type='targeted_scope',element_id=reason,reason=reason,
             detail=detail,coverage_state=state,as_of=sc['source_cutoff']))
     # Export only changed tables; the 1.4m existing facts remain byte identical.
-    changed=[t for t in TABLES if t!='facts'];staging=b/'staging';staging.mkdir(exist_ok=True)
-    for t in changed:db.execute(f'COPY (SELECT * FROM {t} ORDER BY ALL) TO {sql_literal(str(staging/(t+".parquet")))} (FORMAT PARQUET)')
+    changed=[t for t in TABLES if t!='facts']
     conservation={}
     for t in changed:
-        columns=[r[1] for r in db.execute(f"PRAGMA table_info('{t}')").fetchall()]
-        fields=','.join('priority_source_bag("'+c+'") AS "'+c+'"' if c in ('lineage','evidence') else '"'+c+'"' for c in columns)
+        from .database import comparison_fields
+        fields=comparison_fields(db,t,'priority_source_bag')
         n=db.execute(f'SELECT count(*) FROM (SELECT {fields} FROM read_parquet(?) EXCEPT ALL SELECT {fields} FROM {t})',[str(b/'baseline'/(t+'.parquet'))]).fetchone()[0]
         if n:raise ValueError('Baseline row changed: '+t)
         conservation[t]={'baseline_rows_missing_or_changed':n,'rows':db.execute(f'SELECT count(*) FROM {t}').fetchone()[0]}
     if sha(root/'tables/facts.parquet')!=sc['baseline_tables']['facts']['sha256']:raise ValueError('Existing native facts changed')
-    for t in changed:(staging/(t+'.parquet')).replace(root/'tables'/(t+'.parquet'))
+    from .publication import deferred
+    from .verify_delivery import normalize_dimensions,final,snapshot
+    from .database import export
+    corrections=0
+    verification=None
+    if not deferred(root/'tables'):
+        corrections=normalize_dimensions(db);verification=final(db,sc['source_cutoff'])
+        export(db,root/'tables',unchanged={'facts':b/'baseline/facts.parquet'},
+               validator=lambda p:snapshot(p,sc['source_cutoff']))
     conservation['facts']={'byte_identical':True,'rows':1435879}
     csv_path=root/'targeted_evidence.csv'
     keys=['observation_id','group_id','model_quantity','counterparty','counterparty_evidence','amount','currency','measurement_basis','stage','period_end','knowledge_date','document_id','locator','tagged_fact_id','issuer_treatment','quote']
@@ -266,7 +292,9 @@ def apply(root,target_db=None):
     summary=dict(status='integrated_targeted_overlay',source_cutoff=sc['source_cutoff'],main_groups=26,subagents_used=False,
         observations=len(obs),new_documents=len(new_docs),added_links=9,amounts_are_not_additive=True,conservation=conservation,
         lender_rows=6,independent_commitment_controls=10,vernon_identity='Lambda, Inc.',remaining_gaps=5,
-        validation_time=datetime.now(timezone.utc).isoformat())
+        validation_time=datetime.now(timezone.utc).isoformat(),ratio_currency_labels_corrected=corrections,
+        preservation_convention='All prior columns and source bags; dimensionless ratio currency normalized as documented in audit F10',
+        final_global_validation=verification)
     save(root/'targeted_summary.json',summary);save(b/'validation.json',summary)
     save(b/'integration_contract.json',dict(status='integrated_targeted_overlay',source_cutoff=sc['source_cutoff'],authorization=sc['authorization']))
     report=root/'smci_integration.md'

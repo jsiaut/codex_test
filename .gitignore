@@ -57,3 +57,4 @@ work/smci/*.log
 work/priorities/sources/
 work/priorities/text/
 work/priorities/staging/
+work/audit_20261012/clean_venv/

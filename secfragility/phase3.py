@@ -16,6 +16,24 @@ def periodic_seed_directory(root):
 
 
 def run(root,reconstruct=False,resume=False):
+    from .publication import defer
+    root=Path(root).resolve()
+    try:
+        with defer(root):db=_run(root,reconstruct,resume)
+        from .verify_delivery import snapshot
+        as_of=json.loads((root/'work/run.json').read_text())['as_of']
+        export(db,root/'tables',validator=lambda p:snapshot(p,as_of))
+        state=json.loads((root/'work/run.json').read_text())
+        state.update(phase='phase3',status='completed',publication_generation=(root/'tables').resolve().name)
+        (root/'work/run.json').write_text(json.dumps(state,indent=2)+'\n')
+        return db
+    except BaseException:
+        state=json.loads((root/'work/run.json').read_text())
+        state.update(status='failed_prior_delivery_retained')
+        (root/'work/run.json').write_text(json.dumps(state,indent=2)+'\n')
+        raise
+
+def _run(root,reconstruct=False,resume=False):
     faulthandler.enable()
     state=json.loads((root/'work/run.json').read_text());as_of=state['as_of']
     queue=json.loads((root/'work/queue.json').read_text())
@@ -120,9 +138,6 @@ def finish(db,root,as_of,state):
     db.execute('COMMIT')
     from .reports import render,package
     render(db,root,as_of,source,verification)
-    package(root,as_of)
-    state.update(phase='phase3',status='validated_ready_for_final_commit')
-    (root/'work/run.json').write_text(json.dumps(state,indent=2)+'\n')
     export(db,root/'work/phase3_tables')
     print(json.dumps(dict(stage='numeric',counts=table_counts(db))),flush=True)
     contract=root/'work/softbank/integration_contract.json'
@@ -147,6 +162,10 @@ def finish(db,root,as_of,state):
         from .targeted_priorities import apply
         apply(root,target_db=db)
         print(json.dumps(dict(stage='targeted_priorities_integrated',counts=table_counts(db))),flush=True)
+    from .verify_delivery import normalize_dimensions,final
+    normalize_dimensions(db)
+    verification=final(db,as_of)
+    (root/'work/final_delivery_verification.json').write_text(json.dumps(verification,indent=2,default=str)+'\n')
     return db
 
 

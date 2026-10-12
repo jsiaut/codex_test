@@ -1,0 +1,26 @@
+[
+  {
+    "path": "work/extension_load_check.duckdb",
+    "bytes": 256651264,
+    "sha256": "76a6419fe1ea4995b6929d442f1cd707bcaada1c2029738c14788efff0447dca",
+    "kind": "generated_calculation_intermediate;source_and_final_tables_retained"
+  },
+  {
+    "path": "work/pairs_bulk.jsonl",
+    "bytes": 257755004,
+    "sha256": "e54c61c21ffb878436eabc8b75c665d5d9fe31de277f88fe137f28e3476d5418",
+    "kind": "generated_calculation_intermediate;source_and_final_tables_retained"
+  },
+  {
+    "path": "work/dell_native_facts_bulk.jsonl",
+    "bytes": 161023830,
+    "sha256": "96b4b95e616c8c4aaa977d24acc2c43527dcaa2482f379da8d7c967c425fb09d",
+    "kind": "generated_calculation_intermediate;source_and_final_tables_retained"
+  },
+  {
+    "path": "work/smci_native_facts_bulk.jsonl",
+    "bytes": 108151036,
+    "sha256": "f9efa14d9f91c44515cceb6124021aa32f3f0af1b8d1a75e7682c0339f686427",
+    "kind": "generated_calculation_intermediate;source_and_final_tables_retained"
+  }
+]

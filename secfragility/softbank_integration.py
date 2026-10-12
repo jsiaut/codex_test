@@ -1,3 +1,4 @@
+from .database import connect
 """Additive, deterministic eight-table Japanese extension and legacy SEC view.
 
 The baseline is an immutable checkpoint of the fully verified SEC reconstruction.
@@ -274,13 +275,13 @@ def financial_measures(db,root,as_of,facts):
             if cfo and capex:
                 cv=Decimal(cfo['value']);cx=-Decimal(capex['value'])
                 emit('fcf_basic',cv-cx,[cfo,capex],unit='JPY',currency='JPY')
-                emit('capex_to_cfo',cx/cv if cv!=0 else None,[cfo,capex],reason='zero_denominator' if cv==0 else None,term='without',unit='ratio',currency='JPY',numerator=cx,denominator=cv)
+                emit('capex_to_cfo',cx/cv if cv!=0 else None,[cfo,capex],reason='zero_denominator' if cv==0 else None,term='without',unit='ratio',numerator=cx,denominator=cv)
                 emit('capex_to_cfo',reason='US_GAAP_finance_lease_additions_not_equivalent_to_IFRS16_lease_additions',term='with',unit='ratio')
                 emit('fcf_after_ifrs_lease_payments',cv-cx+Decimal(lease['value']) if lease else None,[cfo,capex,lease],unit='JPY',currency='JPY')
             if cfo and ni:emit('cfo_net_income_gap',Decimal(cfo['value'])-Decimal(ni['value']),[cfo,ni],unit='JPY',currency='JPY')
             if rev and terms['gross_profit'] and Decimal(rev['value'])!=0:
-                emit('gross_margin',Decimal(terms['gross_profit']['value'])/Decimal(rev['value']),[terms['gross_profit'],rev],unit='ratio',currency='JPY')
-            if rev and capex and Decimal(rev['value'])!=0:emit('capex_to_revenue',-Decimal(capex['value'])/Decimal(rev['value']),[capex,rev],unit='ratio',currency='JPY')
+                emit('gross_margin',Decimal(terms['gross_profit']['value'])/Decimal(rev['value']),[terms['gross_profit'],rev],unit='ratio')
+            if rev and capex and Decimal(rev['value'])!=0:emit('capex_to_revenue',-Decimal(capex['value'])/Decimal(rev['value']),[capex,rev],unit='ratio')
             prior_end=str(date.fromisoformat(pe).replace(year=int(pe[:4])-1));prior_start=str(date.fromisoformat(ps).replace(year=int(ps[:4])-1))
             prior=select('revenue',prior_start,prior_end,view,cut)
             # A comparable from the very same statement is preferred, since it
@@ -288,7 +289,7 @@ def financial_measures(db,root,as_of,facts):
             same=[f for f in bycell.get(('revenue',prior_start,prior_end),[]) if rev and f['document_id']==rev['document_id']]
             if same:prior=same[0]
             if rev and prior and Decimal(prior['value'])!=0:
-                emit('revenue_growth',Decimal(rev['value'])/Decimal(prior['value'])-1,[rev,prior],term='yoy',unit='ratio',currency='JPY',basis_break=False)
+                emit('revenue_growth',Decimal(rev['value'])/Decimal(prior['value'])-1,[rev,prior],term='yoy',unit='ratio',basis_break=False)
             else:emit('revenue_growth',reason='same_basis_prior_year_revenue_missing',term='yoy',unit='ratio')
             for name,term,why in [('fcf_after_counterparty_financing','none','complete_net_counterparty_financing_not_public'),
                 ('fcf_after_finance_leases','none','IFRS16_lease_payments_not_US_GAAP_finance_lease_principal'),
@@ -307,7 +308,7 @@ def financial_measures(db,root,as_of,facts):
             cash=fs['cash'];dc=fs['debt__current_liabilities']
             measure(db,as_of,'debt_current_to_consolidated_cash',view,None,pe,
                 Decimal(dc['value'])/Decimal(cash['value']) if cash and dc and Decimal(cash['value']) else None,
-                [f['fact_id'] for f in [cash,dc] if f],unit='ratio',currency='JPY',
+                [f['fact_id'] for f in [cash,dc] if f],unit='ratio',
                 information_cutoff=cutoff(view,pe),
                 basis_break_reason='Book current debt / consolidated cash proxy; not cash-only contractual principal coverage or parent LTV')
         # TTM is annual + current YTD - the comparator in the current statement.
@@ -367,7 +368,7 @@ def quarter_measures(db,root,as_of,facts):
                 if cv is not None and cx is not None:
                     emit('fcf_basic',cv+cx,cd+xd,unit='JPY',currency='JPY')
                     emit('capex_to_cfo',-cx/cv if cv else None,cd+xd,reason='zero_denominator' if cv==0 else None,
-                        term='without',unit='ratio',currency='JPY',numerator=-cx,denominator=cv)
+                        term='without',unit='ratio',numerator=-cx,denominator=cv)
                     if lp is not None:emit('fcf_after_ifrs_lease_payments',cv+cx+lp,cd+xd+ld,unit='JPY',currency='JPY')
     # Latest TTM cash sensitivity, preserving every source term rather than
     # using a rounded published ratio as an arithmetic input.
@@ -485,7 +486,7 @@ def note_measures(db,root,as_of,observations):
         if o['model_quantity']=='svf_level3_assets':
             fact=rows(db,"SELECT fact_id,value FROM facts WHERE group_id=? AND document_id=? AND canonical_concept='svf_fvtpl' AND period_end='2026-03-31' AND period_start IS NULL",[GROUP,o['document_id']])[0]
             measure(db,as_of,'svf_level3_share','revised',None,'2026-03-31',Decimal(o['amount'])/fact['value'],[o['observation_id'],fact['fact_id']],
-                unit='ratio',currency='JPY',numerator=o['amount'],denominator=fact['value'],knowledge_date=o['knowledge_date'])
+                unit='ratio',numerator=o['amount'],denominator=fact['value'],knowledge_date=o['knowledge_date'])
     guarantee=next(o for o in observations if o['model_quantity']=='parent_guarantee')
     measure(db,as_of,'counterparty_exposure','revised',None,str(guarantee['period_end']),reason='guarantee_maximum_scope_not_disclosed',
         counterparty_id=guarantee['counterparty_entity_id'],breakdown_key='contingent_obligations|TSUBAKI_parent_guarantee',
@@ -499,7 +500,8 @@ def verify(db,root,as_of,qmap,facts,observations,control_rows):
     for table in TABLES:
         reference=root/baseline[table]['path'];assert sha(reference)==baseline[table]['sha256']
         columns=[r[1] for r in db.execute(f"PRAGMA table_info('{table}')").fetchall()]
-        fields=','.join('softbank_source_bag("'+c+'") AS "'+c+'"' if c in ('lineage','evidence') else '"'+c+'"' for c in columns)
+        from .database import comparison_fields
+        fields=comparison_fields(db,table,'softbank_source_bag')
         old=db.execute(f"SELECT count(*) FROM (SELECT {fields} FROM read_parquet('{reference}') EXCEPT ALL SELECT {fields} FROM {table})").fetchone()[0]
         preservation[table]=dict(missing_or_changed_original_rows=old,original_sha256=baseline[table]['sha256'])
     checks['every_legacy_row_preserved']=all(r['missing_or_changed_original_rows']==0 for r in preservation.values())
@@ -572,7 +574,7 @@ def run(root,from_current_legacy=False):
     db=create(root)
     source='tables' if from_current_legacy else 'work/softbank/baseline'
     if from_current_legacy:
-        existing=duckdb.connect().execute("SELECT count(*) FROM read_parquet('tables/documents.parquet') WHERE group_id=?",[GROUP]).fetchone()[0]
+        existing=connect().execute("SELECT count(*) FROM read_parquet('tables/documents.parquet') WHERE group_id=?",[GROUP]).fetchone()[0]
         if existing:raise ValueError('Current exports already contain foreign integration; use immutable baseline mode')
     for table in TABLES:
         db.execute(f"INSERT INTO {table} BY NAME SELECT * FROM read_parquet('{source}/{table}.parquet')")

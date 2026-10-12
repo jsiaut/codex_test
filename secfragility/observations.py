@@ -42,6 +42,20 @@ def validate_semantics(row: dict, block: dict, raw: bytes):
     if row.get('counterparty_evidence')=='named' and (not cp or
         re.sub(r'\s+',' ',cp) not in re.sub(r'\s+',' ',block['text'])):
         raise ObservationRejected('Contrepartie nommée absente du bloc.')
+    if row.get('amount') is not None and cp:
+        direct=re.sub(r'\s+',' ',cp) in re.sub(r'\s+',' ',quote)
+        if row.get('counterparty_evidence')=='named' and not direct:
+            raise ObservationRejected('Contrepartie nommée absente de la citation du montant.')
+        if row.get('counterparty_evidence')=='derivable' and not direct:
+            proof=block.get('attribution_evidence')
+            if not proof or proof.get('method')!=row.get('counterparty_method'):
+                raise ObservationRejected('Attribution par renvoi sans preuve séparée.')
+            if proof.get('amount_quote')!=quote or not proof.get('binding_quote'):
+                raise ObservationRejected('Preuve de liaison non rattachée à la citation du montant.')
+            if proof['binding_quote'] not in block['text'] or cp not in proof['binding_quote']:
+                raise ObservationRejected('Renvoi absent ou ne nommant pas la contrepartie.')
+            if proof.get('quantity')!=row.get('model_quantity'):
+                raise ObservationRejected('Renvoi rattaché à une autre quantité.')
     if row.get('linkage_class'):
         lq=row.get('linkage_quote')
         if not lq or lq not in block['text']:

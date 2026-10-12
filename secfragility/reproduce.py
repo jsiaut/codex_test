@@ -1,3 +1,4 @@
+from .database import connect
 """Compare two offline deliveries, including exact decimals and provenance."""
 from pathlib import Path
 from datetime import datetime, timezone
@@ -84,7 +85,7 @@ def capture(root):
 
 
 def compare(root):
-    db = duckdb.connect()
+    db = connect()
     db.execute("SET memory_limit='4GB'")
     db.execute('SET threads=2')
     spill = root / 'work/replay_spill'

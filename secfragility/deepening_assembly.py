@@ -215,7 +215,7 @@ def horizon_bounds(db, root, as_of):
                     cash.period_end::VARCHAR,{sql_literal(view)},{sql_literal(as_of)}::TIMESTAMPTZ,
                     {sql_literal(cutoff)}::TIMESTAMPTZ,{sql_literal(term)},'original',
                     ratio_lower6({lower},cash.value),ratio_upper6({upper},cash.value),cash.value,
-                    'ratio',cash.currency,CASE WHEN cash.value=0 THEN 'not_determinable' ELSE 'bounded' END,
+                    'ratio',NULL,CASE WHEN cash.value=0 THEN 'not_determinable' ELSE 'bounded' END,
                     CASE WHEN cash.value=0 THEN 'denominator_zero' END,'observed',
                     {public},{lineage},{tiers},'reporting_entity',cash.accounting_framework,'current',
                     'annual_debt_buckets_bound_rolling_horizon_no_monthly_timing;principal_only;published_rounded_amounts'
