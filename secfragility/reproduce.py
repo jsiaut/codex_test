@@ -67,7 +67,8 @@ def capture(root):
     if (root/'work/smci').exists():
         names.update('work/smci/'+name for name in ['integration_contract.json','issuer.json','filings.json','companyfacts.json',
             'authored_observations.json','reading_ledger.json','source_backup.json','baseline/manifest.json',
-            'baseline/criteria_manifest.json','SEC_SMCI_originals.tar.zst','reading_queue.json','note_coverage.json'])
+            'baseline/criteria_manifest.json','SEC_SMCI_originals.tar.zst','reading_queue.json','note_coverage.json',
+            'delivery_dependency.json','prior_archive_baseline_match.json'])
         names.update(str(p.relative_to(root)) for p in (root/'work/smci').glob('*.py'))
         names.update(str(p.relative_to(root)) for p in (root/'work/smci/baseline').glob('*.parquet'))
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')

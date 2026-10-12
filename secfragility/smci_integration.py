@@ -197,6 +197,8 @@ def supplemental(db,root,asof,authored):
         assert name in text
         eid='legal:'+digest(name)
         insert(db,'entities',dict(entity_id=eid,membership_id=digest(['SMCI_EX21_20260630',eid]),legal_name=name,normalized_name=name.casefold(),entity_status='confirmed',group_id=GROUP,economic_group_id=GROUP,consolidation_treatment='consolidated_subsidiary',membership_start='2026-06-30',knowledge_date='2026-08-31',resolution_rule='EX21_named_subsidiary_plus_audited_consolidation_policy;current_snapshot',evidence_document_id=digest([er['url']]),evidence_locator='EX21_named_row',source_perspective='reporting_entity',as_of=asof))
+    o=by['consolidated_management_company_VIE'];name=o['counterparty'];eid='legal:'+digest(name)
+    insert(db,'entities',dict(entity_id=eid,membership_id=digest(['SMCI_VIE_20260630',eid]),legal_name=name,normalized_name=name.casefold(),entity_status='confirmed',group_id=GROUP,economic_group_id=GROUP,consolidation_treatment='vie_consolidated',membership_start='2026-06-30',knowledge_date=o['knowledge_date'],resolution_rule='audited_policy_explicit_consolidated_VIE;not_ownership_percentage_alone',evidence_document_id=o['document_id'],evidence_locator=o['locator'],source_perspective='reporting_entity',as_of=asof))
 
 def assemble(root,target_db=None):
     base=state(root);asof=json.loads((base/'issuer.json').read_text())['source_cutoff'];mini=base/'assembly'
@@ -267,6 +269,8 @@ def verify(db,root,asof):
        AND NOT EXISTS (SELECT 1 FROM documents d WHERE d.document_id=json_extract_string(j.value,'$'))
        AND NOT EXISTS (SELECT 1 FROM links l WHERE l.link_id=json_extract_string(j.value,'$'))""").fetchone()[0]==0
     checks['SMCI_source_bytes_match']=all(sha(root/r['path'])==r['sha256'] for f in json.loads((base/'filings.json').read_text()).values() for r in f['resources'].values())
+    checks['no_future_SMCI_observation']=db.execute("SELECT count(*) FROM observations WHERE group_id='SMCI' AND knowledge_date>as_of::DATE").fetchone()[0]==0
+    checks['current_F4_F5_admitted']=db.execute("SELECT count(*) FROM measures WHERE group_id='SMCI' AND measure='fragility_event' AND period_end='2026-06-30' AND breakdown_key IN ('F4','F5') AND status='computed' AND value=1").fetchone()[0]==4
     result=dict(as_of=asof,checks=checks,previous_row_differences=preservation,table_counts=table_counts(db),
         SMCI_delta=json.loads((base/'delta_counts.json').read_text()),SMCI_accounting_mismatches=rows(db,"SELECT * FROM controls WHERE group_id='SMCI' AND status='mismatch'"),
         subagents_used=False,independent_audit_performed=False)

@@ -1,3 +1,5 @@
+**État courant : 26 groupes, SMCI inclus.** Sources arrêtées au 9 octobre 2026 ; [rapport SMCI](smci_integration.md), huit tables communes et archives antérieures conservées.
+
 # SEC_Project_2
 
 Modèle courant : **25 groupes principaux**, avec Dell et SoftBank intégrés dans les huit tables. Lire [dell_integration.md](dell_integration.md), [dell_summary.json](dell_summary.json) et [dell_measures.csv](dell_measures.csv), puis les étapes précédentes ci-dessous. Les sources restent arrêtées au 9 octobre 2026 ; les critères E/F et les lignes des 24 groupes précédents sont conservés.

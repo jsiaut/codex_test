@@ -1,5 +1,5 @@
 {
-  "status": "authorized_precollection",
+  "status": "integrated_with_explicit_public_disclosure_gaps",
   "authorization": "Ok on continue avec SMCI alors, toujours sans sous-agent",
   "baseline_commit": "ac075efd0590095b7860c147e7a6020be49493fd",
   "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
@@ -25,5 +25,9 @@
   "latest_annual_accession": "0001375365-26-000022",
   "fiscal_year_end": "June30",
   "latest_available_period": "2026-06-30",
-  "historical_notes_exhaustively_read": false
+  "historical_notes_exhaustively_read": false,
+  "current_notes_personally_read": 11,
+  "authored_observations": 90,
+  "audit_tranche": "FY2024_FY2025_FY2026_explicit_ICFR_and_auditor_change_passages",
+  "historical_narrative_notes_outside_current_tranche": true
 }

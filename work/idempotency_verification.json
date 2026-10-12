@@ -1,76 +1,75 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "verified_at": "2026-10-12T11:51:05.130402+00:00",
-  "method": "Packaging input recheck of an unchanged model snapshot; bidirectional EXCEPT ALL across every column; raw-source reconstruction proof retained separately.",
+  "verified_at": "2026-10-12T12:45:32.216556+00:00",
+  "method": "SMCI SEC statements reparsed from archived originals; SMCI observations and calculations rebuilt; additive overlay on the immutable verified 25-group checkpoint; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.",
   "input_manifest_unchanged": true,
   "changed_inputs": [],
   "tables": {
     "documents": {
-      "rows": 11593,
+      "rows": 12195,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "d924b8efeefbf7a163baf653eaa674f9ffd788a5576a55b820caa223713defa7",
-      "replay_sha256": "d924b8efeefbf7a163baf653eaa674f9ffd788a5576a55b820caa223713defa7"
+      "original_sha256": "579334ef007f3f73217575c3645f455339890e6bf1c65f7ab86198c3f63cd11b",
+      "replay_sha256": "579334ef007f3f73217575c3645f455339890e6bf1c65f7ab86198c3f63cd11b"
     },
     "facts": {
-      "rows": 1373160,
+      "rows": 1435879,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "cd50c5073b51a7106714e1c5b51dd13f69ef22864876a3830113895d4accd1f0",
-      "replay_sha256": "cd50c5073b51a7106714e1c5b51dd13f69ef22864876a3830113895d4accd1f0"
+      "original_sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991",
+      "replay_sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991"
     },
     "observations": {
-      "rows": 17812,
+      "rows": 17902,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "f862e34e970228f58ba2c28339b144f92945dca60bd94890b757ca73092976ef",
-      "replay_sha256": "f862e34e970228f58ba2c28339b144f92945dca60bd94890b757ca73092976ef"
+      "original_sha256": "935d133d7f369658482308d5e603ef90de90ad52f9c0758f359db25fb2397541",
+      "replay_sha256": "935d133d7f369658482308d5e603ef90de90ad52f9c0758f359db25fb2397541"
     },
     "entities": {
-      "rows": 740,
+      "rows": 768,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "4431416e0bad31063ead65365f5c72970fe30c5d60f9ec7395d5c95e3dad8a3d",
-      "replay_sha256": "4431416e0bad31063ead65365f5c72970fe30c5d60f9ec7395d5c95e3dad8a3d"
+      "original_sha256": "2cb57a23b2dcbb0971518730a22450e54c968130d5167053946640bc0d2037a1",
+      "replay_sha256": "2cb57a23b2dcbb0971518730a22450e54c968130d5167053946640bc0d2037a1"
     },
     "links": {
-      "rows": 916,
+      "rows": 918,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "8411cb0dbb18f7bcf0010c50817e153d16ac6f2402c52ab4704345df1d5dfb89",
-      "replay_sha256": "8411cb0dbb18f7bcf0010c50817e153d16ac6f2402c52ab4704345df1d5dfb89"
+      "original_sha256": "c7a310eb6268943281d8185d373d0f4b0640cb6cd6fce1481f97e231f3689db9",
+      "replay_sha256": "c7a310eb6268943281d8185d373d0f4b0640cb6cd6fce1481f97e231f3689db9"
     },
     "measures": {
-      "rows": 578659,
+      "rows": 598957,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "2f95e8c185b687e6c894c4f6818608ead07f075d166472ce906378370eda6b7c",
-      "replay_sha256": "2f95e8c185b687e6c894c4f6818608ead07f075d166472ce906378370eda6b7c"
+      "original_sha256": "d1436370b8529fbd1e7ed13442c960de2de9885ee86e54ea32bf65cc5fe8a449",
+      "replay_sha256": "167a9c1fbdab21fa8b1efaca2cb2ef3e9d2a294c8f40b127043dcec3e650e005"
     },
     "controls": {
-      "rows": 324534,
+      "rows": 340162,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "eb35986b23e0d847f4d720b709cd07ede075834ae8e28501ecec07e8a35f6973",
-      "replay_sha256": "eb35986b23e0d847f4d720b709cd07ede075834ae8e28501ecec07e8a35f6973"
+      "original_sha256": "695b767a6da4d4490ff19beebf0c5abbc76850d4825b0943d49d50f18d232978",
+      "replay_sha256": "10e7a3c1b7f019c2514a35bb7d129728867372c49adbe7e0019746622cfd9e59"
     },
     "exclusions": {
-      "rows": 16786,
+      "rows": 16788,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "625fbc80a2a2dfc8b89b735bf348a139e0b552ecd3723fba065cc9a90834666f",
-      "replay_sha256": "625fbc80a2a2dfc8b89b735bf348a139e0b552ecd3723fba065cc9a90834666f"
+      "original_sha256": "2c05f50d691b6c4f8a57f72e81bd3573c210a73438cff625dba5f421c092af95",
+      "replay_sha256": "2c05f50d691b6c4f8a57f72e81bd3573c210a73438cff625dba5f421c092af95"
     }
   },
   "all_tables_identical": true,
-  "independent_audit_performed": false,
-  "raw_source_replay_proof": "work/dell/raw_source_replay_verification.json"
+  "independent_audit_performed": false
 }

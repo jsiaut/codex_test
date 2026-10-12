@@ -54,6 +54,7 @@ note('1875','receivable_concentration_second','As of June 30, 2026, three custom
 note('1875','receivable_concentration_third','As of June 30, 2026, three customers accounted for 23.0%, 17.1%, and 12.5% of our accounts receivable balance.',finding='Third customer represents 12.5%; no named counterparty or amount graph.')
 note('1875','customer_collateral_scope','We believe that the concentration of credit risk in our trade receivables is substantially mitigated by our credit evaluation process, relatively short collection terms and the high level of credit worthiness of our customers.',finding='Issuer assessment only; not external credit rating or proof of absence of credit risk.')
 note('1875','inventory_cost_policy','Once inventory is written down, its new value is maintained until it is sold or scrapped.',finding='Write-down cannot be reversed through recovery of previously reduced cost; distinct from investment impairment F6.')
+note('1875','consolidated_management_company_VIE','We use the U.S. dollar as our functional currency for all our international subsidiaries, except for Super Micro Asia Science and Technology Park, Inc., a consolidated variable interest entity.',finding='Auditedpolicy explicitly identifiesconsolidatedVIE; 50/50ownership alone isnotconsolidationtest.',counterparty='Super Micro Asia Science and Technology Park, Inc.',counterparty_evidence='named')
 note('114c','revenue_annual_total','Total | | | $ | 39,063,072',fact='9aa5b0096f',finding='Consolidated revenue; one operating segment, no audited AI-only segment allocation.')
 note('114c','revenue_customer_concentration','For the fiscal year ended June 30, 2026, sales to one customer represented 28.1% of total net sales.',fact='a0ed89bdd1',finding='Anonymous annual customer; no guessed identity or merged customer across periods.')
 note('114c','customer_advance_increase','Deferred revenue increased by $1,880.6 million as of June 30, 2026, as compared to the fiscal year ended June 30, 2025.',fact='ad14a7cace',finding='USD943.4m increase of non-refundable advance/cash consideration for future product deliveries, subset of deferred revenue increase; not all deferred revenue equals cash.')
@@ -124,6 +125,7 @@ def excerpt(accession,quantity,quote,*,finding,fact=None,filename=None,**extra):
             row['locator']+=';inline_id='+proof['inline_id']+';instance_fact='+f['fact_id']
         row.update(amount=f['value'],amount_origin='tagged_reference',tagged_fact_id=f['fact_id'],unit=f['unit'],currency=f.get('currency'),period_start=f.get('period_start'),period_end=f['period_end'])
     validate_semantics(row,b,raw)
+    row['unit']='USD' if row.get('currency')=='USD' else 'ratio' if str(row.get('unit','')).endswith(':pure') else row.get('unit')
     row['observation_id']=digest(['SMCI_personal_excerpt_v1',r['url'],quantity,quote]);OUT.append(row)
     LEDGER.append(dict(document_url=r['url'],accession=accession,scope='personally_read_targeted_section',quantity=quantity,quote_sha256=digest(quote)))
 
