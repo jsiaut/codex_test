@@ -1,0 +1,209 @@
+[
+  {
+    "entity_id": "cik:0002021728",
+    "legal_name": "Cerebras Systems Inc.",
+    "knowledge_date": "2026-04-17",
+    "document_id": "4c5cea0bebc05576d416d9aaf75f34c17db00f69093fa860b726ae27180b27f6",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026025762/exhibit1012-sx1.htm",
+    "source_sha256": "edab8c044cda113b8c58dd497c4481d55ce7044b71615fa1c2974148bc455f74",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:c7c28b98f10dc35410f8c9b159d219733df33ad7c682baf7f5722516ea53c2de",
+    "legal_name": "WarehouseCo Intermediate Holdings LP",
+    "knowledge_date": "2026-08-10",
+    "document_id": "eef96ab30e86cac29545c905e70801fd8847d63a7c73532dc50c58fb510a945c",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1527469/000152746926000056/ahl-20260630.htm",
+    "source_sha256": "f2514ebcdb0cb0a95dded98475d505d34f72afb077d52e2f9604de6a93876fd7",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420",
+    "legal_name": "Anthropic PBC",
+    "knowledge_date": "2026-09-18",
+    "document_id": "16117d467ce5b4aa39b83f93a0f743d3951acbfa7a7d8acb7b3bbf7b190786f5",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_25.htm",
+    "source_sha256": "25edd87b72292dec049f8db4ae399d37162a4bf0c1981403da35c01461068717",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0001045810",
+    "legal_name": "NVIDIA Corporation",
+    "knowledge_date": "2025-09-15",
+    "document_id": "eabe05a7bbff35fa5eb10fe8e64efe977070102b79e4207b931092ba3934a591",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm",
+    "source_sha256": "a7320cf017e3fd8eca2547d796af6abd3f4e4b48e855e85d4307c56878bda352",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0001769628",
+    "legal_name": "CoreWeave, Inc.",
+    "knowledge_date": "2025-09-15",
+    "document_id": "eabe05a7bbff35fa5eb10fe8e64efe977070102b79e4207b931092ba3934a591",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm",
+    "source_sha256": "a7320cf017e3fd8eca2547d796af6abd3f4e4b48e855e85d4307c56878bda352",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b",
+    "legal_name": "Google LLC",
+    "knowledge_date": "2026-08-04",
+    "document_id": "21042b8207df531e311eafa135a56b92a666c1a33a514396d2c44f9d6766b605",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
+    "source_sha256": "7062636a6d187a91d38c3c4c229ad9641bce5c39b5bbbf245bcc72f8c9ded8bb",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0001083301",
+    "legal_name": "TeraWulf Inc.",
+    "knowledge_date": "2026-08-05",
+    "document_id": "bff6a2c159d715777cec1a063ef290cde13d32c28b6d7d0a48dd63047fb9fbab",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm",
+    "source_sha256": "f4c2a7482ea1808acaf3f507d0f4088ae23fc786adc9eb3c61e28270f4e1904d",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:ff7b9be3e54f467ad8a93c7d5f5281b7b5292e60c3f0637e0442c3fa3567447e",
+    "legal_name": "Fluidstack USA I Inc.",
+    "knowledge_date": "2026-08-05",
+    "document_id": "bff6a2c159d715777cec1a063ef290cde13d32c28b6d7d0a48dd63047fb9fbab",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm",
+    "source_sha256": "f4c2a7482ea1808acaf3f507d0f4088ae23fc786adc9eb3c61e28270f4e1904d",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0002133037",
+    "legal_name": "SB Energy, Inc.",
+    "knowledge_date": "2026-09-21",
+    "document_id": "d3c3fdd36bffcb5991d3515bde52d107dc2f22a3fd98f1528753ee0c271264bf",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+    "source_sha256": "892433ffbcdf24fd98c9b9f64fdb16f39c626009b8767adf50d3e8c1c6a6e54d",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:23f2273a9c7997c56900352a9e31286f7b421cc2ac0ff9ebf8ef23491be66b38",
+    "legal_name": "OpenAI Infra Holdings, LLC",
+    "knowledge_date": "2026-09-21",
+    "document_id": "d3c3fdd36bffcb5991d3515bde52d107dc2f22a3fd98f1528753ee0c271264bf",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+    "source_sha256": "892433ffbcdf24fd98c9b9f64fdb16f39c626009b8767adf50d3e8c1c6a6e54d",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0002110365",
+    "legal_name": "Nscale Limited",
+    "knowledge_date": "2026-09-18",
+    "document_id": "a550667c1035ce6d0c7708ccec4fdb79d82501f31846c1b5c562d19b380b2eb1",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_23.htm",
+    "source_sha256": "1e6ea65ea9db3ff02f694c7769a6669d66e3e46713bec595e0842ae2db7ecfcd",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:36cb4b3962c578ac4ff9ad5587e311ad9414077bd53e6671dcd728417dc0a9a8",
+    "legal_name": "Nscale Ward County Borrower SPV, LLC",
+    "knowledge_date": "2026-09-18",
+    "document_id": "a550667c1035ce6d0c7708ccec4fdb79d82501f31846c1b5c562d19b380b2eb1",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_23.htm",
+    "source_sha256": "1e6ea65ea9db3ff02f694c7769a6669d66e3e46713bec595e0842ae2db7ecfcd",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:c7d03d93153230dc83a18e4ef5269ad5dfed10b1abb3eacccaa959306316dd9e",
+    "legal_name": "Nscale NC Borrower SPV, LLC",
+    "knowledge_date": "2026-09-18",
+    "document_id": "1a862fa9f22d24230fcb76a91fbae865cfac053ed948bb9b5d61c55f48a3bca2",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-20260918.htm",
+    "source_sha256": "1ca4174d6c232357cb35b748a79652f11da6da6adc0697608978aba2151c1326",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:de37d1ca12a9c77359037c74d7e887b918143f0b5725b9ded7d7d9409e201449",
+    "legal_name": "Nscale Ward County LLC",
+    "knowledge_date": "2026-09-02",
+    "document_id": "2a46baf6055be82553122e01b8f0f5c97bd513d1e0783c9119121f683fb7f8b6",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2007691/000200769126000012/ioni-20260630.htm",
+    "source_sha256": "ccc90fde02d17d8ad18cf359d9b7cf62523b52737c3dd75549554e70406540d2",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:345b9750d6391dd4bdb735ef1e8fe26db81562f42c87de3f86640919950467e6",
+    "legal_name": "Nscale GPU MCC B1.1 LLC",
+    "knowledge_date": "2026-09-18",
+    "document_id": "16117d467ce5b4aa39b83f93a0f743d3951acbfa7a7d8acb7b3bbf7b190786f5",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2110365/000119312526395475/ck0002110365-ex10_25.htm",
+    "source_sha256": "25edd87b72292dec049f8db4ae399d37162a4bf0c1981403da35c01461068717",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0002007691",
+    "legal_name": "Ionic Digital Inc.",
+    "knowledge_date": "2026-09-02",
+    "document_id": "2a46baf6055be82553122e01b8f0f5c97bd513d1e0783c9119121f683fb7f8b6",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2007691/000200769126000012/ioni-20260630.htm",
+    "source_sha256": "ccc90fde02d17d8ad18cf359d9b7cf62523b52737c3dd75549554e70406540d2",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0001964789",
+    "legal_name": "Hut 8 Corp.",
+    "knowledge_date": "2026-08-04",
+    "document_id": "21042b8207df531e311eafa135a56b92a666c1a33a514396d2c44f9d6766b605",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
+    "source_sha256": "7062636a6d187a91d38c3c4c229ad9641bce5c39b5bbbf245bcc72f8c9ded8bb",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:7d217002f67d14f415f1221e0eb40b00215fc36fde576cb706c3c6306e0b71b9",
+    "legal_name": "Fluidstack USA IV Inc.",
+    "knowledge_date": "2026-08-04",
+    "document_id": "21042b8207df531e311eafa135a56b92a666c1a33a514396d2c44f9d6766b605",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
+    "source_sha256": "7062636a6d187a91d38c3c4c229ad9641bce5c39b5bbbf245bcc72f8c9ded8bb",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:30d0316ecfcec3a0619d2e30ad3ad493918f47ebbd1c0d13c4ca9e913baf95a3",
+    "legal_name": "Hut 8 DC LLC",
+    "knowledge_date": "2026-08-04",
+    "document_id": "21042b8207df531e311eafa135a56b92a666c1a33a514396d2c44f9d6766b605",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
+    "source_sha256": "7062636a6d187a91d38c3c4c229ad9641bce5c39b5bbbf245bcc72f8c9ded8bb",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:20cf203d467278a4b1f0f54a14217e098d962e1eef3505f941294e04eaf74f94",
+    "legal_name": "Beacon Point DC LLC",
+    "knowledge_date": "2026-08-04",
+    "document_id": "21042b8207df531e311eafa135a56b92a666c1a33a514396d2c44f9d6766b605",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926090025/hut-20260630x10q.htm",
+    "source_sha256": "7062636a6d187a91d38c3c4c229ad9641bce5c39b5bbbf245bcc72f8c9ded8bb",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "cik:0001326801",
+    "legal_name": "Meta Platforms, Inc.",
+    "knowledge_date": "2026-07-30",
+    "document_id": "6e487dceeb3d6a4768e63fe5c1ed6d40c729f1eb916f85bd27375f2e04f9b465",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026050705/meta-20260630.htm",
+    "source_sha256": "9e9db2e20ef2af09343dee3b829c9a077e59fd84ff05e02dd2e6d0e683a56570",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "series:S000013233",
+    "legal_name": "PIMCO Extended Duration Fund",
+    "knowledge_date": "2026-08-31",
+    "document_id": "2ab5840e0f6158c50efa2e4375d458b2b82168a889eaf501d3228d99fa441941",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/810893/000141036826090215/primary_doc.xml",
+    "source_sha256": "14cbebe38552f1e747581d082003be83c669831876e8e0711fc8289630c10767",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  },
+  {
+    "entity_id": "legal:dbe3c8e68f38bec7c149465507fbe002b565dddf87aa13e2bae593218dd01ff4",
+    "legal_name": "Beignet Investor LLC",
+    "knowledge_date": "2026-08-31",
+    "document_id": "2ab5840e0f6158c50efa2e4375d458b2b82168a889eaf501d3228d99fa441941",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/810893/000141036826090215/primary_doc.xml",
+    "source_sha256": "14cbebe38552f1e747581d082003be83c669831876e8e0711fc8289630c10767",
+    "verification": "Personally selected name present in preserved complete original, normalized only for spacing and punctuation; no parent inference"
+  }
+]

@@ -44,5 +44,16 @@
   },
   "stage": "after_all_extensions",
   "read_only": true,
-  "independent_audit_performed": false
+  "independent_audit_performed": false,
+  "dataset_generation": "50a67c1179b843ff928d1a66d8218ec9",
+  "counts": {
+    "documents": 12231,
+    "facts": 1435887,
+    "observations": 18055,
+    "entities": 800,
+    "links": 948,
+    "measures": 599133,
+    "controls": 340172,
+    "exclusions": 16793
+  }
 }

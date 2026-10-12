@@ -1,0 +1,87 @@
+{
+  "generation": "50a67c1179b843ff928d1a66d8218ec9",
+  "dataset_path": "work/table_generations/50a67c1179b843ff928d1a66d8218ec9",
+  "status": "validated",
+  "tables": {
+    "documents": {
+      "file": "documents.parquet",
+      "sha256": "eb54c85e3f2e1e9f323f1bb27bd9676002d98f005e9ace6423c77c47067476e2"
+    },
+    "facts": {
+      "file": "facts.parquet",
+      "sha256": "8a2044268f152ba841e3959b6d1ab09b4230b9a87bbb684a86688e2838104adb"
+    },
+    "observations": {
+      "file": "observations.parquet",
+      "sha256": "48ae65447c2b536318b5b14fffdca3801f069f2b48d6a6d938dde1dc86ae7f74"
+    },
+    "entities": {
+      "file": "entities.parquet",
+      "sha256": "ac8120ec3d08ba645def92977e4ff5c8288002ac26351ed74b5dd6f1884f0615"
+    },
+    "links": {
+      "file": "links.parquet",
+      "sha256": "56cecfb996afe802f4cab35c9b92e8019b3fc084837420aacdfb7567a9d290dd"
+    },
+    "measures": {
+      "file": "measures.parquet",
+      "sha256": "4f3cb4c788b2c8dd88c8843bab0d76f10bea93bf98b2f85ef61ed9c4f511a855"
+    },
+    "controls": {
+      "file": "controls.parquet",
+      "sha256": "dff668a032413414a27a5ca5b889bcbb1e0a811151b5df1e576da226ac2b7336"
+    },
+    "exclusions": {
+      "file": "exclusions.parquet",
+      "sha256": "d56d9ed4b012a731ba0c9db9ad3e038fd9cdf55f6e2383bac8c9358dd116d372"
+    }
+  },
+  "validation": {
+    "as_of": "2026-10-09T10:24:21.129672+00:00",
+    "checks": {
+      "no_value_for_ND": true,
+      "ND_reason": true,
+      "amount_edge_admissible": true,
+      "no_pending_amount_edges": true,
+      "no_signed_financing_amount_edge": true,
+      "dimensionless_ratios": true,
+      "control_reasons": true,
+      "fact_documents_resolve": true,
+      "observation_documents_resolve": true,
+      "tagged_references_resolve": true,
+      "link_observations_resolve": true,
+      "no_numeric_nil": true,
+      "no_abstention_amount": true,
+      "ordered_bounds": true,
+      "no_future_facts": true,
+      "no_future_observations": true,
+      "historical_numeric_cutoffs": true,
+      "numeric_lineage_resolves": true,
+      "numeric_evidence_qualified": true
+    },
+    "violations": {
+      "no_value_for_ND": 0,
+      "ND_reason": 0,
+      "amount_edge_admissible": 0,
+      "no_pending_amount_edges": 0,
+      "no_signed_financing_amount_edge": 0,
+      "dimensionless_ratios": 0,
+      "control_reasons": 0,
+      "fact_documents_resolve": 0,
+      "observation_documents_resolve": 0,
+      "tagged_references_resolve": 0,
+      "link_observations_resolve": 0,
+      "no_numeric_nil": 0,
+      "no_abstention_amount": 0,
+      "ordered_bounds": 0,
+      "no_future_facts": 0,
+      "no_future_observations": 0,
+      "historical_numeric_cutoffs": 0,
+      "numeric_lineage_resolves": 0,
+      "numeric_evidence_qualified": 0
+    },
+    "stage": "after_all_extensions",
+    "read_only": true,
+    "independent_audit_performed": false
+  }
+}
