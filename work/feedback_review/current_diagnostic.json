@@ -1,0 +1,625 @@
+{
+  "generation": "f0aa460f724743c9b054c60a2a4fab79",
+  "commit": "218e20cb143bf66fc9cb3089d2e815f77e42784a",
+  "metrics": [
+    {
+      "measure": "customer_working_capital_loan_received",
+      "status": "computed",
+      "nd_reason": null,
+      "n": 2
+    },
+    {
+      "measure": "documented_backlog_dependency",
+      "status": "not_determinable",
+      "nd_reason": "public_attribution_or_complete_terms_not_established",
+      "n": 57112
+    },
+    {
+      "measure": "documented_backlog_dependency",
+      "status": "not_determinable",
+      "nd_reason": "historical_text_search_incomplete_or_named_customer_allocation_not_published",
+      "n": 5296
+    },
+    {
+      "measure": "documented_backlog_dependency",
+      "status": "not_determinable",
+      "nd_reason": "fiscal_calendar_not_established",
+      "n": 4724
+    },
+    {
+      "measure": "documented_backlog_dependency",
+      "status": "not_determinable",
+      "nd_reason": "source_not_disclosed_or_complete_attribution_not_established",
+      "n": 84
+    },
+    {
+      "measure": "documented_backlog_dependency",
+      "status": "not_determinable",
+      "nd_reason": "periodic_report_not_known_at_frozen_source_cutoff",
+      "n": 4
+    },
+    {
+      "measure": "documented_revenue_dependency",
+      "status": "not_determinable",
+      "nd_reason": "empty_numerator",
+      "n": 59760
+    },
+    {
+      "measure": "documented_revenue_dependency",
+      "status": "not_determinable",
+      "nd_reason": "fiscal_calendar_not_established",
+      "n": 2362
+    },
+    {
+      "measure": "documented_revenue_dependency",
+      "status": "not_determinable",
+      "nd_reason": "source_not_disclosed_or_complete_attribution_not_established",
+      "n": 42
+    },
+    {
+      "measure": "documented_revenue_dependency",
+      "status": "not_determinable",
+      "nd_reason": "periodic_report_not_known_at_frozen_source_cutoff",
+      "n": 2
+    },
+    {
+      "measure": "fcf_after_counterparty_financing",
+      "status": "not_determinable",
+      "nd_reason": "public_attribution_or_complete_terms_not_established",
+      "n": 828
+    },
+    {
+      "measure": "fcf_after_counterparty_financing",
+      "status": "not_determinable",
+      "nd_reason": "historical_text_search_incomplete_or_named_customer_allocation_not_published",
+      "n": 100
+    },
+    {
+      "measure": "fcf_after_counterparty_financing",
+      "status": "not_determinable",
+      "nd_reason": "fiscal_calendar_not_established",
+      "n": 98
+    },
+    {
+      "measure": "fcf_after_counterparty_financing",
+      "status": "not_determinable",
+      "nd_reason": "complete_net_counterparty_financing_not_public",
+      "n": 44
+    },
+    {
+      "measure": "fcf_after_counterparty_financing",
+      "status": "not_determinable",
+      "nd_reason": "source_not_disclosed_or_complete_attribution_not_established",
+      "n": 30
+    },
+    {
+      "measure": "fcf_after_counterparty_financing",
+      "status": "not_determinable",
+      "nd_reason": "periodic_report_not_known_at_frozen_source_cutoff",
+      "n": 2
+    },
+    {
+      "measure": "liq_cash_to_12m_outflows",
+      "status": "not_determinable",
+      "nd_reason": "missing_admissible_terms",
+      "n": 1856
+    },
+    {
+      "measure": "liq_cash_to_12m_outflows",
+      "status": "not_determinable",
+      "nd_reason": "fiscal_calendar_not_established",
+      "n": 196
+    },
+    {
+      "measure": "named_customer_revenue",
+      "status": "computed",
+      "nd_reason": null,
+      "n": 2
+    }
+  ],
+  "edges": [
+    {
+      "edge_kind": "relation",
+      "family": null,
+      "type": null,
+      "unit": null,
+      "stage": null,
+      "n": 438
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "delivered",
+      "n": 155
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 80
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase_commitment",
+      "unit": null,
+      "stage": "signed",
+      "n": 32
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "recognized",
+      "n": 24
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "recognized",
+      "n": 21
+    },
+    {
+      "edge_kind": "relation",
+      "family": "credit_support",
+      "type": "guarantee",
+      "unit": null,
+      "stage": "signed",
+      "n": 16
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "loan_or_facility",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 13
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 12
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": null,
+      "stage": "signed",
+      "n": 10
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 9
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "convertible_or_safe",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "recognized",
+      "n": 8
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "capacity_lease",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 8
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase_commitment",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 7
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "lease_financing",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "recognized",
+      "n": 6
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "prepayment",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 6
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 6
+    },
+    {
+      "edge_kind": "amount",
+      "family": "financing",
+      "type": "loan_or_facility",
+      "unit": "USD",
+      "stage": "recognized",
+      "n": 6
+    },
+    {
+      "edge_kind": "amount",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 5
+    },
+    {
+      "edge_kind": "relation",
+      "family": "customer_consideration",
+      "type": "equity_or_warrants_to_customer",
+      "unit": null,
+      "stage": "signed",
+      "n": 5
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "convertible_or_safe",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 4
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "convertible_or_safe",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 4
+    },
+    {
+      "edge_kind": "amount",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "USD",
+      "stage": "drawn_or_paid",
+      "n": 4
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "revenue_recognized",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "recognized",
+      "n": 3
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": null,
+      "stage": "recognized",
+      "n": 3
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "prepayment",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 3
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": null,
+      "stage": "signed",
+      "n": 3
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "capacity_lease",
+      "unit": null,
+      "stage": "signed",
+      "n": 3
+    },
+    {
+      "edge_kind": "relation",
+      "family": "customer_consideration",
+      "type": "equity_or_warrants_to_customer",
+      "unit": "http://www.xbrl.org/2003/instance:shares",
+      "stage": "recognized",
+      "n": 2
+    },
+    {
+      "edge_kind": "amount",
+      "family": "commercial",
+      "type": "purchase_commitment",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 2
+    },
+    {
+      "edge_kind": "amount",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "recognized",
+      "n": 2
+    },
+    {
+      "edge_kind": "amount",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 2
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase_commitment",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": null,
+      "n": 2
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "lease_financing",
+      "unit": null,
+      "stage": "signed",
+      "n": 2
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "available",
+      "n": 2
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "prepayment",
+      "unit": null,
+      "stage": "signed",
+      "n": 2
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": null,
+      "stage": "delivered",
+      "n": 2
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "loan_or_facility",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "drawn_or_paid",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/instance:shares",
+      "stage": "available",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "loan_or_facility",
+      "unit": "http://www.xbrl.org/2003/instance:shares",
+      "stage": "recognized",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/instance:shares",
+      "stage": "recognized",
+      "n": 1
+    },
+    {
+      "edge_kind": "amount",
+      "family": "credit_support",
+      "type": "backstop",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "signed",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": null,
+      "stage": "terminated",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "loan_or_facility",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "settled",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "capacity_lease",
+      "unit": null,
+      "stage": "delivered",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase_commitment",
+      "unit": "percent",
+      "stage": "signed",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase_commitment",
+      "unit": "USD",
+      "stage": "intent_non_binding",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "capacity_lease",
+      "unit": null,
+      "stage": "recognized",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "equity_primary",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD/http://www.xbrl.org/2003/instance:shares",
+      "stage": "available",
+      "n": 1
+    },
+    {
+      "edge_kind": "amount",
+      "family": "customer_consideration",
+      "type": "equity_or_warrants_to_customer",
+      "unit": "http://www.xbrl.org/2003/instance:shares",
+      "stage": "signed",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "financing",
+      "type": "loan_or_facility",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "recognized",
+      "n": 1
+    },
+    {
+      "edge_kind": "relation",
+      "family": "commercial",
+      "type": "purchase",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "stage": "intent_non_binding",
+      "n": 1
+    }
+  ],
+  "new_issuer_documents": [],
+  "candidate_entities": [
+    {
+      "legal_name": "Energy Global, LP",
+      "entity_id": "legal:6a63ace362fc26706d02c668fe7ce2f692e6654247f230011682d093df1c9901",
+      "entity_status": "confirmed",
+      "group_id": "external:0001065521",
+      "economic_group_id": "external:0001065521",
+      "consolidation_treatment": "consolidated_subsidiary",
+      "knowledge_date": "2026-07-27"
+    },
+    {
+      "legal_name": "SB Energy Corp.",
+      "entity_id": "legal:f745c570fa99d876fb2d16488d98757d747ce5aab82161e84ee472e59001bfcb",
+      "entity_status": "pending",
+      "group_id": null,
+      "economic_group_id": "legal:f745c570fa99d876fb2d16488d98757d747ce5aab82161e84ee472e59001bfcb",
+      "consolidation_treatment": "undetermined",
+      "knowledge_date": "2026-08-17"
+    }
+  ],
+  "sb_energy_observations": [
+    {
+      "observation_id": "4815813ab9406083b0b76a9e65be093f6d07e464ab4df71a21ea6c680d74a751",
+      "document_id": "98b725fc97c7b56cf1b968b5e60dfbd4bd5aa0285c2441052be0455f2d88e22f",
+      "counterparty": "SB Energy Corp.",
+      "amount": "105000000000.000000",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "currency": "USD",
+      "amount_nature": "signed_phase_guarantee_cap_not_current_called_amount_or_effective_all_phases",
+      "stage": "signed",
+      "family": null,
+      "link_type": null,
+      "measurement_basis": "gross_signed_guarantee_cap",
+      "quote": "In August 2026, we entered into guarantees, capped at a total of $105 billion, to provide credit support on a land, power, and shell buildout with affiliates of SB Energy Corp. (SB Energy) on behalf of a customer, an affiliate of OpenAI Group PBC (OpenAI), related to leases for approximately 4.25 gigawatts of IT load in the aggregate at SB Energy’s PORTS Technology Campus in Pike County, Ohio."
+    },
+    {
+      "observation_id": "dac63cfa111fc9d86267c068068a5657609f85464187b3e34dd149c87a25c239",
+      "document_id": "8a370485647279c078b2eaf0289cc80569ff013c04a04cf4965b923b8ed3e926",
+      "counterparty": "OpenAI_tenant_affiliate",
+      "amount": "105000000000.000000",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "currency": "USD",
+      "amount_nature": "cumulative_conditional_payment_cap_not_debt_cash_or_guarantee_call",
+      "stage": "signed",
+      "family": "credit_support",
+      "link_type": "residual_value_guarantee",
+      "measurement_basis": null,
+      "quote": "NVIDIA’s aggregate payment obligation is cumulatively capped at $105 billion for its initial commitment under the Agreements."
+    },
+    {
+      "observation_id": "ff58cc8faa826350353c5d81010410d89ce91d805d2c06a7cde147c0ec6f139d",
+      "document_id": "8a370485647279c078b2eaf0289cc80569ff013c04a04cf4965b923b8ed3e926",
+      "counterparty": "SB Energy Corp.",
+      "amount": null,
+      "unit": null,
+      "currency": null,
+      "amount_nature": null,
+      "stage": "signed",
+      "family": null,
+      "link_type": null,
+      "measurement_basis": null,
+      "quote": "On August 17, 2026, NVIDIA Corporation (“NVIDIA”) announced a multi-year partnership with SB Energy Corp."
+    }
+  ],
+  "named_customer_revenue": [
+    {
+      "group_id": "external:0002021728",
+      "counterparty_id": "none",
+      "period_end": "2026-06-30",
+      "value": "74400000.000000",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "currency": null,
+      "status": "computed",
+      "lineage": "[\"cf94d1eafccc932992e129d6f453bb97a081c976f6e2af50eed20ce73a0d7f5b\",\"feb8d6203416f9f12db64953e376f8f0c5aebd3d218469685244b98da20fe3f1\"]"
+    },
+    {
+      "group_id": "external:0002021728",
+      "counterparty_id": "none",
+      "period_end": "2026-06-30",
+      "value": "74400000.000000",
+      "unit": "http://www.xbrl.org/2003/iso4217:USD",
+      "currency": null,
+      "status": "computed",
+      "lineage": "[\"cf94d1eafccc932992e129d6f453bb97a081c976f6e2af50eed20ce73a0d7f5b\",\"feb8d6203416f9f12db64953e376f8f0c5aebd3d218469685244b98da20fe3f1\"]"
+    }
+  ]
+}

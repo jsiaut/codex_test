@@ -1,0 +1,123 @@
+{
+  "purpose": "analyse_critique_et_priorisation_uniquement",
+  "user_scope": "Analyse critique et priorisation",
+  "baseline_commit": "218e20cb143bf66fc9cb3089d2e815f77e42784a",
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "subagents_used": false,
+  "current_tables_modified": false,
+  "implementation_authorized_in_this_turn": false,
+  "checks": {
+    "revenue_dependency_all_ND": 62166,
+    "backlog_dependency_all_ND": 67220,
+    "FCF_after_counterparty_financing_all_ND": 1102,
+    "cash_to_12m_outflows_all_ND": 2052,
+    "documented_path_rows": 0,
+    "links_total": 927,
+    "links_economic_family": 489,
+    "links_amount": 23,
+    "revenue_recognized_amount_links": 0,
+    "residual_value_guarantee_links": 0,
+    "new_CIK_documents_present": false,
+    "search_complete_argument_in_evaluation": "constant_false",
+    "paths_opened_in_config_scope": false
+  },
+  "critical_findings": [
+    {
+      "finding": "Le diagnostic sur les lacunes analytiques est confirmé, sans transformer ND en absence de risque ou preuve de fragilité."
+    },
+    {
+      "finding": "Un revenu Cerebras-OpenAI de 74,4 M USD existe en observation et en mesure descriptive; ses deux vues ont counterparty_id=none. Le graphe emploie une identité OpenAI OpCo LLC encore pending, tandis qu’une autre identité OpenAI OpCo, LLC est confirmed. Examiner la résolution des noms, les dates et le périmètre avant tout raccordement.",
+      "observation_id": "cf94d1eafccc932992e129d6f453bb97a081c976f6e2af50eed20ce73a0d7f5b"
+    },
+    {
+      "finding": "Les familles credit_support et residual_value_guarantee existent déjà dans la spec. Il faut les alimenter et décrire leur portée; une garantie ne doit pas être assimilée à du cash effectivement prêté."
+    },
+    {
+      "finding": "La recherche exhaustive doit être attestée par paire, période et famille de documents. Les 398 blocs achevés ne permettent pas un search_complete=True global."
+    },
+    {
+      "finding": "La collecte des 398 blocs autorisés est achevée; elle ne démontre pas une couverture analytique exhaustive de toute la chaîne IA."
+    },
+    {
+      "finding": "Les cycles documentés étaient une option non ouverte dans config.scope. Leur absence est une capacité à développer, sans prétendre qu’elle était déjà livrée."
+    },
+    {
+      "finding": "Le prépaiement Nvidia de 1,5 Md USD a été versé à Energy Global. Le destinataire et l’affectation doivent être suivis avant de l’attribuer à la trésorerie utilisable de SB Energy ou du campus.",
+      "source": "SB_Energy",
+      "literal_quote": "Energy Global entered into the Prepaid Forward Contract with NVIDIA under which NVIDIA prepaid $1.5 billion to Energy Global"
+    },
+    {
+      "finding": "Au S-1 Nscale, le financement requis pour les accords Anthropic n’avait pas d’engagements fermes. Ce statut est celui du prospectus, pas une affirmation à toute date ultérieure.",
+      "source": "Nscale",
+      "literal_quote": "As of the date of this prospectus, we have not obtained binding commitments for any of the financings required to fund performance under the Anthropic Services Agreements"
+    },
+    {
+      "finding": "Ionic décrit une garantie Nvidia plafonnée à 860,3 M USD pour les cinq premières Lease Years et une garantie de la maison mère Nscale dès la sixième. Le contrat et l’encours doivent être rapprochés des agrégats Nvidia avant toute comparaison.",
+      "source": "Ionic_Digital"
+    },
+    {
+      "finding": "River Bend est émis par Hut 8 DC LLC, adossé aux loyers Fluidstack; Google soutient certains paiements du bail. Les Notes elles-mêmes ne sont garanties ni par Hut 8, ni par le locataire, ni par le garant du bail.",
+      "source": "Hut8",
+      "literal_quote": "The River Bend Notes are obligations solely of Hut 8 DC and are not guaranteed by the Company, the tenant, or the lease guarantor."
+    }
+  ],
+  "priority_order": [
+    {
+      "rank": 1,
+      "work": "Raccorder quelques opérations existantes et publier leurs lacunes de couverture",
+      "initial_cases": [
+        "Cerebras-OpenAI",
+        "WHCO-Broadcom-Apollo/Athene",
+        "Nvidia-CoreWeave",
+        "un projet Fluidstack"
+      ],
+      "expected_signal": "Utiliser les preuves déjà lues; confirmer le sens des flux, identités datées, montants et obligations; aucune promesse de ratio complet."
+    },
+    {
+      "rank": 2,
+      "work": "SB Energy / Energy Global / OpenAI / Nvidia",
+      "expected_signal": "Nouvelles pièces SEC; garantie conditionnelle, flux déjà payés, placement conditionnel, warrants et véhicules.",
+      "first_new_issuer_to_integrate": true
+    },
+    {
+      "rank": 3,
+      "work": "Nscale / Ionic Digital",
+      "expected_signal": "Écart contrats-financements sécurisés, DFS, SPV et changement du garant dans le temps."
+    },
+    {
+      "rank": 4,
+      "work": "Hut 8 / River Bend / Beacon Point",
+      "expected_signal": "Dette effectivement émise, cash affecté, dette du SPV et garantie du bail séparées; comparaison avec Fluidstack existant."
+    },
+    {
+      "rank": 5,
+      "work": "Beignet / Hyperion / fonds Blue Owl",
+      "expected_signal": "Garantie résiduelle de Meta et financement distinct du Net Lease Trust; rechercher contrat et détenteurs ciblés."
+    },
+    {
+      "rank": 6,
+      "work": "Lambda Compute I",
+      "expected_signal": "Comparaison financement GPU, contrats clients, réserves et amortissement; dépendance à la qualité et disponibilité des sources."
+    }
+  ],
+  "minimal_spec_changes": [
+    "Couche exploratoire par transaction/projet, distincte des critères E/F historiques.",
+    "Rôles juridiques séparés: débiteur, payeur commercial, garant, bénéficiaire, créancier.",
+    "Objet et base de chaque montant: cash payé, encours, engagement, plafond conditionnel, valeur comptable.",
+    "Chronologie des obligations, protections et conditions de tirage; échéances inconnues explicites.",
+    "Périmètre de recherche et statut des lacunes: non collecté, non lu, non structuré, identité non résolue, non attribuable, expurgé, indisponibilité publique étayée.",
+    "Chemins validés manuellement sur un petit nombre de cas avant toute généralisation."
+  ],
+  "defer": [
+    "Extension indifférenciée à tous les grands gestionnaires, banques, fonds souverains et opérateurs immobiliers.",
+    "Cartographie exhaustive des financeurs ultimes avant des inventaires nommant une transaction précise.",
+    "Génération automatique de tous les cycles longs.",
+    "Calendriers mensuels ou scénarios chiffrés lorsque contrats, encours et données de récupération ne permettent pas cette précision.",
+    "Total unique des garanties, contrats, dettes et actifs; score global de fragilité."
+  ],
+  "validation_limits": [
+    "Lecture ciblée de quatre nouvelles sources SEC pour cette analyse; pas un audit financier exhaustif.",
+    "Aucune nouvelle donnée intégrée aux huit tables.",
+    "Les assertions Beignet, Lambda, autres véhicules et autres sources du texte ne sont pas toutes revérifiées dans ce tour."
+  ]
+}
