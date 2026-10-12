@@ -1,0 +1,20 @@
+{
+  "path": "/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output/SEC_Project_2_chaines_contractuelles.zip",
+  "bytes": 380485544,
+  "sha256": "c10ebfdac869c89d05af42e7b1e7a67fedbd048156bb5e40e4e4ff2cf34539b5",
+  "entries": 207,
+  "crc_checked": true,
+  "all_current_tables_and_tested_inputs_match": true,
+  "all_eight_tables_byte_identical_after_isolated_replay": true,
+  "commit_before_packaging": "4b688e84453121014b1270078e5b92dbabf41312",
+  "full_tests_passed": 169,
+  "targeted_tests_passed": 37,
+  "isolated_tests_passed": 17,
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "subagents_used": false,
+  "full_historical_reconstruction": false,
+  "historical_main_groups": 26,
+  "additional_targeted_issuer_dossiers": 4,
+  "contents": "Eight current tables; seven prior baseline tables; original source archive; authored observations, native selections, legal roles, clauses and coverage; code, actual test evidence and offline replay proof.",
+  "historical_originals": "Historical original archives remain necessary to reconstruct all prior history; this transaction extension replays offline from the included frozen baseline."
+}
