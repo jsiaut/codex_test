@@ -100,9 +100,12 @@ def compare(root):
             original_sha256=sha256(a), replay_sha256=sha256(b))
     manifest = json.loads((root / 'work/reproduction_inputs.json').read_text())
     input_changes = [name for name, expected in manifest.items() if not (root / name).exists() or sha256(root / name) != expected]
+    dell=root/'work/dell/integration_contract.json'
+    reconstruction=('Dell SEC statements reparsed from archived originals; Dell observations and calculations rebuilt; '
+        'additive overlay on the immutable verified 24-group checkpoint; ' if dell.exists() else 'Offline full-cache reconstruction; ')
     report = dict(as_of=json.loads((root / 'work/run.json').read_text())['as_of'],
         verified_at=datetime.now(timezone.utc).isoformat(),
-        method='Offline full-cache reconstruction; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.',
+        method=reconstruction+'bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.',
         input_manifest_unchanged=not input_changes, changed_inputs=input_changes, tables=results,
         all_tables_identical=all(r['identical'] for r in results.values()), independent_audit_performed=False)
     (root / 'work/idempotency_verification.json').write_text(json.dumps(report, indent=2) + '\n')

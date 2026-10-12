@@ -109,6 +109,8 @@ def documents(db,root,collection,asof):
             is_primary=name==m['primaryDocument']
             assure='audited' if m['form'].startswith('10-K') and periodic else 'reviewed' if periodic else 'not_applicable' if contract else 'unaudited'
             tier='A' if assure=='audited' else 'B' if assure=='reviewed' else 'D' if contract else 'C'
+            if typ.startswith(('EX-21','EX-23')):
+                assure='not_applicable';tier='C'
             path=Path(r['path'])
             insert(db,'documents',dict(document_id=digest([r['url']]),group_id=GROUP,entity_id=PRIMARY,cik=CIK,accession=accession,
                 document_rank=r['document_rank'],url=r['url'],cache_path=str(path.relative_to(root)),sha256=sha(path),form=m['form'],
@@ -324,6 +326,7 @@ def assemble(root,target_db=None):
     base=state(root);asof=json.loads((base/'issuer.json').read_text())['source_cutoff'];mini=base/'assembly'
     db=create(root)
     for t in TABLES:db.execute(f"INSERT INTO {t} BY NAME SELECT * FROM read_parquet('{base}/native_tables/{t}.parquet')")
+    db.execute("UPDATE documents SET assurance_level='not_applicable',tier='C' WHERE exhibit_type LIKE 'EX-21%' OR exhibit_type LIKE 'EX-23%'")
     from .calculation import prepare_views
     from .quarter_series import prepare as quarter_views
     prepare_views(db,mini,asof);quarter_views(db,mini,asof)
@@ -351,6 +354,9 @@ def assemble(root,target_db=None):
         ('MSD_personal_affiliates_not_Dell_consolidated','Michael Dell personal investment firms and unnamed portfolio-company sales do not prove financing by Dell or a relationship with MSD Investment Corp.','policy_excluded')]:
         insert(db,'exclusions',dict(exclusion_id=digest(['Dell_gap',reason]),group_id=GROUP,entity_id=PRIMARY,element_type='Dell_scope',element_id=reason,
             reason=reason,detail=detail,coverage_state=coverage_state,as_of=asof))
+    from .universe import DEPENDENCIES
+    rank1=set(yaml.safe_load((root/'config.yaml').read_text())['tier1'])|DEPENDENCIES
+    db.execute('UPDATE measures SET tier=2 WHERE measure::VARCHAR NOT IN ('+','.join(sql_literal(x) for x in sorted(rank1))+')')
     # No existing group is recalculated in this isolated assembly.
     export(db,base/'delta_tables');persist(base/'delta_counts.json',table_counts(db));db.close()
     return overlay(root,target_db)

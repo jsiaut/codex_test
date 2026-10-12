@@ -58,6 +58,15 @@ def render(db,root,asof,validation):
         private_customer_allocation_complete=False,independent_audit_performed=False)
     persist(root/'dell_summary.json',snapshot)
     summary=json.loads((root/'delivery_summary.json').read_text());summary.update(dell_integration=snapshot,current_main_groups=len(inventory['groups']),current_table_counts=table_counts(db))
+    # Prior cohort summaries remain reviewable; current aggregate counts cover
+    # the same 25-group table exports the reader actually opens.
+    summary.setdefault('before_Dell_aggregate_counts',{k:summary.get(k) for k in ['tables','rank1_by_status','rank1_by_reason','controls_by_status','controls_by_id','exclusions_by_reason']})
+    summary['tables']=table_counts(db)
+    summary['rank1_by_status']=rows(db,'SELECT status,count(*) AS count FROM measures WHERE tier=1 GROUP BY status ORDER BY status')
+    summary['rank1_by_reason']=rows(db,'SELECT nd_reason,count(*) AS count FROM measures WHERE tier=1 AND nd_reason IS NOT NULL GROUP BY nd_reason ORDER BY count(*) DESC')
+    summary['controls_by_status']=rows(db,'SELECT status,count(*) AS count FROM controls GROUP BY status ORDER BY status')
+    summary['controls_by_id']=rows(db,'SELECT control,status,count(*) AS count FROM controls GROUP BY control,status ORDER BY control,status')
+    summary['exclusions_by_reason']=rows(db,'SELECT reason,count(*) AS count FROM exclusions GROUP BY reason ORDER BY count(*) DESC')
     persist(root/'delivery_summary.json',summary)
     cstatus=rows(db,"SELECT status,count(*) AS count FROM controls GROUP BY status ORDER BY status")
     summary['controls_by_status_current']=cstatus;persist(root/'delivery_summary.json',summary)
