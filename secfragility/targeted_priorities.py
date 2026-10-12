@@ -274,7 +274,8 @@ def apply(root,target_db=None):
         n=db.execute(f'SELECT count(*) FROM (SELECT {fields} FROM read_parquet(?) EXCEPT ALL SELECT {fields} FROM {t})',[str(b/'baseline'/(t+'.parquet'))]).fetchone()[0]
         if n:raise ValueError('Baseline row changed: '+t)
         conservation[t]={'baseline_rows_missing_or_changed':n,'rows':db.execute(f'SELECT count(*) FROM {t}').fetchone()[0]}
-    if sha(root/'tables/facts.parquet')!=sc['baseline_tables']['facts']['sha256']:raise ValueError('Existing native facts changed')
+    fact_baseline=b/'baseline/facts.parquet' if target_db else root/'tables/facts.parquet'
+    if sha(fact_baseline)!=sc['baseline_tables']['facts']['sha256']:raise ValueError('Existing native facts changed')
     from .publication import deferred
     from .verify_delivery import normalize_dimensions,final,snapshot
     from .database import export

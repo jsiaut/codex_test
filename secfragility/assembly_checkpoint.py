@@ -15,6 +15,9 @@ def inputs(root):
     files=[root/x for x in INPUTS if x!='work/run.json' and (root/x).exists()]
     files+=list((root/'work/observations').glob('*.jsonl'))
     files+=list((root/'secfragility').glob('*.py'))
+    for folder in ('work/priorities','work/dependencies'):
+        files.extend(p for p in (root/folder).glob('*') if p.is_file() and p.suffix in ('.json','.py','.zst')
+            and p.name not in ('validation.json','replay_verification.json','delivery_archive.json'))
     files+=[root/n for n in ('requirements.txt','work/inventory.json','work/collection.json',
             'work/deepening_authorization.json','work/deepening_filings.json','work/deepening_contract_sources.json') if (root/n).exists()]
     from importlib.metadata import version,PackageNotFoundError

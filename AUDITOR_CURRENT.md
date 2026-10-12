@@ -1,4 +1,4 @@
-# Audit du résultat actuel — 26 groupes
+# Audit du résultat actuel — 26 groupes historiques et extension transactionnelle
 
 Le point d’entrée est `current.json`, également visible dans `tables/current.json`. Résoudre `tables/` une fois : ce chemin immuable contient les huit fichiers Parquet et leur manifeste de validation. Les identifiants de fonds, véhicules et paires ne sont pas des groupes principaux supplémentaires.
 
@@ -11,3 +11,5 @@ SoftBank utilise une variante distincte de sources officielles japonaises qualif
 Les vérifications présentes sont celles d’un producteur unique, sans sous-agent. L’audit externe transmis par l’utilisateur est conservé dans `work/audit_20261012/audit_input.pdf` ; il porte sur le commit 5c8d484. La réponse aux constats ne vaut pas un nouvel audit financier indépendant ni une reconstruction intégrale de toutes les sources historiques.
 
 Pour auditer le code de reprise et de livraison, les cas de régression sont dans `tests/test_audit_regressions.py` : frontière de publication, échec d’export, validation tardive, changement de code après checkpoint/test, attribution entre contreparties, verrou perdu et chemins explicites. Les commandes réellement exécutées et leurs empreintes figurent dans `work/audit_20261012/test_attestation.json`. L’inventaire SHA complet des sources est `source_preflight.json`.
+
+L’extension transactionnelle actuelle est décrite dans `DEPENDENCY_SPEC.md` et `operation_dependencies.md`. Les quatre émetteurs supplémentaires sont des dossiers ciblés. Les 88 questions de couverture, les rôles légaux et les clauses sont conservés dans le registre ; les données d’agence non admises restent qualitatives. `work/dependencies/validation.json` vérifie la conservation de chaque ancienne ligne ; `replay_verification.json` compare les huit tables et les sélections régénérées depuis les originaux archivés. La lecture effective du graphe utilise `operation_views.sql`, sans supprimer l’historique des arêtes remplacées.

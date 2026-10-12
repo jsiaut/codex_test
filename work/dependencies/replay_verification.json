@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-10-12T18:55:28.390509+00:00",
+  "method": "Fresh isolated directory; restored original archive; native parsing and authored selection regeneration; prior baseline restored from current facts minus eight explicit additions.",
+  "all_eight_tables_byte_identical": true,
+  "tables": {
+    "documents": {
+      "root_sha256": "eb54c85e3f2e1e9f323f1bb27bd9676002d98f005e9ace6423c77c47067476e2",
+      "replay_sha256": "eb54c85e3f2e1e9f323f1bb27bd9676002d98f005e9ace6423c77c47067476e2",
+      "byte_identical": true
+    },
+    "facts": {
+      "root_sha256": "8a2044268f152ba841e3959b6d1ab09b4230b9a87bbb684a86688e2838104adb",
+      "replay_sha256": "8a2044268f152ba841e3959b6d1ab09b4230b9a87bbb684a86688e2838104adb",
+      "byte_identical": true
+    },
+    "observations": {
+      "root_sha256": "48ae65447c2b536318b5b14fffdca3801f069f2b48d6a6d938dde1dc86ae7f74",
+      "replay_sha256": "48ae65447c2b536318b5b14fffdca3801f069f2b48d6a6d938dde1dc86ae7f74",
+      "byte_identical": true
+    },
+    "entities": {
+      "root_sha256": "ac8120ec3d08ba645def92977e4ff5c8288002ac26351ed74b5dd6f1884f0615",
+      "replay_sha256": "ac8120ec3d08ba645def92977e4ff5c8288002ac26351ed74b5dd6f1884f0615",
+      "byte_identical": true
+    },
+    "links": {
+      "root_sha256": "56cecfb996afe802f4cab35c9b92e8019b3fc084837420aacdfb7567a9d290dd",
+      "replay_sha256": "56cecfb996afe802f4cab35c9b92e8019b3fc084837420aacdfb7567a9d290dd",
+      "byte_identical": true
+    },
+    "measures": {
+      "root_sha256": "4f3cb4c788b2c8dd88c8843bab0d76f10bea93bf98b2f85ef61ed9c4f511a855",
+      "replay_sha256": "4f3cb4c788b2c8dd88c8843bab0d76f10bea93bf98b2f85ef61ed9c4f511a855",
+      "byte_identical": true
+    },
+    "controls": {
+      "root_sha256": "dff668a032413414a27a5ca5b889bcbb1e0a811151b5df1e576da226ac2b7336",
+      "replay_sha256": "dff668a032413414a27a5ca5b889bcbb1e0a811151b5df1e576da226ac2b7336",
+      "byte_identical": true
+    },
+    "exclusions": {
+      "root_sha256": "d56d9ed4b012a731ba0c9db9ad3e038fd9cdf55f6e2383bac8c9358dd116d372",
+      "replay_sha256": "d56d9ed4b012a731ba0c9db9ad3e038fd9cdf55f6e2383bac8c9358dd116d372",
+      "byte_identical": true
+    }
+  },
+  "authored_selections_identical": {
+    "authored_observations.json": true,
+    "selected_native_facts.json": true,
+    "entity_decisions.json": true,
+    "edge_decisions.json": true,
+    "measure_decisions.json": true,
+    "derived_decisions.json": true,
+    "operations.json": true
+  },
+  "isolated_test_returncode": 0,
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "full_historical_reconstruction": false,
+  "subagents_used": false
+}

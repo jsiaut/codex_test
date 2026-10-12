@@ -11,10 +11,12 @@ def sha(p):
 def fingerprint(root):
     root=Path(root)
     files=set((root/'secfragility').glob('*.py'))|set((root/'tests').glob('*.py'))
-    files.update(root/n for n in ('requirements.txt','schema.sql','queries.sql','config.yaml','audit/criteria_manifest.json','work/run.json',
+    files.update(root/n for n in ('requirements.txt','schema.sql','queries.sql','operation_views.sql','DEPENDENCY_SPEC.md','config.yaml','audit/criteria_manifest.json','work/run.json',
        'work/priorities/scope.json','work/priorities/source_manifest.json','work/priorities/source_backup.json',
        'work/priorities/originals.tar.zst','work/priorities/author_notes.py','work/priorities/authored_observations.json',
        'work/audit_20261012/submission_metadata_manifest.json','work/audit_20261012/submission_metadata.tar.zst'))
+    files.update(p for p in (root/'work/dependencies').glob('*') if p.is_file() and p.suffix in ('.json','.py','.zst')
+        and p.name not in ('validation.json','replay_verification.json','delivery_archive.json'))
     return dict(files={str(p.relative_to(root)):sha(p) for p in sorted(files) if p.is_file()},
        tables={t:sha(root/'tables'/(t+'.parquet')) for t in TABLES},runtime={k:v for k,v in inputs(root).items() if k.startswith('@')})
 
@@ -28,7 +30,7 @@ def require(root,path=None):
 def run(root,python=None):
     root=Path(root).resolve();directory=root/'work/audit_20261012';directory.mkdir(parents=True,exist_ok=True)
     before=fingerprint(root);results=[]
-    for label,selection in [('full',[]),('targeted',['tests/test_targeted_priorities.py','tests/test_audit_regressions.py'])]:
+    for label,selection in [('full',[]),('targeted',['tests/test_targeted_priorities.py','tests/test_audit_regressions.py','tests/test_operation_dependencies.py'])]:
         junit=directory/(label+'_junit.xml');command=[str(python or sys.executable),'-m','pytest','-q',*selection,'--junitxml='+str(junit)]
         execution=subprocess.run(command,cwd=root,text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         (directory/(label+'_tests.log')).write_text(execution.stdout)

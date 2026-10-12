@@ -166,6 +166,12 @@ def finish(db,root,as_of,state):
         from .targeted_priorities import apply
         apply(root,target_db=db)
         print(json.dumps(dict(stage='targeted_priorities_integrated',counts=table_counts(db))),flush=True)
+    dependency=root/'work/dependencies/integration_contract.json'
+    if dependency.exists() and json.loads(dependency.read_text()).get('status')=='integrated_transaction_overlay':
+        from .operation_sources import restore,prepare_native
+        from .operation_dependencies import apply
+        restore(root);prepare_native(root);apply(root,target_db=db,publish=False)
+        print(json.dumps(dict(stage='operation_dependencies_integrated',counts=table_counts(db))),flush=True)
     from .verify_delivery import normalize_dimensions,final
     normalize_dimensions(db)
     verification=final(db,as_of)

@@ -18,6 +18,17 @@ from .operation_sources import BASE, read, save, sha
 
 VARIANT = 'operation_dependencies_v1'
 
+def customer_share(a,b):
+    if any(a[k]!=b[k] for k in ('group_id','entity_id','period_start','period_end','accounting_framework','currency')):
+        raise ValueError('Derived quantity combines incompatible periods/scopes/currencies')
+    if any(r['tier'] not in ('A','B','C') or r['stage']!='recognized' for r in (a,b)):
+        raise ValueError('Derived ratio needs recognized filed financial quantities')
+    numerator,denominator=Decimal(a['amount']),Decimal(b['amount'])
+    if not 0<=numerator<=denominator or denominator<=0:raise ValueError('Invalid customer revenue numerator/denominator')
+    with localcontext() as ctx:
+        ctx.prec=60;value=(numerator/denominator).quantize(Decimal('.000001'),rounding=ROUND_HALF_EVEN)
+    return numerator,denominator,value
+
 @lru_cache(maxsize=1)
 def catalog(root):
     path=Path(root)/BASE/'source_manifest.json'
@@ -142,6 +153,8 @@ def validate_ledger(root,db):
     for edge in edges:
         row=observations.get(edge['observation_id'])
         if not row:raise ValueError('Unresolved edge evidence')
+        for reference in edge.get('identity_binding_evidence',[]):
+            if reference not in observations:raise ValueError('Unresolved identity binding evidence')
         if row[1] in ('E','F'):raise ValueError('External evidence cannot create a core graph edge')
         if edge['edge_kind']=='amount' and (row[2] is None or edge.get('family')=='financing' and row[3] not in ('drawn_or_paid','recognized')):
             raise ValueError('Signed commitment is not drawn financing')
@@ -166,7 +179,13 @@ def apply(root,target_db=None,publish=True):
     conservation={}
     for table,meta in scope['baseline_tables'].items():
         path=base/'baseline'/(table+'.parquet')
-        if sha(path)!=meta['sha256']:raise ValueError('Baseline SHA differs: '+table)
+        allowed={meta['sha256']}
+        if table=='facts' and (base/'baseline_encoding_proof.json').exists():
+            encoding=read(base/'baseline_encoding_proof.json')
+            if encoding['original_sha256']!=meta['sha256'] or encoding['difference_rows']!=0:
+                raise ValueError('Invalid baseline encoding proof')
+            allowed.add(encoding['portable_sha256'])
+        if sha(path) not in allowed:raise ValueError('Baseline SHA differs: '+table)
         missing=db.execute(f'SELECT count(*) FROM (SELECT * FROM read_parquet(?) EXCEPT ALL SELECT * FROM {table})',[str(path)]).fetchone()[0]
         if missing:raise ValueError('Prior rows missing or changed: '+table)
         conservation[table]=dict(baseline_rows_missing_or_changed=missing)
@@ -206,14 +225,7 @@ def apply(root,target_db=None,publish=True):
             insert(db,'measures',row)
     for rule in read(base/'derived_decisions.json',[]):
         a,b=obs[rule['numerator_observation_id']],obs[rule['denominator_observation_id']]
-        if any(a[k]!=b[k] for k in ('group_id','entity_id','period_start','period_end','accounting_framework','currency')):
-            raise ValueError('Derived quantity combines incompatible periods/scopes/currencies')
-        if any(r['tier'] not in ('A','B','C') or r['stage']!='recognized' for r in (a,b)):
-            raise ValueError('Derived ratio needs recognized filed financial quantities')
-        numerator,denominator=Decimal(a['amount']),Decimal(b['amount'])
-        if not 0<=numerator<=denominator or denominator<=0:raise ValueError('Invalid customer revenue numerator/denominator')
-        with localcontext() as ctx:
-            ctx.prec=60;value=(numerator/denominator).quantize(Decimal('.000001'),rounding=ROUND_HALF_EVEN)
+        numerator,denominator,value=customer_share(a,b)
         for view in ('as_known','revised'):
             insert(db,'measures',dict(measure='operation_derived_quantity',group_id=a['group_id'],entity_id=a['entity_id'],
                 counterparty_id=rule['counterparty_id'],period_start=str(a['period_start']),period_end=str(a['period_end']),
@@ -244,7 +256,7 @@ def apply(root,target_db=None,publish=True):
         if decision.get('replaces_link_id'):
             insert(db,'links',dict(link_id=digest([VARIANT,decision['replaces_link_id'],edge['link_id']]),edge_kind='relation',
                 relation_type='replaces',amount_a_id=decision['replaces_link_id'],amount_b_id=edge['link_id'],resolved=True,
-                resolution_evidence='Dated, manually documented identity refinement; same source quantity, not additive.',as_of=asof))
+                resolution_evidence='Dated manual identity or instrument classification refinement; replacement is not additive.',as_of=asof))
     ledger=validate_ledger(root,db)
     from .verify_delivery import final,snapshot
     verification=final(db,asof)

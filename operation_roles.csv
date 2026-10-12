@@ -1,0 +1,47 @@
+operation_id,name,role,entity_id,unknown_reason
+CEREBRAS_OPENAI,"OpenAI OpCo, LLC",client_et_prêteur,legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa,
+CEREBRAS_OPENAI,Cerebras Systems Inc.,fournisseur_et_emprunteur,cik:0002021728,
+WHCO_CAPITAL_SOLUTION,WarehouseCo Intermediate Holdings LP,obligé_à_acheter,legal:c7c28b98f10dc35410f8c9b159d219733df33ad7c682baf7f5722516ea53c2de,
+WHCO_CAPITAL_SOLUTION,Athene Holding Ltd.,garant_limité,cik:0001527469,
+WHCO_CAPITAL_SOLUTION,Broadcom Inc.,fournisseur_et_soutien_de_baux,cik:0001730168,
+WHCO_CAPITAL_SOLUTION,Anthropic PBC,bénéficiaire_de_capacité_nommé,legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420,
+WHCO_CAPITAL_SOLUTION,Tiers remboursant Athene,contre_garant,,Identité et indépendance du tiers non publiées.
+NVIDIA_CRWV,NVIDIA Corporation,investisseur_client_et_fournisseur,cik:0001045810,
+NVIDIA_CRWV,"CoreWeave, Inc.",émetteur_fournisseur_et_acheteur,cik:0001769628,
+TERAWULF_FLUIDSTACK,TeraWulf Inc.,sponsor_et_bailleur_déclarant,cik:0001083301,
+TERAWULF_FLUIDSTACK,Fluidstack USA I Inc.,locataire,legal:ff7b9be3e54f467ad8a93c7d5f5281b7b5292e60c3f0637e0442c3fa3567447e,
+TERAWULF_FLUIDSTACK,Google LLC,soutien_des_obligations_de_bail,legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b,
+TERAWULF_FLUIDSTACK,Porteurs des notes et agent de sûreté,financeurs,,Allocations finales des porteurs non recensées.
+SB_PORTS,"SB Energy, Inc.",émetteur_et_groupe_de_développement,cik:0002133037,
+SB_PORTS,"Energy Global, LP",receveur_du_prépaiement_et_apporteur,legal:6a63ace362fc26706d02c668fe7ce2f692e6654247f230011682d093df1c9901,
+SB_PORTS,NVIDIA Corporation,investisseur_et_garant_conditionnel,cik:0001045810,
+SB_PORTS,"OpenAI Infra Holdings, LLC",bénéficiaire_des_warrants,legal:23f2273a9c7997c56900352a9e31286f7b421cc2ac0ff9ebf8ef23491be66b38,
+SB_PORTS,Locataires et bailleurs PORTS,parties_aux_baux,,Noms propres expurgés ou laissés en blanc dans les formulaires.
+NSCALE,Nscale Limited,holding_déclarante,cik:0002110365,
+NSCALE,"Nscale Ward County Borrower SPV, LLC",emprunteur_GPU_Ward,legal:36cb4b3962c578ac4ff9ad5587e311ad9414077bd53e6671dcd728417dc0a9a8,
+NSCALE,"Nscale NC Borrower SPV, LLC",emprunteur_GPU_NC,legal:c7d03d93153230dc83a18e4ef5269ad5dfed10b1abb3eacccaa959306316dd9e,
+NSCALE,Nscale GPU MCC B1.1 LLC,fournisseur_Anthropic,legal:345b9750d6391dd4bdb735ef1e8fe26db81562f42c87de3f86640919950467e6,
+NSCALE,Anthropic PBC,client,legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420,
+NSCALE,Dell Financial Services L.L.C.,financeur_d’équipements,legal:2a166eb6aa960ad83ff23ba5291e699ae608f4e33f5bfc9cc59716e5e4a4f3a8,
+NSCALE,"Microsoft, plusieurs contrats",clients,,"Le formulaire déposé nomme Microsoft Ireland Operations Limited ; index et corps divergent, sans allocation de 43,8 Md$ à une personne unique."
+IONIC_WARD,Ionic Digital Inc.,bailleur,cik:0002007691,
+IONIC_WARD,Nscale Ward County LLC,locataire,legal:de37d1ca12a9c77359037c74d7e887b918143f0b5725b9ded7d7d9409e201449,
+IONIC_WARD,NVIDIA Corporation,garant_années_1_à_5,cik:0001045810,
+IONIC_WARD,Parent Nscale,garant_à_partir_de_l’année_6,,Personne garantissant les années suivantes non nommée dans cette clause.
+IONIC_WARD,Client principal,repreneur_possible,,L’identité et toutes les obligations de reprise ne sont pas établies par cette clause.
+HUT_RIVER,Hut 8 Corp.,sponsor,cik:0001964789,
+HUT_RIVER,Hut 8 DC LLC,émetteur_des_notes,legal:30d0316ecfcec3a0619d2e30ad3ad493918f47ebbd1c0d13c4ca9e913baf95a3,
+HUT_RIVER,Porteurs de notes,créanciers,,Identités et allocations finales non recensées.
+HUT_RIVER,Fluidstack USA IV Inc.,locataire,legal:7d217002f67d14f415f1221e0eb40b00215fc36fde576cb706c3c6306e0b71b9,
+HUT_RIVER,Google LLC,soutien_du_bail,legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b,
+HUT_BEACON,Hut 8 Corp.,sponsor,cik:0001964789,
+HUT_BEACON,Beacon Point DC LLC,émetteur_des_notes,legal:20cf203d467278a4b1f0f54a14217e098d962e1eef3505f941294e04eaf74f94,
+HUT_BEACON,Porteurs de notes,créanciers,,Identités et allocations finales non recensées.
+HYPERION,"Meta Platforms, Inc.",investisseur_locataire_et_garant,cik:0001326801,
+HYPERION,Beignet Investor LLC,émetteur_des_obligations_identifiées,legal:dbe3c8e68f38bec7c149465507fbe002b565dddf87aa13e2bae593218dd01ff4,
+HYPERION,PIMCO Extended Duration Fund,porteur_identifié,series:S000013233,
+HYPERION,Fonds Blue Owl et véhicules de projet,investisseurs_et_propriétaires,,Leur identification juridique et le raccordement complet à Beignet ne sont pas établis par les pièces SEC ouvertes.
+LAMBDA_COMPUTE_I,"Lambda, Inc.",sponsor_déclarant,legal:3528d2ba8f0adc0ff7322e82e3364e7982d2eb93e97282bfc93539a22efd6fbe,
+LAMBDA_COMPUTE_I,Lambda Compute I LLC,emprunteur_nommé_par_l’agence,,"Contrat, CIK et contrôle juridique complet non confirmés dans les sources qualifiées."
+LAMBDA_COMPUTE_I,Deux offtakers,payeurs,,Noms non publiés dans ces déclarations.
+LAMBDA_COMPUTE_I,Assureurs et investisseurs obligataires,financeurs,,Identités et allocations détenues non publiées.

@@ -1,5 +1,5 @@
 {
-  "status": "authorized_implementation_in_progress",
+  "status": "integrated_transaction_overlay",
   "user_instruction": "Ok on part là-dessus",
   "baseline_commit": "7a05a35",
   "baseline_generation": "f0aa460f724743c9b054c60a2a4fab79",
@@ -54,5 +54,6 @@
   ],
   "no_global_exposure_sum": true,
   "no_causality_inference": true,
-  "no_automatic_long_cycle_enumeration": true
+  "no_automatic_long_cycle_enumeration": true,
+  "publication_generation": "50a67c1179b843ff928d1a66d8218ec9"
 }

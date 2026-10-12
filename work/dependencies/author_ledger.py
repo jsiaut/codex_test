@@ -304,6 +304,23 @@ operation('LAMBDA_COMPUTE_I','Lambda Compute I : prêts différés et contrats c
  phases=[dict(event='facility_closing_announced',date='2026-10-01'),dict(event='amortization_start',condition='Each GPU tranche stabilization'),dict(event='final_maturity_reported',date='2033-05-30')],
  extra=dict(reported_unadmitted_quantities=[dict(source_key='lambda_issuer',quantity='facility_commitment',value='1008000000',currency='USD',admitted_to_core=False),dict(source_key='lambda_issuer',quantity='fixed_coupon_percent',value='6.78',admitted_to_core=False),dict(source_key='lambda_dbrs',quantity='agency_DSCR_case',value='1.20',admitted_to_core=False,current_value_not_reported=True)]))
 
+# Personally assessed gap types; a bounded dossier is not an exhaustive search.
+GAP_STATES={
+ 'CEREBRAS_OPENAI':('partial','partial','not_collected','redacted','not_collected','partial'),
+ 'WHCO_CAPITAL_SOLUTION':('identity_unresolved','amount_unattributable','identity_unresolved','not_collected','partial','partial'),
+ 'NVIDIA_CRWV':('partial','partial','partial','redacted','not_collected','partial'),
+ 'TERAWULF_FLUIDSTACK':('identity_unresolved','amount_unattributable','identity_unresolved','partial','not_collected','partial'),
+ 'SB_PORTS':('redacted','amount_unattributable','identity_unresolved','redacted','partial','partial'),
+ 'NSCALE':('partial','partial','partial','redacted','partial','partial'),
+ 'IONIC_WARD':('identity_unresolved','partial','identity_unresolved','not_collected','not_collected','partial'),
+ 'HUT_RIVER':('partial','partial','partial','partial','partial','partial'),
+ 'HUT_BEACON':('identity_unresolved','partial','identity_unresolved','not_collected','partial','partial'),
+ 'HYPERION':('partial','amount_unattributable','not_collected','not_collected','partial','partial'),
+ 'LAMBDA_COMPUTE_I':('identity_unresolved','amount_unattributable','identity_unresolved','not_collected','not_collected','partial'),
+}
+for case in OPERATIONS:
+    for index,state in zip((0,2,3,4,5,6),GAP_STATES[case['operation_id']]):case['questions'][index]['state']=state
+
 if __name__=='__main__':
     save(B/'entity_decisions.json',ENTITIES);save(B/'edge_decisions.json',EDGES)
     save(B/'measure_decisions.json',MEASURES);save(B/'derived_decisions.json',DERIVED);save(B/'operations.json',OPERATIONS)

@@ -1,0 +1,17 @@
+{
+  "original_sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991",
+  "portable_sha256": "4c73839b127ef55afde4d241581c272c3ec346d45d976cff551acc610bad9a36",
+  "difference_rows": 0,
+  "baseline_rows": 1435879,
+  "new_native_fact_ids": [
+    "3f7e79be722c24e148e3e49206346a7fceea417014873717a07fdfea3defc011",
+    "417a709ed79d5328dbbb3fe564d1e5ddc65d5266144eb919f3066ce60654b14c",
+    "513668d3232014113670ba46eb738f333347f759eb5695728f79c6803cc265be",
+    "5e38660450d700755ed67f07e69135f72b4f14c4f424e5ee6e8d143c46b324d1",
+    "86adb7e695eb169cfcfdd28c45eb686fdaa9add7b419b71a048654c3f47473a5",
+    "b04bf58a2a7109c1e7b11485d9c8867f5465918343b2da6c0e7401b89ebeb1ef",
+    "c67a3a65e3f3e8244145966f534375495374879ce45790bf4e5a21d51d9d2986",
+    "d15dc49c2b66f84d529d6d699f2711a91255c948958c9006339eee839d53f681"
+  ],
+  "method": "DuckDB pinned version; ORDER BY fact_id; EXCEPT ALL in both directions; only physical Parquet encoding differs"
+}

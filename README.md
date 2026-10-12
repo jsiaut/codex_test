@@ -1,3 +1,7 @@
+## Extension transactionnelle actuelle
+
+Lire [le bilan des onze dossiers](operation_dependencies.md), [les règles de cette extension](DEPENDENCY_SPEC.md) et [sa reproduction](OPERATION_REPRODUCTION.md). Les 26 groupes historiques sont conservés ; quatre dossiers ciblés supplémentaires portent sur SB Energy, Nscale, Ionic Digital et Hut 8. La couche ajoute 97 observations et huit faits natifs, sans total agrégé de risque. Utiliser `operation_views.sql` pour la lecture actuelle des arêtes remplacées.
+
 **État courant : 26 groupes, avec les corrections de l’audit du 12 octobre.** Lire [les apports ciblés](targeted_priorities.md) : prêteurs, garanties et résolution de l’identité de Vernon — Lambda. Sources arrêtées au 9 octobre 2026 ; huit tables communes et archives antérieures conservées.
 
 # SEC_Project_2

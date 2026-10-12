@@ -91,19 +91,19 @@
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "OpenAI est client et prêteur. Les recettes propres du laboratoire ne sont pas ventilées publiquement.",
         "gap": "Origine ultime de la trésorerie OpenAI non publiée."
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "redacted",
         "answer": "Utilisation via lockbox, remboursements possibles par services et transferts autorisés ; intérêts pouvant être réputés payés.",
         "gap": "MRA complet et certains paramètres expurgés."
       },
       {
         "question": "loss_allocation",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Warrants et prêt créent des obligations différentes ; récupération et pertes finales ne sont pas publiées.",
         "gap": "Valeur récupérable et priorité des autres créanciers non reconstituées."
       },
@@ -187,7 +187,7 @@
     "questions": [
       {
         "question": "entities",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Athene nomme WHCO, Broadcom et Anthropic ; Apollo gère le fonds.",
         "gap": "Véhicules, prêteurs retenus et locataires juridiques incomplets."
       },
@@ -198,19 +198,19 @@
       },
       {
         "question": "engaged_or_paid_amount",
-        "state": "partial",
+        "state": "amount_unattributable",
         "answer": "35 Md$ décrit la solution de capital ; 15 % porte sur l’obligation d’achat encore en cours ; plafond Broadcom de 29 Md$ à plein déploiement.",
         "gap": "Encours précis par obligation et affectation des financements manquants."
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Anthropic est bénéficiaire nommé de capacité ; les personnes signant chaque bail ne sont pas publiées dans ces notes.",
         "gap": "Payeurs juridiques des baux non identifiés."
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Défaut d’achat WHCO et défaut de bail client déclenchent des garanties sur des bases différentes.",
         "gap": "Contrats de soutien complets non collectés dans les pièces ouvertes."
       },
@@ -301,13 +301,13 @@
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "redacted",
         "answer": "Livraison, disponibilité du service et résiliation conditionnent les obligations.",
         "gap": "Ordres et paramètres expurgés restent nécessaires."
       },
       {
         "question": "loss_allocation",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Nvidia porte capital et certaines obligations d’achat ; prêteurs et valeurs récupérables ne sont pas attribués ici.",
         "gap": "Recours, collatéraux et pertes finales par véhicule non reconstitués."
       },
@@ -375,7 +375,7 @@
     "questions": [
       {
         "question": "entities",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Le locataire USA I et Google sont nommés ; société propriétaire de chaque bâtiment à préciser.",
         "gap": "Bailleurs de chaque bâtiment et contrôle de toutes les filiales non établis."
       },
@@ -386,13 +386,13 @@
       },
       {
         "question": "engaged_or_paid_amount",
-        "state": "partial",
+        "state": "amount_unattributable",
         "answer": "Notes de 3,2 Md$ mentionnées dans l’accord de nantissement ; montant par garantie de bail non établi ici.",
         "gap": "Plafonds effectifs et comptes de réserve par bâtiment manquants."
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Fluidstack paie les loyers ; Google peut payer la terminaison ou reprendre le bail après déclenchement.",
         "gap": "Client ultime et origine des recettes Fluidstack non attribués."
       },
@@ -404,7 +404,7 @@
       },
       {
         "question": "loss_allocation",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Garanties de bail, warrants nantis et dettes du sponsor sont des protections différentes.",
         "gap": "Rang exact de toutes les sûretés et droits en difficulté incomplet."
       },
@@ -537,7 +537,7 @@
     "questions": [
       {
         "question": "entities",
-        "state": "partial",
+        "state": "redacted",
         "answer": "CIK SB Energy et Energy Global identifiés ; OpenAI Infra nommé dans le warrant, mais certaines parties aux baux restent expurgées.",
         "gap": "Noms du locataire, bailleur et parent garant de chaque phase manquants."
       },
@@ -548,19 +548,19 @@
       },
       {
         "question": "engaged_or_paid_amount",
-        "state": "partial",
+        "state": "amount_unattributable",
         "answer": "1,5 Md$ payé le 17 août à Energy Global puis apporté à la société ; 1,5 Md$ supplémentaire conditionné à l’IPO ; plafond de garantie 105 Md$.",
         "gap": "Allocation du cash à PORTS et solde disponible après refinancement/remboursements non établis."
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Affiliés OpenAI locataires ; Nvidia peut reprendre certains baux après déclenchement.",
         "gap": "Origine des recettes OpenAI et opérateur électrique définitif non établis."
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "redacted",
         "answer": "Commencement/RFS, défaut monétaire non remédié ou insolvabilité, notification, réserves, options et libération.",
         "gap": "Formule de perte, taux d’actualisation et paramètres RFS expurgés."
       },
@@ -712,7 +712,7 @@
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "redacted",
         "answer": "Financement qualifiant à obtenir, résiliation au longstop expurgé, livraison/acceptation, disponibilité et crédits de service.",
         "gap": "Dates, prix, critères d’acceptation, SLA et schedules expurgés/omis."
       },
@@ -816,7 +816,7 @@
     "questions": [
       {
         "question": "entities",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Ionic et locataire Ward County nommés ; locataire distinct du Borrower SPV de dette GPU.",
         "gap": "Nom juridique du parent garant et accord direct de reprise incomplets."
       },
@@ -833,19 +833,19 @@
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Nscale locataire ; parent reprend la garantie dès année 6 ; client principal peut reprendre le bail sous conditions.",
         "gap": "Paiements du client principal et obligations reprises non ventilés."
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Défaut/insolvabilité, dates de bail et disponibilité électrique ; expansion 89 MW conditionnelle.",
         "gap": "Garanties signées complètes, montants et effets des extensions à obtenir."
       },
       {
         "question": "loss_allocation",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Le garant et sa qualité changent avant la fin du bail ; aucun appel ni couverture intégrale de dette GPU démontrés.",
         "gap": "Recours et rang après changement de garant non établis."
       },
@@ -1039,7 +1039,7 @@
     "questions": [
       {
         "question": "entities",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Émetteur propre à chaque projet et société sponsor nommés.",
         "gap": "Porteurs et rôle du client de Beacon Point non recensés."
       },
@@ -1056,13 +1056,13 @@
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "River Bend : loyers Fluidstack USA IV ; Beacon Point : locataire non nommé, décrit comme high-investment-grade.",
         "gap": "Modalités du payeur Beacon Point à confirmer ; revenus des clients ultimes inconnus."
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Dette du SPV, covenants et comptes réservés ; soutien Google du bail River Bend, sans garantie de ses notes.",
         "gap": "Annexes de bail/backstop et accords de reprise manquants."
       },
@@ -1194,19 +1194,19 @@
       },
       {
         "question": "engaged_or_paid_amount",
-        "state": "partial",
+        "state": "amount_unattributable",
         "answer": "Meta publie 46,03 Md$ d’exposition maximale composée, 28 Md$ de seuil RVG initial, 12,31 Md$ de baux et 2,92 Md$ de participation ; PIMCO détient 1,517 M$ nominal.",
         "gap": "27,3 Md$ cité par S&P : analyse d’agence non admise comme dette SEC directement constatée."
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Engagements de Meta envers la VIE ; distributions du projet vers la holding obligataire à reconstituer.",
         "gap": "Waterfall de distribution et accords directs non collectés."
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Non-renouvellement/résiliation et valeur à la date considérée pour RVG ; clauses complètes non collectées.",
         "gap": "Garantie RVG complète, schedules et indenture private placement manquants."
       },
@@ -1291,7 +1291,7 @@
     "questions": [
       {
         "question": "entities",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Lambda et emprunteur nommés dans des sources externes ; parties contractuelles non vérifiées par pièces ABCD.",
         "gap": "Source externe et contrats sous-jacents non publiés dans les recherches bornées."
       },
@@ -1302,25 +1302,25 @@
       },
       {
         "question": "engaged_or_paid_amount",
-        "state": "partial",
+        "state": "amount_unattributable",
         "answer": "Facilité annoncée 1,008 Md$, à tirages différés ; montant effectivement tiré inconnu.",
         "gap": "Tirages, encours et réserves non publiés ; chiffres externes exclus des mesures core."
       },
       {
         "question": "revenue_payer",
-        "state": "partial",
+        "state": "identity_unresolved",
         "answer": "Deux offtakers de qualité investment grade selon agence, non nommés.",
         "gap": "Identité des clients et clauses de paiement non vérifiées."
       },
       {
         "question": "interruption_conditions",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Acceptation des GPU, achèvement des sites, SLA et conditions de tirage ; historique technologique court.",
         "gap": "Contrats de prêt, SLA, offtake et accords directs absents."
       },
       {
         "question": "loss_allocation",
-        "state": "partial",
+        "state": "not_collected",
         "answer": "Sûretés sur matériels et cash-flows selon issuer/agence ; réserve moins forte que la pratique selon DBRS ; équité sponsor en construction.",
         "gap": "Recours, rang, collatéral et prix de récupération non vérifiés dans contrats."
       },

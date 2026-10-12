@@ -45,7 +45,14 @@ def test_parallel_guarantees_are_distinct_and_not_called():
 def test_old_facts_and_frozen_cutoff_survive():
     scope=json.loads((ROOT/'work/priorities/scope.json').read_text())
     assert scope['source_cutoff']=='2026-10-09T10:24:21.129672+00:00'
-    assert hashlib.sha256((ROOT/'tables/facts.parquet').read_bytes()).hexdigest()==scope['baseline_tables']['facts']['sha256']
+    baseline=ROOT/'work/dependencies/baseline/facts.parquet'
+    if not baseline.exists():baseline=ROOT/'tables/facts.parquet'
+    assert hashlib.sha256(baseline.read_bytes()).hexdigest() in {
+        scope['baseline_tables']['facts']['sha256'],
+        json.loads((ROOT/'work/dependencies/baseline_encoding_proof.json').read_text())['portable_sha256']}
+    c=duckdb.connect()
+    assert c.execute('SELECT count(*) FROM (SELECT * FROM read_parquet(?) EXCEPT ALL SELECT * FROM read_parquet(?))',
+        [str(baseline),str(ROOT/'tables/facts.parquet')]).fetchone()[0]==0
     proof=json.loads((ROOT/'work/priorities/validation.json').read_text())
     assert all(v.get('baseline_rows_missing_or_changed',0)==0 for v in proof['conservation'].values())
     assert (ROOT/'audit/criteria_manifest.json').read_bytes()==(ROOT/'work/smci/baseline/criteria_manifest.json').read_bytes()

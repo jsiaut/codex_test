@@ -1,0 +1,71 @@
+{
+  "ledger": {
+    "operations": 11,
+    "authored_edges": 18,
+    "coverage_questions": 88,
+    "no_global_exposure_sum": true,
+    "no_inferred_causality": true,
+    "negative_search_certificates": 0
+  },
+  "conservation": {
+    "documents": {
+      "baseline_rows_missing_or_changed": 0
+    },
+    "facts": {
+      "baseline_rows_missing_or_changed": 0
+    },
+    "observations": {
+      "baseline_rows_missing_or_changed": 0
+    },
+    "entities": {
+      "baseline_rows_missing_or_changed": 0
+    },
+    "links": {
+      "baseline_rows_missing_or_changed": 0
+    },
+    "measures": {
+      "baseline_rows_missing_or_changed": 0
+    },
+    "controls": {
+      "baseline_rows_missing_or_changed": 0
+    },
+    "exclusions": {
+      "baseline_rows_missing_or_changed": 0
+    }
+  },
+  "checks": {
+    "no_value_for_ND": true,
+    "ND_reason": true,
+    "amount_edge_admissible": true,
+    "no_pending_amount_edges": true,
+    "no_signed_financing_amount_edge": true,
+    "dimensionless_ratios": true,
+    "control_reasons": true,
+    "fact_documents_resolve": true,
+    "observation_documents_resolve": true,
+    "tagged_references_resolve": true,
+    "link_observations_resolve": true,
+    "no_numeric_nil": true,
+    "no_abstention_amount": true,
+    "ordered_bounds": true,
+    "no_future_facts": true,
+    "no_future_observations": true,
+    "historical_numeric_cutoffs": true,
+    "numeric_lineage_resolves": true,
+    "numeric_evidence_qualified": true
+  },
+  "counts": {
+    "documents": 12231,
+    "facts": 1435887,
+    "observations": 18055,
+    "entities": 800,
+    "links": 948,
+    "measures": 599133,
+    "controls": 340172,
+    "exclusions": 16793
+  },
+  "historical_main_groups": 26,
+  "additional_targeted_issuer_dossiers": 4,
+  "frozen_criteria": true,
+  "subagents_used": false
+}

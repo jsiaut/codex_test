@@ -30,6 +30,9 @@ def metadata(root,path):
 def resolve(root,path):
     """Materialize an archived equivalent only after verifying its old SHA."""
     root=Path(root).resolve();p=Path(path);p=p if p.is_absolute() else root/p
+    if not p.exists() and p.is_relative_to(root) and str(p.relative_to(root)).startswith('work/dependencies/sources/'):
+        from .operation_sources import restore
+        restore(root)
     index=root/'work/audit_20261012/source_preflight.json'
     if not index.exists():
         if p.exists():return p
