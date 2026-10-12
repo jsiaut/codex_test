@@ -4,6 +4,7 @@ import copy,json
 import pytest
 from secfragility.softbank_sources import qualify,extract,extract_japanese,row_values,GROUP,VARIANT
 from secfragility.softbank_integration import approved_source,stamp
+from secfragility.phase3 import periodic_seed_directory
 
 ROOT=Path(__file__).resolve().parents[1]
 @pytest.fixture(scope='module')
@@ -12,6 +13,12 @@ def sources():return json.loads((ROOT/'work/softbank/source_qualifications.json'
 def test_native_dash_is_not_zero_and_scale_is_millions():
     assert row_values('cash (1,000) -')==[Decimal('-1000000000'),None]
     assert row_values('cash 0 12')==[Decimal(0),Decimal('12000000')]
+
+def test_repeat_main_assembly_keeps_Japanese_facts_out_of_legacy_seed(tmp_path):
+    assert periodic_seed_directory(tmp_path)==tmp_path/'tables'
+    path=tmp_path/'work/softbank';path.mkdir(parents=True)
+    (path/'integration_contract.json').write_text(json.dumps({'status':'integrated_with_explicit_public_disclosure_gaps'}))
+    assert periodic_seed_directory(tmp_path)==path/'baseline'
 
 def test_original_Japanese_and_English_current_balance(sources):
     jp=next(s for s in sources if s.get('regulatory_identifier')=='S100YGH5')

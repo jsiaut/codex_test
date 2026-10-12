@@ -6,6 +6,14 @@ from .database import create,export,table_counts
 from .calculation import core_calibration
 from .assembly import load
 
+def periodic_seed_directory(root):
+    """Foreign exported facts never feed back into the EDGAR-only calculation."""
+    contract=root/'work/softbank/integration_contract.json'
+    if contract.exists() and json.loads(contract.read_text()).get('status') in (
+            'authorized_integration_in_progress','integrated_with_explicit_public_disclosure_gaps'):
+        return root/'work/softbank/baseline'
+    return root/'tables'
+
 
 def run(root,reconstruct=False,resume=False):
     faulthandler.enable()
@@ -28,9 +36,10 @@ def run(root,reconstruct=False,resume=False):
         wal=root/'work/phase3.duckdb.wal'
         if wal.exists():wal.unlink()
         db=create(root,path)
+        seed=periodic_seed_directory(root)
         for t in ['documents','facts']:
             where=" WHERE document_kind IS DISTINCT FROM 'submission_metadata'" if t=='documents' else ''
-            db.execute(f"INSERT INTO {t} BY NAME SELECT * FROM read_parquet('tables/{t}.parquet'){where}")
+            db.execute(f"INSERT INTO {t} BY NAME SELECT * FROM read_parquet('{seed}/{t}.parquet'){where}")
     db.execute('BEGIN TRANSACTION')
     if (root/'work/deepening_authorization.json').exists():
         from .deepening_assembly import load_sources

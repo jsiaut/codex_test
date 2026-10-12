@@ -1,0 +1,6 @@
+[main 09d1bc6] softbank: publish validated integration and complete source archive manifest
+ 28 files changed, 915 insertions(+), 791 deletions(-)
+ create mode 100644 work/softbank/delivery_archive.json
+ create mode 100644 work/softbank/final_checkpoint_commit.log
+ create mode 100644 work/softbank/final_checkpoint_push.log
+ create mode 100644 work/softbank/packaging.log
