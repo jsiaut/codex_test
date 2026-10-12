@@ -46,9 +46,10 @@
     "acceptance_datetime": "2026-07-30 00:07:28+00:00",
     "filing_date": "2026-07-29 00:00:00",
     "knowledge_date": "2026-07-29 00:00:00",
-    "period_end": "NaT",
+    "period_end": "2026-05-31",
     "path": "work/priorities/sources/apld-20260531.htm",
-    "text_path": "work/priorities/text/apld-20260531.htm.txt"
+    "text_path": "work/priorities/text/apld-20260531.htm.txt",
+    "period_basis": "Original primary filing exact dei:DocumentPeriodEndDate text May 31, 2026; not a fallback from filename"
   },
   {
     "document_id": "417035e714fb1e0a6e94f2e653332030c09941dd35350dff9fda8e77f36126f2",
@@ -200,5 +201,27 @@
     "text_path": "work/priorities/text/513040f1b444c9c94a2eb03379e2dd173812cfc089222b0ce187562e2c244187.pdf.txt",
     "source_format": "pdf_text",
     "period_end": "2026-06-30"
+  },
+  {
+    "group_id": "external:0001144879",
+    "cik": "0001144879",
+    "accession": "0001144879-26-000048",
+    "form": "10-K",
+    "knowledge_date": "2026-07-29 00:00:00",
+    "filing_date": "2026-07-29 00:00:00",
+    "acceptance_datetime": "2026-07-30 00:07:28+00:00",
+    "period_end": "2026-05-31",
+    "document_id": "8636b93d3583b92ecbe8bf9cb3b2e7791e47be801894bc49d3c2255a6504db00",
+    "url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000048/exhibit211-subsidiaries.htm",
+    "path": "work/priorities/sources/apld-subsidiaries.htm",
+    "text_path": "work/priorities/text/apld-subsidiaries.htm.txt",
+    "sha256": "f400271a6a408f485881b03c3c243cee296306f9bf6e6742273923870812b430",
+    "document_rank": 1,
+    "exhibit_type": "EX-2.11",
+    "body_exhibit_number": "21.1",
+    "document_kind": "subsidiaries",
+    "tier": "C",
+    "assurance_level": "not_applicable",
+    "period_basis": "Original primary filing exact dei:DocumentPeriodEndDate text May 31, 2026; not a fallback from filename"
   }
 ]

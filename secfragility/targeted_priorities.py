@@ -183,8 +183,8 @@ def apply(root,target_db=None):
         if db.execute('SELECT count(*) FROM documents WHERE document_id=?',[did]).fetchone()[0]:continue
         insert(db,'documents',dict(document_id=did,group_id=s['group_id'],entity_id='cik:'+s['cik'],cik=s['cik'],
             accession=s['accession'],document_rank=s['document_rank'],document_rank_source='original_SEC_exhibit_sequence_header',
-            url=s['url'],cache_path=s['path'],sha256=s['sha256'],form=s['form'],exhibit_type='EX-10.'+str(s['document_rank']),
-            filing_status='filed',assurance_level='not_applicable',location='contract',document_kind='exhibit',tier='D',
+            url=s['url'],cache_path=s['path'],sha256=s['sha256'],form=s['form'],exhibit_type=s.get('exhibit_type') or 'EX-10.'+str(s['document_rank']),
+            filing_status='filed',assurance_level='not_applicable',location='contract' if s['tier']=='D' else 'filed_subsidiary_list',document_kind=s.get('document_kind','exhibit'),tier=s['tier'],
             acceptance_datetime=s['acceptance_datetime'],filing_date=s['filing_date'],knowledge_date=s['knowledge_date'],
             period_end=s['period_end'],byte_count=(root/s['path']).stat().st_size,parse_status='observed',as_of=sc['source_cutoff']))
         new_docs.append(did)
@@ -201,7 +201,7 @@ def apply(root,target_db=None):
                 accounting_framework='us_gaap',financing_state='active',financing_policy='exposure_outstanding',as_of=sc['source_cutoff']))
         elif o.get('link_type')=='guarantee':
             insert(db,'links',dict(link_id=digest(['targeted_springing',o['observation_id']]),edge_kind='relation',family='credit_support',type='guarantee',
-                from_entity_id='cik:0001769628',from_group_id='CRWV',to_entity_id=o['counterparty_entity_id'],to_group_id=o['group_id'],
+                from_entity_id='cik:0001769628',from_group_id='CRWV',to_entity_id=o['counterparty_entity_id'],
                 period_end=o['period_end'],event_date='2026-03-30',knowledge_date=o['knowledge_date'],stage='signed',instrument_key=o['instrument_key'],
                 observation_id=o['observation_id'],document_id=o['document_id'],locator=o['locator'],filing_status='filed',assurance_level='not_applicable',tier='D',
                 counterparty_evidence='derivable',source_perspective='counterparty',accounting_framework='us_gaap',conditionality='conditional',
@@ -213,6 +213,18 @@ def apply(root,target_db=None):
                 observation_id=o['observation_id'],document_id=o['document_id'],locator=o['locator'],filing_status='filed',tier=o['tier'],
                 assurance_level=o['assurance_level'],counterparty_evidence='named',source_perspective='reporting_entity',accounting_framework='us_gaap',as_of=sc['source_cutoff']))
     idx={o['model_quantity']:o for o in obs}
+    subsidiaries=next(s for s in sources(root) if s.get('document_kind')=='subsidiaries')
+    for name in ('APLD ELN-02 LLC','APLD ELN-03 LLC'):
+        o=next(o for o in obs if o.get('counterparty')==name)
+        text=normalize_html((root/subsidiaries['path']).read_bytes())
+        if name not in text:raise ValueError('Subsidiary not named')
+        eid=o['counterparty_entity_id']
+        insert(db,'entities',dict(entity_id=eid,membership_id=digest(['targeted_APLD_current_subsidiary',eid]),legal_name=name,
+            normalized_name=name.casefold(),entity_status='confirmed',group_id=subsidiaries['group_id'],economic_group_id=subsidiaries['group_id'],
+            consolidation_treatment='undetermined',membership_start=subsidiaries['period_end'],knowledge_date=subsidiaries['knowledge_date'][:10],
+            resolution_rule='EX21_body_explicit_named_subsidiary;current_membership_only;no_historical_backdating_or_accounting_consolidation_assumption',
+            evidence_document_id=subsidiaries['document_id'],evidence_locator='EXHIBIT21.1;named_row='+name,
+            source_perspective='reporting_entity',as_of=sc['source_cutoff']))
     for prefix in ('ares_helios_current','ares_cw_nest_current','ares_ddtl_v_current','ares_helios_prior','ares_cw_nest_prior','blackrock_ddtl_v'):
         f,c=idx[prefix+'_fair_value'],idx[prefix+'_cost'];ratio=Decimal(f['amount'])/Decimal(c['amount'])
         measure(db,dict(f,unit='ratio',currency=None),value=ratio,name='bdc_fv_to_cost',lineage=[f['observation_id'],c['observation_id']],numerator=f['amount'],denominator=c['amount'])

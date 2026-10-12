@@ -1,6 +1,6 @@
 # Trois priorités — apports au modèle
 
-**Le lot ciblé est intégré. Le modèle conserve ses 26 groupes principaux et sa date de coupure du 9 octobre 2026, 10:24:21 UTC.** Travail personnel, sans sous-agent. Les montants et conclusions antérieurs restent dans les huit tables ; l’extension ajoute 56 observations, deux documents contractuels, neuf liens et des mesures descriptives dans une variante distincte. Aucun total d’exposition n’est calculé.
+**Le lot ciblé est intégré. Le modèle conserve ses 26 groupes principaux et sa date de coupure du 9 octobre 2026, 10:24:21 UTC.** Travail personnel, sans sous-agent. Les montants et conclusions antérieurs restent dans les huit tables ; l’extension ajoute 56 observations, deux documents contractuels supplémentaires, la lecture vérifiée d’une liste officielle de filiales déjà archivée, neuf liens et des mesures descriptives dans une variante distincte. Aucun total d’exposition n’est calculé.
 
 Les apports les plus utiles sont l’identification de Lambda pour Vernon, les positions détenues par deux fonds prêteurs et les clauses de retour du risque vers CoreWeave. Tsubaki et DFS apportent surtout une délimitation plus précise de ce qui est public ou manque encore.
 
@@ -30,6 +30,8 @@ Sources : [Ares, 10-Q du 7 août 2026](https://www.sec.gov/Archives/edgar/data/2
 ### Applied Digital / CoreWeave : retour conditionnel vers la maison mère
 
 Les deux garanties du 30 mars 2026, déposées le 1er avril, concernent les bailleurs **APLD ELN-02 LLC** et **APLD ELN-03 LLC**, le locataire **CoreWeave Compute Acquisition Co. VIII, LLC** et le garant **CoreWeave, Inc.** Elles garantissent les obligations des baux après un événement déclencheur. Elles ne constituent pas une garantie générale immédiate de toute la dette d’équipements.
+
+La liste officielle des filiales du 10-K nomme les deux bailleurs. Leur appartenance juridique actuelle est ajoutée séparément, avec le repère du 31 mai 2026 et sa date de publication ; aucun contrôle historique au 30 mars n’est reconstitué à partir de cette seule liste, ni aucun traitement comptable de consolidation imposé. Les liens de garantie gardent les personnes morales nommées sans attribution rétrospective à un groupe. L’en-tête technique du dépôt dit EX-2.11 et le corps « EXHIBIT 21.1 » : les deux indications sont conservées dans le manifeste.
 
 Les déclencheurs incluent une notation de dette dont le seuil est occulté, l’expiration ou une modification/défaillance matériellement défavorable du contrat de colocation, des événements d’insolvabilité ou de défaut et **le refinancement complet, le paiement/extinction, la maturité ou la fin du financement d’équipements**. Un simple repricing est exclu de la clause de refinancement. Le retour du recours vers CoreWeave n’est donc pas limité à un scénario de détresse. Aucune activation effective n’est établie ici.
 

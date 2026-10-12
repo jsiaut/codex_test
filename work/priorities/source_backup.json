@@ -1,8 +1,8 @@
 {
   "path": "work/priorities/originals.tar.zst",
-  "sha256": "8f81e0dc6251c8d4fe3fbb2ae46dfc4c3039f36be0e1460586f94235d19ee728",
-  "bytes": 3175703,
-  "source_files": 12,
-  "derived_text_files": 12,
+  "sha256": "7ded91721c32e0c2882d3ef5bad5a2209de96418bb6fbbb5199fe07f232dc7d9",
+  "bytes": 3177070,
+  "source_files": 13,
+  "derived_text_files": 13,
   "restore": "regular files under work/priorities/sources and text only; validate source_manifest SHA after restoration"
 }

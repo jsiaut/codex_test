@@ -1,3 +1,5 @@
+**Mise à jour ciblée de Vernon : Lambda, Inc. est identifiée par les contrats déposés ; voir [les preuves nouvelles](targeted_priorities.md).**
+
 # SMCI intégré au modèle
 
 Le modèle contient **26 groupes principaux**, avec les huit tables communes. Les sources restent arrêtées au **9 octobre 2026, 10:24:21 UTC**. Super Micro Computer, Inc. (SMCI, CIK 0001375365) est intégré en US GAAP et en USD. Son dernier exercice connu est **FY2026, clos le 30 juin 2026**, déposé le 31 août 2026. Les exercices commencent le 1er juillet.

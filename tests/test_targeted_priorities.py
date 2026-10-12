@@ -38,6 +38,9 @@ def test_parallel_guarantees_are_distinct_and_not_called():
         assert rows[key]['stage']=='signed' and rows[key]['trigger_occurred']=='unknown'
         assert rows[key].get('amount') is None and rows[key].get('event_observable') is None
     assert 'full refinancing' in rows['apld_eln02_refinance_trigger']['quote']
+    c=duckdb.connect()
+    memberships=c.execute("SELECT membership_start FROM read_parquet(?) WHERE resolution_rule LIKE 'EX21_body_explicit_named_subsidiary%'",[str(ROOT/'tables/entities.parquet')]).fetchall()
+    assert len(memberships)==2 and all(str(r[0])=='2026-05-31' for r in memberships)
 
 def test_old_facts_and_frozen_cutoff_survive():
     scope=json.loads((ROOT/'work/priorities/scope.json').read_text())
