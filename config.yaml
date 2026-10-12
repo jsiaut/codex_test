@@ -773,3 +773,16 @@ foreign_source_extensions:
     legacy_variant: legacy_EDGAR_only
     issuer_chronology_assurance: unaudited
     annex_E_F_criteria_changed: false
+sec_source_extensions:
+  Dell_Technologies:
+    status: authorized_integrated
+    group_id: DELL
+    cik: 0001571996
+    main_perimeter_member: true
+    source_cutoff: '2026-10-09T10:24:21.129672+00:00'
+    assembly: secfragility.dell_integration
+    legacy_24_groups_preserved: true
+    text_scope: latest_annual_and_two_later_quarters;latest_proxy_Item404;targeted_credit_contracts
+    structured_scope: FY2021_onward_and_prior_comparison_quarters
+    private_named_customer_financing_allocation: not_disclosed
+    historical_notes_exhaustively_read: false

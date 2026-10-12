@@ -1,0 +1,5 @@
+issuer,guarantors,event_date,stage,nominal_principal,currency,coupon,maturity_date,status,source_accession
+Dell International L.L.C. and EMC Corporation,Dell Technologies Inc.;Denali Intermediate Inc.;Dell Inc.,2026-09-15,recognized,1250000000,USD,0.051,2029-09-15,completed_issuance;net_proceeds_not_established;not_July_balance,0001193125-26-391976
+Dell International L.L.C. and EMC Corporation,Dell Technologies Inc.;Denali Intermediate Inc.;Dell Inc.,2026-09-15,recognized,1250000000,USD,0.054,2031-09-15,completed_issuance;net_proceeds_not_established;not_July_balance,0001193125-26-391976
+Dell International L.L.C. and EMC Corporation,Dell Technologies Inc.;Denali Intermediate Inc.;Dell Inc.,2026-09-15,recognized,1500000000,USD,0.056,2033-09-15,completed_issuance;net_proceeds_not_established;not_July_balance,0001193125-26-391976
+Dell International L.L.C. and EMC Corporation,Dell Technologies Inc.;Denali Intermediate Inc.;Dell Inc.,2026-09-15,recognized,1000000000,USD,0.059,2037-04-01,completed_issuance;net_proceeds_not_established;not_July_balance,0001193125-26-391976

@@ -1,7 +1,1 @@
-{
-  "path": "work/dell/SEC_Dell_originals.tar.zst",
-  "sha256": "54c099ee9a27f5ec2b6fb60d5cb84cfff3923f585e315220dce229f8d0f9e34e",
-  "bytes": 22138838,
-  "contains": "All collected raw SEC originals, complete source inventory and unbounded companyfacts; immutable hashes retained",
-  "cutoff": "2026-10-09T10:24:21.129672+00:00"
-}
+{"bytes": 22372671, "contains": "All collected SEC original bytes, complete source registry and unbounded companyfacts", "path": "work/dell/SEC_Dell_originals.tar.zst", "sha256": "050735d08dce01acd18e88f1d12807d61bbec6610a71f55b23c0e7cf799e74bf", "source_cutoff": "2026-10-09T10:24:21.129672+00:00"}

@@ -44,6 +44,9 @@ def build_mapping(meta: dict, config: dict, group_id: str, accession: str,replac
     mappings=[]
     replacements=replacements or {}
     anchors=dict(config['concept_anchors'],**config.get('concept_anchors_to_verify',{}),**SUPPLEMENTAL_ANCHORS)
+    # Isolated issuer assemblies may document an equivalent deposited label
+    # without changing the original multi-group mapping or frozen E/F rules.
+    anchors.update(config.get('concept_anchors_overrides',{}))
     for quantity,names in anchors.items():
         if quantity in ('vendor_financed_ppe_additions','stock_paid_ppe_additions'):
             # The indicative anchors describe generic noncash acquisitions or

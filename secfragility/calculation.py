@@ -18,7 +18,9 @@ def prepare_views(db,root: Path,as_of: str):
     from .mapping import SUPPLEMENTAL_ANCHORS
     replacements=json.loads((root/'work/deprecations.json').read_text())['mapping'] if (root/'work/deprecations.json').exists() else {}
     db.execute('CREATE TEMP TABLE anchor_order (model_quantity VARCHAR,canonical_concept VARCHAR,priority INTEGER)')
-    rows=[(q,replacements.get('us-gaap:'+c,'us-gaap:'+c),p) for q,cs in dict(cfg['concept_anchors'],**cfg.get('concept_anchors_to_verify',{}),**SUPPLEMENTAL_ANCHORS).items() for p,c in enumerate(cs)]
+    anchors=dict(cfg['concept_anchors'],**cfg.get('concept_anchors_to_verify',{}),**SUPPLEMENTAL_ANCHORS)
+    anchors.update(cfg.get('concept_anchors_overrides',{}))
+    rows=[(q,replacements.get('us-gaap:'+c,'us-gaap:'+c),p) for q,cs in anchors.items() for p,c in enumerate(cs)]
     db.executemany('INSERT INTO anchor_order VALUES (?,?,?)',rows)
     for view in ('as_known','revised'):
         db.execute(f'''CREATE TEMP TABLE quantity_basis_candidates_{view} AS

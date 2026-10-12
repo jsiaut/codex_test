@@ -132,6 +132,11 @@ def finish(db,root,as_of,state):
         apply(db,root,as_of)
         export(db,root/'tables')
         print(json.dumps(dict(stage='softbank_integrated',counts=table_counts(db))),flush=True)
+    dell=root/'work/dell/integration_contract.json'
+    if dell.exists() and json.loads(dell.read_text()).get('status')=='integrated_with_explicit_public_disclosure_gaps':
+        from .dell_integration import native,assemble
+        native(root);assemble(root,target_db=db)
+        print(json.dumps(dict(stage='dell_integrated',counts=table_counts(db))),flush=True)
     return db
 
 

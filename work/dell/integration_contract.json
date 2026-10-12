@@ -1,5 +1,5 @@
 {
-  "status": "authorized_integration_in_progress",
+  "status": "integrated_with_explicit_public_disclosure_gaps",
   "authorization": "Ok on continue avec Dell alors, toujours sans sous-agent",
   "baseline_commit": "f047486113e1e120fc1e009908c1a3dcecc14239",
   "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
@@ -8,7 +8,7 @@
   "identity_verification": "official_SEC_ticker_and_full_paginated_submissions_before_admission",
   "subagents_used": false,
   "structured_window": "FY2021_through_cutoff_with_eight_prior_fiscal_quarters_for_relationship_history",
-  "text_window": "FY2021_through_cutoff_all_selected_natural_notes;_two_prior_fiscal_years_for_related_party_and_investment_history",
+  "text_window": "latest_annual_and_all_later_periodic_reports_complete_selected_natural_notes;latest_proxy_Item404;targeted_current_material_credit_and_bond_contracts;historical_notes_inventoried_not_claimed_exhaustively_read",
   "note_families": [
     "DFS_customer_financing_and_securitization",
     "revenue_and_segment_disaggregation",
@@ -30,5 +30,17 @@
     "AI_orders_backlog_shipments_revenue_cash_separate",
     "no_duplicate_consolidated_exposure_sum",
     "Annex_E_F_criteria_and_source_cutoff_unchanged"
-  ]
+  ],
+  "scope_refinement": {
+    "reason": "Separate complete current risk review from historical structured series; do not label all archived historical notes personally processed.",
+    "historical_structured_window": "FY2021_through_cutoff;prior_fiscal_quarters_retained_for_comparisons",
+    "current_periods": [
+      "2026-01-30",
+      "2026-05-01",
+      "2026-07-31"
+    ],
+    "prior_relationship_state": "search_incomplete_not_never",
+    "user_goal": "Integrate Dell into the financial model with named-evidence safeguards",
+    "decision_by": "executing_analyst_no_subagents"
+  }
 }

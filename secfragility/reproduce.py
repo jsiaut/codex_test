@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import json
 import shutil
+import os
 import duckdb
 from .database import TABLES, sql_literal
 
@@ -21,7 +22,12 @@ def capture(root):
     reference = root / 'work/replay_reference'
     reference.mkdir(exist_ok=True)
     for table in TABLES:
-        shutil.copy2(root / 'tables' / (table + '.parquet'), reference / (table + '.parquet'))
+        source=root/'tables'/(table+'.parquet');target=reference/(table+'.parquet')
+        # Exports replace files atomically; a hard link preserves the snapshot
+        # without copying hundreds of MB in a space-constrained workspace.
+        if target.exists():target.unlink()
+        try:os.link(source,target)
+        except OSError:shutil.copy2(source,target)
     path=root/'work/reproduction_inputs.json'
     names=set(json.loads(path.read_text())) if path.exists() else set()
     names.update(str(p.relative_to(root)) for p in (root/'secfragility').rglob('*.py'))
@@ -52,6 +58,12 @@ def capture(root):
         names.update(str(p.relative_to(root)) for p in (root/'work/softbank/sources').glob('*') if p.is_file())
         names.update(str(p.relative_to(root)) for p in (root/'work/softbank/text').glob('*.txt'))
         names.update(str(p.relative_to(root)) for p in (root/'work/softbank/baseline').glob('*') if p.is_file())
+    if (root/'work/dell').exists():
+        names.update('work/dell/'+name for name in ['integration_contract.json','issuer.json','filings.json',
+            'authored_observations.json','reading_ledger.json','table_amount_proofs.json','source_backup.json',
+            'baseline/manifest.json','baseline/criteria_manifest.json','SEC_Dell_originals.tar.zst'])
+        names.update(str(p.relative_to(root)) for p in (root/'work/dell').glob('*.py'))
+        names.update(str(p.relative_to(root)) for p in (root/'work/dell/baseline').glob('*.parquet'))
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 

@@ -1,6 +1,6 @@
 # SEC_Project_2
 
-Modèle courant : **24 groupes principaux**, avec SoftBank Group intégré dans les huit tables. Lire [softbank_integration.md](softbank_integration.md) pour les résultats, [softbank_summary.json](softbank_summary.json) pour la couverture et les contrôles, puis [softbank_measures.csv](softbank_measures.csv) pour les données. La base SEC précédente reste intacte, les sources restent arrêtées au 9 octobre 2026 et les critères des annexes E/F sont inchangés.
+Modèle courant : **25 groupes principaux**, avec Dell et SoftBank intégrés dans les huit tables. Lire [dell_integration.md](dell_integration.md), [dell_summary.json](dell_summary.json) et [dell_measures.csv](dell_measures.csv), puis les étapes précédentes ci-dessous. Les sources restent arrêtées au 9 octobre 2026 ; les critères E/F et les lignes des 24 groupes précédents sont conservés.
 
 ## Base SEC et étapes précédentes
 

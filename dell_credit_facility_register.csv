@@ -1,0 +1,25 @@
+actual_draw_not_inferred,committed_amount,currency,facility_maturity,joint_borrowers,lender,observation_id,source_accession,stage
+True,345000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"JPMorgan Chase Bank, N.A.",103ef8dd8ac5c59c1237307b1c06212c750df26053684c890174abe7494e5fdd,0001193125-26-265877,signed
+True,345000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"Bank of America, N.A.",4063b83c86b2caf57fa4b01b31ad88c53b650bffba9c350a9bc4abd1edfe00ba,0001193125-26-265877,signed
+True,345000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Barclays Bank PLC,1b76472e663815fd098c26afd560637354f636def2276121d7308f42fa48e433,0001193125-26-265877,signed
+True,345000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"Citibank, N.A.",abadeb33906663809966a2ed76327d07ca710d8e66e58c33349a717208edcb01,0001193125-26-265877,signed
+True,345000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Goldman Sachs Bank USA,73e0dcd45d261706011c206a6f55a3862fed14360c4c549da24e58918e2f3792,0001193125-26-265877,signed
+True,345000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"HSBC Bank USA, National Association",f4263c5c77bb948efbc88a044fe46db52d457a389e715ea15d3d94263eef05e8,0001193125-26-265877,signed
+True,345000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"Wells Fargo Bank, N.A.",1e3a5a04b297c9b397293fda8a869d43039435199bbc32e0de8ac6d7c26de2d0,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"UBS AG, Stamford Branch",9d550148fc95bd4bd3e2277e51f50fe1694df2b13075847e00cd7fca59b285ad,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"Morgan Stanley Bank, N.A.",5e6034303de92d965d7eda74e39c74b9973077cb21fb8dfe1e693d46a24df1ee,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Royal Bank of Canada,836c6d895d4d3c7695dffca1b1f3c90a48a334d21748ba05e1ed6a5762208c97,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Deutsche Bank AG New York Branch,d03ca235539956ce55f52d5499166ddf4495effb78e48b52370f8a3b3bb7f36c,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"Mizuho Bank, Ltd.",ef43ad8c09375376248cc549a75abb768519a979e93dd268188540ca8078c151,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,BNP Paribas,b03e682066e7499b5307f83cef57d3d80cf91e186c748ac16ab8cf5b84ac5b8e,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"MUFG Bank, Ltd.",2b7c51af322b314d09e96cd6ab876c1412e42a550964839c01d46a259fe27a49,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,The Bank of Nova Scotia,5c9dfa5704d99dd7f1da1d9b47935fc1231e280afc306c21d326391f7dc24d4a,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Société Generale,fef21dedd938361cc693762e891db697d8157957fa4b4e37a27dca37c421148a,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"PNC Bank, National Association",2c740b414617f2e5f396698ff1364e4898df2305b2ccf9be7c79cdbd190abbae,0001193125-26-265877,signed
+True,255000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"The Toronto-Dominion Bank, New York Branch",d6b14a692237fbbe1cf558f96bafc8202b9439d9e308edda8c1c428c95d0c8bd,0001193125-26-265877,signed
+True,130000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Truist Bank,334b9834a92b14d3d685e0a7f79f540fcc3a3ccc7267817ede9005c4c549102a,0001193125-26-265877,signed
+True,130000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Sumitomo Mitsui Banking Corporation,71197491b9de9b8484934340e2a67462d9c3ab76788d105c4ae12687f1cfd7c4,0001193125-26-265877,signed
+True,130000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,Standard Chartered Bank,bdb82e44937e17752651a6ffc6c6144ec6e70b5d799e55772fa87188c2422e85,0001193125-26-265877,signed
+True,130000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,"Banco Santander, S.A., New York Branch",b41ac97894a55481243731fe2ad599db6c7a08aa1d784964a8161262c8ee42ec,0001193125-26-265877,signed
+True,130000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,ING Bank N.V. - Dublin Branch,113efb29d44101497bfa8544716908414307c826b033b0bb8bd8fb641e669c06,0001193125-26-265877,signed
+True,130000000,USD,2031-06-10,Dell International L.L.C.;EMC Corporation,The Bank of New York Mellon,13b128543e43fc18d969c7c5b9deea2d21cf35a03b926a7ae125aaace6b76fc2,0001193125-26-265877,signed

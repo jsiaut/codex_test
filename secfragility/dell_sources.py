@@ -5,7 +5,8 @@ the executing analyst, including notes with no AI keywords.
 """
 from pathlib import Path
 from datetime import datetime, timezone
-import argparse, hashlib, json, re
+import argparse, hashlib, json, re,tarfile
+import zstandard
 import yaml
 from .network import SecClient, SessionLock, atomic_json
 from .inventory import collect_submissions
@@ -148,6 +149,37 @@ def nominate(root):
     persist(base/'reading_queue.json',blocks);persist(base/'note_coverage.json',coverage)
     print(json.dumps(dict(notes=len(blocks),chars=sum(x['chars'] for x in blocks),reports=len(coverage))),flush=True)
 
+def backup(root):
+    base=state(root);path=base/'SEC_Dell_originals.tar.zst';temporary=path.with_suffix('.partial')
+    with temporary.open('wb') as out,zstandard.ZstdCompressor(level=8).stream_writer(out,closefd=False) as z:
+        with tarfile.open(fileobj=z,mode='w|') as tar:
+            for p in sorted((base/'sources').rglob('*')):
+                if p.is_file():tar.add(p,arcname=str(p.relative_to(root)),recursive=False)
+            for name in ['companyfacts.json','issuer.json','filings.json']:tar.add(base/name,arcname='work/dell/'+name)
+    temporary.replace(path)
+    persist(base/'source_backup.json',dict(path=str(path.relative_to(root)),sha256=sha(path),bytes=path.stat().st_size,
+        contains='All collected SEC original bytes, complete source registry and unbounded companyfacts',
+        source_cutoff=json.loads((base/'issuer.json').read_text())['source_cutoff']))
+    print(json.dumps(dict(stage='Dell_raw_source_backup',bytes=path.stat().st_size,sha256=sha(path))),flush=True)
+
+def restore(root):
+    base=state(root);manifest=json.loads((base/'source_backup.json').read_text());archive=root/manifest['path']
+    if sha(archive)!=manifest['sha256']:raise ValueError('Dell source archive hash mismatch')
+    count=0
+    with archive.open('rb') as handle,zstandard.ZstdDecompressor().stream_reader(handle) as stream:
+        with tarfile.open(fileobj=stream,mode='r|') as tar:
+            for member in tar:
+                path=Path(member.name)
+                if path.is_absolute() or '..' in path.parts or path.parts[:2]!=('work','dell') or not member.isfile():
+                    raise ValueError('Unexpected archive member')
+                # Never overwrite later versioned analysis or inventory files.
+                target=root/path
+                if target.exists():continue
+                target.parent.mkdir(parents=True,exist_ok=True)
+                with tar.extractfile(member) as source:target.write_bytes(source.read())
+                count+=1
+    print(json.dumps(dict(stage='Dell_source_restore',restored_files=count)),flush=True)
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['collect','nominate']);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['collect','nominate','backup','restore']);a=p.parse_args()
     globals()[a.action](Path('.').resolve())
