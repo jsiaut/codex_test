@@ -1,0 +1,60 @@
+{
+  "authorization": "Ok on part sur tes trois priorit\u00e9s",
+  "baseline_commit": "74261ae83e92dc948b7efccbb5c932e8a0e8f2c0",
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "subagents_used": false,
+  "main_groups": 26,
+  "lenders": [
+    "Ares Core Infrastructure Fund",
+    "BlackRock Private Credit Fund"
+  ],
+  "financings": [
+    "SoftBank TSUBAKI_2026",
+    "Dell DFS latest financing/liquidity restrictions",
+    "Applied Digital project completion guarantees and escrow"
+  ],
+  "Vernon": "SMCI 2024-06-14 filed contracts and current disclosure linkage; no address-based identity inference",
+  "selection": "latest available fund SOI and its comparative; contract clauses that change risk bearer or cash availability; stop at nonpublic gaps",
+  "rules": [
+    "Annex E/F unchanged",
+    "no blanket fund integration",
+    "no global exposure sum",
+    "face/cost/fair_value/undrawn distinct",
+    "no historic capacity treated as current cash",
+    "source cutoff unchanged"
+  ],
+  "baseline_tables": {
+    "exclusions": {
+      "bytes": 2923178,
+      "sha256": "2c05f50d691b6c4f8a57f72e81bd3573c210a73438cff625dba5f421c092af95"
+    },
+    "measures": {
+      "bytes": 3342680,
+      "sha256": "8c7847e1083b0205f4614faf394582907fc3c465941a00b209684fc3317a9025"
+    },
+    "links": {
+      "bytes": 213798,
+      "sha256": "c7a310eb6268943281d8185d373d0f4b0640cb6cd6fce1481f97e231f3689db9"
+    },
+    "documents": {
+      "bytes": 2378998,
+      "sha256": "579334ef007f3f73217575c3645f455339890e6bf1c65f7ab86198c3f63cd11b"
+    },
+    "observations": {
+      "bytes": 5723104,
+      "sha256": "935d133d7f369658482308d5e603ef90de90ad52f9c0758f359db25fb2397541"
+    },
+    "facts": {
+      "bytes": 342541439,
+      "sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991"
+    },
+    "entities": {
+      "bytes": 151271,
+      "sha256": "2cb57a23b2dcbb0971518730a22450e54c968130d5167053946640bc0d2037a1"
+    },
+    "controls": {
+      "bytes": 56150807,
+      "sha256": "290e64a7601a9c914710805e7b843a185f64a0be6d06bc93251ff1a906532019"
+    }
+  }
+}
