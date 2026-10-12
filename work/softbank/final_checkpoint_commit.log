@@ -1,0 +1,21 @@
+[main 4c04728] softbank: validate complete integration and identical offline reconstruction
+ 68 files changed, 65223 insertions(+), 61021 deletions(-)
+ create mode 100644 audit/softbank_numbers.csv
+ create mode 100644 secfragility/softbank_package.py
+ create mode 100644 softbank_annex_e.csv
+ create mode 100644 softbank_bond_register.csv
+ create mode 100644 softbank_events.csv
+ create mode 100644 work/softbank/checkpoint_commit.log
+ create mode 100644 work/softbank/checkpoint_push.log
+ create mode 100644 work/softbank/final_assembly.log
+ create mode 100644 work/softbank/full_SEC_cache_reconstruction_proof.json
+ create mode 100644 work/softbank/full_reconstruction_1.log
+ create mode 100644 work/softbank/full_reconstruction_integration.log
+ create mode 100644 work/softbank/full_reconstruction_resume.log
+ create mode 100644 work/softbank/lfs_prune.log
+ create mode 100644 work/softbank/replay_assembly.log
+ create mode 100644 work/softbank/replay_capture.log
+ create mode 100644 work/softbank/replay_compare.log
+ create mode 100644 work/softbank/resolved_graph_queries.sql
+ create mode 100644 work/softbank/sources/751ec0f11df7a3f0c709aa810032dc96e0b475c98f07caee1db7d7a38fa6bd7f.html
+ create mode 100644 work/softbank/sources/99c2cbed1dd03ec2a76cf490914a45b2afa7091bae8c8d3175d2c0631b0fe6e6.html

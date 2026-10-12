@@ -11,15 +11,15 @@
   "sources_qualified": 33,
   "direct_EDINET_annual_originals": 6,
   "statement_facts": 2377,
-  "authored_observations": 70,
+  "authored_observations": 71,
   "personally_read_unique_pages": 113,
   "table_counts": {
     "documents": 10834,
     "facts": 1281095,
-    "observations": 17707,
+    "observations": 17708,
     "entities": 716,
     "links": 915,
-    "measures": 556046,
+    "measures": 556050,
     "controls": 298883,
     "exclusions": 16754
   },

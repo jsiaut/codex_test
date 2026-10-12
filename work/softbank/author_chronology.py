@@ -23,6 +23,11 @@ add('/en/news/press/20261001','it executed the third and final tranche','named_i
 add('/en/news/press/20261001','cumulative investment in OpenAI totals USD 64.6 billion','openai_cumulative_investment_reported',
     'Cumul publié inclut investissements historiques et indirects ; pas FV, cash disponible ni somme de toutes lignes du modèle.',
     amount='64600000000',currency='USD',stage='recognized',period_end='2026-10-01',counterparty='OpenAI Group PBC',measurement_basis='issuer_reported_cumulative_investment_not_fair_value')
+add('/en/news/press/20261001','SBG has now completed the USD 30.0 billion follow-on investments in OpenAI previously announced.',
+    'openai_follow_on_unpaid_closed',
+    'L’engagement de 30 Md USD annoncé en février est entièrement exécuté : reste à payer nul pour cet instrument au 1er octobre. Ce zéro ne porte ni sur tous les engagements SBG, ni sur la valeur de sa participation OpenAI.',
+    amount='0',currency='USD',stage='settled',period_end='2026-10-01',event_date='2026-10-01',counterparty='OpenAI Group PBC',
+    instrument_key='OpenAI_2026_follow_on',measurement_basis='remaining_unpaid_nominal_specific_fully_executed_commitment')
 add('/en/news/press/20261001','ownership interest is approximately 13%','openai_ownership_reported',
     'Pourcentage approximatif publié ; ne prouve pas contrôle IFRS10.',amount='0.13',unit='ratio',stage='recognized',period_end='2026-10-01',counterparty='OpenAI Group PBC')
 add('/en/news/press/20261001','all borrowings under the bridge facility agreement have been repaid and no undrawn commitments remain.',

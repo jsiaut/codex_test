@@ -57,6 +57,8 @@ def test_chronology_preserves_decision_execution_and_currencies():
     assert items['march_bridge_prepayment_decision']['stage']=='signed'
     assert items['march_bridge_outstanding_closed']['stage']=='settled'
     assert items['march_bridge_outstanding_closed']['amount']=='0'
+    assert items['openai_follow_on_unpaid_closed']['amount']=='0'
+    assert items['openai_follow_on_unpaid_closed']['instrument_key']=='OpenAI_2026_follow_on'
     assert items['senior_notes_new_EUR_nominal']['currency']=='EUR'
     assert items['senior_notes_new_USD_nominal']['currency']=='USD'
     assert items['OpenAI_annual_service_spend_announced']['stage']=='intent_non_binding'

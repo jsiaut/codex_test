@@ -50,7 +50,7 @@ Les fonds Vision sont consolidés selon IFRS10 ; leurs transactions internes son
 
 ## Traçabilité et limites de la livraison
 
-**93 sources officielles conservées**, **33 sources qualifiées**, dont six originaux annuels EDINET, **2377 faits de tableaux** et **70 observations** intégrés. **113 pages pertinentes ont été lues personnellement**. Les extractions historiques des états à partir de 2021 sont intégrées ; leur extraction automatique ne vaut pas lecture de toutes les notes historiques.
+**93 sources officielles conservées**, **33 sources qualifiées**, dont six originaux annuels EDINET, **2377 faits de tableaux** et **71 observations** intégrés. **113 pages pertinentes ont été lues personnellement**. Les extractions historiques des états à partir de 2021 sont intégrées ; leur extraction automatique ne vaut pas lecture de toutes les notes historiques.
 
 Les contrôles comprennent les équations de bilan/cash, la confrontation des états anglais avec l'original EDINET et la préservation des huit tables SEC. Les sources sont identifiées par URL, empreinte SHA-256, date, page et citation. Les chiffres PDF sont **non balisés XBRL**. Les variantes `legacy_EDGAR_only` et `extended_official_JP_sources` permettent de distinguer la politique initiale et son extension. Les valeurs inconnues ne deviennent pas zéro. Les états japonais standalone ne sont pas mélangés aux IFRS consolidés.
 

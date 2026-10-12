@@ -475,8 +475,8 @@ def note_measures(db,root,as_of,observations):
                 breakdown_key=o['model_quantity']+'|'+o['observation_id'][:16],unit=o['unit'],currency=o['currency'],
                 knowledge_date=o['knowledge_date'],counterparty_id=o['counterparty_entity_id'] or 'none',
                 evidence_profile=o['tier']+';'+o['filing_status']+';'+o['assurance_level']+';'+o['measurement_basis'])
-        if o['model_quantity'] in ('named_investment_carrying_amount','openai_undrawn_investment_commitment'):
-            block='exposed_assets' if o['stage']=='recognized' else 'contractual_outflows'
+        if o['model_quantity'] in ('named_investment_carrying_amount','openai_undrawn_investment_commitment','openai_follow_on_unpaid_closed'):
+            block='exposed_assets' if o['model_quantity']=='named_investment_carrying_amount' else 'contractual_outflows'
             for name in ['counterparty_exposure','exposure_matrix']:
                 measure(db,as_of,name,'revised',None,str(o['period_end']),o['amount'],[o['observation_id']],
                     counterparty_id=o['counterparty_entity_id'] or 'none',unit=o['unit'],currency=o['currency'],
