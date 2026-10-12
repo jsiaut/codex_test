@@ -13,5 +13,6 @@
   "DFS": "Latest filed note4 and note9 re-read plus issuer/SEC prospectus discovery; private customer/SPE contracts and numeric thresholds not established. Capacities cannot be treated as free liquidity.",
   "Vernon": "2024 8-K and EX10.1/2/3; latest 2026 10-K EX10.26 cross-reference closes identity gap without guessing.",
   "lenders": "Selected named borrower rows and all relevant SOI headers/footnotes plus unfunded commitment rows; not whole fund financial integration.",
-  "APLD_legal_identity": "Exact ELN02/03 names read in the existing 10-K EXHIBIT21.1 body; current membership May31 only, no accounting consolidation or March30 ownership assumption."
+  "APLD_legal_identity": "Exact ELN02/03 names read in the existing 10-K EXHIBIT21.1 body; current membership May31 only, no accounting consolidation or March30 ownership assumption.",
+  "additional_source": "APLD original exhibit211-subsidiaries.htm was already in the immutable documents snapshot; only its two selected current memberships are added."
 }

@@ -1,0 +1,59 @@
+{
+  "verified_at": "2026-10-12T14:22:29.671150+00:00",
+  "method": "Sources initially absent in an isolated directory; preserve the frozen 26-group baseline; restore the original tar after SHA verification; regenerate the 56 personal selections and validate quotes, inline concept/namespace/scale/unit/context date; rebuild the overlay offline. No full historical raw-source reconstruction claimed.",
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "isolated_tests_passed": 5,
+  "full_root_tests_passed": 137,
+  "code_identical_to_tested_isolated_code": {
+    "secfragility/targeted_priorities.py": true,
+    "secfragility/database.py": true,
+    "work/priorities/author_notes.py": true,
+    "schema.sql": true
+  },
+  "personal_observation_regeneration_byte_identical": true,
+  "tables": {
+    "exclusions": {
+      "root_sha256": "d56d9ed4b012a731ba0c9db9ad3e038fd9cdf55f6e2383bac8c9358dd116d372",
+      "replay_sha256": "d56d9ed4b012a731ba0c9db9ad3e038fd9cdf55f6e2383bac8c9358dd116d372",
+      "byte_identical": true
+    },
+    "measures": {
+      "root_sha256": "7043ac8f53eeb26693bc3e2abb3a5f38a83ccfa174e1622c6d3a08adfd541ef3",
+      "replay_sha256": "7043ac8f53eeb26693bc3e2abb3a5f38a83ccfa174e1622c6d3a08adfd541ef3",
+      "byte_identical": true
+    },
+    "links": {
+      "root_sha256": "eb85e6858ec21d594eb4f4b9955af2a93f5cda9268774718826816bd72b7c85b",
+      "replay_sha256": "eb85e6858ec21d594eb4f4b9955af2a93f5cda9268774718826816bd72b7c85b",
+      "byte_identical": true
+    },
+    "documents": {
+      "root_sha256": "85531f25d9f609fcd6f2758e13755de8fcca15767ba89c8752a216ffb381db2d",
+      "replay_sha256": "85531f25d9f609fcd6f2758e13755de8fcca15767ba89c8752a216ffb381db2d",
+      "byte_identical": true
+    },
+    "observations": {
+      "root_sha256": "14199e39d4cb07d2c37d6ae0b6fccc17b3048a5bf8169f3e3217970f7120d1f6",
+      "replay_sha256": "14199e39d4cb07d2c37d6ae0b6fccc17b3048a5bf8169f3e3217970f7120d1f6",
+      "byte_identical": true
+    },
+    "facts": {
+      "root_sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991",
+      "replay_sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991",
+      "byte_identical": true
+    },
+    "entities": {
+      "root_sha256": "eb83dfe6e39b5b9aa46da4ea0367e670064bd0ad65dee6ca47a4afb3b25fdfd5",
+      "replay_sha256": "eb83dfe6e39b5b9aa46da4ea0367e670064bd0ad65dee6ca47a4afb3b25fdfd5",
+      "byte_identical": true
+    },
+    "controls": {
+      "root_sha256": "dff668a032413414a27a5ca5b889bcbb1e0a811151b5df1e576da226ac2b7336",
+      "replay_sha256": "dff668a032413414a27a5ca5b889bcbb1e0a811151b5df1e576da226ac2b7336",
+      "byte_identical": true
+    }
+  },
+  "all_eight_tables_byte_identical": true,
+  "independent_audit_performed": false,
+  "subagents_used": false
+}
