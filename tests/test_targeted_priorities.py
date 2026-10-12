@@ -26,7 +26,9 @@ def test_vernon_documentary_identity_does_not_guess_revenue_customer():
     c=duckdb.connect()
     original=c.execute("SELECT counterparty_evidence,counterparty FROM read_parquet(?) WHERE group_id='SMCI' AND model_quantity='revenue_customer_concentration'",[str(ROOT/'tables/observations.parquet')]).fetchall()
     assert original==[('anonymous',None)]
-    assert 'not current discounted lease debt' in rows['vernon_original_estimate']['issuer_treatment']
+    assert Decimal(rows['vernon_original_estimate']['amount'])==Decimal('600000000')
+    lease=c.execute("SELECT amount FROM read_parquet(?) WHERE group_id='SMCI' AND model_quantity='vernon_lease_liability'",[str(ROOT/'tables/observations.parquet')]).fetchone()[0]
+    assert lease==Decimal('290200000')
 
 def test_parallel_guarantees_are_distinct_and_not_called():
     rows=authored()

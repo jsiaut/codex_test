@@ -1,8 +1,10 @@
-**État courant : 26 groupes, SMCI inclus.** Sources arrêtées au 9 octobre 2026 ; [rapport SMCI](smci_integration.md), huit tables communes et archives antérieures conservées.
+**État courant : 26 groupes, avec les trois priorités intégrées.** Lire [les apports ciblés](targeted_priorities.md) : prêteurs, garanties et résolution de l’identité de Vernon — Lambda. Sources arrêtées au 9 octobre 2026 ; huit tables communes et archives antérieures conservées.
 
 # SEC_Project_2
 
 Modèle courant : **26 groupes principaux**, avec SMCI, Dell et SoftBank intégrés dans les huit tables. Lire [le rapport SMCI](smci_integration.md), [sa synthèse](smci_summary.json) et [ses mesures](smci_measures.csv). Les 25 groupes précédents sont conservés ; les sources restent arrêtées au 9 octobre 2026 et les critères E/F sont inchangés.
+
+L’extension ciblée ajoute 56 observations, les positions d’Ares Core Infrastructure Fund et de BlackRock Private Credit Fund, deux garanties conditionnelles CoreWeave/APLD et l’identité documentaire de Lambda à Vernon. Les positions des prêteurs et l’investissement SMCI nouvellement attribué ne sont pas ajoutés aux montants déjà enregistrés. Les sources et tableaux antérieurs sont conservés ; [reproduction du lot ciblé](TARGETED_REPRODUCTION.md).
 
 ## Base SEC et étapes précédentes
 

@@ -75,6 +75,17 @@ def author_record(root, db, source, quantity, quote, finding, inline=None, **ext
         if value!=fact['value']: raise ValueError('Inline amount or scale differs')
         for k in ('period_start','period_end'):
             fact[k]=None if str(fact[k])=='NaT' else str(fact[k])[:10]
+        tree=node.getroottree()
+        units=tree.xpath('//*[@id=$ident]',ident=node.get('unitref'))
+        if len(units)!=1:raise ValueError('Inline unit absent or ambiguous')
+        measures=[e.text.strip() for e in units[0].iter() if e.tag.endswith('measure') and e.text]
+        if measures!=['iso4217:USD'] or fact['currency']!='USD':raise ValueError('Currency/unit differs')
+        contexts=tree.xpath('//*[@id=$ident]',ident=node.get('contextref'))
+        if len(contexts)!=1:raise ValueError('Inline context absent or ambiguous')
+        dates={e.tag.rsplit(':',1)[-1]:e.text.strip() for e in contexts[0].iter()
+               if e.tag.rsplit(':',1)[-1] in ('instant','startdate','enddate') and e.text}
+        if dates.get('instant',dates.get('enddate'))!=fact['period_end'] or dates.get('startdate')!=fact['period_start']:
+            raise ValueError('Inline period differs')
     elif isinstance(quote,tuple):
         a=text.index(quote[0]);z=text.index(quote[1],a)+len(quote[1]);quote=text[a:z]
     if not quote or quote not in text: raise ValueError('Selected quote absent: '+quantity)
@@ -246,6 +257,14 @@ def apply(root,target_db=None):
         validation_time=datetime.now(timezone.utc).isoformat())
     save(root/'targeted_summary.json',summary);save(b/'validation.json',summary)
     save(b/'integration_contract.json',dict(status='integrated_targeted_overlay',source_cutoff=sc['source_cutoff'],authorization=sc['authorization']))
+    report=root/'smci_integration.md'
+    if report.exists():
+        t=report.read_text()
+        t=t.replace('L’identité manque : aucune arête de financement chiffrée vers un nom supposé n’est produite.',
+            'L’identité est désormais résolue comme Lambda, Inc. par le contrat et son incorporation dans le 10-K actuel. Le type d’émission primaire n’étant pas établi, aucune nouvelle arête monétaire d’émission primaire n’est produite : voir [l’extension ciblée](targeted_priorities.md).')
+        if 'Mise à jour ciblée de Vernon' not in t:
+            t='**Mise à jour ciblée de Vernon : Lambda, Inc. est identifiée par les contrats déposés ; voir [les preuves nouvelles](targeted_priorities.md).**\n\n'+t
+        report.write_text(t)
     if not target_db:db.close()
     return summary
 

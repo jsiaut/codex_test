@@ -75,6 +75,10 @@ def capture(root):
         urls=['https://data.sec.gov/submissions/CIK0001375365.json']+['https://data.sec.gov/submissions/'+p for p in issuer['official']['pagination']['read']]
         version=issuer['source_cutoff'].replace(':','-').replace('+','_')
         names.update('cache/api/'+hashlib.sha256(url.encode()).hexdigest()+'/'+version+'.bin.zst' for url in urls)
+    if (root/'work/priorities').exists():
+        names.update('work/priorities/'+name for name in ['scope.json','source_manifest.json','source_backup.json',
+            'originals.tar.zst','author_notes.py','authored_observations.json','research_log.json','integration_contract.json'])
+        names.update(str(p.relative_to(root)) for p in (root/'work/priorities/baseline').glob('*.parquet'))
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 
@@ -117,6 +121,9 @@ def compare(root):
     if (root/'work/smci/integration_contract.json').exists():
         reconstruction=('SMCI SEC statements reparsed from archived originals; SMCI observations and calculations rebuilt; '
             'additive overlay on the immutable verified 25-group checkpoint; ')
+    if (root/'work/priorities/integration_contract.json').exists():
+        reconstruction=('Comparison of the targeted delivery with its captured reference; source replay evidence is in '
+            'work/priorities/replay_verification.json; immutable 26-group baseline plus targeted evidence overlay; ')
     report = dict(as_of=json.loads((root / 'work/run.json').read_text())['as_of'],
         verified_at=datetime.now(timezone.utc).isoformat(),
         method=reconstruction+'bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.',
