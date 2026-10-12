@@ -574,7 +574,7 @@ def run(root,from_current_legacy=False):
     db=create(root)
     source='tables' if from_current_legacy else 'work/softbank/baseline'
     if from_current_legacy:
-        existing=connect().execute("SELECT count(*) FROM read_parquet('tables/documents.parquet') WHERE group_id=?",[GROUP]).fetchone()[0]
+        existing=connect().execute("SELECT count(*) FROM read_parquet(?) WHERE group_id=?",[str(root/'tables/documents.parquet'),GROUP]).fetchone()[0]
         if existing:raise ValueError('Current exports already contain foreign integration; use immutable baseline mode')
     for table in TABLES:
         db.execute(f"INSERT INTO {table} BY NAME SELECT * FROM read_parquet('{source}/{table}.parquet')")

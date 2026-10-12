@@ -6,6 +6,7 @@ from .database import sql_literal
 
 
 def prepare_views(db,root: Path,as_of: str):
+    db.execute("SET TimeZone='UTC'")
     from .database import load_queries
     load_queries(db,root)
     db.execute(f'''CREATE TEMP TABLE selected_as_known AS SELECT * FROM eligible_facts

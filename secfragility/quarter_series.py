@@ -5,6 +5,7 @@ from .database import sql_literal
 
 
 def prepare(db,root:Path,as_of:str):
+    db.execute("SET TimeZone='UTC'")
     universe=json.loads((root/'work/expected_universe.json').read_text())
     db.execute('CREATE TEMP TABLE fiscal_quarters (group_id VARCHAR,start_date DATE,end_date DATE,fy_start DATE,q_number INTEGER)')
     rows=[(q['group_id'],q['period_start'],q['period_end'],q.get('fiscal_year_start'),q.get('quarter_number'))

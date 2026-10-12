@@ -19,6 +19,10 @@ def run(root,reconstruct=False,resume=False):
     from .publication import defer
     root=Path(root).resolve()
     try:
+        if (root/'work/audit_20261012/submission_metadata_manifest.json').exists():
+            from .source_registry import preflight
+            sources=preflight(root)
+            if sources['missing']:raise RuntimeError('Historical sources missing; prior delivery retained')
         with defer(root):db=_run(root,reconstruct,resume)
         from .verify_delivery import snapshot
         as_of=json.loads((root/'work/run.json').read_text())['as_of']

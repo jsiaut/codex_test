@@ -1,3 +1,5 @@
+**PROTOCOLE HISTORIQUE — périmètre initial de onze groupes.** Les tables de ce dossier sont des instantanés antérieurs, notamment le snapshot SEC à 23 groupes pour measures/controls. Pour auditer les **26 groupes actuels**, utiliser [AUDITOR_CURRENT.md](../AUDITOR_CURRENT.md) et la génération désignée par `current.json`. Les sources officielles japonaises qualifiées sont étudiées dans une variante distincte ; la consigne EDGAR seul ci-dessous reste celle du protocole historique.
+
 # Consignes pour un audit ultérieur
  Consignes pour l'auditeur
 

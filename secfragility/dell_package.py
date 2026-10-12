@@ -4,7 +4,7 @@ import argparse,hashlib,json,shutil,subprocess,zipfile
 from .database import TABLES
 from .dell_sources import persist,state
 
-OUTPUT=Path('/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output')
+OUTPUT=Path('output')
 
 def file_sha(path):
     with path.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
@@ -25,12 +25,13 @@ def restore_checkpoint(root,previous_archive):
             destination.write_bytes(raw)
     return dict(restored_checkpoint='24_groups_as_delivered_with_SoftBank',previous_archive_verified=True)
 
-def run(root):
+def run(root,output=None):
+    output=Path(output) if output is not None else Path(root)/'output'
     base=state(root);validation=json.loads((base/'validation.json').read_text())
     replay=json.loads((root/'work/idempotency_verification.json').read_text())
     assert all(validation['checks'].values()) and replay['all_tables_identical'] and replay['input_manifest_unchanged']
     assert all(r['same_bytes'] for r in json.loads((base/'prior_archive_baseline_match.json').read_text()).values())
-    prior=json.loads((OUTPUT/'softbank_manifest.json').read_text())
+    prior=json.loads((root/'work/softbank/delivery_archive.json').read_text())
     dependency=dict(previous_archive='SEC_Project_2_SoftBank.zip',previous_archive_sha256=prior['sha256'],
         previous_archive_bytes=prior['bytes'],previous_archive_contains='All older SEC and Japanese evidence plus the verified 24-group snapshot',
         same_baseline_bytes_verified_in_all_eight_tables=True,current_supplement_contains_full_25_group_table_snapshot=True,
@@ -70,8 +71,8 @@ Les archives antérieures restent intactes. Le 9 octobre 2026 reste l’arrêt d
         'work/reproduction_inputs.json','cache/datasets/us-gaap/2026/us-gaap-2026.zip','work/reference/opm_holidays.html'])
     # Quantitative mappings for current reconstruction are packaged; the
     # bulky historical evidence remains in its already delivered archive.
-    target=OUTPUT/'SEC_Project_2_Dell.zip';temporary=OUTPUT/'SEC_Project_2_Dell.partial.zip'
-    OUTPUT.mkdir(parents=True,exist_ok=True)
+    target=output/'SEC_Project_2_Dell.zip';temporary=output/'SEC_Project_2_Dell.partial.zip'
+    output.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(temporary,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as archive:
         for p in sorted(files):archive.write(p,str(p.relative_to(root)))
     with zipfile.ZipFile(temporary) as archive:
@@ -81,19 +82,19 @@ Les archives antérieures restent intactes. Le 9 octobre 2026 reste l’arrêt d
         repository='https://github.com/jsiaut/codex_test',commit_before_packaging=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),
         source_cutoff=validation['as_of'],current_main_groups=25,full_current_eight_tables=True,dependency=dependency,
         every_previous_row_preserved=True,all_eight_tables_identical_on_replay=True,subagents_used=False,independent_audit_performed=False)
-    temporary.replace(target);persist(base/'delivery_archive.json',manifest);persist(OUTPUT/'dell_manifest.json',manifest)
+    temporary.replace(target);persist(base/'delivery_archive.json',manifest);persist(output/'dell_manifest.json',manifest)
     for p in sorted(root.glob('dell_*')):
-        if p.is_file():shutil.copy2(p,OUTPUT/p.name)
-    shutil.copy2(root/'DELL_REPRODUCTION.md',OUTPUT/'DELL_REPRODUCTION.md')
-    shutil.copy2(base/'validation.json',OUTPUT/'dell_validation.json')
-    shutil.copy2(root/'work/idempotency_verification.json',OUTPUT/'dell_idempotency.json')
-    shutil.copy2(root/'audit/dell_numbers.csv',OUTPUT/'dell_numbers.csv')
+        if p.is_file():shutil.copy2(p,output/p.name)
+    shutil.copy2(root/'DELL_REPRODUCTION.md',output/'DELL_REPRODUCTION.md')
+    shutil.copy2(base/'validation.json',output/'dell_validation.json')
+    shutil.copy2(root/'work/idempotency_verification.json',output/'dell_idempotency.json')
+    shutil.copy2(root/'audit/dell_numbers.csv',output/'dell_numbers.csv')
     return manifest
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['build','restore']);p.add_argument('--previous',type=Path);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['build','restore']);p.add_argument('--previous',type=Path);p.add_argument('--output',type=Path);args=p.parse_args()
     if args.action=='restore':
         if not args.previous:p.error('--previous archive is required')
         result=restore_checkpoint(Path('.').resolve(),args.previous)
-    else:result=run(Path('.').resolve())
+    else:result=run(Path('.').resolve(),args.output)
     print(json.dumps(result))

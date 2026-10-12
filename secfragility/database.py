@@ -193,6 +193,12 @@ def bulk_insert(db,table,rows,root,tag):
 def export(db, destination: Path, *, unchanged=None, validator=None):
     from .publication import deferred,write
     if deferred(destination):return
+    root=Path(destination).parent
+    if validator is None and Path(destination).name=='tables' and (root/'work/run.json').is_file():
+        from .verify_delivery import normalize_dimensions,snapshot
+        normalize_dimensions(db)
+        as_of=json.loads((root/'work/run.json').read_text())['as_of']
+        validator=lambda p:snapshot(p,as_of)
     return write(db,destination,TABLES,sql_literal,unchanged=unchanged,validator=validator)
 
 

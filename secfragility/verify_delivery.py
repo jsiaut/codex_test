@@ -33,10 +33,10 @@ def final(db,as_of):
     }
     violations={name:db.execute(query).fetchone()[0] for name,query in queries.items()}
     db.execute('''CREATE OR REPLACE TEMP VIEW final_numeric_sources AS
-      SELECT fact_id id,tier,filing_status,knowledge_date FROM facts UNION ALL
-      SELECT observation_id,tier,filing_status,knowledge_date FROM observations UNION ALL
-      SELECT document_id,tier,filing_status,knowledge_date FROM documents UNION ALL
-      SELECT link_id,tier,filing_status,knowledge_date FROM links''')
+      SELECT fact_id id,document_id,tier,filing_status,knowledge_date FROM facts UNION ALL
+      SELECT observation_id,document_id,tier,filing_status,knowledge_date FROM observations UNION ALL
+      SELECT document_id,document_id,tier,filing_status,knowledge_date FROM documents UNION ALL
+      SELECT link_id,document_id,tier,filing_status,knowledge_date FROM links''')
     # Published regulated Japanese statements have their own authorized variant;
     # they do not become filed SEC evidence or feed the legacy EDGAR calculation.
     violations['numeric_lineage_resolves']=db.execute('''SELECT count(*) FROM measures m,json_each(m.lineage) j
@@ -45,7 +45,8 @@ def final(db,as_of):
     violations['numeric_evidence_qualified']=db.execute('''SELECT count(*) FROM measures m,json_each(m.lineage) j
       JOIN final_numeric_sources s ON s.id=json_extract_string(j.value,'$')
       WHERE (m.value IS NOT NULL OR m.value_lower IS NOT NULL OR m.numerator IS NOT NULL OR m.denominator IS NOT NULL)
-       AND (s.tier IN ('E','F') OR (s.filing_status NOT IN ('filed','furnished')
+       AND (s.tier IN ('E','F') OR (s.filing_status!='filed'
+        AND NOT (s.filing_status='furnished' AND EXISTS (SELECT 1 FROM documents d WHERE d.document_id=s.document_id AND d.incorporated_by_reference))
         AND NOT (m.variant='extended_official_JP_sources' AND s.filing_status IN ('published_regulated','issuer_disclosure'))))''').fetchone()[0]
     result=dict(as_of=as_of,checks={k:v==0 for k,v in violations.items()},violations=violations,
                 stage='after_all_extensions',read_only=True,independent_audit_performed=False)

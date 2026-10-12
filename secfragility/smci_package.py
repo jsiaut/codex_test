@@ -6,7 +6,7 @@ from .smci_sources import state,persist
 from .dell_package import file_sha,OUTPUT
 
 def verify_previous(root,archive_path):
-    prior=json.loads((OUTPUT/'dell_manifest.json').read_text())
+    prior=json.loads((root/'work/dell/delivery_archive.json').read_text())
     if file_sha(archive_path)!=prior['sha256']:raise ValueError('Prior Dell archive changed')
     manifest=json.loads((state(root)/'baseline/manifest.json').read_text());results={}
     with zipfile.ZipFile(archive_path) as archive:
@@ -35,7 +35,8 @@ def restore(root,archive_path):
             p.write_bytes(raw)
     return dict(restored_verified_25_group_baseline=True)
 
-def build(root):
+def build(root,output=None):
+    output=Path(output) if output is not None else Path(root)/'output'
     base=state(root);validation=json.loads((base/'validation.json').read_text());replay=json.loads((base/'raw_source_replay_verification.json').read_text())
     assert all(validation['checks'].values()) and replay['all_tables_identical'] and replay['input_manifest_unchanged']
     dependency=json.loads((base/'delivery_dependency.json').read_text())
@@ -72,21 +73,21 @@ Les notes historiques supplémentaires SMCI restent inventoriées hors de la tra
     version=issuer['source_cutoff'].replace(':','-').replace('+','_')
     files.update(root/'cache/api'/hashlib.sha256(url.encode()).hexdigest()/(version+'.bin.zst') for url in urls)
     files.update(root/name for name in ['README.md','SMCI_REPRODUCTION.md','DELL_REPRODUCTION.md','requirements.txt','config.yaml','schema.sql','queries.sql','delivery_summary.json','measures.csv','series.csv','audit/smci_numbers.csv','audit/criteria_manifest.json','work/run.json','work/deprecations.json','work/fact_semantic_quarantines.json','work/idempotency_verification.json','work/reproduction_inputs.json','work/dell/unified_inventory.json','cache/datasets/us-gaap/2026/us-gaap-2026.zip','work/reference/opm_holidays.html'])
-    target=OUTPUT/'SEC_Project_2_SMCI.zip';tmp=OUTPUT/'SEC_Project_2_SMCI.partial.zip';OUTPUT.mkdir(parents=True,exist_ok=True)
+    target=output/'SEC_Project_2_SMCI.zip';tmp=output/'SEC_Project_2_SMCI.partial.zip';output.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(tmp,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as archive:
         for p in sorted(files):archive.write(p,str(p.relative_to(root)))
     with zipfile.ZipFile(tmp) as archive:
         assert archive.testzip() is None;entries=len(archive.infolist())
     manifest=dict(archive=target.name,bytes=tmp.stat().st_size,sha256=file_sha(tmp),entries=entries,repository='https://github.com/jsiaut/codex_test',commit_before_packaging=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),source_cutoff=validation['as_of'],current_main_groups=26,full_current_eight_tables=True,dependency=dependency,every_previous_row_preserved=True,all_eight_tables_identical_on_SMCI_raw_replay=True,subagents_used=False,independent_audit_performed=False)
-    tmp.replace(target);persist(base/'delivery_archive.json',manifest);persist(OUTPUT/'smci_manifest.json',manifest)
+    tmp.replace(target);persist(base/'delivery_archive.json',manifest);persist(output/'smci_manifest.json',manifest)
     for p in root.glob('smci_*'):
-        if p.is_file():shutil.copy2(p,OUTPUT/p.name)
-    for source,name in [(base/'validation.json','smci_validation.json'),(base/'raw_source_replay_verification.json','smci_raw_source_replay.json'),(root/'audit/smci_numbers.csv','smci_numbers.csv'),(root/'SMCI_REPRODUCTION.md','SMCI_REPRODUCTION.md')]:shutil.copy2(source,OUTPUT/name)
+        if p.is_file():shutil.copy2(p,output/p.name)
+    for source,name in [(base/'validation.json','smci_validation.json'),(base/'raw_source_replay_verification.json','smci_raw_source_replay.json'),(root/'audit/smci_numbers.csv','smci_numbers.csv'),(root/'SMCI_REPRODUCTION.md','SMCI_REPRODUCTION.md')]:shutil.copy2(source,output/name)
     return manifest
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['verify_previous','restore','build']);p.add_argument('--previous',type=Path);args=p.parse_args();root=Path('.').resolve()
-    if args.action=='build':result=build(root)
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['verify_previous','restore','build']);p.add_argument('--previous',type=Path);p.add_argument('--output',type=Path);args=p.parse_args();root=Path('.').resolve()
+    if args.action=='build':result=build(root,args.output)
     elif not args.previous:p.error('--previous archive is required')
     else:result=globals()[args.action](root,args.previous)
     print(json.dumps(result))

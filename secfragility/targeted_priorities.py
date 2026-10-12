@@ -182,7 +182,7 @@ def apply(root,target_db=None):
     db=target_db or create(root)
     if target_db is None:
         db.execute('DROP TABLE facts')
-        db.execute('CREATE VIEW facts AS SELECT * FROM read_parquet(?)',[str(b/'baseline/facts.parquet')])
+        db.execute('CREATE VIEW facts AS SELECT * FROM read_parquet('+sql_literal(str(b/'baseline/facts.parquet'))+')')
     def bag(v):
         return json.dumps(sorted(json.loads(v),key=lambda x:json.dumps(x,sort_keys=True)),separators=(',',':'))
     db.create_function('priority_source_bag',bag,['VARCHAR'],'VARCHAR')
