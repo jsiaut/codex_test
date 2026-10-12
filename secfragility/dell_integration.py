@@ -126,7 +126,7 @@ def documents(db,root,collection,asof):
 
 def native(root):
     from .dell_sources import restore
-    if not (state(root)/'sources').exists():restore(root)
+    if not all((root/r['path']).exists() for f in json.loads((state(root)/'filings.json').read_text()).values() for r in f['resources'].values()):restore(root)
     base=state(root);mini,collection,facts=prepare(root);asof=json.loads((base/'issuer.json').read_text())['source_cutoff']
     db=create(root);documents(db,root,collection,asof)
     bulk_insert(db,'facts',facts,root,'dell_native_facts')

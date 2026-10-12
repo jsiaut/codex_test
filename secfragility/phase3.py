@@ -137,6 +137,11 @@ def finish(db,root,as_of,state):
         from .dell_integration import native,assemble
         native(root);assemble(root,target_db=db)
         print(json.dumps(dict(stage='dell_integrated',counts=table_counts(db))),flush=True)
+    smci=root/'work/smci/integration_contract.json'
+    if smci.exists() and json.loads(smci.read_text()).get('status')=='integrated_with_explicit_public_disclosure_gaps':
+        from .smci_integration import native,assemble
+        native(root);assemble(root,target_db=db)
+        print(json.dumps(dict(stage='smci_integrated',counts=table_counts(db))),flush=True)
     return db
 
 

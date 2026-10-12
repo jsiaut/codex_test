@@ -113,7 +113,7 @@ def documents(db,root,collection,asof):
             path=Path(r['path'])
             insert(db,'documents',dict(document_id=digest([r['url']]),group_id=GROUP,entity_id=PRIMARY,cik=CIK,accession=accession,
                 document_rank=r['document_rank'],url=r['url'],cache_path=str(path.relative_to(root)),sha256=sha(path),form=m['form'],
-                item=m.get('items'),exhibit_type=typ or None,filing_status='furnished' if typ.startswith('EX-99') and ('2.02' in (m.get('items') or '')) else 'filed' if periodic or contract or is_primary or typ.startswith('EX-16') else 'unclassified',
+                item=m.get('items'),exhibit_type=typ or None,filing_status='furnished' if typ.startswith('EX-99') and any(x in (m.get('items') or '') for x in ('2.02','7.01')) else 'filed' if periodic or contract or (is_primary and not any(x in (m.get('items') or '') for x in ('2.02','7.01'))) or typ.startswith('EX-16') else 'unclassified',
                 assurance_level=assure,tier=tier,incorporated_by_reference=False,
                 document_kind='primary_filing' if is_primary else 'contract' if contract else 'instance' if name.endswith('_htm.xml') else 'metadata',
                 acceptance_datetime=m['acceptanceDateTime'],filing_date=m['filingDate'],knowledge_date=m['filingDate'],
@@ -176,6 +176,27 @@ def supplemental(db,root,asof,authored):
     for o in authored:
         if o.get('amount') is not None:
             measure(db,asof,'smci_reported_quantity',str(o['period_end']),Decimal(o['amount']),[o['observation_id']],o.get('period_start'),breakdown_key=o['model_quantity'],unit=o['unit'],currency=o.get('currency'),knowledge_date=o['knowledge_date'],evidence_profile=json.dumps([o['tier']]))
+    by={o['model_quantity']:o for o in authored}
+    def derived(name,value,sources,start=None):
+        measure(db,asof,'smci_derived_quantity','2026-06-30',value,[by[q]['observation_id'] for q in sources],start,breakdown_key=name,knowledge_date='2026-08-31',evidence_profile='A;USD_US_GAAP_consolidated')
+    derived('fcf_basic_annual',Decimal(by['cfo_annual']['amount'])-Decimal(by['capex_paid_annual']['amount']),['cfo_annual','capex_paid_annual'],'2025-07-01')
+    derived('debt_interest_bearing_carrying_total',Decimal(by['bank_debt_total']['amount'])+Decimal(by['convertible_debt_total_book']['amount']),['bank_debt_total','convertible_debt_total_book'])
+    # Named commercial relations remain separate from financing amounts.
+    for alias,name,quantity in [('Ablecom','Ablecom Technology Inc','Ablecom_dependency'),('Compuware','Compuware Technology Inc','Compuware_trade_credit_limit')]:
+        o=by[quantity];eid='legal:'+digest(name);g='EXT:'+alias
+        insert(db,'entities',dict(entity_id=eid,membership_id=digest(['SMCI_related_party_20260630',eid]),legal_name=name,normalized_name=name.casefold(),entity_status='confirmed',group_id=g,economic_group_id=g,consolidation_treatment='undetermined',membership_start='2026-06-30',knowledge_date=o['knowledge_date'],resolution_rule='audited_note_named_related_party;no_consolidation_from_family_interest',evidence_document_id=o['document_id'],evidence_locator=o['locator'],source_perspective='reporting_entity',as_of=asof))
+        insert(db,'links',dict(link_id=digest(['SMCI_commercial_relation',eid]),edge_kind='relation',family='commercial',type='purchase',from_entity_id=PRIMARY,to_entity_id=eid,from_group_id=GROUP,to_group_id=g,period_end='2026-06-30',knowledge_date=o['knowledge_date'],stage='recognized',observation_id=o['observation_id'],document_id=o['document_id'],locator=o['locator'],filing_status='filed',assurance_level='audited',tier='A',counterparty_evidence='named',source_perspective='reporting_entity',accounting_framework='us_gaap',financing_state='unknown',linkage_evidence='search_incomplete',relationship_conclusion='causality_not_established',elimination_status='external',as_of=asof))
+        for x in authored:
+            if x.get('counterparty')==alias:db.execute('UPDATE observations SET counterparty_entity_id=? WHERE observation_id=?',[eid,x['observation_id']])
+    # The dated EX21 snapshot supplies current legal entities, not acquisition dates.
+    from .text import normalize_html
+    er=next(r for r in annual['resources'].values() if (r.get('exhibit_type') or '').startswith('EX-21'))
+    text=normalize_html((root/er['path']).read_bytes())
+    names=['Super Micro Computer B.V.','Super Micro Computer Holdings B.V.','Super Micro Computer International Inc.','Super Micro Computer Limited','Super Micro Management Consulting Inc.','Super Micro Computer, Inc. Taiwan','Super Micro Computer US LLC','Super Micro Computer Malaysia Sdn Bhd','Supermicro KK','Supermicro Technology (Beijing) Co., Ltd.','Super Micro Computer SARL','Super Micro Computer GmbH','Super Micro Computer Arabia Ltd.','Super Micro Computer Singapore Pte. Ltd.','Super Micro Computer Korea Limited','Super Micro Computer Spain, S.L.','Super Micro Computer, S.R.L.','Super Micro Computer Middle East FZ-LLC','Super Micro Computer Mexico, S. de. R.L.de C.V.','Super Micro Computers Systems Pvt. Ltd.','Super Micro Computer Federal LLC','Super Micro Computer Canada Inc.','Super Micro Computer Australia Pty. Ltd.','Advanced Business Computer.AI']
+    for name in names:
+        assert name in text
+        eid='legal:'+digest(name)
+        insert(db,'entities',dict(entity_id=eid,membership_id=digest(['SMCI_EX21_20260630',eid]),legal_name=name,normalized_name=name.casefold(),entity_status='confirmed',group_id=GROUP,economic_group_id=GROUP,consolidation_treatment='consolidated_subsidiary',membership_start='2026-06-30',knowledge_date='2026-08-31',resolution_rule='EX21_named_subsidiary_plus_audited_consolidation_policy;current_snapshot',evidence_document_id=digest([er['url']]),evidence_locator='EX21_named_row',source_perspective='reporting_entity',as_of=asof))
 
 def assemble(root,target_db=None):
     base=state(root);asof=json.loads((base/'issuer.json').read_text())['source_cutoff'];mini=base/'assembly'

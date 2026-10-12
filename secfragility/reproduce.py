@@ -64,6 +64,12 @@ def capture(root):
             'baseline/manifest.json','baseline/criteria_manifest.json','SEC_Dell_originals.tar.zst'])
         names.update(str(p.relative_to(root)) for p in (root/'work/dell').glob('*.py'))
         names.update(str(p.relative_to(root)) for p in (root/'work/dell/baseline').glob('*.parquet'))
+    if (root/'work/smci').exists():
+        names.update('work/smci/'+name for name in ['integration_contract.json','issuer.json','filings.json','companyfacts.json',
+            'authored_observations.json','reading_ledger.json','source_backup.json','baseline/manifest.json',
+            'baseline/criteria_manifest.json','SEC_SMCI_originals.tar.zst','reading_queue.json','note_coverage.json'])
+        names.update(str(p.relative_to(root)) for p in (root/'work/smci').glob('*.py'))
+        names.update(str(p.relative_to(root)) for p in (root/'work/smci/baseline').glob('*.parquet'))
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 
@@ -103,6 +109,9 @@ def compare(root):
     dell=root/'work/dell/integration_contract.json'
     reconstruction=('Dell SEC statements reparsed from archived originals; Dell observations and calculations rebuilt; '
         'additive overlay on the immutable verified 24-group checkpoint; ' if dell.exists() else 'Offline full-cache reconstruction; ')
+    if (root/'work/smci/integration_contract.json').exists():
+        reconstruction=('SMCI SEC statements reparsed from archived originals; SMCI observations and calculations rebuilt; '
+            'additive overlay on the immutable verified 25-group checkpoint; ')
     report = dict(as_of=json.loads((root / 'work/run.json').read_text())['as_of'],
         verified_at=datetime.now(timezone.utc).isoformat(),
         method=reconstruction+'bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.',
