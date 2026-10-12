@@ -17,5 +17,13 @@
     "auditor_management_investigation_positions_distinct",
     "no_global_exposure_sum",
     "Annex_E_F_and_cutoff_unchanged"
-  ]
+  ],
+  "current_periods": [
+    "2026-06-30"
+  ],
+  "identity_verified": true,
+  "latest_annual_accession": "0001375365-26-000022",
+  "fiscal_year_end": "June30",
+  "latest_available_period": "2026-06-30",
+  "historical_notes_exhaustively_read": false
 }

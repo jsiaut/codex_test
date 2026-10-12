@@ -51,6 +51,7 @@ def inventory(root,sec):
     return result
 
 def collect_one(root,sec,f,registry):
+    f=dict(f,cik=CIK)
     accession=f['accessionNumber']
     if accession in registry:return
     d=discover(sec,CIK,accession)
@@ -130,8 +131,8 @@ def nominate(root):
         selected=[]
         for b in bs:
             if not roles.intersection(b.get('note_roles',[])):continue
-            label=b.get('label','')+' '+b.get('concept','')
-            include=bool(re.search(r'financ|credit|receiv|invest|related.?part|debt|lease|commit|contingen|concentr|revenue|segment|subsequent|fair.?value|significant.?account|accounting.?polic',label,re.I))
+            label=b.get('label','')+' '+b.get('concept','')+' '+' '.join(b.get('note_roles',[]))
+            include=bool(re.search(r'financ|credit|receiv|invest|related.?part|debt|lease|commit|contingen|concentr|revenue|segment|subsequent|fair.?value|significant.?account|accounting.?polic|balance.?sheet.?component|stockholders.?equity',label,re.I))
             if re.search(r'cybersecurity',label,re.I):include=False
             if m['reportDate']<'2020-07-01':include=bool(re.search(r'invest|related.?part',label,re.I))
             if include:selected.append(b)

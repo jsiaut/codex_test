@@ -1,0 +1,166 @@
+"""Observations personally authored by the executing analyst, never a text scan."""
+from pathlib import Path
+import json,hashlib
+from decimal import Decimal
+from secfragility.smci_sources import persist
+from secfragility.text import normalize_html
+from secfragility.xbrl import digest
+from secfragility.observations import validate_semantics
+
+ROOT=Path('.').resolve();BASE=ROOT/'work/smci'
+Q=json.loads((BASE/'reading_queue.json').read_text())
+REG=json.loads((BASE/'filings.json').read_text())
+OUT=[];LEDGER=[];AMOUNT_PROOFS=[]
+
+def block(prefix):
+    r=next(r for r in Q if r['key'].startswith(prefix))
+    return r,json.loads((ROOT/r['path']).read_text())
+
+def note(prefix,quantity,quote,*,fact=None,amount=None,currency=None,period_start=None,
+         period_end=None,finding,**extra):
+    r,b=block(prefix)
+    # Explicit analyst-chosen sentence/row endpoints, not keyword eligibility.
+    if isinstance(quote,tuple):
+        a=b['text'].index(quote[0]);z=b['text'].index(quote[1],a)+len(quote[1]);quote=b['text'][a:z]
+    raw=(ROOT/b['source_path']).read_bytes()
+    row=dict(content_key=b['content_key'],document_id=b['document_id'],accession=b['accession'],
+        group_id='SMCI',entity_id='cik:0001375365',abstained=False,quote=quote,
+        locator=f"rawbytes:{b['raw_byte_start']}:{b['raw_byte_end']};note={b['label']}",
+        raw_byte_start=b['raw_byte_start'],raw_byte_end=b['raw_byte_end'],
+        model_quantity=quantity,amount_nature=quantity,period_start=period_start,
+        period_end=period_end or b['report_date'],issuer_treatment=finding,
+        stage='recognized',counterparty_evidence='anonymous')
+    row.update(extra)
+    if fact:
+        f=next(f for f in b['candidates'] if f['fact_id'].startswith(fact))
+        row.update(amount=f['value'],unit=f['unit'],currency=f.get('currency'),tagged_fact_id=f['fact_id'],
+            amount_origin='tagged_reference',period_start=f.get('period_start'),period_end=f['period_end'])
+    elif amount is not None:
+        row.update(amount=str(amount),amount_origin='narrative_only',unit=currency,currency=currency)
+    validate_semantics(row,b,raw)
+    row.update(observation_id=digest(['SMCI_authored_v1',r['key'],quantity,quote,fact,period_end]),
+        knowledge_date=b['knowledge_date'],filing_status='filed',
+        assurance_level='audited' if b['form'].startswith('10-K') else 'reviewed',
+        tier='A' if b['form'].startswith('10-K') else 'B',location='financial_statements_and_notes',
+        source_perspective='reporting_entity',accounting_framework='us_gaap',as_of=json.loads((BASE/'issuer.json').read_text())['source_cutoff'])
+    row['unit']='USD' if row.get('currency')=='USD' else 'ratio' if str(row.get('unit','')).endswith(':pure') else row.get('unit')
+    OUT.append(row)
+
+note('1875','extended_payment_terms',
+     'Our credit terms are predominantly short-term in nature, however, we also grant extended payment terms for certain customers. For the contracts with the extended payment terms in which the financing component is determined to be significant to the contract, the contract transaction price is adjusted for the effect of a financing component.',finding='Extended terms acknowledged; no named AI financing allocation or total gross originations published.')
+note('1875','supplier_concentration_anonymous','One supplier accounted for 63.1%, 64.4%, and 65.4% of total purchases for the fiscal years ended June 30, 2026, 2025, and 2024.',fact='21bc802ed9',finding='Supplier identity not stated in this concentration disclosure; no NVIDIA attribution.')
+note('1875','receivable_concentration_largest','As of June 30, 2026, three customers accounted for 23.0%, 17.1%, and 12.5% of our accounts receivable balance.',fact='4edf1731c5',finding='Largest anonymous receivable concentration; native duration context retained, narrative describes closing balance.')
+note('1875','receivable_concentration_second','As of June 30, 2026, three customers accounted for 23.0%, 17.1%, and 12.5% of our accounts receivable balance.',fact='390dc88b0c',finding='Second anonymous receivable concentration; no identity linkage to largest revenue customer.')
+note('1875','receivable_concentration_third','As of June 30, 2026, three customers accounted for 23.0%, 17.1%, and 12.5% of our accounts receivable balance.',finding='Third customer represents 12.5%; no named counterparty or amount graph.')
+note('1875','customer_collateral_scope','We believe that the concentration of credit risk in our trade receivables is substantially mitigated by our credit evaluation process, relatively short collection terms and the high level of credit worthiness of our customers.',finding='Issuer assessment only; not external credit rating or proof of absence of credit risk.')
+note('1875','inventory_cost_policy','Once inventory is written down, its new value is maintained until it is sold or scrapped.',finding='Write-down cannot be reversed through recovery of previously reduced cost; distinct from investment impairment F6.')
+note('114c','revenue_annual_total','Total | | | $ | 39,063,072',fact='9aa5b0096f',finding='Consolidated revenue; one operating segment, no audited AI-only segment allocation.')
+note('114c','revenue_customer_concentration','For the fiscal year ended June 30, 2026, sales to one customer represented 28.1% of total net sales.',fact='a0ed89bdd1',finding='Anonymous annual customer; no guessed identity or merged customer across periods.')
+note('114c','customer_advance_increase','Deferred revenue increased by $1,880.6 million as of June 30, 2026, as compared to the fiscal year ended June 30, 2025.',fact='ad14a7cace',finding='USD943.4m increase of non-refundable advance/cash consideration for future product deliveries, subset of deferred revenue increase; not all deferred revenue equals cash.')
+note('114c','rpo_scope','We apply the exemption to not disclose information about remaining performance obligations that are part of a contract that has an original expected duration of one year or less.',finding='Published USD2.612bn RPO excludes short contracts; cannot compare mechanically with all purchase commitments or treat as total AI backlog.')
+note('114c','rpo_total','The value of the transaction price allocated to the remaining performance obligations as of June 30, 2026, was approximately $2,612.0 million.',amount=2612000000,currency='USD',finding='Published RPO, approximate; short-term exemption excludes many hardware contracts.',stage='signed_only')
+note('6ab2','debt_fair_value_scope','Non-current accounts receivable, included in other assets in the consolidated balance sheets, are carried at amortized cost, and bear interest at rates that approximate current market rates for similar credit.',finding='Longer-term interest-bearing trade receivables are separately identified; fair values of bonds not book debt amounts.')
+note('eefaa','equity_investments_carrying','Total carrying value (as of June 30, 2026 and June 30, 2025)',fact='f4d82e7bd0',finding='Measurement-alternative investment stock, not all lifetime funding and not all AI.')
+note('eefaa','sublicensee_equity_investment','Our non-marketable equity securities include $92.5 million invested in an unrelated party (the “Sub-licensee”) to which we have subleased the entire space in Vernon, California.',fact='f330f700be',finding='Anonymous investee is also subtenant and customer; economic overlap documented, legal identity unpublished. No unnamed financing edge.',family='financing',link_type='equity',stage='recognized')
+note('eefaa','investment_impairment','During the fiscal year ended June 30, 2026, we recognized an impairment loss of $12.0 million related to an investment, and subsequently realized a gain of $13.3 million upon sale of such investment in the later part of the year, resulting in a net gain of $1.3 million for the fiscal year ended June 30, 2026.',fact='094ec512d6',finding='Investment impairment preserved gross; realized sale gain is separate. Annual cumulative loss does not date F6 to a particular quarter.',family='financing',link_type='equity')
+note('7228','cash_unrestricted','Cash and cash equivalents | | | $ | 7,521,474',fact='abf117b0b0',finding='Cash excludes separately presented restricted cash; closing liquidity, not cash generated internally.')
+note('7228','cash_restricted','Restricted cash included in prepaid expenses and other current assets and other assets',fact='2164fa5b5b',finding='USD110.062m restrictions; do not add to immediately available cash.')
+note('7228','inventory_net','Total inventories | | | $ | 12,895,949',fact='55132ab53a',finding='Net stock; raw materials, work in process and finished goods already included.')
+note('7228','inventory_finished_goods','Finished goods | | | $ | 10,275,998',fact='90406bc32e',finding='Finished goods include GPUs and racks; no allocation to a named buyer or financing inference.')
+note('7228','inventory_write_down','During the fiscal years ended June 30, 2026, 2025, and 2024, we recorded write down adjustments for excess and obsolete inventory and lower of cost and net realizable value adjustments to cost of sales totaling $188.1 million, $232.0 million, and $83.0 million, respectively.',fact='c0fbd8175b',finding='Rounded note amount differs from more precise CFO add-back USD188.110m through presentation precision; not F6 investment impairment.')
+note('7228','trade_credit_allowance','Allowance for credit losses:',fact='da2cd83a01',finding='Closing allowance USD109k; small recorded allowance does not prove no credit risk.')
+note('7228','receivable_noncurrent','Non-current accounts receivable | | | 4,846',fact='888c680b01',finding='Closing noncurrent amount USD4.846m vs USD166.405m in prior year; separate from current AR.')
+note('5fe2','receivable_sales','Trade receivables sold | | | $ | 831,674',fact='9e0f40551e',finding='Gross annual receivables sold; factoring excluded from counterparty-financing graph, not added as outstanding debt.',stage='drawn_or_paid')
+note('5fe2','receivable_sale_discount','Discount on trade receivables(1)',fact='c246d27dc3',finding='Negative gain/loss signed as expense, not positive cash inflow or unused facility.')
+note('5fe2','receivable_purchase_uncommitted','The Receivables Purchase Agreement provides for an uncommitted facility with an initial aggregate facility limit of $1,790.0 million.',amount=1790000000,currency='USD',finding='Discretionary purchaser capacity; not committed liquidity.',stage='available')
+note('5fe2','receivable_sale_closing_status','There were no trade receivables sold under the Receivables Purchase Agreement and subject to servicing by us that remained outstanding and uncollected, or outstanding and collected but not yet remitted to purchasers, and therefore the full $1,790.0 million facility limit remained unutilized as of June 30, 2026.',finding='Closing zero servicing/unremitted balances do not negate positive gross annual sales.')
+note('6326','bank_debt_total','Total lines of credit and term loans | | | $ | 4,056,148',fact='1c1f1e0a96',finding='Outstanding bank debt; not adding capacity or lender participation twice.')
+note('6326','bank_debt_current','Lines of credit and term loans, current',fact='674fa3ac64',finding='Debt due within12m; annual maturity classification preserved despite extension after June30.')
+note('6326','bank_debt_noncurrent','Lines of credit and term loans, non-current',fact='c148b5440c',finding='Noncurrent bank debt; excludes convertible-note carrying amount.')
+note('6326','us_revolver_drawn','JP Morgan Revolving Credit Facility | | | 2,000,000',fact='fb8415a596',finding='Syndicated facility fully drawn; JPMorgan agent cannot be assigned all bank economic exposure.',stage='recognized')
+note('6326','taiwan_revolver_drawn','CTBC Revolving Credit Facilities | | | 1,763,533',fact='8d035e480f',finding='Syndicated Taiwan borrowings; no bank-by-bank drawn allocation inferred.',stage='recognized')
+note('6326','us_revolver_covenants',('The Credit Agreement includes customary restrictive covenants','termination of lender commitments.'),finding='Net leverage covenant4.00x first4full quarters, then3.50x next4, then3.00x; contractual definitions required, no GAAP proxy headroom.')
+note('6326','us_revolver_distribution_amendment','In June 2026, the Credit Agreement was amended to provide additional capacity for distributions on certain Mandatory Convertible Preferred Stock, subject to maintaining a pro forma fixed charge coverage ratio of at least 2.00:1.00.',finding='Distribution capacity conditioned on a financial ratio; distinct from breach/default and from June26 Taiwanese ratio waiver.')
+note('6326','taiwan_collateral_guarantee','Under the CTBC Revolving Credit Facilities, (i) the Company guarantees the obligations of its wholly-owned subsidiary, Super Micro Computer, Inc. Taiwan, (ii) all receivables of the subsidiary and the related proceeds are subject to a continuing security interest, and (iii) certain funds placed on term deposit in bank accounts held by the subsidiary are subject to a continuing security interest.',finding='Parent guarantee/internal consolidated exposure; do not add guarantee amount to consolidated debt.')
+note('6326','taiwan_repayment_extension','The initial utilization was originally due for repayment on July 23, 2026. On July 23, 2026, the repayment date was extended to January 22, 2027.',finding='Dated subsequent extension; no retrospective reclassification of June30 bank debt and no inferred balance after June30.',event_date='2026-07-23')
+note('6326','financial_covenant_waiver','On June 26, 2026, the Taiwan Subsidiary entered into amendments (the “2026 E.SUN Amendments”) of various Notification and Confirmation previously entered into with E.SUN Bank, which modified certain covenant requirements. A one-time waiver was granted by E.SUN Bank for the verification of the debt-to-net worth and interest coverage ratios for the period ending October 31, 2026, thereby, eliminating the requirement to review the above noted covenants.',finding='Explicit waiver of financial-ratio verification qualifies F4; no statement of actual breach. Future test date is distinct from June26 grant.',event_date='2026-06-26',event_observable='F4',event_present=True)
+note('6326','bank_covenant_compliance','As of June 30, 2026, we were in compliance with all covenants for the credit lines, term loan facilities, and revolving credit facilities on our consolidated balance sheets.',finding='Issuer confirms compliance, including modified/waived requirements; not proof of unmodified ratio headroom.',trigger_occurred='no')
+note('6326','convertible_2029_book','As of June 30, 2026 and 2025, the carrying value of the 2029 Convertible Notes, net of unamortized issuance costs of $15.8 million and $21.3 million, was $1,709.2 million and $1,703.7 million, respectively.',fact='311a580ce8',finding='Rounded bond carrying amount, distinct from USD1.725bn nominal and disclosed fair value.')
+note('6326','convertible_2028_book','As of June 30, 2026 and 2025, the carrying value of the 2028 Convertible Notes, net of unamortized issuance costs of $10.0 million and $14.6 million, was $690.0 million and $685.4 million, respectively.',amount=690000000,currency='USD',finding='Rounded2028 carrying amount; precise aggregated carrying value from consolidated BS retained separately.')
+note('6326','convertible_2030_book','As of June 30, 2026 and 2025, the carrying value of the 2030 Convertible Notes, net of unamortized issuance costs of $35.1 million and $43.9 million, was $2,264.9 million and $2,256.1 million, respectively.',fact='e71813eb03',finding='Rounded2030 book amount; 0% coupon does not mean no issuance-cost interest expense.')
+note('22f4','lease_total','Total lease liabilities | | | $ | 539,600',fact='ae2dad17bf',finding='Discounted lease liability; includesVernon lease, not added again to total.')
+note('22f4','vernon_lease_liability','As of June 30, 2026, the ROU assets and lease liabilities related to all three tranches totaled $278.3 million and $290.2 million, respectively.',fact='5dacf33ef3',finding='Vernon facility21MW; subset of consolidated lease liability despite full sublet.')
+note('22f4','sublease_income','Sublease income | | | $ | 39,705',fact='f2ee8fe8cd',finding='Straight-line recognized rental income, not cash collected or separate customer-financing netting.')
+note('22f4','lease_original_obligation','The Sublicense did not relieve our original obligation under the Data Center Space lease, and therefore we did not adjust the operating lease ROU asset and related liability.',finding='Lease liability remains with SMCI if subtenant fails; no assumed right of setoff.',recourse='original_lease_obligation_retained')
+note('5afb','Ablecom_dependency','Ablecom manufactured approximately 95.3%, 95.4%, and 93.6% of the chassis purchased by us during fiscal years 2026, 2025, and 2024, respectively.',fact='ca8d0eb403',finding='Component-specific dependence; not95.3% of all procurement.',counterparty='Ablecom',counterparty_evidence='named',family='commercial',link_type='purchase')
+note('5afb','Ablecom_commitment','Non-cancelable purchase orders from us to Ablecom on June 30, 2026 and 2025 were $59.8 million and $30.6 million, respectively, effectively representing the exposure to financial loss.',fact='77ec7a0dbe',finding='Future committed commercial purchases; not amount already paid or extra consolidated financing.',counterparty='Ablecom',counterparty_evidence='named',stage='signed_only')
+note('5afb','Compuware_commitment','Non-cancelable purchase orders from us to Compuware on June 30, 2026 and 2025 were $182.2 million and $118.3 million, respectively, effectively representing the exposure to financial loss.',fact='cef8afd437',finding='Future purchases included within overall obligations; no guarantee of Compware debt.',counterparty='Compuware',counterparty_evidence='named',stage='signed_only')
+note('5afb','Compuware_trade_credit_limit','We extended a $200.0 million trade credit line on November 19, 2025, with a net 90 days payment term to Compuware through a credit agreement that outlines the terms and conditions governing their business dealings.',fact='57220005f4',finding='Trade credit cap, notUSD200m actual financing. Closing tradeAR USD620k remains commercial credit.',counterparty='Compuware',counterparty_evidence='named',family='commercial',link_type='purchase',stage='available')
+note('5afb','Compuware_receivable','We had the following balances related to transactions with our related parties as of June 30, 2026 and 2025 (in thousands):',fact='df15822096',finding='Closing related-party trade receivable; does not convert unutilized trade-credit cap into funded loan.',counterparty='Compuware',counterparty_evidence='named')
+note('5afb','CEO_personal_loan_repaid','On October 9, 2025, the outstanding loan principal and accrued interest through October 8, 2025, totaling $16.9 million was repaid in full.',finding='PersonalCharlesLiang debt; outsideSMCI consolidated borrowing.',event_date='2025-10-09')
+note('40791','preferred_dividend_rate','Dividends on the Mandatory Convertible Preferred Stock will be payable on a cumulative basis when, as and if declared by our Board of Directors, or an authorized committee thereof, at an annual rate of 7.00% on the liquidation preference of $1,000 per share.',fact='26c51a4369',finding='Cumulative preferred dividend with cash/share settlement choice; equity classification preserved, no invented cash-only debt maturity.')
+note('40791','preferred_conversion','Unless converted earlier in accordance with the terms of the Certificate of Designations, which was filed with the Secretary of State of the State of Delaware on June 15, 2026 (the “Certificate of Designations”), each share of Mandatory Convertible Preferred Stock will automatically convert on the mandatory conversion date, which is expected to occur on or about June 1, 2029.',finding='Mandatory equity conversion distinct from bond redemption; no addition to interest-bearing debt.')
+note('40791','ATM_program_limit','On June 11, 2026, we entered into an equity distribution agreement establishing an at-the-market equity offering program pursuant to which we may offer and sell shares of our common stock having an aggregate offering price of up to $1.25 billion from time to time through designated sales agents.',amount=1250000000,currency='USD',finding='Program capacity; not completed sale or available committed funding.',stage='signed_only')
+note('40791','ATM_not_drawn_at_closing','As of June 30, 2026, we had not sold any shares of common stock under the program.',finding='Explicit closing non-use of this program; separateJune equity issuances did occur.',stage='available')
+note('82d0','purchase_commitments','As of June 30, 2026, these remaining non-cancelable commitments were $34.2 billion, including $0.2 billion for related parties.',fact='2a7ac21881',finding='Noncancelable future inventory/noninventory purchases primarilynext12m; not allAI, no second addition of related-party subset.',stage='signed_only')
+note('82d0','litigation_loss_not_estimable','These matters are too preliminary to form a judgment as to whether the likelihood of an adverse outcome is probable and we are unable to estimate the possible loss or range of loss, if any.',finding='Unquantified contingent loss isND, never zero or invented fine.')
+
+NATIVE={f['fact_id']:f for f in (json.loads(l) for l in (BASE/'native_facts.jsonl').open())}
+def excerpt(accession,quantity,quote,*,finding,fact=None,filename=None,**extra):
+    filing=REG[accession];m=filing['metadata'];r=filing['resources'][filename or m['primaryDocument']]
+    raw=(ROOT/r['path']).read_bytes();text=normalize_html(raw)
+    if isinstance(quote,tuple):
+        a=text.index(quote[0]);z=text.index(quote[1],a)+len(quote[1]);quote=text[a:z]
+    candidates=[]
+    if fact:candidates=[next(v for k,v in NATIVE.items() if k.startswith(fact))]
+    b=dict(content_key=digest([r['url'],'personally_selected_excerpt']),text=text,candidates=candidates)
+    row=dict(content_key=b['content_key'],document_id=digest([r['url']]),accession=accession,group_id='SMCI',entity_id='cik:0001375365',abstained=False,quote=quote,raw_byte_start=0,raw_byte_end=len(raw),locator='whole_source_bounds;personally_selected_literal_quote',model_quantity=quantity,amount_nature=quantity,issuer_treatment=finding,knowledge_date=m['filingDate'],period_end=m.get('reportDate') or m['filingDate'],filing_status='filed',assurance_level='unaudited',tier='C',location='filed_item',source_perspective='reporting_entity',accounting_framework='us_gaap',counterparty_evidence='anonymous',as_of=json.loads((BASE/'issuer.json').read_text())['source_cutoff'])
+    row.update(extra)
+    if fact:
+        f=candidates[0]
+        if f['document_id']!=row['document_id']:
+            from secfragility.smci_evidence import inline_bridge
+            proof=inline_bridge(raw,f)
+            row['locator']+=';inline_id='+proof['inline_id']+';instance_fact='+f['fact_id']
+        row.update(amount=f['value'],amount_origin='tagged_reference',tagged_fact_id=f['fact_id'],unit=f['unit'],currency=f.get('currency'),period_start=f.get('period_start'),period_end=f['period_end'])
+    validate_semantics(row,b,raw)
+    row['observation_id']=digest(['SMCI_personal_excerpt_v1',r['url'],quantity,quote]);OUT.append(row)
+    LEDGER.append(dict(document_url=r['url'],accession=accession,scope='personally_read_targeted_section',quantity=quantity,quote_sha256=digest(quote)))
+
+A='0001375365-26-000022'
+excerpt(A,'trade_receivables_current','Accounts receivable, net of allowance for credit losses of $109 and $0 at June 30, 2026 and 2025, respectively',fact='d17247718924',finding='Current net AR6.125414bn; not all AI or customer financing.',tier='A',assurance_level='audited',location='primary_statement')
+excerpt(A,'accounts_payable','Accounts payable (including amounts due to related parties of $117,062 and $129,752 at June 30, 2026 and 2025, respectively)',fact='88de268d412b',finding='Supplier credit/AP stock; not separate financial debt.',tier='A',assurance_level='audited',location='primary_statement')
+excerpt(A,'convertible_debt_total_book','Convertible notes | | | 4,664,139',fact='7376ac635add',finding='Precise total convertible carrying amount; roundings of individual notes not summed as exact book total.',tier='A',assurance_level='audited',location='primary_statement')
+excerpt(A,'cfo_annual','Net cash (used in) provided by operating activities | | | (6,809,886)',fact='7fc16ca94754',finding='Annual cash used in operations; receivable and inventory cash movements already included.',tier='A',assurance_level='audited',location='primary_statement')
+excerpt(A,'capex_paid_annual','Purchases of property, plant, and equipment (including payments to related parties of $12,567, $17,677, and $10,625 in fiscal years 2026, 2025, and 2024, respectively)',fact='f5705bfb6274',finding='Positive capex-paid quantity161.999m; subtract once from CFO, no second subtraction of receivable/inventory movements.',tier='A',assurance_level='audited',location='primary_statement')
+excerpt(A,'financing_cash_annual','Net cash provided by financing activities | | | 9,478,755',fact='f0249c15eb83',finding='Financing inflows explain cash increase despite negativeCFO; include bank debt andequity, no cash balance restatement.',tier='A',assurance_level='audited',location='primary_statement')
+excerpt(A,'preferred_issue_cash','Series A Mandatory Convertible Preferred Stock issuance, net of underwriting discounts | | | 4,231,640',fact='ee3dc26ddb83',finding='Actual net-of-underwriting cash inflow; differs from net carryingequity4.226258bn through issuance-cost treatment.',tier='A',assurance_level='audited',location='primary_statement',stage='drawn_or_paid')
+excerpt(A,'common_issue_cash','Common stock issuance, net of underwriting discounts | | | 1,406,953',fact='5c12f68d026a',finding='Actual issued-equity cash; not undrawn ATM program.',tier='A',assurance_level='audited',location='primary_statement',stage='drawn_or_paid')
+excerpt(A,'annual_management_ICFR_ineffective','As a result of this material weakness, management has concluded that our internal control over financial reporting was not effective as of June 30, 2026.',finding='Management explicit June30F5; three prior weaknesses remediated, ITGC remains.',period_end='2026-06-30',event_date='2026-06-30',event_observable='F5',event_present=True)
+excerpt(A,'annual_auditor_ICFR_adverse','In our opinion, the Company did not maintain, in all material respects, effective internal control over financial reporting as of June 30, 2026, based on the COSO criteria.',finding='BDO adverse ICFR opinion, distinct from unqualified financial-state opinion.',period_end='2026-06-30',event_date='2026-06-30',event_observable='F5',event_present=True,tier='A',assurance_level='audited',location='auditor_report')
+excerpt(A,'auditor_financial_statements_unqualified','In our opinion, the consolidated financial statements present fairly, in all material respects, the financial position of the Company at June 30, 2026 and 2025, and the results of its operations and its cash flows for each of the three years in the period ended June 30, 2026, in conformity with accounting principles generally accepted in the United States of America.',finding='BDO unqualified financial-stateopinion; adverseICFR does not turn values into unaudited forecasts.',tier='A',assurance_level='audited',location='auditor_report')
+excerpt('0001375365-25-000004','annual_management_ICFR_ineffective','We have concluded that our internal control over financial reporting was not effective as of June 30, 2024 due to the existence of material weaknesses in such controls as described above.',finding='FY24 material weaknesses reported in delayed annual acceptedFeb25 2025; not known in August2024.',period_end='2024-06-30',event_date='2024-06-30',event_observable='F5',event_present=True)
+excerpt('0001375365-25-000027','annual_management_ICFR_ineffective','We have identified the following unremediated material weaknesses in internal control over financial reporting as of June 30, 2025:',finding='Four remainingweaknesses explicitlyreported FY25.',period_end='2025-06-30',event_date='2025-06-30',event_observable='F5',event_present=True)
+excerpt('0001375365-25-000027','annual_auditor_ICFR_adverse','In our opinion, the Company did not maintain, in all material respects, effective internal control over financial reporting as of June 30, 2025, based on the COSO criteria.',finding='BDO independent adverseICFR forFY25.',period_end='2025-06-30',event_date='2025-06-30',event_observable='F5',event_present=True,tier='A',assurance_level='audited',location='auditor_report')
+excerpt('0001375365-24-000036','EY_resignation','On October 24, 2024, Ernst & Young LLP (“EY”) sent the members of the Audit Committee a letter of resignation as the Company’s registered public accounting firm (the “Resignation Letter”).',finding='Dated auditor departure; not itself financial-covenant waiver or automaticF5.',event_date='2024-10-24')
+excerpt('0001375365-24-000036','EY_representation_reliance',('In the Resignation Letter, EY stated, in part:','professional obligations.”'),finding='EY position quoted by issuer, not sole management conclusion or financial-statements audit opinion.',event_date='2024-10-24')
+excerpt('0001375365-24-000036','EY_letter_scope','We have no basis to agree or disagree with other statements of the registrant contained therein.',filename='lettertothesectobeattach.htm',finding='EX16 agreement limited to enumeratedparagraphs; notendorsement of all management defenses.',location='auditor_change_letter')
+excerpt('0001375365-24-000040','BDO_appointment','On November 18, 2024, the Audit Committee of the Board of Directors of Super Micro Computer, Inc. (the “Company”) appointed BDO USA, P.C. (“BDO”) as the Company’s new independent registered public accounting firm.',finding='Appointment does not certify accounts until later signedauditorreport.',event_date='2024-11-18')
+excerpt('0001375365-24-000044','special_committee_position','The evidence reviewed by the Special Committee does not give rise to any substantial concerns about the integrity of the Company’s senior management or Audit Committee, or their commitment to ensuring that the Company’s financial statements are materially accurate.',finding='Specialcommittee board-appointed investigation position, not independent registeredfinancialaudit opinion.',event_date='2024-12-02')
+excerpt('0001375365-25-000007','Nasdaq_reporting_compliance_restored','On February 25, 2025, the Company received a notification letter from Nasdaq indicating that the Company now complies with Nasdaq listing rule 5250(c)(1) which requires timely filing of reports with the U.S. Securities and Exchange Commission (the “SEC”) and the matter is now closed.',finding='Reporting/compliance matter closedFeb25; does not remediate remaining ICFRweaknesses.',event_date='2025-02-25')
+excerpt('0001375365-24-000038','US_term_loan_repaid',('On November 1, 2024, Super Micro Computer, Inc.','as amended or otherwise modified.'),finding='BankofAmerica termloan prepaidandterminated; no reason/breachoramount inferred.',event_date='2024-11-01',stage='drawn_or_paid')
+excerpt('0001375365-24-000043','US_facilities_repaid',('On November 20, 2024, Super Micro Computer, Inc.','as amended or otherwise modified.'),finding='Cathay andBankofAmerica revolvingobligations terminatedafterrepayment; no forced default claim.',event_date='2024-11-20',stage='drawn_or_paid')
+excerpt('0001375365-24-000046','HSBC_facility_terminated','The balance under this $50 million Loan Agreement had been fully repaid on September 9, 2024, and had remained undrawn since such date.',finding='FacilityterminatedDec20 afterpriorSep9repayment; capacitynotoutstandingdebt.',event_date='2024-12-20')
+
+# Eleven complete current natural notes were served and personally read above.
+# This is a deliberate disposition ledger, not an automated text extraction.
+CURRENT_KEYS=['1875','114c','6ab2','eefaa','7228','5fe2','6326','22f4','5afb','40791','82d0']
+for r in Q:
+    current=r['report_date']=='2026-06-30'
+    if current:
+        assert any(r['key'].startswith(k) for k in CURRENT_KEYS)
+        assert any(o['content_key']==r['content_key'] and o['accession']==r['accession'] for o in OUT)
+    LEDGER.append(dict(note_key=r['key'],accession=r['accession'],report_date=r['report_date'],label=r['label'],chars=r['chars'],status='completed' if current else 'historical_inventory_outside_current_text_tranche',reading_method='personally_read_complete_natural_note' if current else None))
+persist(BASE/'authored_observations.json',OUT);persist(BASE/'reading_ledger.json',LEDGER)
+print(json.dumps(dict(observations=len(OUT),current_notes_read=11)))
+

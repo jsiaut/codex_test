@@ -68,7 +68,7 @@ MEASURE_TERMS.update({name:['none'] for name in (
 
 # Dell SEC descriptive ledger and portfolio ratios; no Annex E/F change.
 MEASURE_TERMS.update({name:['none'] for name in (
-    'dell_reported_quantity','dfs_credit_quality_share','dfs_past_due_share',
+    'smci_reported_quantity','dell_reported_quantity','dfs_credit_quality_share','dfs_past_due_share',
     'dfs_allowance_share','ai_optimized_server_revenue_share')})
 
 CONTROL_IDS = ['c1_balance_components','c2_cash_flow_components','c3_cash_reconciliation',
