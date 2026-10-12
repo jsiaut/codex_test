@@ -1,0 +1,21 @@
+{
+  "status": "authorized_precollection",
+  "authorization": "Ok on continue avec SMCI alors, toujours sans sous-agent",
+  "baseline_commit": "ac075efd0590095b7860c147e7a6020be49493fd",
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "group_id": "SMCI",
+  "cik_hint": "0001375365",
+  "subagents_used": false,
+  "identity_verification": "official_SEC_full_paginated_submissions_before_admission",
+  "structured_window": "FY2021_through_cutoff_plus_prior_eight_fiscal_quarters",
+  "text_window": "latest_annual_and_all_later_periodic_reports_complete_selected_notes;FY2024_FY2025_auditor_and_control_chronology;material_debt_contracts;latest_proxy_related_parties",
+  "architecture": "isolated_native_SEC_delta_additive_overlay_on_verified_25_group_baseline",
+  "rules": [
+    "no_anonymous_customer_identity_inference",
+    "no_AI_allocation_of_total_receivables_or_inventory",
+    "signed_available_drawn_recognized_stages_separate",
+    "auditor_management_investigation_positions_distinct",
+    "no_global_exposure_sum",
+    "Annex_E_F_and_cutoff_unchanged"
+  ]
+}

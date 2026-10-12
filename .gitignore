@@ -46,3 +46,11 @@ work/dell/*.log
 work/deepening_data/
 work/expansion/*.log
 work/duckdb_spill/
+
+work/smci/sources/
+work/smci/assembly/
+work/smci/native_facts.jsonl
+work/smci/native_tables/
+work/smci/blocks/
+work/smci/text/
+work/smci/*.log

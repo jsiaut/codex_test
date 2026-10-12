@@ -1,0 +1,6 @@
+{
+  "originals_preserved": true,
+  "Dell_verified_copies_removed": 756,
+  "prior_verified_copies_removed": 4207,
+  "restore_previous_sources": "Extract work/deepening_data/ from unchanged SEC_Project_2_SoftBank.zip; python -m secfragility.dell_sources restore"
+}
