@@ -31,7 +31,7 @@
   "secfragility/deepening_sources.py": "4fd1559f481281def602276a35eceeccb0a5f9a747ea9848595663bac3ae20e6",
   "secfragility/dell_evidence.py": "42c41ed4ec91916bb11fbd7f66e858caa1ef62142890ae70aa9c5db4e02e564a",
   "secfragility/dell_integration.py": "62595eb8c7cf71dea320c414062e4ba9911963cfc837579735f9a1b144c73b47",
-  "secfragility/dell_package.py": "70be56d78e1f9d2603c9cce98881e1e67ebfc637a62a4f164eab50d269826fbb",
+  "secfragility/dell_package.py": "e6705a5463abc94ca833c1ead6276b543b99d55ee524aa8bfd1b04dd8e282991",
   "secfragility/dell_reports.py": "190e98cf1ead5b710a2c149a2e20a11a152526d4389fdb9a1a4cbe2f5779339b",
   "secfragility/dell_sources.py": "5bcfa2e65b53377193b37b962f28e1a59dcd38998993c25c18299759f0f72566",
   "secfragility/deprecations.py": "c86ceb1e15dd19384c54d3e0b6cb200217e26fdfab70605d4d2c06816910ea57",

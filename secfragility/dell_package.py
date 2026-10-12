@@ -59,7 +59,8 @@ Les archives antérieures restent intactes. Le 9 octobre 2026 reste l’arrêt d
     files=set()
     for directory in ['secfragility','tests','tables']:
         files.update(p for p in (root/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
-    files.update(p for p in base.glob('*') if p.is_file() and p.suffix in ('.json','.py','.zst'))
+    files.update(p for p in base.glob('*') if p.is_file() and p.suffix in ('.json','.py','.zst')
+        and p.name!='delivery_archive.json')
     files.update(p for p in (base/'delta_tables').glob('*.parquet'))
     files.update(p for p in (base/'baseline').glob('*.json'))
     files.update(p for p in root.glob('dell_*') if p.is_file())

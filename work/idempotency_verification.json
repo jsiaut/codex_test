@@ -1,7 +1,7 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "verified_at": "2026-10-12T11:43:25.074515+00:00",
-  "method": "Dell SEC statements reparsed from archived originals; Dell observations and calculations rebuilt; additive overlay on the immutable verified 24-group checkpoint; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.",
+  "verified_at": "2026-10-12T11:51:05.130402+00:00",
+  "method": "Packaging input recheck of an unchanged model snapshot; bidirectional EXCEPT ALL across every column; raw-source reconstruction proof retained separately.",
   "input_manifest_unchanged": true,
   "changed_inputs": [],
   "tables": {
@@ -50,7 +50,7 @@
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "52cfef49f3fdc59c5ea945e4ccfa50cf6d029d1af9fe2f0f9dac269e5c4800d8",
+      "original_sha256": "2f95e8c185b687e6c894c4f6818608ead07f075d166472ce906378370eda6b7c",
       "replay_sha256": "2f95e8c185b687e6c894c4f6818608ead07f075d166472ce906378370eda6b7c"
     },
     "controls": {
@@ -58,7 +58,7 @@
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "5ab7017dafe997e0d43ace444211acac86cb47654dcd919e28d301fb35287ae5",
+      "original_sha256": "eb35986b23e0d847f4d720b709cd07ede075834ae8e28501ecec07e8a35f6973",
       "replay_sha256": "eb35986b23e0d847f4d720b709cd07ede075834ae8e28501ecec07e8a35f6973"
     },
     "exclusions": {
@@ -71,5 +71,6 @@
     }
   },
   "all_tables_identical": true,
-  "independent_audit_performed": false
+  "independent_audit_performed": false,
+  "raw_source_replay_proof": "work/dell/raw_source_replay_verification.json"
 }
