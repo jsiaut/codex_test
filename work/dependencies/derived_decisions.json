@@ -1,0 +1,9 @@
+[
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "quantity": "named_customer_revenue_share_H1_not_funding_causality",
+    "counterparty_id": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
+    "numerator_observation_id": "cf94d1eafccc932992e129d6f453bb97a081c976f6e2af50eed20ce73a0d7f5b",
+    "denominator_observation_id": "06d3f806c806692c4258719b556b4eb5e73cf3ac4f2c6588ee0da8798f592cfe"
+  }
+]

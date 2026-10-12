@@ -1,0 +1,86 @@
+[
+  {
+    "observation_id": "44b88b2e265ffd7967c75af7de9a9e6516eac52f62d7c690804771d3d6134292",
+    "model_quantity": "customer_loan_contract_principal",
+    "counterparty": "OpenAI OpCo, LLC",
+    "amount": "1004571259.000000",
+    "stage": "signed",
+    "family": null,
+    "link_type": null,
+    "instrument_key": "CBRS_OpenAI_WorkingCapitalLoan_2026-01-05",
+    "quote": "the Borrower hereby unconditionally promises to pay to the Holder the principal amount of $1,004,571,259, together with any accrued but unpaid interest, on December 31, 2032",
+    "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026025762/exhibit1012-sx1.htm"
+  },
+  {
+    "observation_id": "ec75b90973927c21717fb50ad1afcde42d68e33498f841413e701c11d4523619",
+    "model_quantity": "customer_working_capital_loan_outstanding",
+    "counterparty": "OpenAI OpCo, LLC",
+    "amount": "918244000.000000",
+    "stage": "recognized",
+    "family": null,
+    "link_type": null,
+    "instrument_key": "CBRS_OpenAI_WorkingCapitalLoan_2026-01-05",
+    "quote": "Principal balance outstanding as of June 30, 2026 | | | | | | 918,244 | |",
+    "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056357/cbrs-20260630.htm"
+  },
+  {
+    "observation_id": "eb5f30716782e81ebba368862c428f3d066c395c838568488f819bf37a4e9fb1",
+    "model_quantity": "customer_working_capital_loan_received",
+    "counterparty": "OpenAI OpCo, LLC",
+    "amount": "1004571000.000000",
+    "stage": "drawn_or_paid",
+    "family": "financing",
+    "link_type": "loan_or_facility",
+    "instrument_key": "CBRS_OpenAI_WorkingCapitalLoan_2026-01-05",
+    "quote": "Principal amount received in January 2026 | | | | | | $ | 1,004,571 |",
+    "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056357/cbrs-20260630.htm"
+  },
+  {
+    "observation_id": "cf94d1eafccc932992e129d6f453bb97a081c976f6e2af50eed20ce73a0d7f5b",
+    "model_quantity": "named_customer_revenue",
+    "counterparty": "OpenAI OpCo, LLC",
+    "amount": "74400000.000000",
+    "stage": "recognized",
+    "family": "commercial",
+    "link_type": "revenue_recognized",
+    "instrument_key": "CBRS_OpenAI_MRA_2025-12-24",
+    "quote": "For the three and six months ended June 30, 2026, the Company recognized revenue of $56.8 million and $74.4 million, respectively, under the arrangement, which is net of amortization of the customer warrant asset of $2.5 million and $3.3 million, respectively.",
+    "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056357/cbrs-20260630.htm"
+  },
+  {
+    "observation_id": "a8cdce81399b0fd60118df41049e11553d0de74f4cc92460bebc1f62da9e62a3",
+    "model_quantity": "customer_working_capital_loan_noncash_repayment",
+    "counterparty": "OpenAI OpCo, LLC",
+    "amount": "86327000.000000",
+    "stage": "settled",
+    "family": null,
+    "link_type": null,
+    "instrument_key": "CBRS_OpenAI_WorkingCapitalLoan_2026-01-05",
+    "quote": "Less: non-cash repayments through services and other permitted credits | | | | | | (86,327) | |",
+    "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056357/cbrs-20260630.htm"
+  },
+  {
+    "observation_id": "6c0466070f2f036383380e70a9f7754d205cf85e966740832e164ccc40b560f6",
+    "model_quantity": "customer_warrant_exercised_shares",
+    "counterparty": "OpenAI OpCo, LLC",
+    "amount": "10033508.000000",
+    "stage": "settled",
+    "family": null,
+    "link_type": null,
+    "instrument_key": null,
+    "quote": "In July 2026, the OpenAI Warrant was partially exercised to purchase 10,033,508 shares of the Company’s Class N common stock.",
+    "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056357/cbrs-20260630.htm"
+  },
+  {
+    "observation_id": "1e638688de886bc0ffc49303319ecc10937833e5cf64458c5aa68919ab5aaa3f",
+    "model_quantity": "customer_warrant_assets_capitalized",
+    "counterparty": "OpenAI OpCo, LLC",
+    "amount": "822900000.000000",
+    "stage": "recognized",
+    "family": null,
+    "link_type": null,
+    "instrument_key": null,
+    "quote": "The Company recorded customer warrant assets of $457.2 million and $822.9 million for the three and six months ended June 30, 2026.",
+    "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026056357/cbrs-20260630.htm"
+  }
+]

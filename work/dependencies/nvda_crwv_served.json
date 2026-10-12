@@ -1,0 +1,312 @@
+[
+  {
+    "observation_id": "f9a8d79aea0a437af94e19448d0c9e9e488c2b946fca6d5539f9cb83c3c2af74",
+    "group_id": "GOOGL",
+    "model_quantity": "subsequent_data_center_credit_backstop_notional",
+    "counterparty": null,
+    "amount": "15300000000.000000",
+    "stage": "signed",
+    "quote": "notional amounts totaling approximately $15.3 billion.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+  },
+  {
+    "observation_id": "fd804e81d6041dc6104e80ce0c2d8d404ff014ad1d97de503e445a21e1310e8a",
+    "group_id": "GOOGL",
+    "model_quantity": "energy_equipment_backstop_cap",
+    "counterparty": null,
+    "amount": "5700000000.000000",
+    "stage": null,
+    "quote": "maximum potential amount of future payments under these guarantees was $5.7 billion",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+  },
+  {
+    "observation_id": "4b321a52ca0c08f7d0971dc8349456e436b9e5ad3483324211f994366e074de6",
+    "group_id": "GOOGL",
+    "model_quantity": "VIE_credit_backstop_measurement_scope",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "Credit backstops we have provided to data center VIEs are accounted for as credit derivatives.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+  },
+  {
+    "observation_id": "89fd27fcb9b77bf8eec3a7b891cac7586eb3ee463e22f6b6fd8dde8dd1d19e3b",
+    "group_id": "GOOGL",
+    "model_quantity": "credit_backstop_recovery_netting_scope",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "amounts for which are not reflected in the notional amounts for credit derivatives",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+  },
+  {
+    "observation_id": "1f3e93b3ce6427432cf3b81dfae96ef26461ddcf68869f7ef40bc56ea4b76841",
+    "group_id": "GOOGL",
+    "model_quantity": "data_center_credit_backstop_gross_notional",
+    "counterparty": null,
+    "amount": "28436000000.000000",
+    "stage": "signed",
+    "quote": "Credit derivatives | | | $ | 16,940 | | | | | $ | 28,436",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+  },
+  {
+    "observation_id": "4ac0da67ee5fc23bd349c47f256ac890f2f3348e2376cadb7d56e89fb5a95e31",
+    "group_id": "GOOGL",
+    "model_quantity": "data_center_credit_backstop_gross_notional",
+    "counterparty": null,
+    "amount": "16940000000.000000",
+    "stage": null,
+    "quote": "Credit derivatives(1) | | | $ | 0 | | | | | $ | 16,940",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+  },
+  {
+    "observation_id": "1c1d35d0c4cf7579d7fa473ef97f15bb0ce7aa6888b5f837e669f9792fc39013",
+    "group_id": "GOOGL",
+    "model_quantity": "credit_backstop_recovery_netting_scope",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "These potential inflows are not reflected in the notional amounts for credit derivatives.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+  },
+  {
+    "observation_id": "167c5f32c1427b644f7148206274eb336d5b8c98aad49e3f683b61909e880ead",
+    "group_id": "GOOGL",
+    "model_quantity": "credit_backstop_remedy_scope",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "we retain the right to assume the underlying leases for internal use or to sublease to third parties.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm"
+  },
+  {
+    "observation_id": "960537bf5854ec49f5c7b16e369d45b3fa80e7ce8cbf5089edac2f0d5dce8c25",
+    "group_id": "AVGO",
+    "model_quantity": "AI_rack_lease_backstop_maximum_exposure",
+    "counterparty": null,
+    "amount": "29000000000.000000",
+    "stage": "signed",
+    "quote": "The backstop will increase over time as the AI racks are deployed and decrease as the customer makes payments on its lease obligations, with a maximum exposure of $29 billion.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
+  },
+  {
+    "observation_id": "6050bb444f329c297cc8df8a09c8387eda2191d5ecbab088fbf7cc9617735f96",
+    "group_id": "AVGO",
+    "model_quantity": "backstop_recovery_remedy_scope",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "including the assumption of the lease or effecting a sale of the AI racks, which would reduce our maximum exposure.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000054/avgo-20260503.htm"
+  },
+  {
+    "observation_id": "492e609db40a4cfe277cf128a38b7e288bbee7651c64c5e35e7e99cfdf517e3a",
+    "group_id": "AMZN",
+    "model_quantity": "rpo_total",
+    "counterparty": null,
+    "amount": "66300000000.000000",
+    "stage": null,
+    "quote": "For contracts with original terms that exceed one year, those commitments not yet recognized were $66.3 billion as of September 30, 2021.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872421000028/amzn-20210930.htm"
+  },
+  {
+    "observation_id": "4825e2a7d3cf718e588bf2a01ab3be7ea4892a477fdd0b4f2f2113b9db0765c2",
+    "group_id": "ORCL",
+    "model_quantity": "debt_principal",
+    "counterparty": null,
+    "amount": "56300000000.000000",
+    "stage": null,
+    "quote": "we have senior notes and other borrowings of $56.3 billion",
+    "url": "https://www.sec.gov/Archives/edgar/data/1341439/000156459019023119/orcl-20190531.xml"
+  },
+  {
+    "observation_id": "d00c3a82ffa76a398c3b7da72b299bde05057ed84217240076e5cd81fba442c5",
+    "group_id": "external:0001839341",
+    "model_quantity": "historical_equity_backstop_unused_with_noncash_fee",
+    "counterparty": null,
+    "amount": null,
+    "stage": "settled",
+    "quote": "The results of the\nEquity Rights Offering rendered the previously arranged Backstop Commitment unnecessary, however, on the Effective Date, the Company issued 2,111,178 New Common Stock shares on account of the underlying backstop fee associated with the Backstop Commitment.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1839341/000162828026013232/core-20241231.htm"
+  },
+  {
+    "observation_id": "f3c76da0514d47a56ee11516faee94a0eef51f15bc6e064b1495987b0e86ae18",
+    "group_id": "AMZN",
+    "model_quantity": null,
+    "counterparty": null,
+    "amount": "6300000000.000000",
+    "stage": null,
+    "quote": "Excludes approximately $6.3 billion of income tax contingencies",
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000036/amzn-20250331.htm"
+  },
+  {
+    "observation_id": "bfe15e6a6793a30669b197e0bc1c1d340d0743e7d08f66edebb30a7cb8c2688c",
+    "group_id": "external:0001513845",
+    "model_quantity": "residual_compute_capacity_purchase_backstop",
+    "counterparty": "Meta",
+    "amount": null,
+    "stage": "signed",
+    "quote": "The Group currently intends to sell such capacity to third-party customers of its AI cloud business, with any remaining capacity to be purchased by Meta.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1513845/000110465926052948/nbis-20251231x20f.htm"
+  },
+  {
+    "observation_id": "edeb3d4f7983b344879001fa2d4fb616cd30e5a2b4c5d3177ab53b4edb7275de",
+    "group_id": "GOOGL",
+    "model_quantity": "VIE_energy_backstop_accounting_policy",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "Backstop agreements we have provided to certain energy infrastructure VIEs are accounted for as financial guarantees.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+    "observation_id": "d27a245266f661d856cc17d3bb5a0746699f6406b06da438a4bbba879c59a621",
+    "group_id": "MSFT",
+    "model_quantity": "commercial_cloud_revenue",
+    "counterparty": null,
+    "amount": "6000000000.000000",
+    "stage": null,
+    "quote": "Our commercial cloud revenue, which primarily comprises Office 365 commercial, Azure, Dynamics 365, and other cloud properties, was $6.0 billion and $16.3 billion for the three and nine months ended March 31, 2018, respectively, and $3.8 billion and $10.4 billion for the three and nine months ended March 31, 2017, respectively.",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000156459018009307/msft-20180331.xml"
+  },
+  {
+    "observation_id": "04910ebefdd969c61dc158a5ebbef3de95129006c4a95ad11856765f6226f709",
+    "group_id": "AMZN",
+    "model_quantity": "customer_receivables_net",
+    "counterparty": null,
+    "amount": "6300000000.000000",
+    "stage": null,
+    "quote": "customer receivables, net, were $6.4 billion and $6.3 billion,",
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872418000072/amzn-20180331.xml"
+  },
+  {
+    "observation_id": "854b699faa14910bef256b1f9e763c7bbbda4e7146ceac0e987b8af87034dbfa",
+    "group_id": "external:0001083301",
+    "model_quantity": "customer_credit_backstop_alternative_remedies",
+    "counterparty": "Google LLC",
+    "amount": null,
+    "stage": "signed",
+    "quote": "In the event of a payment default under a Fluidstack HPC Lease, or if Fluidstack becomes subject to an insolvency event, following notice from the Company, Google will have the option to either (i) pay the termination fee under such Fluidstack HPC Lease (the “Termination Fee”) or (ii) pay all rent currently due under the Fluidstack HPC Lease and assume the Fluidstack HPC Lease as the tenant thereunder.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm"
+  },
+  {
+    "observation_id": "ad77308bae23e8e04ec8a21c1e831defad2d471388580d7915fc50298b0e99df",
+    "group_id": "AVGO",
+    "model_quantity": "AI_rack_lease_backstop_maximum_potential_liability",
+    "counterparty": null,
+    "amount": "29000000000.000000",
+    "stage": null,
+    "quote": "Our maximum potential liability under the Backstop upon the deployment of all AI racks, on an undiscounted basis, was approximately $29 billion.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
+  },
+  {
+    "observation_id": "e26f6aecac3cc1daa35e4f23ca432a92b51fdf9d48130ecd3a74f678cee1a7d2",
+    "group_id": "GOOGL",
+    "model_quantity": "VIE_credit_backstop_measurement_policy",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "The maximum exposure arising from credit backstops with VIEs is limited to the financial risk over the remaining period of the arrangements, as reflected by the credit derivative notional value.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+    "observation_id": "4fb85162ee7d34ec088f712fa7f510211b4c271a33fcda929a65ae88ecffe2b3",
+    "group_id": "MSFT",
+    "model_quantity": "commercial_cloud_revenue",
+    "counterparty": null,
+    "amount": "16300000000.000000",
+    "stage": null,
+    "quote": "Our commercial cloud revenue, which primarily comprises Office 365 commercial, Azure, Dynamics 365, and other cloud properties, was $6.0 billion and $16.3 billion for the three and nine months ended March 31, 2018, respectively, and $3.8 billion and $10.4 billion for the three and nine months ended March 31, 2017, respectively.",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000156459018009307/msft-20180331.xml"
+  },
+  {
+    "observation_id": "138b3c14b8da5caf8fd4b36b8c7460daa7617525c3f87d42361630e67285cf2f",
+    "group_id": "external:0001083301",
+    "model_quantity": "customer_credit_backstop_effective_date",
+    "counterparty": "Google LLC",
+    "amount": null,
+    "stage": "signed",
+    "quote": "The Google Backstop under each Google Recognition Agreement becomes effective as of the commencement date under the corresponding Fluidstack HPC Lease.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1083301/000108330126000166/wulf-20260630.htm"
+  },
+  {
+    "observation_id": "16f801fd0fde3b2e21712478b1287783979ecacc69b9ca8f1606b4f39d243c46",
+    "group_id": "AVGO",
+    "model_quantity": "backstop_actual_payment_statement",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "No amounts have been paid under the Backstop.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/avgo-20260802.htm"
+  },
+  {
+    "observation_id": "d7521bc3a69fbfed125e596afe7865c5da072588dadc3f41400f6d2034ed5549",
+    "group_id": "GOOGL",
+    "model_quantity": "dc_backstop_gross_notional",
+    "counterparty": null,
+    "amount": "43785000000.000000",
+    "stage": "signed",
+    "quote": "The notional amounts for these credit derivatives represent the maximum potential exposure regarding future payments in the event of specified default scenarios by underlying parties.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+    "observation_id": "bba73f2046ff80ef5ac2bea703d4bc6bd7f25af7770265db50aef313010fd1fa",
+    "group_id": "GOOGL",
+    "model_quantity": "dc_backstop_gross_notional",
+    "counterparty": null,
+    "amount": "16940000000.000000",
+    "stage": "signed",
+    "quote": "The notional amounts for these credit derivatives represent the maximum potential exposure regarding future payments in the event of specified default scenarios by underlying parties.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+    "observation_id": "1404a03dc528dd999b0bf9d4fd1fe25261169cf8274a75f82b32d587c857b39c",
+    "group_id": "GOOGL",
+    "model_quantity": "backstop_optional_termination_and_possible_recovery",
+    "counterparty": null,
+    "amount": null,
+    "stage": null,
+    "quote": "Under specific conditions or following a predetermined period, we may elect to extinguish the backstop obligation by making a termination payment. If we elect such payment, our obligations may be partially offset by equity or cash receipts from counterparties. These potential inflows are not reflected in the notional amounts for credit derivatives.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+  },
+  {
+    "observation_id": "cab90b26d8dcc112b02a4ca780288418adef1529621ded240eeb1afec3160e6b",
+    "group_id": "CRWV",
+    "model_quantity": "NVIDIA_conditional_unsold_capacity_purchase_backstop",
+    "counterparty": null,
+    "amount": null,
+    "stage": "signed",
+    "quote": "NVIDIA is obligated to purchase the residual unsold capacity through April 13, 2032, subject to any termination described below and satisfaction of delivery and availability of service requirements.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm"
+  },
+  {
+    "observation_id": "cce96a486b930c7e33a758b49633911f9b072ffa07162e981c0fbde15ace0bba",
+    "group_id": "MSFT",
+    "model_quantity": "uncommenced_finance_lease_payments_total",
+    "counterparty": null,
+    "amount": "19700000000.000000",
+    "stage": null,
+    "quote": "have not yet commenced of $6.3 billion and $19.7 billion, respectively",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000156459023000733/msft-10q_20221231.htm"
+  },
+  {
+    "observation_id": "732e4b6c2c269e416fbb5d6f02755e08dd2b304fca94e8b0974eb5f9b08b4a7a",
+    "group_id": "CRWV",
+    "model_quantity": "NVIDIA_residual_capacity_arrangement_initial_value",
+    "counterparty": "NVIDIA Corporation",
+    "amount": "6300000000.000000",
+    "stage": "signed",
+    "quote": "which has an initial value of $6.3 billion, that establishes an arrangement with respect to the sale by the Company of reserved cloud computing capacity to its customers and provides NVIDIA access to any residual unsold cloud computing capacity.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962825000047/crwv-20250909.htm"
+  },
+  {
+    "observation_id": "74fa71e1b86888bacec0b482813d759b4178ea6ce08998025e748c37802f5f32",
+    "group_id": "MSFT",
+    "model_quantity": "uncommenced_operating_lease_payments_total",
+    "counterparty": null,
+    "amount": "6300000000.000000",
+    "stage": null,
+    "quote": "have not yet commenced of $6.3 billion and $19.7 billion, respectively",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000156459023000733/msft-10q_20221231.htm"
+  }
+]

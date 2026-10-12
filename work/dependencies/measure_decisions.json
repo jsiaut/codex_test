@@ -1,0 +1,192 @@
+[
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "observation_id": "06d3f806c806692c4258719b556b4eb5e73cf3ac4f2c6588ee0da8798f592cfe"
+  },
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "observation_id": "cf94d1eafccc932992e129d6f453bb97a081c976f6e2af50eed20ce73a0d7f5b",
+    "measure": "named_customer_revenue",
+    "counterparty_id": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa"
+  },
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "observation_id": "eb5f30716782e81ebba368862c428f3d066c395c838568488f819bf37a4e9fb1"
+  },
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "observation_id": "ec75b90973927c21717fb50ad1afcde42d68e33498f841413e701c11d4523619"
+  },
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "observation_id": "a8cdce81399b0fd60118df41049e11553d0de74f4cc92460bebc1f62da9e62a3"
+  },
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "observation_id": "1e638688de886bc0ffc49303319ecc10937833e5cf64458c5aa68919ab5aaa3f"
+  },
+  {
+    "operation_id": "WHCO_CAPITAL_SOLUTION",
+    "observation_id": "d3401982b84f8f1445477bbc57d64680ff731f4449a69b67b9b72cb58fcb0d1e"
+  },
+  {
+    "operation_id": "WHCO_CAPITAL_SOLUTION",
+    "observation_id": "86fe7ed3e1d87d2c338f899f15d1ede7e77cab9416d537f8d37d1d27eb41d92b"
+  },
+  {
+    "operation_id": "WHCO_CAPITAL_SOLUTION",
+    "observation_id": "2a76673619f299b2730a1dee5ed92be6beb77e3aeb640bb407a885aadecdc9ad"
+  },
+  {
+    "operation_id": "WHCO_CAPITAL_SOLUTION",
+    "observation_id": "5e42dd582c83281b0ff7eeea3825093d4c980e479605a79e15d19d81e68c9e80"
+  },
+  {
+    "operation_id": "WHCO_CAPITAL_SOLUTION",
+    "observation_id": "f28211fefb7c99d65f79498e1311cdba0f2e7463ade1d226aab39ced77f4f9f3"
+  },
+  {
+    "operation_id": "NVIDIA_CRWV",
+    "observation_id": "dae661544725ab2791bc06918b06add2cf2c4b34705d560ce7d639b8759a64aa"
+  },
+  {
+    "operation_id": "NVIDIA_CRWV",
+    "observation_id": "db38ace62d06bdcb55c51c9a0af3d7c01fa90e31a5b12035dbb30ce7fc05f833"
+  },
+  {
+    "operation_id": "NVIDIA_CRWV",
+    "observation_id": "732e4b6c2c269e416fbb5d6f02755e08dd2b304fca94e8b0974eb5f9b08b4a7a"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "0f12b7854a0c001bbf1e36ce567ce31caaaa2feaab38d8450fc4b5f5feb0f2ab"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "1f35e269a5d4b49abbedc744c44ea98211b5717f1a4a9ec060c6cbcffc92b75c"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "80e7cc415aac8480dcadbfe85aad506cd50a2508ace5427f9e999aed0f5a00cc"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "a7d599cb67c9998ad9f3ad02c6054f79ce407cd1603d186d1f755dbfa440928b"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "11aa614cb6cdb8a841730315f4e7c6805a8cafceaff8b6402c3be5de60ff0f1a"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "ecc57600a6258dfa47f24da4674615f6a890ed84e94d7a87c68ee03c79dd6d45"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "dbd06fa8fba3c961e2c8c2421c32a6a6b9c371a53e75df6aabf4ce2fdc9971dc"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "6ff97eef33bda1cdb8c3cac76219b64e232fef46814eef61872c8d99dc42ba9e"
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "observation_id": "ec10d60a313a0d093d753f6af748a91be74994101d4d185aa090f6c5791034af"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "4f60d0a694fae94d05c2abb6e34f9b3d7367b4a3bc7ab0df7fc80e8c74626de2"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "cf0f61bba6a292331ab958be292e5d8a3b47011281ffee1e6f97f979d4494318"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "2f7f658a49c30c53acde868c662680b6704aa263bd173fad0d6c84626766742a"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "c6449e34188a391d1c38a1af579d6e738370a71b62a3b7c730dc79d922e296e9"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "4699aabbcde8d8a2faf3ae9c460183a957bb92e477130675073f2ae75e4e588b"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "cdb8610c9d44220efd45948173cbaee9b3c34cae6c1887ccafadf42f90bf419c"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "63ab2b84b25d7979eb58befe968359268736e2139b74f6d787d4dd67a53bb763"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "1ddaa97c1add254e303a26aaee82fb389cb2a5dbcb43c63eebc0f733a32e62a0"
+  },
+  {
+    "operation_id": "NSCALE",
+    "observation_id": "25e9ddaa7cc980284d801f0f789de35ddc90c83dd8e61167b57984651e766a79"
+  },
+  {
+    "operation_id": "IONIC_WARD",
+    "observation_id": "7dfa955c9ca91754404ab1aa71ba3f56314c91c941ed135680eb38326becb8e0"
+  },
+  {
+    "operation_id": "IONIC_WARD",
+    "observation_id": "4a4ca2a8682f700c67f9f4bf8a8a5c3164f70c0b33bd4b2d6d515d02a7603ec2"
+  },
+  {
+    "operation_id": "IONIC_WARD",
+    "observation_id": "60df8316e716d6521007a6b1b7b97c7e51b9a7d2150c826bb904c230ee6a42fb"
+  },
+  {
+    "operation_id": "IONIC_WARD",
+    "observation_id": "006170bb4613909f66ba4470be30c7406cd5652943badcab88293d1e96d55d6f"
+  },
+  {
+    "operation_id": "HUT_RIVER",
+    "observation_id": "e931d3cbd93a8c7eb1805613b1b95b3b1a5a523ab6ad420f0618b46a22d88a90"
+  },
+  {
+    "operation_id": "HUT_RIVER",
+    "observation_id": "5f66f7ccd4fda50f800e28ff0298a3fefcff234f2f34515b0d04ce1fad25d272"
+  },
+  {
+    "operation_id": "HUT_RIVER",
+    "observation_id": "2a54d16bd18322a37bbb2ceb6e78008cd646113cc7d228b3fc7c1d9b0e11acad"
+  },
+  {
+    "operation_id": "HUT_RIVER",
+    "observation_id": "5032e1f08d58f5b1ad877fa90b54c2d796cb49e822ff22b0539e43ac2d112100"
+  },
+  {
+    "operation_id": "HUT_BEACON",
+    "observation_id": "d4b42f348ce393ece35755987548a8effd68cfa3ed21af6b5bf2785434bb22f5"
+  },
+  {
+    "operation_id": "HYPERION",
+    "observation_id": "a40bd11318bc5aaf31dcd7276e2421cd595b90f4524a16a7a6b62ae43497b060"
+  },
+  {
+    "operation_id": "HYPERION",
+    "observation_id": "640f6d1f95749cf1335bb7d8838e5cab30d6e9efc8c5fc80d061a90d02a20862"
+  },
+  {
+    "operation_id": "HYPERION",
+    "observation_id": "dec47d8f36bce00467c499199c4e03ab968b03e98972a4b51d3156f50252c15e"
+  },
+  {
+    "operation_id": "HYPERION",
+    "observation_id": "54151722fabf7e703fa157d8f7734e70971087c500028165788a21d3b4c1494c"
+  },
+  {
+    "operation_id": "HYPERION",
+    "observation_id": "3b5c82bea387b8d5dda329704b1d644f4877640c9a6a13025b4d8421e3670d1a"
+  },
+  {
+    "operation_id": "HYPERION",
+    "observation_id": "ea55353cd2478e2cfbcba637b06c5eadb85b09949bff7698b0218cf8c178c6e8"
+  }
+]

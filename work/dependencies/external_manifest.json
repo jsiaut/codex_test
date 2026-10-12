@@ -1,0 +1,42 @@
+[
+  {
+    "key": "lambda_issuer",
+    "url": "https://lambda.ai/blog/lambda-closes-1-billion-senior-secured-fixed-rate-financing",
+    "status": 200,
+    "path": "work/dependencies/sources/external/lambda_issuer.html",
+    "sha256": "02b04d72a1474dd32b8cb3a7cc599858184a2e152cdef2b09af6f9d6ea1b4d97",
+    "bytes": 59796,
+    "tier": "E",
+    "numeric_legacy_admissible": false
+  },
+  {
+    "key": "lambda_dbrs",
+    "url": "https://dbrs.morningstar.com/research/490455/morningstar-dbrs-assigns-credit-ratings-of-a-low-to-lambda-compute-i-llc",
+    "status": 200,
+    "path": "work/dependencies/sources/external/lambda_dbrs.html",
+    "sha256": "1ea5f101dd9cc408ed6c599b63514c0e070b54838b8ee8989575d3ad7d46fb43",
+    "bytes": 281318,
+    "tier": "E",
+    "numeric_legacy_admissible": false
+  },
+  {
+    "key": "beignet_sp",
+    "url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/sourceId/101653176",
+    "status": 200,
+    "path": "work/dependencies/sources/external/beignet_sp.html",
+    "sha256": "fbd78918e21a8da8f1ae951ae6871ae85092e94f136970e0cebe28694dd4e567",
+    "bytes": 105217,
+    "tier": "E",
+    "numeric_legacy_admissible": false
+  },
+  {
+    "key": "hyperion_meta",
+    "url": "https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Announces-Joint-Venture-with-Funds-Managed-by-Blue-Owl-Capital-to-Develop-Hyperion-Data-Center/",
+    "status": 200,
+    "path": "work/dependencies/sources/external/hyperion_meta.html",
+    "sha256": "9a59f074af7e10263d99a929b96ea2abba1a35de265005ac9eb7d1aba7315148",
+    "bytes": 60446,
+    "tier": "E",
+    "numeric_legacy_admissible": false
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "observation_id": "f6e21b6cfb3fb6c560cad4727b55b0217c608854458000ff17093ace75d492b1",
+    "group_id": "external:0001858681",
+    "model_quantity": "purchase_obligation_guarantee_carrying_amount",
+    "counterparty": "WarehouseCo Intermediate Holdings LP",
+    "amount": "0.000000",
+    "measurement_basis": "recognized_guarantee_liability",
+    "quote": "AHL’s guarantee is not probable of payment as the funding obligations are expected to be satisfied by the committed financing arrangements established as part of the transaction structure; therefore, there is no liability on the Company’s condensed consolidated financial statements.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm"
+  },
+  {
+    "observation_id": "66b0d737bf480bdbf97aac3ca620348769a34166ab307f8b7343e97ada1a6f14",
+    "group_id": "external:0001527469",
+    "model_quantity": "managed_fund_purchase_obligor",
+    "counterparty": "WarehouseCo Intermediate Holdings LP",
+    "amount": null,
+    "measurement_basis": null,
+    "quote": "As part of the agreement, an Apollo-managed fund, WarehouseCo Intermediate Holdings LP (WHCO), has a purchase obligation for the compute infrastructure produced under the agreement.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1527469/000152746926000056/ahl-20260630.htm"
+  },
+  {
+    "observation_id": "0251c96e5fbebd66f6ebf3f3b9ccc8b84ea6b48ab4a7917cf7bb423e6c8997e8",
+    "group_id": "external:0001858681",
+    "model_quantity": "purchase_obligation_guarantee_percentage",
+    "counterparty": "WarehouseCo Intermediate Holdings LP",
+    "amount": "0.150000",
+    "measurement_basis": "percentage_of_outstanding_purchase_obligation_not_total_contract",
+    "quote": "AHL’s guarantee represents 15% of the outstanding purchase obligation, which is expected to be satisfied as fundings occur and no later than 2028.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1858681/000185868126000040/apo-20260630.htm"
+  },
+  {
+    "observation_id": "5e42dd582c83281b0ff7eeea3825093d4c980e479605a79e15d19d81e68c9e80",
+    "group_id": "external:0001527469",
+    "model_quantity": "purchase_obligation_guarantee_percentage",
+    "counterparty": "WarehouseCo Intermediate Holdings LP",
+    "amount": "0.150000",
+    "measurement_basis": "not_15_percent_of_35bn_contract_size",
+    "quote": "AHL’s guarantee represents 15% of the outstanding purchase obligation, which is expected to be satisfied as fundings occur and no later than 2028.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1527469/000152746926000056/ahl-20260630.htm"
+  }
+]

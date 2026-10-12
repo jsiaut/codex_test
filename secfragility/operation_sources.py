@@ -5,7 +5,7 @@ observations and never chooses a counterparty or a numerical interpretation.
 """
 from pathlib import Path
 from datetime import datetime, timezone
-import argparse, hashlib, json, re, zipfile
+import argparse, hashlib, json, re, zipfile, tarfile
 import yaml, zstandard
 from .network import SecClient, SessionLock
 from .inventory import collect_submissions
@@ -129,6 +129,59 @@ def collect_selected(root):
         finally:
             client.close()
 
+def prepare_native(root):
+    """Recreate native candidates; financial selection remains in author_notes."""
+    from .xbrl import parse_instance,digest
+    from .database import connect
+    root=Path(root).resolve();base=root/BASE;facts=[];cutoff=read(base/'scope.json')['source_cutoff']
+    for acc,filing_data in read(base/'filings.json').items():
+        if not filing_data.get('native_collected'):continue
+        metadata=filing_data['metadata']
+        for name,resource in filing_data['resources'].items():
+            if name not in filing_data['discovery']['instances']:continue
+            parsed=parse_instance((root/resource['path']).read_bytes(),entity_id='cik:'+metadata['cik'],
+                reporting_identity='reporter:'+filing_data['group'],group_id=filing_data['group'],
+                document_id=digest([resource['url']]),accession=acc,acceptance_datetime=metadata['acceptanceDateTime'],
+                knowledge_date=metadata['acceptanceDateTime'][:10],assurance_level='reviewed' if metadata['form']=='10-Q' else 'unaudited',as_of=cutoff)
+            for fact in parsed:fact.update(document_rank=resource['document_rank'],document_rank_source='original_SEC_SGML_header_sequence',source_document_id=fact['document_id'])
+            facts.extend(parsed)
+    db=connect()
+    for choice in read(base/'legacy_native_selections.json',[]):
+        query=db.execute("SELECT * FROM read_parquet(?) WHERE accession=? AND locator=? AND document_rank>=0",
+            [str(base/'baseline/facts.parquet'),choice['accession'],'id:'+choice['inline']])
+        columns=[c[0] for c in query.description];selected=[dict(zip(columns,r)) for r in query.fetchall()]
+        if len(selected)!=1:raise ValueError('Legacy native selection ambiguous')
+        facts.extend(selected)
+    db.close()
+    (base/'native_catalog.jsonl').write_text(''.join(json.dumps(f,default=str)+'\n' for f in facts))
+    return len(facts)
+
+def backup(root):
+    root=Path(root).resolve();base=root/BASE;archive=base/'originals.tar.zst'
+    paths=sorted(p for p in (base/'sources').rglob('*') if p.is_file())
+    with archive.open('wb') as raw,zstandard.ZstdCompressor(level=8).stream_writer(raw) as compressed,tarfile.open(fileobj=compressed,mode='w|') as tar:
+        for path in paths:tar.add(path,arcname=str(path.relative_to(root)))
+    result=dict(path=str(archive.relative_to(root)),sha256=sha(archive),bytes=archive.stat().st_size,
+        sources={str(p.relative_to(root)):sha(p) for p in paths},source_cutoff=read(base/'scope.json')['source_cutoff'])
+    save(base/'source_backup.json',result);return result
+
+def restore(root):
+    root=Path(root).resolve();base=root/BASE;meta=read(base/'source_backup.json');archive=root/meta['path']
+    if sha(archive)!=meta['sha256']:raise ValueError('Original archive SHA differs')
+    with archive.open('rb') as raw,zstandard.ZstdDecompressor().stream_reader(raw) as decompressed,tarfile.open(fileobj=decompressed,mode='r|') as tar:
+        for member in tar:
+            path=Path(member.name)
+            if not member.isfile() or path.is_absolute() or '..' in path.parts or str(path) not in meta['sources']:
+                raise ValueError('Unsafe or unregistered original archive member')
+            data=tar.extractfile(member).read()
+            if hashlib.sha256(data).hexdigest()!=meta['sources'][str(path)]:raise ValueError('Original member SHA differs')
+            target=root/path
+            if target.exists():
+                if sha(target)!=meta['sources'][str(path)]:raise ValueError('Existing original differs; never substituted')
+            else:target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+    return meta
+
 if __name__ == '__main__':
-    parser=argparse.ArgumentParser(); parser.add_argument('action',choices=('inventory','collect'))
-    args=parser.parse_args(); (inventory if args.action=='inventory' else collect_selected)(Path('.'))
+    parser=argparse.ArgumentParser(); parser.add_argument('action',choices=('inventory','collect','native','backup','restore'))
+    args=parser.parse_args(); actions=dict(inventory=inventory,collect=collect_selected,native=prepare_native,backup=backup,restore=restore)
+    actions[args.action](Path('.'))

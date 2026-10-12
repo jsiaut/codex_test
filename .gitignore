@@ -58,3 +58,10 @@ work/priorities/sources/
 work/priorities/text/
 work/priorities/staging/
 work/audit_20261012/clean_venv/
+work/dependencies/sources/
+work/dependencies/text/
+work/dependencies/native_catalog.jsonl
+work/dependencies/replay/
+work/feedback_review/collection/work/
+work/feedback_review/collection/*.txt
+work/feedback_review/collection/journal.jsonl

@@ -1,0 +1,146 @@
+[
+  {
+    "path": "work/calibration_tables/exclusions.parquet",
+    "bytes": 486,
+    "sha256": "edc7d482a5b0c8eff4e8303239606704c170bfd9060e90da26f1c72fc466613e",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/calibration_tables/measures.parquet",
+    "bytes": 280136,
+    "sha256": "4367755a7bc8fddb692db9e9018ead44adba54f8c5eb385056efa834147d93bc",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/calibration_tables/links.parquet",
+    "bytes": 1308,
+    "sha256": "28eb0e7acbe3f1df57f5e8f827b5f21b6cdcc09b904c8531f5916b4838a5d2e3",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/calibration_tables/documents.parquet",
+    "bytes": 1234226,
+    "sha256": "01ddf05c133db548bfc93251dbbc6f851077c597e2495359ed7f6bc8517a12a2",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/calibration_tables/observations.parquet",
+    "bytes": 1782,
+    "sha256": "8e14f6a7d900154e1bab05df3e2aac3c951d930a797654517d11fb97209f4191",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/calibration_tables/facts.parquet",
+    "bytes": 137485337,
+    "sha256": "78719ca17777822d51d97f02890e975e189055329bda39485e740c38eac669f3",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/calibration_tables/entities.parquet",
+    "bytes": 719,
+    "sha256": "3411cd7c84fe4f6840213f950b67a74d1e3341ee94c98cbdd8fd66a297a2da21",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/calibration_tables/controls.parquet",
+    "bytes": 24594401,
+    "sha256": "43455e9ae9466fbe1bdb5dcdb142af0d251daa55d1b77d45582acd10421f1d51",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/exclusions.parquet",
+    "bytes": 486,
+    "sha256": "edc7d482a5b0c8eff4e8303239606704c170bfd9060e90da26f1c72fc466613e",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/measures.parquet",
+    "bytes": 886777,
+    "sha256": "c8a3915a75504d89e094a94984ce955c3beeff13423afafe061873984ab6ff6a",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/links.parquet",
+    "bytes": 1308,
+    "sha256": "28eb0e7acbe3f1df57f5e8f827b5f21b6cdcc09b904c8531f5916b4838a5d2e3",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/documents.parquet",
+    "bytes": 1250354,
+    "sha256": "5d65c79af70396b42bbcae61f4f918daef234fbbefe005efd3c2339e1778d439",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/observations.parquet",
+    "bytes": 1782,
+    "sha256": "8e14f6a7d900154e1bab05df3e2aac3c951d930a797654517d11fb97209f4191",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/facts.parquet",
+    "bytes": 137485337,
+    "sha256": "78719ca17777822d51d97f02890e975e189055329bda39485e740c38eac669f3",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/entities.parquet",
+    "bytes": 719,
+    "sha256": "3411cd7c84fe4f6840213f950b67a74d1e3341ee94c98cbdd8fd66a297a2da21",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/quarter_calibration_tables/controls.parquet",
+    "bytes": 24594401,
+    "sha256": "43455e9ae9466fbe1bdb5dcdb142af0d251daa55d1b77d45582acd10421f1d51",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/exclusions.parquet",
+    "bytes": 2914353,
+    "sha256": "1741efab05a019b0efb4f83afecf073bf5a615e5962eec70ef6a3cc882ba9789",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/measures.parquet",
+    "bytes": 2782591,
+    "sha256": "49bea0bfbfe6898b117c2c1b46ace4b607898a5e83d548780389905b33de9bba",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/links.parquet",
+    "bytes": 208775,
+    "sha256": "87c263b2270fde43a944cbdb7f4ba3860d8e9eb509c7a06651e941c793be7393",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/documents.parquet",
+    "bytes": 2072476,
+    "sha256": "9bd6eef80a42c6595a301814f7bc55806ee3281e1c78ccb1d86b6189333033cf",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/observations.parquet",
+    "bytes": 5639974,
+    "sha256": "daf0f25dd0299071f812bebbb0884345664ed8375ce7ab99c8e100cc0daa4678",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/facts.parquet",
+    "bytes": 300397208,
+    "sha256": "184302b62a82a84c85bcf7daae4fcbda5d4c1dde1497f66449df17e794dc8add",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/entities.parquet",
+    "bytes": 134027,
+    "sha256": "5cb2b405b98a7a8e6e49b70dc1c5f82875025d59b4c3f95515aaa88f65653805",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  },
+  {
+    "path": "work/phase3_tables/controls.parquet",
+    "bytes": 49543604,
+    "sha256": "08e067bd57478dbdf1eb171a2558010d036ae39447b579aa442b675909356654",
+    "reason": "regenerable_intermediate_export;original_sources_current_tables_immutable_baselines_and_deliveries_retained"
+  }
+]

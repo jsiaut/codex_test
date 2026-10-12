@@ -2,41 +2,89 @@
   {
     "cik": "0002133037",
     "accession": "0001628280-26-062846",
-    "native": false
+    "native": false,
+    "contracts": [
+      "exhibit211-sx1a2.htm",
+      "exhibit1041-revolvercredit.htm"
+    ]
   },
   {
     "cik": "0002110365",
     "accession": "0001193125-26-395475",
-    "native": true
+    "native": true,
+    "contracts": [
+      "ck0002110365-ex10_19.htm",
+      "ck0002110365-ex10_20.htm",
+      "ck0002110365-ex10_23.htm",
+      "ck0002110365-ex10_24.htm",
+      "ck0002110365-ex10_25.htm",
+      "ck0002110365-ex10_18.htm",
+      "ck0002110365-ex21_1.htm"
+    ]
   },
   {
     "cik": "0002007691",
     "accession": "0001185185-26-003152",
-    "native": false
+    "native": false,
+    "contracts": []
   },
   {
     "cik": "0002007691",
     "accession": "0002007691-26-000012",
-    "native": true
+    "native": true,
+    "contracts": []
   },
   {
     "cik": "0001964789",
     "accession": "0001104659-26-090025",
-    "native": true
+    "native": true,
+    "contracts": []
   },
   {
     "cik": "0001964789",
     "accession": "0001104659-26-053247",
-    "native": false
+    "native": false,
+    "contracts": [
+      "tm2613163d1_ex4-1.htm"
+    ]
   },
   {
     "cik": "0001964789",
     "accession": "0001104659-26-071952",
-    "native": false
+    "native": false,
+    "contracts": [
+      "tm2617190d1_ex4-1.htm"
+    ]
   },
   {
     "cik": "0001326801",
     "accession": "0001628280-26-050705",
+    "native": false,
+    "contracts": []
+  },
+  {
+    "cik": "0002133037",
+    "accession": "0001628280-26-059639",
+    "native": false,
+    "contracts": [
+      "exhibit41-amendedandrestat.htm",
+      "exhibit1027-prepaidforward.htm",
+      "exhibit1028-sharepurchasea.htm"
+    ]
+  },
+  {
+    "cik": "0002133037",
+    "accession": "0001628280-26-060761",
+    "native": false,
+    "contracts": [
+      "sbenergy-ex1028xexecutionv.htm",
+      "sbenergy-ex1030xformofport.htm",
+      "sbenergy-ex1031xformofport.htm"
+    ]
+  },
+  {
+    "cik": "0000810893",
+    "accession": "0001410368-26-090215",
     "native": false
   }
 ]

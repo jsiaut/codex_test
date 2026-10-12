@@ -1,0 +1,1362 @@
+[
+  {
+    "operation_id": "CEREBRAS_OPENAI",
+    "title": "Cerebras–OpenAI : prêt client, services et warrants",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "OpenAI OpCo, LLC",
+        "role": "client_et_prêteur",
+        "entity_id": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa"
+      },
+      {
+        "name": "Cerebras Systems Inc.",
+        "role": "fournisseur_et_emprunteur",
+        "entity_id": "cik:0002021728"
+      }
+    ],
+    "evidence": [
+      "47cb315962753445c1527f1120fd87da8c1a8b7462db2e453624a4a686d401f3",
+      "033d6cd608a9bf7d7a070688826603a5843f7981bd3c798dd85e7ddb97ea53bc",
+      "321d2d36248f024cc95918b75a146bd977727225d009acaf8f039de114da17f2",
+      "8cb3be353e3af4906ff85369b4a5053f4d9b6a2bc9bca3224bde3d245720f126",
+      "06d3f806c806692c4258719b556b4eb5e73cf3ac4f2c6588ee0da8798f592cfe",
+      "eb5f30716782e81ebba368862c428f3d066c395c838568488f819bf37a4e9fb1",
+      "cf94d1eafccc932992e129d6f453bb97a081c976f6e2af50eed20ce73a0d7f5b",
+      "ec75b90973927c21717fb50ad1afcde42d68e33498f841413e701c11d4523619",
+      "a8cdce81399b0fd60118df41049e11553d0de74f4cc92460bebc1f62da9e62a3",
+      "1e638688de886bc0ffc49303319ecc10937833e5cf64458c5aa68919ab5aaa3f"
+    ],
+    "amount_references": [
+      "06d3f806c806692c4258719b556b4eb5e73cf3ac4f2c6588ee0da8798f592cfe"
+    ],
+    "phases": [
+      {
+        "event": "loan_signature",
+        "date": "2026-01-05"
+      },
+      {
+        "event": "cash_receipt",
+        "month": "2026-01"
+      },
+      {
+        "event": "reported_snapshot",
+        "date": "2026-06-30"
+      },
+      {
+        "event": "contract_maturity",
+        "date": "2032-12-31"
+      }
+    ],
+    "contract_features": [],
+    "cash_or_resource_paths": [
+      {
+        "provider": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
+        "receiver": "cik:0002021728",
+        "kind": "cash_loan",
+        "evidence": "eb5f30716782e81ebba368862c428f3d066c395c838568488f819bf37a4e9fb1"
+      },
+      {
+        "provider": "cik:0002021728",
+        "receiver": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
+        "kind": "services_or_permitted_noncash_repayment",
+        "evidence": "a8cdce81399b0fd60118df41049e11553d0de74f4cc92460bebc1f62da9e62a3"
+      },
+      {
+        "provider": "cik:0002021728",
+        "receiver": "legal:1f25e8f4d4adb8aba613e06de49ef13a00312daa9add8387b1312678a4e5b1fa",
+        "kind": "customer_warrants_noncash",
+        "evidence": "1e638688de886bc0ffc49303319ecc10937833e5cf64458c5aa68919ab5aaa3f"
+      }
+    ],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Deux parties juridiques nommées dans le prêt et le MRA.",
+        "gap": "Contrôle/consolidation de toutes les sociétés OpenAI non établi."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Services de calcul, logiciels et fabrication matérielle financés par le prêt affecté."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "Prêt reçu 1,004571 Md$ ; encours 918,244 M$ à juin ; remboursement non monétaire 86,327 M$ ; revenu OpenAI 74,4 M$ au semestre.",
+        "gap": "Ventilation des crédits non monétaires et paiements futurs incomplète."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "OpenAI est client et prêteur. Les recettes propres du laboratoire ne sont pas ventilées publiquement.",
+        "gap": "Origine ultime de la trésorerie OpenAI non publiée."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Utilisation via lockbox, remboursements possibles par services et transferts autorisés ; intérêts pouvant être réputés payés.",
+        "gap": "MRA complet et certains paramètres expurgés."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Warrants et prêt créent des obligations différentes ; récupération et pertes finales ne sont pas publiées.",
+        "gap": "Valeur récupérable et priorité des autres créanciers non reconstituées."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Prêt reçu en janvier 2026 ; données au 30 juin ; échéance contractuelle du prêt fin 2032.",
+        "gap": "Échéancier détaillé des services/remboursements absent."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "WHCO_CAPITAL_SOLUTION",
+    "title": "WHCO–Broadcom–Anthropic : achats, baux et soutien Athene",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "WarehouseCo Intermediate Holdings LP",
+        "role": "obligé_à_acheter",
+        "entity_id": "legal:c7c28b98f10dc35410f8c9b159d219733df33ad7c682baf7f5722516ea53c2de"
+      },
+      {
+        "name": "Athene Holding Ltd.",
+        "role": "garant_limité",
+        "entity_id": "cik:0001527469"
+      },
+      {
+        "name": "Broadcom Inc.",
+        "role": "fournisseur_et_soutien_de_baux",
+        "entity_id": "cik:0001730168"
+      },
+      {
+        "name": "Anthropic PBC",
+        "role": "bénéficiaire_de_capacité_nommé",
+        "entity_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420"
+      },
+      {
+        "name": "Tiers remboursant Athene",
+        "role": "contre_garant",
+        "entity_id": null,
+        "unknown_reason": "Identité et indépendance du tiers non publiées."
+      }
+    ],
+    "evidence": [
+      "6728d47daf7d8049e34d3300a7751c2aa0987ce31a64258db6bbbef2ab4e00fe",
+      "d3401982b84f8f1445477bbc57d64680ff731f4449a69b67b9b72cb58fcb0d1e",
+      "86fe7ed3e1d87d2c338f899f15d1ede7e77cab9416d537f8d37d1d27eb41d92b",
+      "2a76673619f299b2730a1dee5ed92be6beb77e3aeb640bb407a885aadecdc9ad",
+      "5e42dd582c83281b0ff7eeea3825093d4c980e479605a79e15d19d81e68c9e80",
+      "f28211fefb7c99d65f79498e1311cdba0f2e7463ade1d226aab39ced77f4f9f3"
+    ],
+    "amount_references": [
+      "d3401982b84f8f1445477bbc57d64680ff731f4449a69b67b9b72cb58fcb0d1e",
+      "86fe7ed3e1d87d2c338f899f15d1ede7e77cab9416d537f8d37d1d27eb41d92b"
+    ],
+    "phases": [],
+    "contract_features": [
+      {
+        "kind": "purchase_support_percentage",
+        "value": "15",
+        "unit": "percent"
+      },
+      {
+        "kind": "reimbursement_percentage_of_paid_guarantee",
+        "value": "35",
+        "unit": "percent"
+      },
+      {
+        "kind": "Broadcom_lease_support_formula",
+        "description": "85 % du solde de soutien de bail, diminué de la valeur de cession des racks ; attribution précise à WHCO non confirmée."
+      }
+    ],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Athene nomme WHCO, Broadcom et Anthropic ; Apollo gère le fonds.",
+        "gap": "Véhicules, prêteurs retenus et locataires juridiques incomplets."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Infrastructure de calcul et racks à accélérateurs spécifiques."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "35 Md$ décrit la solution de capital ; 15 % porte sur l’obligation d’achat encore en cours ; plafond Broadcom de 29 Md$ à plein déploiement.",
+        "gap": "Encours précis par obligation et affectation des financements manquants."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Anthropic est bénéficiaire nommé de capacité ; les personnes signant chaque bail ne sont pas publiées dans ces notes.",
+        "gap": "Payeurs juridiques des baux non identifiés."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Défaut d’achat WHCO et défaut de bail client déclenchent des garanties sur des bases différentes.",
+        "gap": "Contrats de soutien complets non collectés dans les pièces ouvertes."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Recours Athene sur un tiers à hauteur de 35 % de ses paiements ; récupération des racks pour Broadcom.",
+        "gap": "Les 15 % achat et 85 % bail ne prouvent pas une couverture commune de 100 %."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Déploiement à partir de mi-2026 ; obligation d’achat attendue satisfaite au plus tard en 2028 ; baux Broadcom de cinq ans.",
+        "gap": "Calendrier des décaissements et extinction des garanties incomplet."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "NVIDIA_CRWV",
+    "title": "Nvidia–CoreWeave : capital, paiements de services et capacité résiduelle",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "NVIDIA Corporation",
+        "role": "investisseur_client_et_fournisseur",
+        "entity_id": "cik:0001045810"
+      },
+      {
+        "name": "CoreWeave, Inc.",
+        "role": "émetteur_fournisseur_et_acheteur",
+        "entity_id": "cik:0001769628"
+      }
+    ],
+    "evidence": [
+      "dae661544725ab2791bc06918b06add2cf2c4b34705d560ce7d639b8759a64aa",
+      "db38ace62d06bdcb55c51c9a0af3d7c01fa90e31a5b12035dbb30ce7fc05f833",
+      "732e4b6c2c269e416fbb5d6f02755e08dd2b304fca94e8b0974eb5f9b08b4a7a",
+      "cab90b26d8dcc112b02a4ca780288418adef1529621ded240eeb1afec3160e6b",
+      "c19dab61da4fccc06a7e2a627a1700e8c4b90e12b94370f2227de00ad81d1936"
+    ],
+    "amount_references": [],
+    "phases": [
+      {
+        "event": "primary_equity_paid",
+        "date": "2026-01-23"
+      },
+      {
+        "event": "service_payments_period_end",
+        "date": "2026-03-31"
+      },
+      {
+        "event": "residual_capacity_contract_end",
+        "date": "2032-04-13"
+      }
+    ],
+    "contract_features": [],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Deux groupes cotés identifiés ; intégrateurs et acheteurs finaux restent distincts.",
+        "gap": "Achats via intégrateurs et contrats de chaque client non raccordés."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Capacité de calcul et matériel Nvidia, avec relations commerciales dans les deux sens."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "2 Md$ de souscription primaire payée en janvier ; 59,6 M$ de paiements de services au T1 ; 6,3 Md$ est la valeur initiale de l’arrangement de capacité, sans preuve d’une somme payée.",
+        "gap": "Valeur Nvidia des achats de matériel et capacité résiduelle effectivement utilisée inconnues."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Nvidia peut acheter la capacité résiduelle non vendue ; des tiers achètent aussi de la capacité.",
+        "gap": "Répartition de tous les paiements finaux entre tiers et Nvidia incomplète."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Livraison, disponibilité du service et résiliation conditionnent les obligations.",
+        "gap": "Ordres et paramètres expurgés restent nécessaires."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Nvidia porte capital et certaines obligations d’achat ; prêteurs et valeurs récupérables ne sont pas attribués ici.",
+        "gap": "Recours, collatéraux et pertes finales par véhicule non reconstitués."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Souscription 23 janvier 2026 ; paiements T1 ; mécanisme de capacité jusqu’au 13 avril 2032.",
+        "gap": "Budgets de livraison et renouvellement détaillés inconnus."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ],
+    "legacy_edge_correction": "La valeur initiale de 6,3 Md$ devient une relation commerciale conditionnelle ; l’ancienne arête de soutien monétaire est marquée remplacée dans la vue effective."
+  },
+  {
+    "operation_id": "TERAWULF_FLUIDSTACK",
+    "title": "TeraWulf–Fluidstack USA I–Google : protections avant et après commencement",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "TeraWulf Inc.",
+        "role": "sponsor_et_bailleur_déclarant",
+        "entity_id": "cik:0001083301"
+      },
+      {
+        "name": "Fluidstack USA I Inc.",
+        "role": "locataire",
+        "entity_id": "legal:ff7b9be3e54f467ad8a93c7d5f5281b7b5292e60c3f0637e0442c3fa3567447e"
+      },
+      {
+        "name": "Google LLC",
+        "role": "soutien_des_obligations_de_bail",
+        "entity_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b"
+      },
+      {
+        "name": "Porteurs des notes et agent de sûreté",
+        "role": "financeurs",
+        "entity_id": null,
+        "unknown_reason": "Allocations finales des porteurs non recensées."
+      }
+    ],
+    "evidence": [
+      "ffb75e5c0c2b77c89c000504c12bfa72b7d76054e4f69f5718fa99b4596cae37",
+      "e4d2d8b01c5a2cffc71f48fabd3adb7695e5026820c94df0c289daa946c16a15",
+      "37abfb0c72e66028e6807e3c4cd6029686fad2a9b39b07a23c9f75f55e1b7e51"
+    ],
+    "amount_references": [],
+    "phases": [],
+    "contract_features": [
+      {
+        "kind": "backstop_effective_date",
+        "description": "Commencement du bail correspondant."
+      },
+      {
+        "kind": "precommencement_protection",
+        "description": "Warrants Google nantis au bénéfice des financeurs de construction."
+      }
+    ],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Le locataire USA I et Google sont nommés ; société propriétaire de chaque bâtiment à préciser.",
+        "gap": "Bailleurs de chaque bâtiment et contrôle de toutes les filiales non établis."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Bâtiments HPC de Lake Mariner et raccordement électrique."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "Notes de 3,2 Md$ mentionnées dans l’accord de nantissement ; montant par garantie de bail non établi ici.",
+        "gap": "Plafonds effectifs et comptes de réserve par bâtiment manquants."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Fluidstack paie les loyers ; Google peut payer la terminaison ou reprendre le bail après déclenchement.",
+        "gap": "Client ultime et origine des recettes Fluidstack non attribués."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Soutien effectif au commencement de chaque bail ; nantissement des warrants avant ce moment.",
+        "gap": "Paramètres de terminaison et accords de nantissement complets à rapprocher."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Garanties de bail, warrants nantis et dettes du sponsor sont des protections différentes.",
+        "gap": "Rang exact de toutes les sûretés et droits en difficulté incomplet."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Une location partiellement commencée à juin ; autres mises en service prévues fin 2026/début 2027.",
+        "gap": "Dates effectives et flux de chaque bâtiment non publiés."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "SB_PORTS",
+    "title": "SB Energy–Energy Global–OpenAI–Nvidia : PORTS et financement de la société",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "SB Energy, Inc.",
+        "role": "émetteur_et_groupe_de_développement",
+        "entity_id": "cik:0002133037"
+      },
+      {
+        "name": "Energy Global, LP",
+        "role": "receveur_du_prépaiement_et_apporteur",
+        "entity_id": "legal:6a63ace362fc26706d02c668fe7ce2f692e6654247f230011682d093df1c9901"
+      },
+      {
+        "name": "NVIDIA Corporation",
+        "role": "investisseur_et_garant_conditionnel",
+        "entity_id": "cik:0001045810"
+      },
+      {
+        "name": "OpenAI Infra Holdings, LLC",
+        "role": "bénéficiaire_des_warrants",
+        "entity_id": "legal:23f2273a9c7997c56900352a9e31286f7b421cc2ac0ff9ebf8ef23491be66b38"
+      },
+      {
+        "name": "Locataires et bailleurs PORTS",
+        "role": "parties_aux_baux",
+        "entity_id": null,
+        "unknown_reason": "Noms propres expurgés ou laissés en blanc dans les formulaires."
+      }
+    ],
+    "evidence": [
+      "0f12b7854a0c001bbf1e36ce567ce31caaaa2feaab38d8450fc4b5f5feb0f2ab",
+      "afb88d8d8e8a4ff4864ccc092f3626b50126145202f1491427ba11167bfe8d47",
+      "1f35e269a5d4b49abbedc744c44ea98211b5717f1a4a9ec060c6cbcffc92b75c",
+      "1f1f386b84283d2a951a6c52308c97c9fb48a973b2964f2b20a8f9a3b6e08f3f",
+      "80e7cc415aac8480dcadbfe85aad506cd50a2508ace5427f9e999aed0f5a00cc",
+      "355560aedc265497b05ad56ee1281aeeafc4d5349e80c03de906e60dd79ac8cd",
+      "a7d599cb67c9998ad9f3ad02c6054f79ce407cd1603d186d1f755dbfa440928b",
+      "6f794b40c655c47f358bd937abf76d29aadc17e003a6a96a783cec3cae932729",
+      "be49df9a838d1951c3a1079fbe86eed5691f9e605e6d978da7cd061077a44cd3",
+      "07c2c626bd533fc6d0a6430c6785741b481e34cdecf5b38d536117b863a5c4bf",
+      "37f69d28784ff18b679eec1265f1a3395dc02f556157488eaa6a1f89d84f2eff",
+      "bee2f886ef1f55fc2a158f17f8f8d5e1c42814c4053b22f2e35ee81f2668d731",
+      "dd638b4b83ebd670fefef1984692e921bba0a343fb70a9d014ef6d68c2b95a4e",
+      "0755c0efbf7377a450dbe6e34a8dfd4303c53e328fec691e4135c15161586361",
+      "11aa614cb6cdb8a841730315f4e7c6805a8cafceaff8b6402c3be5de60ff0f1a",
+      "75dfb8fb0d86780317600881a79ad930db18d1e2e103bab99a4f9e7e2c0161cf",
+      "1403aa15c078694b832a33aecf1f20f90007f71829332079dddfd3aaf5da1232",
+      "ecc57600a6258dfa47f24da4674615f6a890ed84e94d7a87c68ee03c79dd6d45",
+      "dbd06fa8fba3c961e2c8c2421c32a6a6b9c371a53e75df6aabf4ce2fdc9971dc",
+      "a886cdb7643105f093a19e406c1391b0857b63243edce5d3e1733ad3649a2790",
+      "6ff97eef33bda1cdb8c3cac76219b64e232fef46814eef61872c8d99dc42ba9e",
+      "b2264f43c44cca7ddf0b1323fc7aefd8492a6650e01340e61a04ed2adc5c5f36",
+      "89d38e3ecf10cb615aa1c930c052b7c58a0edee5a01deece7695b8242eb6a11d",
+      "ec10d60a313a0d093d753f6af748a91be74994101d4d185aa090f6c5791034af"
+    ],
+    "amount_references": [
+      "0f12b7854a0c001bbf1e36ce567ce31caaaa2feaab38d8450fc4b5f5feb0f2ab",
+      "1f35e269a5d4b49abbedc744c44ea98211b5717f1a4a9ec060c6cbcffc92b75c",
+      "80e7cc415aac8480dcadbfe85aad506cd50a2508ace5427f9e999aed0f5a00cc",
+      "a7d599cb67c9998ad9f3ad02c6054f79ce407cd1603d186d1f755dbfa440928b",
+      "11aa614cb6cdb8a841730315f4e7c6805a8cafceaff8b6402c3be5de60ff0f1a",
+      "ecc57600a6258dfa47f24da4674615f6a890ed84e94d7a87c68ee03c79dd6d45",
+      "dbd06fa8fba3c961e2c8c2421c32a6a6b9c371a53e75df6aabf4ce2fdc9971dc",
+      "6ff97eef33bda1cdb8c3cac76219b64e232fef46814eef61872c8d99dc42ba9e",
+      "ec10d60a313a0d093d753f6af748a91be74994101d4d185aa090f6c5791034af"
+    ],
+    "phases": [
+      {
+        "event": "cash_forward_paid_and_contributed",
+        "date": "2026-08-17"
+      },
+      {
+        "event": "IPO_subscription",
+        "date": null,
+        "condition": "IPO closing"
+      },
+      {
+        "event": "guarantee_effectiveness",
+        "date": null,
+        "condition": "Lease commencement and RFS provisions"
+      }
+    ],
+    "contract_features": [
+      {
+        "kind": "legal_receipt_vs_equity_settlement",
+        "description": "Paiement confirmé ; règlement en titres et classement comptable encore à préciser."
+      },
+      {
+        "kind": "optional_guaranty_scope",
+        "description": "4,25 GW initiaux ; extension 3,78 GW facultative pour Nvidia."
+      }
+    ],
+    "cash_or_resource_paths": [
+      {
+        "provider": "cik:0001045810",
+        "receiver": "legal:6a63ace362fc26706d02c668fe7ce2f692e6654247f230011682d093df1c9901",
+        "kind": "cash_prepaid_forward",
+        "amount_reference": "0f12b7854a0c001bbf1e36ce567ce31caaaa2feaab38d8450fc4b5f5feb0f2ab",
+        "economic_flow_id": "SB_NVIDIA_1_5BN_PAID"
+      },
+      {
+        "provider": "legal:6a63ace362fc26706d02c668fe7ce2f692e6654247f230011682d093df1c9901",
+        "receiver": "cik:0002133037",
+        "kind": "same_cash_contribution",
+        "amount_reference": "0f12b7854a0c001bbf1e36ce567ce31caaaa2feaab38d8450fc4b5f5feb0f2ab",
+        "economic_flow_id": "SB_NVIDIA_1_5BN_PAID"
+      }
+    ],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "CIK SB Energy et Energy Global identifiés ; OpenAI Infra nommé dans le warrant, mais certaines parties aux baux restent expurgées.",
+        "gap": "Noms du locataire, bailleur et parent garant de chaque phase manquants."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "PORTS-Pike : centres de données, électricité et transmission."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "1,5 Md$ payé le 17 août à Energy Global puis apporté à la société ; 1,5 Md$ supplémentaire conditionné à l’IPO ; plafond de garantie 105 Md$.",
+        "gap": "Allocation du cash à PORTS et solde disponible après refinancement/remboursements non établis."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Affiliés OpenAI locataires ; Nvidia peut reprendre certains baux après déclenchement.",
+        "gap": "Origine des recettes OpenAI et opérateur électrique définitif non établis."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Commencement/RFS, défaut monétaire non remédié ou insolvabilité, notification, réserves, options et libération.",
+        "gap": "Formule de perte, taux d’actualisation et paramètres RFS expurgés."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Réserves, assurance et recours au parent du locataire précèdent ou réduisent certains paiements ; formule et paramètres expurgés.",
+        "gap": "Montants des réserves, indépendance des recours et valeur des actifs inconnus."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Cash reçu 17 août ; engagements futurs liés à IPO et mise en service ; échéancier des paiements de garantie inconnu.",
+        "gap": "Dates de mise en service et montants d’appels simultanés non calculables."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "NSCALE",
+    "title": "Nscale : commandes, matériel, Dell et prêts par site",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "Nscale Limited",
+        "role": "holding_déclarante",
+        "entity_id": "cik:0002110365"
+      },
+      {
+        "name": "Nscale Ward County Borrower SPV, LLC",
+        "role": "emprunteur_GPU_Ward",
+        "entity_id": "legal:36cb4b3962c578ac4ff9ad5587e311ad9414077bd53e6671dcd728417dc0a9a8"
+      },
+      {
+        "name": "Nscale NC Borrower SPV, LLC",
+        "role": "emprunteur_GPU_NC",
+        "entity_id": "legal:c7d03d93153230dc83a18e4ef5269ad5dfed10b1abb3eacccaa959306316dd9e"
+      },
+      {
+        "name": "Nscale GPU MCC B1.1 LLC",
+        "role": "fournisseur_Anthropic",
+        "entity_id": "legal:345b9750d6391dd4bdb735ef1e8fe26db81562f42c87de3f86640919950467e6"
+      },
+      {
+        "name": "Anthropic PBC",
+        "role": "client",
+        "entity_id": "legal:08aba1035027ab668a3cef9683d232200ed6df352506ae7ee869ffdda50c7420"
+      },
+      {
+        "name": "Dell Financial Services L.L.C.",
+        "role": "financeur_d’équipements",
+        "entity_id": "legal:2a166eb6aa960ad83ff23ba5291e699ae608f4e33f5bfc9cc59716e5e4a4f3a8"
+      },
+      {
+        "name": "Microsoft, plusieurs contrats",
+        "role": "clients",
+        "entity_id": null,
+        "unknown_reason": "Le formulaire déposé nomme Microsoft Ireland Operations Limited ; index et corps divergent, sans allocation de 43,8 Md$ à une personne unique."
+      }
+    ],
+    "evidence": [
+      "4f60d0a694fae94d05c2abb6e34f9b3d7367b4a3bc7ab0df7fc80e8c74626de2",
+      "cf0f61bba6a292331ab958be292e5d8a3b47011281ffee1e6f97f979d4494318",
+      "13c640beb11995d54fc576c58b11be7139cf5b84e21851da9478056cbad3c105",
+      "2f7f658a49c30c53acde868c662680b6704aa263bd173fad0d6c84626766742a",
+      "c6449e34188a391d1c38a1af579d6e738370a71b62a3b7c730dc79d922e296e9",
+      "f3aa326b7414bd521c7e06c457c14a2bf8221189491b4c5c9efe44d674266b2e",
+      "cb310ad1b690933943fcc2326fe4daf05c315d734f40c01873db4d73cc8006e3",
+      "083a1a9ca242e3dcd7266368732fedc94a20f2bee318af136d82be3a0b954560",
+      "4699aabbcde8d8a2faf3ae9c460183a957bb92e477130675073f2ae75e4e588b",
+      "cdb8610c9d44220efd45948173cbaee9b3c34cae6c1887ccafadf42f90bf419c",
+      "84da17308e56e51a28ff4d1f949fd666f17de81e0164e82237bb85751a3a82c0",
+      "5eb438c90831b8f0f776c86b3e27f651cfa1f56157cf70a03fea17f47b933010",
+      "2336b550ef3bded4870c71ec797536ed6a69c988b6501250c70c2aed32dd5664",
+      "6b567b53c5f9149f78694249950f2bca364cb153ea8e25776dd44c66cb50e8ea",
+      "419f70a802c89bd65b739c9262a6387d5f6051657f3daafbe9b23e02dbc8ee70",
+      "a76caec89e4168438c19470e0232c70dc17693e5b1b014e0a547d8b0d12e00ba",
+      "d006ac45d3e8522faba37f6e288e2689040c810acc06d91cb3e744f5bfad5c78",
+      "933a9646958ba0dbe4a419fd2407bcfac62c508eae818cee2bc364945fb763f8",
+      "4cbfc2e2d7c4209e5a6b1df2a5cbf3e94e4c3f9f4ae6c62b61e20de5b69519cc",
+      "04bb81604835e4d1ced7aabe114b9a8a31ea5fdd5811d9076f4caad3df277bcc",
+      "63ab2b84b25d7979eb58befe968359268736e2139b74f6d787d4dd67a53bb763",
+      "1ddaa97c1add254e303a26aaee82fb389cb2a5dbcb43c63eebc0f733a32e62a0",
+      "25e9ddaa7cc980284d801f0f789de35ddc90c83dd8e61167b57984651e766a79"
+    ],
+    "amount_references": [
+      "4f60d0a694fae94d05c2abb6e34f9b3d7367b4a3bc7ab0df7fc80e8c74626de2",
+      "cf0f61bba6a292331ab958be292e5d8a3b47011281ffee1e6f97f979d4494318",
+      "2f7f658a49c30c53acde868c662680b6704aa263bd173fad0d6c84626766742a",
+      "c6449e34188a391d1c38a1af579d6e738370a71b62a3b7c730dc79d922e296e9",
+      "4699aabbcde8d8a2faf3ae9c460183a957bb92e477130675073f2ae75e4e588b",
+      "cdb8610c9d44220efd45948173cbaee9b3c34cae6c1887ccafadf42f90bf419c",
+      "63ab2b84b25d7979eb58befe968359268736e2139b74f6d787d4dd67a53bb763",
+      "1ddaa97c1add254e303a26aaee82fb389cb2a5dbcb43c63eebc0f733a32e62a0",
+      "25e9ddaa7cc980284d801f0f789de35ddc90c83dd8e61167b57984651e766a79"
+    ],
+    "phases": [],
+    "contract_features": [
+      {
+        "kind": "financial_covenant",
+        "metric": "Historical DSCR",
+        "threshold": "1.05",
+        "source": "2336b550ef3bded4870c71ec797536ed6a69c988b6501250c70c2aed32dd5664",
+        "current_value": null
+      },
+      {
+        "kind": "cash_trap",
+        "metric": "Historical DSCR",
+        "threshold": "1.10",
+        "source": "5eb438c90831b8f0f776c86b3e27f651cfa1f56157cf70a03fea17f47b933010",
+        "current_value": null
+      },
+      {
+        "kind": "financing_status_Anthropic",
+        "state": "no_binding_commitment_at_prospectus",
+        "source": "13c640beb11995d54fc576c58b11be7139cf5b84e21851da9478056cbad3c105"
+      }
+    ],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Holding, SPV GPU et un fournisseur Anthropic nommés ; index Microsoft/Anthropic et corps des formulaires diffèrent.",
+        "gap": "Allocations et identités de tous les contrats Microsoft et quatre fournisseurs Anthropic incomplètes."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "GPU, équipements, sites et capacités de calcul dans plusieurs pays."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "Commandes conditionnelles 43,8 et 44,6 Md$ ; rent DFS 2,54 Md$ ; engagements GPU Ward 1,85 Md$ et NC 1,2 Md$ ; cash juin hors restreint 1,4784 Md$.",
+        "gap": "Soldes effectivement tirés, affectation des 24 Md$ et disponibilité par SPV inconnus."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Microsoft et Anthropic selon contrats ; aucun paiement Anthropic avant acceptation écrite.",
+        "gap": "Direct agreements et personnes signant tous les contrats non collectés."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Financement qualifiant à obtenir, résiliation au longstop expurgé, livraison/acceptation, disponibilité et crédits de service.",
+        "gap": "Dates, prix, critères d’acceptation, SLA et schedules expurgés/omis."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Prêt Ward : seuil contractuel DSCR 1,05 ; cash trap 1,10 ; equity cure avec suspension des crédits et règles de vente/remboursement.",
+        "gap": "Recours parent limité et sûretés détaillées à compléter avec annexes omises."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Achats non livrés 24 Md$ à juin ; prêt NC décembre 2031, Ward février 2033 ; vente Nvidia prévue novembre 2026.",
+        "gap": "Longstop exact et budgets de cash par tranche manquants."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "IONIC_WARD",
+    "title": "Ionic–Nscale Ward County : loyers, garantie Nvidia puis parent Nscale",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "Ionic Digital Inc.",
+        "role": "bailleur",
+        "entity_id": "cik:0002007691"
+      },
+      {
+        "name": "Nscale Ward County LLC",
+        "role": "locataire",
+        "entity_id": "legal:de37d1ca12a9c77359037c74d7e887b918143f0b5725b9ded7d7d9409e201449"
+      },
+      {
+        "name": "NVIDIA Corporation",
+        "role": "garant_années_1_à_5",
+        "entity_id": "cik:0001045810"
+      },
+      {
+        "name": "Parent Nscale",
+        "role": "garant_à_partir_de_l’année_6",
+        "entity_id": null,
+        "unknown_reason": "Personne garantissant les années suivantes non nommée dans cette clause."
+      },
+      {
+        "name": "Client principal",
+        "role": "repreneur_possible",
+        "entity_id": null,
+        "unknown_reason": "L’identité et toutes les obligations de reprise ne sont pas établies par cette clause."
+      }
+    ],
+    "evidence": [
+      "3a8fd259bc604c09231517026214e51d697d2512b18d07afc4d104ce0768e221",
+      "7dfa955c9ca91754404ab1aa71ba3f56314c91c941ed135680eb38326becb8e0",
+      "d9cd7b6502698bdf7fb098a18dc3cf2c14acc2191a7c024ad1d816a11e3ddac6",
+      "6cf3a74cf879f8d23854bf44633e0dfab7e044e038825adee3df533f9e884812",
+      "4a4ca2a8682f700c67f9f4bf8a8a5c3164f70c0b33bd4b2d6d515d02a7603ec2",
+      "60df8316e716d6521007a6b1b7b97c7e51b9a7d2150c826bb904c230ee6a42fb",
+      "006170bb4613909f66ba4470be30c7406cd5652943badcab88293d1e96d55d6f"
+    ],
+    "amount_references": [
+      "7dfa955c9ca91754404ab1aa71ba3f56314c91c941ed135680eb38326becb8e0",
+      "4a4ca2a8682f700c67f9f4bf8a8a5c3164f70c0b33bd4b2d6d515d02a7603ec2",
+      "60df8316e716d6521007a6b1b7b97c7e51b9a7d2150c826bb904c230ee6a42fb",
+      "006170bb4613909f66ba4470be30c7406cd5652943badcab88293d1e96d55d6f"
+    ],
+    "phases": [
+      {
+        "event": "first_lease_payment",
+        "month": "2025-11"
+      },
+      {
+        "event": "monthly_fixed_rent_commenced",
+        "month": "2026-08"
+      },
+      {
+        "event": "guarantor_transition",
+        "lease_year": 6
+      }
+    ],
+    "contract_features": [
+      {
+        "kind": "Nvidia_coverage_window",
+        "first_lease_year": 1,
+        "last_lease_year": 5,
+        "cap_observation": "7dfa955c9ca91754404ab1aa71ba3f56314c91c941ed135680eb38326becb8e0"
+      },
+      {
+        "kind": "anchor_stepin_option",
+        "deadline_days": 30,
+        "trigger": "tenant_insolvency"
+      }
+    ],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Ionic et locataire Ward County nommés ; locataire distinct du Borrower SPV de dette GPU.",
+        "gap": "Nom juridique du parent garant et accord direct de reprise incomplets."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Site alimenté, propriété immobilière et capacité électrique ; pas la valeur de revente de tous les GPU."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "Nvidia couvre jusqu’à 860,3 M$ de loyers sur cinq années ; cash Ionic 415,738 M$ à juin ; net financement H1 400 M$.",
+        "gap": "Solde garanti actuel et relation aux agrégats Nvidia non réconciliés."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Nscale locataire ; parent reprend la garantie dès année 6 ; client principal peut reprendre le bail sous conditions.",
+        "gap": "Paiements du client principal et obligations reprises non ventilés."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Défaut/insolvabilité, dates de bail et disponibilité électrique ; expansion 89 MW conditionnelle.",
+        "gap": "Garanties signées complètes, montants et effets des extensions à obtenir."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Le garant et sa qualité changent avant la fin du bail ; aucun appel ni couverture intégrale de dette GPU démontrés.",
+        "gap": "Recours et rang après changement de garant non établis."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Premier paiement novembre 2025 ; loyers fixes commencés août 2026 ; passage du garant en sixième année.",
+        "gap": "Calendrier exact des cinq/sixième années et des extensions non publié."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "HUT_RIVER",
+    "title": "Hut 8 : River Bend",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "Hut 8 Corp.",
+        "role": "sponsor",
+        "entity_id": "cik:0001964789"
+      },
+      {
+        "name": "Hut 8 DC LLC",
+        "role": "émetteur_des_notes",
+        "entity_id": "legal:30d0316ecfcec3a0619d2e30ad3ad493918f47ebbd1c0d13c4ca9e913baf95a3"
+      },
+      {
+        "name": "Porteurs de notes",
+        "role": "créanciers",
+        "entity_id": null,
+        "unknown_reason": "Identités et allocations finales non recensées."
+      },
+      {
+        "name": "Fluidstack USA IV Inc.",
+        "role": "locataire",
+        "entity_id": "legal:7d217002f67d14f415f1221e0eb40b00215fc36fde576cb706c3c6306e0b71b9"
+      },
+      {
+        "name": "Google LLC",
+        "role": "soutien_du_bail",
+        "entity_id": "legal:71832df416b50795d06c6167834cb68943d344815496b4b751428e701411af1b"
+      }
+    ],
+    "evidence": [
+      "e931d3cbd93a8c7eb1805613b1b95b3b1a5a523ab6ad420f0618b46a22d88a90",
+      "5f66f7ccd4fda50f800e28ff0298a3fefcff234f2f34515b0d04ce1fad25d272",
+      "da2fdfc32ab5d2fdc87eed6f035f0dbe4d00a79c68ad239362375fd56e176a68",
+      "26789cc42ac5150071218d33a8b9cb459b79f98a77653b299aa106e03f662e45",
+      "7956c8a6983fc0c52bd46493f752d8b0340c7abc122d44ace2168b58dc46daec",
+      "2a54d16bd18322a37bbb2ceb6e78008cd646113cc7d228b3fc7c1d9b0e11acad",
+      "5032e1f08d58f5b1ad877fa90b54c2d796cb49e822ff22b0539e43ac2d112100"
+    ],
+    "amount_references": [
+      "e931d3cbd93a8c7eb1805613b1b95b3b1a5a523ab6ad420f0618b46a22d88a90",
+      "5f66f7ccd4fda50f800e28ff0298a3fefcff234f2f34515b0d04ce1fad25d272",
+      "2a54d16bd18322a37bbb2ceb6e78008cd646113cc7d228b3fc7c1d9b0e11acad",
+      "5032e1f08d58f5b1ad877fa90b54c2d796cb49e822ff22b0539e43ac2d112100"
+    ],
+    "phases": [
+      {
+        "event": "first_principal_payment",
+        "date": "2028-05-15"
+      },
+      {
+        "event": "final_maturity",
+        "year": 2042
+      }
+    ],
+    "contract_features": [
+      {
+        "kind": "cash_restriction",
+        "description": "Produit de dette réservé à construction, service de dette et usages contractuels."
+      },
+      {
+        "kind": "parent_or_tenant_bond_guarantee",
+        "present": false,
+        "scope": "Separate explicit issuer statements for each vehicle."
+      }
+    ],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Émetteur propre à chaque projet et société sponsor nommés.",
+        "gap": "Porteurs et rôle du client de Beacon Point non recensés."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Centre de données, sous-station, actifs et comptes du véhicule."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "3,25 Md$ de principal émis et restant à juin ; dette différente des comptes restreints et de la valeur comptable nette.",
+        "gap": "Répartition des réserves et besoins de chantier par SPV non reconstituée."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "River Bend : loyers Fluidstack USA IV ; Beacon Point : locataire non nommé, décrit comme high-investment-grade.",
+        "gap": "Modalités du payeur Beacon Point à confirmer ; revenus des clients ultimes inconnus."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Dette du SPV, covenants et comptes réservés ; soutien Google du bail River Bend, sans garantie de ses notes.",
+        "gap": "Annexes de bail/backstop et accords de reprise manquants."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Créanciers ont des sûretés sur projet/comptes/actions ; aucune garantie générale du sponsor, locataire ou garant de bail pour River Bend.",
+        "gap": "Waterfall intégrale et recours de chaque créancier à compléter."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Premier principal 2028-05-15 ; maturité 2042 ; coupons à partir de novembre 2026.",
+        "gap": "Budget de construction et encaissements trimestriels détaillés inconnus."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "HUT_BEACON",
+    "title": "Hut 8 : Beacon Point",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "Hut 8 Corp.",
+        "role": "sponsor",
+        "entity_id": "cik:0001964789"
+      },
+      {
+        "name": "Beacon Point DC LLC",
+        "role": "émetteur_des_notes",
+        "entity_id": "legal:20cf203d467278a4b1f0f54a14217e098d962e1eef3505f941294e04eaf74f94"
+      },
+      {
+        "name": "Porteurs de notes",
+        "role": "créanciers",
+        "entity_id": null,
+        "unknown_reason": "Identités et allocations finales non recensées."
+      }
+    ],
+    "evidence": [
+      "d4b42f348ce393ece35755987548a8effd68cfa3ed21af6b5bf2785434bb22f5",
+      "3e24f2b59a3b064f6d30fcd25ea6e37c395892fb63b930b9b17c04da4aa72b98",
+      "091834d781d06c0890fcce3781aeb16963d3d18a97609d3cf6d323c1bf423352"
+    ],
+    "amount_references": [
+      "d4b42f348ce393ece35755987548a8effd68cfa3ed21af6b5bf2785434bb22f5"
+    ],
+    "phases": [
+      {
+        "event": "first_principal_payment",
+        "date": "2030-05-30"
+      },
+      {
+        "event": "final_maturity",
+        "year": 2042
+      }
+    ],
+    "contract_features": [
+      {
+        "kind": "cash_restriction",
+        "description": "Produit de dette réservé à construction, service de dette et usages contractuels."
+      },
+      {
+        "kind": "parent_or_tenant_bond_guarantee",
+        "present": false,
+        "scope": "Separate explicit issuer statements for each vehicle."
+      }
+    ],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Émetteur propre à chaque projet et société sponsor nommés.",
+        "gap": "Porteurs et rôle du client de Beacon Point non recensés."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Centre de données, sous-station, actifs et comptes du véhicule."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "4,25 Md$ de principal émis et restant à juin ; dette différente des comptes restreints et de la valeur comptable nette.",
+        "gap": "Répartition des réserves et besoins de chantier par SPV non reconstituée."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "River Bend : loyers Fluidstack USA IV ; Beacon Point : locataire non nommé, décrit comme high-investment-grade.",
+        "gap": "Modalités du payeur Beacon Point à confirmer ; revenus des clients ultimes inconnus."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Dette du SPV, covenants et comptes réservés ; soutien Google du bail River Bend, sans garantie de ses notes.",
+        "gap": "Annexes de bail/backstop et accords de reprise manquants."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Créanciers ont des sûretés sur projet/comptes/actions ; aucune garantie générale du sponsor, locataire ou garant de bail pour River Bend.",
+        "gap": "Waterfall intégrale et recours de chaque créancier à compléter."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Premier principal 2030-05-30 ; maturité 2042 ; coupons à partir de novembre 2026.",
+        "gap": "Budget de construction et encaissements trimestriels détaillés inconnus."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ]
+  },
+  {
+    "operation_id": "HYPERION",
+    "title": "Meta–Hyperion–Beignet : VIE, garantie résiduelle et une position PIMCO",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "Meta Platforms, Inc.",
+        "role": "investisseur_locataire_et_garant",
+        "entity_id": "cik:0001326801"
+      },
+      {
+        "name": "Beignet Investor LLC",
+        "role": "émetteur_des_obligations_identifiées",
+        "entity_id": "legal:dbe3c8e68f38bec7c149465507fbe002b565dddf87aa13e2bae593218dd01ff4"
+      },
+      {
+        "name": "PIMCO Extended Duration Fund",
+        "role": "porteur_identifié",
+        "entity_id": "series:S000013233"
+      },
+      {
+        "name": "Fonds Blue Owl et véhicules de projet",
+        "role": "investisseurs_et_propriétaires",
+        "entity_id": null,
+        "unknown_reason": "Leur identification juridique et le raccordement complet à Beignet ne sont pas établis par les pièces SEC ouvertes."
+      }
+    ],
+    "evidence": [
+      "b635065d5834df752db10360b1e874cb37565fa4802de94511ca5d0da2110500",
+      "a40bd11318bc5aaf31dcd7276e2421cd595b90f4524a16a7a6b62ae43497b060",
+      "640f6d1f95749cf1335bb7d8838e5cab30d6e9efc8c5fc80d061a90d02a20862",
+      "ff329219abea7cab733aa40d73ae33206f984e5a8759d870d043d3a9cef750af",
+      "aa3daeaedd93ab55a88c41afd6959891b7ad0f9ba1038523a6642640697ac6f2",
+      "dec47d8f36bce00467c499199c4e03ab968b03e98972a4b51d3156f50252c15e",
+      "54151722fabf7e703fa157d8f7734e70971087c500028165788a21d3b4c1494c",
+      "d746e759340dc745e9067eccc6e3fb4b5ebc799761c5119b4a408132a6852e0c",
+      "89c7bcfd25e0e0f037c27d4ea85c3cbe96bb52de08585b3b300ad4909e785d93",
+      "3b5c82bea387b8d5dda329704b1d644f4877640c9a6a13025b4d8421e3670d1a",
+      "ea55353cd2478e2cfbcba637b06c5eadb85b09949bff7698b0218cf8c178c6e8",
+      "49fca35805d8b1d9860efd3af62f96bc2aa0e0cb36699e3f53fb9981af250d49",
+      "25ab9a0ef9808999cfaae9e775cc93724d97623e9f4711f1d21bf2bc69d575d2",
+      "eecadccd0f5910c00088b51fd9e992f19ac2941047bc46ec93841115c872be76"
+    ],
+    "amount_references": [
+      "a40bd11318bc5aaf31dcd7276e2421cd595b90f4524a16a7a6b62ae43497b060",
+      "640f6d1f95749cf1335bb7d8838e5cab30d6e9efc8c5fc80d061a90d02a20862",
+      "dec47d8f36bce00467c499199c4e03ab968b03e98972a4b51d3156f50252c15e",
+      "54151722fabf7e703fa157d8f7734e70971087c500028165788a21d3b4c1494c",
+      "3b5c82bea387b8d5dda329704b1d644f4877640c9a6a13025b4d8421e3670d1a",
+      "ea55353cd2478e2cfbcba637b06c5eadb85b09949bff7698b0218cf8c178c6e8"
+    ],
+    "phases": [
+      {
+        "event": "reported_lease_commencement",
+        "year": 2029
+      },
+      {
+        "event": "initial_lease_term",
+        "years": 4
+      },
+      {
+        "event": "renewal_options_total",
+        "years": 20
+      },
+      {
+        "event": "identified_bond_maturity",
+        "date": "2049-05-30"
+      }
+    ],
+    "contract_features": [
+      {
+        "kind": "Meta_reporting_scope",
+        "state": "unconsolidated_VIE"
+      },
+      {
+        "kind": "bond_holding_scope",
+        "CUSIP": "076912AA2",
+        "series": "S000013233",
+        "reported_not_default": true,
+        "reported_not_PIK": true
+      },
+      {
+        "kind": "agency_legal_chain",
+        "source": "beignet_sp_search_excerpt",
+        "qualified_contract": false,
+        "holding": "Beignet Investor LLC",
+        "asset_owner": "Laidley LLC",
+        "Meta_member": "Iris Crossing LLC",
+        "Meta_tenant": "Pelican Leap LLC",
+        "description": "Noms publiés dans un extrait indexé S&P ; contrats et chaîne de contrôle non vérifiés."
+      }
+    ],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Meta, Beignet et série PIMCO identifiés ; lien juridique complet de Beignet à la VIE à confirmer.",
+        "gap": "JVCo, bailleur, locataire et fonds Blue Owl réels non confirmés par contrats SEC ouverts."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Campus Louisiana/Hyperion, bâtiments et infrastructure de longue durée ; holding et propriétaire d’actifs distincts."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "Meta publie 46,03 Md$ d’exposition maximale composée, 28 Md$ de seuil RVG initial, 12,31 Md$ de baux et 2,92 Md$ de participation ; PIMCO détient 1,517 M$ nominal.",
+        "gap": "27,3 Md$ cité par S&P : analyse d’agence non admise comme dette SEC directement constatée."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Engagements de Meta envers la VIE ; distributions du projet vers la holding obligataire à reconstituer.",
+        "gap": "Waterfall de distribution et accords directs non collectés."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Non-renouvellement/résiliation et valeur à la date considérée pour RVG ; clauses complètes non collectées.",
+        "gap": "Garantie RVG complète, schedules et indenture private placement manquants."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Non-consolidation comptable n’efface pas baux/RVG ; la dette Beignet ne s’ajoute pas à l’exposition composée Meta.",
+        "gap": "Rang des créanciers de holding et sûretés directes à confirmer."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Baux prévus en 2029, initialement quatre ans, options jusqu’à vingt ; obligation PIMCO échéance mai 2049.",
+        "gap": "Amortissement détaillé et articulation fin de garantie/maturité inconnus."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ],
+    "legal_chain_state": "SEC financial quantities plus issuer IR project attribution and NPORT holding; no blanket allocation to Beignet or Blue Owl manager"
+  },
+  {
+    "operation_id": "LAMBDA_COMPUTE_I",
+    "title": "Lambda Compute I : prêts différés et contrats clients",
+    "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+    "roles": [
+      {
+        "name": "Lambda, Inc.",
+        "role": "sponsor_déclarant",
+        "entity_id": "legal:3528d2ba8f0adc0ff7322e82e3364e7982d2eb93e97282bfc93539a22efd6fbe"
+      },
+      {
+        "name": "Lambda Compute I LLC",
+        "role": "emprunteur_nommé_par_l’agence",
+        "entity_id": null,
+        "unknown_reason": "Contrat, CIK et contrôle juridique complet non confirmés dans les sources qualifiées."
+      },
+      {
+        "name": "Deux offtakers",
+        "role": "payeurs",
+        "entity_id": null,
+        "unknown_reason": "Noms non publiés dans ces déclarations."
+      },
+      {
+        "name": "Assureurs et investisseurs obligataires",
+        "role": "financeurs",
+        "entity_id": null,
+        "unknown_reason": "Identités et allocations détenues non publiées."
+      }
+    ],
+    "evidence": [
+      "fe2e0fff6e53e0e6a567288a454a84afbe0e67ff69b8cf70ee053be3e9baaf03",
+      "e7abb2efa798818c4d9900aad566d2c45a78d7febef5dba469f1ffe64e7c158d",
+      "b36f6db59c4772168bea249c2b21f65cf796d21d885023a03245547e8e25c89f",
+      "0310e8e8b070356513398cbd62b75774c10403b5ce18c5a8ebc262975994dead",
+      "4016db7e1be1ac28d9a822f3b07ec043dd732edc68990e22270896420c874c77",
+      "1239f2f45d13fd4b3c54506bd5f88a0de3944b626139ca10e51c2ca231ae4ab9",
+      "67826dd88904b1cfa28dbf13ad0c1e6b5aa676fbada43efd482dc461259f1258",
+      "0e42c8525fad9db1b04a4cd9fda405a4350c4df1a753de4b75758dbf9d86d0ee"
+    ],
+    "amount_references": [],
+    "phases": [
+      {
+        "event": "facility_closing_announced",
+        "date": "2026-10-01"
+      },
+      {
+        "event": "amortization_start",
+        "condition": "Each GPU tranche stabilization"
+      },
+      {
+        "event": "final_maturity_reported",
+        "date": "2033-05-30"
+      }
+    ],
+    "contract_features": [],
+    "cash_or_resource_paths": [],
+    "closure_state": "documented_contract_segments;economic_cycle_or_full_loss_waterfall_not_established",
+    "no_global_sum": true,
+    "questions": [
+      {
+        "question": "entities",
+        "state": "partial",
+        "answer": "Lambda et emprunteur nommés dans des sources externes ; parties contractuelles non vérifiées par pièces ABCD.",
+        "gap": "Source externe et contrats sous-jacents non publiés dans les recherches bornées."
+      },
+      {
+        "question": "asset_or_service",
+        "state": "documented",
+        "answer": "Serveurs GPU GB300/VR200 et contrats de capacité à Seattle, Kansas City et Dallas selon l’agence."
+      },
+      {
+        "question": "engaged_or_paid_amount",
+        "state": "partial",
+        "answer": "Facilité annoncée 1,008 Md$, à tirages différés ; montant effectivement tiré inconnu.",
+        "gap": "Tirages, encours et réserves non publiés ; chiffres externes exclus des mesures core."
+      },
+      {
+        "question": "revenue_payer",
+        "state": "partial",
+        "answer": "Deux offtakers de qualité investment grade selon agence, non nommés.",
+        "gap": "Identité des clients et clauses de paiement non vérifiées."
+      },
+      {
+        "question": "interruption_conditions",
+        "state": "partial",
+        "answer": "Acceptation des GPU, achèvement des sites, SLA et conditions de tirage ; historique technologique court.",
+        "gap": "Contrats de prêt, SLA, offtake et accords directs absents."
+      },
+      {
+        "question": "loss_allocation",
+        "state": "partial",
+        "answer": "Sûretés sur matériels et cash-flows selon issuer/agence ; réserve moins forte que la pratique selon DBRS ; équité sponsor en construction.",
+        "gap": "Recours, rang, collatéral et prix de récupération non vérifiés dans contrats."
+      },
+      {
+        "question": "cash_calendar",
+        "state": "partial",
+        "answer": "Amortissement après stabilisation des tranches ; maturité annoncée 30 mai 2033, taux fixe annoncé 6,78 %.",
+        "gap": "Calendrier précis de tranche, réserve et remboursements non disponible."
+      },
+      {
+        "question": "missing_pieces",
+        "state": "documented",
+        "answer": "Pièces et lacunes recensées dans le périmètre explicite de cette opération."
+      }
+    ],
+    "reported_unadmitted_quantities": [
+      {
+        "source_key": "lambda_issuer",
+        "quantity": "facility_commitment",
+        "value": "1008000000",
+        "currency": "USD",
+        "admitted_to_core": false
+      },
+      {
+        "source_key": "lambda_issuer",
+        "quantity": "fixed_coupon_percent",
+        "value": "6.78",
+        "admitted_to_core": false
+      },
+      {
+        "source_key": "lambda_dbrs",
+        "quantity": "agency_DSCR_case",
+        "value": "1.20",
+        "admitted_to_core": false,
+        "current_value_not_reported": true
+      }
+    ]
+  }
+]
