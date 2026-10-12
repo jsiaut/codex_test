@@ -35,6 +35,14 @@ work/assembly_checkpoint/
 
 work/replay_reference/
 work/replay_spill/
+work/dell/sources/
+work/dell/assembly/
+work/dell/native_facts.jsonl
+work/dell/native_tables/
+work/dell/reviews/
+work/dell/blocks/
+work/dell/text/
+work/dell/*.log
 work/deepening_data/
 work/expansion/*.log
 work/duckdb_spill/

@@ -5,3 +5,4 @@ measures.csv filter=lfs diff=lfs merge=lfs -text
 series.csv filter=lfs diff=lfs merge=lfs -text
 work/expected_universe.json filter=lfs diff=lfs merge=lfs -text
 work/softbank/sources/* filter=lfs diff=lfs merge=lfs -text
+work/dell/*.tar.zst filter=lfs diff=lfs merge=lfs -text
