@@ -1234,5 +1234,29 @@
     "sec_core_tier": "F",
     "eligible_for_sec_core": false,
     "publication_date_verified": false
+  },
+  {
+    "url": "https://laws.e-gov.go.jp/api/1/lawdata/323AC0000000025",
+    "role": "regulatory_annual_filing_deadline_rule",
+    "path": "work/softbank/sources/751ec0f11df7a3f0c709aa810032dc96e0b475c98f07caee1db7d7a38fa6bd7f.html",
+    "sha256": "04ee3ac58d200f9908c6391806d087090ce54bebc6f4568a1e797207c70fe1cb",
+    "bytes": 4820732,
+    "retrieved_at": "2026-10-12T07:54:48.725304+00:00",
+    "source_jurisdiction": "JP_regulator",
+    "sec_core_tier": "F",
+    "eligible_for_sec_core": false,
+    "publication_date_verified": false
+  },
+  {
+    "url": "https://www.fsa.go.jp/en/ordinary/coronavirus202001/20210512-1.html",
+    "role": "regulatory_annual_filing_deadline_rule",
+    "path": "work/softbank/sources/99c2cbed1dd03ec2a76cf490914a45b2afa7091bae8c8d3175d2c0631b0fe6e6.html",
+    "sha256": "c8a0bf7da9261c1cec320785c9053e8740a5a07fdd7d3bf7bfdab09a8fd90aa5",
+    "bytes": 18813,
+    "retrieved_at": "2026-10-12T07:54:49.221725+00:00",
+    "source_jurisdiction": "JP_regulator",
+    "sec_core_tier": "F",
+    "eligible_for_sec_core": false,
+    "publication_date_verified": false
   }
 ]

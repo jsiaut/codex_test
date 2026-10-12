@@ -1,5 +1,5 @@
 {
-  "status": "authorized_integration_in_progress",
+  "status": "integrated_with_explicit_public_disclosure_gaps",
   "user_instruction": "J'aimerais intégrer Softbank à notre modèle. Je sais que ce ne sera pas facile mais tu penses qu'il y a moyen de récupérer le maximum d'informations ?",
   "baseline_commit": "64a3ba8324d1db1eab6ea8625d9949e2cf44e0a0",
   "core_source_cutoff": "2026-10-09T10:24:21.129672+00:00",
@@ -8,7 +8,7 @@
   "cik": "0001065521",
   "sec_identity_source": "https://data.sec.gov/submissions/CIK0001065521.json",
   "edinet_code_hint": "E02778",
-  "edinet_code_verified_from_regulator": false,
+  "edinet_code_verified_from_regulator": true,
   "reporting_currency": "JPY",
   "consolidated_framework": "IFRS",
   "interim_disclosure_basis": "TSE Article 5-2; some IAS 34 disclosures omitted under Article 5-5",
@@ -50,5 +50,25 @@
   "subagents_used": false,
   "authorization": "Ok fais l’intégration complète au mieux",
   "authorized_at": "2026-10-12T07:01:41.116015+00:00",
-  "architecture": "Eight-table additive integration with source qualification sidecar; original EDGAR rows preserved and queryable; JP facts use extended_official_JP_sources measure variant."
+  "architecture": "Eight-table additive integration with source qualification sidecar; original EDGAR rows preserved and queryable; JP facts use extended_official_JP_sources measure variant.",
+  "edinet_identity_proof": "https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100YGH5.pdf",
+  "regulatory_original_identifiers": [
+    "S100YGH5",
+    "S100W4HN",
+    "S100TP3N",
+    "S100QZOM",
+    "S100OCUV",
+    "S100LLIE"
+  ],
+  "protocol_version": "JP_official_sources_v1",
+  "source_admission_diff": {
+    "legacy": "EDGAR only; other sources tier F for discovery",
+    "extended": "Whitelisted dated EDINET originals, scope-qualified TSE statements, audited issuer statements, and unaudited official dated transaction announcements; foreign numerical measures carry a separate variant"
+  },
+  "deadline_rule": {
+    "normal_period": "Three months after fiscal-year end, FIEA article 24(1); approval-based exceptions not presumed",
+    "primary_rule_url": "https://laws.e-gov.go.jp/api/1/lawdata/323AC0000000025",
+    "historical_regulator_confirmation": "https://www.fsa.go.jp/en/ordinary/coronavirus202001/20210512-1.html",
+    "late_filing_signal": "not inferred from US forms or incomplete Japan amendment search"
+  }
 }

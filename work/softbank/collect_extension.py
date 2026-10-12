@@ -14,7 +14,7 @@ client = httpx.Client(timeout=45, follow_redirects=True,
 
 def get(url, role):
     if url in known: return
-    assert urlparse(url).hostname in {'group.softbank', 'disclosure2dl.edinet-fsa.go.jp'}
+    assert urlparse(url).hostname in {'group.softbank', 'disclosure2dl.edinet-fsa.go.jp','www.fsa.go.jp','laws.e-gov.go.jp'}
     response = client.get(url)
     response.raise_for_status()
     raw = response.content
@@ -25,7 +25,7 @@ def get(url, role):
     record = dict(url=url, role=role, path=str(path.relative_to(ROOT)),
                   sha256=hashlib.sha256(raw).hexdigest(), bytes=len(raw),
                   retrieved_at=datetime.now(timezone.utc).isoformat(),
-                  source_jurisdiction='JP_regulator' if 'edinet-fsa' in url else 'JP_issuer_website',
+                  source_jurisdiction='JP_regulator' if urlparse(url).hostname!='group.softbank' else 'JP_issuer_website',
                   sec_core_tier='F', eligible_for_sec_core=False,
                   publication_date_verified=False)
     if pdf:

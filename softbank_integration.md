@@ -18,13 +18,15 @@ L'extension de sources japonaises a été autorisée par « Ok fais l'intégrati
 | CFO sur douze mois | -598,098 | Juillet 2025–juin 2026 ; annuel + T1 − comparatif T1 |
 | Même poste d'achats sur douze mois | 2725,280 | Même période et base |
 
-Les comptes annuels présentent **5631,976 Md¥ de bénéfice consolidé**, contre **-428,832 Md¥ de CFO**. Les gains de valorisation, les mouvements du forward OpenAI et les éliminations des fonds expliquent pourquoi le résultat ne représente pas le cash finançant les investissements. Les catégories sont conservées séparément, sans total global d'exposition.
+Les comptes annuels présentent **5631,976 Md¥ de bénéfice consolidé**, contre **-428,832 Md¥ de CFO**. Les gains de valorisation, les mouvements du forward OpenAI et les éliminations des fonds expliquent pourquoi le résultat ne représente pas le cash finançant les investissements. **87,3 % des investissements SVF FVTPL sont classés en niveau 3 à fin mars**, avec des paramètres de valorisation non observables. Les catégories sont conservées séparément, sans total global d'exposition.
 
 Le cash consolidé ne représente pas la liquidité libre de la holding. Il inclut notamment les filiales bancaires, les fonds, la télécom et Arm. La dette de la holding, les prêts des véhicules sans recours à SBG, les prêts à recours limité et la garantie Tsubaki sont identifiés séparément. Le LTV de gestion publié par SBG n'est pas remplacé par dette consolidée / portefeuille consolidé.
 
 ## OpenAI et la transformation du financement
 
 La note trimestrielle confirme **10 Md$ investis le 1er avril** et **10 Md$ le 1er juillet**, cette seconde tranche étant postérieure au bilan de juin. Le [communiqué du 1er octobre](https://group.softbank/en/news/press/20261001) confirme la dernière tranche de **10 Md$**, la réalisation des **30 Md$** engagés en février, un cumul publié de **64,6 Md$** et environ **13 %** de participation. Ce cumul est une base d'investissement publiée, pas une juste valeur actualisée du portefeuille. Les titres et les droits antérieurs ne sont pas additionnés une seconde fois aux décaissements.
+
+À fin juin, le narratif publiait une juste valeur OpenAI de **89,6 Md$**, pour **44,6 Md$** d'investissement cumulé. Cette valeur demeure un solde daté de juin ; elle n'est pas augmentée mécaniquement des tranches de juillet et octobre pour fabriquer une juste valeur d'octobre.
 
 La même publication confirme le remboursement de tous les tirages de la facilité relais de mars, dont le plafond était **40 Md$**, et l'annulation du dernier **10 Md$** non tiré le 30 septembre. L'annonce du 9 septembre était une décision de remboursement ; la confirmation du 1er octobre permet de clore cette facilité. Cela ne signifie pas que toute la dette SBG ou Tsubaki a disparu.
 
@@ -48,10 +50,12 @@ Les fonds Vision sont consolidés selon IFRS10 ; leurs transactions internes son
 
 ## Traçabilité et limites de la livraison
 
-**91 sources officielles conservées**, **33 sources qualifiées**, dont six originaux annuels EDINET, **2377 faits de tableaux** et **70 observations** intégrés. **113 pages pertinentes ont été lues personnellement**. Les extractions historiques des états à partir de 2021 sont intégrées ; leur extraction automatique ne vaut pas lecture de toutes les notes historiques.
+**93 sources officielles conservées**, **33 sources qualifiées**, dont six originaux annuels EDINET, **2377 faits de tableaux** et **70 observations** intégrés. **113 pages pertinentes ont été lues personnellement**. Les extractions historiques des états à partir de 2021 sont intégrées ; leur extraction automatique ne vaut pas lecture de toutes les notes historiques.
 
 Les contrôles comprennent les équations de bilan/cash, la confrontation des états anglais avec l'original EDINET et la préservation des huit tables SEC. Les sources sont identifiées par URL, empreinte SHA-256, date, page et citation. Les chiffres PDF sont **non balisés XBRL**. Les variantes `legacy_EDGAR_only` et `extended_official_JP_sources` permettent de distinguer la politique initiale et son extension. Les valeurs inconnues ne deviennent pas zéro. Les états japonais standalone ne sont pas mélangés aux IFRS consolidés.
 
 Les lacunes restantes concernent les contrats complets, les seuils de collatéral, le tirage Tsubaki, les revenus privés d'OpenAI, les notes historiques non relues et l'inventaire exhaustif des amendements EDINET. Ce sont des limites de preuve publiées dans `exclusions`, pas une file de pages annoncée comme terminée. Aucun audit indépendant ni score de fragilité n'est revendiqué.
+
+Le dernier bilan disponible dans cette collecte est celui de juin. Les cellules du trimestre clos en septembre portent un motif distinct : **rapport périodique non connu à l'arrêt des sources**. Les communiqués d'octobre ne sont pas employés pour fabriquer ce bilan.
 
 Sources principales : [original EDINET FY2025](https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S100YGH5.pdf), [états annuels anglais audités](https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf), [comptes de juin et notes](https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf). Les inventaires, données, liens et contrôles sont joints au dossier et sauvegardés sur [GitHub](https://github.com/jsiaut/codex_test).

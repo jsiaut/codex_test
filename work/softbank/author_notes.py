@@ -38,7 +38,7 @@ add(A,28,'No cash contributions into SVF2 and LatAm',
     'management_contributions_non_cash','Les receivables de co-investissement de management ne sont pas du cash déjà reçu.')
 add(A,30,'the AI Computing segment was newly established','segment_perimeter_break',
     'Arm, Ampere et Graphcore regroupés ; ancienne série Arm et nouvelle AI Computing non substituables sans reclassification publiée.')
-add(A,33,'¥6,465,523 million','named_investment_unrealized_gain',
+add(A,33,'¥6,465,523 million','openai_investment_gain_including_forward',
     'Gain OpenAI incluant changements de FV du forward transféré ; non assimilable intégralement à des acquisitions ou du cash.',
     amount='6465523000000',currency='JPY',counterparty='OpenAI Group PBC',stage='recognized',
     period_start='2025-04-01',period_end='2026-03-31',measurement_basis='investment_gain_including_forward_fair_value')
@@ -58,13 +58,13 @@ add(Q,71,'Borrowing amount','signed_loan_nominal','10 Md USD contrat 5 août 202
     amount='10000000000',currency='USD',stage='signed',event_date='2026-08-05',instrument_key='TSUBAKI_2026',
     counterparty='SVF II TSUBAKI (DE) LLC',event_type='signing')
 add(Q,71,'Guarantor','parent_guarantee','SBG garant ; montant maximal de garantie non explicitement déterminé.',
-    counterparty='SVF II TSUBAKI (DE) LLC',stage='signed',instrument_key='TSUBAKI_2026',family='credit_support',link_type='guarantee')
+    counterparty='SVF II TSUBAKI (DE) LLC',stage='signed',event_date='2026-08-05',instrument_key='TSUBAKI_2026',family='credit_support',link_type='guarantee')
 add(Q,71,'Mandated lead arrangers','arranger_roles',
     'Goldman Sachs Bank USA, JPMorgan Chase N.A., Mizuho Securities USA LLC, Apollo Global Funding LLC, SMBC : rôles d’arrangeur, parts de prêteurs non divulguées ; aucune allocation des 10 Md USD à Apollo.',
-    counterparty='Apollo Global Funding LLC',stage='signed',instrument_key='TSUBAKI_2026')
+    counterparty='Apollo Global Funding LLC',stage='signed',event_date='2026-08-05',instrument_key='TSUBAKI_2026')
 add(Q,71,'Collateral','collateral_cash_account',
     'Cash collateral account de l’emprunteur ; pas de preuve ici d’un nantissement direct des titres OpenAI. Baisse significative de FV OpenAI : apport cash/remboursement obligatoire ; seuil et occurrence non publiés.',
-    counterparty='OpenAI Group PBC',instrument_key='TSUBAKI_2026',trigger_occurred='unknown',wrong_way=True)
+    counterparty='OpenAI Group PBC',stage='signed',event_date='2026-08-05',instrument_key='TSUBAKI_2026',trigger_occurred='unknown')
 add(Q,45,'IAS 34','interim_framework','TSE article 5-2 avec omissions IAS34 article5-5 ; ne pas revendiquer IAS34 intégral.')
 
 read(A,[35,36,37,38,39,40,54,55,56,57,58,59,60,61,67,68,69,70,71,72,73,90,91,92,93],

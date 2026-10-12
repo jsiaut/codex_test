@@ -3,7 +3,7 @@
   "checks": {
     "eight_tables": true,
     "every_legacy_row_preserved": true,
-    "frozen_annex_criteria_bytes": true,
+    "frozen_annex_criteria": true,
     "foreign_source_hashes": true,
     "no_future_source": true,
     "untagged_PDF_facts": true,

@@ -166,5 +166,14 @@
     "quarter": 1,
     "first_publication": "2026-08-06",
     "annual_deadline": null
+  },
+  {
+    "period_start": "2026-07-01",
+    "period_end": "2026-09-30",
+    "fiscal_year_start": "2026-04-01",
+    "quarter": 2,
+    "first_publication": null,
+    "annual_deadline": null,
+    "publication_status": "periodic_report_not_known_at_frozen_source_cutoff"
   }
 ]

@@ -2,7 +2,7 @@
 
 Situation des sources arrêtée au 2026-10-09T10:24:21.129672+00:00. Périmètre : notes complémentaires, prêteurs publics, contrats ciblés et découverte bornée autorisés.
 
-Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `d9e886e92fe46c2bd3f2f497103dce895be8edd2` ; commit courant de config.yaml : `7c94cdeb4fa86176b0a088e17f95a8a477c06945`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
+Les critères E, la liste F et les seuils n’ont pas changé. Commit d’origine : `d9e886e92fe46c2bd3f2f497103dce895be8edd2` ; commit courant de config.yaml : `f153bc21c8c69ad0d4b30ff8598973b23db103ac`. Le manifeste et les annexes du dossier d’audit portent les empreintes et l’horodatage de la première requête.
 
 Les pièces déposées ne permettent pas de discriminer entre les deux lectures. La part indéterminée des issues de paire E1 et E2 au point de tête vaut 1 ; le périmètre borné et les numérateurs non attribuables en sont les premières limites. Cette proportion porte sur les paires publiées dans le registre, sans pondérer les montants. Les échéances non établies restent explicitement indéterminées. La sensibilité revised et les autres points de grille sont publiés dans les tables.
 
@@ -245,9 +245,9 @@ Dernière période de revenu exploitable : 2026-08-02. Présentation revised ; l
 
 | fcf_after_counterparty_financing | none / original | ND | — | not_determinable / public_attribution_or_complete_terms_not_established | — |
 
-| receivables_collection_period | none / receivables_only | 37.728820 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32 |
-
 | receivables_collection_period | none / original | 72.017962 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000054 / id:f-463; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32; 0001730168-26-000080 / id:f-507 |
+
+| receivables_collection_period | none / receivables_only | 37.728820 | days | computed / — | 0001730168-26-000054 / id:f-32; 0001730168-26-000080 / id:f-1095; 0001730168-26-000080 / id:f-32 |
 
 | rpo_total | none / original | 179200000000.000000 | http://www.xbrl.org/2003/iso4217:USD | computed / — | 0001730168-26-000080 / id:f-514 |
 

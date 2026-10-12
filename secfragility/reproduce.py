@@ -44,6 +44,14 @@ def capture(root):
         names.update(str(p.relative_to(root)) for p in (root/'work/continuation398').glob('*')
                      if p.suffix in ('.json','.jsonl','.py') and p.name not in
                      ('validation.json','delivery_archive.json','prior_verification.json'))
+    if (root/'work/softbank').exists():
+        names.update(str(p.relative_to(root)) for p in (root/'work/softbank').glob('*.py'))
+        names.update('work/softbank/'+name for name in ['integration_contract.json','sources.json',
+            'source_qualifications.json','authored_observations.json','chronology_observations.json',
+            'statement_facts.json','reading_ledger.json','baseline/manifest.json'])
+        names.update(str(p.relative_to(root)) for p in (root/'work/softbank/sources').glob('*') if p.is_file())
+        names.update(str(p.relative_to(root)) for p in (root/'work/softbank/text').glob('*.txt'))
+        names.update(str(p.relative_to(root)) for p in (root/'work/softbank/baseline').glob('*') if p.is_file())
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 

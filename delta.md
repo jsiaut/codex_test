@@ -1,5 +1,8 @@
 # Rendement, changements et limites
 
+Mise à jour SoftBank : le modèle courant comprend **24 groupes**. Les sources japonaises et la comparaison SEC sont documentées dans [softbank_integration.md](softbank_integration.md). Les chiffres de cette extension ont leur index dans [audit/softbank_numbers.csv](audit/softbank_numbers.csv) ; les résultats SEC antérieurs conservent leur index et leurs critères.
+
+
 Exclusions locales de calcul après contrôle du lignage : {"source_not_known_at_information_cutoff": 1}. Les valeurs concernées sont retirées avec un motif explicite ; la vue révisée conserve les sources admissibles à l’arrêt de l’exécution. Les dates de disponibilité de l’information et l’arrêt des sources restent distincts.
 
 Pas d’arrêt durable. La file de lecture est vide ; la phase d’assemblage livre les tables et le dossier d’audit. Aucun événement n’est sommé ni transformé en score. Les événements datés sont dans synthesis.md et series.csv.
@@ -163,9 +166,9 @@ Couverture nommée, anonyme et résiduelle par fournisseur, au dernier point fis
 
 Paires à financement de montant documenté : 2. Arêtes de montant : 13. Les couvertures nommée, anonyme et résiduelle restent au niveau du fournisseur dans les séries.
 
-Blocs uniques traités : 4034 ; observations acceptées : 17637. Tentatives rejetées : {"semantic": 48, "schema": 60}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 245, "investments_note": 867, "lease_note": 210, "concentration_narrative": 937, "debt_note": 369, "commitments_note": 346, "section": 1} ; items 8-K : {"non renseigné": 457}.
+Blocs uniques traités : 4034 ; observations acceptées : 17637. Tentatives rejetées : {"schema": 60, "semantic": 48}. Les essais rejetés restent conservés, même après une correction de schéma autorisée. Répartition des occurrences par classe : {"item404": 166, "related_parties": 31, "going_concern": 220, "controls": 219, "8k_item": 457, "exhibit": 245, "investments_note": 867, "lease_note": 210, "concentration_narrative": 937, "debt_note": 369, "commitments_note": 346, "section": 1} ; items 8-K : {"non renseigné": 457}.
 
-Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 9251, "bytes_received": 7461730535}. Durée calendaire depuis la première requête SEC : 187905.427058 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
+Réseau : {"max_requests_in_rolling_second": 5, "sec_limit_respected": true, "pipeline_rate_respected": true, "requests": 9252, "bytes_received": 7461787314}. Durée calendaire depuis la première requête SEC : 251170.294347 secondes, pauses et interruptions comprises ; aucune durée de travail actif n’est inventée. Les pauses après refus sont vérifiées dans le journal. Les corps arrêtés à leur en-tête sont exclus financial_parties_only et restent identifiables par accession et plage d’octets.
 
 ## Exclusions
 

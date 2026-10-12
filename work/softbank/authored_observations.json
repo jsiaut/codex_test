@@ -54,7 +54,7 @@
     "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
     "page": 33,
     "quote": "¥6,465,523 million",
-    "quantity": "named_investment_unrealized_gain",
+    "quantity": "openai_investment_gain_including_forward",
     "finding": "Gain OpenAI incluant changements de FV du forward transféré ; non assimilable intégralement à des acquisitions ou du cash.",
     "amount": "6465523000000",
     "currency": "JPY",
@@ -146,6 +146,7 @@
     "finding": "SBG garant ; montant maximal de garantie non explicitement déterminé.",
     "counterparty": "SVF II TSUBAKI (DE) LLC",
     "stage": "signed",
+    "event_date": "2026-08-05",
     "instrument_key": "TSUBAKI_2026",
     "family": "credit_support",
     "link_type": "guarantee"
@@ -159,6 +160,7 @@
     "finding": "Goldman Sachs Bank USA, JPMorgan Chase N.A., Mizuho Securities USA LLC, Apollo Global Funding LLC, SMBC : rôles d’arrangeur, parts de prêteurs non divulguées ; aucune allocation des 10 Md USD à Apollo.",
     "counterparty": "Apollo Global Funding LLC",
     "stage": "signed",
+    "event_date": "2026-08-05",
     "instrument_key": "TSUBAKI_2026"
   },
   {
@@ -169,9 +171,10 @@
     "quantity": "collateral_cash_account",
     "finding": "Cash collateral account de l’emprunteur ; pas de preuve ici d’un nantissement direct des titres OpenAI. Baisse significative de FV OpenAI : apport cash/remboursement obligatoire ; seuil et occurrence non publiés.",
     "counterparty": "OpenAI Group PBC",
+    "stage": "signed",
+    "event_date": "2026-08-05",
     "instrument_key": "TSUBAKI_2026",
-    "trigger_occurred": "unknown",
-    "wrong_way": true
+    "trigger_occurred": "unknown"
   },
   {
     "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",

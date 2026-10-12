@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/work/secfragility/secfragility/softbank_integration.py", line 556, in <module>
+    print(json.dumps(run(Path('.').resolve()),ensure_ascii=False,default=str))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/secfragility/secfragility/softbank_integration.py", line 552, in run
+    result=apply(db,root,as_of);export(db,root/'tables');db.close();return result
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/secfragility/secfragility/softbank_integration.py", line 541, in apply
+    validation=verify(db,root,as_of,qmap,facts,observations,control_rows)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/secfragility/secfragility/softbank_integration.py", line 483, in verify
+    old=db.execute(f"SELECT count(*) FROM (SELECT {fields} FROM read_parquet('{reference}') EXCEPT ALL SELECT {fields} FROM {table})").fetchone()[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.InvalidInputException: Invalid Input Error: Python exception occurred while executing the UDF: TypeError: '<' not supported between instances of 'str' and 'NoneType'
+
+At:
+  /workspace/work/secfragility/secfragility/softbank_integration.py(477): bag
+  /workspace/work/secfragility/secfragility/softbank_integration.py(483): verify
+  /workspace/work/secfragility/secfragility/softbank_integration.py(541): apply
+  /workspace/work/secfragility/secfragility/softbank_integration.py(552): run
+  /workspace/work/secfragility/secfragility/softbank_integration.py(556): <module>
+  <frozen runpy>(88): _run_code
+  <frozen runpy>(198): _run_module_as_main
+

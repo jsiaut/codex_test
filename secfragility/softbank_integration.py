@@ -44,6 +44,7 @@ def load_sources(db,root,as_of):
             publication_proof='Explicit dated original issuer transaction announcement',
             source_profile=o['source_profile'],jurisdiction='JP_issuer_official_announcement',
             regulatory_identifier=None,filing_status='issuer_disclosure',assurance='unaudited',tier='C',
+            publication_date_verified=True,
             eligible_extended=True,eligible_legacy=False,
             assurance_rule='Issuer transaction claim only; no independent assurance and no complete contract; not used as June financial balances')
     # Originals used to validate translations remain distinct physical documents.
@@ -302,11 +303,12 @@ def financial_measures(db,root,as_of,facts):
             for name,cs in [('cash_consolidated',['cash']),('debt_interest_bearing',['debt__current_liabilities','debt__non-current_liabilities']),('ifrs_lease_liabilities',['leases__current_liabilities','leases__non-current_liabilities']),('eq_equity_and_accumulated_deficit',['equity'])]:
                 deps=[fs[c] for c in cs];v=sum(Decimal(f['value']) for f in deps) if all(deps) else None
                 measure(db,as_of,name,view,None,pe,v,[f['fact_id'] for f in deps if f],unit='JPY',currency='JPY',
-                    knowledge_date=max((f['knowledge_date'] for f in deps if f),default=None),term='equity' if name=='eq_equity_and_accumulated_deficit' else 'none')
+                    knowledge_date=max((f['knowledge_date'] for f in deps if f),default=None),information_cutoff=cutoff(view,pe),term='equity' if name=='eq_equity_and_accumulated_deficit' else 'none')
             cash=fs['cash'];dc=fs['debt__current_liabilities']
             measure(db,as_of,'debt_current_to_consolidated_cash',view,None,pe,
                 Decimal(dc['value'])/Decimal(cash['value']) if cash and dc and Decimal(cash['value']) else None,
                 [f['fact_id'] for f in [cash,dc] if f],unit='ratio',currency='JPY',
+                information_cutoff=cutoff(view,pe),
                 basis_break_reason='Book current debt / consolidated cash proxy; not cash-only contractual principal coverage or parent LTV')
         # TTM is annual + current YTD - the comparator in the current statement.
         # Latest annual/Q1 policies defining cash capex have been read personally.
@@ -376,6 +378,8 @@ def quarter_measures(db,root,as_of,facts):
             deps=json.loads(cfo['lineage'])+json.loads(capex['lineage'])
             measure(db,as_of,'fcf_basic',view,'2025-07-01','2026-06-30',cfo['value']-capex['value'],deps,unit='JPY',currency='JPY',breakdown_key='TTM')
             if lp:measure(db,as_of,'fcf_after_ifrs_lease_payments',view,'2025-07-01','2026-06-30',cfo['value']-capex['value']-lp['value'],deps+json.loads(lp['lineage']),unit='JPY',currency='JPY',breakdown_key='TTM')
+    periods.append(dict(period_start='2026-07-01',period_end='2026-09-30',fiscal_year_start='2026-04-01',quarter=2,
+        first_publication=None,annual_deadline=None,publication_status='periodic_report_not_known_at_frozen_source_cutoff'))
     (root/'work/softbank/fiscal_calendar.json').write_text(json.dumps(periods,indent=2)+'\n')
     return periods,quarter_terms
 
@@ -387,20 +391,20 @@ def expected_coverage(db,root,as_of,periods,quarter_terms,observations,ids):
             for name in sorted(catalog-{'annex_e_outcome','fragility_event'}):
                 for term in MEASURE_TERMS[name]:
                     existing=db.execute("SELECT count(*) FROM measures WHERE group_id=? AND variant=? AND measure=? AND view=? AND period_start=? AND period_end=? AND term=?",[GROUP,VARIANT,name,view,ps,pe,term]).fetchone()[0]
-                    if not existing:measure(db,as_of,name,view,ps,pe,reason='source_not_disclosed_or_complete_attribution_not_established',term=term)
+                    if not existing:measure(db,as_of,name,view,ps,pe,reason='periodic_report_not_known_at_frozen_source_cutoff' if not p['first_publication'] else 'source_not_disclosed_or_complete_attribution_not_established',term=term)
             for code in [f'F{i}' for i in range(1,11)]:
                 value=None;deps=[];why='event_source_or_precondition_not_fully_established'
                 if code=='F10' and pe=='2026-06-30':
                     stated=next(o for o in observations if o['model_quantity']=='going_concern_explicit_none')
                     value=0;deps=[stated['observation_id']]
-                elif code=='F1':
+                elif code=='F1' and (view,pe) in quarter_terms:
                     ends=sorted(end for v,end in quarter_terms if v==view and end<=pe)
                     if len(ends)>=2:
                         now,prior=[quarter_terms[(view,e)] for e in ends[-2:]]
                         if all(t[c][0] is not None for t in [now,prior] for c in ['cfo','capex_signed']):
                             value=int(all(-t['capex_signed'][0]>t['cfo'][0] for t in [now,prior]))
                             deps=[f['fact_id'] for t in [now,prior] for c in ['cfo','capex_signed'] for f in t[c][1]]
-                cut=as_of if view=='revised' else stamp(pe[:4]+'-06-30' if p['quarter']==4 else p['first_publication'])
+                cut=as_of if view=='revised' or not p['first_publication'] else stamp(pe[:4]+'-06-30' if p['quarter']==4 else p['first_publication'])
                 measure(db,as_of,'fragility_event',view,ps,pe,value,deps,reason=why,breakdown_key=code,unit='event',information_cutoff=cut,
                     outcome='supported' if value==1 else 'descriptive' if value==0 else 'indeterminate')
     # Same original E2/E3 threshold grid; private revenue denominators and
@@ -414,9 +418,10 @@ def expected_coverage(db,root,as_of,periods,quarter_terms,observations,ids):
                 for code in ['E1','E2','E3','E4','E5','E6']:
                     grid=criteria['grid'] if code in ('E2','E3') else ['none']
                     for point in grid:
-                        measure(db,as_of,'annex_e_outcome',view,ps,pe,reason='complete_same_legal_pair_revenue_contract_or_cash_chronology_not_established',
-                            counterparty_id=cp,breakdown_key=f'{code}|grid={point}|date_basis=payment',outcome='descriptive' if code=='E6' else 'indeterminate',
-                            information_cutoff=as_of if view=='revised' else stamp(pe[:4]+'-06-30'))
+                        for basis in criteria['E4']['date_bases'] if code=='E4' else ['payment']:
+                            measure(db,as_of,'annex_e_outcome',view,ps,pe,reason='complete_same_legal_pair_revenue_contract_or_cash_chronology_not_established',
+                                counterparty_id=cp,breakdown_key=f'{code}|grid={point}|date_basis={basis}',outcome='descriptive' if code=='E6' else 'indeterminate',
+                                information_cutoff=as_of if view=='revised' else stamp(pe[:4]+'-06-30'))
     # Scope-specific quoted RPO is a stock. It is not allocated to OpenAI.
     for o in observations:
         if o['model_quantity']=='rpo_total':
@@ -470,11 +475,26 @@ def note_measures(db,root,as_of,observations):
                 breakdown_key=o['model_quantity']+'|'+o['observation_id'][:16],unit=o['unit'],currency=o['currency'],
                 knowledge_date=o['knowledge_date'],counterparty_id=o['counterparty_entity_id'] or 'none',
                 evidence_profile=o['tier']+';'+o['filing_status']+';'+o['assurance_level']+';'+o['measurement_basis'])
+        if o['model_quantity'] in ('named_investment_carrying_amount','openai_undrawn_investment_commitment'):
+            block='exposed_assets' if o['stage']=='recognized' else 'contractual_outflows'
+            for name in ['counterparty_exposure','exposure_matrix']:
+                measure(db,as_of,name,'revised',None,str(o['period_end']),o['amount'],[o['observation_id']],
+                    counterparty_id=o['counterparty_entity_id'] or 'none',unit=o['unit'],currency=o['currency'],
+                    breakdown_key=block+'|'+o['measurement_basis'],overlap_possible=True,
+                    knowledge_date=o['knowledge_date'])
+        if o['model_quantity']=='svf_level3_assets':
+            fact=rows(db,"SELECT fact_id,value FROM facts WHERE group_id=? AND document_id=? AND canonical_concept='svf_fvtpl' AND period_end='2026-03-31' AND period_start IS NULL",[GROUP,o['document_id']])[0]
+            measure(db,as_of,'svf_level3_share','revised',None,'2026-03-31',Decimal(o['amount'])/fact['value'],[o['observation_id'],fact['fact_id']],
+                unit='ratio',currency='JPY',numerator=o['amount'],denominator=fact['value'],knowledge_date=o['knowledge_date'])
+    guarantee=next(o for o in observations if o['model_quantity']=='parent_guarantee')
+    measure(db,as_of,'counterparty_exposure','revised',None,str(guarantee['period_end']),reason='guarantee_maximum_scope_not_disclosed',
+        counterparty_id=guarantee['counterparty_entity_id'],breakdown_key='contingent_obligations|TSUBAKI_parent_guarantee',
+        lineage=[guarantee['observation_id']],unit='USD',currency='USD')
 
 def verify(db,root,as_of,qmap,facts,observations,control_rows):
     checks={};checks['eight_tables']=len(TABLES)==8
     baseline=json.loads((root/'work/softbank/baseline/manifest.json').read_text()); preservation={}
-    def bag(value):return json.dumps(sorted(json.loads(value)),separators=(',',':'))
+    def bag(value):return json.dumps(sorted(json.loads(value),key=lambda x:json.dumps(x,sort_keys=True)),separators=(',',':'))
     db.create_function('softbank_source_bag',bag,['VARCHAR'],'VARCHAR')
     for table in TABLES:
         reference=root/baseline[table]['path'];assert sha(reference)==baseline[table]['sha256']
@@ -483,7 +503,10 @@ def verify(db,root,as_of,qmap,facts,observations,control_rows):
         old=db.execute(f"SELECT count(*) FROM (SELECT {fields} FROM read_parquet('{reference}') EXCEPT ALL SELECT {fields} FROM {table})").fetchone()[0]
         preservation[table]=dict(missing_or_changed_original_rows=old,original_sha256=baseline[table]['sha256'])
     checks['every_legacy_row_preserved']=all(r['missing_or_changed_original_rows']==0 for r in preservation.values())
-    checks['frozen_annex_criteria_bytes']=sha(root/'audit/criteria_manifest.json')==sha(root/'work/softbank/baseline/criteria_manifest.json')
+    prior_criteria=json.loads((root/'work/softbank/baseline/criteria_manifest.json').read_text())
+    current_criteria=json.loads((root/'audit/criteria_manifest.json').read_text())
+    checks['frozen_annex_criteria']=all(prior_criteria[k]==current_criteria[k] for k in
+        ['original_commit','original_commit_date','first_sec_request','original_criteria','current_criteria','criteria_unchanged'])
     checks['foreign_source_hashes']=all(sha(root/q['path'])==q['sha256'] for q in qmap.values())
     checks['no_future_source']=all(q['publication_date']<=as_of[:10] for q in qmap.values())
     checks['untagged_PDF_facts']=all(not f['is_tagged'] and f['currency']=='JPY' and f['accounting_framework']=='ifrs' and f['reporting_scope']==SCOPE for f in facts)
@@ -543,14 +566,18 @@ def apply(db,root,as_of):
     render(db,root,as_of,validation)
     return validation
 
-def run(root):
+def run(root,from_current_legacy=False):
     as_of=json.loads((root/'work/run.json').read_text())['as_of']
     assert as_of==json.loads((root/'work/softbank/integration_contract.json').read_text())['core_source_cutoff']
     db=create(root)
+    source='tables' if from_current_legacy else 'work/softbank/baseline'
+    if from_current_legacy:
+        existing=duckdb.connect().execute("SELECT count(*) FROM read_parquet('tables/documents.parquet') WHERE group_id=?",[GROUP]).fetchone()[0]
+        if existing:raise ValueError('Current exports already contain foreign integration; use immutable baseline mode')
     for table in TABLES:
-        db.execute(f"INSERT INTO {table} BY NAME SELECT * FROM read_parquet('work/softbank/baseline/{table}.parquet')")
+        db.execute(f"INSERT INTO {table} BY NAME SELECT * FROM read_parquet('{source}/{table}.parquet')")
     result=apply(db,root,as_of);export(db,root/'tables');db.close();return result
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.parse_args()
-    print(json.dumps(run(Path('.').resolve()),ensure_ascii=False,default=str))
+    parser=argparse.ArgumentParser();parser.add_argument('--from-current-legacy',action='store_true');args=parser.parse_args()
+    print(json.dumps(run(Path('.').resolve(),args.from_current_legacy),ensure_ascii=False,default=str))

@@ -1,0 +1,32 @@
+{"documents": 9773, "facts": 1050190, "observations": 0, "entities": 0, "links": 0, "measures": 0, "controls": 0, "exclusions": 0}
+{"stage": "observations", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 0, "links": 0, "measures": 4418, "controls": 0, "exclusions": 15631}}
+{"stage": "entities", "count": 689}
+{"stage": "amount_links", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 471, "measures": 4418, "controls": 0, "exclusions": 16661}}
+{"stage": "graph", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 4418, "controls": 0, "exclusions": 16661}}
+{"stage": "controls", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 4418, "controls": 297828, "exclusions": 16661}}
+{"stage": "quarters", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 7101, "controls": 297828, "exclusions": 16661}}
+{"stage": "stocks", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 11706, "controls": 297828, "exclusions": 16729}}
+{"stage": "ttm", "counts": {"documents": 10701, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 12260, "controls": 297828, "exclusions": 16729}}
+{"stage": "pairs", "counts": {"documents": 10741, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 373201, "controls": 298632, "exclusions": 16729}}
+{"stage": "coverage", "counts": {"documents": 10741, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 553715, "controls": 298632, "exclusions": 16745}}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 131, in <module>
+    run(Path('.').resolve(),a.reconstruct,a.resume)
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 83, in run
+    return finish(db,root,as_of,state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 113, in finish
+    render(db,root,as_of,source,verification)
+  File "/workspace/work/secfragility/secfragility/reports.py", line 36, in render
+    export(db,root/'tables')
+  File "/workspace/work/secfragility/secfragility/database.py", line 168, in export
+    with TemporaryDirectory(prefix='.export-', dir=destination) as staging:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/tempfile.py", line 886, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/tempfile.py", line 384, in mkdtemp
+    _os.mkdir(file, 0o700)
+OSError: [Errno 28] No space left on device: '/workspace/work/secfragility/tables/.export-ipo51jrq'

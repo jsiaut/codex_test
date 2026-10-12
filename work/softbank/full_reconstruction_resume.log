@@ -1,0 +1,23 @@
+{"stage": "coverage", "counts": {"documents": 10741, "facts": 1278718, "observations": 17637, "entities": 689, "links": 853, "measures": 553715, "controls": 298632, "exclusions": 16745}}
+{"stage": "numeric", "counts": {"documents": 10741, "facts": 1278718, "observations": 17637, "entities": 689, "links": 909, "measures": 552039, "controls": 298632, "exclusions": 16746}}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 131, in <module>
+    run(Path('.').resolve(),a.reconstruct,a.resume)
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 21, in run
+    return finish(db,root,as_of,state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/secfragility/secfragility/phase3.py", line 123, in finish
+    apply(db,root,as_of)
+  File "/workspace/work/secfragility/secfragility/softbank_integration.py", line 560, in apply
+    validation=verify(db,root,as_of,qmap,facts,observations,control_rows)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/secfragility/secfragility/softbank_integration.py", line 499, in verify
+    old=db.execute(f"SELECT count(*) FROM (SELECT {fields} FROM read_parquet('{reference}') EXCEPT ALL SELECT {fields} FROM {table})").fetchone()[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_duckdb.InvalidInputException: Invalid Input Error: Python exception occurred while executing the UDF: TypeError: '<' not supported between instances of 'str' and 'NoneType'
+
+At:
+  /workspace/work/secfragility/secfragility/softbank_integration.py(493): bag
+

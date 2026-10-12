@@ -1,0 +1,49 @@
+{
+  "method": "Full SEC cache reconstruction, resumed from its calculation checkpoint after export disk exhaustion; compare completed SEC exports with immutable released baseline, every column, bidirectional EXCEPT ALL; source-ID lists as multisets",
+  "tables": {
+    "exclusions": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    },
+    "measures": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    },
+    "links": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    },
+    "documents": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    },
+    "observations": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    },
+    "facts": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    },
+    "entities": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    },
+    "controls": {
+      "baseline_only": 0,
+      "reconstruction_only": 0,
+      "identical": true
+    }
+  },
+  "all_original_SEC_tables_identical": true,
+  "new_JP_layer_replay": "work/idempotency_verification.json",
+  "subagents_used": false,
+  "independent_audit_performed": false
+}

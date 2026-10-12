@@ -74,8 +74,8 @@ Les sources sont reliées aux citations dans deepening_evidence.csv ; les chiffr
 
 | Déposant / CIK | Mesure | Période | Montant publié |
 | --- | --- | --- | ---: |
-| 0001108524 | named_investment_unrealized_gain | 2026-05-01 → 2026-07-31 | 2 700,000 M$ |
 | 0001108524 | named_investment_unrealized_gain | 2026-02-01 → 2026-07-31 | 3 000,000 M$ |
+| 0001108524 | named_investment_unrealized_gain | 2026-05-01 → 2026-07-31 | 2 700,000 M$ |
 | 0001144879 | customer_lease_incentive_asset | none → 2025-08-28 | 121,200 M$ |
 | 0001585521 | named_investment_acquisitions | 2026-02-01 → 2026-07-31 | 300,900 M$ |
 | 0001585521 | named_investment_unrealized_gain | 2026-05-01 → 2026-07-31 | 1 612,700 M$ |

@@ -70,6 +70,7 @@ def qualify(root):
                 tier='A',assurance='audited',review_pages=[i+1 for i,p in enumerate(pp) if '独立監査人の監査報告書' in p],
                 assurance_rule='Only consolidated IFRS statements and notes; standalone Japanese GAAP and management sections not assigned this assurance',
                 eligible_extended=True,eligible_legacy=False))
+    for record in result:record['publication_date_verified']=True
     (root/'work/softbank/source_qualifications.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     return result
 

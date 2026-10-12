@@ -423,6 +423,13 @@ Installer requirements.txt et restaurer le cache LFS. python -m secfragility.pha
 
 
 def package(root,as_of):
+    # Foreign integration applies after the legacy calculation/render. Its
+    # dedicated package is produced after replay verification; earlier released
+    # archives must not be overwritten by this intermediate reconstruction.
+    foreign=root/'work/softbank/integration_contract.json'
+    if foreign.exists() and json.loads(foreign.read_text()).get('status') in (
+            'authorized_integration_in_progress','integrated_with_explicit_public_disclosure_gaps'):
+        return dict(as_of=as_of,status='packaging_deferred_to_verified_SoftBank_delivery')
     output=Path('/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output');output.mkdir(parents=True,exist_ok=True)
     from .extension_assembly import opened
     extension=bool(opened(root))
