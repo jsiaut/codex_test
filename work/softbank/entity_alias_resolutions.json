@@ -1,0 +1,12 @@
+[
+  {
+    "legal_name": "OpenAI Group PBC",
+    "canonical_entity_id": "legal:c6093da255d21e7a8ac43260664c079cda668f5af64b65f0df40bf88f6d47a0d",
+    "legacy_entity_ids": [
+      "legal:c6093da255d21e7a8ac43260664c079cda668f5af64b65f0df40bf88f6d47a0d",
+      "legal:db237b7db1910037e6fa14b31156b22adbfa302f9a4606b7c01c517778089f06"
+    ],
+    "proof": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "rule": "exact_identical_legal_name;old_rows_retained;resolved_view_only"
+  }
+]

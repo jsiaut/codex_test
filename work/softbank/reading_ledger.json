@@ -658,5 +658,475 @@
     "finding": "Comptes juin ; dette courante 7,559,173 M JPY et non courante 19,085,685 ; 20 Md USD effectivement tirés en avril par deux emprunteurs distincts ; capex inclut prepaid expenses/prépayments ; investissement SVF OpenAI 1,605,100 M JPY.",
     "state": "personally_read",
     "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 82,
+    "text_page_sha256": "53b69324bb590dd83d80016f3444c5aa0574f8277526ccbcb124eebc16e4c0f9",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 84,
+    "text_page_sha256": "528a940f15b8414e44fed363f4d93f29962c7e5acbcee7c88adb94d6849a73e3",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 85,
+    "text_page_sha256": "70cb56bd87bdc9ed9e52fb552fab3ef36f6218e3c9952ec77d2571e7ce48b214",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 97,
+    "text_page_sha256": "0f3f57b40c9140bf5dc14d54cf6ab7ce692d311689b0934573bc79dc920c748a",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 98,
+    "text_page_sha256": "9bace3f47cff07da24688e15b9cf614e77934316bfbd3d234ee089f03b048f79",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 99,
+    "text_page_sha256": "95dd684a6341de425bd1a452215e0aa06c3e4fff2d376e375f190b3b5913c742",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 100,
+    "text_page_sha256": "8887f5ce5044964f99b73bff35e3918d34853642f5f0d86047833e72b240a4cc",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 101,
+    "text_page_sha256": "987b63ddb45c127615df951cc095f0884f4f30db8e0af8d0e6a9ef6b154e1f7c",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 102,
+    "text_page_sha256": "b73cae41a064ec250cd0d62e5c69075ed906c2c5499a04dd112e8051f73e7721",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 103,
+    "text_page_sha256": "70912fcf9b5ab47de074e6a3a28aa25d3689fa4c9f17eb592829ee476fb2d54e",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 104,
+    "text_page_sha256": "bf824b1e0edd984a7c42af55e090d3353606d4f453e4ac0f6f6844d4a24356ee",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 105,
+    "text_page_sha256": "84571f97830f9dad55e4474ff151f6b785eaac6a296a8c04c3b0384d894ef5ce",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 123,
+    "text_page_sha256": "e2c55ed222cb12cc803e741c74b257c2cf568fa9dd4b0fe9d0422332dea0bcd0",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 124,
+    "text_page_sha256": "9546368f3bb47ef38835c1fa76078d9ffb7569e2bc72fcedecf06996bfbc105b",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 125,
+    "text_page_sha256": "f4319581438fd583e2cee827b02a46dea287c349c6d7e82b31b79bb6910ce990",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 129,
+    "text_page_sha256": "4ee8bea4858381fd81d7a6cee06001c32dfc041fb5ded3fd05ddbbd078c882bc",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 133,
+    "text_page_sha256": "3ec2542a7377dea04d5e7ec48f9955f0187db7aa2403243b2e9280872be8347d",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 134,
+    "text_page_sha256": "4fa8d8042d1f490e2014994e832fc8846fd8b1f112350125e0abb263691f7c05",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 140,
+    "text_page_sha256": "0db0f1ae5e21775be0cd1bcb3d50b12d8273306ec8f1a01b712ea94ac2429fba",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 141,
+    "text_page_sha256": "55b89e2fc713627cf584358184045dceb67c4b50e434f85e3487a8a3fabbd537",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 142,
+    "text_page_sha256": "2df247ffdc0083279a8f0610e88c6226f541f0f9568abb69cb8f87ca236f1651",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 143,
+    "text_page_sha256": "f630f536e8fee963e096ffe7f94424f4de8d8cf6457c73b9e467d48d2294ef57",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 144,
+    "text_page_sha256": "fbc2e78edc5fc3e882b8a51b36467d871952403e4d75aa9d0847752563bdc712",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/annual_reports/financial-report_fy2026_en.pdf",
+    "source_sha256": "138e2e28b2125fc6eb6d71f5a0ae7fa0eb7ea914efe90d6395370f0aa99b84c5",
+    "page": 145,
+    "text_page_sha256": "e158ee83f44898a5ba9415c02279c80227d4c60e2b94868da51f121cdd6093d4",
+    "family": "valuation_cashflows_contracts",
+    "finding": "FV niveau3 et risques de valorisation ; warrants Energy Global contrepartie non nommée ; titres non-cash et apport forward ; ventes NVIDIA/Intel ; RPO exclut royalties futures ; commitments OpenAI hors purchases généraux ; prêts shopping/credit card non IA ; acquisitions ABB conditionnelles.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 11,
+    "text_page_sha256": "f41f43a7df2e4b8a4bfd32b945efc1f74eb02a96b6753b187c288cb17bdcf381",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 12,
+    "text_page_sha256": "66f7e98d332419a67404ba5241de0bc1943b166ded442cae41301c68498d3aae",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 13,
+    "text_page_sha256": "1dbd275c44269972798fda6f8b9141be6c4b51355613b1079e652208527ef0e7",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 14,
+    "text_page_sha256": "6a02a5835724ae0db8edf5aceb3d35a3ff91d41ca26bfbc652d2ac500aebd657",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 28,
+    "text_page_sha256": "60653b0d8a2626a1f03e7f4934ba8ec3fe576ef34b55b6763bca518a1f487a27",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 29,
+    "text_page_sha256": "c694ba6597f2fe371f9060471090a864687b5247b8a72fa94b58b5cc7e33e439",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 30,
+    "text_page_sha256": "d688be40fdca1b1b7fc2968e0143e4efbe4751e25c00e3ff5caef71ece781916",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 31,
+    "text_page_sha256": "e5ce989bd5b7d8435e14aa49a16e770c673bca298437ea7a2468055129d8d377",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 51,
+    "text_page_sha256": "78327a6c1ee4979777919fe782e6c0e7313a6a49e8b686cc423a5e9bc92c4789",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 52,
+    "text_page_sha256": "65d91c1af571722bc4a64be976ea065472193aa56124ef809678f2bcd902e1b1",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 53,
+    "text_page_sha256": "7fab94fdae59dbc403ec873367f5414d7fcdf2772da8a0607909e6950a0ebfbf",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 54,
+    "text_page_sha256": "15af660423cc4aa5862ba2e15c37b0e50798feab75226bfba7405c34b27ee1ca",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 55,
+    "text_page_sha256": "30dad1aa95ca4663bec781df94d604d055ce36a8faa03439272f8c129df4361e",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 56,
+    "text_page_sha256": "21e9a73101c5b877900d0b547c73401030d60798bb8a07aca7dc795a1e9c7d3f",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 59,
+    "text_page_sha256": "f153213ce405b37cc0b270c2c9d257d0a61e0d8fdd1cc26f2ab51a0747624c65",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 60,
+    "text_page_sha256": "a3230f1155de8e3a69f211ffad9d1f4bda1643dc00e5fc359413208530fb1f1e",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 61,
+    "text_page_sha256": "3bc226511390df263925db85a34fd08f582cb4fd65976716ed83cfde5d20cfc9",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 62,
+    "text_page_sha256": "d60e42688bd81ec7b77604db18270ee9098cddcbb44778ee5137a9d2c5ed9f61",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 65,
+    "text_page_sha256": "5b100c7e167e8c2d1e0fc5d4da6513b2879c0f0be1c9641472aedca20b756378",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 66,
+    "text_page_sha256": "23c3587288fd20d649d22a15c93aeae783454c73cd9c2d7595e6634165e35ba1",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 67,
+    "text_page_sha256": "9758bc6e4406042a6168bc7d8bc94c7cea03d9dacb2e2f92d7c803a5dbedeaa1",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 68,
+    "text_page_sha256": "89d2e97ee8921f2f4f22f15d5971ad72454c1e7f1b6de716201abf37537195ca",
+    "family": "current_perimeter_cash_valuation_related_parties",
+    "finding": "Cash par entité après éliminations : SBG754752MJPY ; dette holding et financingsubs nonrecourse séparées ; warrants1.050843trJPY liés baux DC anonymes ; gainIntel noncash ; co-investissementsmanagement receivables, garantie personnelleSon et actionsSBGcollatéral.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
+  },
+  {
+    "document_url": "https://group.softbank/media/Project/sbg/sbg/pdf/ir/financials/financial_reports/financial-report_q1fy2026_01_en.pdf",
+    "source_sha256": "644c6ec035b3ec027a4c3a1909a6129f965a729db0fb3353fa845f2e1f598773",
+    "page": 47,
+    "text_page_sha256": "baad2bfba9ff2a9ca82ef8dbfa6bf1def5910a706a9a1051a057bf67ea3f3317",
+    "family": "going_concern_and_segments",
+    "finding": "La section de doute significatif sur la continuité indique explicitement There are no applicable items ; elle porte seulement sur le dernier trimestre et ne vaut pas absence d’événement dans l’historique.",
+    "state": "personally_read",
+    "reviewer": "sole_executor"
   }
 ]

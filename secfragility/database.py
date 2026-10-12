@@ -59,6 +59,13 @@ MEASURE_TERMS.update({name:['none'] for name in (
     'purchase_obligation_guarantee_carrying_amount','guarantee_reimbursement_percentage','customer_lease_incentive_asset',
     'lease_letter_of_credit_requirement','vehicle_construction_remaining_contribution','indirect_property_investment_carrying_amount')})
 
+# Authorized Japanese extension: descriptive stocks and an IFRS16 cash-flow
+# sensitivity. These never change the frozen Annex E/F thresholds or events.
+MEASURE_TERMS.update({name:['none'] for name in (
+    'cash_consolidated','debt_interest_bearing','ifrs_lease_liabilities',
+    'debt_current_to_consolidated_cash','ifrs_lease_liability_payments',
+    'fcf_after_ifrs_lease_payments','svf_level3_share','foreign_source_reported_quantity')})
+
 CONTROL_IDS = ['c1_balance_components','c2_cash_flow_components','c3_cash_reconciliation',
     'c4_restatement_detection','c5_bilateral','c6_income_articulation','c7_cash_continuity',
     'c8_debt_rollforward','c9_lease_liability','c10_maturity_sums','c11_segments',

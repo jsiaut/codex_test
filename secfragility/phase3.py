@@ -116,6 +116,13 @@ def finish(db,root,as_of,state):
     (root/'work/run.json').write_text(json.dumps(state,indent=2)+'\n')
     export(db,root/'work/phase3_tables')
     print(json.dumps(dict(stage='numeric',counts=table_counts(db))),flush=True)
+    contract=root/'work/softbank/integration_contract.json'
+    if contract.exists() and json.loads(contract.read_text()).get('status') in (
+            'authorized_integration_in_progress','integrated_with_explicit_public_disclosure_gaps'):
+        from .softbank_integration import apply
+        apply(db,root,as_of)
+        export(db,root/'tables')
+        print(json.dumps(dict(stage='softbank_integrated',counts=table_counts(db))),flush=True)
     return db
 
 

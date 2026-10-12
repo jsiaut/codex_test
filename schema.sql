@@ -1,5 +1,5 @@
 -- Huit tables seulement. Les énumérations sont appliquées par DuckDB.
-CREATE TYPE filing_status_t AS ENUM ('filed','furnished','submitted_draft','correspondence','unclassified');
+CREATE TYPE filing_status_t AS ENUM ('filed','furnished','submitted_draft','correspondence','unclassified','published_regulated','issuer_disclosure');
 CREATE TYPE assurance_t AS ENUM ('audited','reviewed','unaudited','unknown','not_applicable');
 CREATE TYPE tier_t AS ENUM ('A','B','C','D','E','F');
 CREATE TYPE stage_t AS ENUM ('intent_non_binding','signed','available','drawn_or_paid','delivered','recognized','settled','terminated');

@@ -15,3 +15,7 @@ La validation de cette continuation est dans work/continuation398/validation.jso
 ## SoftBank — extension préparée
 
 [softbank_faisabilite.md](softbank_faisabilite.md) présente les sources japonaises et le pilote. Les 43 PDF sont collectés ; la lecture exhaustive et l’intégration aux calculs principaux restent à effectuer. Les huit tables de la livraison des 398 blocs sont inchangées.
+
+## Intégration SoftBank — sources officielles japonaises
+
+Le modèle courant comprend 24 groupes. Lire [softbank_integration.md](softbank_integration.md). Les huit tables contiennent la base SEC intacte et les données SoftBank qualifiées ; [softbank_summary.json](softbank_summary.json) donne les contrôles et la couverture. `python -m secfragility.softbank_integration` reconstruit cette extension depuis le checkpoint SEC immuable et les sources japonaises conservées. `python -m secfragility.phase3 --reconstruct` conserve la reconstruction complète depuis le cache SEC, puis applique la même extension.

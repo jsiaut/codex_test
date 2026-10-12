@@ -1,0 +1,46 @@
+{
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "integration_status": "integrated_with_explicit_public_disclosure_gaps",
+  "main_groups": 24,
+  "baseline_main_groups": 23,
+  "source_profiles": [
+    "legacy_EDGAR_only",
+    "extended_official_JP_sources"
+  ],
+  "sources_collected": 91,
+  "sources_qualified": 33,
+  "direct_EDINET_annual_originals": 6,
+  "statement_facts": 2377,
+  "authored_observations": 70,
+  "personally_read_unique_pages": 113,
+  "table_counts": {
+    "documents": 10832,
+    "facts": 1281095,
+    "observations": 17707,
+    "entities": 716,
+    "links": 915,
+    "measures": 555904,
+    "controls": 298883,
+    "exclusions": 16754
+  },
+  "checks": {
+    "eight_tables": true,
+    "every_legacy_row_preserved": true,
+    "frozen_annex_criteria_bytes": true,
+    "foreign_source_hashes": true,
+    "no_future_source": true,
+    "untagged_PDF_facts": true,
+    "legacy_no_foreign_numeric": true,
+    "ND_not_zero": true,
+    "no_signed_only_financing_amount_edge": true,
+    "no_Apollo_amount_allocation": true,
+    "JP_EN_original_amounts_agree": true,
+    "all_numeric_lineage_qualified_and_known": true
+  },
+  "legacy_records_preserved": true,
+  "all_historical_notes_exhaustively_read": false,
+  "exhaustive_EDINET_amendment_inventory": false,
+  "complete_contracts_available": false,
+  "subagents_used": false,
+  "independent_audit_performed": false
+}

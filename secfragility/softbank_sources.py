@@ -54,6 +54,22 @@ def qualify(root):
                 tier='B',assurance='audited',review_pages=[146,147,148],
                 assurance_rule='Consolidated financial statements and notes, excluding expressly unaudited pro forma; convenience USD translations excluded from JPY metrics',
                 eligible_extended=True,eligible_legacy=False))
+        elif s.get('role')=='EDINET_direct_annual_original':
+            pp=pages(root,s);cover=unicodedata.normalize('NFKC',norm(pp[0]))
+            assert 'E02778' in cover and 'SoftBank Group Corp.' in cover
+            dates=re.findall(r'(20\d\d)年\s*(\d+)月\s*(\d+)日',cover)
+            published=date(*map(int,dates[0]));start=date(*map(int,dates[1]));end=date(*map(int,dates[2]))
+            if end.year<2021:continue
+            docid=s['url'].rsplit('/',1)[-1].replace('.pdf','')
+            result.append(dict(s,document_id=document_id(s),publication_date=str(published),
+                publication_proof='Original EDINET dated cover PDF1, identity E02778 and fiscal dates',
+                original_document_id=None,original_url=s['url'],original_sha256=s['sha256'],original_path=None,
+                period_start=str(start),period_end=str(end),fiscal_year=start.year,quarter=4,
+                jurisdiction='JP_EDINET',regulatory_identifier=docid,
+                source_profile='EDINET_original_annual_consolidated_IFRS',filing_status='filed',
+                tier='A',assurance='audited',review_pages=[i+1 for i,p in enumerate(pp) if '独立監査人の監査報告書' in p],
+                assurance_rule='Only consolidated IFRS statements and notes; standalone Japanese GAAP and management sections not assigned this assurance',
+                eligible_extended=True,eligible_legacy=False))
     (root/'work/softbank/source_qualifications.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     return result
 
@@ -73,6 +89,7 @@ LABELS={
  'Gross profit':'gross_profit','Income before income tax':'pretax_income',
  'Net income':'net_income','Depreciation and amortization':'da',
  'Finance cost':'finance_cost',
+ 'Total gain on investments':'investment_gains',
  'Net cash provided by (used in) operating activities':'cfo',
  'Net cash (used in) provided by operating activities':'cfo',
  'Net cash provided by operating activities':'cfo',
@@ -100,6 +117,10 @@ LABELS={
  'Increase (decrease) in cash and cash equivalents':'cash_change',
  '(Decrease) increase in cash and cash equivalents':'cash_change',
  'Increase in cash and cash equivalents':'cash_change',
+ 'Decrease in cash and cash equivalents':'cash_change',
+ 'Increase in cash and cash equivalents relating to transfer of assets classified as held for sale':'cash_held_for_sale_transfer',
+ 'Decrease in cash and cash equivalents relating to transfer of assets classified as held for sale':'cash_held_for_sale_transfer',
+ '(Decrease) increase in cash and cash equivalents relating to transfer of assets classified as held for sale':'cash_held_for_sale_transfer',
 }
 NUMBER=r'(?:[¥$]\s*)?(?:\(?-?\d[\d,]*\)?|[–−-])'
 TAIL=re.compile(r'('+NUMBER+r'(?:\s+'+NUMBER+r')+)\s*$')
@@ -131,8 +152,8 @@ def extract(root,s):
         if re.search(r'(Notes to (?:Condensed Interim )?Consolidated|Basis of Presentation|Significant Doubt about Going Concern)',clean):break
         if re.search(r'(?:Consolidated )Statement of Cash Flows',clean):state='cashflow'
         elif 'Statement of Changes in Equity' in clean:state='changes'
-        elif 'Statement of Comprehensive Income' in clean and 'Statement of Profit or Loss' not in clean:state='comprehensive'
-        elif 'Statement of Profit or Loss' in clean:state='income'
+        elif 'Statement of Profit or Loss' in clean or 'Statement of Income' in clean:state='income'
+        elif 'Statement of Comprehensive Income' in clean:state='comprehensive'
         rawlines=clean.splitlines();logical=[];i=0
         while i<len(rawlines):
             line=rawlines[i];snippet=line
@@ -150,6 +171,8 @@ def extract(root,s):
             for label,concept in sorted(LABELS.items(),key=lambda item:-len(item[0])):
                 matchtext=text if text.startswith(label+' ') else combined if combined.startswith(label+' ') else None
                 if not matchtext:continue
+                tail=TAIL.search(matchtext)
+                if not tail or re.sub(r'[0-9,\s*]','',matchtext[len(label):tail.start()]):continue
                 values=row_values(matchtext,n)
                 if values is None:continue
                 if state in ('changes','comprehensive'):continue
@@ -164,7 +187,6 @@ def extract(root,s):
                     if value is None:continue
                     if state=='balance':pe=date(s['fiscal_year'],3,31) if column==0 else end;ps=None
                     else:pe=end.replace(year=end.year-1) if column==0 else end;ps=start.replace(year=start.year-1) if column==0 else start
-                    if pe<date(2021,1,1):continue
                     quote=snippet.strip()
                     original=s.get('original_path')
                     original_match=None
@@ -187,8 +209,83 @@ def extract(root,s):
     return unique
 
 def prepare(root):
-    qualified=qualify(root);facts=[f for s in qualified for f in extract(root,s)]
+    qualified=qualify(root);facts=[f for s in qualified for f in
+        (extract_japanese(root,s) if s['jurisdiction']=='JP_EDINET' else extract(root,s))]
     (root/'work/softbank/statement_facts.json').write_text(json.dumps(facts,ensure_ascii=False,indent=2)+'\n')
     return dict(qualified_sources=len(qualified),facts=len(facts))
+
+JP_LABELS={
+ '現金及び現金同等物':'cash','流動資産合計':'current_assets','資産合計':'assets',
+ '流動負債合計':'current_liabilities','負債合計':'liabilities','資本合計':'equity',
+ '親会社の所有者に帰属する持分合計':'parent_equity','非支配持分':'non_controlling_interests',
+ '有利子負債':'debt','リース負債':'leases','SVFにおける外部投資家持分':'third_party_fund_interests',
+ 'SVFの投資(FVTPL)':'svf_fvtpl','SVFからの投資(FVTPL)':'svf_fvtpl','SVFの外部投資家持分':'third_party_fund_interests',
+ '持分法で会計処理されている投資':'equity_method_assets','投資有価証券':'investment_securities',
+ '営業債権及びその他の債権':'receivables','棚卸資産':'inventories',
+ '営業債務及びその他の債務':'payables','売上高':'revenue','売上総利益':'gross_profit',
+ '税引前利益':'pretax_income','純利益':'net_income','減価償却費及び償却費':'da','財務費用':'finance_cost',
+ '投資損益合計':'investment_gains',
+ '営業活動によるキャッシュ・フロー':'cfo','投資活動によるキャッシュ・フロー':'cfi',
+ '財務活動によるキャッシュ・フロー':'cff',
+ '有形固定資産及び無形資産の取得による支出':'capex_signed',
+ 'リース負債の返済による支出':'lease_payments_signed',
+ '有利子負債の収入':'debt_proceeds','有利子負債の支出':'debt_repayments_signed',
+ '有利子負債の返済による支出':'debt_repayments_signed',
+ 'SVFの投資の取得による支出':'svf_purchases_signed','SVFによる投資の取得による支出':'svf_purchases_signed',
+ 'SVFの投資の売却による収入':'svf_sales','SVFによる投資の売却による収入':'svf_sales',
+ '投資の取得による支出':'investment_purchases_signed','投資の売却または償還による収入':'investment_sales',
+ '現金及び現金同等物の期首残高':'cash_opening','現金及び現金同等物の期末残高':'cash_closing',
+ '現金及び現金同等物に係る換算差額':'cash_fx','現金及び現金同等物の増減額(-は減少額)':'cash_change',
+ '売却目的保有に分類された資産からの振替に伴う現金及び現金同等物の増加額':'cash_held_for_sale_transfer',
+ '売却目的保有に分類された資産への振替に伴う現金及び現金同等物の減少額':'cash_held_for_sale_transfer',
+ '売却目的保有に分類された資産への振替に伴う現金及び現金同等物の増減額(-は減少)':'cash_held_for_sale_transfer',
+}
+def extract_japanese(root,s):
+    state=None;section='';out=[];seen=set();start=date.fromisoformat(s['period_start']);end=date.fromisoformat(s['period_end'])
+    for page,p in enumerate(pages(root,s),1):
+        clean=unicodedata.normalize('NFKC',p).replace('△','-')
+        if re.search(r'【連結財政状態計算書】',clean):state='balance'
+        if not state:continue
+        if '【連結財務諸表注記】' in clean or '1.報告企業' in re.sub(r'\s','',clean):break
+        if '【連結キャッシュ・フロー計算書】' in clean:state='cashflow'
+        elif '【連結持分変動計算書】' in clean:state='changes'
+        elif '【連結損益計算書】' in clean:state='income'
+        elif '【連結包括利益計算書】' in clean:state='comprehensive'
+        if state not in ('balance','income','cashflow'):continue
+        original_lines=clean.splitlines();joined=[];idx=0
+        while idx<len(original_lines):
+            line=original_lines[idx]
+            if '売却目的保有' in line and row_values(line,2) and idx+1<len(original_lines):
+                m=TAIL.search(line);joined.append((idx+1,line[:m.start()].strip()+original_lines[idx+1].strip()+' '+m[1]));idx+=2
+            elif '売却目的保有' in line and idx+2<len(original_lines) and row_values(original_lines[idx+1],2):
+                joined.append((idx+1,line.strip()+original_lines[idx+2].strip()+' '+original_lines[idx+1].strip()));idx+=3
+            else:joined.append((idx+1,line));idx+=1
+        for lineno,line in joined:
+            text=' '.join(line.split());compact=re.sub(r'\s','',text)
+            if compact in ['流動資産','非流動資産','流動負債','非流動負債']:
+                section={'流動資産':'current_assets','非流動資産':'non-current_assets','流動負債':'current_liabilities','非流動負債':'non-current_liabilities'}[compact]
+            for label,concept in sorted(JP_LABELS.items(),key=lambda x:-len(x[0])):
+                if not compact.startswith(label):continue
+                values=row_values(text,2)
+                if not values:continue
+                prefix=compact[len(label):];tail=TAIL.search(text)
+                if not tail or re.sub(r'[0-9,\s*]','',text.replace(' ','')[len(label):len(text[:tail.start()].replace(' ',''))]):continue
+                if concept in ('non_controlling_interests','equity','parent_equity') and state!='balance':continue
+                if state=='cashflow' and concept in ('net_income','finance_cost'):concept+='__cf'
+                if state=='balance' and concept in ('debt','leases'):concept+='__'+section
+                for column,value in enumerate(values):
+                    if value is None:continue
+                    pe=end.replace(year=end.year-1) if column==0 else end
+                    ps=None if state=='balance' else start.replace(year=start.year-1) if column==0 else start
+                    key=(concept,str(ps),str(pe))
+                    if key in seen:continue
+                    seen.add(key)
+                    out.append(dict(document_id=s['document_id'],source_url=s['url'],concept=concept,
+                        period_start=str(ps) if ps else None,period_end=str(pe),value=str(value),currency='JPY',unit='JPY',
+                        page=page,line=lineno,column=column,quote=line.strip(),statement=state,
+                        knowledge_date=s['publication_date'],assurance='audited',tier='A',
+                        original_value_match=True,precision_decimals='-6'))
+                break
+    return out
 
 if __name__=='__main__':print(prepare(Path('.').resolve()))
