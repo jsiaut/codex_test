@@ -1,0 +1,58 @@
+{
+  "status": "authorized_implementation_in_progress",
+  "user_instruction": "Ok on part là-dessus",
+  "baseline_commit": "7a05a35",
+  "baseline_generation": "f0aa460f724743c9b054c60a2a4fab79",
+  "baseline_tables": {
+    "documents": {
+      "file": "documents.parquet",
+      "sha256": "85531f25d9f609fcd6f2758e13755de8fcca15767ba89c8752a216ffb381db2d"
+    },
+    "facts": {
+      "file": "facts.parquet",
+      "sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991"
+    },
+    "observations": {
+      "file": "observations.parquet",
+      "sha256": "14199e39d4cb07d2c37d6ae0b6fccc17b3048a5bf8169f3e3217970f7120d1f6"
+    },
+    "entities": {
+      "file": "entities.parquet",
+      "sha256": "0875b3e1104d5fbf472811ca947d240714b93306ad61e05e8932a31dbb0a4248"
+    },
+    "links": {
+      "file": "links.parquet",
+      "sha256": "eb85e6858ec21d594eb4f4b9955af2a93f5cda9268774718826816bd72b7c85b"
+    },
+    "measures": {
+      "file": "measures.parquet",
+      "sha256": "fa41f5af67d6fd9eb8cd439bcd077572d9f7dd43560d05a0ca322673dd32f7e4"
+    },
+    "controls": {
+      "file": "controls.parquet",
+      "sha256": "dff668a032413414a27a5ca5b889bcbb1e0a811151b5df1e576da226ac2b7336"
+    },
+    "exclusions": {
+      "file": "exclusions.parquet",
+      "sha256": "d56d9ed4b012a731ba0c9db9ad3e038fd9cdf55f6e2383bac8c9358dd116d372"
+    }
+  },
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "subagents_used": false,
+  "frozen_E_F_criteria_sha256": "b578f2dee2c6d82951f3e701ca78b9f14588de399a1e53f36d6fe91fd23e4139",
+  "scope": "transaction_bounded_exploratory_layer;26_historical_groups_preserved;additional_issuers_are_targeted_dossiers",
+  "priority_cases": [
+    "Cerebras-OpenAI",
+    "WHCO-Broadcom-Apollo/Athene",
+    "Nvidia-CoreWeave",
+    "Fluidstack",
+    "SB Energy/Energy Global",
+    "Nscale/Ionic Digital",
+    "Hut8/River Bend/Beacon Point",
+    "Beignet/Hyperion",
+    "Lambda Compute I"
+  ],
+  "no_global_exposure_sum": true,
+  "no_causality_inference": true,
+  "no_automatic_long_cycle_enumeration": true
+}
