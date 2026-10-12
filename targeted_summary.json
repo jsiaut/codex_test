@@ -1,0 +1,49 @@
+{
+  "status": "integrated_targeted_overlay",
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "main_groups": 26,
+  "subagents_used": false,
+  "observations": 56,
+  "new_documents": 2,
+  "added_links": 9,
+  "amounts_are_not_additive": true,
+  "conservation": {
+    "documents": {
+      "baseline_rows_missing_or_changed": 0,
+      "rows": 12197
+    },
+    "observations": {
+      "baseline_rows_missing_or_changed": 0,
+      "rows": 17958
+    },
+    "entities": {
+      "baseline_rows_missing_or_changed": 0,
+      "rows": 773
+    },
+    "links": {
+      "baseline_rows_missing_or_changed": 0,
+      "rows": 927
+    },
+    "measures": {
+      "baseline_rows_missing_or_changed": 0,
+      "rows": 599037
+    },
+    "controls": {
+      "baseline_rows_missing_or_changed": 0,
+      "rows": 340172
+    },
+    "exclusions": {
+      "baseline_rows_missing_or_changed": 0,
+      "rows": 16793
+    },
+    "facts": {
+      "byte_identical": true,
+      "rows": 1435879
+    }
+  },
+  "lender_rows": 6,
+  "independent_commitment_controls": 10,
+  "vernon_identity": "Lambda, Inc.",
+  "remaining_gaps": 5,
+  "validation_time": "2026-10-12T14:08:29.639665+00:00"
+}

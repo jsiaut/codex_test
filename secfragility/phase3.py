@@ -142,6 +142,11 @@ def finish(db,root,as_of,state):
         from .smci_integration import native,assemble
         native(root);assemble(root,target_db=db)
         print(json.dumps(dict(stage='smci_integrated',counts=table_counts(db))),flush=True)
+    targeted=root/'work/priorities/integration_contract.json'
+    if targeted.exists() and json.loads(targeted.read_text()).get('status')=='integrated_targeted_overlay':
+        from .targeted_priorities import apply
+        apply(root,target_db=db)
+        print(json.dumps(dict(stage='targeted_priorities_integrated',counts=table_counts(db))),flush=True)
     return db
 
 

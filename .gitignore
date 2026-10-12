@@ -54,3 +54,6 @@ work/smci/native_tables/
 work/smci/blocks/
 work/smci/text/
 work/smci/*.log
+work/priorities/sources/
+work/priorities/text/
+work/priorities/staging/

@@ -1,0 +1,16 @@
+{
+  "mode": "bounded_targeted_discovery",
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "queries": [
+    "Super Micro Vernon Sub-licensee",
+    "Ares Core Infrastructure Fund CoreWeave investments",
+    "BlackRock Private Credit Fund CoreWeave",
+    "SVF II TSUBAKI borrowed drawn offering September 2026 site:group.softbank",
+    "Dell Financial Services 2026 securitization prospectus",
+    "Applied Digital 2026 completion guarantee"
+  ],
+  "Tsubaki": "Search results predominantly repeat the August interim expected drawdown. Official June interim note16 page71, September9 and October1 statements personally checked; no additional execution confirmation or full loan agreement established. Stop; no inference from news paraphrases.",
+  "DFS": "Latest filed note4 and note9 re-read plus issuer/SEC prospectus discovery; private customer/SPE contracts and numeric thresholds not established. Capacities cannot be treated as free liquidity.",
+  "Vernon": "2024 8-K and EX10.1/2/3; latest 2026 10-K EX10.26 cross-reference closes identity gap without guessing.",
+  "lenders": "Selected named borrower rows and all relevant SOI headers/footnotes plus unfunded commitment rows; not whole fund financial integration."
+}

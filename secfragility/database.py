@@ -68,13 +68,14 @@ MEASURE_TERMS.update({name:['none'] for name in (
 
 # Dell SEC descriptive ledger and portfolio ratios; no Annex E/F change.
 MEASURE_TERMS.update({name:['none'] for name in (
-    'smci_derived_quantity','smci_reported_quantity','dell_reported_quantity','dfs_credit_quality_share','dfs_past_due_share',
+    'targeted_reported_quantity','smci_derived_quantity','smci_reported_quantity','dell_reported_quantity','dfs_credit_quality_share','dfs_past_due_share',
     'dfs_allowance_share','ai_optimized_server_revenue_share')})
 
 CONTROL_IDS = ['c1_balance_components','c2_cash_flow_components','c3_cash_reconciliation',
     'c4_restatement_detection','c5_bilateral','c6_income_articulation','c7_cash_continuity',
     'c8_debt_rollforward','c9_lease_liability','c10_maturity_sums','c11_segments',
     'c12_revenue_disaggregation','c13_rpo','c14_eps_scale','c15_tax_rate','c16_concentration']
+CONTROL_IDS.append('targeted_commitment_reconciliation')
 TABLES = ('documents','facts','observations','entities','links','measures','controls','exclusions')
 
 
