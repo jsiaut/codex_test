@@ -6,15 +6,15 @@ from .targeted_priorities import sha,save
 DELIVERY=Path('output')
 def package(root,output=None):
     root=Path(root);output=Path(output) if output is not None else root/DELIVERY;output.mkdir(parents=True,exist_ok=True)
-    names=['README.md','TARGETED_REPRODUCTION.md','targeted_priorities.md','targeted_summary.json',
+    names=['README.md','AUDIT_RESPONSE.md','AUDITOR_CURRENT.md','TARGETED_REPRODUCTION.md','targeted_priorities.md','targeted_summary.json',
            'targeted_evidence.csv','targeted_lender_positions.csv','targeted_financing_register.csv',
-           'smci_integration.md','schema.sql','requirements.txt','audit/criteria_manifest.json',
+           'smci_integration.md','schema.sql','config.yaml','queries.sql','requirements.txt','audit/criteria_manifest.json',
            'work/smci/baseline/criteria_manifest.json']
     names += [str(p.relative_to(root)) for p in (root/'secfragility').glob('*.py')]
     names += [str(p.relative_to(root)) for p in (root/'tables').glob('*.parquet')]
     names += [str(p.relative_to(root)) for p in (root/'work/priorities/baseline').glob('*.parquet') if p.stem!='facts']
     names += [str(p.relative_to(root)) for p in (root/'work/priorities/delta_tables').glob('*.parquet')]
-    names += ['tests/test_targeted_priorities.py','tests/test_audit_regressions.py']
+    names += [str(p.relative_to(root)) for p in (root/'tests').glob('*.py')]
     names += [str(p.relative_to(root)) for p in (root/'work/audit_20261012').glob('*') if p.is_file() and p.suffix in ('.json','.zst','.md','.pdf','.txt','.xml','.log')]
     names += ['current.json']
     names += [str(p.relative_to(root)) for p in (root/'work/priorities').glob('*')
@@ -30,7 +30,11 @@ def package(root,output=None):
         if not (root/n).is_file():raise FileNotFoundError(n)
     target=output/'SEC_Project_2_priorites.zip';temporary=target.with_suffix('.zip.tmp')
     with zipfile.ZipFile(temporary,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=5,allowZip64=True) as z:
-        for n in names:z.write(root/n,n)
+        for n in names:
+            if n=='current.json':
+                manifest=json.loads((root/n).read_text());manifest['dataset_path']='tables'
+                body=json.dumps(manifest,indent=2)+'\n';z.writestr(n,body);z.writestr('tables/current.json',body)
+            else:z.write(root/n,n)
     with zipfile.ZipFile(temporary) as z:
         if z.testzip() is not None:raise ValueError('Archive CRC failed')
         checked={}
@@ -45,7 +49,7 @@ def package(root,output=None):
               'targeted_lender_positions.csv','targeted_financing_register.csv'):
         shutil.copy2(root/n,output/n)
     shutil.copy2(root/'work/priorities/replay_verification.json',output/'targeted_replay_verification.json')
-    meta=dict(path=str(target),bytes=target.stat().st_size,sha256=sha(target),entries=len(names),crc_checked=True,
+    meta=dict(path=str(target),bytes=target.stat().st_size,sha256=sha(target),entries=len(names)+1,crc_checked=True,
         archive_tables_and_code_match=checked,tested_code_sha256=code_hashes,
         commit_before_packaging=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip(),
         main_groups=26,source_cutoff='2026-10-09T10:24:21.129672+00:00',subagents_used=False,

@@ -11,7 +11,7 @@ def sha(p):
 def fingerprint(root):
     root=Path(root)
     files=set((root/'secfragility').glob('*.py'))|set((root/'tests').glob('*.py'))
-    files.update(root/n for n in ('requirements.txt','schema.sql','queries.sql',
+    files.update(root/n for n in ('requirements.txt','schema.sql','queries.sql','config.yaml','audit/criteria_manifest.json','work/run.json',
        'work/priorities/scope.json','work/priorities/source_manifest.json','work/priorities/source_backup.json',
        'work/priorities/originals.tar.zst','work/priorities/author_notes.py','work/priorities/authored_observations.json',
        'work/audit_20261012/submission_metadata_manifest.json','work/audit_20261012/submission_metadata.tar.zst'))

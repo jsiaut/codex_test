@@ -1,0 +1,42 @@
+{
+  "old_snapshot": "work/table_generations/legacy-5b7f12d16ff445d2894bd3bd2458bd34",
+  "current_snapshot": "work/table_generations/f0aa460f724743c9b054c60a2a4fab79",
+  "allowed_changes": [
+    "255 ratio currency labels set NULL",
+    "two dated confirmed legal-identity versions for the existing DDTL V entity; group remains unknown"
+  ],
+  "tables": {
+    "documents": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 0
+    },
+    "facts": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 0
+    },
+    "observations": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 0
+    },
+    "entities": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 2
+    },
+    "links": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 0
+    },
+    "measures": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 0
+    },
+    "controls": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 0
+    },
+    "exclusions": {
+      "previous_rows_missing_or_changed": 0,
+      "new_rows": 0
+    }
+  }
+}

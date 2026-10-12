@@ -1,3 +1,5 @@
+**Mise à jour après l’audit du 12 octobre : identité juridique DDTL V confirmée sur ses lignes SOI, devises des ratios harmonisées et publication atomique. Les montants financiers et critères E/F restent inchangés. Voir [la réponse aux constats](AUDIT_RESPONSE.md).**
+
 # Trois priorités — apports au modèle
 
 **Le lot ciblé est intégré. Le modèle conserve ses 26 groupes principaux et sa date de coupure du 9 octobre 2026, 10:24:21 UTC.** Travail personnel, sans sous-agent. Les montants et conclusions antérieurs restent dans les huit tables ; l’extension ajoute 56 observations, deux documents contractuels supplémentaires, la lecture vérifiée d’une liste officielle de filiales déjà archivée, neuf liens et des mesures descriptives dans une variante distincte. Aucun total d’exposition n’est calculé.

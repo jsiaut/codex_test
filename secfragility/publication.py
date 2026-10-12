@@ -38,6 +38,15 @@ def select(candidate,destination):
     destination=Path(destination);candidate=Path(candidate)
     temporary=destination.parent/('.'+destination.name+'-pointer-'+uuid.uuid4().hex)
     temporary.symlink_to(os.path.relpath(candidate,destination.parent),target_is_directory=True)
+    if destination.name=='tables':
+        current=destination.parent/'current.json'
+        if current.exists() and not current.is_symlink():
+            # A ZIP extraction has a regular flattened manifest. Turn it into
+            # the same pointer before switching the table generation.
+            if destination.is_dir() and not (destination/'current.json').exists():
+                shutil.copy2(current,destination/'current.json')
+            link=current.with_name('.current-pointer-'+uuid.uuid4().hex)
+            link.symlink_to('tables/current.json');os.replace(link,current)
     try:
         if destination.is_dir() and not destination.is_symlink():
             _exchange(temporary,destination)
