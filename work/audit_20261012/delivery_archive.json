@@ -1,0 +1,39 @@
+{
+  "path": "/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output/SEC_Project_2_priorites.zip",
+  "bytes": 375370711,
+  "sha256": "936a8da6d35d479e9c6e1f052bb8107eac9dab7ae2cbef67c37c7b34b13bffd6",
+  "entries": 179,
+  "crc_checked": true,
+  "archive_tables_and_code_match": {
+    "tables/controls.parquet": true,
+    "tables/documents.parquet": true,
+    "tables/entities.parquet": true,
+    "tables/exclusions.parquet": true,
+    "tables/facts.parquet": true,
+    "tables/links.parquet": true,
+    "tables/measures.parquet": true,
+    "tables/observations.parquet": true,
+    "secfragility/targeted_priorities.py": true,
+    "secfragility/database.py": true,
+    "work/priorities/author_notes.py": true,
+    "schema.sql": true
+  },
+  "tested_code_sha256": {
+    "secfragility/targeted_priorities.py": "6b2f57b46d6eaa8ea22843d5d6d92f2a392ab121794c1edc740e4e4246ec18d1",
+    "secfragility/database.py": "b8f93f4708c96410ace70cf478fa37b7b93b6d7b2b81d24978c9b5ed79368b54",
+    "work/priorities/author_notes.py": "2bd9e520bf7b42a48c7a62452cfe6849a708db302b1d3161ae8821c674fa79a4",
+    "schema.sql": "9d0583e8f4beaab89224fe9f91ed2bc2e62b25fd0bad0bc50f6954f08d6cd71d"
+  },
+  "commit_before_packaging": "ce61f58d408870635467e61b4598f558e7947b6f",
+  "main_groups": 26,
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "subagents_used": false,
+  "full_tests_passed": 152,
+  "targeted_tests_passed": 20,
+  "isolated_tests_passed": 20,
+  "all_eight_tables_byte_identical_after_isolated_replay": true,
+  "contents": "Eight current tables; seven immutable prior tables; unchanged facts stored once; targeted originals compressed backup, authored observations, code, proof and reproduction instructions.",
+  "historical_originals": "Previous SoftBank/Dell/SMCI deliveries remain necessary for full historical raw-source reconstruction; targeted overlay restoration is self-contained.",
+  "audit_delivery_path": "/codex/browser/projectless/0001-files-pasted-by-the-user-uploaded-pasted-text-po/output/SEC_Project_2_audit_corrige.zip",
+  "audit_report": "AUDIT_RESPONSE.md"
+}
