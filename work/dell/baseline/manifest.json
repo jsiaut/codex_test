@@ -1,0 +1,42 @@
+{
+  "controls": {
+    "path": "work/dell/baseline/controls.parquet",
+    "sha256": "a14f96663808079501479248dae11552aa263e5013b185bb920304fb715cdbaa",
+    "bytes": 49589634
+  },
+  "documents": {
+    "path": "work/dell/baseline/documents.parquet",
+    "sha256": "178486bdf6f6a7c4e6a24f8177c2c83f14e720b68514d7d3c64ea17a1eae2f56",
+    "bytes": 2099309
+  },
+  "entities": {
+    "path": "work/dell/baseline/entities.parquet",
+    "sha256": "333166f8739140ff492bda955291aff2464a18bd197b3be1afd18d29c03926ea",
+    "bytes": 140327
+  },
+  "exclusions": {
+    "path": "work/dell/baseline/exclusions.parquet",
+    "sha256": "66d58fa77b9a067356df6fb0744cbe3bec6cf9a9898a9b1681def9da141e20a3",
+    "bytes": 2916525
+  },
+  "facts": {
+    "path": "work/dell/baseline/facts.parquet",
+    "sha256": "f22a2c4141d54b4b5d1255170f57e0a934b47bfc2b1da695970ede2b592fd854",
+    "bytes": 301829366
+  },
+  "links": {
+    "path": "work/dell/baseline/links.parquet",
+    "sha256": "56c570d3ae8ae81ed1ac7dac0c5d11e9969cb5ba7d69604293c0c70487f7bdbb",
+    "bytes": 213293
+  },
+  "measures": {
+    "path": "work/dell/baseline/measures.parquet",
+    "sha256": "74d524b9cc07a559dfe6defd420a366bc5cc2e064a4dd0bf313082d08465a5ce",
+    "bytes": 2871037
+  },
+  "observations": {
+    "path": "work/dell/baseline/observations.parquet",
+    "sha256": "eab16c8337d3a90ad11946c6dd923d741d316bb47e6cea6ee7238b3f5f70dffc",
+    "bytes": 5660553
+  }
+}
