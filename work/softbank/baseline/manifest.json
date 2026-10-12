@@ -1,0 +1,34 @@
+{
+  "exclusions": {
+    "path": "work/softbank/baseline/exclusions.parquet",
+    "sha256": "1741efab05a019b0efb4f83afecf073bf5a615e5962eec70ef6a3cc882ba9789"
+  },
+  "measures": {
+    "path": "work/softbank/baseline/measures.parquet",
+    "sha256": "93960bbd60f7ee47ea3e7098f723e530fefc4134fca43cde33248d8ebcd764c3"
+  },
+  "links": {
+    "path": "work/softbank/baseline/links.parquet",
+    "sha256": "05932ed888883ea237dd1bd1b81bf93e94fdf8f560857b9ac4c90848f6336002"
+  },
+  "documents": {
+    "path": "work/softbank/baseline/documents.parquet",
+    "sha256": "7950ae01a8884efec34f5b887e4f55dd69fecbcde6ee2e7abb7286dd54aaaccd"
+  },
+  "observations": {
+    "path": "work/softbank/baseline/observations.parquet",
+    "sha256": "98a56c21eaecbc1ff16996ee394c9a1ff3abaa0e2e6fb54997e4762b9d7ba541"
+  },
+  "facts": {
+    "path": "work/softbank/baseline/facts.parquet",
+    "sha256": "edba0550b5f789bb506050156e55bf53cf1a917749576a5be9a7032a4125b801"
+  },
+  "entities": {
+    "path": "work/softbank/baseline/entities.parquet",
+    "sha256": "5cb2b405b98a7a8e6e49b70dc1c5f82875025d59b4c3f95515aaa88f65653805"
+  },
+  "controls": {
+    "path": "work/softbank/baseline/controls.parquet",
+    "sha256": "8683947134a352dc0d908e1765c3d873def0e0117bf9c4c8e94f6e551f3445a7"
+  }
+}
