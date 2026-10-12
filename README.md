@@ -11,3 +11,7 @@ Les huit tables sont dans tables/, les critères et contrôles dans audit/, les 
 Installer requirements.txt. Restaurer les sauvegardes LFS de sources avec leurs manifestes SHA-256, sans écraser les observations et décisions plus récentes. python -m secfragility.phase3 --reconstruct reconstruit depuis le cache, sans requête SEC ni appel de modèle. python -m pytest -q exécute les tests. work/idempotency_verification.json compare les huit tables avec une référence créée après intégration des 398 blocs, toutes colonnes et provenance incluses.
 
 La validation de cette continuation est dans work/continuation398/validation.json. work/expansion/validation.json conserve la première tranche datée, avec son ancien périmètre de lecture.
+
+## SoftBank — extension préparée
+
+[softbank_faisabilite.md](softbank_faisabilite.md) présente les sources japonaises et le pilote. Les 43 PDF sont collectés ; la lecture exhaustive et l’intégration aux calculs principaux restent à effectuer. Les huit tables de la livraison des 398 blocs sont inchangées.

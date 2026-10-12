@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-12T06:26:44.987865+00:00",
+  "core_source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "status": "feasibility_verified_foreign_extension_prepared_not_integrated",
+  "issuer": "SoftBank Group Corp.",
+  "cik": "0001065521",
+  "official_issuer_sources": 56,
+  "pdfs": 43,
+  "source_bytes": 62081155,
+  "pilot_observations": 11,
+  "source_hashes_verified": true,
+  "pilot_quotes_verified": true,
+  "legacy_eight_tables_unchanged": true,
+  "legacy_criteria_unchanged": true,
+  "original_source_policy": "EDGAR_only; non_EDGAR_tier_F_discovery_only",
+  "proposed_extension": "JP_regulatory_filings_and_scope_verified_reviewed_interim_statements_in_separate_IFRS_layer",
+  "changes_required": [
+    "source_jurisdiction_and_regulatory_filing_identifier",
+    "per_section_assurance_scope",
+    "JPY_USD_and_convenience_translation_separation",
+    "Japan_fiscal_year_and_annual_filing_deadline",
+    "consolidated_group_versus_holding_company_LTV",
+    "dated_legal_entity_and_control_memberships",
+    "nominal_carrying_fair_value_and_cash_flow_separation",
+    "baseline_EDGAR_and_extended_source_sensitivity"
+  ],
+  "unresolved": [
+    "direct_EDINET_bytes_DocIDs_and_regulatory_amendments",
+    "complete_contracts_and_numeric_margin_call_triggers",
+    "actual_TSUBAKI_drawdown_and_current_balance",
+    "complete_historical_note_reading",
+    "Stargate_financed_projects_versus_announced_budget"
+  ],
+  "all_sources_exhaustively_reviewed": false,
+  "subagents_used": false,
+  "independent_audit_performed": false
+}

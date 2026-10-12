@@ -1,0 +1,10 @@
+{
+  "archive": "SoftBank_preparation.zip",
+  "bytes": 50210,
+  "sha256": "e891ab5dba04e4c38f36f1d47ebe8bbabfaf66c4610f23f85b4d0ae6dc341df2",
+  "source_pdfs": 43,
+  "complete_model_integration": false,
+  "legacy_core_unchanged": true,
+  "subagents_used": false,
+  "raw_sources": "Retained in repository with SHA256 and LFS; preparation archive contains inventories, pilot and collector code."
+}
