@@ -71,6 +71,10 @@ def capture(root):
             'delivery_dependency.json','prior_archive_baseline_match.json'])
         names.update(str(p.relative_to(root)) for p in (root/'work/smci').glob('*.py'))
         names.update(str(p.relative_to(root)) for p in (root/'work/smci/baseline').glob('*.parquet'))
+        issuer=json.loads((root/'work/smci/issuer.json').read_text())
+        urls=['https://data.sec.gov/submissions/CIK0001375365.json']+['https://data.sec.gov/submissions/'+p for p in issuer['official']['pagination']['read']]
+        version=issuer['source_cutoff'].replace(':','-').replace('+','_')
+        names.update('cache/api/'+hashlib.sha256(url.encode()).hexdigest()+'/'+version+'.bin.zst' for url in urls)
     path.write_text(json.dumps({name:sha256(root/name) for name in sorted(names) if (root/name).is_file()},indent=2)+'\n')
     return {'captured_tables': list(TABLES)}
 

@@ -16,6 +16,13 @@ def test_inline_instance_bridge_checks_identity_and_scaled_signed_value():
     with pytest.raises(ValueError):inline_bridge(raw,dict(fact,canonical_concept='us-gaap:Debt'))
     with pytest.raises(ValueError):inline_bridge(raw,dict(fact,locator='id:absent'))
 
+def test_isolated_native_queries_have_no_older_snapshot_dependency():
+    from secfragility.smci_integration import isolated_queries
+    full=(ROOT/'queries.sql').read_text();core=isolated_queries(full)
+    assert 'CREATE TEMP TABLE eligible_instance_occurrences' in core
+    assert 'read_parquet(' not in core and 'legacy_EDGAR_documents' not in core
+    with pytest.raises(ValueError):isolated_queries("SELECT * FROM read_parquet('other_group.parquet')")
+
 def test_uncommitted_factoring_and_unused_ATM_are_not_funded_financing():
     b=readings()
     assert b['receivable_purchase_uncommitted']['stage']=='available'

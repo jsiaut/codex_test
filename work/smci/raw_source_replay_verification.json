@@ -1,6 +1,6 @@
 {
   "as_of": "2026-10-09T10:24:21.129672+00:00",
-  "verified_at": "2026-10-12T12:45:32.216556+00:00",
+  "verified_at": "2026-10-12T13:04:33.716894+00:00",
   "method": "SMCI SEC statements reparsed from archived originals; SMCI observations and calculations rebuilt; additive overlay on the immutable verified 25-group checkpoint; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.",
   "input_manifest_unchanged": true,
   "changed_inputs": [],
@@ -50,16 +50,16 @@
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "d1436370b8529fbd1e7ed13442c960de2de9885ee86e54ea32bf65cc5fe8a449",
-      "replay_sha256": "167a9c1fbdab21fa8b1efaca2cb2ef3e9d2a294c8f40b127043dcec3e650e005"
+      "original_sha256": "167a9c1fbdab21fa8b1efaca2cb2ef3e9d2a294c8f40b127043dcec3e650e005",
+      "replay_sha256": "8c7847e1083b0205f4614faf394582907fc3c465941a00b209684fc3317a9025"
     },
     "controls": {
       "rows": 340162,
       "original_only": 0,
       "replay_only": 0,
       "identical": true,
-      "original_sha256": "695b767a6da4d4490ff19beebf0c5abbc76850d4825b0943d49d50f18d232978",
-      "replay_sha256": "10e7a3c1b7f019c2514a35bb7d129728867372c49adbe7e0019746622cfd9e59"
+      "original_sha256": "10e7a3c1b7f019c2514a35bb7d129728867372c49adbe7e0019746622cfd9e59",
+      "replay_sha256": "290e64a7601a9c914710805e7b843a185f64a0be6d06bc93251ff1a906532019"
     },
     "exclusions": {
       "rows": 16788,
@@ -71,5 +71,10 @@
     }
   },
   "all_tables_identical": true,
-  "independent_audit_performed": false
+  "independent_audit_performed": false,
+  "execution_context": "isolated_clean_archive_extraction_with_final_SMCI_code_and_original_submissions_cache_restored",
+  "all_previous_25_group_rows_preserved": true,
+  "storage_optimization": "Restored and SHA-verified previous baseline hardlinked to identical immutable files",
+  "SMCI_integration_code_sha256": "f9c60fdd7894d3129d573b91b3ee9169af0f4f743b12b51668a4a0c3762b4c5a",
+  "archive_reconstruction_tests_passed": 9
 }

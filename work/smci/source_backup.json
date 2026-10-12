@@ -1,1 +1,21 @@
-{"bytes": 14310164, "contains": "All collected SEC original bytes, complete source registry and unbounded companyfacts", "path": "work/smci/SEC_SMCI_originals.tar.zst", "sha256": "c5d9249a87f9b9e6b2eb595456822e4743ba6ca7cba74ec2300e7b7e1d13c46c", "source_cutoff": "2026-10-09T10:24:21.129672+00:00"}
+{
+  "bytes": 14310164,
+  "contains": "Collected filing resource originals, unbounded companyfacts and parsed issuer/filing registries; original submissions responses are also preserved separately in the packaged cache files.",
+  "path": "work/smci/SEC_SMCI_originals.tar.zst",
+  "sha256": "c5d9249a87f9b9e6b2eb595456822e4743ba6ca7cba74ec2300e7b7e1d13c46c",
+  "source_cutoff": "2026-10-09T10:24:21.129672+00:00",
+  "original_submissions_responses": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001375365.json",
+      "path": "cache/api/bb4c7c885ebb3eda847558f02a13bd5cf2a844adabe0f3f6569084d42e922f2e/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "compressed_sha256": "fbdbf64f969037d3d6b4d0a1cb6574b27e143f1341a329b4a6e980156100ab51",
+      "original_sha256": "57efda7d4d37f544e9862fd65081b13d35bb566bdd1c1264f43e593535d8ec92"
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001375365-submissions-001.json",
+      "path": "cache/api/a0b7533b5272df635a34866418a0b6dd6c4763eee952df6e6df3ac7a6d141034/2026-10-09T10-24-21.129672_00-00.bin.zst",
+      "compressed_sha256": "616d7710e3d8b232b10e2f8d181f53084ac0d8f6071a251b884c69cd57d273c2",
+      "original_sha256": "ec2845b1ca3264508d2d3b2a30d1563bc48f7c3228305fb71a7a9fb474015263"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "as_of": "2026-10-09T10:24:21.129672+00:00",
+  "verified_at": "2026-10-12T13:04:33.716894+00:00",
+  "method": "SMCI SEC statements reparsed from archived originals; SMCI observations and calculations rebuilt; additive overlay on the immutable verified 25-group checkpoint; bidirectional EXCEPT ALL across every column; source-ID lists compared as multisets.",
+  "input_manifest_unchanged": true,
+  "changed_inputs": [],
+  "tables": {
+    "documents": {
+      "rows": 12195,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "579334ef007f3f73217575c3645f455339890e6bf1c65f7ab86198c3f63cd11b",
+      "replay_sha256": "579334ef007f3f73217575c3645f455339890e6bf1c65f7ab86198c3f63cd11b"
+    },
+    "facts": {
+      "rows": 1435879,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991",
+      "replay_sha256": "8058c68c71d78a2a4e5ed66fffbcaed161db7d610be6b4621e0a77af63b8f991"
+    },
+    "observations": {
+      "rows": 17902,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "935d133d7f369658482308d5e603ef90de90ad52f9c0758f359db25fb2397541",
+      "replay_sha256": "935d133d7f369658482308d5e603ef90de90ad52f9c0758f359db25fb2397541"
+    },
+    "entities": {
+      "rows": 768,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "2cb57a23b2dcbb0971518730a22450e54c968130d5167053946640bc0d2037a1",
+      "replay_sha256": "2cb57a23b2dcbb0971518730a22450e54c968130d5167053946640bc0d2037a1"
+    },
+    "links": {
+      "rows": 918,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "c7a310eb6268943281d8185d373d0f4b0640cb6cd6fce1481f97e231f3689db9",
+      "replay_sha256": "c7a310eb6268943281d8185d373d0f4b0640cb6cd6fce1481f97e231f3689db9"
+    },
+    "measures": {
+      "rows": 598957,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "167a9c1fbdab21fa8b1efaca2cb2ef3e9d2a294c8f40b127043dcec3e650e005",
+      "replay_sha256": "8c7847e1083b0205f4614faf394582907fc3c465941a00b209684fc3317a9025"
+    },
+    "controls": {
+      "rows": 340162,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "10e7a3c1b7f019c2514a35bb7d129728867372c49adbe7e0019746622cfd9e59",
+      "replay_sha256": "290e64a7601a9c914710805e7b843a185f64a0be6d06bc93251ff1a906532019"
+    },
+    "exclusions": {
+      "rows": 16788,
+      "original_only": 0,
+      "replay_only": 0,
+      "identical": true,
+      "original_sha256": "2c05f50d691b6c4f8a57f72e81bd3573c210a73438cff625dba5f421c092af95",
+      "replay_sha256": "2c05f50d691b6c4f8a57f72e81bd3573c210a73438cff625dba5f421c092af95"
+    }
+  },
+  "all_tables_identical": true,
+  "independent_audit_performed": false,
+  "execution_context": "isolated_clean_archive_extraction_with_final_SMCI_code_and_original_submissions_cache_restored",
+  "all_previous_25_group_rows_preserved": true,
+  "storage_optimization": "Restored and SHA-verified previous baseline hardlinked to identical immutable files",
+  "SMCI_integration_code_sha256": "f9c60fdd7894d3129d573b91b3ee9169af0f4f743b12b51668a4a0c3762b4c5a",
+  "archive_reconstruction_tests_passed": 9
+}

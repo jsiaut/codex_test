@@ -2,7 +2,7 @@
 
 # SEC_Project_2
 
-Modèle courant : **25 groupes principaux**, avec Dell et SoftBank intégrés dans les huit tables. Lire [dell_integration.md](dell_integration.md), [dell_summary.json](dell_summary.json) et [dell_measures.csv](dell_measures.csv), puis les étapes précédentes ci-dessous. Les sources restent arrêtées au 9 octobre 2026 ; les critères E/F et les lignes des 24 groupes précédents sont conservés.
+Modèle courant : **26 groupes principaux**, avec SMCI, Dell et SoftBank intégrés dans les huit tables. Lire [le rapport SMCI](smci_integration.md), [sa synthèse](smci_summary.json) et [ses mesures](smci_measures.csv). Les 25 groupes précédents sont conservés ; les sources restent arrêtées au 9 octobre 2026 et les critères E/F sont inchangés.
 
 ## Base SEC et étapes précédentes
 

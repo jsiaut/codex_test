@@ -67,6 +67,10 @@ Les notes historiques supplémentaires SMCI restent inventoriées hors de la tra
     files.update(p for p in base.glob('*') if p.is_file() and p.suffix in ('.json','.py','.zst') and p.name!='delivery_archive.json')
     files.update((base/'delta_tables').glob('*.parquet'));files.update((base/'baseline').glob('*.json'))
     files.update(p for p in root.glob('smci_*') if p.is_file())
+    issuer=json.loads((base/'issuer.json').read_text())
+    urls=['https://data.sec.gov/submissions/CIK0001375365.json']+['https://data.sec.gov/submissions/'+p for p in issuer['official']['pagination']['read']]
+    version=issuer['source_cutoff'].replace(':','-').replace('+','_')
+    files.update(root/'cache/api'/hashlib.sha256(url.encode()).hexdigest()/(version+'.bin.zst') for url in urls)
     files.update(root/name for name in ['README.md','SMCI_REPRODUCTION.md','DELL_REPRODUCTION.md','requirements.txt','config.yaml','schema.sql','queries.sql','delivery_summary.json','measures.csv','series.csv','audit/smci_numbers.csv','audit/criteria_manifest.json','work/run.json','work/deprecations.json','work/fact_semantic_quarantines.json','work/idempotency_verification.json','work/reproduction_inputs.json','work/dell/unified_inventory.json','cache/datasets/us-gaap/2026/us-gaap-2026.zip','work/reference/opm_holidays.html'])
     target=OUTPUT/'SEC_Project_2_SMCI.zip';tmp=OUTPUT/'SEC_Project_2_SMCI.partial.zip';OUTPUT.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(tmp,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as archive:

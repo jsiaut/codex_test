@@ -10,6 +10,14 @@ from .smci_sources import CIK,GROUP,state,sha,persist
 
 PRIMARY='cik:'+CIK
 
+def isolated_queries(source):
+    # The appended views are presentation helpers for older cohorts. They do
+    # not participate in the SEC calculation and must not bind external files
+    # while constructing an isolated issuer delta.
+    core=source.split('-- SoftBank official-source extension:',1)[0]
+    if 'read_parquet(' in core:raise ValueError('Unexpected file-backed dependency in isolated SEC queries')
+    return core
+
 def prepare(root):
     base=state(root);mini=base/'assembly';(mini/'work').mkdir(parents=True,exist_ok=True)
     cfg=yaml.safe_load((root/'config.yaml').read_text());cfg['groups']['SMCI']=CIK
@@ -18,6 +26,7 @@ def prepare(root):
     cfg['concept_anchors_overrides']={}
     (mini/'config.yaml').write_text(yaml.safe_dump(cfg,sort_keys=False,allow_unicode=True))
     for name in ['schema.sql','queries.sql']:shutil.copy2(root/name,mini/name)
+    (mini/'queries.sql').write_text(isolated_queries((root/'queries.sql').read_text()))
     # All paths in resources are absolute within this isolated calculation.
     registry=json.loads((base/'filings.json').read_text());collection={'companyfacts':{},'filings':{}}
     for acc,f in registry.items():

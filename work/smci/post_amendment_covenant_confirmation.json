@@ -1,0 +1,11 @@
+{
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1375365/000119312526269703/d45696dex101.htm",
+  "source_sha256": "908271c55902f0478a2cac9b99b8a75bd5d95f2ff5c97cce6c30078c247145a8",
+  "document_id": "8b268fcee3518900213ff43e0d2127b6ebbb21226702c468b68ff77637267a0a",
+  "accession": "0001193125-26-269703",
+  "knowledge_date": "2026-06-12",
+  "tier": "D",
+  "scope": "Personally read amended Section6.23; not full contract review",
+  "quote": "Section 6.23 Financial Covenant.\n(a) Leverage Ratio. The Lead Borrower shall not, as of the last day of each fiscal quarter of the Lead Borrower specified below, permit\nthe Leverage Ratio to exceed.\nFiscal Quarter Ending: | | Leverage Ratio | |\nCommencing with the first full fiscal quarter after the Closing Date until the end of the fourth / full fiscal quarter after the Closing Date | | | 4.00 to 1.00 |\nCommencing with the fifth full fiscal quarter after the Closing Date until the end of the eighth / full fiscal quarter after the Closing Date | | | 3.50 to 1.00 |\nEach fiscal quarter thereafter | | | 3.00 to 1.00 |\n(b) Interest Coverage Ratio. Solely during a Non-IG Period, the Lead Borrower shall not, as of the last\nday of each fiscal quarter of the Lead Borrower beginning with the fiscal quarter ending on March 31, 2026, permit the Consolidated Interest Coverage Ratio to be less than 2.50:1.00.\n(c) Pro Forma Compliance. Compliance with the financial covenant set forth in clause (a) above shall always be calculated on\na Pro Forma Basis\n",
+  "conclusion": "Amended agreement retains4.00x/3.50x/3.00x leverage and2.50x Non-IG interest coverage; no headroom proxy or breach inference"
+}
